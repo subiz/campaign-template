@@ -4,11 +4,9 @@ export default {
 	props: ['page'],
 	data() {},
 	async created() {
-		const loadTemplate1 = () =>
-		import('../campaign-template/vue/campain-template/src/modal/template2.vue')
-			// import('../campaign-template/vue/campain-template/src/modal/template3.vue')
-			// import('../campaign-template/vue/campain-template/src/modal/template4.vue')
-		Template = (await loadTemplate1()).default
+		const loadTemplate = () =>
+		import(`../campaign-template/vue/campain-template/src/modal/${page.template_id}.vue`)
+		Template = (await loadTemplate()).default
 	},
 
 	render() {
