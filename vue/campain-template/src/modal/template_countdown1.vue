@@ -21,14 +21,12 @@ export default {
 						</div>
 							<p class="countdown-text">NGÀY</p>
 					</div>
-
 					<div class="element">
 							<div class="number-container">
 								<p class="number">09</p>
 							</div>
 							<p class="countdown-text">GIỜ</p>
 					</div>
-
 					<div class="element">
 						<div class="number-container">
 								<p class="number">30</p>
@@ -94,35 +92,39 @@ export default {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	width: 310px;
+	width: 400px;
 	height: 100;
 	flex: 3;
 }
 .element{
-	width: 86px;
-	height: 71px;
-	background-color: #e1e1e1;
-	border-radius: 10px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	padding: 10px;
 }
 .number-container{
+	height: 100px;
+	width: 100p;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	border-radius: 10px;
+	height: 300px;
+	padding: 20px;
+	background-color: #e0e0e0;
 }
 .number{
-	font-family: Montserrat;
+	font-family:Arial, Helvetica, sans-serif;
 	font-style: normal;
-	font-weight: 600;
+	font-weight:600;	
+	text-align: center;
 	font-size: 60px;
 }
 .countdown-text{
-	margin-top: 10px;
+		margin-top: 10px;
 	font-family: Montserrat;
 	font-style: normal;
-	font-weight: 500;
+	font-weight: bold;
 	font-size: 16px;
 }
 .buttons-container{

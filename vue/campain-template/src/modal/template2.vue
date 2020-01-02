@@ -5,29 +5,28 @@
 						</button>
 				</div>
 				<div class="template-main">
-					<p class="template-main--title">{{this.page.title}}</p>
-					<p class="template-main--description">{{this.page.description}}</p>	
-					<div class="template-main--inputs-container">
-							<input class="template-main--input" id="name" placeholder="Họ tên" />
-							<input class="template-main--input" id="email" placeholder="Email" />
+					<div class="text-container">
+						<p class="template-main--title">{{this.page.title}}</p>
+						<p class="template-main--description">{{this.page.description}}</p>	
 					</div>
-					<div class="template-main--buttons-container">
-							<button class="template-main--primary-button">
-								<p class="primary-button--text">{{this.page.primaryButtonTitle}}</p>
-							</button>
+					<div class="template-main--inputs-container">
+						<Form :form="page" class="template-main--input"/>
 					</div>
 				</div>
 			</div>
 </template>
 
 <script>
+import Form from '../components/Form.vue'
 export default {
 		name: 'template2',
-		props:['page']
+		props:{page: Object},
+		components: {
+    Form
+  },
 }
 </script>
-
-<style scoped>
+<style >
 * {
 	margin: 0;
 	padding: 0;
@@ -50,24 +49,30 @@ export default {
 	}
 	.header-button-close{ 
 		display: flex;
-		/* background-color: #fff; */
 		height: 20px;
 		width: 20px;
 		border-radius: 50%;
 		border:0px;
 	}
 	.template-main {
+		display:  flex; 
+		flex-direction: column;
 		margin-top: 10px;
-		padding-top:20px;
+		padding-top:10px;
 		height:450px;
 		width: 430px;
 		align-items: center;
-		justify-content: center;
 		background-color: #fff;
 	}
-	.template-main--title { 
+	.text-container{
 		margin-left: 50px;
 		margin-right: 50px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		flex:1;
+	}
+	.template-main--title { 
 		font-size: 30px;
 		font-weight: bold;
 		font-family:'Montserrat', sans-serif;
@@ -76,9 +81,7 @@ export default {
 		width: 50;
 	}
 	.template-main--description {
-		margin-top:15px;
-		margin-left: 27px;
-		margin-right: 27px;
+		margin-top:10px;
 		display: flex;
 		font-family: 'Muli';
 		font-weight: normal;
@@ -86,27 +89,26 @@ export default {
 		font-size: 18px;
 	}
 	.template-main--inputs-container{
-		margin-top: 10px;
-		background-color: #fff;
 		display: flex;
 		flex-direction:column;
+		flex:2;
+		width: 75%;
 		align-items: center;
-		justify-content:space-between;
+		justify-content:center;
 	}
 	.template-main--input{
-		margin-top:25px;
-		width: 80% ;
+		margin-top:15px;
+		width: 100% ;
 		height: 40px;
 		border-top-width: 0px;
 		border-right-width: 0px;
 		border-left-width: 0px;
 		border-bottom-color: #cccccc;
 		border-bottom-width: 1px;
-
 	}
 	.template-main--buttons-container{
 		display: flex;
-		margin-top: 20px;
+		margin-top: 5px;
 		align-items: center;
 		justify-content: center;
 	}
@@ -117,16 +119,16 @@ export default {
 		justify-content: center;
 		width:200px;
 		height: 45px;
+		border:0px;
 		border-radius: 5px;
 		background-color: #FDAD15;
 	}
 	.primary-button--text{
-	
 		color: #fff;
 		font-size: 16px;
 		line-height: 19px;
-		/* font-family: 'Roboto'; */
-		font-weight: bold;
+		font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		font-weight: 500;
 		text-align: center;
 		text-transform: uppercase;
 	}
