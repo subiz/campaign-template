@@ -1,31 +1,31 @@
 <template>
-		<div class="container">
-				<div class="left-content"/>
-					<div class="right-content">
-						<div class="header">
-							<button class="template-button--close"></button>
-					</div>	
-						<p class="right-content--description">Only sales 20% in one day</p>
-						<div class="right-content--red-div"></div>
-						<p class="right-content--title">Đăng ký để nhận ưu đãi đặc biệt.</p>
-						<div class="right-content--inputs-container">
-							<input class="right-content--input" id="name" placeholder="Họ tên" />
-							<input class="right-content--input" id="email" placeholder="Email" />
-						</div>
-						<div class="right-content--buttons-container">
-								<button class="primary-button">
-									<p class="primary-button--text">Đăng ký ngay</p>
-								</button>
-						</div>
-					</div>
-				</div>
+
+	<div class="container">
+		<div class="left-content"/>
+			<div class="right-content">
+				<div class="header">
+				<button class="template-button--close"></button>
+			</div>	
+			<p class="right-content--description">{{page.description}}</p>
+			<div class="right-content--red-div"></div>
+			<p class="right-content--title">{{page.title}}</p>
+			<Form :form="page"/>
+		</div>
+	</div>
 </template>
+
 <script>
+import Form from '../components/Form.vue'
 export default {
 	name:'template3',
+	props: {page : Object},
+	components:{
+		Form
+	},
 }
 </script>
-<style scoped>
+
+<style >
 	* {
 	margin: 0;
 	padding: 0;
@@ -89,29 +89,38 @@ export default {
 	align-self: flex-start;
 	margin-left: 15px;
 }
-.right-content--inputs-container{
+.inputs-container{
 	display: flex;
 	flex-direction: column;
 	width: 100%;
 	align-items: center;	
+	justify-content: center;
+
 }
-.right-content--input{
-	margin-top: 20px;
-	width: 80%;
+	.form{
+		width: 100%;
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+.input{
+	margin-top: 5px;
+	width: 100%; 
 	height: 45px;
 	border-top-width: 0px;
 	border-left-width: 0px;
 	border-right-width: 0px;
+	padding-left: 10px;
 }
-.right-content--buttons-container{
+.buttons-container{
 	margin-top: 10px;
 	padding-top:10px;
 	display: flex;
 	width: 100%;
 	align-items: center;
+	justify-content: center;
 }
 .primary-button{
-	margin-top: 15px;
+	margin-top: 5px;
 	background-color: #B91526;
 	width: 200px;
 	height: 45px;

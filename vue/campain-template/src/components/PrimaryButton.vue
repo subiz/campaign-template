@@ -5,8 +5,8 @@ export default {
 }
 </script>
 <template>
-		<div class="template-main--buttons-container">
-			<button class="template-main--primary-button">
+		<div class="buttons-container">
+			<button class="primary-button">
 				<p class="primary-button--text">{{this.primarybutton.text}}</p>
 			</button>
 		</div>	

@@ -1,7 +1,12 @@
 
 <script>
+import Form from '../components/Form.vue'
 export default {
 	name:"template4",
+	props:{page: Object},
+	components:{
+		Form
+	}
 }
 </script>
 <template>
@@ -15,20 +20,12 @@ export default {
 					<p class="main-title">Đăng ký để nhận ưu đãi khủng</p>
 					<p class="main-description">Giảm giá tới 95%. Miễn phí vận chuyển nội thành</p>
 				</div>
-					<div class="main-inputs-container" >
-						<input class="main-input" id="name" placeholder="Họ tên" />
-						<input class="main-input" id="email" placeholder="Email" />
-					</div>
-					<div class="main-buttons-container">
-						<button class="primary-button"> 
-								<p class="primary-button-text">Đăng ký ngay</p>
-						</button>
-					</div>
+				<Form :form="page" />
 				</div>
 			</div>
 </template>
 
-<style scoped>
+<style >
 .container{
 	width: 340px;
 	height: 600px;
@@ -63,17 +60,26 @@ export default {
 	margin-left: 35px;
 	justify-content: center;
 }
-.main-inputs-container{
+.inputs-container{
 	flex:3;
 	flex-direction: column;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
-.main-input{
-	margin-top: 20px;
-	width: 80%;
+.form{
+	width:90%;
+	padding-left: 10px;
+	padding-right: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.input{
+	margin-top: 10px;
+	width: 95%;
 	height: 40px;
+	padding-left: 10px;
 	border-top-width: 0px;
 	border-left-width: 0px;
 	border-right-width: 0px;
@@ -93,23 +99,19 @@ export default {
 	font-weight: normal;
 	font-size: 18px;
 }
-.main-buttons-container{
+.buttons-container{
 	flex:2;
-	/* margin-top: 10px; */
-	padding-top:10px;
 	display: flex;
 	width: 100%;
-	padding-top: 20px;
 	justify-content: center;
 }
 .primary-button{
-	margin-top: 15px;
 	background-color: #001984;
 	width: 200px;
 	height: 45px;
 	border-radius: 7px;
 }
-.primary-button-text{
+.primary-button--text{
 	color: #fff;
 	font-style: normal;
 	/* font-weight: bold; */

@@ -1,8 +1,12 @@
 
 <script>
+import Form from '../components/Form.vue'
 export default {
 	name:'template5',
-	props:['page']
+	props:{page: Object},
+	components:{
+		Form
+	}
 }
 </script>
 <template>
@@ -12,10 +16,7 @@ export default {
 						<p class="main-subtitle">{{this.page.subtitle}}</p>
 						<p class="main-title">{{this.page.title}}</p>
 						<p class="main-description">{{this.page.description}}</p>
-						<input class="main-input" type="number"  placeholder="Số điện thoại của bạn"/>
-						<button class="primary-button">
-						<p class="primary-button-text">{{this.page.buttonTitle}}</p>
-						</button>	
+						<Form :form="page" />
 					</div>
 					<div class="main-right">
 						<div class="header">
@@ -26,7 +27,7 @@ export default {
 				</div>
 			</div>
 </template>
-<style scoped>
+<style >
 	.container{
 		display: flex;
 		flex-direction: column;
@@ -81,16 +82,24 @@ export default {
 	font-size: 50px;
 }
 .main-description{
-	font-family: Muli;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	font-style: normal;
 	font-weight: normal;
-	font-size: 24px;
+	font-size: 16px;
 	color: #fff;
+	text-align: center;
+	width: 70%;
 }
-.main-input{
+.form{ 
+	display:flex;
+	flex-direction: column;
+	align-items: center; 
+	justify-content: center;
+}
+.input{
 	margin-top: 20px;
 	width: 430px;
-	height: 50px;
+	height: 45px;
 	background-color: #fff;
 	border: 0px;
 	border-radius: 50px;
@@ -100,13 +109,14 @@ export default {
 	margin-top: 15px;
 	background-color: #FDAD15;
 	width: 446px;
-	height: 50px;
+	height: 45px;
 	border-radius: 50px;
 	border:0px;
 }
-.primary-button-text{
+.primary-button--text{
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	color: #fff;
-	font-size: 15px;
-	font-weight: bold;
+	font-size: 18px;
+	font-weight: normal;
 }
 </style>
