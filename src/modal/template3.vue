@@ -5,7 +5,7 @@
 			<div class="right-content">
 				<div class="header">
 				<button class="template-button--close"></button>
-			</div>	
+			</div>
 			<p class="right-content--description">{{page.description}}</p>
 			<div class="right-content--red-div"></div>
 			<p class="right-content--title">{{page.title}}</p>
@@ -25,7 +25,7 @@ export default {
 }
 </script>
 
-<style >
+<style scoped>
 	* {
 	margin: 0;
 	padding: 0;
@@ -93,7 +93,7 @@ export default {
 	display: flex;
 	flex-direction: column;
 	width: 100%;
-	align-items: center;	
+	align-items: center;
 	justify-content: center;
 
 }
@@ -104,7 +104,7 @@ export default {
 	}
 .input{
 	margin-top: 5px;
-	width: 100%; 
+	width: 100%;
 	height: 45px;
 	border-top-width: 0px;
 	border-left-width: 0px;
