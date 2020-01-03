@@ -1,8 +1,7 @@
 {
   "name": "@subiz/campain-template",
   "version": "0.1.0",
-  "private": true,
-	"main": "./index.js",
+  "main": "./index.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
