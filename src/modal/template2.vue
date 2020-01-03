@@ -1,31 +1,32 @@
 <template>
-	<div class="container">
-		<div class="template-header">
-			<button class="header-button-close">
-				</button>
-		</div>
-		<div class="template-main">
-			<div class="text-container">
-				<p class="template-main--title">{{this.page.title}}</p>
-				<p class="template-main--description">{{this.page.description}}</p>	
->>>>>>> Stashed changes
+   <div class="container">
+				<div class="template-header">
+					<button class="header-button-close">
+						</button>
+				</div>
+				<div class="template-main">
+					<div class="text-container">
+						<p class="template-main--title">{{this.page.title}}</p>
+						<p class="template-main--description">{{this.page.description}}</p>
+					</div>
+					<div class="template-main--inputs-container">
+						<Form :form="page" class="template-main--input"/>
+					</div>
+				</div>
 			</div>
-			<Form :form="page"/>
-		</div>
-	</div>
 </template>
 
 <script>
 import Form from '../components/Form.vue'
 export default {
-	name: 'template2',
-	props:{page: Object},
-	components: {
-		Form
-	},
+		name: 'template2',
+		props:{page: Object},
+		components: {
+    Form
+  },
 }
 </script>
-<style >
+<style scoped>
 * {
 	margin: 0;
 	padding: 0;
@@ -41,12 +42,12 @@ export default {
 			background-color: #d26;
 			background-size:auto;
 	}
-	.template-header{ 
+	.template-header{
 		display: flex;
 		align-self: flex-end;
-		padding: 3px; 
+		padding: 3px;
 	}
-	.header-button-close{ 
+	.header-button-close{
 		display: flex;
 		height: 20px;
 		width: 20px;
@@ -54,7 +55,7 @@ export default {
 		border:0px;
 	}
 	.template-main {
-		display:flex; 
+		display:  flex;
 		flex-direction: column;
 		margin-top: 10px;
 		padding-top:10px;
@@ -71,7 +72,7 @@ export default {
 		justify-content: flex-end;
 		flex:1;
 	}
-	.template-main--title { 
+	.template-main--title {
 		font-size: 30px;
 		font-weight: bold;
 		font-family:'Montserrat', sans-serif;
@@ -87,20 +88,15 @@ export default {
 		text-align: center;
 		font-size: 18px;
 	}
-
-	.inputs-container{
+	.template-main--inputs-container{
 		display: flex;
 		flex-direction:column;
-		flex:1;
-		width: 100%;
+		flex:2;
+		width: 75%;
 		align-items: center;
 		justify-content:center;
 	}
-	.form{
-		width: 75%;
-	}
-	.input{
-
+	.template-main--input{
 		margin-top:15px;
 		width: 100% ;
 		height: 40px;
@@ -109,15 +105,14 @@ export default {
 		border-left-width: 0px;
 		border-bottom-color: #cccccc;
 		border-bottom-width: 1px;
-		padding-left: 10px;
 	}
-	.buttons-container{
+	.template-main--buttons-container{
 		display: flex;
 		margin-top: 5px;
 		align-items: center;
 		justify-content: center;
 	}
-	.primary-button{
+	.template-main--primary-button{
 			margin-top:20px;
 		display: flex;
 		align-items: center;
