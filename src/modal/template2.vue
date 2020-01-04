@@ -49,22 +49,25 @@
 	 background-image: url('../assets/bg2.png');
 	 background-size: auto;
 
-	 position: relative;
+	 position: fixed;
+	 top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
  }
 
 
  .button-close {
-	position: absolute;
+   position: absolute;
 
-	right: 10px;
-	top: 10px;
+   right: 10px;
+   top: 10px;
 
-	height: 20px;
-	width: 20px;
-	border-radius: 50%;
-	border: 0px;
+	 height: 20px;
+	 width: 20px;
+	 border-radius: 50%;
+	 border: 0px;
 
-	background-image: url('../assets/x.png');
+	 background-image: url('../assets/x.png');
  }
 
  .main {
@@ -125,6 +128,9 @@
 	 padding-right: 30px;
 	 padding-top: 12px;
 	 padding-bottom: 12px;
+
+	 white-space: nowrap;
+	 cursor: pointer;
  }
 
  .secondary-button {
@@ -144,6 +150,8 @@
 	 padding-bottom: 12px;
 
 	 margin-left: 10px;
+	 white-space: nowrap;
+	 cursor: pointer;
  }
 
  /deep/ .form {
