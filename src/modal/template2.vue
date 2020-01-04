@@ -1,33 +1,33 @@
 <template>
 	<div class="container">
-		<div class="template-header">
-			<button class="header-button-close">
-			</button>
-		</div>
-		<div class="template-main">
-			<div class="text-container">
-				<p class="template-main--title">{{this.page.title}}</p>
-				<p class="template-main--description">{{this.page.description}}</p>
-			</div>
-			<div class="template-main--inputs-container">
-				<Form :form="page" class="template-main--input"/>
-				<div class="buttons-container">
-					<button class="primary-button">
-						<p class="primary-button--text">{{this.page.primary_button.text}}</p>
-					</button>
-				</div>
+		<button class="button-close"></button>
+
+		<div class="main">
+
+			<p class="title">{{this.page.title}}</p>
+			<p class="description">{{this.page.description}}</p>
+
+			<Form :form="page.form" />
+
+			<div class="buttons-container">
+				<button v-show="page.primary_button.enabled" class="primary-button">
+					{{this.page.primary_button.text}}
+				</button>
+				<button v-show="page.secondary_button.enabled" class="secondary-button">
+					{{this.page.secondary_button.text}}
+				</button>
 			</div>
 		</div>
 	</div>
 </template>
 
 <script>
-import Form from '../components/Form.vue'
-export default {
-	name: 'template2',
-	props:{page: Object},
-	components: {Form},
-}
+ import Form from '../components/Form.vue'
+ export default {
+	 name: 'template2',
+	 props:["page"],
+	 components: {Form},
+ }
 </script>
 
 <style scoped>
@@ -36,104 +36,129 @@ export default {
 	 padding: 0;
 	 box-sizing: border-box;
  }
- .container{
+
+ .container {
 	 display: flex;
 	 flex-direction: column;
-	 height: 520px;
+
 	 width: 800px;
+
+	 max-width: 100%;
+
 	 align-items: center;
 	 background-image: url('../assets/bg2.png');
-	 background-color: #d26;
-	 background-size:auto;
+	 background-size: auto;
+
+	 position: relative;
  }
- .template-header{
+
+
+ .button-close {
+	position: absolute;
+
+	right: 10px;
+	top: 10px;
+
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	border: 0px;
+
+	background-image: url('../assets/x.png');
+ }
+
+ .main {
 	 display: flex;
-	 align-self: flex-end;
-	 padding: 3px;
- }
- .header-button-close{
-	 display: flex;
-	 height: 20px;
-	 width: 20px;
-	 border-radius: 50%;
-	 border:0px;
- }
- .template-main {
-	 display:  flex;
 	 flex-direction: column;
-	 margin-top: 10px;
-	 padding-top:10px;
-	 height:450px;
+
+	 padding:45px;
+
 	 width: 430px;
+	 max-width: 100%;
+
 	 align-items: center;
 	 background-color: #fff;
+
+	 margin-top: 36px;
+	 margin-bottom: 36px;
+
+	 box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.0196802), 0px 2px 4px rgba(0, 0, 0, 0.03), 0px 7px 12px rgba(0, 0, 0, 0.0503198), 0px 18px 28px rgba(0, 0, 0, 0.07);
  }
- .text-container{
-	 margin-left: 50px;
-	 margin-right: 50px;
-	 display: flex;
-	 flex-direction: column;
-	 justify-content: flex-end;
-	 flex:1;
- }
- .template-main--title {
+
+
+ .title {
 	 font-size: 30px;
 	 font-weight: bold;
-	 font-family:'Montserrat', sans-serif;
+	 /*font-family: 'Montserrat', sans-serif;*/
 	 font-style: normal;
 	 text-align: center;
-	 width: 50;
  }
- .template-main--description {
-	 margin-top:10px;
-	 display: flex;
-	 font-family: 'Muli';
+
+ .description {
+	 margin-top: 10px;
+	 /*font-family: 'Muli';*/
 	 font-weight: normal;
 	 text-align: center;
 	 font-size: 18px;
  }
- .template-main--inputs-container{
-	 display: flex;
-	 flex-direction:column;
-	 flex:2;
-	 width: 75%;
-	 align-items: center;
-	 justify-content:center;
- }
- .template-main--input{
-	 margin-top:15px;
-	 width: 100% ;
-	 height: 40px;
-	 border-top-width: 0px;
-	 border-right-width: 0px;
-	 border-left-width: 0px;
-	 border-bottom-color: #cccccc;
-	 border-bottom-width: 1px;
- }
- .template-main--buttons-container{
+
+ .buttons-container{
 	 display: flex;
 	 margin-top: 5px;
 	 align-items: center;
 	 justify-content: center;
+	 margin-top:37px;
  }
- .template-main--primary-button{
-	 margin-top:20px;
-	 display: flex;
-	 align-items: center;
-	 justify-content: center;
-	 width:200px;
-	 height: 45px;
+
+ .primary-button {
 	 border:0px;
 	 border-radius: 5px;
 	 background-color: #FDAD15;
- }
- .primary-button--text{
+
 	 color: #fff;
 	 font-size: 16px;
-	 line-height: 19px;
-	 font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	 font-weight: 500;
 	 text-align: center;
 	 text-transform: uppercase;
+
+	 padding-left: 30px;
+	 padding-right: 30px;
+	 padding-top: 12px;
+	 padding-bottom: 12px;
  }
+
+ .secondary-button {
+	 border:0px;
+	 border-radius: 5px;
+	 background-color: #d1d1d1;
+
+	 color: #fff;
+	 font-size: 16px;
+	 font-weight: 500;
+	 text-align: center;
+	 text-transform: uppercase;
+
+	 padding-left: 30px;
+	 padding-right: 30px;
+	 padding-top: 12px;
+	 padding-bottom: 12px;
+
+	 margin-left: 10px;
+ }
+
+ /deep/ .form {
+	 display: flex;
+	 flex-direction: column;
+	 width: 100%;
+	 margin-top: 15px;
+ }
+
+ /deep/ .text-input {
+	 border: none;
+	 border-bottom: 1px solid #d9d9d9;
+	 width: 100%;
+	 font-size: 16px;
+	 margin-top: 19px;
+ }
+
 </style>

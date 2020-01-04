@@ -1,19 +1,17 @@
 <script>
-	export default {
-		name:'form',
-		props:{form: Object},
-		components: {
-    PrimaryButton
-  },
-	}
+ export default {
+	 name:'form',
+	 props: ["form"],
+ }
 </script>
+
 <template>
-	<div class="inputs-container">
-		<form class="form">
-			<div class="form"  v-bind:key="field" v-for="field in form.fields">
-				<textarea  v-if="field.multiline_text" class='textarea' :placeholder="field.placeholder" maxlength="1000"/>
-				<input v-else  class="input" id="name" :placeholder="field.placeholder"/><br>
-			</div>
-		</form>
-	</div>
+	<form class="form">
+		<div v-bind:key="field" v-for="field in form.fields">
+			<textarea v-if="field.multiline_text" class='textarea'
+											:placeholder="field.placeholder" maxlength="1000"/>
+
+			<input v-else class="text-input" :placeholder="field.placeholder"/><br>
+		</div>
+	</form>
 </template>
