@@ -2,7 +2,7 @@
 import Form from '../components/Form.vue'
 export default {
 	name:'template9',
-	props:{page: Object},
+	props:["page"],
 	components:{
 		Form
 	}
@@ -12,16 +12,22 @@ export default {
 		<div class="container"> 
 			<div class="left-content"/>
 			<div class="right-content">
-				<div class="header">
-				<button class="template-button--close"></button>
-			</div>	
-			<p class="right-content--title">{{page.title}}</p>
-			<p class="right-content--description">{{page.description}}</p>
-			<Form :form="page"/>
+				<button class="button--close"></button>
+			<p class="title">{{page.title}}</p>
+			<p class="description">{{page.description}}</p>
+			<Form :form="page.form"/>
+			<div class="buttons-container">
+			<button v-show="page.primary_button.enabled" class="primary-button">
+				{{this.page.primary_button.text}}
+			</button>
+			<button v-show="page.secondary_button.enabled" class="secondary-button">
+				{{this.page.secondary_button.text}}
+			</button>
+		</div>
 		</div>
 		</div>
 </template>
-<style >
+<style scoped>
 .container{
 	height: 400px;
 	width: 700px;
@@ -43,28 +49,30 @@ export default {
 	align-items: flex-start;
 	background-color: #fff;
 	padding-left: 10px;
+	padding-top:10px;
+	position: relative;
 }
-.header{
-	display: flex;
-	align-self: flex-end;
-	padding: 5px;
-}
-.template-button--close{
+
+.button--close{
 	height: 20px;
 	width: 20px;
 	border-radius: 10px;
 	border:0px;
 	background-color: #000;
+	position: absolute;
+	right: 10px;
+	background-image: url("../assets/close.png");
+	background-size:100% 100%;
 }
-.right-content--description{
-	margin-top: 10px;
+.description{
+	margin-top: 1px;
 	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	font-weight: normal;
-	font-size: 15	px;
+	font-size: 15px;
 	align-self: flex-start;
 }
-.right-content--title{
-	margin-top: 5px;
+.title{
+	margin-top: 25px;
 	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	font-weight: bold;
 	font-size: 26px;
@@ -72,52 +80,70 @@ export default {
 	align-self: flex-start;
 	padding-right: 10px;
 }
-.inputs-container{
-	margin-top: 10px;
+/deep/.form{
 	display: flex;
 	flex-direction: column;
-	width: 85%;
-	align-items: center;	
-	justify-content: center;
-}
-.form{
 	width: 100%;
+	margin-top:20px;
 }
-.textarea{
-	margin-top: 5px;
-	width: 100%; 
+/deep/.textarea{
+	width: 90%; 
 	height: 70px;
 	border: solid 1px;
 	border-color: #c0c0c0;
 	padding-left: 5px;
-	border-radius: 3px;
 	padding-top:5px;
+	border-radius: 3px;
 }
-.input{
+/deep/.text-input{
 	margin-top: 5px;
-	width: 100%; 
-	height: 45px;
-	border: solid 1px;
-	border-color: #c0c0c0;
+	width: 90%; 
+	height: 40px;
+	border: solid 1px #d9d9d9;
 	padding-left: 5px;
 	border-radius: 3px;
+	outline: 0;
 }
 .buttons-container{
 	display: flex;
-	width: 100% ;
+	align-items: center;
+	justify-content: center;
+	margin-top:5px;
 }
 .primary-button{
-	margin-top: 5px;
+	margin-top: 5px;	
+	margin-right:5px;
 	background-color: #FDAD15;
-	width: 100%;
-	height: 45px;
 	border-radius: 3px;
-	border: solid 1px; 
-	border-color: #fdad15;
-}
-.primary-button--text{
+	border: solid 1px #fdad15; 
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left: 30px;
+	padding-right:30px;
 	color: #fff;
-	font-style: normal;
- font-size: 16px;
+	font-size: 14px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-weight: 600;
+	outline: 0;
+	cursor: pointer;
 }
+.secondary-button{
+	margin-top: 5px;
+	margin-left: 5px;
+	background-color: #d9d9d9;
+	border-radius: 3px;
+	border: solid 1px #d9d9d9; 
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-left: 30px;
+	padding-right:30px;
+	color: #fff;
+	font-size: 14px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-weight: 600;
+	outline: 0;
+	cursor: pointer;
+}
+.primary-button:hover {background-color: #d78a38 }
+.secondary-button:hover {background-color: #bbbbbb }
 </style>

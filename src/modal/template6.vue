@@ -1,80 +1,75 @@
 <script>
+import Form from '../components/Form.vue'
 export default {
 	name:'template6',
-	props:['page']
+	props:['page'],
+	components: {Form}
 }
 </script>
 <template>
 	<div class="container">
-			<div class="header">
-				<button class="header-button-close" />
-			</div>
-			<div class="main">
-				<div class="main-text-container">
-					<p class="subtitle">{{this.page.subtitle}}</p>
-					<p class="title">{{this.page.title}}</p>
-					<div class="white-div"/>
-					<p class="description">{{this.page.description}}</p>
-				</div>
-				<div class="main-inputs-container">
-					<input class="input"  placeholder="Số điện thoại của bạn"/>
-					<button class="primary-button">
-					</button>
-				</div>
-			</div>
+		<button class="button-close" />
+
+		<p class="subtitle">{{this.page.subtitle}}</p>
+		<p class="title">{{this.page.title}}</p>
+		<div class="white-div"/>
+		<p class="description">{{this.page.description}}</p>
+		
+		<Form :form="page.form" />
+		<div class="buttons-container">
+			<button v-show="page.primary_button.enabled" class="primary-button">
+				{{this.page.primary_button.text}}
+			</button>
+			<button v-show="page.secondary_button.enabled" class="secondary-button">
+				{{this.page.secondary_button.text}}
+			</button>
 		</div>
+	</div>
 </template>
 
 <style scoped>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 .container{
-		display: flex;
-		flex-direction: column;
-  align-items: center;
-		/* justify-content: center; */
-  height: 100vh;
-		width: 100%;
-		background-image: url('../assets/bg6.png');
-		background-size:100% 100%;
-}
-.header{
 	display: flex;
-	align-self: flex-end;
-	padding:2px;
+	flex-direction: column;
+  align-items: center;
+	padding-top: 10px;
+  height: 100vh;
+	width: 100%;
+	max-width: 100%;
+	background-image: url('../assets/bg6.png');
+	background-size:100% 100%;
+	position: relative;
 }
-.header-button-close{
+.button-close{
 	width: 30px;
 	height: 30px;
+	position: absolute;
+	right:10px;
 	border-radius: 15px; 
-	background-color:azure;
-	border:0px;
-}
-.main{
-	margin-top: 10%;
-	margin-left:28%;
-	margin-right: 28%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-}
-.main-text-container{
-	padding:10px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	background-color:#d9d9d9;
+	border:none;
+	cursor: pointer;
+	background-image: url("../assets/close.png");
+	background-size:100% 100%;
 }
 .subtitle{
-	font-family: Yeseva One;
+	margin-top: 10%;
 	font-weight: normal;
-	font-size: 80px;
+	font-size: 60px;
 	font-weight: '700';
 	color: #fff;	
+	font-family:monospace;
+	text-align: center;
 }
 .title{
-	padding: 10px;
+	padding: 5px;
 	color: #fff;
-	font-family: Montserrat;
+	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 	font-weight: 500;
 	font-size: 24px;
 	text-align: center;
@@ -86,32 +81,67 @@ export default {
 	background-color: #fff;
 }
 .description{
-	padding: 5px;
 	color: #fff;
-	font-family: Muli;
+	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 	font-style: normal;
 	font-size: 22px;
+	width:50%;
 	text-align: center;
 }
-.input{
+/deep/.form{
+	width:100%;
+	display: flex;
+	flex-direction: column;
+	align-items:center;
+}
+/deep/.text-input{
+	margin-top: 5px;
 	width: 490px;
 	height: 35px;
-	border:0px;
-	padding-left: 10px;
-}
-.main-inputs-container{
-	margin-top: 10px;
-	align-items: center;
-	justify-content: center;
+	border:none;
+	padding-left: 5px;
+	border-bottom: 1px solid #d9d9d9;
+	border:none;
+	outline: 0;
 }
 .primary-button{
-	/* margin-top: 3px; */
-	position:absolute; 
-	width: 34px;
-	height: 34px;
-	background-image: url('../assets/icon-send.png');
-	background-size: cover;
-	right: 400px;
-	border:0px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 25px;
+	padding-right:25px;
+	margin-top:5px;
+	margin-right:5px;
+	margin-left:5px;
+	color: #eb6743;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-weight: bold;
+	font-size: 15px;
+	background-color: #fff;
+	border: none;
+	border-radius: 5px;
+	border:none;
+	cursor: pointer;
+	outline: 0;
 }
+.secondary-button{
+	margin-right:5px;
+	margin-left:5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 25px;
+	padding-right:25px;
+	margin-top:5px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-weight: bold;
+	color:#ffffff;
+	font-size: 16px;
+	background-color: #d9d9d9d9;
+	border:none;
+	border-radius: 5px;
+	cursor: pointer;
+	outline: 0;
+}
+.button-close:hover{background-color: #bbbbbb}
+.primary-button:hover{background-color: #d9d9d9}
+.secondary-button:hover {background-color: #bbbbbb }
 </style>

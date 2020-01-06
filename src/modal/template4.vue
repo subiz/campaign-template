@@ -3,7 +3,7 @@
 import Form from '../components/Form.vue'
 export default {
 	name:"template4",
-	props:{page: Object},
+	props: ['page'],
 	components:{
 		Form
 	}
@@ -11,111 +11,129 @@ export default {
 </script>
 <template>
 	<div class="container">
-				<div class="header">
-						<img class="header-image "/>
-						<button class="header-button-close"/>
-				</div>
-				<div class="main">
-				<div class="text-container">
-					<p class="main-title">Đăng ký để nhận ưu đãi khủng</p>
-					<p class="main-description">Giảm giá tới 95%. Miễn phí vận chuyển nội thành</p>
-				</div>
-				<Form :form="page" />
-				</div>
+			<div class="image">
+				<button class="button-close"/>
 			</div>
+
+			<p class="title">Đăng ký để nhận ưu đãi khủng</p>
+			<p class="description">Giảm giá tới 95%. Miễn phí vận chuyển nội thành</p>
+			<Form :form="page.form" />
+
+			<div class="buttons-container">
+				<button v-show="page.primary_button.enabled" class="primary-button">
+					{{this.page.primary_button.text}}
+				</button>
+				<button v-show="page.secondary_button.enabled" class="secondary-button">
+					{{this.page.secondary_button.text}}
+				</button>
+			</div>
+	</div>
 </template>
 
-<style >
+<style scoped>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 .container{
 	width: 340px;
-	height: 600px;
+	max-width: 100%;
 	display: flex;
 	background-color: #fff;
 	flex-direction: column;
 }
-.header{
-	flex:1;
+.image{
 	display: flex;
 	background-image: url('../assets/bg4.png');
+	background-size: auto;
 	background-repeat: no-repeat;
 	flex-direction: column;
-	padding :3px;
+	position: relative;
+	height: 200px;
+	padding-top: 10px;
 }
-.header-button-close{
-	align-self: flex-end;
+.button-close{
+	position: absolute;
+	right: 10px;
 	height: 20px;
 	width: 20px;
 	border-radius: 10px;
-	border:0px;
+	border: none;
+	outline: 0;
+	cursor: pointer;
 }
-.main{
-	flex: 3;
+/deep/.form{
+	width:100%;
 	display: flex;
 	flex-direction: column;
+	padding-left: 35px;
+	padding-right: 35px;
 }
-.text-container{
-	display: flex;
-	flex-direction: column;
-	flex:2;
-	margin-left: 35px;
-	justify-content: center;
-}
-.inputs-container{
-	flex:3;
-	flex-direction: column;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-.form{
-	width:90%;
-	padding-left: 10px;
-	padding-right: 10px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-.input{
+/deep/.text-input{
+	padding-left: 5px;
 	margin-top: 10px;
-	width: 95%;
 	height: 40px;
-	padding-left: 10px;
-	border-top-width: 0px;
-	border-left-width: 0px;
-	border-right-width: 0px;
+	width: 100%;
+	outline: 0;
+	border: none;
+	border-bottom: 1px solid #d9d9d9;
 }
-.main-title{
-	margin-top: 20px; 
-	margin-right:26px;
-	color: black;
-	font-family: Yeseva One;
+.title{
+	margin-top: 17px; 
+	padding-left:35px;
+	color:#000;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	font-weight: bold;
 	font-size: 32px;
 }
-.main-description{
-	margin-top: 8px; 
-	margin-right:8px;
-	font-family: Muli;
+.description{
+	margin-top: 10px; 
+	margin-left:35px;
+	color:#000;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	font-weight: normal;
 	font-size: 18px;
 }
 .buttons-container{
-	flex:2;
+	margin-top: 10px;
 	display: flex;
-	width: 100%;
+	align-items: center;
 	justify-content: center;
+	margin-bottom: 10px;
 }
 .primary-button{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 30px;
+	padding-right:30px;
+	margin-right:5px;
+	margin-left: 5px;
+	color:#ffffff;
+	font-size: 16px;
 	background-color: #001984;
-	width: 200px;
-	height: 45px;
-	border-radius: 7px;
+	height: 40px;
+	border-radius: 5px;
+	outline: 0;
+	cursor: pointer;
 }
-.primary-button--text{
-	color: #fff;
-	font-style: normal;
-	/* font-weight: bold; */
- font-size: 16px;
+.secondary-button{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 30px;
+	padding-right:30px;
+	margin-right:5px;
+	margin-left: 5px;
+	color:#ffffff;
+	font-size: 16px;
+	background-color: #d9d9d9d9;
+	height: 40px;
+	border-radius: 5px;
+	outline: 0;
+	cursor: pointer;
 }
+.button-close:hover{background-color: #bbbbbb}
+.primary-button:hover{background-color: #03176f}
+.secondary-button:hover {background-color: #bbbbbb }
 
 </style>

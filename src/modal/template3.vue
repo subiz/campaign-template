@@ -1,30 +1,34 @@
 <template>
-
 	<div class="container">
 		<div class="left-content"/>
-			<div class="right-content">
-				<div class="header">
-				<button class="template-button--close"></button>
+		<div class="right-content">
+			<button class="button-close"></button>
+			<p class="description">{{page.description}}</p>
+			<div class="red-div"></div>
+			<p class="title">{{page.title}}</p>
+			<Form :form="page.form"/>
+			<div class="buttons-container">
+				<button v-show="page.primary_button.enabled" class="primary-button">
+					{{this.page.primary_button.text}}
+				</button>
+				<button v-show="page.secondary_button.enabled" class="secondary-button">
+					{{this.page.secondary_button.text}}
+				</button>
 			</div>
-			<p class="right-content--description">{{page.description}}</p>
-			<div class="right-content--red-div"></div>
-			<p class="right-content--title">{{page.title}}</p>
-			<Form :form="page"/>
+
 		</div>
 	</div>
 </template>
-
 <script>
 import Form from '../components/Form.vue'
 export default {
 	name:'template3',
-	props: {page : Object},
+	props: ['page'],
 	components:{
 		Form
 	},
 }
 </script>
-
 <style scoped>
 	* {
 	margin: 0;
@@ -34,8 +38,8 @@ export default {
 .container{
 	display: flex;
 	flex-direction: row;
-	height: 400px;
 	width: 800px;
+	max-width: 100%;
 }
 .left-content{
 	display: flex;
@@ -50,38 +54,38 @@ export default {
 	flex:1;
 	align-items: center;
 	background-color: #fff;
+	padding-top: 42px;
+	position: relative;
 }
-.header{
-	display: flex;
-	align-self: flex-end;
-	padding: 3px;
-}
-.template-button--close{
+.button-close{
+	position: absolute;
+	right: 10px;
+	top: 10px;
 	height: 20px;
 	width: 20px;
 	border-radius: 10px;
 	border:0px;
 }
-.right-content--description{
+.description{
 	margin-top: 10px;
-	font-family: Muli;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 16px;
 	align-self: flex-start;
 	margin-left: 15px;
 }
-.right-content--red-div{
-	margin-top: 10px;
+.red-div{
+	margin-top: 8px;
 	width: 134px;
 	height: 5px;
 	background-color: #B91526;
 	align-self: flex-start;
 	margin-left: 15px;
 }
-.right-content--title{
-	margin-top: 15px;
-	font-family: Montserrat;
+.title{
+	margin-top: 10px;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	font-style: normal;
 	font-weight: bold;
 	font-size: 28px;
@@ -89,46 +93,62 @@ export default {
 	align-self: flex-start;
 	margin-left: 15px;
 }
-.inputs-container{
-	display: flex;
-	flex-direction: column;
+/deep/.form{
 	width: 100%;
-	align-items: center;
-	justify-content: center;
-
-}
-	.form{
-		width: 100%;
-		padding-left: 10px;
-		padding-right: 10px;
-	}
-.input{
-	margin-top: 5px;
-	width: 100%;
-	height: 45px;
-	border-top-width: 0px;
-	border-left-width: 0px;
-	border-right-width: 0px;
 	padding-left: 10px;
+	padding-right: 10px;
+}
+/deep/.text-input{
+	width: 100%;
+	height: 40px;
+	border: none;
+	border-bottom: 1px solid #d9d9d9;
+	padding-left: 5px;
+	font-size: 12px;
+	margin-top: 10px;
+	outline: 0;
 }
 .buttons-container{
 	margin-top: 10px;
-	padding-top:10px;
 	display: flex;
-	width: 100%;
 	align-items: center;
 	justify-content: center;
+	margin-bottom: 10px;
 }
 .primary-button{
-	margin-top: 5px;
+	margin-right: 5px;
+	margin-left: 5px;
 	background-color: #B91526;
-	width: 200px;
+	padding-left: 30px;
+	padding-right:30px;
 	height: 45px;
-	border-radius: 7px;
-}
-.primary-button--text{
+	border-radius: 5px;
+	border:0px;
 	color: #fff;
-	font-style: normal;
- font-size: 16px;
+	font-size: 16px;
+	font-weight: 600;
+	text-transform: uppercase;
+	text-align: center;
+	outline: 0;
+	cursor: pointer;
 }
+.secondary-button{
+	margin-right: 5px;
+	margin-left: 5px;
+	background-color: #d9d9d9;
+	padding-left: 30px;
+	padding-right:30px;
+	height: 45px;
+	border-radius: 5px;
+	border:0px;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 600;
+	text-transform: uppercase;
+	text-align: center;
+	outline: 0;
+	cursor: pointer;
+}
+.primary-button:hover {background-color: #92111e }
+.secondary-button:hover {background-color: #bbbbbb }
 </style>

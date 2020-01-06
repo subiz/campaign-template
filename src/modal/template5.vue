@@ -3,7 +3,7 @@
 import Form from '../components/Form.vue'
 export default {
 	name:'template5',
-	props:{page: Object},
+	props:['page'],
 	components:{
 		Form
 	}
@@ -11,112 +11,142 @@ export default {
 </script>
 <template>
 	<div class="container">
-				<div class="main">
-					<div class="main-left">
-						<p class="main-subtitle">{{this.page.subtitle}}</p>
-						<p class="main-title">{{this.page.title}}</p>
-						<p class="main-description">{{this.page.description}}</p>
-						<Form :form="page" />
-					</div>
-					<div class="main-right">
-						<div class="header">
-					<button class="header-close-button">
-					</button>
-					</div>
-					</div>
-				</div>
+		<div class="left">
+			<p class="subtitle">{{this.page.subtitle}}</p>
+			<p class="title">{{this.page.title}}</p>
+			<p class="description">{{this.page.description}}</p>
+			<Form :form="page.form" />
+			<div class="buttons-container">
+				<button v-show="page.primary_button.enabled" class="primary-button">
+					{{this.page.primary_button.text}}
+				</button>
+				<button v-show="page.secondary_button.enabled" class="secondary-button">
+					{{this.page.secondary_button.text}}
+				</button>
 			</div>
+		</div>
+		<div class="right">
+			<button class="button-close"></button>
+		</div>
+	</div>
 </template>
-<style >
-	.container{
-		display: flex;
-		flex-direction: column;
-  align-items: center;
-  height: 100vh;
-		width: 100%;
-		background-image: url('../assets/bg5.png');
-		background-size:96% 100%;
-	}
-	.header{
-		height: 30px;
-		display: flex;
-		flex-direction: row;
-		align-self: flex-end;
-		padding: 2px;
-	}
-.header-close-button{
-	height: 28px;
-	width: 28px;
+<style scoped>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.container{
+	display: flex;
+	flex-direction: row;
+	height: 100vh;
+	width: 100%;
+	max-width: 100%;
+	max-height: 100%;
+	background-image: url('../assets/bg5.png');
+	background-size:100% 100%;
+}
+.right{
+	display: flex;
+	flex: 1;
+	position: relative;
+	padding-top: 10px;
+}
+.button-close{
+	position: absolute;
+	height: 30px;
+	width: 30px;
+	right:10px;
 	background-color: #091125;
 	border-radius: 15px;
-	border:0px;
+	border:none;
+	outline: 0;
+	cursor: pointer;
 }
-.main{
-	width: 100%;
-	display: flex;
-}
-.main-left{
+.left{
 	display: flex;
 	flex: 1;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	height: 100vh;
 }
-.main-right{
-	display: flex;
-	flex: 1;
-	flex-direction: column;
-}
-.main-subtitle{
+.subtitle{
 	color: #fff;
-	font-family: Muli;
-	font-style: normal;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	font-weight: normal;
-	font-size: 42px;
+	font-size: 40px;
+	text-align: center;
 }
-.main-title{
+.title{
+	margin-top: 5px;
+	text-align: center;
 	color: #FDAD15;
-	font-family: 'Roboto';
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	font-weight: bold;
 	font-size: 50px;
+	width: 100%;
 }
-.main-description{
+.description{
+	margin-top: 25px;
 	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	font-style: normal;
-	font-weight: normal;
 	font-size: 16px;
 	color: #fff;
 	text-align: center;
-	width: 70%;
+	width: 80%;
 }
-.form{ 
+/deep/.form{ 
+	margin-top: 30px;
+	width: 100%;
 	display:flex;
 	flex-direction: column;
 	align-items: center; 
 	justify-content: center;
 }
-.input{
-	margin-top: 20px;
+/deep/.text-input{
+	margin-top: 10px;
 	width: 430px;
-	height: 45px;
+	height: 40px;
 	background-color: #fff;
-	border: 0px;
-	border-radius: 50px;
-	padding-left: 15px;
+	text-align: center;
+	border-radius: 25px;
+	outline: 0;
+	border-bottom: 1px solid #d9d9d9;
+	border: none;
+}
+.buttons-container{
+	margin-top: 15px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 10px;
 }
 .primary-button{
-	margin-top: 15px;
 	background-color: #FDAD15;
-	width: 446px;
-	height: 45px;
-	border-radius: 50px;
-	border:0px;
-}
-.primary-button--text{
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	color: #fff;
+	width: 430px;
+	height: 40px;
+	border-radius: 25px;
+	border:none;
 	font-size: 18px;
-	font-weight: normal;
+	font-weight: bold;
+	color: #fff;
+	outline: 0;
+	cursor: pointer;
 }
+.secondary-button{
+	margin-top: 5px;
+	background-color: #d9d9d9;
+	width: 430px;
+	height: 40px;
+	border-radius: 25px;
+	border:none;
+	font-size: 18px;
+	font-weight: bold;
+	color: #fff;
+	outline: 0;
+	cursor: pointer;
+}
+.button-close:hover{background-color: #15203e}
+.primary-button:hover{background-color: #e69f17}
+.secondary-button:hover {background-color: #bbbbbb }
 </style>
