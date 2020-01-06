@@ -24,6 +24,12 @@ import Form from '../components/Form.vue'
 export default {
 	name:'template3',
 	props: ['page'],
+	data() {
+		return {
+			id: 'template3',
+			name: 'Đăng ký nhận ưu đãi',
+		}
+	},
 	components:{
 		Form
 	},

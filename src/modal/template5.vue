@@ -6,7 +6,13 @@ export default {
 	props:['page'],
 	components:{
 		Form
-	}
+	},
+	data() {
+		return {
+			id: 'template5',
+			name: 'Đăng ký nhận ưu đãi',
+		}
+	},
 }
 </script>
 <template>
@@ -94,12 +100,12 @@ export default {
 	text-align: center;
 	width: 80%;
 }
-/deep/.form{ 
+/deep/.form{
 	margin-top: 30px;
 	width: 100%;
 	display:flex;
 	flex-direction: column;
-	align-items: center; 
+	align-items: center;
 	justify-content: center;
 }
 /deep/.text-input{

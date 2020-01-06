@@ -5,11 +5,17 @@ export default {
 	props:["page"],
 	components:{
 		Form
-	}
+	},
+	data() {
+		return {
+			id: 'template9',
+			name: 'Đăng ký nhận ưu đãi',
+		}
+	},
 }
 </script>
 <template>
-		<div class="container"> 
+		<div class="container">
 			<div class="left-content"/>
 			<div class="right-content">
 				<button class="button--close"></button>
@@ -87,7 +93,7 @@ export default {
 	margin-top:20px;
 }
 /deep/.textarea{
-	width: 90%; 
+	width: 90%;
 	height: 70px;
 	border: solid 1px;
 	border-color: #c0c0c0;
@@ -97,7 +103,7 @@ export default {
 }
 /deep/.text-input{
 	margin-top: 5px;
-	width: 90%; 
+	width: 90%;
 	height: 40px;
 	border: solid 1px #d9d9d9;
 	padding-left: 5px;
@@ -111,11 +117,11 @@ export default {
 	margin-top:5px;
 }
 .primary-button{
-	margin-top: 5px;	
+	margin-top: 5px;
 	margin-right:5px;
 	background-color: #FDAD15;
 	border-radius: 3px;
-	border: solid 1px #fdad15; 
+	border: solid 1px #fdad15;
 	padding-top:10px;
 	padding-bottom:10px;
 	padding-left: 30px;
@@ -132,7 +138,7 @@ export default {
 	margin-left: 5px;
 	background-color: #d9d9d9;
 	border-radius: 3px;
-	border: solid 1px #d9d9d9; 
+	border: solid 1px #d9d9d9;
 	padding-top:10px;
 	padding-bottom:10px;
 	padding-left: 30px;

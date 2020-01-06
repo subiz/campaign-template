@@ -26,6 +26,12 @@
  export default {
 	 name: 'template2',
 	 props:["page"],
+	 data() {
+		 return {
+			 id: 'template2',
+			 name: 'Đăng ký nhận ưu đãi',
+		 }
+	 },
 	 components: {Form},
  }
 </script>

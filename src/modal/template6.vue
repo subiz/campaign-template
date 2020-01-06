@@ -3,7 +3,13 @@ import Form from '../components/Form.vue'
 export default {
 	name:'template6',
 	props:['page'],
-	components: {Form}
+	components: {Form},
+	data() {
+		return {
+			id: 'template6',
+			name: 'Đăng ký nhận ưu đãi',
+		}
+	},
 }
 </script>
 <template>
@@ -14,7 +20,7 @@ export default {
 		<p class="title">{{this.page.title}}</p>
 		<div class="white-div"/>
 		<p class="description">{{this.page.description}}</p>
-		
+
 		<Form :form="page.form" />
 		<div class="buttons-container">
 			<button v-show="page.primary_button.enabled" class="primary-button">
@@ -50,7 +56,7 @@ export default {
 	height: 30px;
 	position: absolute;
 	right:10px;
-	border-radius: 15px; 
+	border-radius: 15px;
 	background-color:#d9d9d9;
 	border:none;
 	cursor: pointer;
@@ -62,7 +68,7 @@ export default {
 	font-weight: normal;
 	font-size: 60px;
 	font-weight: '700';
-	color: #fff;	
+	color: #fff;
 	font-family:monospace;
 	text-align: center;
 }

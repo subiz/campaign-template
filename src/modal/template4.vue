@@ -6,7 +6,13 @@ export default {
 	props: ['page'],
 	components:{
 		Form
-	}
+	},
+	data() {
+		return {
+			id: 'template4',
+			name: 'Đăng ký nhận ưu đãi',
+		}
+	},
 }
 </script>
 <template>
@@ -80,7 +86,7 @@ export default {
 	border-bottom: 1px solid #d9d9d9;
 }
 .title{
-	margin-top: 17px; 
+	margin-top: 17px;
 	padding-left:35px;
 	color:#000;
 	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -88,7 +94,7 @@ export default {
 	font-size: 32px;
 }
 .description{
-	margin-top: 10px; 
+	margin-top: 10px;
 	margin-left:35px;
 	color:#000;
 	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
