@@ -1,11 +1,11 @@
 <template class="tem">
   <div id="app" class="app"  >
 
-    <Template :page="templatefeedback"/>
+    <Template :page="template"/>
   </div>
 </template>
 <script>
-import Template from './modal/template9.vue'
+import Template from './modal/template1.vue'
 export default {
   name: 'app',
   components: {
@@ -14,10 +14,10 @@ export default {
   data(){
     return {
       template:{
-        title:"Đăng ký để nhận ưu đãi đặc biệt.",
         subtitle:"",
         form_enabled:true,
         images:[],
+				form: {
         fields:[
           {
             key :1,
@@ -39,14 +39,19 @@ export default {
             type :"email",
           }
         ],
+				},
         primary_button:{
-          text:"Đăng ký ngay",
           enabled : true,
           action : 10,
           redirect_url : 11,
           open_url : 12
         },
-        description:"Giảm 20% chỉ một ngày duy nhất. Đăng ký ngay để nhận được mã giảm giá.",
+				secondary_button:{
+          enabled : true,
+          action : 10,
+          redirect_url : 11,
+          open_url : 12
+        },
         primaryButtonTitle:"Đăng ký nhanh"
       },
       templatehavesubtitle:{
@@ -161,7 +166,7 @@ export default {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  width: 100%;  
+  width: 100%;
   background-color: bisque;
 }
 </style>
