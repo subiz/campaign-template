@@ -34,14 +34,9 @@ export default {
 		<p class="subtitle">{{this.page.subtitle||this.subtitle}}</p>
 		<p class="title">{{this.page.title||this.title}}</p>
 		<div class="white-div"/>
-<<<<<<< HEAD
-		<p class="description">{{this.page.description}}</p>
 
-		<Form :form="page.form" />
-=======
 		<p class="description">{{this.page.description||this.description}}</p>
 		<Form :form="page.form||this.form" />
->>>>>>> add default template data
 		<div class="buttons-container">
 			<button v-show="page.primary_button.enabled" class="primary-button">
 				{{this.page.primary_button.text||this.primary_button_text}}
