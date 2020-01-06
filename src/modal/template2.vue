@@ -43,10 +43,10 @@ export default {
 			<p class="description">{{page.description||this.description}}</p>
 			<Form :form="page.form || this.form" />
 			<div class="buttons-container">
-				<button v-show="page.primary_button.enabled" class="primary-button">
+				<button v-show="page.primary_button && page.primary_button.enabled" class="primary-button">
 					{{page.primary_button.text||this.primary_button_text}}
 				</button>
-				<button v-show="page.secondary_button.enabled" class="secondary-button">
+				<button v-show="page.secondary_button && page.secondary_button.enabled" class="secondary-button">
 					{{page.secondary_button.text||this.secondary_button_text}}
 				</button>
 			</div>
