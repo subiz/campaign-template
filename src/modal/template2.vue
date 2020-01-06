@@ -28,8 +28,10 @@
 	 props:["page"],
 	 data() {
 		 return {
-			 id: 'template2',
-			 name: 'Đăng ký nhận ưu đãi',
+				id: 'template2',
+				name: 'Đăng ký nhận ưu đãi',
+				title: 'Đăng ký để nhận được ưu đãi đặc biệt',
+				description: 'Giảm 20% chỉ một lần duy nhất đăng ký ngay để nhận được mã giảm giá'
 		 }
 	 },
 	 components: {Form},
