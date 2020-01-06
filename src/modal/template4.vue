@@ -32,7 +32,18 @@ export default {
             },
           ],
 			},
-			secondary_button_text:"Cancle",
+			secondary_button_text:"Cancel",
+		}
+	},
+	methods:{
+		onClose(){
+			this.$emit("closeButtonClicked")
+		},
+		onSecondaryClick(){
+			this.$emit("secondaryButtonClicked")
+		},
+		onPrimaryClick(){
+			this.$emit("primaryButtonClicked")
 		}
 	}
 }
@@ -40,7 +51,7 @@ export default {
 <template>
 	<div class="container">
 			<div class="image">
-				<button class="button-close"/>
+				<button class="button-close" @click="onClose"/>
 			</div>
 
 			<p class="title">{{page.title||this.title}}</p>
@@ -48,10 +59,10 @@ export default {
 			<Form :form="page.form||form" />
 
 			<div class="buttons-container">
-				<button v-show="page.primary_button && page.primary_button.enabled" class="primary-button">
+				<button @click="onPrimaryClick" v-show="page.primary_button && page.primary_button.enabled" class="primary-button">
 					{{this.page.primary_button.text||this.primary_button_text}}
 				</button>
-				<button v-show="page.secondary_button && page.secondary_button.enabled" class="secondary-button">
+				<button @click="onSecondaryClick" v-show="page.secondary_button && page.secondary_button.enabled" class="secondary-button">
 					{{this.page.secondary_button.text||this.secondary_button_text}}
 				</button>
 			</div>

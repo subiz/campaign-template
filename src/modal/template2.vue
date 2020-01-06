@@ -30,23 +30,34 @@ export default {
             },
           ],
 			},
-			secondary_button_text:"Cancle",
+			secondary_button_text:"Cancel",
+		}
+	},
+	methods:{
+		onClose(){
+			this.$emit("closeButtonClicked")
+		},
+		onSecondaryClick(){
+			this.$emit("secondaryButtonClicked")
+		},
+		onPrimaryClick(){
+			this.$emit("primaryButtonClicked")
 		}
 	}
 }
 </script>
 <template>
 	<div class="container">
-		<button class="button-close"></button>
+		<button class="button-close" @click="onClose"></button>
 		<div class="main">
 			<p class="title">{{page.title||this.title}}</p>
 			<p class="description">{{page.description||this.description}}</p>
 			<Form :form="page.form || this.form" />
 			<div class="buttons-container">
-				<button v-show="page.primary_button && page.primary_button.enabled" class="primary-button">
+				<button @click="onPrimaryClick" v-show="page.primary_button && page.primary_button.enabled" class="primary-button">
 					{{page.primary_button.text||this.primary_button_text}}
 				</button>
-				<button v-show="page.secondary_button && page.secondary_button.enabled" class="secondary-button">
+				<button @click="onSecondaryClick" v-show="page.secondary_button && page.secondary_button.enabled" class="secondary-button">
 					{{page.secondary_button.text||this.secondary_button_text}}
 				</button>
 			</div>

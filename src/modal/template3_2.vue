@@ -8,21 +8,32 @@ export default {
 			title:"Cảm ơn bạn!",
 			description:"Chúng tôi đã nhận được thông tin yêu cầu liên hệ của bạn và chúng tôi sẽ gọi lạicho bạn vào thời gian bạn đã chọn.",
 			primary_button_text: "Ok, Tôi đã hiểu",
-			secondary_button_text: "Cancle",
+			secondary_button_text: "Cancel",
+		}
+	},
+	methods:{
+		onClose(){
+			this.$emit("closeButtonClicked")
+		},
+		onSecondaryClick(){
+			this.$emit("secondaryButtonClicked")
+		},
+		onPrimaryClick(){
+			this.$emit("primaryButtonClicked")
 		}
 	}
 }
 </script>
 <template>
 <div class="container">
-	<button class="button-close"></button>
+	<button class="button-close" @click="onClose"></button>
 	<p class="title">{{page.title||this.title}}</p>
 	<p class="description">{{page.description||this.description}}</p>
-	<div class="buttons-container">
-		<button v-show=" page.primary_button && page.primary_button.enabled" class="primary-button">
+	<div  class="buttons-container">
+		<button @click="onPrimaryClick" v-show=" page.primary_button && page.primary_button.enabled" class="primary-button">
 			{{page.primary_button.text||this.primary_button_text}}
 		</button>
-		<button v-show="page.secondary_button && page.secondary_button.enabled" class="secondary-button">
+		<button @click="onSecondaryClick" v-show="page.secondary_button && page.secondary_button.enabled" class="secondary-button">
 			{{page.secondary_button.text||this.secondary_button_text}}
 		</button>
 	</div>
