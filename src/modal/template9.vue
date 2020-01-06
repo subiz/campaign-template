@@ -64,6 +64,11 @@ export default {
 	background-color:#fff;
 	display: flex;
 	flex-direction: row;
+
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 .left-content{
 	display: flex;

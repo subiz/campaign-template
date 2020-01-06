@@ -64,6 +64,11 @@ export default {
 	flex-direction: row;
 	position: relative;
 	width: 800px;
+
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 .image{
 	background-image: url("../assets/bg1.png");

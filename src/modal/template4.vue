@@ -70,6 +70,11 @@ export default {
 	display: flex;
 	background-color: #fff;
 	flex-direction: column;
+
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 .image{
 	display: flex;

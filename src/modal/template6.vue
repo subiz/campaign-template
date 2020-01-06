@@ -65,6 +65,11 @@ export default {
 	background-image: url('../assets/bg6.png');
 	background-size:100% 100%;
 	position: relative;
+
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 .button-close{
 	width: 30px;

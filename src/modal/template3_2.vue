@@ -4,6 +4,7 @@ export default {
 	props:['page'],
 	data(){
 		return{
+			id:"template3_2",
 			title:"Cảm ơn bạn!",
 			description:"Chúng tôi đã nhận được thông tin yêu cầu liên hệ của bạn và chúng tôi sẽ gọi lạicho bạn vào thời gian bạn đã chọn.",
 			primary_button_text: "Ok, Tôi đã hiểu",
@@ -37,6 +38,11 @@ export default {
 	padding-top: 10px;
 	background: #fff;
 	position: relative;
+
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 .button-close{
 	width: 30px;

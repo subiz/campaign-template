@@ -71,6 +71,11 @@ export default {
 	max-width: 100%;
 	max-height: 100%;
 	background-color:#fff;
+
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	}	
 	.button-close{
 	position: absolute;

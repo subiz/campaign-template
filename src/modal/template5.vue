@@ -68,6 +68,11 @@ export default {
 	max-height: 100%;
 	background-image: url('../assets/bg5.png');
 	background-size:100% 100%;
+
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 .right{
 	display: flex;

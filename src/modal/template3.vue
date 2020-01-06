@@ -23,12 +23,6 @@ import Form from '../components/Form.vue'
 export default {
 	name:'template3',
 	props: ['page'],
-	data() {
-		return {
-			id: 'template3',
-			name: 'Đăng ký nhận ưu đãi',
-		}
-	},
 	components:{
 		Form
 	},
@@ -73,6 +67,11 @@ export default {
 	flex-direction: row;
 	width: 800px;
 	max-width: 100%;
+
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
 .left-content{
 	display: flex;
