@@ -6,12 +6,36 @@ export default {
 	components:{
 		Form
 	},
-	data() {
-		return {
-			id: 'template9',
-			name: 'Đăng ký nhận ưu đãi',
+	data(){
+		return{
+			id:"template9",
+			name:"Get feedback",
+			title:"Bạn có tìm được thứ bạn cần?",
+			description:"Chia sẻ cảm nhận của bạn cho chúng tôi bạn sẽ nhận được 10% GIẢM GIÁ.",
+			primary_button_text:"Gửi cảm nhận",
+			form:{
+				fields:[
+					{
+						key :1,
+						label : "Cảm nhận của bạn",
+						is_required :true,
+						type :"text",
+						multiline_text:true,
+						placeholder:"Cảm nhận của bạn",
+					},
+					{
+						key :2,
+						label : "Email cua ban",
+						is_required :true,
+						type :"text",
+						multiline_text:false,
+						placeholder:"Email của bạn",
+					},
+				],
+			},
+			secondary_button_text:"Cancle",
 		}
-	},
+	}
 }
 </script>
 <template>
@@ -19,17 +43,17 @@ export default {
 			<div class="left-content"/>
 			<div class="right-content">
 				<button class="button--close"></button>
-			<p class="title">{{page.title}}</p>
-			<p class="description">{{page.description}}</p>
-			<Form :form="page.form"/>
+			<p class="title">{{page.title||this.title}}</p>
+			<p class="description">{{page.description||this.description}}</p>
+			<Form :form="page.form||this.form"/>
 			<div class="buttons-container">
-			<button v-show="page.primary_button.enabled" class="primary-button">
-				{{this.page.primary_button.text}}
-			</button>
-			<button v-show="page.secondary_button.enabled" class="secondary-button">
-				{{this.page.secondary_button.text}}
-			</button>
-		</div>
+				<button v-show="page.primary_button.enabled" class="primary-button">
+					{{this.page.primary_button.text||this.primary_button_text}}
+				</button>
+				<button v-show="page.secondary_button.enabled" class="secondary-button">
+					{{this.page.secondary_button.text||this.secondary_button_text}}
+				</button>
+			</div>
 		</div>
 		</div>
 </template>

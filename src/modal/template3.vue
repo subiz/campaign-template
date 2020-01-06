@@ -3,19 +3,18 @@
 		<div class="left-content"/>
 		<div class="right-content">
 			<button class="button-close"></button>
-			<p class="description">{{page.description}}</p>
+			<p class="description">{{page.description||this.description}}</p>
 			<div class="red-div"></div>
-			<p class="title">{{page.title}}</p>
-			<Form :form="page.form"/>
+			<p class="title">{{page.title||this.title}}</p>
+			<Form :form="page.form||this.form"/>
 			<div class="buttons-container">
 				<button v-show="page.primary_button.enabled" class="primary-button">
-					{{this.page.primary_button.text}}
+					{{this.page.primary_button.text||this.primary_button_text}}
 				</button>
 				<button v-show="page.secondary_button.enabled" class="secondary-button">
-					{{this.page.secondary_button.text}}
+					{{this.page.secondary_button.text||this.secondary_button_text}}
 				</button>
 			</div>
-
 		</div>
 	</div>
 </template>
@@ -33,6 +32,34 @@ export default {
 	components:{
 		Form
 	},
+	data(){
+		return{
+			id:"template3",
+			name:"Get leads",
+			title:"Đăng ký nhận ưu đãi đặc biệt.",
+			description:"Giảm 20% chỉ một ngày suy nhất.",
+			primary_button_text:"Đăng ký ngay",
+			form:{
+				fields:[
+            {
+              key :1,
+              label : "Ho Ten",
+              is_required :true,
+              type :"text",
+              placeholder:"Họ tên"
+            },
+            {
+              key :2,
+              label : "Email cua ban",
+              is_required :true,
+              type :"text",
+              placeholder:"Email của bạn"
+            },
+          ],
+			},
+			secondary_button_text:"Cancle",
+		}
+	}
 }
 </script>
 <style scoped>
@@ -71,6 +98,8 @@ export default {
 	width: 20px;
 	border-radius: 10px;
 	border:0px;
+	background-image: url('../assets/close.png');
+	background-size: 100% 100%;
 }
 .description{
 	margin-top: 10px;

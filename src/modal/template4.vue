@@ -7,12 +7,43 @@ export default {
 	components:{
 		Form
 	},
+<<<<<<< HEAD
 	data() {
 		return {
 			id: 'template4',
 			name: 'Đăng ký nhận ưu đãi',
 		}
 	},
+=======
+	data(){
+		return{
+			id:"template4",
+			name:"Get leads",
+			title:"Đăng ký nhận ưu đãi khủng",
+			description:"Giảm giá tới 95%. Miễn phí vận chuyển nội thành",
+			primary_button_text:"Đăng ký ngay",
+			form:{
+				fields:[
+            {
+              key :1,
+              label : "Ho Ten",
+              is_required :true,
+              type :"text",
+              placeholder:"Họ tên"
+            },
+            {
+              key :2,
+              label : "Email cua ban",
+              is_required :true,
+              type :"text",
+              placeholder:"Email của bạn"
+            },
+          ],
+			},
+			secondary_button_text:"Cancle",
+		}
+	}
+>>>>>>> add default template data
 }
 </script>
 <template>
@@ -21,16 +52,16 @@ export default {
 				<button class="button-close"/>
 			</div>
 
-			<p class="title">Đăng ký để nhận ưu đãi khủng</p>
-			<p class="description">Giảm giá tới 95%. Miễn phí vận chuyển nội thành</p>
-			<Form :form="page.form" />
+			<p class="title">{{page.title||this.title}}</p>
+			<p class="description">{{page.description||this.description}}</p>
+			<Form :form="page.form||form" />
 
 			<div class="buttons-container">
 				<button v-show="page.primary_button.enabled" class="primary-button">
-					{{this.page.primary_button.text}}
+					{{this.page.primary_button.text||this.primary_button_text}}
 				</button>
 				<button v-show="page.secondary_button.enabled" class="secondary-button">
-					{{this.page.secondary_button.text}}
+					{{this.page.secondary_button.text||this.secondary_button_text}}
 				</button>
 			</div>
 	</div>
@@ -68,6 +99,9 @@ export default {
 	border: none;
 	outline: 0;
 	cursor: pointer;
+	background-image: url('../assets/close.png');
+	background-size: 100% 100%;
+
 }
 /deep/.form{
 	width:100%;

@@ -7,29 +7,44 @@ export default {
 	components:{
 		Form
 	},
-	data() {
-		return {
-			id: 'template5',
-			name: 'Đăng ký nhận ưu đãi',
-			title: 'Đăng ký để nhận được ưu đãi đặc biệt',
-			description: 'Giảm 20% chỉ một lần duy nhất đăng ký ngay để nhận được mã giảm giá'
+
+	data(){
+		return{
+			id:"template5",
+			name:"Get leads",
+			subtitle:"Đăng ký",
+			title:"NHẬN NGAY ƯU ĐÃI KHỬNG",
+			description:"Giảm 20% một ngày duy nhất. Miễn phí vận chuyển nội thành",
+			primary_button_text:"Đăng ký ngay",
+			form:{
+				fields:[
+            {
+              key :1,
+              label : "Ho Ten",
+              is_required :true,
+              type :"text",
+              placeholder:"Số điện thoại của bạn"
+            },
+          ],
+			},
+			secondary_button_text:"Cancle",
 		}
-	},
+	}
 }
 </script>
 <template>
 	<div class="container">
 		<div class="left">
-			<p class="subtitle">{{this.page.subtitle}}</p>
-			<p class="title">{{this.page.title}}</p>
-			<p class="description">{{this.page.description}}</p>
-			<Form :form="page.form" />
+			<p class="subtitle">{{this.page.subtitle||this.subtitle}}</p>
+			<p class="title">{{this.page.title||this.title}}</p>
+			<p class="description">{{this.page.description|| this.description}}</p>
+			<Form :form="page.form||this.form" />
 			<div class="buttons-container">
 				<button v-show="page.primary_button.enabled" class="primary-button">
-					{{this.page.primary_button.text}}
+					{{this.page.primary_button.text||this.primary_button_text}}
 				</button>
 				<button v-show="page.secondary_button.enabled" class="secondary-button">
-					{{this.page.secondary_button.text}}
+					{{this.page.secondary_button.text||this.secondary_button_text}}
 				</button>
 			</div>
 		</div>
@@ -70,6 +85,8 @@ export default {
 	border:none;
 	outline: 0;
 	cursor: pointer;
+	background-image: url('../assets/close.png');
+	background-size: 100% 100%;
 }
 .left{
 	display: flex;

@@ -4,30 +4,50 @@ export default {
 	name:'template6',
 	props:['page'],
 	components: {Form},
-	data() {
-		return {
-			id: 'template6',
-			name: 'Đăng ký nhận ưu đãi',
+	data(){
+		return{
+			id:"template6",
+			name:"Get leads",
+			subtitle:"Giảm 30%",
+			title:"Và miễn phí vận chuyển nội thành.",
+			description:"Chỉ một ngày duy nhất.Đăng ký ngày để nhận được mã giảm giá",
+			primary_button_text:"Đăng ký ngay",
+			form:{
+				fields:[
+            {
+              key :1,
+              label : "Ho Ten",
+              is_required :true,
+              type :"text",
+              placeholder:"Số điện thoại của bạn"
+            },
+          ],
+			},
+			secondary_button_text:"Cancle",
 		}
-	},
+	}
 }
 </script>
 <template>
 	<div class="container">
 		<button class="button-close" />
-
-		<p class="subtitle">{{this.page.subtitle}}</p>
-		<p class="title">{{this.page.title}}</p>
+		<p class="subtitle">{{this.page.subtitle||this.subtitle}}</p>
+		<p class="title">{{this.page.title||this.title}}</p>
 		<div class="white-div"/>
+<<<<<<< HEAD
 		<p class="description">{{this.page.description}}</p>
 
 		<Form :form="page.form" />
+=======
+		<p class="description">{{this.page.description||this.description}}</p>
+		<Form :form="page.form||this.form" />
+>>>>>>> add default template data
 		<div class="buttons-container">
 			<button v-show="page.primary_button.enabled" class="primary-button">
-				{{this.page.primary_button.text}}
+				{{this.page.primary_button.text||this.primary_button_text}}
 			</button>
 			<button v-show="page.secondary_button.enabled" class="secondary-button">
-				{{this.page.secondary_button.text}}
+				{{this.page.secondary_button.text||this.secondary_button_text}}
 			</button>
 		</div>
 	</div>
@@ -109,6 +129,7 @@ export default {
 	border-bottom: 1px solid #d9d9d9;
 	border:none;
 	outline: 0;
+	border-radius: 3px;
 }
 .primary-button{
 	padding-top: 10px;

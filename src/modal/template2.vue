@@ -1,180 +1,188 @@
+
+<script>
+import Form from '../components/Form.vue'
+export default {
+	name: 'template2',
+	props:["page"],
+	components: {Form},
+	data(){
+		return{
+			id:"template2",
+			name:"Get leads",
+			title:"Đăng ký để nhận ưu đãi đặc biệt",
+			description:"Giảm 20% chỉ một ngày duy nhất. Đăng ký ngay để nhận được mã giảm giá.",
+			primary_button_text:"Đăng ký ngay",
+			form:{
+				fields:[
+            {
+              key :1,
+              label : "Ho Ten",
+              is_required :true,
+              type :"text",
+              placeholder:"Họ tên"
+            },
+            {
+              key :2,
+              label : "Email cua ban",
+              is_required :true,
+              type :"text",
+              placeholder:"Email của bạn"
+            },
+          ],
+			},
+			secondary_button_text:"Cancle",
+		}
+	}
+}
+</script>
 <template>
 	<div class="container">
 		<button class="button-close"></button>
-
 		<div class="main">
-
-			<p class="title">{{this.page.title}}</p>
-			<p class="description">{{this.page.description}}</p>
-
-			<Form :form="page.form" />
-
+			<p class="title">{{page.title||this.title}}</p>
+			<p class="description">{{page.description||this.description}}</p>
+			<Form :form="page.form || this.form" />
 			<div class="buttons-container">
 				<button v-show="page.primary_button.enabled" class="primary-button">
-					{{this.page.primary_button.text}}
+					{{page.primary_button.text||this.primary_button_text}}
 				</button>
 				<button v-show="page.secondary_button.enabled" class="secondary-button">
-					{{this.page.secondary_button.text}}
+					{{page.secondary_button.text||this.secondary_button_text}}
 				</button>
 			</div>
 		</div>
 	</div>
 </template>
 
-<script>
- import Form from '../components/Form.vue'
- export default {
-	 name: 'template2',
-	 props:["page"],
-	 data() {
-		 return {
-				id: 'template2',
-				name: 'Đăng ký nhận ưu đãi',
-				title: 'Đăng ký để nhận được ưu đãi đặc biệt',
-				description: 'Giảm 20% chỉ một lần duy nhất đăng ký ngay để nhận được mã giảm giá'
-		 }
-	 },
-	 components: {Form},
- }
-</script>
-
 <style scoped>
- * {
-	 margin: 0;
-	 padding: 0;
-	 box-sizing: border-box;
- }
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
 
- .container {
-	 display: flex;
-	 flex-direction: column;
+.container {
+	display: flex;
+	flex-direction: column;
 
-	 width: 800px;
+	width: 800px;
 
-	 max-width: 100%;
+	max-width: 100%;
 
-	 align-items: center;
-	 background-image: url('../assets/bg2.png');
-	 background-size: auto;
+	align-items: center;
+	background-image: url('../assets/bg2.png');
+	background-size: auto;
 
-	 position: fixed;
-	 top: 50%;
-   left: 50%;
-   transform: translate(-50%, -50%);
- }
-
-
- .button-close {
-   position: absolute;
-
-   right: 10px;
-   top: 10px;
-
-	 height: 20px;
-	 width: 20px;
-	 border-radius: 50%;
-	 border: 0px;
-
-	 background-image: url('../assets/x.png');
- }
-
- .main {
-	 display: flex;
-	 flex-direction: column;
-
-	 padding:45px;
-
-	 width: 430px;
-	 max-width: 100%;
-
-	 align-items: center;
-	 background-color: #fff;
-
-	 margin-top: 36px;
-	 margin-bottom: 36px;
-
-	 box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.0196802), 0px 2px 4px rgba(0, 0, 0, 0.03), 0px 7px 12px rgba(0, 0, 0, 0.0503198), 0px 18px 28px rgba(0, 0, 0, 0.07);
- }
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
 
 
- .title {
-	 font-size: 30px;
-	 font-weight: bold;
-	 /*font-family: 'Montserrat', sans-serif;*/
-	 font-style: normal;
-	 text-align: center;
- }
+.button-close {
+	position: absolute;
 
- .description {
-	 margin-top: 10px;
-	 /*font-family: 'Muli';*/
-	 font-weight: normal;
-	 text-align: center;
-	 font-size: 18px;
- }
+	right: 10px;
+	top: 10px;
 
- .buttons-container{
-	 display: flex;
-	 margin-top: 5px;
-	 align-items: center;
-	 justify-content: center;
-	 margin-top:37px;
- }
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	border: 0px;
 
- .primary-button {
-	 border:0px;
-	 border-radius: 5px;
-	 background-color: #FDAD15;
+	background-image: url('../assets/x.png');
+}
 
-	 color: #fff;
-	 font-size: 16px;
-	 font-weight: 500;
-	 text-align: center;
-	 text-transform: uppercase;
+.main {
+	display: flex;
+	flex-direction: column;
+	padding:45px;
+	width: 430px;
+	max-width: 100%;
+	align-items: center;
+	background-color: #fff;
+	margin-top: 36px;
+	margin-bottom: 36px;
+	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.0196802), 0px 2px 4px rgba(0, 0, 0, 0.03), 0px 7px 12px rgba(0, 0, 0, 0.0503198), 0px 18px 28px rgba(0, 0, 0, 0.07);
+}
 
-	 padding-left: 30px;
-	 padding-right: 30px;
-	 padding-top: 12px;
-	 padding-bottom: 12px;
+.title {
+	font-size: 30px;
+	font-weight: bold;
+	/*font-family: 'Montserrat', sans-serif;*/
+	font-style: normal;
+	text-align: center;
+}
 
-	 white-space: nowrap;
-	 cursor: pointer;
- }
+.description {
+	margin-top: 10px;
+	/*font-family: 'Muli';*/
+	font-weight: normal;
+	text-align: center;
+	font-size: 18px;
+}
 
- .secondary-button {
-	 border:0px;
-	 border-radius: 5px;
-	 background-color: #d1d1d1;
+.buttons-container{
+	display: flex;
+	margin-top: 5px;
+	align-items: center;
+	justify-content: center;
+	margin-top:37px;
+}
 
-	 color: #fff;
-	 font-size: 16px;
-	 font-weight: 500;
-	 text-align: center;
-	 text-transform: uppercase;
+.primary-button {
+	border:0px;
+	border-radius: 5px;
+	background-color: #FDAD15;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 500;
+	text-align: center;
+	text-transform: uppercase;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	white-space: nowrap;
+	cursor: pointer;
+}
 
-	 padding-left: 30px;
-	 padding-right: 30px;
-	 padding-top: 12px;
-	 padding-bottom: 12px;
+.secondary-button {
+	border:0px;
+	border-radius: 5px;
+	background-color: #d1d1d1;
+	color: #fff;
+	font-size: 16px;
+	font-weight: 500;
+	text-align: center;
+	text-transform: uppercase;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	margin-left: 10px;
+	white-space: nowrap;
+	cursor: pointer;
+}
 
-	 margin-left: 10px;
-	 white-space: nowrap;
-	 cursor: pointer;
- }
+/deep/ .form {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	margin-top: 15px;
+}
 
- /deep/ .form {
-	 display: flex;
-	 flex-direction: column;
-	 width: 100%;
-	 margin-top: 15px;
- }
+/deep/ .text-input {
+border: none;
+border-bottom: 1px solid #d9d9d9;
+width: 100%;
+height: 40px;
+font-size: 16px;
+margin-top: 19px;
+padding-left: 5px;
+}
 
- /deep/ .text-input {
-	 border: none;
-	 border-bottom: 1px solid #d9d9d9;
-	 width: 100%;
-	 font-size: 16px;
-	 margin-top: 19px;
- }
-
+.secondary-button:hover {color: #bbbbbb }
+.primary-button:hover{background-color: #343e46}
 </style>
