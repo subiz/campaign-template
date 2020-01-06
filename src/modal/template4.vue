@@ -7,14 +7,6 @@ export default {
 	components:{
 		Form
 	},
-<<<<<<< HEAD
-	data() {
-		return {
-			id: 'template4',
-			name: 'Đăng ký nhận ưu đãi',
-		}
-	},
-=======
 	data(){
 		return{
 			id:"template4",
@@ -43,7 +35,6 @@ export default {
 			secondary_button_text:"Cancle",
 		}
 	}
->>>>>>> add default template data
 }
 </script>
 <template>
