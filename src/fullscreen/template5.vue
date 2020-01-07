@@ -1,5 +1,7 @@
 
 <script>
+import common from '../common.js'
+var op = require('object-path')
 import Form from '../components/Form.vue'
 export default {
 	name:'template5',
@@ -7,9 +9,10 @@ export default {
 	components:{
 		Form
 	},
-
 	data(){
 		return{
+			mobile :common.mobilecheck(),
+			close: false,
 			id:"template5",
 			name:"Get leads",
 			subtitle:"Đăng ký",
@@ -31,6 +34,7 @@ export default {
 		}
 	},
 	methods:{
+		op: op.get,
 		onClose(){
 			this.$emit("closeButtonClicked")
 		},
@@ -44,150 +48,193 @@ export default {
 }
 </script>
 <template>
-	<div class="container">
+	<div v-show="!close" :class="'container '+(mobile ? 'mobile': '')">
 		<div class="left">
-			<p class="subtitle">{{this.page.subtitle||this.subtitle}}</p>
-			<p class="title">{{this.page.title||this.title}}</p>
+			<button v-if="!close" class="button-close" @click="onClose"></button>
+			<p class="subtitle">{{op(this, "page.subtitle",this.subtitle)}}</p>
+			<p class="title">{{op(this, "page.title",this.title)}}</p>
 			<p class="description">{{this.page.description|| this.description}}</p>
-			<Form :form="page.form||this.form" />
+			<Form :form="op(this,'page.form',this.form)" />
 			<div class="buttons-container">
-				<button @click="onPrimaryClick" v-show="page.primary_button && page.primary_button.enabled" class="primary-button">
-					{{this.page.primary_button.text||this.primary_button_text}}
+				<button @click="onPrimaryClick" v-show="op(this,'page.primary_button.enabled',true)" class="primary-button">
+					{{op(this,"page.primary_button.text", this.primary_button_text)}}
 				</button>
-				<button @click="onSecondaryClick" v-show="page.secondary_button && page.secondary_button.enabled" class="secondary-button">
-					{{this.page.secondary_button.text||this.secondary_button_text}}
+				<button @click="onSecondaryClick" v-show="op(this,'page.secondary_button.enabled',true)"  class="secondary-button">
+					{{op(this,"page.secondary_button.text", this.secondary_button_text)}}
 				</button>
 			</div>
 		</div>
 		<div class="right">
-			<button class="button-close" @click="onClose"></button>
+			<button v-if="close" class="button-close" @click="onClose"></button>
 		</div>
 	</div>
 </template>
 <style scoped>
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
 }
 .container{
-	display: flex;
-	flex-direction: row;
-	height: 100vh;
-	width: 100%;
-	max-width: 100%;
-	max-height: 100%;
-	background-image: url('../assets/bg5.png');
-	background-size:100% 100%;
+	display: flex !important;
+	flex-direction: row !important;
+	height: 100vh !important;
+	width: 100% !important;
+	max-width: 100% !important;
+	max-height: 100% !important;
+	background-image: url('../assets/bg5.png') !important;
+	background-size:100% 100% !important;
 
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	position: fixed !important;
+	top: 50% !important;
+	left: 50% !important;
+	transform: translate(-50%, -50%) !important;
 }
 .right{
-	display: flex;
-	flex: 1;
-	position: relative;
-	padding-top: 10px;
+	display: flex !important;
+	flex: 1 !important;
+	position: relative !important;
 }
 .button-close{
-	position: absolute;
-	height: 30px;
-	width: 30px;
-	right:10px;
-	background-color: #091125;
-	border-radius: 15px;
-	border:none;
-	outline: 0;
-	cursor: pointer;
-	background-image: url('../assets/close.png');
-	background-size: 100% 100%;
+	position: absolute !important;
+	height: 30px !important;
+	width: 30px !important;
+	right:10px !important;
+	top:10px !important;
+	background-color: #091125 !important;
+	border-radius: 15px !important;
+	border:none !important;
+	outline: 0 !important;
+	cursor: pointer !important;
+	background-image: url('../assets/close.png') !important;
+	background-size: 100% 100% !important;
 }
 .left{
-	display: flex;
-	flex: 1;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	display: flex !important;
+	flex: 1 !important;
+	flex-direction: column !important;
+	align-items: center !important;
+	justify-content: center !important;
 }
 .subtitle{
-	color: #fff;
-	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	font-weight: normal;
-	font-size: 40px;
-	text-align: center;
+	color: #fff !important;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+	font-weight: normal !important;
+	font-size: 40px !important;
+	text-align: center !important;
 }
 .title{
-	margin-top: 5px;
-	text-align: center;
-	color: #FDAD15;
-	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	font-weight: bold;
-	font-size: 50px;
-	width: 100%;
+	margin-top: 5px !important;
+	text-align: center !important;
+	color: #FDAD15 !important;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+	font-weight: bold !important;
+	font-size: 50px !important;
+	width: 100% !important;
 }
 .description{
-	margin-top: 25px;
-	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	font-size: 16px;
-	color: #fff;
-	text-align: center;
-	width: 80%;
+	margin-top: 25px !important;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+	font-size: 16px !important;
+	color: #fff !important;
+	text-align: center !important;
+	width: 80% !important;
 }
 /deep/.form{
-	margin-top: 30px;
-	width: 100%;
-	display:flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
+	margin-top: 30px !important;
+	width: 100% !important;
+	display:flex !important;
+	flex-direction: column !important;
+	align-items: center !important;
+	justify-content: center !important;
 }
 /deep/.text-input{
-	margin-top: 10px;
-	width: 430px;
-	height: 40px;
-	background-color: #fff;
-	text-align: center;
-	border-radius: 25px;
-	outline: 0;
-	border-bottom: 1px solid #d9d9d9;
-	border: none;
+	margin-top: 10px !important;
+	width: 430px !important;
+	height: 40px !important;
+	background-color: #fff !important;
+	text-align: center !important;
+	border-radius: 25px !important;
+	outline: 0 !important;
+	border-bottom: 1px solid  !important#d9d9d9;
+	border: none !important;
 }
 .buttons-container{
-	margin-top: 15px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	margin-bottom: 10px;
+	margin-top: 15px !important;
+	display: flex !important;
+	flex-direction: column !important;
+	align-items: center !important;
+	justify-content: center !important;
+	margin-bottom: 10px !important;
 }
 .primary-button{
-	background-color: #FDAD15;
-	width: 430px;
-	height: 40px;
-	border-radius: 25px;
-	border:none;
-	font-size: 18px;
-	font-weight: bold;
-	color: #fff;
-	outline: 0;
-	cursor: pointer;
+	background-color: #FDAD15 !important;
+	width: 430px !important;
+	height: 40px !important;
+	border-radius: 25px !important;
+	border:none !important;
+	font-size: 18px !important;
+	font-weight: bold !important;
+	color: #fff !important;
+	outline: 0 !important;
+	cursor: pointer !important;
 }
 .secondary-button{
-	margin-top: 5px;
-	background-color: #d9d9d9;
-	width: 430px;
-	height: 40px;
-	border-radius: 25px;
-	border:none;
-	font-size: 18px;
-	font-weight: bold;
-	color: #fff;
-	outline: 0;
-	cursor: pointer;
+	margin-top: 5px !important;
+	background-color: #d9d9d9 !important;
+	width: 430px !important;
+	height: 40px !important;
+	border-radius: 25px !important;
+	border:none !important;
+	font-size: 18px !important;
+	font-weight: bold !important;
+	color: #fff !important;
+	outline: 0 !important;
+	cursor: pointer !important;
 }
-.button-close:hover{background-color: #15203e}
 .primary-button:hover{background-color: #e69f17}
 .secondary-button:hover {background-color: #bbbbbb }
+
+.mobile .right{
+	display: none !important;
+}
+.mobile .left{
+	display: flex !important;
+	flex: 1 !important;
+	width:100% !important;
+	max-width: 100% !important;
+	background-image: url('../assets/bg5_mobile.png') !important;
+	position: relative !important;
+	justify-content: flex-start !important;
+	padding-top: 40px !important;
+}
+.mobile .left .subtitle{
+	margin-top: 5px !important;
+	font-size: 28px !important;
+}
+.mobile .left .title{
+	margin-top: 5px !important;
+	font-size: 34px !important;
+}
+.mobile .left .description{
+	margin-top: 5px !important;
+	font-size: 24px !important;
+}
+.mobile .left .form {
+	margin-top: 5px !important;
+	width:80% !important;
+}
+.mobile .left .form /deep/.text-input {
+	margin-top: unset !important;
+	width:100% !important;
+}
+.mobile .left .buttons-container {
+	width: 80% !important;
+}
+.mobile .left .buttons-container .primary-button{
+	width: 100% !important;
+}
+.mobile .left .buttons-container .secondary-button{
+	width: 100% !important;
+}
 </style>

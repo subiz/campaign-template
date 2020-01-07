@@ -1,24 +1,6 @@
-<template>
-	<div class="container">
-		<div class="left-content"/>
-		<div class="right-content">
-			<button class="button-close" @click="onClose"></button>
-			<p class="description">{{page.description||this.description}}</p>
-			<div class="red-div"></div>
-			<p class="title">{{page.title||this.title}}</p>
-			<Form :form="page.form||this.form"/>
-			<div class="buttons-container">
-				<button @click="onPrimaryClick" v-show="page.primary_button && page.primary_button.enabled" class="primary-button">
-					{{this.page.primary_button.text||this.primary_button_text}}
-				</button>
-				<button @click="onSecondaryClick" v-show="page.secondary_button && page.secondary_button.enabled" class="secondary-button">
-					{{this.page.secondary_button.text||this.secondary_button_text}}
-				</button>
-			</div>
-		</div>
-	</div>
-</template>
 <script>
+import common from '../common.js'
+var op = require('object-path')
 import Form from '../components/Form.vue'
 export default {
 	name:'template3',
@@ -28,6 +10,8 @@ export default {
 	},
 	data(){
 		return{
+			mobile:common.mobilecheck(),
+			close: false,
 			id:"template3",
 			name:"Get leads",
 			title:"Đăng ký nhận ưu đãi đặc biệt.",
@@ -55,8 +39,10 @@ export default {
 		}
 	},
 	methods:{
+		op: op.get,
 		onClose(){
 			this.$emit("closeButtonClicked")
+			this.close = true
 		},
 		onSecondaryClick(){
 			this.$emit("secondaryButtonClicked")
@@ -67,133 +53,162 @@ export default {
 	}
 }
 </script>
+<template>
+	<div v-if="!close" :class="'container '+(mobile ? 'mobile': '')">
+		<div class="left-content">
+			<button v-if="mobile" class="button-close" @click="onClose"></button>
+		</div>
+		<div class="right-content">
+			<button v-if="!mobile" class="button-close" @click="onClose"></button>
+			<p class="description">{{op(this, "page.description",this.description)}}</p>
+			<div class="red-div"></div>
+			<p class="title">{{op(this, "page.title",this.title)}}</p>
+			<Form :form="op(this,'page.form',this.form)"/>
+			<div class="buttons-container">
+				<button @click="onPrimaryClick" v-show="op(this,'page.primary_button.enabled',true)"  class="primary-button">
+					{{op(this,"page.primary_button.text", this.primary_button_text)}}
+				</button>
+				<button @click="onSecondaryClick" v-show="op(this,'page.secondary_button.enabled',true)" class="secondary-button">
+					{{op(this, "page.secondary_button.text", this.secondary_button_text)}}
+				</button>
+			</div>
+		</div>
+	</div>
+</template>
 <style scoped>
 	* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
 }
 .container{
-	display: flex;
-	flex-direction: row;
-	width: 800px;
-	max-width: 100%;
-
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	display: flex !important;
+	flex-direction: row !important;
+	width: 800px !important;
+	max-width: 100% !important;
+	margin: 0 auto !important;
 }
 .left-content{
-	display: flex;
-	flex:1;
-	background-image: url('../assets/bg3.png');
-	background-size : auto;
-	background-repeat: no-repeat
+	display: flex !important;
+	flex:1 !important;
+	background-image: url('../assets/bg3.png') !important;
+	background-size : auto !important;
+	background-repeat: no-repeat !important
 }
 .right-content{
-	display: flex;
-	flex-direction: column;
-	flex:1;
-	align-items: center;
-	background-color: #fff;
-	padding-top: 42px;
-	position: relative;
+	display: flex !important;
+	flex-direction: column !important;
+	flex:1 !important;
+	align-items: center !important;
+	background-color: #fff !important;
+	padding-top: 42px !important;
+	position: relative !important;
 }
 .button-close{
-	position: absolute;
-	right: 10px;
-	top: 10px;
-	height: 20px;
-	width: 20px;
-	border-radius: 10px;
-	border:0px;
-	background-image: url('../assets/close.png');
-	background-size: 100% 100%;
+	position: absolute !important;
+	right: 10px !important;
+	top: 10px !important;
+	height: 20px !important;
+	width: 20px !important;
+	border-radius: 10px !important;
+	border:0px !important;
+	background-image: url('../assets/close.png') !important;
+	background-size: 100% 100% !important;
 }
 .description{
-	margin-top: 10px;
-	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 16px;
-	align-self: flex-start;
-	margin-left: 15px;
+	margin-top: 10px !important;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+	font-style: normal !important;
+	font-weight: normal !important;
+	font-size: 16px !important;
+	align-self: flex-start !important;
+	margin-left: 15px !important;
 }
 .red-div{
-	margin-top: 8px;
-	width: 134px;
-	height: 5px;
-	background-color: #B91526;
-	align-self: flex-start;
-	margin-left: 15px;
+	margin-top: 8px !important;
+	width: 134px !important;
+	height: 5px !important;
+	background-color: #B91526 !important;
+	align-self: flex-start !important;
+	margin-left: 15px !important;
 }
 .title{
-	margin-top: 10px;
-	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	font-style: normal;
-	font-weight: bold;
-	font-size: 28px;
-	line-height: 34px;
-	align-self: flex-start;
-	margin-left: 15px;
+	margin-top: 10px !important;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+	font-style: normal !important;
+	font-weight: bold !important;
+	font-size: 28px !important;
+	line-height: 34px !important;
+	align-self: flex-start !important;
+	margin-left: 15px !important;
 }
 /deep/.form{
-	width: 100%;
-	padding-left: 10px;
-	padding-right: 10px;
+	width: 100% !important;
+	padding-left: 10px !important;
+	padding-right: 10px !important;
 }
 /deep/.text-input{
-	width: 100%;
-	height: 40px;
-	border: none;
-	border-bottom: 1px solid #d9d9d9;
-	padding-left: 5px;
-	font-size: 12px;
-	margin-top: 10px;
-	outline: 0;
+	width: 100% !important;
+	height: 40px !important;
+	border: none !important;
+	border-bottom: 1px solid #d9d9d9 !important;
+	padding-left: 5px !important;
+	font-size: 12px !important;
+	margin-top: 10px !important;
+	outline: 0 !important;
 }
 .buttons-container{
-	margin-top: 10px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin-bottom: 10px;
+	margin-top: 10px !important; 
+	display: flex !important; 
+	align-items: center !important; 
+	justify-content: center !important; 
+	margin-bottom: 10px !important; 
 }
 .primary-button{
-	margin-right: 5px;
-	margin-left: 5px;
-	background-color: #B91526;
-	padding-left: 30px;
-	padding-right:30px;
-	height: 45px;
-	border-radius: 5px;
-	border:0px;
-	color: #fff;
-	font-size: 16px;
-	font-weight: 600;
-	text-transform: uppercase;
-	text-align: center;
-	outline: 0;
-	cursor: pointer;
+	margin-right: 5px !important; 
+	margin-left: 5px !important; 
+	background-color: #B91526 !important; 
+	padding-left: 30px !important; 
+	padding-right:30px !important; 
+	height: 45px !important; 
+	border-radius: 5px !important; 
+	border:0px !important; 
+	color: #fff !important; 
+	font-size: 16px !important; 
+	font-weight: 600 !important; 
+	text-transform: uppercase !important; 
+	text-align: center !important; 
+	cursor: pointer !important; 
 }
 .secondary-button{
-	margin-right: 5px;
-	margin-left: 5px;
-	background-color: #d9d9d9;
-	padding-left: 30px;
-	padding-right:30px;
-	height: 45px;
-	border-radius: 5px;
-	border:0px;
-	color: #fff;
-	font-size: 16px;
-	font-weight: 600;
-	text-transform: uppercase;
-	text-align: center;
-	outline: 0;
-	cursor: pointer;
+	margin-right: 5px !important; 
+	margin-left: 5px !important; 
+	background-color: #d9d9d9 !important; 
+	padding-left: 30px !important; 
+	padding-right:30px !important; 
+	height: 45px !important; 
+	border-radius: 5px !important; 
+	border:0px !important; 
+	color: #fff !important; 
+	font-size: 16px !important; 
+	font-weight: 600 !important; 
+	text-transform: uppercase !important; 
+	text-align: center !important; 
+	outline: 0 !important; 
+	cursor: pointer !important; 
 }
 .primary-button:hover {background-color: #92111e }
 .secondary-button:hover {background-color: #bbbbbb }
+
+.container.mobile{
+	height: 80% !important; 
+	width: 95% !important; 
+	flex-direction: column !important; 
+}
+.mobile .right-content{
+	position: unset !important; 
+}
+.mobile .left-content{
+	position: relative !important; 
+}
 </style>
