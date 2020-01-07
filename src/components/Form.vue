@@ -1,8 +1,9 @@
 <template>
 	<div class="form">
-		<div  v-for="field in form.fields"  class="form">
+		<div  v-for="field in form.fields" class="form">
+			<label class="label">{{field.label}}</label>
+
 			<div v-if="field.type==='list' && !field.multiple_choice" class="form--list-container">
-				<label class="label">{{field.label}}</label>
 				<div class="radio" v-for="item in field.list">
 					<input type="radio" :id="field.key + item" :name="field.key" :value="item"
 								 @change="ev => onRadioChange(ev, field, item)"
@@ -15,7 +16,6 @@
 			</div>
 
 			<div v-if="field.type==='list' && field.multiple_choice" class="form--list-container">
-				<label class="label">{{field.label}}</label>
 
 				<div class="checkbox" v-for="item in field.list">
 					<input
@@ -248,5 +248,9 @@
 	 margin-top: 15px;
  }
 
-
+ .label {
+	 font-size: 15px;
+	 display: block;
+	 margin-top: 20px;
+ }
 </style>
