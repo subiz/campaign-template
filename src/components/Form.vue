@@ -1,6 +1,6 @@
 <template>
 	<div class="form">
-		<div  v-for="field in form.fields">
+		<div  v-for="field in form.fields"  class="form">
 			<div v-if="field.type==='list' && !field.multiple_choice" class="form--list-container">
 				<label class="label">{{field.label}}</label>
 				<div class="radio" v-for="item in field.list">
