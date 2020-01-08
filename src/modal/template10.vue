@@ -69,124 +69,139 @@ export default {
 	</div>
 </template>
 <style scoped>
-	* {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	}
-	.container{
-	display:flex;
-	flex-direction: column;
-	align-items: center;
-	width: 480px;
-	max-width: 100%;
-	max-height: 100%;
-	background-color:#fff;
+* {
+	margin: 0 !important;
+	padding: 0 !important;
+	box-sizing: border-box !important;
+}
 
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	}	
-	.button-close{
-	position: absolute;
-	right: 10px;
-	background-color: black;
-	height: 20px;
-	width: 20px;
-	border-radius: 10px;
-	background-image: url("../assets/close.png");
-	background-size: 100% 100%;
-	cursor: pointer;
-	}
-	.header{
-	padding-top:10px;
-	position: relative;
-	padding-left: 34px;
-	width:100%;
-	height: ;
-	background-image: url("../assets/bg10.png");
-	background-size: 100% 300%;
-	background-repeat: no-repeat;
-	position: relative;
-	}
-	.overlay{
-	background-color: #d6a7004f;
-	position: absolute;
-	top:0 ;
-	left: 0;
-	bottom: 0;
-	right:0;
-	}
-	.description{
-	margin-top:30px;
-	padding-top:5px;
-	padding-bottom:5px;
-	font-weight: bold;
-	font-size: 16px;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	color: #000000;
-	}
-	.black-div{
-	width: 134px;
-	height: 3px;
-	background-color: #000;
-	margin-top: 8px;
-	margin-bottom: 12px;
-	}
-	.title{
-	padding-top:5px;
-	padding-bottom:10px;
-	margin-bottom: 34px;
-	font-weight: bold;
-	font-size: 28px;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	color: #000000;
-	}
-	/deep/ .form{
-		width: 100%;
-		display: flex;
-		justify-content: center;
-	}
-	.buttons-container{
-	margin-top: 15px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	margin-bottom: 10px;
+.container {
+	display: flex !important;
+	flex-direction: column !important;
+	align-items: center !important;
+	width: 480px !important;
+	max-width: 100% !important;
+	max-height: 100% !important;
+	background-color: #fff !important;
+	position: fixed !important;
+	top: 50% !important;
+	left: 50% !important;
+	transform: translate(-50%, -50%) !important;
 }
-.primary-button{
-	background-color: #000000;
-	height: 45px;
-	padding-top: 12px;
-	padding-bottom: 12px;
-	padding-left: 20px;
-	padding-right: 20px;
-	margin-right:5px;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	border:none;
-	font-size: 18px;
-	font-weight: normal;
-	color: #fff;
-	outline: 0;
-	cursor: pointer;
+
+.button-close {
+	position: absolute !important;
+	right: 10px !important;
+	background-color: black !important;
+	height: 20px !important;
+	width: 20px !important;
+	border-radius: 10px !important;
+	background-image: url("../assets/close.png") !important;
+	background-size: 100% 100% !important;
+	cursor: pointer !important;
 }
-.secondary-button{
-	background-color: #d9d9d9;
-	height: 45px;
-	padding-top: 12px;
-	padding-bottom: 12px;
-	padding-left: 20px;
-	padding-right: 20px;
-	margin-left:5px;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	border:none;
-	font-size: 18px;
-	font-weight: normal;
-	color: #fff;
-	outline: 0;
-	cursor: pointer;
+
+.header {
+	padding-top: 10px !important;
+	position: relative !important;
+	padding-left: 34px !important;
+	width: 100% !important;
+	background-image: url("../assets/bg10.png") !important;
+	background-size: 100% 300% !important;
+	background-repeat: no-repeat !important;
+	position: relative !important;
 }
-.primary-button:hover{background-color: #e69f17}
-.secondary-button:hover {background-color: #bbbbbb }
+
+.overlay {
+	background-color: #d6a7004f !important;
+	position: absolute !important;
+	top: 0 !important;
+	left: 0 !important;
+	bottom: 0 !important;
+	right: 0 !important;
+}
+
+.description {
+	margin-top: 30px !important;
+	padding-top: 5px !important;
+	padding-bottom: 5px !important;
+	font-weight: bold !important;
+	font-size: 16px !important;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+	color: #000000 !important;
+}
+
+.black-div {
+	width: 134px !important;
+	height: 3px !important;
+	background-color: #000 !important;
+	margin-top: 8px !important;
+	margin-bottom: 12px !important;
+}
+
+.title {
+	padding-top: 5px !important;
+	padding-bottom: 10px !important;
+	margin-bottom: 34px !important;
+	font-weight: bold !important;
+	font-size: 28px !important;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+	color: #000000 !important;
+}
+
+/deep/ .form {
+	width: 100% !important;
+	display: flex !important;
+	justify-content: center !important;
+}
+
+.buttons-container {
+	margin-top: 15px !important;
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	margin-bottom: 10px !important;
+}
+
+.primary-button {
+	background-color: #000000 !important;
+	height: 45px !important;
+	padding-top: 12px !important;
+	padding-bottom: 12px !important;
+	padding-left: 20px !important;
+	padding-right: 20px !important;
+	margin-right: 5px !important;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+	border: none !important;
+	font-size: 18px !important;
+	font-weight: normal !important;
+	color: #fff !important;
+	outline: 0 !important;
+	cursor: pointer !important;
+}
+
+.secondary-button {
+	background-color: #d9d9d9 !important;
+	height: 45px !important;
+	padding-top: 12px !important;
+	padding-bottom: 12px !important;
+	padding-left: 20px !important;
+	padding-right: 20px !important;
+	margin-left: 5px !important;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+	border: none !important;
+	font-size: 18px !important;
+	font-weight: normal !important;
+	color: #fff !important;
+	outline: 0 !important;
+	cursor: pointer !important;
+}
+
+.primary-button:hover {
+	background-color: #e69f17 !important;
+}
+
+.secondary-button:hover {
+	background-color: #bbbbbb !important;
+}
 </style>
