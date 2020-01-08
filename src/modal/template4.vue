@@ -55,7 +55,7 @@ export default {
 }
 </script>
 <template>
-	<div :class="'container '+ (mobile? 'mobile':'' )" >
+	<div v-if="!close" :class="'container '+ (mobile? 'mobile':'' )" >
 			<div class="image">
 				<button class="button-close" @click="onClose"/>
 			</div>
@@ -123,6 +123,11 @@ export default {
 	padding-left: 35px !important;
 	padding-right: 35px !important;
 }
+/deep/.label{
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 10px;
+	color: #000;
+}
 /deep/.text-input{
 	padding-left: 5px !important;
 	margin-top: 10px !important;
@@ -185,9 +190,13 @@ export default {
 	outline: 0 !important;
 	cursor: pointer !important;
 }
-.primary-button:hover{background-color: #03176f}
-.secondary-button:hover {background-color: #bbbbbb }
 
+ .secondary-button:hover {
+	 color: #bbbbbb !important;
+ }
+ .primary-button:hover{
+	 background-color: #03173f !important;
+ }
 .container.mobile{
 	height: 90% !important;
 	widows: 95% !important;

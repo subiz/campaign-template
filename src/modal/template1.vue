@@ -10,6 +10,7 @@
 	 data(){
 		 return{
 			 mobile: common.mobilecheck(),
+			 close:false,
 			 id:"template1",
 			 name:"Get leads",
 			 title:"Giảm 10%",
@@ -83,7 +84,7 @@
 	 position: relative !important;
 	 width: 800px !important;
 	
-	margin: 0auto !important;
+	margin: 0 auto !important;
  }
  .image{
 	 background-image: url("../assets/bg1.png") !important;
@@ -186,17 +187,20 @@
  /deep/ .form {
 	 display: flex !important;
 	 flex-direction: column !important;
-	 margin-top: 5px !important;
-	 padding: 10px !important;
+	 padding-left: 10px !important;
+	 padding-right: 10px !important;
  }
-
+/deep/ .label { 
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 10px;
+	color: #000;
+}
  /deep/ .text-input {
 	 border: none !important;
 	 border-bottom: 1px solid #d9d9d9 !important;
 	 width: 100% !important;
 	 height: 40px !important;
 	 font-size: 16px !important;
-	 margin-top: 19px !important;
 	 outline: none !important;
  }
 
@@ -218,16 +222,15 @@
  }
 
  .container.mobile {
-	 width: unset !important;
-	 left: 10px !important; 
-	 right: 10px !important;
+	 width: 95% !important;
+		height: 90%;
+	 /* left: 10px !important; 
+	 right: 10px !important; */
 
  }
-
  .mobile .div-left {
 	 display: none !important;
  }
-
  .mobile .div-right {
 	 background: white !important;
    margin-left: 20px !important;

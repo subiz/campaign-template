@@ -13,8 +13,8 @@ import Template1_2 from "./src/modal/template1_2.vue";
 import Template2_2 from "./src/modal/template2_2.vue";
 import Template3_2 from "./src/modal/template3_2.vue";
 import Template4_2 from "./src/modal/template4_2.vue";
-import Template5_2 from "./src/modal/template5_2.vue";
-import Template6_2 from "./src/modal/template6_2.vue";
+import Template5_2 from "./src/fullscreen/template5_2.vue";
+import Template6_2 from "./src/fullscreen/template6_2.vue";
 
 import Template9_2 from "./src/modal/template9_2.vue";
 import Template10_2 from "./src/modal/template10_2.vue";

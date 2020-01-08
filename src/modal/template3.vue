@@ -146,9 +146,16 @@ export default {
 	width: 100% !important;
 	padding-left: 10px !important;
 	padding-right: 10px !important;
+	margin-left: 15px !important;
+
+}
+/deep/.label{
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 10px;
+	color: #000;
 }
 /deep/.text-input{
-	width: 100% !important;
+	width: 90% !important;
 	height: 40px !important;
 	border: none !important;
 	border-bottom: 1px solid #d9d9d9 !important;
@@ -197,16 +204,21 @@ export default {
 	outline: 0 !important; 
 	cursor: pointer !important; 
 }
-.primary-button:hover {background-color: #92111e }
-.secondary-button:hover {background-color: #bbbbbb }
 
+ .secondary-button:hover {
+	 color: #bbbbbb !important;
+ }
+ .primary-button:hover{
+	 background-color: #92111e !important;
+ }
 .container.mobile{
 	height: 80% !important; 
-	width: 95% !important; 
+	width: 90% !important; 
 	flex-direction: column !important; 
 }
 .mobile .right-content{
 	position: unset !important; 
+	padding-top: 5px !important; 
 }
 .mobile .left-content{
 	position: relative !important; 
