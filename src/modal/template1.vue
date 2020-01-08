@@ -5,11 +5,14 @@
  import Form from '../components/Form.vue'
  export default {
 	 name: 'template1',
-	 props: ['page'],
+	 props: ['page','mode'],
 	 components:{Form},
+	 created(){
+		 if (this.mode === 'mobile') this.mobile = true 
+	 },
 	 data(){
 		 return{
-			 mobile: common.mobilecheck(),
+			 mobile:  common.mobilecheck(),
 			 close:false,
 			 id:"template1",
 			 name:"Get leads",
@@ -56,7 +59,6 @@
 <template>
 	<div v-if="!close" :class="'container ' + (mobile ? 'mobile': '')">
 		<button class="button-close" @click="onClose"></button>
-
 		<div class="main">
 			<div class="image"></div>
 			<div class="div-left"></div>
@@ -69,7 +71,7 @@
 						{{op(this.page,"primary_button.text", this.primary_button_text)}}
 					</button>
 					<a @click="onSecondaryClick" v-show="op(this.page,'secondary_button.enabled',true)" class="secondary-button">
-						{{ op(this.page, "secondary_button.text", this.secondary_button_text)}}
+						{{op(this.page, "secondary_button.text", this.secondary_button_text)}}
 					</a>
 				</div>
 			</div>
@@ -108,7 +110,7 @@
 	 flex:1 !important;
  }
  .div-right{
-	 flex:1 !important;
+	 flex:1.5 !important;
  }
  .button-close{
 	 height: 20px !important;

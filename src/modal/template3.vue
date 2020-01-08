@@ -4,9 +4,12 @@ var op = require('object-path')
 import Form from '../components/Form.vue'
 export default {
 	name:'template3',
-	props: ['page'],
+	props: ['page', 'mode'],
 	components:{
 		Form
+	},
+	created(){
+		if (this.mode === 'mobile') this.mobile = true 
 	},
 	data(){
 		return{

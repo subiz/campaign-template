@@ -5,7 +5,10 @@ var op = require('object-path')
 import Form from '../components/Form.vue'
 export default {
 	name:"template4",
-	props: ['page'],
+	props: ['page','mode'],
+	created(){
+	if (this.mode === 'mobile') this.mobile = true 
+	},
 	components:{
 		Form
 	},

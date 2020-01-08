@@ -3,7 +3,10 @@
  var op = require('object-path')
 export default {
 	name:"template4-2",
-	props:['page'],
+	props:['page','mode'],
+	created(){
+	if (this.mode === 'mobile') this.mobile = true 
+	},
 	data(){
 		return{
 			mobile: common.mobilecheck(),

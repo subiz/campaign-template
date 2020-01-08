@@ -4,7 +4,10 @@ var common = require('../common.js')
 var op = require('object-path')
 export default {
 	name:'template9',
-	props:["page"],
+	props:["page",'mode'],
+	created(){
+	if (this.mode === 'mobile') this.mobile = true 
+	},
 	components:{
 		Form
 	},
