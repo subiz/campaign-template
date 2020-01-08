@@ -1,5 +1,7 @@
 <script>
 import Form from '../components/Form.vue'
+var common = require('../common.js')
+var op = require('object-path')
 export default {
 	name:'template9',
 	props:["page"],
@@ -8,6 +10,8 @@ export default {
 	},
 	data(){
 		return{
+			close: false,
+			mobile: common.mobilecheck(),
 			id:"template9",
 			name:"Get feedback",
 			title:"Bạn có tìm được thứ bạn cần?",
@@ -37,8 +41,10 @@ export default {
 		}
 	},
 	methods:{
+		op: op.get,
 		onClose(){
 			this.$emit("closeButtonClicked")
+			this.close = true;
 		},
 		onSecondaryClick(){
 			this.$emit("secondaryButtonClicked")
@@ -50,42 +56,41 @@ export default {
 }
 </script>
 <template>
-		<div class="container">
-			<div class="left-content"/>
-			<div class="right-content">
-				<button class="button--close" @click="onClose"></button>
-			<p class="title">{{page.title||this.title}}</p>
-			<p class="description">{{page.description||this.description}}</p>
-			<Form :form="page.form||this.form"/>
-			<div class="buttons-container">
-				<button @click="onPrimaryClick" v-show="page.primary_button && page.primary_button.enabled" class="primary-button">
-					{{this.page.primary_button.text||this.primary_button_text}}
-				</button>
-				<button @click="onSecondaryClick" v-show=" page.secondary_button &&page.secondary_button.enabled" class="secondary-button">
-					{{this.page.secondary_button.text||this.secondary_button_text}}
-				</button>
+		<div v-if="!close" :class="'container '+ (mobile? 'mobile':'' )">
+			<div class="left-content">
+				<button v-if="mobile" class="button-close" @click="onClose"></button>
 			</div>
-		</div>
+			<div class="right-content">
+				<button v-if="!mobile" class="button-close" @click="onClose"></button>
+				<p class="title">{{op(this.page, 'title', this.title)}}</p>
+				<p class="description">{{op(this.page, 'description', this.description)}}</p>
+				<Form :form="op(this.page, 'form',this.form)"/>
+				<div class="buttons-container">
+					<button @click="onPrimaryClick"  v-show="op(this.page,'primary_button.enabled',true)"  class="primary-button">
+						{{op(this.page,"primary_button.text", this.primary_button_text)}}
+					</button>
+					<button @click="onSecondaryClick" v-show="op(this.page,'secondary_button.enabled',true)" class="secondary-button">
+						{{op(this.page,"secondary_button.text", this.secondary_button_text)}}
+					</button>   
+				</div>
+			</div>
 		</div>
 </template>
 <style scoped>
 .container {
-	height: 400px !important;
 	width: 700px !important;
 	background-color: #fff !important;
 	display: flex !important;
 	flex-direction: row !important;
-	position: fixed !important;
-	top: 50% !important;
-	left: 50% !important;
-	transform: translate(-50%, -50%) !important;
+	margin: 0 auto;
+	position: unset;
 }
 
 .left-content {
 	display: flex !important;
 	flex: 1.3 !important;
 	background-image: url('../assets/bg9.png') !important;
-	background-size: 100% 100% !important;
+	background-size: cover !important;
 	background-repeat: no-repeat !important;
 }
 
@@ -96,11 +101,10 @@ export default {
 	align-items: flex-start !important;
 	background-color: #fff !important;
 	padding-left: 10px !important;
-	padding-top: 10px !important;
 	position: relative !important;
 }
 
-.button--close {
+.button-close {
 	height: 20px !important;
 	width: 20px !important;
 	border-radius: 10px !important;
@@ -108,12 +112,13 @@ export default {
 	background-color: #000 !important;
 	position: absolute !important;
 	right: 10px !important;
+	top: 10px !important;
 	background-image: url("../assets/close.png") !important;
 	background-size: 100% 100% !important;
 }
 
 .description {
-	margin-top: 1px !important;
+	margin-top: 10px !important;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
 	font-weight: normal !important;
 	font-size: 15px !important;
@@ -136,7 +141,9 @@ export default {
 	width: 100% !important;
 	margin-top: 20px !important;
 }
-
+/deep/ .label{
+	margin-top:unset;
+}
 /deep/.textarea {
 	width: 90% !important;
 	height: 70px !important;
@@ -162,6 +169,8 @@ export default {
 	align-items: center !important;
 	justify-content: center !important;
 	margin-top: 5px !important;
+	margin-bottom: 20px !important;
+
 }
 
 .primary-button {
@@ -206,5 +215,18 @@ export default {
 
 .secondary-button:hover {
 	background-color: #bbbbbb !important;
+}
+
+.container.mobile{
+	height: 90% !important;
+	flex-direction: column !important;
+	width:95% !important;
+}
+.mobile .left-content{
+	flex: 1 !important;
+	position: relative !important;
+}
+.mobile .right-content{
+	flex:1 !important;
 }
 </style>
