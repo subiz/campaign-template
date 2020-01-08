@@ -1,4 +1,6 @@
 <script>
+import common from '../common.js'
+var op = require('object-path')
 import Form from '../components/Form.vue'
 export default {
 	name:'feedback2',
@@ -8,6 +10,8 @@ export default {
 	},
 	data(){
 		return{
+			close: false,
+			mobile: common.mobilecheck(),
 			id:"template9",
 			name:"Get feedback",
 			title:"Bạn có tìm được thứ bạn cần?",
@@ -36,8 +40,10 @@ export default {
 		}
 	},
 	methods:{
+		op:op.get,
 		onClose(){
 			this.$emit("closeButtonClicked")
+			this.close = true
 		},
 		onSecondaryClick(){
 			this.$emit("secondaryButtonClicked")
@@ -49,21 +55,21 @@ export default {
 }
 </script>
 <template>
-	<div class="container">
+	<div v-if="!close" :class="'container ' + (mobile ? 'mobile' : '')">
 		<div class="header" >
 			<div class="overlay"></div>
 			<button class="button-close" @click="onClose"></button>
-			<p class="description">{{page.description||description}}</p>
+			<p class="description">{{op(this.page,'description',this.description)}}</p>
 			<div class="black-div"/>
-			<p class="title">{{page.title|| title}}</p>
+			<p class="title">{{op(this.page,'title',this.title)}}</p>
 		</div>
-		<Form :form="page.form||this.form"/>
+		<Form :form="op(this.page,'form',this.form)"/>
 		<div class="buttons-container">
-			<button @click="onPrimaryClick" v-show="page.primary_button && page.primary_button.enabled" class="primary-button">
-				{{this.page.primary_button.text||primary_button_text}}
+			<button @click="onPrimaryClick" v-show="op(this.page,'primary_button.enabled',true)" class="primary-button">
+				{{op(this.page,"primary_button.text", this.primary_button_text)}}
 			</button>
-			<button @click="onSecondaryClick" v-show=" page.secondary_button && page.secondary_button.enabled" class="secondary-button">
-				{{this.page.secondary_button.text||"Cancel"}}
+			<button @click="onSecondaryClick" v-show="op(this.page,'secondary_button.enabled',true)" class="secondary-button">
+				{{op(this.page,"secondary_button.text", this.secondary_button_text)}}
 			</button>
 		</div>
 	</div>
@@ -83,10 +89,7 @@ export default {
 	max-width: 100% !important;
 	max-height: 100% !important;
 	background-color: #fff !important;
-	position: fixed !important;
-	top: 50% !important;
-	left: 50% !important;
-	transform: translate(-50%, -50%) !important;
+	margin: 0 auto ;
 }
 
 .button-close {
@@ -152,15 +155,15 @@ export default {
 /deep/ .form {
 	width: 100% !important;
 	display: flex !important;
-	justify-content: center !important;
+	padding-left: 10% !important;
 }
 
 .buttons-container {
+	width: 100% !important;
+	padding-left: 10% !important;
 	margin-top: 15px !important;
 	display: flex !important;
-	align-items: center !important;
-	justify-content: center !important;
-	margin-bottom: 10px !important;
+	margin-bottom: 20px !important;
 }
 
 .primary-button {
@@ -192,7 +195,7 @@ export default {
 	border: none !important;
 	font-size: 18px !important;
 	font-weight: normal !important;
-	color: #fff !important;
+	color: #000 !important;
 	outline: 0 !important;
 	cursor: pointer !important;
 }
@@ -204,4 +207,25 @@ export default {
 .secondary-button:hover {
 	background-color: #bbbbbb !important;
 }
+
+.container.mobile{ 
+	height: 85% !important;
+	width: 90% !important;
+}
+.mobile .buttons-container{
+	margin-top: 30px !important;
+	flex-direction: column !important;
+	justify-content: center !important; 
+	align-items: center !important;
+	padding-left: unset !important;
+}
+.mobile .buttons-container .primary-button{
+	width: 80% !important;
+	margin-right: unset !important ;
+}
+.mobile .buttons-container .secondary-button{
+	margin-top:10px !important;
+	width: 80% !important;
+	margin-left: unset !important ;
+}	
 </style>
