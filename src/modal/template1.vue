@@ -56,7 +56,8 @@
  }
 </script>
 <template>
-	<div v-if="!close" :class="'template template1 container ' + (mobile ? 'mobile': '')">
+<div class="template template1">
+	<div v-if="!close" :class="'container ' + (mobile ? 'mobile': '')">
 		<button class="button-close" @click="onClose"></button>
 		<div class="main">
 			<div class="image"></div>
@@ -75,6 +76,7 @@
 				</div>
 			</div>
 		</div>
+	</div>
 	</div>
 </template>
 <style src="./template1.css"></style>

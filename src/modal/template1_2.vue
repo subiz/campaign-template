@@ -34,7 +34,8 @@ export default {
 }
 </script>
 <template>
-<div  v-if="!close" :class="'template template1_2 container ' + (mobile ? 'mobile' :'')">
+<div class="template template1_2">
+<div  v-if="!close" :class="'container ' + (mobile ? 'mobile' :'')">
 	<button class="button-close" @click="onClose"></button>
 	<p class="title">{{ op(this.page, "title",this.title)}}</p>
 	<p class="description">{{op(this.page, "description", this.description)}}</p>
@@ -47,6 +48,7 @@ export default {
 		</button>
 	</div>
 </div>
+	</div>
 </template>
 
 <style src="./template1_2.css">

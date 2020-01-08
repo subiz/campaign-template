@@ -56,7 +56,8 @@ export default {
 }
 </script>
 <template>
-	<div v-if="!close" :class="'template template2 container '+(mobile ? 'mobile': '')  ">
+<div class="template template2">
+	<div v-if="!close" :class="'container '+(mobile ? 'mobile': '')  ">
 		<button class="button-close" @click="onClose"></button>
 		<div class="main">
 			<p class="title">{{op(this.page, "title",this.title)}}</p>
@@ -72,6 +73,7 @@ export default {
 				</button>
 			</div>
 		</div>
+	</div>
 	</div>
 </template>
 
