@@ -1,7 +1,8 @@
 <template class="tem">
   <div id="app" class="app"  >
-
+	<div id="template-template1">
     <Template :page="template"/>
+		</div>
   </div>
 </template>
 <script>
