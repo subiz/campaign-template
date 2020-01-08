@@ -61,15 +61,15 @@
 			<div class="image"></div>
 			<div class="div-left"></div>
 			<div class="div-right">
-				<p class="title">{{op(this, "page.title",this.title)}}</p>
-				<p class="description">{{op(this, "page.description",this.description)}}</p>
-				<Form :form="op(this,'page.form',this.form)" />
+				<p class="title">{{op(this.page, "title",this.title)}}</p>
+				<p class="description">{{op(this.page, "description",this.description)}}</p>
+				<Form :form="op(this.page,'form',this.form)" />
 				<div class="buttons-container">
-					<button @click="onPrimaryClick" v-show="op(this,'page.primary_button.enabled',true)" class="primary-button">
-						{{op(this,"page.primary_button.text", this.primary_button_text)}}
+					<button @click="onPrimaryClick" v-show="op(this.page,'primary_button.enabled',true)" class="primary-button">
+						{{op(this.page,"primary_button.text", this.primary_button_text)}}
 					</button>
-					<a @click="onSecondaryClick" v-show="op(this,'page.secondary_button.enabled',true)" class="secondary-button">
-						{{ op(this, "page.secondary_button.text", this.secondary_button_text)}}
+					<a @click="onSecondaryClick" v-show="op(this.page,'secondary_button.enabled',true)" class="secondary-button">
+						{{ op(this.page, "secondary_button.text", this.secondary_button_text)}}
 					</a>
 				</div>
 			</div>

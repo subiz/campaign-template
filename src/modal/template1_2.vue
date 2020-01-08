@@ -33,14 +33,14 @@ export default {
 <template>
 <div  v-if="!close" :class="'container ' + (mobile ? 'mobile' :'')">
 	<button class="button-close" @click="onClose"></button>
-	<p class="title">{{ op(this, "page.title",this.title)}}</p>
-	<p class="description">{{op(this, "page.description", this.description)}}</p>
+	<p class="title">{{ op(this.page, "title",this.title)}}</p>
+	<p class="description">{{op(this.page, "description", this.description)}}</p>
 	<div class="buttons-container">
-		<button @click="onPrimaryClick" v-show="op(this,'page.primary_button.enabled',true)" class="primary-button">
-			{{op(this,"page.primary_button.text", this.primary_button_text)}}
+		<button @click="onPrimaryClick" v-show="op(this.page,'primary_button.enabled',true)" class="primary-button">
+			{{op(this.page,"primary_button.text", this.primary_button_text)}}
 		</button>
-		<button @click="onSecondaryClick" v-show="op(this,'page.secondary_button.enabled',true)" class="secondary-button">
-			{{ op(this, "page.secondary_button.text", this.secondary_button_text)}}
+		<button @click="onSecondaryClick" v-show="op(this.page,'secondary_button.enabled',true)" class="secondary-button">
+			{{ op(this.page, "secondary_button.text", this.secondary_button_text)}}
 		</button>
 	</div>
 </div>

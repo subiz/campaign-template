@@ -60,16 +60,16 @@ export default {
 		</div>
 		<div class="right-content">
 			<button v-if="!mobile" class="button-close" @click="onClose"></button>
-			<p class="description">{{op(this, "page.description",this.description)}}</p>
+			<p class="description">{{op(this.page, "description",this.description)}}</p>
 			<div class="red-div"></div>
-			<p class="title">{{op(this, "page.title",this.title)}}</p>
-			<Form :form="op(this,'page.form',this.form)"/>
+			<p class="title">{{op(this.page, "title",this.title)}}</p>
+			<Form :form="op(this.page,'form',this.form)"/>
 			<div class="buttons-container">
-				<button @click="onPrimaryClick" v-show="op(this,'page.primary_button.enabled',true)"  class="primary-button">
-					{{op(this,"page.primary_button.text", this.primary_button_text)}}
+				<button @click="onPrimaryClick" v-show="op(this.page,'primary_button.enabled',true)"  class="primary-button">
+					{{op(this.page,"primary_button.text", this.primary_button_text)}}
 				</button>
-				<button @click="onSecondaryClick" v-show="op(this,'page.secondary_button.enabled',true)" class="secondary-button">
-					{{op(this, "page.secondary_button.text", this.secondary_button_text)}}
+				<button @click="onSecondaryClick" v-show="op(this.page,'secondary_button.enabled',true)" class="secondary-button">
+					{{op(this.page, "secondary_button.text", this.secondary_button_text)}}
 				</button>
 			</div>
 		</div>
