@@ -1,4 +1,4 @@
-#subiz .template .template2_2 .container {
+#subiz .template.template2_2 .container {
   width: 471px !important;
   max-width: 100% !important;
   display: flex !important;
@@ -9,7 +9,7 @@
   margin: 0 auto !important;
 }
 
-#subiz .template .template2_2 .button-close {
+#subiz .template.template2_2 .button-close {
   width: 20px !important;
   height: 20px !important;
   position: absolute !important;
@@ -22,7 +22,7 @@
   background-size: 100% 100% !important;
 }
 
-#subiz .template .template2_2 .title {
+#subiz .template.template2_2 .title {
   margin-top: 46px !important;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
   font-style: normal !important;
@@ -33,7 +33,7 @@
   color: #000000 !important;
 }
 
-#subiz .template .template2_2 .description {
+#subiz .template.template2_2 .description {
   margin-top: 6px !important;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
   font-style: normal !important;
@@ -44,7 +44,7 @@
   color: #000000 !important;
 }
 
-#subiz .template .template2_2 .buttons-container {
+#subiz .template.template2_2 .buttons-container {
   margin-top: 36px !important;
   display: flex !important;
   flex-direction: row !important;
@@ -53,7 +53,7 @@
   margin-bottom: 30px !important;
 }
 
-#subiz .template .template2_2 .primary-button {
+#subiz .template.template2_2 .primary-button {
   margin-left: 5px !important;
   margin-right: 5px !important;
   background-color: #0265FF !important;
@@ -71,7 +71,7 @@
   cursor: pointer !important;
 }
 
-#subiz .template .template2_2 .secondary-button {
+#subiz .template.template2_2 .secondary-button {
   margin-left: 5px !important;
   margin-right: 5px !important;
   background-color: #d9d9d9 !important;
@@ -89,14 +89,14 @@
   cursor: pointer !important;
 }
 
-#subiz .template .template2_2 .secondary-button:hover {
+#subiz .template.template2_2 .secondary-button:hover {
   color: #bbbbbb !important;
 }
 
-#subiz .template .template2_2 .primary-button:hover {
+#subiz .template.template2_2 .primary-button:hover {
   background-color: #03176f !important;
 }
 
-#subiz .template .template2_2 .container.mobile {
+#subiz .template.template2_2 .container.mobile {
   width: 90% !important;
 }

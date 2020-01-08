@@ -17,7 +17,7 @@ function postcssConfig (pathnoextension) {
 module.exports = {
 	plugins: {
 		'postcss-parent-selector': {
-			selector: '#subiz .template ${templateidClass}'
+			selector: '#subiz .template${templateidClass}'
 		},
 		'postcss-safe-important': {
 			paths: p => p.startsWith(path.resolve(__dirname, '../node_modules')),

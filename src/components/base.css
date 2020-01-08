@@ -1,4 +1,4 @@
-#subiz .template  .radio {
+#subiz .template .radio {
   display: block !important;
   position: relative !important;
   width: 100% !important;
@@ -6,12 +6,12 @@
   margin-top: 5px !important;
 }
 
-#subiz .template  input[type=radio] {
+#subiz .template input[type=radio] {
   position: absolute !important;
   visibility: hidden !important;
 }
 
-#subiz .template  .radio--label {
+#subiz .template .radio--label {
   padding-left: 22px !important;
   display: block !important;
   position: relative !important;
@@ -19,7 +19,7 @@
   cursor: pointer !important;
 }
 
-#subiz .template  .radio--check {
+#subiz .template .radio--check {
   display: block !important;
   position: absolute !important;
   border: 1px solid #aaa !important;
@@ -33,11 +33,11 @@
   -webkit-transition: border 0.15s linear !important;
 }
 
-#subiz .template  .radio--check:hover {
+#subiz .template .radio--check:hover {
   border: 1px solid #888 !important;
 }
 
-#subiz .template  .radio--check::before {
+#subiz .template .radio--check::before {
   display: block !important;
   position: absolute !important;
   content: "" !important;
@@ -51,27 +51,27 @@
   -webkit-transition: background 0.15s linear !important;
 }
 
-#subiz .template  input[type=radio]:checked ~ .radio--check {
+#subiz .template input[type=radio]:checked ~ .radio--check {
   border: 1px solid #0265ff !important;
 }
 
-#subiz .template  input[type=radio]:checked ~ .radio--check::before {
+#subiz .template input[type=radio]:checked ~ .radio--check::before {
   background: #0265ff !important;
 }
 
-#subiz .template  .checkbox {
+#subiz .template .checkbox {
   display: block !important;
   position: relative !important;
   width: 100% !important;
   height: 25px !important;
 }
 
-#subiz .template  input[type=checkbox] {
+#subiz .template input[type=checkbox] {
   position: absolute !important;
   visibility: hidden !important;
 }
 
-#subiz .template  .checkbox--label {
+#subiz .template .checkbox--label {
   padding-left: 22px !important;
   display: block !important;
   position: relative !important;
@@ -79,7 +79,7 @@
   cursor: pointer !important;
 }
 
-#subiz .template  .checkbox--check {
+#subiz .template .checkbox--check {
   display: block !important;
   position: absolute !important;
   border: 1px solid #aaa !important;
@@ -93,11 +93,11 @@
   -webkit-transition: border 0.15s linear !important;
 }
 
-#subiz .template  .checkbox--check:hover {
+#subiz .template .checkbox--check:hover {
   border: 1px solid #888 !important;
 }
 
-#subiz .template  .checkbox--check::before {
+#subiz .template .checkbox--check::before {
   display: block !important;
   position: absolute !important;
   content: "" !important;
@@ -108,19 +108,19 @@
   -webkit-transition: background 0.15s linear !important;
 }
 
-#subiz .template  input[type=checkbox]:checked ~ .checkbox--check {
+#subiz .template input[type=checkbox]:checked ~ .checkbox--check {
   border: 1px solid #0265ff !important;
 }
 
-#subiz .template  input[type=checkbox]:checked ~ .checkbox--check::before {
+#subiz .template input[type=checkbox]:checked ~ .checkbox--check::before {
   background: #0265ff !important;
 }
 
-#subiz .template  .form--list-container {
+#subiz .template .form--list-container {
   margin-top: 15px !important;
 }
 
-#subiz .template  .label {
+#subiz .template .label {
   font-size: 15px !important;
   display: block !important;
   margin-top: 20px !important;

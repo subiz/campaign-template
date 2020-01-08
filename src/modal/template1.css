@@ -1,4 +1,4 @@
-#subiz .template .template1 .container {
+#subiz .template.template1 .container {
   background-color: #f6f5f4 !important;
   display: flex !important;
   flex-direction: row !important;
@@ -7,7 +7,7 @@
   margin: 0 auto !important;
 }
 
-#subiz .template .template1 .image {
+#subiz .template.template1 .image {
   background-image: url("../assets/bg1.png") !important;
   background-size: 100% 100% !important;
   width: 330px !important;
@@ -17,7 +17,7 @@
   bottom: 63px !important;
 }
 
-#subiz .template .template1 .main {
+#subiz .template.template1 .main {
   margin: 10px !important;
   background-color: #fff !important;
   display: flex !important;
@@ -27,15 +27,15 @@
   padding-top: 10px !important;
 }
 
-#subiz .template .template1 .div-left {
+#subiz .template.template1 .div-left {
   flex: 1 !important;
 }
 
-#subiz .template .template1 .div-right {
+#subiz .template.template1 .div-right {
   flex: 1.5 !important;
 }
 
-#subiz .template .template1 .button-close {
+#subiz .template.template1 .button-close {
   height: 20px !important;
   width: 20px !important;
   border-radius: 10px !important;
@@ -49,7 +49,7 @@
   cursor: pointer !important;
 }
 
-#subiz .template .template1 .title {
+#subiz .template.template1 .title {
   margin-top: 50px !important;
   font-family: Yeseva One !important;
   font-style: normal !important;
@@ -60,7 +60,7 @@
   text-transform: uppercase !important;
 }
 
-#subiz .template .template1 .description {
+#subiz .template.template1 .description {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
   font-style: normal !important;
   font-weight: normal !important;
@@ -69,7 +69,7 @@
   text-align: center !important;
 }
 
-#subiz .template .template1 .buttons-container {
+#subiz .template.template1 .buttons-container {
   display: flex !important;
   flex-direction: column !important;
   margin-top: 5px !important;
@@ -79,7 +79,7 @@
   margin-bottom: 10px !important;
 }
 
-#subiz .template .template1 .primary-button {
+#subiz .template.template1 .primary-button {
   border: 0px !important;
   border-radius: 5px !important;
   background-color: #424E58 !important;
@@ -99,7 +99,7 @@
   border-radius: 28px !important;
 }
 
-#subiz .template .template1 .secondary-button {
+#subiz .template.template1 .secondary-button {
   border: 0px !important;
   color: #000 !important;
   font-size: 14px !important;
@@ -110,20 +110,20 @@
   border-radius: 28px !important;
 }
 
-#subiz .template .template1 .form {
+#subiz .template.template1 .form {
   display: flex !important;
   flex-direction: column !important;
   padding-left: 10px !important;
   padding-right: 10px !important;
 }
 
-#subiz .template .template1 .label {
+#subiz .template.template1 .label {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
   font-size: 10px !important;
   color: #000 !important;
 }
 
-#subiz .template .template1 .text-input {
+#subiz .template.template1 .text-input {
   border: none !important;
   border-bottom: 1px solid #d9d9d9 !important;
   width: 100% !important;
@@ -132,36 +132,36 @@
   outline: none !important;
 }
 
-#subiz .template .template1 .secondary-button:hover {
+#subiz .template.template1 .secondary-button:hover {
   color: #bbbbbb !important;
 }
 
-#subiz .template .template1 .primary-button:hover {
+#subiz .template.template1 .primary-button:hover {
   background-color: #343e46 !important;
 }
 
-#subiz .template .template1 .mobile .main {
+#subiz .template.template1 .mobile .main {
   background-image: url("../assets/bg1.png") !important;
   background-size: 100% 100% !important;
   margin: 0 !important;
 }
 
-#subiz .template .template1 .mobile .main .image {
+#subiz .template.template1 .mobile .main .image {
   display: none !important;
 }
 
-#subiz .template .template1 .container.mobile {
+#subiz .template.template1 .container.mobile {
   width: 95% !important;
   height: 90% !important;
   /* left: 10px ;
   	 right: 10px ; */
 }
 
-#subiz .template .template1 .mobile .div-left {
+#subiz .template.template1 .mobile .div-left {
   display: none !important;
 }
 
-#subiz .template .template1 .mobile .div-right {
+#subiz .template.template1 .mobile .div-right {
   background: white !important;
   margin-left: 20px !important;
   margin-right: 20px !important;
