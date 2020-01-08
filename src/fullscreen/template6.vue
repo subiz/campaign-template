@@ -1,4 +1,6 @@
 <script>
+import common from '../common.js'
+var op = require('object-path')
 import Form from '../components/Form.vue'
 export default {
 	name:'template6',
@@ -6,6 +8,9 @@ export default {
 	components: {Form},
 	data(){
 		return{
+			mobile: common.mobilecheck(),
+			op: op.get,
+			close: false,
 			id:"template6",
 			name:"Get leads",
 			subtitle:"Giảm 30%",
@@ -29,6 +34,7 @@ export default {
 	methods:{
 		onClose(){
 			this.$emit("closeButtonClicked")
+			this.close = true;
 		},
 		onSecondaryClick(){
 			this.$emit("secondaryButtonClicked")
@@ -40,20 +46,19 @@ export default {
 }
 </script>
 <template>
-	<div class="container">
+	<div v-show="!close" :class="'container '+( mobile ? 'mobile': '')">
 		<button class="button-close" @click="onClose"/>
-		<p class="subtitle">{{this.page.subtitle||this.subtitle}}</p>
-		<p class="title">{{this.page.title||this.title}}</p>
+		<p class="subtitle">{{op(this,"page.subtitle",this.subtitle)}}</p>
+		<p class="title">{{op(this,"page.title",this.title)}}</p>
 		<div class="white-div"/>
-
-		<p class="description">{{this.page.description||this.description}}</p>
-		<Form :form="page.form||this.form" />
+		<p class="description">{{op(this,"page.description",this.description)}}</p>
+		<Form :form="op(this,'page.form',this.form)" />
 		<div class="buttons-container">
-			<button @click="onPrimaryClick" v-show="page.primary_button && page.primary_button.enabled" class="primary-button">
-				{{this.page.primary_button.text||this.primary_button_text}}
+			<button @click="onPrimaryClick" v-show="op(this,'page.primary_button.enabled',true)" class="primary-button">
+				{{op(this,"page.primary_button.text", this.primary_button_text)}}
 			</button>
-			<button @click="onSecondaryClick" v-show="page.secondary_button && page.secondary_button.enabled" class="secondary-button">
-				{{this.page.secondary_button.text||this.secondary_button_text}}
+			<button @click="onSecondaryClick" v-show="op(this,'page.secondary_button.enabled',true)"  class="secondary-button">
+				{{op(this, "page.secondary_button.text",this.secondary_button_text)}}
 			</button>
 		</div>
 	</div>
@@ -73,20 +78,18 @@ export default {
   height: 100vh;
 	width: 100%;
 	max-width: 100%;
+	max-height: 100%;
 	background-image: url('../assets/bg6.png');
-	background-size:100% 100%;
+	background-size:cover;
+	background-position: center;
 	position: relative;
-
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
 }
 .button-close{
 	width: 30px;
 	height: 30px;
 	position: absolute;
 	right:10px;
+	top:10px;
 	border-radius: 15px;
 	background-color:#d9d9d9;
 	border:none;
@@ -98,18 +101,22 @@ export default {
 	margin-top: 10%;
 	font-weight: normal;
 	font-size: 60px;
-	font-weight: '700';
+	font-weight: 600;
 	color: #fff;
-	font-family:monospace;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	text-align: center;
 }
 .title{
 	padding: 5px;
 	color: #fff;
-	font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	font-weight: 500;
 	font-size: 24px;
 	text-align: center;
+}
+.mobile .white-div{
+	width: 52px;
+	height: 2px;	
 }
 .white-div{
 	margin: 5px;
@@ -130,56 +137,129 @@ export default {
 	display: flex;
 	flex-direction: column;
 	align-items:center;
+	margin-top: 5px !important;
+}
+/deep/ .form-item{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+/deep/ .label{
+	display: none;
 }
 /deep/.text-input{
-	margin-top: 5px;
-	width: 490px;
-	height: 35px;
-	border:none;
-	padding-left: 5px;
-	border-bottom: 1px solid #d9d9d9;
-	border:none;
-	outline: 0;
-	border-radius: 3px;
+	margin-top:10px;
+	width: 40% !important;
+	height: 35px !important;
+	border:none !important;
+	padding-left: 5px !important;
+	border-bottom: 1px solid #d9d9d9 !important;
+	border:none !important;
+	outline: 0 !important;
+	border-radius: 3px !important;
+
+}
+.buttons-container{
+	margin-top: 10px !important;
+	display: flex !important;	
+	align-items: center !important;
+	justify-content: center !important;
+	margin-bottom: 10px !important;
 }
 .primary-button{
-	padding-top: 10px;
-	padding-bottom: 10px;
-	padding-left: 25px;
-	padding-right:25px;
-	margin-top:5px;
-	margin-right:5px;
-	margin-left:5px;
-	color: #eb6743;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	font-weight: bold;
-	font-size: 15px;
-	background-color: #fff;
-	border: none;
-	border-radius: 5px;
-	border:none;
-	cursor: pointer;
-	outline: 0;
+	padding-top: 10px !important;
+	padding-bottom: 10px !important;
+	padding-left: 25px !important;
+	padding-right:25px !important;
+	margin-top:5px !important;
+	margin-right:5px !important;
+	margin-left:5px !important;
+	color: #eb6743 !important;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+	font-weight: bold !important;
+	font-size: 15px !important;
+	background-color: #fff !important;
+	border: none !important;
+	border-radius: 5px !important;
+	cursor: pointer !important;
+	outline: 0 !important;
 }
 .secondary-button{
-	margin-right:5px;
-	margin-left:5px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	padding-left: 25px;
-	padding-right:25px;
-	margin-top:5px;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	font-weight: bold;
-	color:#ffffff;
-	font-size: 16px;
-	background-color: #d9d9d9d9;
-	border:none;
-	border-radius: 5px;
-	cursor: pointer;
-	outline: 0;
+	margin-right:5px !important;
+	margin-left:5px !important;
+	padding-top: 10px !important;
+	padding-bottom: 10px !important;
+	padding-left: 25px !important;
+	padding-right:25px !important;
+	margin-top:5px !important;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+	font-weight: bold !important;
+	color:#000 !important;
+	font-size: 16px !important;
+	background-color: ghostwhite !important;
+	border:none !important;
+	border-radius: 5px !important;
+	cursor: pointer !important;
+	outline: 0 !important;
 }
-.button-close:hover{background-color: #bbbbbb}
-.primary-button:hover{background-color: #d9d9d9}
-.secondary-button:hover {background-color: #bbbbbb }
+ .secondary-button:hover {
+	 background-color: #e4e4e4 !important;
+ }
+ .primary-button:hover{
+	 background-color: #d9d9d9 !important;
+ }
+
+.container.mobile{
+	background-image: url('../assets/bg6_mobile.png') !important;
+	background-size: 100% 100% !important;
+	background-position: unset;
+	align-items: center !important;
+	justify-content: center !important;
+	padding-bottom: 50px !important;
+}
+.mobile .subtitle{
+margin-top: unset !important;
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+font-style: normal !important;
+font-weight: 500 !important;
+font-size: 30px !important;
+line-height: 22px !important;
+text-align: center !important;
+}
+.mobile .title{
+margin-top: 5px !important;
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+font-style: normal !important;
+font-weight: 500 !important;
+font-size: 18px !important;
+line-height: 22px !important;
+text-align: center !important;
+width: 65% !important;
+}
+.mobile .description{
+font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+font-style: normal !important;
+font-weight: normal !important;
+font-size: 13px !important;
+line-height: 16px !important;
+text-align: center !important;
+width: 75% !important;
+}
+.mobile /deep/ .form {
+	width: 50% !important;
+}
+.mobile /deep/ .text-input{
+	width: 100% !important;
+	height: 30px !important;
+}
+.mobile .buttons-container{
+position: absolute !important;
+bottom: 50px !important;
+display: flex !important;
+align-items: center !important;
+justify-content: space-around !important;
+width: 100% !important;
+}
+		
 </style>

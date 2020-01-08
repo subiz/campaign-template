@@ -15,7 +15,7 @@ export default {
 			close: false,
 			id:"template5",
 			name:"Get leads",
-			subtitle:"Đăng ký",
+			subtitle:"",
 			title:"NHẬN NGAY ƯU ĐÃI KHỬNG",
 			description:"Giảm 20% một ngày duy nhất. Miễn phí vận chuyển nội thành",
 			primary_button_text:"Đăng ký ngay",
@@ -51,16 +51,16 @@ export default {
 	<div v-show="!close" :class="'container '+(mobile ? 'mobile': '')">
 		<div class="left">
 			<button v-if="!close" class="button-close" @click="onClose"></button>
-			<p class="subtitle">{{op(this, "page.subtitle",this.subtitle)}}</p>
-			<p class="title">{{op(this, "page.title",this.title)}}</p>
-			<p class="description">{{this.page.description|| this.description}}</p>
-			<Form :form="op(this,'page.form',this.form)" />
+			<p class="subtitle">{{op(this.page, "subtitle",this.subtitle)}}</p>
+			<p class="title">{{op(this.page, "title",this.title)}}</p>
+			<p class="description">{{op(this.page, "description",this.description)}}</p>
+			<Form :form="op(this.page,'form',this.form)" />
 			<div class="buttons-container">
-				<button @click="onPrimaryClick" v-show="op(this,'page.primary_button.enabled',true)" class="primary-button">
-					{{op(this,"page.primary_button.text", this.primary_button_text)}}
+				<button @click="onPrimaryClick" v-show="op(this.page,'primary_button.enabled',true)" class="primary-button">
+					{{op(this.page,"primary_button.text", this.primary_button_text)}}
 				</button>
-				<button @click="onSecondaryClick" v-show="op(this,'page.secondary_button.enabled',true)"  class="secondary-button">
-					{{op(this,"page.secondary_button.text", this.secondary_button_text)}}
+				<button @click="onSecondaryClick" v-show="op(this.page,'secondary_button.enabled',true)"  class="secondary-button">
+					{{op(this.page,"secondary_button.text", this.secondary_button_text)}}
 				</button>
 			</div>
 		</div>
@@ -83,12 +83,9 @@ export default {
 	max-width: 100% !important;
 	max-height: 100% !important;
 	background-image: url('../assets/bg5.png') !important;
-	background-size:100% 100% !important;
-
-	position: fixed !important;
-	top: 50% !important;
-	left: 50% !important;
-	transform: translate(-50%, -50%) !important;
+	background-size: cover!important;
+	background-repeat: no-repeat !important;
+	background-position:center !important;
 }
 .right{
 	display: flex !important;
@@ -133,37 +130,54 @@ export default {
 	width: 100% !important;
 }
 .description{
-	margin-top: 25px !important;
+	margin-top: 15px !important;
 	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
 	font-size: 16px !important;
 	color: #fff !important;
 	text-align: center !important;
 	width: 80% !important;
 }
+
 /deep/.form{
 	margin-top: 30px !important;
-	width: 100% !important;
+	width: 8	0% !important;
 	display:flex !important;
 	flex-direction: column !important;
 	align-items: center !important;
 	justify-content: center !important;
 }
+/deep/.form-item{
+	margin-top: 10px !important;	
+	width: 100% !important;
+	display:flex !important;
+	justify-content: center !important;
+	align-items: center!important;
+	flex-direction: column !important;
+}
+/deep/ .label{
+	margin-top: unset !important;
+	color: #fff !important;
+	font-size: 14 !important;
+	padding: 5px !important;
+	align-self:flex-start !important;
+}
 /deep/.text-input{
-	margin-top: 10px !important;
-	width: 430px !important;
+	width: 420px !important;
 	height: 40px !important;
 	background-color: #fff !important;
-	text-align: center !important;
 	border-radius: 25px !important;
 	outline: 0 !important;
-	border-bottom: 1px solid  !important#d9d9d9;
+	border-bottom: 1px solid #d9d9d9  !important;
 	border: none !important;
+	padding-left: 10px !important;	
 }
 .buttons-container{
-	margin-top: 15px !important;
+	width: 100% !important;
+	padding-left: 35%;
+	margin-top: 35px !important;
 	display: flex !important;
 	flex-direction: column !important;
-	align-items: center !important;
+	align-items: center !important;	
 	justify-content: center !important;
 	margin-bottom: 10px !important;
 }
@@ -180,21 +194,26 @@ export default {
 	cursor: pointer !important;
 }
 .secondary-button{
-	margin-top: 5px !important;
-	background-color: #d9d9d9 !important;
+	margin-top: 10px !important;
+	background-color: ghostwhite !important;
 	width: 430px !important;
 	height: 40px !important;
 	border-radius: 25px !important;
 	border:none !important;
 	font-size: 18px !important;
 	font-weight: bold !important;
-	color: #fff !important;
+	border : solid 2px #ffffff;
+	border-width: 2px;
+	color: #000 !important;
 	outline: 0 !important;
 	cursor: pointer !important;
 }
-.primary-button:hover{background-color: #e69f17}
-.secondary-button:hover {background-color: #bbbbbb }
-
+ .secondary-button:hover {
+	 color: #bbbbbb !important;
+ }
+ .primary-button:hover{
+	 background-color: #e69f17 !important;
+ }
 .mobile .right{
 	display: none !important;
 }
