@@ -4,7 +4,7 @@
   </div>
 </template>
 <script>
-import Template from './modal/template4.vue'
+import Template from './fullscreen/template5.vue'
 export default {
   name: 'app',
   components: {
@@ -103,39 +103,38 @@ export default {
         subtitle:"",
         form_enabled:true,
         images:[],
-        fields:[
+        form:{
+          enabled:true,
+           fields:[
           {
             key :1,
             label : "Cảm nhận của bạn",
             is_required :true,
             type :"text",
             multiline_text:true,
-            placeholder:"Cảm nhận của bạn",
+            placeholder:"Bạn đang nghĩ gì ...",
           },
           {
             key :2,
             label : "Email",
             is_required :true,
-            type :"email",
+            type :"text",
             multiline_text:false,
-            placeholder:"Email của bạn",
+            placeholder:"johndoe@example.com",
           },
         ],
+     
+        },
         primary_button:{
-          text:"Gửi cảm nhận",
-          enabled : true,
-          action : 10,
-          redirect_url : 11,
-          open_url : 12
+        text:"Gửi cảm nhận",
+        enabled : true,
         },
          secondary_button:{
           text:"Cancle",
           enabled : false,
-          action : 10,
-          redirect_url : 11,
-          open_url : 12
+
         },
-        description:"Phản hổi của bạn rất quan trọng với chúng tôi.",
+        description:"Phản hồi của bạn rất quan trọng với chúng tôi.",
         primaryButtonTitle:"Đăng ký nhanh"
         },
        templatefeedback2:{
@@ -144,6 +143,7 @@ export default {
         form_enabled:true,
         images:[],
         fields:[
+          
           {
             key :1,
             label : "Cảm nhận của bạn",
@@ -159,7 +159,7 @@ export default {
             type :"email",
             multiline_text:false,
             placeholder:"Email của bạn",
-          },
+        },
         ],
         primary_button:{
           text:"Gửi cảm nhận",
