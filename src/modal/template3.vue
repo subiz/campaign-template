@@ -9,7 +9,7 @@ export default {
 		Form
 	},
 	created(){
-		if (this.mode === 'mobile') this.mobile = true 
+		if (this.mode === 'mobile') this.mobile = true
 	},
 	data(){
 		return{
@@ -168,44 +168,44 @@ export default {
 	outline: 0 !important;
 }
 .buttons-container{
-	margin-top: 10px !important; 
-	display: flex !important; 
-	align-items: center !important; 
-	justify-content: center !important; 
-	margin-bottom: 10px !important; 
+	margin-top: 10px !important;
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	margin-bottom: 10px !important;
 }
 .primary-button{
-	margin-right: 5px !important; 
-	margin-left: 5px !important; 
-	background-color: #B91526 !important; 
-	padding-left: 30px !important; 
-	padding-right:30px !important; 
-	height: 45px !important; 
-	border-radius: 5px !important; 
-	border:0px !important; 
-	color: #fff !important; 
-	font-size: 16px !important; 
-	font-weight: 600 !important; 
-	text-transform: uppercase !important; 
-	text-align: center !important; 
-	cursor: pointer !important; 
+	margin-right: 5px !important;
+	margin-left: 5px !important;
+	background-color: #B91526 !important;
+	padding-left: 30px !important;
+	padding-right:30px !important;
+	height: 45px !important;
+	border-radius: 5px !important;
+	border:0px !important;
+	color: #fff !important;
+	font-size: 16px !important;
+	font-weight: 600 !important;
+	text-transform: uppercase !important;
+	text-align: center !important;
+	cursor: pointer !important;
 }
 .secondary-button{
-	margin-right: 5px !important; 
-	margin-left: 5px !important; 
-	background-color: #d9d9d9 !important; 
-	padding-left: 30px !important; 
-	padding-right:30px !important; 
-	height: 45px !important; 
-	border-radius: 5px !important; 
-	border:0px !important; 
-	color: #fff !important; 
-	font-size: 16px !important; 
-	font-weight: 600 !important; 
-	text-transform: uppercase !important; 
-	text-align: center !important; 
-	outline: 0 !important; 
-	cursor: pointer !important; 
+	margin-right: 5px !important;
+	margin-left: 5px !important;
+	background-color: #d9d9d9 !important;
+	padding-left: 30px !important;
+	padding-right:30px !important;
+	height: 45px !important;
+	border-radius: 5px !important;
+	border:0px !important;
+	color: #fff !important;
+	font-size: 16px !important;
+	font-weight: 600 !important;
+	text-transform: uppercase !important;
+	text-align: center !important;
+	outline: 0 !important;
+	cursor: pointer !important;
 }
 
  .secondary-button:hover {
@@ -215,15 +215,15 @@ export default {
 	 background-color: #92111e !important;
  }
 .container.mobile{
-	height: 80% !important; 
-	width: 90% !important; 
-	flex-direction: column !important; 
+	height: 80% !important;
+	width: 90% !important;
+	flex-direction: column !important;
 }
 .mobile .right-content{
-	position: unset !important; 
-	padding-top: 5px !important; 
+	position: unset !important;
+	padding-top: 5px !important;
 }
 .mobile .left-content{
-	position: relative !important; 
+	position: relative !important;
 }
 </style>
