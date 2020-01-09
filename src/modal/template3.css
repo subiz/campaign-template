@@ -52,15 +52,16 @@
   font-size: 16px !important;
   align-self: flex-start !important;
   margin-left: 20px !important;
+  margin-right: 20px !important;
 }
 
 #subiz .template.template3 .red-div {
-  margin-top: 8px !important;
+  margin-top: 15px !important;
   width: 134px !important;
   height: 5px !important;
   background-color: #B91526 !important;
   align-self: flex-start !important;
-  margin-left: 25px !important;
+  margin-left: 20px !important;
 }
 
 #subiz .template.template3 .title {
@@ -99,6 +100,10 @@
   border-bottom: 1px solid #a5a4a427 !important;
   font-size: 15px !important;
   outline: 0 !important;
+}
+
+#subiz .template.template3 .text-input::placeholder {
+  color: #8d8d8d80 !important;
 }
 
 #subiz .template.template3 .buttons-container {
@@ -155,13 +160,15 @@
 
 #subiz .template.template3 .container.mobile {
   height: 600px !important;
-  width: 90% !important;
+  width: 335px !important;
   flex-direction: column !important;
 }
 
 #subiz .template.template3 .mobile .right-content {
   position: unset !important;
   padding-top: 5px !important;
+  display: flex !important;
+  align-items: center !important;
 }
 
 #subiz .template.template3 .mobile .left-content {

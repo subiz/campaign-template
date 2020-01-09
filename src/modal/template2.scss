@@ -29,7 +29,7 @@
 .main {
 	display: flex;
 	flex-direction: column;
-	padding-top:45px;
+	padding-top:30px;
 	width: 430px;
 	max-width: 100%;
 	align-items: center;
@@ -131,9 +131,13 @@
 	border-bottom: 1px solid #d9d9d9;
 	width: 100%;
 	height: 30px;
-	font-size: 16px;
+	font-size: 14px;
 	outline: 0;
 }
+.text-input::placeholder{
+	color: #8d8d8d80;
+}
+
 .container.mobile{
 	padding-top: 20px;
 	padding-left: 25px;
@@ -142,14 +146,14 @@
 }
 
 .mobile .title{
-	margin-left:10px;
-	margin-right:10px;
+	margin-left:20px;
+	margin-right:20px;
 	font-size: 26px;
 }
 .mobile .description{
 	font-size: 15px;
-	margin-left:12px;
-	margin-right:12px;
+	margin-left:20px;
+	margin-right:20px;
 }
 .mobile .buttons-container {
 	padding-left: 10px;

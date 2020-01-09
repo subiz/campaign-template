@@ -1,13 +1,12 @@
 <script src="./template9.js"></script>
 <style src="./template9.css"></style>
 <template>
-	<div class="template template9"
+	<div class="template template9">
 		<div v-if="!close" :class="'container '+ mode">
 			<div class="left-content">
-				<button v-if="mobile" class="button-close" @click="onClose"></button>
 			</div>
 			<div class="right-content">
-				<button v-if="!mobile" class="button-close" @click="onClose"></button>
+				<button class="button-close" @click="onClose"></button>
 				<p class="title">{{page.title}}</p>
 				<p class="description">{{page.description}}</p>
 				<Form :form="page.form"/>

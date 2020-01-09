@@ -31,7 +31,7 @@
 #subiz .template.template2 .main {
   display: flex !important;
   flex-direction: column !important;
-  padding-top: 45px !important;
+  padding-top: 30px !important;
   width: 430px !important;
   max-width: 100% !important;
   align-items: center !important;
@@ -138,8 +138,12 @@
   border-bottom: 1px solid #d9d9d9 !important;
   width: 100% !important;
   height: 30px !important;
-  font-size: 16px !important;
+  font-size: 14px !important;
   outline: 0 !important;
+}
+
+#subiz .template.template2 .text-input::placeholder {
+  color: #8d8d8d80 !important;
 }
 
 #subiz .template.template2 .container.mobile {
@@ -150,15 +154,15 @@
 }
 
 #subiz .template.template2 .mobile .title {
-  margin-left: 10px !important;
-  margin-right: 10px !important;
+  margin-left: 20px !important;
+  margin-right: 20px !important;
   font-size: 26px !important;
 }
 
 #subiz .template.template2 .mobile .description {
   font-size: 15px !important;
-  margin-left: 12px !important;
-  margin-right: 12px !important;
+  margin-left: 20px !important;
+  margin-right: 20px !important;
 }
 
 #subiz .template.template2 .mobile .buttons-container {

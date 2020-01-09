@@ -3,13 +3,12 @@
 	display:flex ;
 	flex-direction: row ;
 	position: relative ;
-	width: 800px ;
-
+	width: 750px ;
 	margin: 0 auto ;
 }
 .image{
 	background-image: url("../assets/bg1.png") ;
-	background-size:100% 100% ;
+	background-size: auto ;
 	width: 330px ;
 	position: absolute ;
 	top:-30px ;
@@ -17,7 +16,7 @@
 	bottom:63px ;
 }
 .main {
-	margin:10px ;
+	margin:15px ;
 	background-color: #fff ;
 	display: flex ;
 	flex-direction: row ;
@@ -36,8 +35,8 @@
 	width: 20px ;
 	border-radius: 10px ;
 	position: absolute ;
-	right: 10px ;
-	top: 10px ;
+	right: 20px ;
+	top: 20px ;
 	z-index: 100 ;
 	background-image: url("../assets/close.png") ;
 	background-size: 100% 100% ;
@@ -45,24 +44,28 @@
 	cursor: pointer ;
 }
 .title{
-	margin-top:	50px ;
-	font-family: Yeseva One ;
-	font-style: normal ;
-	font-weight: normal ;
-	font-size: 48px ;
-	line-height: 55px ;
+	padding-left: 20px;
+	padding-right:20px;
+	margin-top:	40px ;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+	font-weight: 700 ;
+	font-size: 36px ;
+	line-height: 42px ;
 	text-align: center ;
 	text-transform: uppercase ;
 }
 .description{
+	margin-top:	10px ;
+	padding-left: 20px;
+	padding-right:20px;
 	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
 	font-style: normal ;
 	font-weight: normal ;
-	font-size: 24px ;
-	/* or 229% */
+	font-size: 18px ;
 	text-align: center ;
 }
 .buttons-container{
+
 	display: flex !important ;
 	flex-direction: column ;
 	margin-top: 5px ;
@@ -83,8 +86,8 @@
 	text-align: center ;
 	text-transform: uppercase ;
 
-	padding-left: 30px ;
-	padding-right: 30px;
+	padding-left: 35px ;
+	padding-right: 35px;
 	padding-top: 12px ;
 	padding-bottom: 12px ;
 
@@ -112,6 +115,8 @@
 }
 .form-item{
 	margin-top: 15px;
+	padding-left: 20px;
+	padding-right:20px;
 }
 .label {
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -127,6 +132,9 @@
 	height: 30px ;
 	font-size: 15px ;
 	outline: none ;
+}
+.text-input::placeholder{
+	color: #8d8d8d80;
 }
 
 .secondary-button:hover {
@@ -166,7 +174,7 @@
 	font-style: normal;
 	font-size: 32px;
 	line-height: 40px;
-	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
 	text-align: center;
 }
 .mobile .description{
