@@ -4,7 +4,7 @@
   </div>
 </template>
 <script>
-import Template from './fullscreen/template5.vue'
+import Template from './modal/template17.vue'
 export default {
   name: 'app',
   components: {
@@ -123,7 +123,7 @@ export default {
             placeholder:"johndoe@example.com",
           },
         ],
-     
+
         },
         primary_button:{
         text:"Gửi cảm nhận",
@@ -143,7 +143,7 @@ export default {
         form_enabled:true,
         images:[],
         fields:[
-          
+
           {
             key :1,
             label : "Cảm nhận của bạn",
