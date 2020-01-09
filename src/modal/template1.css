@@ -12,7 +12,7 @@
   background-size: 100% 100% !important;
   width: 330px !important;
   position: absolute !important;
-  top: -40px !important;
+  top: -30px !important;
   left: -40px !important;
   bottom: 63px !important;
 }
@@ -75,8 +75,8 @@
   margin-top: 5px !important;
   align-items: center !important;
   justify-content: center !important;
-  margin-top: 10px !important;
-  margin-bottom: 10px !important;
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
 }
 
 #subiz .template.template1 .primary-button {
@@ -117,19 +117,23 @@
   padding-right: 10px !important;
 }
 
+#subiz .template.template1 .form-item {
+  margin-top: 15px !important;
+}
+
 #subiz .template.template1 .label {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
-  font-size: 15px !important;
+  font-size: 13px !important;
   color: #000 !important;
-  margin-top: 5px !important;
+  margin-top: unset !important;
 }
 
 #subiz .template.template1 .text-input {
   border: none !important;
   border-bottom: 1px solid #d9d9d9 !important;
   width: 100% !important;
-  height: 40px !important;
-  font-size: 12px !important;
+  height: 30px !important;
+  font-size: 15px !important;
   outline: none !important;
 }
 
@@ -152,7 +156,7 @@
 }
 
 #subiz .template.template1 .container.mobile {
-  width: 95% !important;
+  width: 335px !important;
   height: 90% !important;
   /* left: 10px ;
   	 right: 10px ; */
@@ -168,4 +172,22 @@
   margin-right: 20px !important;
   margin-top: 50px !important;
   margin-bottom: 60px !important;
+}
+
+#subiz .template.template1 .mobile .title {
+  font-style: normal !important;
+  font-size: 32px !important;
+  line-height: 40px !important;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  text-align: center !important;
+}
+
+#subiz .template.template1 .mobile .description {
+  margin-top: 8px !important;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-size: 16px !important;
+  line-height: 19px !important;
+  text-align: center !important;
 }

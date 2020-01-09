@@ -12,7 +12,7 @@
 	background-size:100% 100% ;
 	width: 330px ;
 	position: absolute ;
-	top:-40px ;
+	top:-30px ;
 	left:-40px ;
 	bottom:63px ;
 }
@@ -68,8 +68,8 @@
 	margin-top: 5px ;
 	align-items: center ;
 	justify-content: center !important ;
-	margin-top:10px ;
-	margin-bottom:10px ;
+	margin-top:20px ;
+	margin-bottom:20px ;
 }
 .primary-button {
 	border:0px ;
@@ -110,18 +110,22 @@
 	padding-left: 10px ;
 	padding-right: 10px ;
 }
+.form-item{
+	margin-top: 15px;
+}
 .label {
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-	font-size: 15px;
+	font-size: 13px;
 	color: #000;
-	margin-top:5px;
+	margin-top: unset;
+
 }
 .text-input {
 	border: none ;
 	border-bottom: 1px solid #d9d9d9 ;
 	width: 100% ;
-	height: 40px ;
-	font-size: 12px ;
+	height: 30px ;
+	font-size: 15px ;
 	outline: none ;
 }
 
@@ -143,11 +147,10 @@
 }
 
 .container.mobile {
-	width: 95% ;
+	width:335px ;
 	height: 90%;
 /* left: 10px ;
 	 right: 10px ; */
-
 }
 .mobile .div-left {
 	display: none ;
@@ -158,4 +161,20 @@
 	margin-right: 20px ;
 	margin-top: 50px ;
 	margin-bottom: 60px ;
+}
+.mobile .title{
+	font-style: normal;
+	font-size: 32px;
+	line-height: 40px;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	text-align: center;
+}
+.mobile .description{
+  margin-top: 8px ;	
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 19px;
+	text-align: center;
 }
