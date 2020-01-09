@@ -1,10 +1,10 @@
 <template class="tem">
   <div id="subiz" class="app"  >
-    <Template mode="1mobile" :page="page"/>
+    <Template mode="mobile" :page="page"/>
   </div>
 </template>
 <script>
-import Template from './modal/template3.vue'
+import Template from './modal/template4.vue'
 export default {
   name: 'app',
   components: {
@@ -23,56 +23,54 @@ export default {
 				secondary_button:{
           enabled : true,
           text: "Cancel"
-
         },
       },
       page:{
         subtitle:"",
-        "title": "Đămg ký để nhận ưu đãi đặc biệt",
-	      "description": "Giảm 20% chỉ một ngày duy nhất",
-        form_enabled:true,
+        "title": "Đăng ký để nhận ưu đãi đặc biệt",
+	      "description": "Giảm 20% chỉ một ngày duy nhất. Đăng ký ngay để nhận được mã giảm giá.",
 				form: {
+          enabled:true,
           fields:[
-          {
-            key :1,
-            label : "Họ Tên",
-            is_required :true,
-            type :"text",
-            placeholder: "Họ Tên"
-          },
-          {
-            key :2,
-            label : "Email",
-            is_required :true,
-            type :"text",
-            placeholder: "Email"
-          },
-
-          {
-            key :3,
-            label : "Số điện thoại",
-            is_required :true,
-            type :"text",
-            placeholder: "Số điện thoại của bạn "
-          }
-        ],
+            {
+              key :1,
+              label : "Họ Tên",
+              is_required :true,
+              type :"text",
+              placeholder: "John Doe"
+            },
+            {
+              key :2,
+              label : "Email",
+              is_required :true,
+              type :"text",
+              placeholder: "johndoe@example.com"
+            },
+            // {
+            //   key :3,
+            //   label : "Số điện thoại",
+            //   is_required :true,
+            //   type :"text",
+            //   placeholder: "0123 456 789"
+            // }
+          ],
 				},
         primary_button:{
           enabled : true,
           text: "ĐĂNG KÝ NGAY"
         },
 				secondary_button:{
-          enabled : true,
+          enabled : false,
           text: "Cancel"
-
         },
       },
       templatehavesubtitle:{
         title:"NHẬN NGAY ƯU ĐÃI AAAAA",
-        // subtitle:"Đăng ký",
+        subtitle:"Đăng ký",
         form_enabled:true,
         images:[],
         form:{
+           enabled:true,
           fields:[
           {
             key :2,
@@ -139,7 +137,7 @@ export default {
         },
         description:"Phản hổi của bạn rất quan trọng với chúng tôi.",
         primaryButtonTitle:"Đăng ký nhanh"
-      },
+        },
        templatefeedback2:{
         title:"Bạn có tìm được thứ mình cần?",
         subtitle:"",
