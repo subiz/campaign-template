@@ -34,7 +34,7 @@
 
 			<input v-if="field.type==='text' && !field.subtype==='email'" type="email" class="text-input" :placeholder="field.placeholder" @keyup="ev => onTextFieldChange(ev, field)" />
 
-			<textarea v-if="field.type==='text' && field.multiline_text" class="text-input" :placeholder="field.placeholder" @keyup="ev => onTextFieldChange(ev, field)" />
+			<textarea v-if="field.type==='text' && field.multiline_text" class="textarea" :placeholder="field.placeholder" @keyup="ev => onTextFieldChange(ev, field)" />
 
 			<input v-if="field.type==='text' && !field.multiline_text" type="text" class="text-input" :placeholder="field.placeholder" @keyup="ev => onTextFieldChange(ev, field)" />
 
