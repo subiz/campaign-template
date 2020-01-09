@@ -1,7 +1,7 @@
 <template>
 	<div class="form" v-if="showForm">
 		<div  v-for="field in form.fields" class="form-item">
-			<label class="label">{{field.label}}</label>
+			<label class="label">{{field.label + ':'}}</label>
 
 			<div v-if="field.type==='list' && !field.multiple_choice" class="form--list-container">
 				<div class="radio" v-for="item in field.list">
@@ -9,7 +9,7 @@
 								 @change="ev => onRadioChange(ev, field, item)"
 					/>
 					<label class="radio--label" :for="field.key + item" >
-						{{item}}
+						{{item + ':'}}
 					</label>
 					<div class="radio--check"><div class="inside"></div></div>
 				</div>
@@ -23,7 +23,7 @@
 									:id="field.key + item"
 									@change="ev => onCheckboxChange(ev, field, item)"
 									:checked="contains(field, item) "/>
-					<label class="checkbox--label" :for="field.key + item">{{item}}</label>
+					<label class="checkbox--label " :for="field.key + item">{{item + ':'}}</label>
 					<div class="checkbox--check">
 						<div></div>
 					</div>
@@ -42,7 +42,7 @@
 
 			<div v-if="field.type==='boolean'">
 				<label class="checkbox--label">
-					{{field.label}}
+					{{field.label + ':'}}
 					<input type="checkbox" @change="ev => onBooleanFieldChange(ev, field)" :checked="field.value" />
 					<span class="checkmark">
 						<svg
