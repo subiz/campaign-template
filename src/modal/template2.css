@@ -64,7 +64,7 @@
 #subiz .template.template2 .buttons-container {
   display: flex !important;
   margin-top: 30px !important;
-  margin-bottom: 30px !important;
+  margin-bottom: 35px !important;
   align-items: center !important;
   justify-content: center !important;
 }
@@ -116,7 +116,6 @@
   display: flex !important;
   flex-direction: column !important;
   width: 100% !important;
-  margin-top: 15px !important;
   align-items: center !important;
 }
 
@@ -124,23 +123,22 @@
   display: flex !important;
   width: 80% !important;
   flex-direction: column !important;
+  margin-top: 20px !important;
 }
 
 #subiz .template.template2 .label {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
-  font-size: 10px !important;
+  font-size: 12px !important;
   color: #000 !important;
-  margin-top: 10px !important;
+  margin-top: unset !important;
 }
 
 #subiz .template.template2 .text-input {
   border: none !important;
   border-bottom: 1px solid #d9d9d9 !important;
   width: 100% !important;
-  height: 40px !important;
+  height: 30px !important;
   font-size: 16px !important;
-  margin-top: 5px !important;
-  padding-left: 5px !important;
   outline: 0 !important;
 }
 
@@ -148,12 +146,19 @@
   padding-top: 20px !important;
   padding-left: 25px !important;
   padding-right: 25px !important;
-  width: 95% !important;
+  width: 335px !important;
 }
 
 #subiz .template.template2 .mobile .title {
   margin-left: 10px !important;
   margin-right: 10px !important;
+  font-size: 26px !important;
+}
+
+#subiz .template.template2 .mobile .description {
+  font-size: 15px !important;
+  margin-left: 12px !important;
+  margin-right: 12px !important;
 }
 
 #subiz .template.template2 .mobile .buttons-container {
