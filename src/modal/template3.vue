@@ -5,13 +5,12 @@
 <div class="template template3">
 	<div v-if="!close" :class="'container '+ mode">
 		<div class="left-content">
-			<button v-if="mobile" class="button-close" @click="onClose"></button>
+			<button class="button-close" @click="onClose"></button>
 		</div>
 		<div class="right-content">
-			<button v-if="!mobile" class="button-close" @click="onClose"></button>
-			<p class="description">{{page.title}}</p>
+			<p class="description">{{page.description}}</p>
 			<div class="red-div"></div>
-			<p class="title">{{page.description}}</p>
+			<p class="title">{{page.title}}</p>
 			<Form :form="page.form"/>
 			<div class="buttons-container">
 				<button @click="onPrimaryClick" v-show="showPrimaryButton"  class="primary-button">

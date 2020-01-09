@@ -1,10 +1,10 @@
 <template class="tem">
   <div id="subiz" class="app"  >
-    <Template mode="mobile" :page="page"/>
+    <Template mode="1mobile" :page="page"/>
   </div>
 </template>
 <script>
-import Template from './modal/template4.vue'
+import Template from './modal/template3.vue'
 export default {
   name: 'app',
   components: {
@@ -12,42 +12,58 @@ export default {
   },
   data(){
     return {
+      page1_2:{
+        subtitle:"",
+        "title": "Cảm ơn bạn!",
+        "description": "Chúng tôi đã nhận được yêu cầu liên hệ của bạn và chúng tôi sẽ gọi lại cho bạn vào thời gian đã chọn",
+        primary_button:{
+          enabled : true,
+          text: "ĐĂNG KÝ NGAY"
+        },
+				secondary_button:{
+          enabled : true,
+          text: "Cancel"
+
+        },
+      },
       page:{
         subtitle:"",
-        "title": "Giảm 10%",
-	      "description": "với đơn hàng đầu tiên của bạn",
+        "title": "Đămg ký để nhận ưu đãi đặc biệt",
+	      "description": "Giảm 20% chỉ một ngày duy nhất",
         form_enabled:true,
-        images:[],
 				form: {
           fields:[
           {
             key :1,
-            label : "Ho Ten",
+            label : "Họ Tên",
             is_required :true,
             type :"text",
+            placeholder: "Họ Tên"
           },
           {
             key :2,
             label : "Email",
             is_required :true,
             type :"text",
+            placeholder: "Email"
           },
 
           {
             key :3,
-            label : "So dien thoai cua ban",
+            label : "Số điện thoại",
             is_required :true,
             type :"text",
+            placeholder: "Số điện thoại của bạn "
           }
         ],
 				},
         primary_button:{
           enabled : true,
-          text: "DANG KY NGAY"
+          text: "ĐĂNG KÝ NGAY"
         },
 				secondary_button:{
           enabled : true,
-          text: "CANCEL"
+          text: "Cancel"
 
         },
       },
