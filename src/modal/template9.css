@@ -1,0 +1,17 @@
+/* Error: expected selector.
+ *    ,
+ * 59 | /deep/.form{
+ *    | ^
+ *    '
+ *   src/modal/template9.scss 59:1  root stylesheet */
+
+#subiz .template.template9 body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace !important;
+  white-space: pre !important;
+  display: block !important;
+  padding: 1em !important;
+  margin-bottom: 1em !important;
+  border-bottom: 2px solid black !important;
+  content: "Error: expected selector.\a    \2577 \a 59 \2502  /deep/.form{\a    \2502  ^\a    \2575 \a   src/modal/template9.scss 59:1  root stylesheet" !important;
+}
