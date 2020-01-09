@@ -1,5 +1,5 @@
 <template>
-	<div class="form">
+	<div class="form" v-if="showForm">
 		<div  v-for="field in form.fields" class="form-item">
 			<label class="label">{{field.label}}</label>
 
@@ -72,6 +72,11 @@
 	 name:'jform',
 	 props: ["form"],
 
+	 computed: {
+		 showForm() {
+			 return this.form && this.form.enabled && this.form.fields && this.form.fields.length > 0
+		 },
+	 },
 	 methods: {
 		 onRadioChange(ev, field, item) {
 			 var v = []

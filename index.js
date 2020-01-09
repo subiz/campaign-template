@@ -5,7 +5,6 @@ import template4 from './src/modal/template4.vue'
 import template5 from './src/fullscreen/template5.vue'
 import template6 from './src/fullscreen/template6.vue'
 import template9 from './src/modal/template9.vue'
-import template10 from './src/modal/template10.vue'
 
 export default {
 	modal: {
@@ -14,7 +13,6 @@ export default {
 		template3,
 		template4,
 		template9,
-		template10,
 	},
 	fullscreen: {
 		template5,
