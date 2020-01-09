@@ -1,4 +1,4 @@
-<script src='./base.js'></script>
+<script src='./template4_2.js'></script>
 <style src='./template4_2.css'></style>
 
 <template>

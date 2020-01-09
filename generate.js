@@ -51,31 +51,39 @@ function walk (dir, done) {
 	})
 }
 
+const BASEJS = fs.readFileSync('./src/base.js')
+
 walk('src', (err, results) => {
-	results = results.filter(f => f.endsWith('.scss'))
+	results = results.filter(f => f.endsWith('.vue'))
 
 	// build sass
 	results.map(file => {
-		let name = file.substr(0, file.length - 5)
-		let cssname = name + '.css'
-		spawnSync('./node_modules/sass/sass.js', ['--no-source-map', file, cssname])
-		// console.log(`stderr: ${ls.stderr.toString()}`)
-		// console.log(`stdout: ${ls.stdout.toString()}`)
+		let name = file.substr(0, file.length - 4)
+		console.log(file)
 
-		fs.writeFileSync('./.postcssrc.js', postcssConfig(name))
+		if (fs.existsSync(name + '.scss')) {
+			let cssname = name + '.css'
+			spawnSync('./node_modules/sass/sass.js', [
+				'--no-source-map',
+				name + '.scss',
+				cssname,
+			])
 
-		// run postcss
-		spawnSync('./node_modules/postcss-cli/bin/postcss', [
-			cssname,
-			'--no-map',
-			'-o',
-			cssname,
-		])
+			fs.writeFileSync('./.postcssrc.js', postcssConfig(name))
 
-		fs.unlinkSync('./.postcssrc.js')
+			// run postcss
+			spawnSync('./node_modules/postcss-cli/bin/postcss', [
+				cssname,
+				'--no-map',
+				'-o',
+				cssname,
+			])
 
+			fs.unlinkSync('./.postcssrc.js')
+		}
+
+		if (file.indexOf('/src/components/') === -1) fs.writeFileSync(name + '.js', BASEJS)
 		// console.log(`stderr: ${postcss.stderr.toString()}`)
 		// console.log(`stdout: ${postcss.stdout.toString()}`)
 	})
-	console.log(results)
 })

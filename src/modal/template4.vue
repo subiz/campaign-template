@@ -1,5 +1,5 @@
 
-<script src='./base.js'></script>
+<script src='./template4.js'></script>
 <style src='./template4.css'></style>
 
 <template>
