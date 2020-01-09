@@ -8,7 +8,7 @@
 	<p class="description">{{page.description}}</p>
 	<div class="buttons-container">
 		<button @click="onPrimaryClick" v-show="showPrimaryButton" class="primary-button">
-			{{primaryButtonText)}}
+			{{primaryButtonText}}
 		</button>
 		<button @click="onSecondaryClick" v-show="showSecondaryButton" class="secondary-button">
 			{{secondaryButtonText}}
