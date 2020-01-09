@@ -7,7 +7,7 @@
 			<button class="button-close" @click="onClose"></button>
 			<div class="main">
 				<p class="title">{{page.title}}</p>
-				<p class="description">{{page.description)}}</p>
+				<p class="description">{{page.description}}</p>
 				<Form :form="page.form" />
 				<div class="buttons-container">
 					<button @click="onPrimaryClick"  v-show="showPrimaryButton" class="primary-button">

@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <script>
 import common from '../common.js'
 var op = require('object-path')
@@ -56,27 +57,34 @@ export default {
 	}
 }
 </script>
+=======
+<script src='./base.js'></script>
+<style src="./template3.css"></style>
+
+>>>>>>> Stashed changes
 <template>
-	<div v-if="!close" :class="'container '+(mobile ? 'mobile': '')">
+<div class="template template3">
+	<div v-if="!close" :class="'container '+ mode">
 		<div class="left-content">
 			<button v-if="mobile" class="button-close" @click="onClose"></button>
 		</div>
 		<div class="right-content">
 			<button v-if="!mobile" class="button-close" @click="onClose"></button>
-			<p class="description">{{op(this.page, "description",this.description)}}</p>
+			<p class="description">{{page.title}}</p>
 			<div class="red-div"></div>
-			<p class="title">{{op(this.page, "title",this.title)}}</p>
-			<Form :form="op(this.page,'form',this.form)"/>
+			<p class="title">{{page.description}}</p>
+			<Form :form="page.form"/>
 			<div class="buttons-container">
-				<button @click="onPrimaryClick" v-show="op(this.page,'primary_button.enabled',true)"  class="primary-button">
-					{{op(this.page,"primary_button.text", this.primary_button_text)}}
+				<button @click="onPrimaryClick" v-show="showPrimaryButton"  class="primary-button">
+					{{primaryButtonText}}
 				</button>
-				<button @click="onSecondaryClick" v-show="op(this.page,'secondary_button.enabled',true)" class="secondary-button">
-					{{op(this.page, "secondary_button.text", this.secondary_button_text)}}
+				<button @click="onSecondaryClick" v-show="showSecondaryButton" class="secondary-button">
+					{{secondaryButtonText}}
 				</button>
 			</div>
 		</div>
 	</div>
+<<<<<<< Updated upstream
 </template>
 <style scoped>
 	* {
@@ -227,3 +235,7 @@ export default {
 	position: relative !important;
 }
 </style>
+=======
+	</div>
+</template>
+>>>>>>> Stashed changes

@@ -1,0 +1,136 @@
+#subiz .template.template4 * {
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
+#subiz .template.template4 .container {
+  width: 340px !important;
+  max-width: 100% !important;
+  display: flex !important;
+  background-color: #fff !important;
+  flex-direction: column !important;
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+#subiz .template.template4 .image {
+  display: flex !important;
+  background-image: url("../assets/bg4.png") !important;
+  background-size: auto !important;
+  background-repeat: no-repeat !important;
+  flex-direction: column !important;
+  position: relative !important;
+  height: 200px !important;
+  padding-top: 10px !important;
+}
+
+#subiz .template.template4 .button-close {
+  position: absolute !important;
+  right: 10px !important;
+  height: 20px !important;
+  width: 20px !important;
+  border-radius: 10px !important;
+  border: none !important;
+  outline: 0 !important;
+  cursor: pointer !important;
+  background-image: url("../assets/close.png") !important;
+  background-size: 100% 100% !important;
+}
+
+#subiz .template.template4 .form {
+  width: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  padding-left: 35px !important;
+  padding-right: 35px !important;
+}
+
+#subiz .template.template4 .label {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  font-size: 10px !important;
+  color: #000 !important;
+}
+
+#subiz .template.template4 .text-input {
+  padding-left: 5px !important;
+  margin-top: 10px !important;
+  height: 40px !important;
+  width: 100% !important;
+  outline: 0 !important;
+  border: none !important;
+  border-bottom: 1px solid #d9d9d9 !important;
+}
+
+#subiz .template.template4 .title {
+  margin-top: 17px !important;
+  padding-left: 35px !important;
+  color: #000 !important;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  font-weight: bold !important;
+  font-size: 32px !important;
+}
+
+#subiz .template.template4 .description {
+  margin-top: 10px !important;
+  margin-left: 35px !important;
+  color: #000 !important;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  font-weight: normal !important;
+  font-size: 18px !important;
+}
+
+#subiz .template.template4 .buttons-container {
+  margin-top: 10px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin-bottom: 10px !important;
+}
+
+#subiz .template.template4 .primary-button {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+  margin-right: 5px !important;
+  margin-left: 5px !important;
+  color: #ffffff !important;
+  font-size: 16px !important;
+  background-color: #001984 !important;
+  height: 40px !important;
+  border-radius: 5px !important;
+  outline: 0 !important;
+  cursor: pointer !important;
+}
+
+#subiz .template.template4 .secondary-button {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+  margin-right: 5px !important;
+  margin-left: 5px !important;
+  color: #ffffff !important;
+  font-size: 16px !important;
+  background-color: #d9d9d9d9 !important;
+  height: 40px !important;
+  border-radius: 5px !important;
+  outline: 0 !important;
+  cursor: pointer !important;
+}
+
+#subiz .template.template4 .secondary-button:hover {
+  color: #bbbbbb !important;
+}
+
+#subiz .template.template4 .primary-button:hover {
+  background-color: #03173f !important;
+}
+
+#subiz .template.template4 .container.mobile {
+  height: 90% !important;
+  widows: 95% !important;
+}

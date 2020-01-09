@@ -1,0 +1,125 @@
+* {
+	margin: 0  ;
+	padding: 0  ;
+	box-sizing: border-box  ;
+}
+.container{
+	width: 340px  ;
+	max-width: 100%  ;
+	display: flex  ;
+	background-color: #fff  ;
+	flex-direction: column  ;
+
+	position: fixed  ;
+	top: 50%  ;
+	left: 50%  ;
+	transform: translate(-50%, -50%)  ;
+}
+.image{
+	display: flex  ;
+	background-image: url('../assets/bg4.png')  ;
+	background-size: auto  ;
+	background-repeat: no-repeat  ;
+	flex-direction: column  ;
+	position: relative  ;
+	height: 200px  ;
+	padding-top: 10px  ;
+}
+.button-close{
+	position: absolute  ;
+	right: 10px  ;
+	height: 20px  ;
+	width: 20px  ;
+	border-radius: 10px  ;
+	border: none  ;
+	outline: 0  ;
+	cursor: pointer  ;
+	background-image: url('../assets/close.png')  ;
+	background-size: 100% 100%  ;
+
+}
+.form{
+	width:100%  ;
+	display: flex  ;
+	flex-direction: column  ;
+	padding-left: 35px  ;
+	padding-right: 35px  ;
+}
+.label{
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 10px;
+	color: #000;
+}
+.text-input{
+	padding-left: 5px  ;
+	margin-top: 10px  ;
+	height: 40px  ;
+	width: 100%  ;
+	outline: 0  ;
+	border: none  ;
+	border-bottom: 1px solid #d9d9d9  ;
+}
+.title{
+	margin-top: 17px  ;
+	padding-left:35px  ;
+	color:#000  ;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif  ;
+	font-weight: bold  ;
+	font-size: 32px  ;
+}
+.description{
+	margin-top: 10px  ;
+	margin-left:35px  ;
+	color:#000  ;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif  ;
+	font-weight: normal  ;
+	font-size: 18px  ;
+}
+.buttons-container{
+	margin-top: 10px  ;
+	display: flex  ;
+	align-items: center  ;
+	justify-content: center  ;
+	margin-bottom: 10px  ;
+}
+.primary-button{
+	padding-top: 10px  ;
+	padding-bottom: 10px  ;
+	padding-left: 30px  ;
+	padding-right:30px  ;
+	margin-right:5px  ;
+	margin-left: 5px  ;
+	color:#ffffff  ;
+	font-size: 16px  ;
+	background-color: #001984  ;
+	height: 40px  ;
+	border-radius: 5px  ;
+	outline: 0  ;
+	cursor: pointer  ;
+}
+.secondary-button{
+	padding-top: 10px  ;
+	padding-bottom: 10px  ;
+	padding-left: 30px  ;
+	padding-right:30px  ;
+	margin-right:5px  ;
+	margin-left: 5px  ;
+	color:#ffffff  ;
+	font-size: 16px  ;
+	background-color: #d9d9d9d9  ;
+	height: 40px  ;
+	border-radius: 5px  ;
+	outline: 0  ;
+	cursor: pointer  ;
+}
+
+ .secondary-button:hover {
+	 color: #bbbbbb  ;
+ }
+ .primary-button:hover{
+	 background-color: #03173f  ;
+ }
+.container.mobile{
+	height: 90%  ;
+	widows: 95%  ;
+}

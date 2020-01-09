@@ -1,12 +1,10 @@
 <template class="tem">
-  <div id="app" class="app"  >
-	<div id="template-template1">
-    <Template :page="template"/>
-		</div>
+  <div id="subiz" class="app"  >
+    <Template mode="mobile" :page="page"/>
   </div>
 </template>
 <script>
-import Template from './modal/template1.vue'
+import Template from './modal/template4.vue'
 export default {
   name: 'app',
   components: {
@@ -14,12 +12,14 @@ export default {
   },
   data(){
     return {
-      template:{
+      page:{
         subtitle:"",
+        "title": "Giảm 10%",
+	      "description": "với đơn hàng đầu tiên của bạn",
         form_enabled:true,
         images:[],
 				form: {
-        fields:[
+          fields:[
           {
             key :1,
             label : "Ho Ten",
@@ -28,52 +28,52 @@ export default {
           },
           {
             key :2,
-            label : "Email cua ban",
+            label : "Email",
             is_required :true,
-            type :"email",
+            type :"text",
           },
 
           {
             key :3,
             label : "So dien thoai cua ban",
             is_required :true,
-            type :"email",
+            type :"text",
           }
         ],
 				},
         primary_button:{
           enabled : true,
-          action : 10,
-          redirect_url : 11,
-          open_url : 12
+          text: "DANG KY NGAY"
         },
 				secondary_button:{
           enabled : true,
-          action : 10,
-          redirect_url : 11,
-          open_url : 12
+          text: "CANCEL"
+
         },
-        primaryButtonTitle:"Đăng ký nhanh"
       },
       templatehavesubtitle:{
-        title:"NHẬN NGAY ƯU ĐÃI",
-        subtitle:"Đăng ký",
+        title:"NHẬN NGAY ƯU ĐÃI AAAAA",
+        // subtitle:"Đăng ký",
         form_enabled:true,
         images:[],
-        fields:[
+        form:{
+          fields:[
           {
             key :2,
-            label : "Email cua ban",
+            label : "Email",
             is_required :true,
-            type :"email",
+            type :"text",
+            placeholder:"Email cua ban",
           },
           {
             key :3,
-            label : "So dien thoai cua ban",
+            label : "So dien thoai ",
             is_required :true,
-            type :"email",
+            type :"text",
+            placeholder:"So dien thoai cua ban",
           }
         ],
+        },
         primary_button:{
           text:"Đăng ký ngay",
           enabled : true,
@@ -100,7 +100,7 @@ export default {
           },
           {
             key :2,
-            label : "Email cua ban",
+            label : "Email",
             is_required :true,
             type :"email",
             multiline_text:false,
@@ -114,6 +114,13 @@ export default {
           redirect_url : 11,
           open_url : 12
         },
+         secondary_button:{
+          text:"Cancle",
+          enabled : false,
+          action : 10,
+          redirect_url : 11,
+          open_url : 12
+        },
         description:"Phản hổi của bạn rất quan trọng với chúng tôi.",
         primaryButtonTitle:"Đăng ký nhanh"
       },
@@ -122,9 +129,6 @@ export default {
         subtitle:"",
         form_enabled:true,
         images:[],
-        form:{
-
-        },
         fields:[
           {
             key :1,

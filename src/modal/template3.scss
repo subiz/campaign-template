@@ -1,0 +1,148 @@
+* {
+	margin: 0  ;
+	padding: 0  ;
+	box-sizing: border-box  ;
+}
+.container{
+	display: flex  ;
+	flex-direction: row  ;
+	width: 800px  ;
+	max-width: 100%  ;
+	margin: 0 auto  ;
+}
+.left-content{
+	display: flex  ;
+	flex:1  ;
+	background-image: url('../assets/bg3.png')  ;
+	background-size : auto  ;
+	background-repeat: no-repeat  
+}
+.right-content{
+	display: flex  ;
+	flex-direction: column  ;
+	flex:1  ;
+	align-items: center  ;
+	background-color: #fff  ;
+	padding-top: 42px  ;
+	position: relative  ;
+}
+.button-close{
+	position: absolute  ;
+	right: 10px  ;
+	top: 10px  ;
+	height: 20px  ;
+	width: 20px  ;
+	border-radius: 10px  ;
+	border:0px  ;
+	background-image: url('../assets/close.png')  ;
+	background-size: 100% 100%  ;
+}
+.description{
+	margin-top: 10px  ;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif  ;
+	font-style: normal  ;
+	font-weight: normal  ;
+	font-size: 16px  ;
+	align-self: flex-start  ;
+	margin-left: 15px  ;
+}
+.red-div{
+	margin-top: 8px  ;
+	width: 134px  ;
+	height: 5px  ;
+	background-color: #B91526  ;
+	align-self: flex-start  ;
+	margin-left: 15px  ;
+}
+.title{
+	margin-top: 10px  ;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif  ;
+	font-style: normal  ;
+	font-weight: bold  ;
+	font-size: 28px  ;
+	line-height: 34px  ;
+	align-self: flex-start  ;
+	margin-left: 15px  ;
+}
+.form{
+	width: 100%  ;
+	padding-left: 10px  ;
+	padding-right: 10px  ;
+	margin-left: 15px  ;
+
+}
+.label{
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 14px;
+	color: #000;
+	margin-top: unset;
+}
+  .text-input{
+	width: 90%  ;
+	height: 40px  ;
+	border: none  ;
+	border-bottom: 1px solid #d9d9d9  ;
+	padding-left: 5px  ;
+	font-size: 12px  ;
+	margin-top: 10px  ;
+	outline: 0  ;
+}
+.buttons-container{
+	margin-top: 10px  ; 
+	display: flex  ; 
+	align-items: center  ; 
+	justify-content: center  ; 
+	margin-bottom: 10px  ; 
+}
+.primary-button{
+	margin-right: 5px  ; 
+	margin-left: 5px  ; 
+	background-color: #B91526  ; 
+	padding-left: 30px  ; 
+	padding-right:30px  ; 
+	height: 45px  ; 
+	border-radius: 5px  ; 
+	border:0px  ; 
+	color: #fff  ; 
+	font-size: 16px  ; 
+	font-weight: 600  ; 
+	text-transform: uppercase  ; 
+	text-align: center  ; 
+	cursor: pointer  ; 
+}
+.secondary-button{
+	margin-right: 5px  ; 
+	margin-left: 5px  ; 
+	background-color: #d9d9d9  ; 
+	padding-left: 30px  ; 
+	padding-right:30px  ; 
+	height: 45px  ; 
+	border-radius: 5px  ; 
+	border:0px  ; 
+	color: #fff  ; 
+	font-size: 16px  ; 
+	font-weight: 600  ; 
+	text-transform: uppercase  ; 
+	text-align: center  ; 
+	outline: 0  ; 
+	cursor: pointer  ; 
+}
+
+ .secondary-button:hover {
+	 color: #bbbbbb  ;
+ }
+ .primary-button:hover{
+	 background-color: #92111e  ;
+ }
+.container.mobile{
+	height: 80%  ; 
+	width: 90%  ; 
+	flex-direction: column  ; 
+}
+.mobile .right-content{
+	position: unset  ; 
+	padding-top: 5px  ; 
+}
+.mobile .left-content{
+	position: relative  ; 
+}

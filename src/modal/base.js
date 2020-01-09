@@ -21,13 +21,13 @@ export default {
 			return op.get(this.page, 'primary_button.enabled', true)
 		},
 		showSecondaryButton () {
-			return op(this.page, 'secondary_button.enabled', true)
+			return op.get(this.page, 'secondary_button.enabled', true)
 		},
 		primaryButtonText () {
-			return op(this.page, 'primary_button.text')
+			return op.get(this.page, 'primary_button.text')
 		},
 		secondaryButtonText () {
-			return op(this.page, 'secondary_button.text')
+			return op.get(this.page, 'secondary_button.text')
 		},
 	},
 
