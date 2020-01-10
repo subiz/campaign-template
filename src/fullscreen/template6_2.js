@@ -42,6 +42,7 @@ export default {
 		},
 
 		onPrimaryClick () {
+			this.close = true
 			this.$emit('primaryButtonClicked')
 		},
 	},
