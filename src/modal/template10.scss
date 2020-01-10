@@ -12,7 +12,12 @@
 	max-width: 100% !important;
 	max-height: 100% !important;
 	background-color: #fff !important;
-	margin: 0 auto ;
+	// margin: 0 auto ;
+
+	position: fixed ;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%)  ;
 }
 
 .button-close {
@@ -75,7 +80,7 @@
 	color: #000000 !important;
 }
 
-/deep/ .form {
+  .form {
 	width: 100% !important;
 	display: flex !important;
 	padding-left: 10% !important;
