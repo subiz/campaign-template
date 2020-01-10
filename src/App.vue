@@ -1,10 +1,10 @@
 <template class="tem">
   <div id="subiz" class="app"  >
-    <Template mode="mobisle" :page="page"/>
+    <Template mode="mobile" :page="pageu23"/>
   </div>
 </template>
 <script>
-import Template from './modal/template17.vue'
+import Template from './modal/templateu23.vue'
 export default {
   name: 'app',
   components: {
@@ -12,6 +12,19 @@ export default {
   },
   data(){
     return {
+        pageu23:{
+        subtitle:"",
+        "title": "CHẶNG ĐƯỜNG MỚI THÀNH CÔNG MỚI",
+        "description": "Đón thêm khách hàng mới cùng Subiz New Widget",
+        primary_button:{
+          enabled : true,
+          text: "Xem ngay"
+        },
+				secondary_button:{
+          enabled : false,
+          text: "Cancel"
+        },
+      },
       page1_2:{
         subtitle:"",
         "title": "Cảm ơn bạn!",
