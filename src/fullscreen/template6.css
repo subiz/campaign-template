@@ -15,6 +15,10 @@
   background-position: center !important;
   position: relative !important;
   align-items: center !important;
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
 }
 
 #subiz .template.template6 .button-close {
@@ -32,11 +36,9 @@
 }
 
 #subiz .template.template6 .title {
-  margin-top: 15% !important;
-  padding: 5px !important;
   color: #fff !important;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
-  font-weight: bole !important;
+  font-weight: bold !important;
   font-size: 34px !important;
   text-align: center !important;
   width: 40% !important;
@@ -59,7 +61,7 @@
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif !important;
   font-style: normal !important;
   font-size: 22px !important;
-  width: 50% !important;
+  width: 40% !important;
   text-align: center !important;
 }
 
@@ -68,7 +70,7 @@
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
-  margin-top: 5px !important;
+  margin-top: 20px !important;
 }
 
 #subiz .template.template6 .form-item {
@@ -91,7 +93,7 @@
   border-bottom: 1px solid #d9d9d9 !important;
   border: none !important;
   outline: 0 !important;
-  border-radius: 3px !important;
+  border-radius: 5px !important;
 }
 
 #subiz .template.template6 .buttons-container {
@@ -103,6 +105,7 @@
 }
 
 #subiz .template.template6 .primary-button {
+  margin-top: 10px !important;
   padding-top: 10px !important;
   padding-bottom: 10px !important;
   padding-left: 25px !important;
@@ -110,11 +113,11 @@
   margin-top: 5px !important;
   margin-right: 5px !important;
   margin-left: 5px !important;
-  color: #eb6743 !important;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
   font-weight: bold !important;
   font-size: 15px !important;
-  background-color: #fff !important;
+  background-color: #DAB86A !important;
+  color: #fff !important;
   border: none !important;
   border-radius: 5px !important;
   cursor: pointer !important;
@@ -149,6 +152,7 @@
 }
 
 #subiz .template.template6 .container.mobile {
+  width: 335px !important;
   background-image: url("../assets/bg6_mobile.png") !important;
   background-size: 100% 100% !important;
   background-position: unset !important;
@@ -157,25 +161,14 @@
   padding-bottom: 50px !important;
 }
 
-#subiz .template.template6 .mobile .subtitle {
-  margin-top: unset !important;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
-  font-style: normal !important;
-  font-weight: 500 !important;
-  font-size: 30px !important;
-  line-height: 22px !important;
-  text-align: center !important;
-}
-
 #subiz .template.template6 .mobile .title {
-  margin-top: 5px !important;
+  margin-top: 50px !important;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
-  font-style: normal !important;
-  font-weight: 500 !important;
-  font-size: 18px !important;
-  line-height: 22px !important;
+  font-weight: 700 !important;
+  font-size: 22px !important;
+  line-height: unset !important;
   text-align: center !important;
-  width: 65% !important;
+  width: 75% !important;
 }
 
 #subiz .template.template6 .mobile .description {
@@ -189,19 +182,44 @@
 }
 
 #subiz .template.template6 .mobile .form {
-  width: 50% !important;
+  margin-top: 10px !important;
+  width: 60% !important;
+}
+
+#subiz .template.template6 .mobile .form-item {
+  margin-top: 5px !important;
 }
 
 #subiz .template.template6 .mobile .text-input {
+  margin-top: unset !important;
   width: 100% !important;
   height: 30px !important;
+  border-radius: 5px !important;
 }
 
 #subiz .template.template6 .mobile .buttons-container {
-  position: absolute !important;
-  bottom: 50px !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: space-around !important;
+  width: 60% !important;
+  margin-top: 10px !important;
+  margin-bottom: unset !important;
+}
+
+#subiz .template.template6 .mobile .buttons-container .primary-button {
+  width: 60% !important;
+  margin-top: unset !important;
   width: 100% !important;
+  height: 30px !important;
+  padding-top: unset !important;
+  padding-bottom: unset !important;
+  padding-left: unset !important;
+  padding-right: unset !important;
+  margin-top: unset !important;
+  margin-right: unset !important;
+  margin-left: unset !important;
+  border-radius: 5px !important;
+  background-color: #DAB86Ad4 !important;
+  color: #fff !important;
+}
+
+#subiz .template.template6 .mobile .primary-button:hover {
+  background-color: #DAB86A !important;
 }
