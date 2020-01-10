@@ -15,11 +15,12 @@
   top: 55% !important;
   left: 50% !important;
   transform: translate(-50%, -50%) !important;
+  background-color: #b41a12 !important;
 }
 
 #subiz .template.templateu23 .left-content {
   display: flex !important;
-  width: 350px !important;
+  width: 100% !important;
   background-image: url("../assets/u23.png") !important;
   background-size: cover !important;
   background-repeat: no-repeat !important;
@@ -31,9 +32,11 @@
   flex-direction: column !important;
   width: 350px !important;
   align-items: center !important;
-  background-color: #b41a12 !important;
   padding-top: 42px !important;
-  position: relative !important;
+  position: absolute !important;
+  right: 0 !important;
+  top: 0 !important;
+  bottom: 0 !important;
 }
 
 #subiz .template.templateu23 .button-close {
@@ -71,6 +74,7 @@
   text-align: center !important;
   align-self: flex-start !important;
   margin-left: 20px !important;
+  margin-right: 20px !important;
   color: #ffc488 !important;
 }
 
@@ -205,6 +209,6 @@
 #subiz .template.templateu23 .mobile .left-content {
   position: relative !important;
   background-image: url("../assets/u23_mobile.png") !important;
-  height: 200px !important;
-  width: 330px !important;
+  height: 50% !important;
+  width: 100% !important;
 }
