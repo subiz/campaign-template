@@ -1,7 +1,7 @@
 <script src="./template17.js"></script>
 <template>
 	<div class="template template17">
-		<div v-show="!close" :class="'container '+ mode">
+		<div v-if="!close" :class="'container '+ mode">
 			<div class="left">
 				<button class="button-close" @click="onClose"></button>
 				<p class="title">{{page.title}}</p>

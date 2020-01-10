@@ -132,7 +132,9 @@
   border-radius: 25px !important;
   border: none !important;
   font-size: 18px !important;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
   font-weight: bold !important;
+  text-align: center !important;
   color: #fff !important;
   outline: 0 !important;
   cursor: pointer !important;
@@ -145,11 +147,13 @@
   height: 40px !important;
   border-radius: 25px !important;
   border: none !important;
-  font-size: 18px !important;
+  font-size: 12px !important;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
   font-weight: bold !important;
   border: solid 2px #ffffff !important;
   border-width: 2px !important;
   color: #000 !important;
+  text-align: center !important;
   outline: 0 !important;
   cursor: pointer !important;
 }

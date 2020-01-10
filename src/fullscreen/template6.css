@@ -120,8 +120,10 @@
   color: #fff !important;
   border: none !important;
   border-radius: 5px !important;
+  text-align: center !important;
   cursor: pointer !important;
   outline: 0 !important;
+  text-align: center !important;
 }
 
 #subiz .template.template6 .secondary-button {
@@ -141,6 +143,7 @@
   border-radius: 5px !important;
   cursor: pointer !important;
   outline: 0 !important;
+  text-align: center !important;
 }
 
 #subiz .template.template6 .secondary-button:hover {
