@@ -1,14 +1,16 @@
 #subiz .template.template1 .container {
   background-color: #F6F4F5 !important;
-  display: flex !important;
-  flex-direction: row !important;
   position: relative !important;
   width: 750px !important;
-  margin: 0 auto !important;
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
 }
 
 #subiz .template.template1 .image {
   background-image: url("../assets/bg1.png") !important;
+  background-repeat: no-repeat !important;
   background-size: auto !important;
   width: 330px !important;
   position: absolute !important;

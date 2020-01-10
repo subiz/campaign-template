@@ -1,10 +1,10 @@
 <template class="tem">
   <div id="subiz" class="app"  >
-    <Template mode="mobile" :page="page"/>
+    <Template mode="maobile" :page="page"/>
   </div>
 </template>
 <script>
-import Template from './modal/template17.vue'
+import Template from './modal/template1.vue'
 export default {
   name: 'app',
   components: {

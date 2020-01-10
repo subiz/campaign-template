@@ -12,8 +12,11 @@
   align-items: center !important;
   background-image: url("../assets/bg2.png") !important;
   background-size: auto !important;
-  margin: 0 auto !important;
   position: relative !important;
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
 }
 
 #subiz .template.template2 .button-close {

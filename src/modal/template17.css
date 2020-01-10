@@ -20,6 +20,10 @@
   background-repeat: no-repeat !important;
   background-position: center !important;
   position: relative !important;
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
 }
 
 #subiz .template.template17 .right {

@@ -3,8 +3,11 @@
   background-color: #fff !important;
   display: flex !important;
   flex-direction: row !important;
-  margin: 0 auto !important;
   position: relative !important;
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
 }
 
 #subiz .template.template9 .left-content {
