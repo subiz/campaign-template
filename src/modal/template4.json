@@ -1,7 +1,17 @@
 {
-	"name": "Get leads",
-	"title": "Đăng ký nhận ưu đãi khủng",
-	"description": "Giảm giá tới 95%. Miễn phí vận chuyển nội thành",
-	"primary_button_text": "Đăng ký ngay",
-	"secondary_button_text": "Cancel"
+	"name": {
+		"vi":"Form đăng ký nhận ưu đãi/Sign up offer"
+	},
+	"title": {
+		"vi": "Đăng ký nhận ưu đãi khủng"
+	},
+	"description": {
+		"vi": "Giảm giá tới 95%. Miễn phí vận chuyển nội thành"
+	},
+	"primary_button_text": {
+		"vi": "Đăng ký ngay"
+	},
+	"secondary_button_text": {
+		"vi": "Không, cảm ơn."
+	}
 }

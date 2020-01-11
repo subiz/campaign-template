@@ -1,7 +1,17 @@
 {
-	"name": "Get leads",
-	"title": "Đăng ký nhận ưu đãi đặc biệt.",
-	"description": "Giảm 20% chỉ một ngày suy nhất.",
-	"primary_button_text": "Đăng ký ngay",
-	"secondary_button_text": "Cancel"
+	"name": {
+		"vi":"Get leads"
+	},
+	"title": {
+		"vi":"Đăng ký để nhận ưu đãi đặc biệt"
+	},
+	"description": {
+		"vi": "Giảm 20% chỉ một ngày suy nhất."
+	},
+	"primary_button_text": {
+		"vi": "Đăng ký ngay"
+	},
+	"secondary_button_text": {
+		"vi": "Không, cảm ơn."
+	}
 }

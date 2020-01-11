@@ -1,7 +1,17 @@
 {
-	"name": "Get leads",
-	"title": "Giảm 10%",
-	"description": "với đơn hàng đầu tiên của bạn",
-	"primary_button_text": "Đăng ký ngay",
-	"secondary_button_text": "Không, cảm ơn. Tôi sẽ quay lại sau"
+	"name": {
+		"vi":"Form đăng ký nhận ưu đãi/Sign up offer"
+	},
+	"title": {
+		"vi":"Giảm 10%"
+	},
+	"description": {
+		"vi":"với đơn hàng đầu tiên của bạn"
+	},
+	"primary_button_text": {
+		"vi": "Đăng ký ngay"
+	},
+	"secondary_button_text": {
+		"vi": "Không, cảm ơn. Tôi sẽ quay lại sau"
+	}
 }

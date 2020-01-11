@@ -1,7 +1,17 @@
 {
-	"name": "Get leads",
-	"title": "CHẶNG ĐƯỜNG MỚI THÀNH CÔNG MỚI",
-	"description": "Đón thêm khách hàng mới cùng Subiz New Widget",
-	"primary_button_text": "Xem ngay",
-	"secondary_button_text": "Đóng"
+	"name": {
+		"vi":"Pop-up sự kiện/Event pop-up"
+	},
+	"title": {
+		"vi": "CHẶNG ĐƯỜNG MỚI THÀNH CÔNG MỚI"
+	},
+	"description": {
+		"vi": "Đón thêm khách hàng mới cùng Subiz New Widget"
+	},
+	"primary_button_text": {
+		"vi": "Xem ngay"
+	},
+	"secondary_button_text": {
+		"vi": "Đóng"
+	}
 }

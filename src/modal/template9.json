@@ -1,7 +1,17 @@
 {
-	"name": "Get feedback",
-	"title": "Bạn có tìm được thứ bạn cần?",
-	"description": "Chia sẻ cảm nhận của bạn cho chúng tôi bạn sẽ nhận được 10% GIẢM GIÁ.",
-	"primary_button_text": "Gửi cảm nhận",
-	"secondary_button_text": "Cancel"
+	"name": {
+		"vi":"Form hỏi ý kiến (feedback)/Feedback form"
+	},
+	"title": {
+		"vi": "Bạn có tìm được thứ bạn cần?"
+	},
+	"description": {
+		"vi": "Chia sẻ cảm nhận của bạn cho chúng tôi bạn sẽ nhận được 10% GIẢM GIÁ."
+	},
+	"primary_button_text": {
+		"vi":  "Gửi cảm nhận"
+	},
+	"secondary_button_text": {
+		"vi": "Không, cảm ơn."
+	}
 }
