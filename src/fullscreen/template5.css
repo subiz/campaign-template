@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Muli|Roboto|Roboto+Condensed|Yeseva+One&display=swap");
 #subiz .template.template5 * {
   margin: 0 !important;
   padding: 0 !important;
@@ -57,7 +58,7 @@
   margin-top: 5px !important;
   text-align: center !important;
   color: #FDAD15 !important;
-  font-family: Arial, Helvetica, sans-serif !important;
+  font-family: "Roboto Condensed" !important;
   font-weight: bold !important;
   text-transform: uppercase !important;
   font-size: 52px !important;
@@ -67,7 +68,7 @@
   margin-left: 20% !important;
   margin-right: 20% !important;
   margin-top: 15px !important;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  font-family: "Muli" !important;
   font-size: 22px !important;
   color: #fff !important;
   text-align: center !important;
@@ -105,6 +106,12 @@
   border: none !important;
   font-size: 15px !important;
   text-align: center !important;
+  font-family: "Muli" !important;
+}
+
+#subiz .template.template5 .textarea::placeholder {
+  color: #8d8d8d73 !important;
+  font-family: "Muli" !important;
 }
 
 #subiz .template.template5 .buttons-container {
@@ -129,6 +136,7 @@
   color: #fff !important;
   outline: 0 !important;
   cursor: pointer !important;
+  font-family: "Roboto" !important;
   text-align: center !important;
 }
 
@@ -147,6 +155,7 @@
   outline: 0 !important;
   text-align: center !important;
   cursor: pointer !important;
+  font-family: "Roboto" !important;
 }
 
 #subiz .template.template5 .secondary-button:hover {

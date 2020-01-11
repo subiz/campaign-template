@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Muli|Roboto|Yeseva+One&display=swap");
 #subiz .template.template3 * {
   margin: 0 !important;
   padding: 0 !important;
@@ -49,7 +50,7 @@
 
 #subiz .template.template3 .description {
   margin-top: 10px !important;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  font-family: "Muli" !important;
   font-style: normal !important;
   font-weight: normal !important;
   font-size: 16px !important;
@@ -69,7 +70,7 @@
 
 #subiz .template.template3 .title {
   margin-top: 10px !important;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  font-family: "Montserrat" !important;
   font-style: normal !important;
   font-weight: bold !important;
   font-size: 28px !important;
@@ -90,7 +91,7 @@
 }
 
 #subiz .template.template3 .label {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  font-family: "Muli" !important;
   font-size: 14px !important;
   color: #000000 !important;
   margin-top: 10px !important;
@@ -103,10 +104,12 @@
   border-bottom: 1px solid #a5a4a427 !important;
   font-size: 15px !important;
   outline: 0 !important;
+  font-family: "Muli" !important;
 }
 
 #subiz .template.template3 .text-input::placeholder {
   color: #8d8d8d80 !important;
+  font-family: "Muli" !important;
 }
 
 #subiz .template.template3 .buttons-container {
@@ -131,6 +134,7 @@
   font-weight: 600 !important;
   text-transform: uppercase !important;
   text-align: center !important;
+  font-family: "Roboto" !important;
   cursor: pointer !important;
   outline: 0 !important;
 }
@@ -151,6 +155,7 @@
   text-align: center !important;
   outline: 0 !important;
   cursor: pointer !important;
+  font-family: "Roboto" !important;
 }
 
 #subiz .template.template3 .secondary-button:hover {

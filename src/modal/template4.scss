@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Muli|Roboto|Yeseva+One&display=swap');
 * {
 	margin: 0  ;
 	padding: 0  ;
@@ -51,7 +52,7 @@
 	margin-top:15px;
 }
 .label{
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-family:'Muli';
 	font-size: 14px;
 	color: #000000;
 	margin-top: 10px;
@@ -64,16 +65,18 @@
 	border-bottom: 1px solid #d9d9d9  ;
 	font-size: 15px  ;
 	outline: 0  ;
+	font-family:'Muli';
 }
 .text-input::placeholder{
 	color: #8d8d8d80;
+	font-family:'Muli';
 }
 
 .title{
 	margin-top: 17px  ;
 	padding-left:35px  ;
 	color:#000  ;
-	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif  ;
+	font-family:'Yeseva One' ;
 	font-weight: bold  ;
 	font-size: 32px  ;
 }
@@ -81,7 +84,7 @@
 	margin-top: 10px  ;
 	margin-left:35px  ;
 	color:#000  ;
-	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif  ;
+	font-family:'Muli';
 	font-weight: normal  ;
 	font-size: 18px  ;
 }
@@ -107,6 +110,7 @@
 	outline: 0  ;
 	text-align: center;
 	cursor: pointer  ;
+	font-family: 'Roboto';
 }
 .secondary-button{
 	padding-top: 10px  ;
@@ -123,6 +127,7 @@
 	outline: 0  ;
 	text-align: center;
 	cursor: pointer  ;
+	font-family: 'Roboto';
 }
 
  .secondary-button:hover {

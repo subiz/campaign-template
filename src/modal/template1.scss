@@ -1,8 +1,10 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Muli|Roboto|Roboto+Condensed|Yeseva+One&display=swap');
 .container{
 	background-color: #F6F4F5 ;
-	position: relative ;
+	// position: relative ;
 	width: 750px ;
-	// margin: 0 auto ;
+
 	position: fixed  ;
 	top: 50%  ;
 	left: 50%  ;
@@ -32,6 +34,8 @@
 }
 .div-right{
 	flex:1.5 ;
+	display: flex;
+	flex-direction: column;
 }
 .button-close{
 	height: 20px ;
@@ -50,7 +54,7 @@
 	padding-left: 20px;
 	padding-right:20px;
 	margin-top:	40px ;
-	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+	font-family: Yeseva One;
 	font-weight: 700 ;
 	font-size: 36px ;
 	line-height: 42px ;
@@ -61,7 +65,7 @@
 	margin-top:	10px ;
 	padding-left: 20px;
 	padding-right:20px;
-	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+	font-family: Roboto;
 	font-style: normal ;
 	font-weight: normal ;
 	font-size: 18px ;
@@ -122,7 +126,7 @@
 	padding-right:20px;
 }
 .label {
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-family: Roboto;
 	font-size: 13px;
 	color: #000;
 	margin-top: unset;
@@ -177,12 +181,12 @@
 	font-style: normal;
 	font-size: 32px;
 	line-height: 40px;
-	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+	font-family: Roboto;
 	text-align: center;
 }
 .mobile .description{
   margin-top: 8px ;	
-	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-family: Roboto;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 16px;

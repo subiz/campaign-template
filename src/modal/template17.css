@@ -1,7 +1,4 @@
-#subiz .template.template17 .label {
-  display: none !important;
-}
-
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Muli|Roboto|Roboto+Condensed|Yeseva+One&display=swap");
 #subiz .template.template17 .mobile.container {
   width: 335px !important;
   height: 600px !important;
@@ -60,7 +57,7 @@
   margin-top: 5px !important;
   text-align: center !important;
   color: #FDAD15 !important;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  font-family: Roboto Condensed !important;
   font-weight: bold !important;
   font-size: 36px !important;
   width: 75% !important;
@@ -68,7 +65,7 @@
 
 #subiz .template.template17 .description {
   margin-top: 15px !important;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  font-family: "Muli" !important;
   font-size: 18px !important;
   color: #fff !important;
   text-align: center !important;
@@ -94,11 +91,7 @@
 }
 
 #subiz .template.template17 .label {
-  margin-top: unset !important;
-  color: #fff !important;
-  font-size: 14 !important;
-  padding: 5px !important;
-  align-self: flex-start !important;
+  display: none !important;
 }
 
 #subiz .template.template17 .text-input {
@@ -113,6 +106,7 @@
   border-bottom: 1px solid #d9d9d9 !important;
   border: none !important;
   padding-left: 10px !important;
+  font-family: "Muli" !important;
 }
 
 #subiz .template.template17 .buttons-container {
@@ -132,7 +126,7 @@
   border-radius: 25px !important;
   border: none !important;
   font-size: 18px !important;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  font-family: "Roboto" !important;
   font-weight: bold !important;
   text-align: center !important;
   color: #fff !important;
@@ -148,7 +142,7 @@
   border-radius: 25px !important;
   border: none !important;
   font-size: 12px !important;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  font-family: "Roboto" !important;
   font-weight: bold !important;
   border: solid 2px #ffffff !important;
   border-width: 2px !important;

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Muli|Roboto|Yeseva+One&display=swap");
 #subiz .template.template2 * {
   margin: 0 !important;
   padding: 0 !important;
@@ -49,7 +50,7 @@
   font-weight: bold !important;
   font-style: normal !important;
   text-align: center !important;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  font-family: "Montserrat" !important;
   margin-left: 50px !important;
   margin-right: 50px !important;
 }
@@ -59,7 +60,7 @@
   font-weight: normal !important;
   text-align: center !important;
   font-size: 18px !important;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  font-family: "Muli" !important;
   margin-left: 27px !important;
   margin-right: 27px !important;
 }
@@ -78,13 +79,14 @@
   background-color: #FDAD15 !important;
   color: #fff !important;
   font-size: 16px !important;
-  font-weight: 500 !important;
+  font-weight: bole !important;
   text-align: center !important;
   text-transform: uppercase !important;
   padding-left: 30px !important;
   padding-right: 30px !important;
   padding-top: 12px !important;
   padding-bottom: 12px !important;
+  font-family: "Roboto" !important;
   cursor: pointer !important;
   outline: 0 !important;
 }
@@ -104,6 +106,7 @@
   padding-bottom: 12px !important;
   margin-left: 10px !important;
   cursor: pointer !important;
+  font-family: "Roboto" !important;
   outline: 0 !important;
 }
 
@@ -130,7 +133,7 @@
 }
 
 #subiz .template.template2 .label {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  font-family: "Muli" !important;
   font-size: 12px !important;
   color: #000 !important;
   margin-top: unset !important;
@@ -143,10 +146,12 @@
   height: 30px !important;
   font-size: 14px !important;
   outline: 0 !important;
+  font-family: "Muli" !important;
 }
 
 #subiz .template.template2 .text-input::placeholder {
   color: #8d8d8d80 !important;
+  font-family: "Muli" !important;
 }
 
 #subiz .template.template2 .container.mobile {

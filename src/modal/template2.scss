@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Muli|Roboto|Yeseva+One&display=swap');
 *{
 	margin: 0;
 	padding: 0;
@@ -50,7 +51,7 @@
 	font-weight: bold;
 	font-style: normal;
 	text-align: center;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-family: "Montserrat";
 	margin-left: 50px;
 	margin-right: 50px;
 }
@@ -60,7 +61,7 @@
 	font-weight: normal;
 	text-align: center;
 	font-size: 18px;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-family: 'Muli';
 	margin-left: 27px;
 	margin-right: 27px;
 }
@@ -79,13 +80,14 @@
 	background-color: #FDAD15 ;
 	color: #fff;
 	font-size: 16px;
-	font-weight: 500;
+	font-weight: bole;
 	text-align: center;
 	text-transform: uppercase;
 	padding-left: 30px;
 	padding-right: 30px;
 	padding-top: 12px;
 	padding-bottom: 12px;
+	font-family: "Roboto";
 	cursor: pointer;
 	outline: 0;
 }
@@ -105,6 +107,7 @@
 	padding-bottom: 12px;
 	margin-left: 10px;
 	cursor: pointer;
+	font-family: 'Roboto';
 	outline: 0;
 }
 
@@ -127,7 +130,7 @@
 	margin-top: 20px;
 }
 .label{
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-family: 'Muli';
 	font-size: 12px;
 	color: #000;
 	margin-top:unset;
@@ -139,9 +142,11 @@
 	height: 30px;
 	font-size: 14px;
 	outline: 0;
+	font-family: "Muli";
 }
 .text-input::placeholder{
 	color: #8d8d8d80;
+	font-family: "Muli";
 }
 
 .container.mobile{
