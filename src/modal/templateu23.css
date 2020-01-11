@@ -166,7 +166,7 @@
 #subiz .template.templateu23 .container.mobile {
   width: 355px !important;
   flex-direction: column !important;
-  height: 500px !important;
+  height: 625px !important;
 }
 
 #subiz .template.templateu23 .mobile .right-content {
@@ -174,7 +174,15 @@
   padding-top: 5px !important;
   display: flex !important;
   align-items: center !important;
-  width: 330px !important;
+  width: 355px !important;
+  height: 300px !important;
+}
+
+#subiz .template.templateu23 .mobile .left-content {
+  position: relative !important;
+  background-image: url("../assets/u23_mobile.png") !important;
+  height: 300px !important;
+  width: 355px !important;
 }
 
 #subiz .template.templateu23 .mobile .title {
@@ -183,6 +191,9 @@
   line-height: 32px !important;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
   text-align: center !important;
+  margin-top: 25px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
 }
 
 #subiz .template.templateu23 .mobile .description {
@@ -195,20 +206,13 @@
 
 #subiz .template.templateu23 .mobile .primary-button {
   font-size: 18px !important;
-  height: 40px !important;
+  height: 45px !important;
   width: 200px !important;
   border-radius: 20px !important;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
 }
 
 #subiz .template.templateu23 .mobile .buttons-container {
-  margin-bottom: 15px !important;
-  margin-top: 15px !important;
-}
-
-#subiz .template.templateu23 .mobile .left-content {
-  position: relative !important;
-  background-image: url("../assets/u23_mobile.png") !important;
-  height: 50% !important;
-  width: 100% !important;
+  margin-bottom: 30px !important;
+  margin-top: 30px !important;
 }

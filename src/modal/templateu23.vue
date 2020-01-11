@@ -10,7 +10,6 @@
 		<div class="right-content">
 			<p class="title">{{page.title}}</p>
 			<p class="description">{{page.description}}</p>
-			<!-- <div class="red-div"></div> -->
 			<Form :form="page.form"/>
 			<div class="buttons-container">
 				<button @click="onPrimaryClick" v-show="showPrimaryButton"  class="primary-button">
