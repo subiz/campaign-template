@@ -18,10 +18,10 @@ export default {
 
 	computed: {
 		showPrimaryButton () {
-			return op.get(this.page, 'primary_button.enabled', true)
+			return op.get(this.page, 'primary_button.enabled')
 		},
 		showSecondaryButton () {
-			return op.get(this.page, 'secondary_button.enabled', true)
+			return op.get(this.page, 'secondary_button.enabled')
 		},
 		primaryButtonText () {
 			return op.get(this.page, 'primary_button.text')
