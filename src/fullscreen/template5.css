@@ -109,6 +109,11 @@
   font-family: "Muli" !important;
 }
 
+#subiz .template.template5 .text-input::placeholder {
+  color: #8d8d8d73 !important;
+  font-family: "Muli" !important;
+}
+
 #subiz .template.template5 .textarea::placeholder {
   color: #8d8d8d73 !important;
   font-family: "Muli" !important;
@@ -168,6 +173,7 @@
 
 #subiz .template.template5 .container.mobile {
   width: 335px !important;
+  height: 650px !important;
 }
 
 #subiz .template.template5 .mobile .right {
@@ -180,6 +186,8 @@
   width: 100% !important;
   max-width: 100% !important;
   background-image: url("../assets/bg5_mobile.png") !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
   position: relative !important;
   justify-content: flex-start !important;
 }

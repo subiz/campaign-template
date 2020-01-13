@@ -112,13 +112,14 @@
 	margin-right: 5px  ; 
 	margin-left: 5px  ; 
 	background-color: #B91526  ; 
-	padding-left: 30px  ; 
-	padding-right:30px  ; 
-	height: 45px  ; 
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;; 
 	border-radius: 5px  ; 
-	border:0px  ; 
+	border:none  ; 
 	color: #fff  ; 
-	font-size: 16px  ; 
+	font-size: 14px  ; 
 	font-weight: 600  ; 
 	text-transform: uppercase  ; 
 	text-align: center  ; 
@@ -130,14 +131,15 @@
 	margin-right: 5px  ; 
 	margin-left: 5px  ; 
 	background-color: #d9d9d9  ; 
-	padding-left: 30px  ; 
-	padding-right:30px  ; 
-	height: 45px  ; 
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	border-radius: 5px  ; 
-	border:0px  ; 
-	color: #fff  ; 
-	font-size: 16px  ; 
-	font-weight: 600  ; 
+	border:none; 
+	color: #fff ; 
+	font-size: 14px ; 
+	font-weight: 600 ; 
 	text-transform: uppercase  ; 
 	text-align: center  ; 
 	outline: 0  ; 
@@ -164,4 +166,19 @@
 }
 .mobile .left-content{
 	position: relative  ; 
+}
+.mobile .primary-button{
+	padding-left: 24px;
+	padding-right: 24px;
+	padding-top: 13px;
+	padding-bottom: 13px;
+	font-size: 12px;
+}
+
+.mobile .secondary-button{
+	font-size: 12px;
+	padding-left: 24px;
+	padding-right: 24px;
+	padding-top: 13px;
+	padding-bottom: 13px;
 }

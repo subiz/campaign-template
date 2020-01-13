@@ -5,6 +5,7 @@ import template4 from './src/modal/template4.vue'
 import template5 from './src/fullscreen/template5.vue'
 import template6 from './src/fullscreen/template6.vue'
 import template9 from './src/modal/template9.vue'
+import template9 from './src/modal/template10.vue'
 import template17 from './src/modal/template17.vue'
 import templateu23 from './src/modal/templateu23.vue'
 
@@ -15,12 +16,12 @@ export default {
 		template3,
 		template4,
 		template9,
+		template10,
 		template17,
 		templateu23,
 	},
 	fullscreen: {
 		template5,
-
 		template6,
 	},
 }

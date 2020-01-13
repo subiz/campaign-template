@@ -124,13 +124,14 @@
   margin-right: 5px !important;
   margin-left: 5px !important;
   background-color: #B91526 !important;
-  padding-left: 30px !important;
-  padding-right: 30px !important;
-  height: 45px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
   border-radius: 5px !important;
-  border: 0px !important;
+  border: none !important;
   color: #fff !important;
-  font-size: 16px !important;
+  font-size: 14px !important;
   font-weight: 600 !important;
   text-transform: uppercase !important;
   text-align: center !important;
@@ -143,13 +144,14 @@
   margin-right: 5px !important;
   margin-left: 5px !important;
   background-color: #d9d9d9 !important;
-  padding-left: 30px !important;
-  padding-right: 30px !important;
-  height: 45px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
   border-radius: 5px !important;
-  border: 0px !important;
+  border: none !important;
   color: #fff !important;
-  font-size: 16px !important;
+  font-size: 14px !important;
   font-weight: 600 !important;
   text-transform: uppercase !important;
   text-align: center !important;
@@ -181,4 +183,20 @@
 
 #subiz .template.template3 .mobile .left-content {
   position: relative !important;
+}
+
+#subiz .template.template3 .mobile .primary-button {
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+  padding-top: 13px !important;
+  padding-bottom: 13px !important;
+  font-size: 12px !important;
+}
+
+#subiz .template.template3 .mobile .secondary-button {
+  font-size: 12px !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+  padding-top: 13px !important;
+  padding-bottom: 13px !important;
 }

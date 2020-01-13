@@ -104,16 +104,15 @@
 }
 
 #subiz .template.template4 .primary-button {
+  padding-left: 20px !important;
+  padding-right: 20px !important;
   padding-top: 10px !important;
   padding-bottom: 10px !important;
-  padding-left: 30px !important;
-  padding-right: 30px !important;
   margin-right: 5px !important;
   margin-left: 5px !important;
   color: #ffffff !important;
   font-size: 16px !important;
   background-color: #001984 !important;
-  height: 40px !important;
   border-radius: 5px !important;
   outline: 0 !important;
   text-align: center !important;
@@ -122,16 +121,15 @@
 }
 
 #subiz .template.template4 .secondary-button {
+  padding-left: 20px !important;
+  padding-right: 20px !important;
   padding-top: 10px !important;
   padding-bottom: 10px !important;
-  padding-left: 30px !important;
-  padding-right: 30px !important;
   margin-right: 5px !important;
   margin-left: 5px !important;
   color: #ffffff !important;
   font-size: 16px !important;
   background-color: #d9d9d9d9 !important;
-  height: 40px !important;
   border-radius: 5px !important;
   outline: 0 !important;
   text-align: center !important;
@@ -148,7 +146,6 @@
 }
 
 #subiz .template.template4 .container.mobile {
-  height: 90% !important;
   width: 330px !important;
 }
 
@@ -186,4 +183,20 @@
   border-bottom: 1px solid #d9d9d9 !important;
   font-size: 14px !important;
   outline: 0 !important;
+}
+
+#subiz .template.template4 .mobile .buttons-container .primary-button {
+  font-size: 12px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+#subiz .template.template4 .mobile .buttons-container .secondary-button {
+  font-size: 12px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
 }

@@ -181,8 +181,16 @@
 
 #subiz .template.template2 .mobile .buttons-container .primary-button {
   font-size: 12px !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
 }
 
 #subiz .template.template2 .mobile .buttons-container .secondary-button {
   font-size: 12px !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
 }

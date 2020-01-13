@@ -2,7 +2,6 @@
 	<div class="form" v-if="showForm">
 		<div  v-for="field in form.fields" class="form-item">
 			<label class="label">{{field.label + ':'}}</label>
-
 			<div v-if="field.type==='list' && !field.multiple_choice" class="form--list-container">
 				<div class="radio" v-for="item in field.list">
 					<input type="radio" :id="field.key + item" :name="field.key" :value="item"
@@ -71,7 +70,6 @@
  export default {
 	 name:'jform',
 	 props: ["form"],
-
 	 computed: {
 		 showForm() {
 			 return this.form && this.form.enabled && this.form.fields && this.form.fields.length > 0

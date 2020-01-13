@@ -49,6 +49,7 @@
 	font-weight: normal ;
 	font-size: 15px ;
 	align-self: flex-start ;
+	padding-right: 15px;
 }
 
 .title {
@@ -58,7 +59,7 @@
 	font-size: 26px ;
 	line-height: 34px ;
 	align-self: flex-start ;
-	padding-right: 10px ;
+	padding-right: 15px ;
 }
 
  .form {
@@ -121,14 +122,12 @@
 }
 
 .primary-button { 
-	width: 93%;
-	margin-top: 5px ;
-	margin-right: 5px ;
+	width: 76%;
 	background-color: #FDAD15 ;
 	border-radius: 5px ;
 	border: solid 1px #fdad15 ;
-	padding-top: 10px ;
-	padding-bottom: 10px ;
+	padding-top: 15px ;
+	padding-bottom: 15px ;
 	padding-left: 30px ;
 	padding-right: 30px ;
 	color: #fff ;
@@ -146,8 +145,8 @@
 	background-color: #d9d9d9 ;
 	border-radius: 5px ;
 	border: solid 1px #d9d9d9 ;
-	padding-top: 10px ;
-	padding-bottom: 10px ;
+	padding-top: 15px ;
+	padding-bottom: 15px ;
 	padding-left: 30px ;
 	padding-right: 30px ;
 	color: #fff ;
@@ -168,17 +167,17 @@
 }
 
 .container.mobile{
-	height: 90% ;
+	// height: 90% ;
 	flex-direction: column ;
-	width:335px ;
+	width:365px ;
 }
 .mobile .left-content{
 	height: 200px;
-	width:335px ;
+	width:365px ;
 	position: relative ;
 }
 .mobile .right-content{
-	width: 335px ;
+	width: 365px ;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -229,5 +228,4 @@
 }
 .mobile .right-content .buttons-container .primary-button{
 	width: 310px;
-	height: 40px;
 }

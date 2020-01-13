@@ -1,7 +1,4 @@
-#subiz .template.template6 * {
-  box-sizing: border-box !important;
-}
-
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Muli|Roboto|Roboto+Condensed|Yeseva+One&display=swap");
 #subiz .template.template6 .container {
   display: flex !important;
   flex-direction: column !important;
@@ -15,6 +12,7 @@
   background-position: center !important;
   position: relative !important;
   align-items: center !important;
+  justify-content: center !important;
   position: fixed !important;
   top: 50% !important;
   left: 50% !important;
@@ -37,9 +35,9 @@
 
 #subiz .template.template6 .title {
   color: #fff !important;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
-  font-weight: bold !important;
-  font-size: 34px !important;
+  font-family: "Montserrat" !important;
+  font-weight: bolder !important;
+  font-size: 42px !important;
   text-align: center !important;
   width: 40% !important;
 }
@@ -50,17 +48,17 @@
 }
 
 #subiz .template.template6 .white-div {
-  margin: 5px !important;
-  width: 140px !important;
+  margin: 10px !important;
+  width: 160px !important;
   height: 5px !important;
   background-color: #fff !important;
 }
 
 #subiz .template.template6 .description {
   color: #fff !important;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif !important;
+  font-family: "Muli" !important;
   font-style: normal !important;
-  font-size: 22px !important;
+  font-size: 24px !important;
   width: 40% !important;
   text-align: center !important;
 }
@@ -87,13 +85,19 @@
 #subiz .template.template6 .text-input {
   margin-top: 10px !important;
   width: 40% !important;
-  height: 35px !important;
+  height: 40px !important;
   border: none !important;
   padding-left: 5px !important;
-  border-bottom: 1px solid #d9d9d9 !important;
+  background-color: #ffffff !important;
   border: none !important;
   outline: 0 !important;
   border-radius: 5px !important;
+}
+
+#subiz .template.template6 .text-input::placeholder {
+  color: #8d8d8d73 !important;
+  font-family: "Muli" !important;
+  font-size: 14px !important;
 }
 
 #subiz .template.template6 .buttons-container {
@@ -106,14 +110,14 @@
 
 #subiz .template.template6 .primary-button {
   margin-top: 10px !important;
-  padding-top: 10px !important;
-  padding-bottom: 10px !important;
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
   padding-left: 25px !important;
   padding-right: 25px !important;
   margin-top: 5px !important;
   margin-right: 5px !important;
   margin-left: 5px !important;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  font-family: "Roboto" !important;
   font-weight: bold !important;
   font-size: 15px !important;
   background-color: #DAB86A !important;
@@ -134,7 +138,7 @@
   padding-left: 25px !important;
   padding-right: 25px !important;
   margin-top: 5px !important;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  font-family: "Roboto" !important;
   font-weight: bold !important;
   color: #000 !important;
   font-size: 16px !important;
@@ -157,17 +161,17 @@
 #subiz .template.template6 .container.mobile {
   width: 335px !important;
   background-image: url("../assets/bg6_mobile.png") !important;
-  background-size: 100% 100% !important;
-  background-position: unset !important;
+  background-size: auto !important;
+  background-position: center !important;
   align-items: center !important;
   justify-content: center !important;
-  padding-bottom: 50px !important;
+  height: 660px !important;
 }
 
 #subiz .template.template6 .mobile .title {
-  margin-top: 50px !important;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
-  font-weight: 700 !important;
+  margin-top: 10px !important;
+  font-family: "Montserrat" !important;
+  font-weight: bold !important;
   font-size: 22px !important;
   line-height: unset !important;
   text-align: center !important;
@@ -175,7 +179,7 @@
 }
 
 #subiz .template.template6 .mobile .description {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  font-family: "Muli" !important;
   font-style: normal !important;
   font-weight: normal !important;
   font-size: 13px !important;
@@ -197,7 +201,7 @@
   margin-top: unset !important;
   width: 100% !important;
   height: 30px !important;
-  border-radius: 5px !important;
+  border-radius: unset !important;
 }
 
 #subiz .template.template6 .mobile .buttons-container {
@@ -207,20 +211,18 @@
 }
 
 #subiz .template.template6 .mobile .buttons-container .primary-button {
-  width: 60% !important;
   margin-top: unset !important;
-  width: 100% !important;
   height: 30px !important;
   padding-top: unset !important;
   padding-bottom: unset !important;
-  padding-left: unset !important;
-  padding-right: unset !important;
+  padding-left: 10px !important;
+  padding-right: 10px !important;
   margin-top: unset !important;
   margin-right: unset !important;
   margin-left: unset !important;
-  border-radius: 5px !important;
   background-color: #DAB86Ad4 !important;
   color: #fff !important;
+  border-radius: unset !important;
 }
 
 #subiz .template.template6 .mobile .primary-button:hover {

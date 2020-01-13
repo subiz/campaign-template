@@ -1,10 +1,10 @@
 <template class="tem">
   <div id="subiz" class="app"  >
-    <Template mode="mobile" :page="pageu23"/>
+    <Template mode="mobiles" :page="templatefeedback2"/>
   </div>
 </template>
 <script>
-import Template from './modal/templateu23.vue'
+import Template from './modal/template10.vue'
 export default {
   name: 'app',
   components: {
@@ -12,7 +12,7 @@ export default {
   },
   data(){
     return {
-        pageu23:{
+      pageu23:{
         subtitle:"",
         "title": "CHẶNG ĐƯỜNG MỚI THÀNH CÔNG MỚI",
         "description": "Đón thêm khách hàng mới cùng Subiz New Widget",
@@ -59,22 +59,15 @@ export default {
               type :"text",
               placeholder: "johndoe@example.com"
             },
-            // {
-            //   key :3,
-            //   label : "Số điện thoại",
-            //   is_required :true,
-            //   type :"text",
-            //   placeholder: "0123 456 789"
-            // }
           ],
 				},
         primary_button:{
           enabled : true,
-          text: "ĐĂNG KÝ NGAY"
+          text: "Đăng ký ngay"
         },
 				secondary_button:{
-          enabled : false,
-          text: "Cancel"
+          enabled : true,
+          text: "Không, cảm ơn"
         },
       },
       templatehavesubtitle:{
@@ -157,23 +150,24 @@ export default {
         title:"Bạn có tìm được thứ mình cần?",
         description:"Chia sẻ cảm nhận của bạn với chúng tôi và bạn sẽ nhận được 10% GIẢM GIÁ.",
         form:{
-          enable :true,
+          group_required: true,
+          group_label: "AAAA",
+          enabled :true,
           fields:[
           {
             key :1,
             label : "Cảm nhận của bạn",
             is_required :true,
-            type :"text",
-            multiline_text:true,
-            placeholder:"Cảm nhận của bạn",
-          },
-          {
-            key :2,
-            label : "Email cua ban",
-            is_required :true,
-            type :"email",
+            type :"list",
+            list:[
+              "Nỗi đau xót xa",
+              "Day dứt nỗi đau",
+              "Bức tranh từ nước mắt",
+              "Ngày chưa giông bão",
+            ],
             multiline_text:false,
-            placeholder:"Email của bạn",
+            multiple_choice:false,
+            placeholder:"Cảm nhận của bạn",
           },
           ],
         },
@@ -182,8 +176,8 @@ export default {
           enabled : true,
         },
         secondary_button:{
-          text:"Đóng",
-          enabled : false,
+          text:"Không, tôi cảm ơn",
+          enabled : true,
         },
       },
     }

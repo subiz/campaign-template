@@ -47,6 +47,7 @@
   font-weight: normal !important;
   font-size: 15px !important;
   align-self: flex-start !important;
+  padding-right: 15px !important;
 }
 
 #subiz .template.template9 .title {
@@ -56,7 +57,7 @@
   font-size: 26px !important;
   line-height: 34px !important;
   align-self: flex-start !important;
-  padding-right: 10px !important;
+  padding-right: 15px !important;
 }
 
 #subiz .template.template9 .form {
@@ -123,14 +124,12 @@
 }
 
 #subiz .template.template9 .primary-button {
-  width: 93% !important;
-  margin-top: 5px !important;
-  margin-right: 5px !important;
+  width: 76% !important;
   background-color: #FDAD15 !important;
   border-radius: 5px !important;
   border: solid 1px #fdad15 !important;
-  padding-top: 10px !important;
-  padding-bottom: 10px !important;
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
   padding-left: 30px !important;
   padding-right: 30px !important;
   color: #fff !important;
@@ -148,8 +147,8 @@
   background-color: #d9d9d9 !important;
   border-radius: 5px !important;
   border: solid 1px #d9d9d9 !important;
-  padding-top: 10px !important;
-  padding-bottom: 10px !important;
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
   padding-left: 30px !important;
   padding-right: 30px !important;
   color: #fff !important;
@@ -170,19 +169,18 @@
 }
 
 #subiz .template.template9 .container.mobile {
-  height: 90% !important;
   flex-direction: column !important;
-  width: 335px !important;
+  width: 365px !important;
 }
 
 #subiz .template.template9 .mobile .left-content {
   height: 200px !important;
-  width: 335px !important;
+  width: 365px !important;
   position: relative !important;
 }
 
 #subiz .template.template9 .mobile .right-content {
-  width: 335px !important;
+  width: 365px !important;
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
@@ -238,5 +236,4 @@
 
 #subiz .template.template9 .mobile .right-content .buttons-container .primary-button {
   width: 310px !important;
-  height: 40px !important;
 }
