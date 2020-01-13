@@ -1,17 +1,22 @@
 {
 	"name": {
-		"vi":"Form đăng ký nhận ưu đãi/Sign up offer"
+		"vi":"Form đăng ký nhận ưu đãi",
+		"en":"Sign up offer"
 	},
 	"title": {
-		"vi": "Đăng ký nhận ưu đãi khủng"
+		"vi":"Đăng ký nhận ưu đãi khủng",
+		"en":"Sign up to get special offer"
 	},
 	"description": {
-		"vi": "Giảm giá tới 95%. Miễn phí vận chuyển nội thành"
+		"vi":"Giảm giá tới 95%. Miễn phí vận chuyển nội thành",
+		"en":"Get 95% of your first purchase. Free shipping"
 	},
 	"primary_button_text": {
-		"vi": "Đăng ký ngay"
+		"vi":"Đăng ký ngay",
+		"en":"Sign up now"
 	},
 	"secondary_button_text": {
-		"vi": "Không, cảm ơn."
+		"vi":"Bỏ qua",
+		"en":"Cancel"
 	}
 }

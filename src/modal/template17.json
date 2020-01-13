@@ -1,17 +1,22 @@
 {
 	"name": {
-		"vi":"Form đăng ký nhận ưu đãi/Sign up offer"
+		"vi":"Form đăng ký nhận ưu đãi",
+		"en":"Sign up offer"
 	},
 	"title": {
-		"vi": "ĐĂNG KÝ ĐỂ NHẬN ƯU ĐÃI ĐẶC BIỆT"
+		"vi":"ĐĂNG KÝ ĐỂ NHẬN ƯU ĐÃI ĐẶC BIỆT",
+		"en":"SIGN UP TO GET SPECIAL OFFER"
 	},
 	"description": {
-		"vi": "Giảm 20% chỉ một ngày duy nhất. Đăng ký ngay để nhận được mã giảm giá."
+		"vi":"Giảm 20% chỉ một ngày duy nhất. Đăng ký ngay để nhận được mã giảm giá!",
+		"en":"Get 20% off your first order. Sign up now!"
 	},
 	"primary_button_text": {
-		"vi": "Đăng ký ngay"
+		"vi":"Đăng ký ngay",
+		"en":"Sign up now"
 	},
 	"secondary_button_text": {
-		"vi": "Không, cảm ơn."
+		"vi":"Bỏ qua",
+		"en":"Cancel"
 	}
 }

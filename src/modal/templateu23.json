@@ -1,17 +1,24 @@
 {
 	"name": {
-		"vi":"Pop-up sự kiện/Event pop-up"
+		"vi":"Pop-up sự kiện",
+		"en":"Event pop-up"
 	},
 	"title": {
-		"vi": "CHẶNG ĐƯỜNG MỚI THÀNH CÔNG MỚI"
+		"vi":"CHẶNG ĐƯỜNG MỚI 
+		THÀNH CÔNG MỚI",
+		"en":"NEW JOURNEY 
+		NEW SUCCESS"
 	},
 	"description": {
-		"vi": "Đón thêm khách hàng mới cùng Subiz New Widget"
+		"vi":"Giảm 20% chỉ một ngày duy nhất. Đăng ký ngay để nhận được mã giảm giá!",
+		"en":"Get 20% off your first order. Sign up now!"
 	},
 	"primary_button_text": {
-		"vi": "Xem ngay"
+		"vi":"Đăng ký ngay",
+		"en":"Sign up now"
 	},
 	"secondary_button_text": {
-		"vi": "Đóng"
+		"vi":"Bỏ qua",
+		"en":"Cancel"
 	}
 }
