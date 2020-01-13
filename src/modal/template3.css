@@ -28,7 +28,7 @@
 #subiz .template.template3 .right-content {
   display: flex !important;
   flex-direction: column !important;
-  flex: 1 !important;
+  width: 400px !important;
   align-items: center !important;
   background-color: #fff !important;
   padding-top: 42px !important;
@@ -80,7 +80,7 @@
 }
 
 #subiz .template.template3 .form {
-  width: 95% !important;
+  width: 375px !important;
   padding-right: 10px !important;
   margin-left: 20px !important;
 }
@@ -99,7 +99,8 @@
 #subiz .template.template3 .text-input {
   width: 90% !important;
   height: 30px !important;
-  border: none !important;
+  border: unset !important;
+  box-shadow: unset !important;
   border-bottom: 1px solid #a5a4a427 !important;
   font-size: 15px !important;
   outline: 0 !important;
