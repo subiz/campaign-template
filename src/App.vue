@@ -1,10 +1,10 @@
 <template class="tem">
   <div id="subiz" class="app"  >
-    <Template mode="mobiles" :page="page1_2"/>
+    <Template mode="mobiles" :page="page"/>
   </div>
 </template>
 <script>
-import Template from './modal/template1_2.vue'
+import Template from './modal/template3.vue'
 export default {
   name: 'app',
   components: {
