@@ -1,5 +1,5 @@
 <template>
-	<div class="form" v-if="showForm">
+	<div class="form-template" v-if="showForm">
 		<div  v-for="field in form.fields" class="form-item">
 			<label class="label">{{field.label + ':'}}</label>
 			<div v-if="field.type==='list' && !field.multiple_choice" class="form--list-container">

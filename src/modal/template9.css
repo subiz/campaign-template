@@ -60,7 +60,7 @@
   padding-right: 15px !important;
 }
 
-#subiz .template.template9 .form {
+#subiz .template.template9 .form-template {
   display: flex !important;
   flex-direction: column !important;
   width: 100% !important;
@@ -120,18 +120,18 @@
   margin-top: 20px !important;
   width: 100% !important;
   margin-bottom: 40px !important;
-  width: 100% !important;
+  flex-direction: column !important;
 }
 
 #subiz .template.template9 .primary-button {
-  width: 76% !important;
+  width: 305px !important;
   background-color: #FDAD15 !important;
   border-radius: 5px !important;
   border: solid 1px #fdad15 !important;
   padding-top: 15px !important;
   padding-bottom: 15px !important;
-  padding-left: 30px !important;
-  padding-right: 30px !important;
+  padding-left: 25px !important;
+  padding-right: 25px !important;
   color: #fff !important;
   font-size: 14px !important;
   font-family: "Roboto" !important;
@@ -142,15 +142,15 @@
 }
 
 #subiz .template.template9 .secondary-button {
+  width: 305px !important;
   margin-top: 5px !important;
-  margin-left: 5px !important;
   background-color: #d9d9d9 !important;
   border-radius: 5px !important;
   border: solid 1px #d9d9d9 !important;
   padding-top: 15px !important;
   padding-bottom: 15px !important;
-  padding-left: 30px !important;
-  padding-right: 30px !important;
+  padding-left: 25px !important;
+  padding-right: 25px !important;
   color: #fff !important;
   font-size: 14px !important;
   font-family: "Roboto" !important;
@@ -209,15 +209,19 @@
   margin-bottom: 8px !important;
 }
 
-#subiz .template.template9 .mobile .right-content .form .form-item {
+#subiz .template.template9 .mobile .form-item {
   margin-top: 10px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
 }
 
-#subiz .template.template9 .mobile .right-content .form .form-item .text-input {
+#subiz .template.template9 .mobile .form-item .text-input {
   height: 35px !important;
 }
 
-#subiz .template.template9 .mobile .right-content .form .form-item .textarea {
+#subiz .template.template9 .mobile .form-item .textarea {
   height: 60px !important;
 }
 
@@ -236,4 +240,16 @@
 
 #subiz .template.template9 .mobile .right-content .buttons-container .primary-button {
   width: 310px !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+
+#subiz .template.template9 .mobile .right-content .buttons-container .secondary-button {
+  width: 310px !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
 }

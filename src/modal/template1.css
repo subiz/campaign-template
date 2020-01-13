@@ -117,7 +117,7 @@
   border-radius: 28px !important;
 }
 
-#subiz .template.template1 .form {
+#subiz .template.template1 .form-template {
   display: flex !important;
   flex-direction: column !important;
   padding-left: 10px !important;

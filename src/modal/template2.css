@@ -118,7 +118,7 @@
   background-color: #de9813 !important;
 }
 
-#subiz .template.template2 .form {
+#subiz .template.template2 .form-template {
   display: flex !important;
   flex-direction: column !important;
   width: 100% !important;

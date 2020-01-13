@@ -79,10 +79,11 @@
   margin-left: 20px !important;
 }
 
-#subiz .template.template3 .form {
+#subiz .template.template3 .form-template {
   width: 375px !important;
   padding-right: 10px !important;
   margin-left: 20px !important;
+  box-shadow: unset !important;
 }
 
 #subiz .template.template3 .form-item {

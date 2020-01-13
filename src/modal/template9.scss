@@ -62,14 +62,19 @@
 	padding-right: 15px ;
 }
 
- .form {
+ .form-template {
 	display: flex ;
 	flex-direction: column ;
 	width: 100% ;
 }
 .form-item{
 	margin-top:15px;
+	// display: flex;
+	// flex-direction: column;
+	// justify-content: center;
+	// align-items: center;
 }
+
  .label{
 	margin-top:unset;
 	font-family: 'Muli';
@@ -117,19 +122,18 @@
 	margin-top: 20px ;
 	width: 100%;
 	margin-bottom: 40px ;
-	width: 100%;
-	
+	flex-direction: column;
 }
 
 .primary-button { 
-	width: 76%;
+	width: 305px;
 	background-color: #FDAD15 ;
 	border-radius: 5px ;
 	border: solid 1px #fdad15 ;
 	padding-top: 15px ;
 	padding-bottom: 15px ;
-	padding-left: 30px ;
-	padding-right: 30px ;
+	padding-left: 25px ;
+	padding-right: 25px ;
 	color: #fff ;
 	font-size: 14px ;
 	font-family: 'Roboto';
@@ -140,15 +144,15 @@
 }
 
 .secondary-button {
+	width: 305px;
 	margin-top: 5px ;
-	margin-left: 5px ;
 	background-color: #d9d9d9 ;
 	border-radius: 5px ;
 	border: solid 1px #d9d9d9 ;
 	padding-top: 15px ;
 	padding-bottom: 15px ;
-	padding-left: 30px ;
-	padding-right: 30px ;
+	padding-left: 25px ;
+	padding-right: 25px ;
 	color: #fff ;
 	font-size: 14px ;
 	font-family: 'Roboto';
@@ -204,14 +208,18 @@
 	margin-bottom:8px;
 
 }
-.mobile .right-content .form .form-item { 
+.mobile .form-item { 
 	margin-top: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
-.mobile .right-content .form .form-item .text-input{ 
+.mobile .form-item .text-input{ 
 	height: 35px;
 }
-.mobile .right-content .form .form-item .textarea{ 
+.mobile .form-item .textarea{ 
 	height: 60px;
 }
 .mobile .right-content .label {
@@ -221,6 +229,7 @@
 	display: flex ;
 	align-items: center;
 	justify-content: center;
+	
 	width: 335px;
 	margin-bottom: 20px;
 	margin-top: 20px;
@@ -228,4 +237,16 @@
 }
 .mobile .right-content .buttons-container .primary-button{
 	width: 310px;
+	padding-top: 10px ;
+	padding-bottom: 10px ;
+	padding-left: 15px ;
+	padding-right: 15px ;
+}
+
+.mobile .right-content .buttons-container .secondary-button{
+	width: 310px;
+	padding-top: 10px ;
+	padding-bottom: 10px ;
+	padding-left: 15px ;
+	padding-right: 15px ;
 }
