@@ -45,8 +45,8 @@
 	width:100%  ;
 	display: flex  ;
 	flex-direction: column  ;
-	padding-left: 35px  ;
-	padding-right: 35px  ;
+	padding-left: 30px  ;
+	padding-right: 30px  ;
 }
 .form-item{
 	margin-top:15px;
@@ -74,7 +74,8 @@
 
 .title{
 	margin-top: 17px  ;
-	padding-left:35px  ;
+	padding-left:30px  ;
+	padding-right:30px;
 	color:#000  ;
 	font-family:'Yeseva One' ;
 	font-weight: bold  ;
@@ -82,7 +83,8 @@
 }
 .description{
 	margin-top: 10px  ;
-	margin-left:35px  ;
+	padding-left:30px  ;
+	padding-right:30px;
 	color:#000  ;
 	font-family:'Muli';
 	font-weight: normal  ;
@@ -142,16 +144,15 @@
 	font-style: normal;
 	font-weight: normal;
 	font-size: 21px;
+	padding-right:20px;
 }
-
 .mobile .description { 
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	font-style: normal;
 	font-weight: normal;
 	font-size: 16px;
-	margin-right: 20px;;
+	padding-right: 20px;;
 }
-
 .mobile .form-item{
 	margin-top:10px;
 }

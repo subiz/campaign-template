@@ -52,8 +52,9 @@
 	font-style: normal;
 	text-align: center;
 	font-family: "Montserrat";
-	margin-left: 50px;
-	margin-right: 50px;
+	padding-left: 50px;
+	padding-right: 50px;
+	width:100%;
 }
 
 .description {
@@ -62,8 +63,9 @@
 	text-align: center;
 	font-size: 18px;
 	font-family: 'Muli';
-	margin-left: 27px;
-	margin-right: 27px;
+	padding-left: 27px;
+	padding-right: 27px;
+	width:100%;
 }
 
 .buttons-container{
@@ -72,6 +74,7 @@
 	margin-bottom:  35px;
 	align-items: center;
 	justify-content: center;
+	width: 100%;
 }
 
 .primary-button {
@@ -157,14 +160,14 @@
 }
 
 .mobile .title{
-	margin-left:20px;
-	margin-right:20px;
+	padding-left:20px;
+	padding-right:20px;
 	font-size: 26px;
 }
 .mobile .description{
 	font-size: 15px;
-	margin-left:20px;
-	margin-right:20px;
+	padding-left:20px;
+	padding-right:20px;
 }
 .mobile .buttons-container {
 	padding-left: 10px;

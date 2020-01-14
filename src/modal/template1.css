@@ -12,6 +12,7 @@
   background-image: url("../assets/bg1.png") !important;
   background-repeat: no-repeat !important;
   background-size: auto !important;
+  background-position: center !important;
   width: 310px !important;
   position: absolute !important;
   top: -50px !important;
@@ -184,6 +185,11 @@
   margin-right: 20px !important;
   margin-top: 50px !important;
   margin-bottom: 60px !important;
+}
+
+#subiz .template.template1 .mobile .button-close {
+  height: 15px !important;
+  width: 15px !important;
 }
 
 #subiz .template.template1 .mobile .title {

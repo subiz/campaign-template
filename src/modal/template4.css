@@ -46,8 +46,8 @@
   width: 100% !important;
   display: flex !important;
   flex-direction: column !important;
-  padding-left: 35px !important;
-  padding-right: 35px !important;
+  padding-left: 30px !important;
+  padding-right: 30px !important;
 }
 
 #subiz .template.template4 .form-item {
@@ -79,7 +79,8 @@
 
 #subiz .template.template4 .title {
   margin-top: 17px !important;
-  padding-left: 35px !important;
+  padding-left: 30px !important;
+  padding-right: 30px !important;
   color: #000 !important;
   font-family: "Yeseva One" !important;
   font-weight: bold !important;
@@ -88,7 +89,8 @@
 
 #subiz .template.template4 .description {
   margin-top: 10px !important;
-  margin-left: 35px !important;
+  padding-left: 30px !important;
+  padding-right: 30px !important;
   color: #000 !important;
   font-family: "Muli" !important;
   font-weight: normal !important;
@@ -154,6 +156,7 @@
   font-style: normal !important;
   font-weight: normal !important;
   font-size: 21px !important;
+  padding-right: 20px !important;
 }
 
 #subiz .template.template4 .mobile .description {
@@ -161,7 +164,7 @@
   font-style: normal !important;
   font-weight: normal !important;
   font-size: 16px !important;
-  margin-right: 20px !important;
+  padding-right: 20px !important;
 }
 
 #subiz .template.template4 .mobile .form-item {

@@ -8,7 +8,7 @@
 								 @change="ev => onRadioChange(ev, field, item)"
 					/>
 					<label class="radio--label" :for="field.key + item" >
-						{{item + ':'}}
+						{{item}}
 					</label>
 					<div class="radio--check"><div class="inside"></div></div>
 				</div>

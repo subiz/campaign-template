@@ -197,13 +197,13 @@
 }
 .mobile .right-content .title { 
 	margin-top: 20px;
-	margin-left : 15px;
+	padding-left : 15px;
 	line-height: 30px;
 	font-size: 26px;
 }
 .mobile .right-content .description { 
 	margin-top: 10px;
-	margin-left : 15px;
+	padding-left : 15px;
 	font-size: 18px;
 	margin-bottom:8px;
 
@@ -230,7 +230,7 @@
 	align-items: center;
 	justify-content: center;
 	
-	width: 335px;
+	width: 100%;
 	margin-bottom: 20px;
 	margin-top: 20px;
 

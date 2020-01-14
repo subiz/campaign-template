@@ -51,8 +51,9 @@
   font-style: normal !important;
   text-align: center !important;
   font-family: "Montserrat" !important;
-  margin-left: 50px !important;
-  margin-right: 50px !important;
+  padding-left: 50px !important;
+  padding-right: 50px !important;
+  width: 100% !important;
 }
 
 #subiz .template.template2 .description {
@@ -61,8 +62,9 @@
   text-align: center !important;
   font-size: 18px !important;
   font-family: "Muli" !important;
-  margin-left: 27px !important;
-  margin-right: 27px !important;
+  padding-left: 27px !important;
+  padding-right: 27px !important;
+  width: 100% !important;
 }
 
 #subiz .template.template2 .buttons-container {
@@ -71,6 +73,7 @@
   margin-bottom: 35px !important;
   align-items: center !important;
   justify-content: center !important;
+  width: 100% !important;
 }
 
 #subiz .template.template2 .primary-button {
@@ -162,15 +165,15 @@
 }
 
 #subiz .template.template2 .mobile .title {
-  margin-left: 20px !important;
-  margin-right: 20px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
   font-size: 26px !important;
 }
 
 #subiz .template.template2 .mobile .description {
   font-size: 15px !important;
-  margin-left: 20px !important;
-  margin-right: 20px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
 }
 
 #subiz .template.template2 .mobile .buttons-container {
