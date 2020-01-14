@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Muli|Roboto|Roboto+Condensed|Yeseva+One&display=swap');
+* {
+	margin: 0 ;
+	padding: 0 ;
+	box-sizing: border-box ;
+}
 .container{
 	display: flex;
 	flex-direction: column;
@@ -99,9 +104,8 @@
 	margin-bottom: 10px ;
 }
 .primary-button{
-	margin-top: 10px ;
-	padding-top: 15px ;
-	padding-bottom: 15px ;
+	padding-top: 10px ;
+	padding-bottom: 10px ;
 	padding-left: 25px ;
 	padding-right:25px ;
 	margin-top:5px ;
@@ -109,7 +113,7 @@
 	margin-left:5px ;
 	font-family: 'Roboto';
 	font-weight: bold ;
-	font-size: 15px ;
+	font-size: 16px ;
 	background-color: #DAB86A;
 	color: #fff;
 	border: none ;
@@ -146,7 +150,7 @@
  }
 
 .container.mobile{
-	width:335px;
+	width:355px;
 	background-image: url('../assets/bg6_mobile.png') ;
 	background-size: auto;
 	background-position: center;
@@ -155,13 +159,15 @@
 	height: 660px;
 }
 .mobile .title{
-margin-top: 10px ;
+margin-top: 45px ;
 font-family:'Montserrat' ;
 font-weight: bold ;
 font-size: 22px ;
 line-height: unset ;
 text-align: center ;
-width: 75% ;
+width: 100%;
+padding-left: 35px;
+padding-right: 35px;
 }
 .mobile .description{
 font-family:'Muli';
@@ -170,11 +176,15 @@ font-weight: normal ;
 font-size: 13px ;
 line-height: 16px ;
 text-align: center ;
-width: 75% ;
+width: 100%;
+padding-left: 40px;
+padding-right: 40px;
 }
-.mobile .form {
+.mobile .form-template {
 	margin-top: 10px;
-	width: 60% ;
+	width: 100% ;
+	padding-left: 50px ;
+  padding-right: 50px;
 }
 
 .mobile  .form-item {
@@ -187,25 +197,37 @@ width: 75% ;
 	border-radius: unset;
 }
 .mobile .buttons-container{
-	width: 60% ;
+	width: 100% ;
 	margin-top: 10px ;
 	margin-bottom: unset;
 }
 .mobile .buttons-container .primary-button{
+	margin-right:5px ;
+	margin-left:5px ;
 	margin-top: unset;
 	height: 30px ;
 	padding-top: unset ;
 	padding-bottom: unset ;
-	padding-left: 10px ;
-	padding-right:10px ;
-	margin-top:unset ;
-	margin-right:unset ;
-	margin-left:unset ;
+	padding-left: 5px ;
+	padding-right:5px ;
 	background-color: #DAB86Ad4;
 	color: #fff;
-	border-radius: unset;
-	}
+	border-radius: 3px;
+}
+.mobile .buttons-container .secondary-button{
+	margin-right:5px ;
+	margin-left:5px ;
+	margin-top: unset;
+	height: 30px ;
+	padding-top: unset ;
+	padding-bottom: unset ;
+	padding-left: 5px ;
+	padding-right:5px ;
+	background-color: ghostwhite;
+	color: #000;
+	border-radius: 3px;
+}
 
-	.mobile  .primary-button:hover{
-		background-color: #DAB86A;
-	}
+.mobile  .primary-button:hover{
+	background-color: #DAB86A;
+}

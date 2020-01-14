@@ -52,8 +52,8 @@
 }
 
 #subiz .template.template5 .title {
-  margin-left: 10% !important;
-  margin-right: 10% !important;
+  padding-left: 13% !important;
+  padding-right: 13% !important;
   line-height: 55px !important;
   margin-top: 5px !important;
   text-align: center !important;
@@ -65,8 +65,8 @@
 }
 
 #subiz .template.template5 .description {
-  margin-left: 20% !important;
-  margin-right: 20% !important;
+  padding-left: 20% !important;
+  padding-right: 20% !important;
   margin-top: 15px !important;
   font-family: "Muli" !important;
   font-size: 22px !important;
@@ -76,7 +76,7 @@
 
 #subiz .template.template5 .form-template {
   margin-top: 20px !important;
-  width: 80% !important;
+  width: 100% !important;
   display: flex !important;
   flex-direction: column !important;
   align-items: center !important;
@@ -135,7 +135,6 @@
   height: 40px !important;
   border-radius: 25px !important;
   border: none !important;
-  font-family: Arial, Helvetica, sans-serif !important;
   font-size: 18px !important;
   font-weight: bold !important;
   color: #fff !important;
@@ -154,7 +153,6 @@
   border: none !important;
   font-size: 18px !important;
   font-weight: bold !important;
-  border: solid 2px #ffffff !important;
   border-width: 2px !important;
   color: #000 !important;
   outline: 0 !important;
@@ -164,11 +162,11 @@
 }
 
 #subiz .template.template5 .secondary-button:hover {
-  color: #bbbbbb !important;
+  background-color: #bbbbbb !important;
 }
 
 #subiz .template.template5 .primary-button:hover {
-  background-color: #e69f17 !important;
+  background-color: #eca213 !important;
 }
 
 #subiz .template.template5 .container.mobile {
@@ -193,26 +191,26 @@
 }
 
 #subiz .template.template5 .mobile .left .title {
-  margin-top: 28% !important;
+  margin-top: 25% !important;
   font-size: 30px !important;
   line-height: 40px !important;
-  margin-left: 20px !important;
-  margin-right: 20px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
 }
 
 #subiz .template.template5 .mobile .left .description {
   margin-top: 5px !important;
   font-size: 18px !important;
-  margin-left: 25px !important;
-  margin-right: 25px !important;
+  padding-left: 25px !important;
+  padding-right: 25px !important;
 }
 
-#subiz .template.template5 .mobile .left .form {
+#subiz .template.template5 .mobile .left .form-template {
   margin-top: 25px !important;
   width: 80% !important;
 }
 
-#subiz .template.template5 .mobile .left .form .text-input {
+#subiz .template.template5 .mobile .text-input {
   margin-top: unset !important;
   width: 100% !important;
 }
@@ -224,8 +222,11 @@
 
 #subiz .template.template5 .mobile .left .buttons-container .primary-button {
   width: 100% !important;
+  background-color: #FDAD15df !important;
 }
 
 #subiz .template.template5 .mobile .left .buttons-container .secondary-button {
   width: 100% !important;
+  background-color: #f8f8ffe0 !important;
+  border: unset !important;
 }

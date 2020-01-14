@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat|Muli|Roboto|Roboto+Condensed|Yeseva+One&display=swap");
+#subiz .template.template6 * {
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+}
+
 #subiz .template.template6 .container {
   display: flex !important;
   flex-direction: column !important;
@@ -109,9 +115,8 @@
 }
 
 #subiz .template.template6 .primary-button {
-  margin-top: 10px !important;
-  padding-top: 15px !important;
-  padding-bottom: 15px !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
   padding-left: 25px !important;
   padding-right: 25px !important;
   margin-top: 5px !important;
@@ -119,7 +124,7 @@
   margin-left: 5px !important;
   font-family: "Roboto" !important;
   font-weight: bold !important;
-  font-size: 15px !important;
+  font-size: 16px !important;
   background-color: #DAB86A !important;
   color: #fff !important;
   border: none !important;
@@ -159,7 +164,7 @@
 }
 
 #subiz .template.template6 .container.mobile {
-  width: 335px !important;
+  width: 355px !important;
   background-image: url("../assets/bg6_mobile.png") !important;
   background-size: auto !important;
   background-position: center !important;
@@ -169,13 +174,15 @@
 }
 
 #subiz .template.template6 .mobile .title {
-  margin-top: 10px !important;
+  margin-top: 45px !important;
   font-family: "Montserrat" !important;
   font-weight: bold !important;
   font-size: 22px !important;
   line-height: unset !important;
   text-align: center !important;
-  width: 75% !important;
+  width: 100% !important;
+  padding-left: 35px !important;
+  padding-right: 35px !important;
 }
 
 #subiz .template.template6 .mobile .description {
@@ -185,12 +192,16 @@
   font-size: 13px !important;
   line-height: 16px !important;
   text-align: center !important;
-  width: 75% !important;
+  width: 100% !important;
+  padding-left: 40px !important;
+  padding-right: 40px !important;
 }
 
-#subiz .template.template6 .mobile .form {
+#subiz .template.template6 .mobile .form-template {
   margin-top: 10px !important;
-  width: 60% !important;
+  width: 100% !important;
+  padding-left: 50px !important;
+  padding-right: 50px !important;
 }
 
 #subiz .template.template6 .mobile .form-item {
@@ -205,24 +216,37 @@
 }
 
 #subiz .template.template6 .mobile .buttons-container {
-  width: 60% !important;
+  width: 100% !important;
   margin-top: 10px !important;
   margin-bottom: unset !important;
 }
 
 #subiz .template.template6 .mobile .buttons-container .primary-button {
+  margin-right: 5px !important;
+  margin-left: 5px !important;
   margin-top: unset !important;
   height: 30px !important;
   padding-top: unset !important;
   padding-bottom: unset !important;
-  padding-left: 10px !important;
-  padding-right: 10px !important;
-  margin-top: unset !important;
-  margin-right: unset !important;
-  margin-left: unset !important;
+  padding-left: 5px !important;
+  padding-right: 5px !important;
   background-color: #DAB86Ad4 !important;
   color: #fff !important;
-  border-radius: unset !important;
+  border-radius: 3px !important;
+}
+
+#subiz .template.template6 .mobile .buttons-container .secondary-button {
+  margin-right: 5px !important;
+  margin-left: 5px !important;
+  margin-top: unset !important;
+  height: 30px !important;
+  padding-top: unset !important;
+  padding-bottom: unset !important;
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+  background-color: ghostwhite !important;
+  color: #000 !important;
+  border-radius: 3px !important;
 }
 
 #subiz .template.template6 .mobile .primary-button:hover {
