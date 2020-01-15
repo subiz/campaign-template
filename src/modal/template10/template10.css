@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Muli|Roboto|Yeseva+One&display=swap");
+#subiz .template.template10 * {
+  box-sizing: border-box !important;
+}
+
+#subiz .template.template10 .container {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  width: 480px !important;
+  background-color: #fff !important;
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+}
+
+#subiz .template.template10 .button-close {
+  position: absolute !important;
+  right: 10px !important;
+  background-color: black !important;
+  height: 20px !important;
+  width: 20px !important;
+  border-radius: 10px !important;
+  background-image: url("../../assets/close.png") !important;
+  background-size: 100% 100% !important;
+  cursor: pointer !important;
+}
+
+#subiz .template.template10 .header {
+  display: flex !important;
+  flex-direction: column !important;
+  padding-top: 10px !important;
+  position: relative !important;
+  padding-left: 34px !important;
+  width: 100% !important;
+  background-image: url("../../assets/bg10.png") !important;
+  background-size: 100% !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
+  position: relative !important;
+}
+
+#subiz .template.template10 .overlay {
+  background-color: #d6a7004f !important;
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  bottom: 0 !important;
+  right: 0 !important;
+}
+
+#subiz .template.template10 .description {
+  margin-top: 30px !important;
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+  font-weight: bold !important;
+  font-size: 16px !important;
+  font-family: "Muli" !important;
+  color: #000000 !important;
+  padding-right: 15px !important;
+}
+
+#subiz .template.template10 .black-div {
+  width: 134px !important;
+  height: 3px !important;
+  background-color: #000 !important;
+  margin-top: 8px !important;
+  margin-bottom: 12px !important;
+}
+
+#subiz .template.template10 .title {
+  padding-top: 5px !important;
+  padding-bottom: 10px !important;
+  margin-bottom: 34px !important;
+  font-weight: bold !important;
+  font-size: 28px !important;
+  font-family: "Montserrat" !important;
+  color: #000000 !important;
+  padding-right: 15px !important;
+}
+
+#subiz .template.template10 .form-template {
+  width: 100% !important;
+  display: flex !important;
+  padding-left: 10% !important;
+}
+
+#subiz .template.template10 .label {
+  display: none !important;
+}
+
+#subiz .template.template10 .buttons-container {
+  width: 100% !important;
+  padding-left: 10% !important;
+  margin-top: 50px !important;
+  display: flex !important;
+  margin-bottom: 20px !important;
+}
+
+#subiz .template.template10 .primary-button {
+  background-color: #000000 !important;
+  height: 45px !important;
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  margin-right: 5px !important;
+  font-family: "Roboto" !important;
+  border: none !important;
+  font-size: 18px !important;
+  font-weight: normal !important;
+  color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
+  outline: 0 !important;
+  text-align: center !important;
+  cursor: pointer !important;
+}
+
+#subiz .template.template10 .secondary-button {
+  background-color: #d9d9d9 !important;
+  height: 45px !important;
+  padding-top: 12px !important;
+  padding-bottom: 12px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+  margin-left: 5px !important;
+  font-family: "Roboto" !important;
+  border: none !important;
+  font-size: 18px !important;
+  font-weight: normal !important;
+  color: #000 !important;
+  -webkit-text-fill-color: #000 !important;
+  outline: 0 !important;
+  text-align: center !important;
+  cursor: pointer !important;
+}
+
+#subiz .template.template10 .primary-button:hover {
+  background-color: #e69f17 !important;
+}
+
+#subiz .template.template10 .secondary-button:hover {
+  background-color: #bbbbbb !important;
+}
+
+#subiz .template.template10 .container.mobile {
+  height: 550px !important;
+  width: 335px !important;
+}
+
+#subiz .template.template10 .mobile .header {
+  background-size: 100% 100% !important;
+}
+
+#subiz .template.template10 .mobile .buttons-container {
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  padding-left: unset !important;
+}
+
+#subiz .template.template10 .mobile .buttons-container .primary-button {
+  width: 80% !important;
+  margin-right: unset !important;
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+}
+
+#subiz .template.template10 .mobile .buttons-container .secondary-button {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+  padding-left: 15px !important;
+  padding-right: 15px !important;
+  margin-top: 10px !important;
+  width: 80% !important;
+  margin-left: unset !important;
+}

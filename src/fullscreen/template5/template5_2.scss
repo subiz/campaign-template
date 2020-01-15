@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Muli|Roboto|Roboto+Condensed|Yeseva+One&display=swap');
+@mixin color($color){
+  color: $color;
+  -webkit-text-fill-color :$color
+}
+.container{
+	width: 471px  ;
+	max-width: 100% ;
+	display:flex ;
+	flex-direction: column ;
+	padding-top: 10px ;
+	background: #fff ;
+	position: relative ;
+	// margin: 0 auto ;
+
+	position: fixed ;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%)  ;
+}
+.button-close{
+	width: 20px ;
+	height: 20px ;
+	position: absolute ;
+	right:10px ;
+	border-radius: 10px ;
+	background-color:#d9d9d9 ;
+	border:none ;
+	cursor: pointer ;
+	background-image: url("../../assets/close.png") ;
+	background-size:100% 100% ;
+}
+.title{
+	margin-top:46px ;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+	font-style: normal ;
+	font-weight: bold ;
+	font-size: 36px ;
+	line-height: 44px ;
+	text-align: center ;
+
+	color: #000000 ;
+}
+.description{
+	margin-top:6px ;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+	font-style: normal ;
+	font-weight: normal ;
+	font-size: 16px ;
+	line-height: 30px ;
+	text-align: center ;
+
+	color: #000000 ;
+}
+.buttons-container{
+	margin-top: 36px ;
+	display: flex ;
+	flex-direction: row ;
+	align-items: center ;
+	justify-content: center ;
+	margin-bottom: 30px ;
+}
+.primary-button{
+	margin-left: 5px ;
+	margin-right: 5px ;
+	background-color: #0265FF ;
+	padding-left: 30px ;
+	padding-right:30px ;
+	height: 45px ;
+	border-radius: 5px ;
+	border:0px ;
+	@include color(#fff);
+	font-size: 16px ;
+	font-weight: 600 ;
+	text-transform: uppercase ;
+	text-align: center ;
+	outline: 0 ;
+	cursor: pointer ;
+}
+.secondary-button{
+	margin-left: 5px ;
+	margin-right: 5px ;
+	background-color: #d9d9d9 ;
+	padding-left: 30px ;
+	padding-right:30px ;
+	height: 45px ;
+	border-radius: 5px ;
+	border:0px ;
+	@include color(#fff);
+	font-size: 16px ;
+	font-weight: 600 ;
+	text-transform: uppercase ;
+	text-align: center ;
+	outline: 0 ;
+	cursor: pointer ;
+}
+.secondary-button:hover {
+	color: #bbbbbb ;
+}
+.primary-button:hover{
+	background-color: #03176f ;
+}
+.container.mobile {
+	width: 335px;
+}

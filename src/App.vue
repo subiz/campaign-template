@@ -1,10 +1,10 @@
 <template class="tem">
   <div id="subiz" class="app"  >
-    <Template mode="mobiles" :page="page"/>
+    <Template mode="mobile" :page="page"/>
   </div>
 </template>
 <script>
-import Template from './modal/template3.vue'
+import Template from './fullscreen/template5/template5.vue'
 export default {
   name: 'app',
   components: {
@@ -12,6 +12,27 @@ export default {
   },
   data(){
     return {
+      countdown: {
+        title: 'Đăng ký để nhận ưu đãi đặc biệt',
+        description:'Giảm 20% chỉ một ngày duy nhất. Miễn phí vận chuyển',
+        countdown:{
+          enabled: true,
+          // end_time: 0 , 
+          // date: 01,
+          // hour: 10,
+          // minute: 50,
+          // second:00,
+          daily_end_time:0,
+        },
+        primary_button:{
+          enabled : true,
+          text: "Xem ngay"
+        },
+				secondary_button:{
+          enabled : false,
+          text: "Cancel"
+        },
+      },
       pageu23:{
         subtitle:"",
         "title": "CHẶNG ĐƯỜNG MỚI THÀNH CÔNG MỚI",
@@ -39,7 +60,6 @@ export default {
         },
       },
       page:{
-        subtitle:"",
         "title": "Đăng ký để nhận ưu đãi đặc biệt",
 	      "description": "Giảm 20% chỉ một ngày duy nhất. Đăng ký ngay để nhận được mã giảm giá.",
 				form: {

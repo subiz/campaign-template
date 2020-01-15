@@ -1,6 +1,6 @@
-var common = require('../common.js')
+var common = require('../../common.js')
 var op = require('object-path')
-import Form from '../components/Form.vue'
+import Form from '../../components/Form.vue'
 
 export default {
 	props: ['page', 'mode'],
