@@ -5,7 +5,7 @@
 	<div class="template template1">
 		<div v-if="!close" :class="'container ' + mode">
 			<button class="button-close" @click="onClose"></button>
-			<div class="main">
+			<div class="main-template">
 				<div class="image"></div>
 				<div class="div-left"></div>
 				<div class="div-right">

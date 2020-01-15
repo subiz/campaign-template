@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Public+Sans&display=swap');
+@mixin color($color){
+  color: $color;
+  -webkit-text-fill-color :$color
+}
 * {
 	margin: 0  ;
 	padding: 0  ;
@@ -115,7 +119,7 @@
 	height: 50px  ;
 	border-radius:25px  ;
 	border:0px  ;
-	color: #b41a12  ;
+	@include color(#b41a12);
 	font-size: 16px  ;
 	font-weight: 600  ;
 	margin-top: 15px;
@@ -135,7 +139,7 @@
 	height: 45px  ;
 	border-radius: 5px  ;
 	border:0px  ;
-	color: #fff  ;
+	@include color(#fff);
 	font-size: 16px  ;
 	font-weight: 600  ;
 	text-transform: uppercase  ;

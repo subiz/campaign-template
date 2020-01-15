@@ -1,4 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Muli|Roboto|Yeseva+One&display=swap');
+@mixin color($color){
+  color: $color;
+  -webkit-text-fill-color :$color
+}
 * {
 	box-sizing: border-box;
 }
@@ -109,7 +113,7 @@
 	border: none;
 	font-size: 18px;
 	font-weight: normal;
-	color: #fff;
+	@include color(#fff);
 	outline: 0;
 	text-align: center;
 	cursor: pointer;
@@ -127,7 +131,7 @@
 	border: none;
 	font-size: 18px;
 	font-weight: normal;
-	color: #000;
+	@include color(#000);
 	outline: 0;
 	text-align: center;
 	cursor: pointer;

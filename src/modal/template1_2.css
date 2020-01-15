@@ -35,8 +35,8 @@
   line-height: 44px !important;
   text-align: center !important;
   color: #000000 !important;
-  padding-left: 55px !important;
-  padding-right: 55px !important;
+  padding-left: 45px !important;
+  padding-right: 45px !important;
 }
 
 #subiz .template.template1_2 .description {
@@ -69,6 +69,7 @@
   border-radius: 5px !important;
   border: 0px !important;
   color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
   font-size: 12px !important;
   font-weight: 600 !important;
   text-transform: uppercase !important;
@@ -88,6 +89,7 @@
   border-radius: 5px !important;
   border: 0px !important;
   color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
   font-size: 16px !important;
   font-weight: 600 !important;
   text-transform: uppercase !important;

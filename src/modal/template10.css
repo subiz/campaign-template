@@ -111,6 +111,7 @@
   font-size: 18px !important;
   font-weight: normal !important;
   color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
   outline: 0 !important;
   text-align: center !important;
   cursor: pointer !important;
@@ -129,6 +130,7 @@
   font-size: 18px !important;
   font-weight: normal !important;
   color: #000 !important;
+  -webkit-text-fill-color: #000 !important;
   outline: 0 !important;
   text-align: center !important;
   cursor: pointer !important;

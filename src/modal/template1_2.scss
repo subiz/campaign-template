@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Muli|Roboto|Roboto+Condensed|Yeseva+One&display=swap');
+
+@mixin color($color){
+  color: $color;
+  -webkit-text-fill-color :$color
+}
 .container{
 	width: 470px ;
 	max-width: 100%;
@@ -35,8 +40,8 @@
 	line-height: 44px;
 	text-align: center;
 	color: #000000;
-	padding-left: 55px;
-	padding-right: 55px
+	padding-left: 45px !important;
+	padding-right: 45px !important;
 }
 .description{
 	margin-top:6px;
@@ -56,6 +61,7 @@
 	justify-content: center;
 	margin-bottom: 30px;
 }
+
 .primary-button{
 	margin-left: 5px;
 	margin-right: 5px;
@@ -65,7 +71,7 @@
 	height: 45px;
 	border-radius: 5px;
 	border:0px;
-	color: #fff;
+	@include color(#fff);
 	font-size: 12px;
 	font-weight: 600;
 	text-transform: uppercase;
@@ -83,7 +89,7 @@
 	height: 45px;
 	border-radius: 5px;
 	border:0px;
-	color: #fff;
+	@include color(#fff);
 	font-size: 16px;
 	font-weight: 600;
 	text-transform: uppercase;

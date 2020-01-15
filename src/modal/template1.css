@@ -20,7 +20,7 @@
   bottom: 63px !important;
 }
 
-#subiz .template.template1 .main {
+#subiz .template.template1 .main-template {
   margin: 15px !important;
   background-color: #fff !important;
   display: flex !important;
@@ -28,6 +28,7 @@
   flex: 1 !important;
   position: relative !important;
   padding-top: 10px !important;
+  overflow: unset !important;
 }
 
 #subiz .template.template1 .div-left {
@@ -94,6 +95,7 @@
   margin-top: 5px !important;
   margin-bottom: 5px !important;
   color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
   font-size: 16px !important;
   font-weight: 500 !important;
   text-align: center !important;
@@ -110,6 +112,7 @@
 #subiz .template.template1 .secondary-button {
   border: 0px !important;
   color: #000 !important;
+  -webkit-text-fill-color: #000 !important;
   font-size: 14px !important;
   font-weight: 500 !important;
   text-align: center !important;
@@ -159,13 +162,13 @@
   background-color: #343e46 !important;
 }
 
-#subiz .template.template1 .mobile .main {
+#subiz .template.template1 .mobile .main-template {
   background-image: url("../assets/bg1.png") !important;
   background-size: 100% 100% !important;
   margin: 0 !important;
 }
 
-#subiz .template.template1 .mobile .main .image {
+#subiz .template.template1 .mobile .main-template .image {
   display: none !important;
 }
 

@@ -138,6 +138,7 @@
   font-size: 18px !important;
   font-weight: bold !important;
   color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
   outline: 0 !important;
   cursor: pointer !important;
   font-family: "Roboto" !important;
@@ -155,6 +156,7 @@
   font-weight: bold !important;
   border-width: 2px !important;
   color: #000 !important;
+  -webkit-text-fill-color: #000 !important;
   outline: 0 !important;
   text-align: center !important;
   cursor: pointer !important;

@@ -130,6 +130,7 @@
   font-weight: bold !important;
   text-align: center !important;
   color: #fff !important;
+  -webkit-text-fill-color: #fff !important;
   outline: 0 !important;
   cursor: pointer !important;
 }
@@ -147,6 +148,7 @@
   border: solid 2px #ffffff !important;
   border-width: 2px !important;
   color: #000 !important;
+  -webkit-text-fill-color: #000 !important;
   text-align: center !important;
   outline: 0 !important;
   cursor: pointer !important;
