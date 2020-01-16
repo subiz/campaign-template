@@ -15,9 +15,6 @@
 				<button @click="onPrimaryClick" v-show="showPrimaryButton"  class="primary-button">
 					{{primaryButtonText}}
 				</button>
-				<!-- <button @click="onSecondaryClick" v-show="showSecondaryButton" class="secondary-button">
-					{{secondaryButtonText}}
-				</button> -->
 			</div>
 		</div>
 	</div>

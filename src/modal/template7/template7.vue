@@ -1,17 +1,15 @@
-<script>
-export default {
-	
-}
-</script>
+<script src="./template7.js"></script>
 <style src="./template7.css"></style>
 <template>
 	<div class="template template7">
 		<div class="container">
+			<button  class="button-close" @click="onClose"></button>
 			<div class="left">
-				<p>Đăng ký để nhận ưu đãi đặc biệt.</p>
-				<p>Giảm 20% chỉ một ngày duy nhất. Miễn phí vận chuyển></p>
-				<Countdown />
-				<div class="button-container">
+				<p class="title">{{page.title}}</p>
+				<p class="description">{{page.description}}</p>
+				<Countdown :countdown="page.countdown" />
+				<Form :form="page.form" />
+				<div class="buttons-container">
 					<button @click="onPrimaryClick" v-show="showPrimaryButton" class="primary-button">
 					{{primaryButtonText}}
 					</button>
@@ -20,8 +18,8 @@ export default {
 					</button>
 				</div>
 			</div>
-			<div class="right"></div>
-
+			<div class="right">
+			</div>
 		</div>
 	</div>
 </template>

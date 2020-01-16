@@ -7,13 +7,11 @@
 
 #subiz .template.templateu23 .container {
   display: flex !important;
-  flex-direction: row !important;
-  width: 700px !important;
+  width: 750px !important;
   max-width: 100% !important;
-  position: relative !important;
-  height: 350px !important;
+  height: 400px !important;
   position: fixed !important;
-  top: 55% !important;
+  top: 50% !important;
   left: 50% !important;
   transform: translate(-50%, -50%) !important;
   background-color: #b41a12 !important;
@@ -21,7 +19,8 @@
 
 #subiz .template.templateu23 .left-content {
   display: flex !important;
-  width: 100% !important;
+  flex: 1 !important;
+  width: 400px !important;
   background-image: url("../../assets/u23.png") !important;
   background-size: cover !important;
   background-repeat: no-repeat !important;
@@ -31,9 +30,11 @@
 #subiz .template.templateu23 .right-content {
   display: flex !important;
   flex-direction: column !important;
-  width: 350px !important;
+  flex: 1 !important;
   align-items: center !important;
   padding-top: 42px !important;
+  padding-bottom: 20px !important;
+  width: 350px !important;
   position: absolute !important;
   right: 0 !important;
   top: 0 !important;
@@ -55,7 +56,7 @@
 
 #subiz .template.templateu23 .description {
   margin-top: 20px !important;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  font-family: "Muli" !important;
   font-style: normal !important;
   font-weight: normal !important;
   font-size: 22px !important;
@@ -67,7 +68,7 @@
 
 #subiz .template.templateu23 .title {
   margin-top: 10px !important;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  font-family: "Montserrat" !important;
   font-style: normal !important;
   font-weight: bold !important;
   font-size: 36px !important;
@@ -91,7 +92,7 @@
 }
 
 #subiz .template.templateu23 .label {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+  font-family: "Muli" !important;
   font-size: 14px !important;
   color: #000000 !important;
   margin-top: 10px !important;
@@ -104,6 +105,7 @@
   border-bottom: 1px solid #a5a4a427 !important;
   font-size: 15px !important;
   outline: 0 !important;
+  font-family: "Muli" !important;
 }
 
 #subiz .template.templateu23 .text-input::placeholder {
@@ -111,11 +113,11 @@
 }
 
 #subiz .template.templateu23 .buttons-container {
-  margin-top: 25px !important;
+  margin-top: 30px !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
-  margin-bottom: 25px !important;
+  width: 100% !important;
 }
 
 #subiz .template.templateu23 .primary-button {
@@ -136,30 +138,7 @@
   text-align: center !important;
   cursor: pointer !important;
   outline: 0 !important;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
-}
-
-#subiz .template.templateu23 .secondary-button {
-  margin-right: 5px !important;
-  margin-left: 5px !important;
-  background-color: #d9d9d9 !important;
-  padding-left: 30px !important;
-  padding-right: 30px !important;
-  height: 45px !important;
-  border-radius: 5px !important;
-  border: 0px !important;
-  color: #fff !important;
-  -webkit-text-fill-color: #fff !important;
-  font-size: 16px !important;
-  font-weight: 600 !important;
-  text-transform: uppercase !important;
-  text-align: center !important;
-  outline: 0 !important;
-  cursor: pointer !important;
-}
-
-#subiz .template.templateu23 .secondary-button:hover {
-  color: #bbbbbb !important;
+  font-family: "Roboto" !important;
 }
 
 #subiz .template.templateu23 .primary-button:hover {
@@ -183,7 +162,7 @@
 
 #subiz .template.templateu23 .mobile .left-content {
   position: relative !important;
-  background-image: url("../assets/u23_mobile.png") !important;
+  background-image: url("../../assets/u23_mobile.png") !important;
   height: 300px !important;
   width: 355px !important;
 }
@@ -192,7 +171,6 @@
   font-size: 30px !important;
   font-weight: bold !important;
   line-height: 32px !important;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
   text-align: center !important;
   margin-top: 25px !important;
   padding-left: 20px !important;
@@ -202,7 +180,6 @@
 #subiz .template.templateu23 .mobile .description {
   font-size: 19px !important;
   font-weight: normal !important;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
   text-align: center !important;
   margin-top: 10px !important;
 }
@@ -212,7 +189,6 @@
   height: 45px !important;
   width: 200px !important;
   border-radius: 20px !important;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
 }
 
 #subiz .template.templateu23 .mobile .buttons-container {

@@ -9,22 +9,21 @@
 	box-sizing: border-box  ;
 }
 .container{
-	display: flex  ;
-	flex-direction: row  ;
-	width: 700px  ;
-	max-width: 100%  ;
-	position: relative;
-	height: 350px;
+	display: flex;
+	width: 750px  ;
+	max-width: 100%;
+	height: 400px;
 
 	position: fixed ;
-	top: 55%;
+	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%)  ;
 	background-color: #b41a12;
 }
 .left-content{
-	display: flex  ;
-	width:100% ;
+	display: flex ;
+	flex: 1;
+	width: 400px;
 	background-image: url('../../assets/u23.png')  ;
 	background-size : cover  ;
 	background-repeat: no-repeat  ;
@@ -33,9 +32,11 @@
 .right-content{
 	display: flex  ;
 	flex-direction: column  ;
-	width:350px  ;
+	flex: 1;
 	align-items: center  ;
 	padding-top: 42px  ;
+	padding-bottom: 20px;
+	width: 350px;
 	position: absolute ;
 	right: 0;
 	top: 0;
@@ -55,7 +56,7 @@
 }
 .description{
 	margin-top: 20px  ;
-	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif  ;
+	font-family:'Muli' ;
 	font-style: normal  ;
 	font-weight: normal  ;
 	font-size: 22px  ;
@@ -66,7 +67,7 @@
 }
 .title{
 	margin-top: 10px  ;
-	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif  ;
+	font-family:'Montserrat';
 	font-style: normal  ;
 	font-weight: bold  ;
 	font-size: 36px  ;
@@ -87,7 +88,7 @@
 	margin-top: 15px;;
 }
 .label{
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-family: 'Muli';
 	font-size: 14px;
 	color: #000000;
 	margin-top: 10px;
@@ -99,16 +100,17 @@
 	border-bottom: 1px solid #a5a4a427  ;
 	font-size: 15px  ;
 	outline: 0  ;
+	font-family: 'Muli';
 }
 .text-input::placeholder{
 	color: #8d8d8d80;
 }
 .buttons-container{
-	margin-top: 25px  ;
+	margin-top: 30px  ;
 	display: flex  ;
 	align-items: center  ;
 	justify-content: center  ;
-	margin-bottom: 25px  ;
+	width: 100%;
 }
 .primary-button{
 	margin-right: 5px  ;
@@ -127,29 +129,9 @@
 	text-align: center  ;
 	cursor: pointer  ;
 	outline: 0;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-family: 'Roboto';
 
 }
-.secondary-button{
-	margin-right: 5px  ;
-	margin-left: 5px  ;
-	background-color: #d9d9d9  ;
-	padding-left: 30px  ;
-	padding-right:30px  ;
-	height: 45px  ;
-	border-radius: 5px  ;
-	border:0px  ;
-	@include color(#fff);
-	font-size: 16px  ;
-	font-weight: 600  ;
-	text-transform: uppercase  ;
-	text-align: center  ;
-	outline: 0  ;
-	cursor: pointer  ;
-}
- .secondary-button:hover {
-	 color: #bbbbbb  ;
- }
  .primary-button:hover{
 	 background-color: #e6b17c ;
  }
@@ -170,7 +152,7 @@
 }
 .mobile .left-content{
 	position: relative  ; 
-	background-image: url('../assets/u23_mobile.png')  ;
+	background-image: url('../../assets/u23_mobile.png')  ;
 	height: 300px;
 	width: 355px;
 }
@@ -179,7 +161,6 @@
 	font-size: 30px;
 	font-weight: bold;
 	line-height: 32px;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	text-align: center;
 	margin-top:25px;
 	padding-left:20px;
@@ -188,7 +169,6 @@
 .mobile .description{
 	font-size: 19px;
 	font-weight: normal;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	text-align: center;
 	margin-top:10px;
 }
@@ -197,7 +177,6 @@
 	height: 45px;
 	width: 200px;
 	border-radius: 20px;
-	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .mobile .buttons-container{
 	margin-bottom: 30px;
