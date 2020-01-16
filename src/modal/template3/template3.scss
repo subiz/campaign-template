@@ -15,7 +15,7 @@
 	max-width: 100%  ;
 	// margin: 0 auto  ;
 	position: relative;
-
+	max-height: 80%;
 	position: fixed ;
 	top: 50%;
 	left: 50%;
@@ -26,7 +26,7 @@
 	flex:1  ;
 	background-image: url('../../assets/bg3.png')  ;
 	background-size : cover  ;
-	background-repeat: no-repeat  
+	background-repeat: no-repeat ;
 }
 .right-content{
 	display: flex  ;
@@ -82,6 +82,7 @@
 	padding-right: 10px  ;
 	padding-left: 20px  ;
 	box-shadow: unset;
+	overflow: scroll;
 }
 .form-item{
 	margin-top: 15px;;
@@ -107,7 +108,7 @@
 	font-family: 'Muli';
 }
 .buttons-container{
-	margin-top: 35px  ; 
+	margin-top: 25px  ; 
 	display: flex  ; 
 	align-items: center  ; 
 	justify-content: center  ; 
@@ -169,12 +170,14 @@
 	display: flex;
 	align-items: center;
 	width: unset;
+	max-height: 380px;
 }
 .mobile .form-template{
 	width: 100%;
 }
 .mobile .left-content{
 	position: relative  ; 
+	height: 400px;
 }
 .mobile .primary-button{
 	padding-left: 24px;

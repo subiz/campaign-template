@@ -11,6 +11,7 @@
   width: 800px !important;
   max-width: 100% !important;
   position: relative !important;
+  max-height: 80% !important;
   position: fixed !important;
   top: 50% !important;
   left: 50% !important;
@@ -84,6 +85,7 @@
   padding-right: 10px !important;
   padding-left: 20px !important;
   box-shadow: unset !important;
+  overflow: scroll !important;
 }
 
 #subiz .template.template3 .form-item {
@@ -114,7 +116,7 @@
 }
 
 #subiz .template.template3 .buttons-container {
-  margin-top: 35px !important;
+  margin-top: 25px !important;
   display: flex !important;
   align-items: center !important;
   justify-content: center !important;
@@ -183,6 +185,7 @@
   display: flex !important;
   align-items: center !important;
   width: unset !important;
+  max-height: 380px !important;
 }
 
 #subiz .template.template3 .mobile .form-template {
@@ -191,6 +194,7 @@
 
 #subiz .template.template3 .mobile .left-content {
   position: relative !important;
+  height: 400px !important;
 }
 
 #subiz .template.template3 .mobile .primary-button {

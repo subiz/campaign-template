@@ -8,6 +8,7 @@
   flex-direction: column !important;
   align-items: center !important;
   width: 480px !important;
+  max-height: 550px !important;
   background-color: #fff !important;
   position: fixed !important;
   top: 50% !important;
@@ -84,6 +85,7 @@
   width: 100% !important;
   display: flex !important;
   padding-left: 10% !important;
+  overflow: scroll !important;
 }
 
 #subiz .template.template10 .label {
@@ -147,6 +149,7 @@
 #subiz .template.template10 .container.mobile {
   height: 550px !important;
   width: 335px !important;
+  max-height: 85% !important;
 }
 
 #subiz .template.template10 .mobile .header {

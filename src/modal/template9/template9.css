@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat|Muli|Roboto|Roboto+Condensed|Yeseva+One&display=swap");
 #subiz .template.template9 .container {
   width: 800px !important;
-  max-height: 520px !important;
+  max-height: 80% !important;
   background-color: #fff !important;
   display: flex !important;
   flex-direction: row !important;
   position: relative !important;
+  max-height: 550px !important;
   position: fixed !important;
   top: 50% !important;
   left: 50% !important;
@@ -175,6 +176,7 @@
 #subiz .template.template9 .container.mobile {
   flex-direction: column !important;
   width: 365px !important;
+  max-height: 85% !important;
 }
 
 #subiz .template.template9 .mobile .left-content {

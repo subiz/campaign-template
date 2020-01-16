@@ -79,6 +79,9 @@
 	flex-direction: column ;
 	align-items: center ;
 	justify-content: center ;
+	overflow: scroll;
+	max-height: 250px;
+	padding-top: 50px;
 }
 .form-item{
 	margin-top: 10px ;	
@@ -169,11 +172,11 @@
 	flex: 1 ;
 	width:100% ;
 	max-width: 100% ;
-	background-image: url('../../assets/bg5_mobile.png') ;
+	background-image: url('../../assets/bg5_mobile.png');
 	background-position: center;
 	background-repeat: no-repeat;
 	position: relative ;
-	justify-content: flex-start ;
+	justify-content: flex-start;
 }
 .mobile .left .title{
 	margin-top: 25% ;
@@ -191,6 +194,8 @@
 .mobile .left .form-template {
 	margin-top: 25px ;
 	width:80% ;
+	max-height: 200px;
+	padding-top: 100px;
 }
 .mobile .text-input {
 	margin-top: unset ;

@@ -43,6 +43,7 @@
 	padding-top:30px;
 	width: 430px;
 	max-width: 100%;
+	max-height: 80%;
 	align-items: center;
 	background-color: #fff;
 	margin-top: 36px;
@@ -83,7 +84,6 @@
 
 .primary-button {
 	border:0px;
-	border-radius: 5px;
 	background-color: #FDAD15 ;
 	@include color(#fff);
 	font-size: 16px;
@@ -91,6 +91,7 @@
 	text-align: center;
 	text-transform: uppercase;
 	padding-left: 30px;
+	border-radius: 5px;
 	padding-right: 30px;
 	padding-top: 12px;
 	padding-bottom: 12px;
@@ -129,6 +130,7 @@
 	flex-direction: column;
 	width: 100%;
 	align-items: center;
+	overflow: scroll;
 }
 .form-item{
 	display: flex;
@@ -162,7 +164,9 @@
 	padding-right: 25px;
 	width: 335px;
 }
-
+.container .main{
+	max-height: 500px;
+}
 .mobile .title{
 	padding-left:20px;
 	padding-right:20px;

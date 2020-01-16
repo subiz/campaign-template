@@ -29,6 +29,7 @@
   position: relative !important;
   padding-top: 10px !important;
   overflow: unset !important;
+  max-height: 500px !important;
 }
 
 #subiz .template.template1 .div-left {
@@ -126,6 +127,7 @@
   flex-direction: column !important;
   padding-left: 10px !important;
   padding-right: 10px !important;
+  overflow: scroll !important;
 }
 
 #subiz .template.template1 .form-item {
@@ -166,6 +168,7 @@
   background-image: url("../../assets/bg1.png") !important;
   background-size: 100% 100% !important;
   margin: 0 !important;
+  max-height: 600px !important;
 }
 
 #subiz .template.template1 .mobile .main-template .image {

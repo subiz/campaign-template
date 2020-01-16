@@ -2,7 +2,7 @@
 <style src="./template7.css"></style>
 <template>
 	<div class="template template7">
-		<div class="container">
+		<div v-if="!close" :class="'container ' + mode" >
 			<button  class="button-close" @click="onClose"></button>
 			<div class="left">
 				<p class="title">{{page.title}}</p>

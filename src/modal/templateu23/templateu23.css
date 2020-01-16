@@ -9,6 +9,7 @@
   display: flex !important;
   width: 750px !important;
   max-width: 100% !important;
+  max-height: 600px !important;
   margin: auto !important;
   position: relative !important;
   position: fixed !important;
@@ -80,6 +81,7 @@
   padding-left: 10px !important;
   padding-right: 10px !important;
   margin-left: 20px !important;
+  overflow: scroll !important;
 }
 
 #subiz .template.templateu23 .form-item {
@@ -144,6 +146,7 @@
   width: 355px !important;
   flex-direction: column !important;
   height: 625px !important;
+  max-height: 85% !important;
 }
 
 #subiz .template.templateu23 .mobile .right-content {

@@ -9,6 +9,7 @@
   display: flex !important;
   flex-direction: row !important;
   height: 530px !important;
+  max-height: 550px !important;
   width: 800px !important;
   max-width: 100% !important;
   max-height: 100% !important;
@@ -79,6 +80,7 @@
   flex-direction: column !important;
   align-items: center !important;
   justify-content: center !important;
+  overflow: scroll !important;
 }
 
 #subiz .template.template17 .form-item {
@@ -160,6 +162,10 @@
 
 #subiz .template.template17 .primary-button:hover {
   background-color: #e69f17 !important;
+}
+
+#subiz .template.template17 .mobile.container {
+  max-height: 85% !important;
 }
 
 #subiz .template.template17 .mobile .right {

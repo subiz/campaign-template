@@ -1,10 +1,10 @@
 <template class="tem">
   <div id="subiz" class="app"  >
-    <Template mode="mobile" :page="page"/>
+    <Template mode="mobile" :page="countdown"/>
   </div>
 </template>
 <script>
-import Template from './fullscreen/template5/template5.vue'
+import Template from './modal/template7/template7.vue'
 export default {
   name: 'app',
   components: {
@@ -17,13 +17,44 @@ export default {
         description:'Giảm 20% chỉ một ngày duy nhất. Miễn phí vận chuyển',
         countdown:{
           enabled: true,
-          // end_time: 0 , 
-          // date: 01,
-          // hour: 10,
-          // minute: 50,
-          // second:00,
-          daily_end_time:0,
+          end_time: 1579064847412,
+          daily_end_time: 1579064847412,
         },
+        form: {
+          enabled:true,
+          fields:[
+            {
+              key :2,
+              label : "Số điện thoại",
+              is_required :true,
+              type :"text",
+              placeholder: "Số điện thoại của bạn"
+            },
+            {
+              key :2,
+              label : "Email",
+              is_required :true,
+              type :"text",
+              placeholder: "johndoe@example.com"
+            },
+             {
+              key :2,
+              label : "Email",
+              is_required :true,
+              type :"text",
+              placeholder: "johndoe@example.com"
+            },
+             {
+              key :2,
+              label : "Email",
+              is_required :true,
+              type :"text",
+              placeholder: "johndoe@example.com"
+            },
+
+
+          ],
+				},
         primary_button:{
           enabled : true,
           text: "Xem ngay"
@@ -35,7 +66,7 @@ export default {
       },
       pageu23:{
         subtitle:"",
-        "title": "CHẶNG ĐƯỜNG MỚI THÀNH CÔNG MỚI",
+        "title": "CHẶNG ĐƯỜNG MỚI THÀNH CÔNG MỚI ",
         "description": "Đón thêm khách hàng mới cùng Subiz New Widget",
         primary_button:{
           enabled : true,
@@ -75,6 +106,35 @@ export default {
             {
               key :2,
               label : "Email",
+              is_required :true,
+              type :"text",
+              placeholder: "johndoe@example.com"
+            },
+             
+             {
+              key :3,
+              label : "Họ Têns",
+              is_required :true,
+              type :"text",
+              placeholder: "John Doe"
+            },
+            {
+              key :4,
+              label : "Emails",
+              is_required :true,
+              type :"text",
+              placeholder: "johndoe@example.com"
+            },
+            {
+              key :3,
+              label : "Họ Têns",
+              is_required :true,
+              type :"text",
+              placeholder: "John Doe"
+            },
+            {
+              key :4,
+              label : "Emails",
               is_required :true,
               type :"text",
               placeholder: "johndoe@example.com"
@@ -147,6 +207,28 @@ export default {
               placeholder:"Bạn đang nghĩ gì ...",
             },
             {
+              key :2,
+              label : "Email",
+              is_required :true,
+              type :"text",
+              multiline_text:false,
+              placeholder:"johndoe@example.com",
+            },
+            {
+              key :2,
+              label : "Email",
+              is_required :true,
+              type :"text",
+              multiline_text:false,
+              placeholder:"johndoe@example.com",
+            },{
+              key :2,
+              label : "Email",
+              is_required :true,
+              type :"text",
+              multiline_text:false,
+              placeholder:"johndoe@example.com",
+            },{
               key :2,
               label : "Email",
               is_required :true,

@@ -12,6 +12,7 @@
 	flex-direction: column;
 	align-items: center;
 	width: 480px;
+  max-height: 550px;
 	background-color: #fff;
 	position: fixed ;
 	top: 50%;
@@ -88,6 +89,7 @@
 	width: 100%;
 	display: flex;
 	padding-left: 10%;
+	overflow: scroll;
 }
 .label{
 	display: none;
@@ -148,6 +150,7 @@
 .container.mobile{
 	height: 550px;
 	width: 335px;
+	max-height: 85%;
 }
 .mobile .header{
 	background-size: 100% 100%;

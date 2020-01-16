@@ -8,7 +8,6 @@
 	background-color: #F6F4F5 ;
 	// position: relative ;
 	width: 750px ;
-
 	position: fixed  ;
 	top: 50%  ;
 	left: 50%  ;
@@ -34,7 +33,7 @@
 	position: relative ;
 	padding-top:10px ;
 	overflow: unset;
-
+	max-height: 500px;
 }
 .div-left{
 	flex:1 ;
@@ -126,6 +125,7 @@
 	flex-direction: column ;
 	padding-left: 10px ;
 	padding-right: 10px ;
+	overflow: scroll;
 }
 .form-item{
 	margin-top: 15px;
@@ -163,6 +163,7 @@
 	background-image: url("../../assets/bg1.png") ;
 	background-size:100% 100% ;
 	margin: 0 ;
+	max-height: 600px;
 }
 .mobile .main-template .image {
 	display: none ;

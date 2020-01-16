@@ -1,11 +1,12 @@
 <template>
 	<div class="countdown-template" v-if="showCountDown"  :key="this.seconds" >
-		<p class="text" >{{showCountDown}}</p>
 		<div class= "date" >
 			<div class="main">
 				<div class="top"/>
 				<div class="bottom"/>
-				<p class="number">{{days}}</p>
+				<p class="number" v-if="days>=100">{{days}}</p>
+				<p class="number" v-if="days >= 10 && days <100">{{days}}</p>
+				<p class="number" v-if="days < 10" >0{{days}}</p>
 			</div>
 			<p class="text">NGÀY</p>
 		</div>
@@ -13,7 +14,8 @@
 			<div class="main">
 				<div class="top"/>
 				<div class="bottom"/>
-				<p class="number">{{hours}}</p>
+				<p class="number" v-if="hours >= 10">{{hours}}</p>
+				<p class="number" v-if="hours < 10" >0{{hours}}</p>
 			</div>
 			<p class="text">GIỜ</p>
 		</div>
@@ -21,7 +23,9 @@
 			<div class="main">
 				<div class="top"/>
 				<div class="bottom"/>
-				<p class="number">{{mins}}</p>
+				<p class="number" v-if="mins >= 10">{{mins}}</p>
+				<p class="number" v-if="mins < 10" >0{{mins}}</p>
+
 			</div>
 			<p class="text">PHÚT</p>
 		</div>
@@ -29,7 +33,8 @@
 			<div class="main">
 				<div class="top"/>
 				<div class="bottom"/>
-				<p class="number">{{seconds}}</p>
+				<p class="number" v-if="seconds >= 10">{{seconds}}</p>
+				<p class="number" v-if="seconds < 10" >0{{seconds}}</p>
 			</div>
 			<p class="text">GIÂY</p>
 		</div>
@@ -48,7 +53,7 @@ export default {
 		}
 	},
 	created(){
-		var countDownDate = new Date("Jan 16, 2020 12:15:00").getTime();
+		var countDownDate = new Date("Jan 16, 2020 18:15:00").getTime();
 		var end_time = this.countdown.end_time;
 		var distance
 		var countdown = setInterval(() => {
@@ -62,23 +67,19 @@ export default {
 	},
 	computed: {
 		showCountDown(){
-			var countDownDate = new Date("Jan 16, 2020 12:15:00").getTime();
+			var countDownDate = new Date("Jan 16, 2020 18:15:00").getTime();
 			var end_time = this.countdown.end_time;
 			var now = new Date().getTime()
 			var distance = countDownDate - now
-
 			var countdown = setInterval( () =>{
 				var now = new Date().getTime()
 				distance = countDownDate - now
 				if(distance < 0) console.log("ended")
 				console.log("running")
 			},1000)
-
 			if(distance < 0) {
-				console.log("ended")
 				return false
 			}else{
-				console.log("running")
 				return true
 			}
 		}
