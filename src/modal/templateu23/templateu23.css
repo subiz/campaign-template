@@ -9,7 +9,8 @@
   display: flex !important;
   width: 750px !important;
   max-width: 100% !important;
-  height: 400px !important;
+  margin: auto !important;
+  position: relative !important;
   position: fixed !important;
   top: 50% !important;
   left: 50% !important;
@@ -19,26 +20,20 @@
 
 #subiz .template.templateu23 .left-content {
   display: flex !important;
-  flex: 1 !important;
   width: 400px !important;
   background-image: url("../../assets/u23.png") !important;
   background-size: cover !important;
   background-repeat: no-repeat !important;
-  background-color: #b41a12 !important;
 }
 
 #subiz .template.templateu23 .right-content {
   display: flex !important;
   flex-direction: column !important;
-  flex: 1 !important;
   align-items: center !important;
   padding-top: 42px !important;
   padding-bottom: 20px !important;
   width: 350px !important;
-  position: absolute !important;
-  right: 0 !important;
-  top: 0 !important;
-  bottom: 0 !important;
+  position: relative !important;
 }
 
 #subiz .template.templateu23 .button-close {
@@ -60,8 +55,8 @@
   font-style: normal !important;
   font-weight: normal !important;
   font-size: 22px !important;
-  margin-left: 20px !important;
-  margin-right: 20px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
   text-align: center !important;
   color: #fff !important;
 }
@@ -75,8 +70,8 @@
   line-height: 38px !important;
   text-align: center !important;
   align-self: flex-start !important;
-  margin-left: 20px !important;
-  margin-right: 20px !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
   color: #ffc488 !important;
 }
 
