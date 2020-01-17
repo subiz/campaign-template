@@ -8,10 +8,10 @@
 		<p class="description">{{page.description}}</p>
 		<Form :form="page.form" />
 		<div class="buttons-container">
-			<button @click="onPrimaryClick" v-show="showPrimaryButton" class="primary-button">
+			<button @click="onPrimaryClick" v-if="showPrimaryButton" class="primary-button">
 				{{primaryButtonText}}
 			</button>
-			<button @click="onSecondaryClick" v-show="showSecondaryButton"  class="secondary-button">
+			<button @click="onSecondaryClick" v-if="showSecondaryButton"  class="secondary-button">
 				{{secondaryButtonText}}
 			</button>
 		</div>

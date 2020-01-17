@@ -53,7 +53,7 @@ export default {
 		}
 	},
 	created(){
-		var countDownDate = new Date("Jan 16, 2020 18:15:00").getTime();
+		var countDownDate = new Date("Jan 17, 2020 18:15:00").getTime();
 		var end_time = this.countdown.end_time;
 		var distance
 		var countdown = setInterval(() => {
@@ -67,7 +67,7 @@ export default {
 	},
 	computed: {
 		showCountDown(){
-			var countDownDate = new Date("Jan 16, 2020 18:15:00").getTime();
+			var countDownDate = new Date("Jan 17, 2020 18:15:00").getTime();
 			var end_time = this.countdown.end_time;
 			var now = new Date().getTime()
 			var distance = countDownDate - now

@@ -270,6 +270,9 @@
   flex-direction: column !important;
   width: 330px !important;
   max-height: 90% !important;
+  background-image: url(../../assets/bg7_mobile.png) !important;
+  background-size: auto !important;
+  background-position: center !important;
 }
 
 #subiz .template.template7 .mobile .left-content {
