@@ -26,4 +26,5 @@ export default {
 		template5,
 		template6,
 	},
+
 }
