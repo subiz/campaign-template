@@ -1,33 +1,34 @@
 {
-  "name": "@subiz/campaign-template",
-  "version": "0.1.60",
-  "main": "./index.js",
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "gen": "node ./generate.js"
-  },
-  "devDependencies": {
-    "@babel/cli": "^7.8.3",
-    "@vue/cli-plugin-babel": "^4.1.0",
-    "@vue/cli-service": "^4.1.0",
-    "babel-helper-vue-jsx-merge-props": "^2.0.3",
-    "babel-plugin-syntax-jsx": "^6.18.0",
-    "babel-plugin-transform-vue-jsx": "^3.3.0",
-    "babel-preset-env": "^1.7.0",
-    "core-js": "^3.4.4",
-    "cssnano": "^4.1.10",
-    "object-path": "^0.11.4",
-    "postcss-cli": "^7.0.0",
-    "postcss-parent-selector": "^1.0.0",
-    "postcss-safe-important": "^1.2.0",
-    "sass": "^1.24.3",
-    "vue-template-compiler": "^2.6.10",
-    "vue": "^2.6.10"
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions"
-  ]
+	"name": "@subiz/campaign-template",
+	"version": "0.1.61",
+	"main": "./index.js",
+	"scripts": {
+		"serve": "vue-cli-service serve",
+		"build": "vue-cli-service build",
+		"lint": "vue-cli-service lint",
+		"gen": "node ./generate.js",
+		"gen2": "rm -rf dist2 && npx babel src -d dist2"
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.8.3",
+		"@vue/cli-plugin-babel": "^4.1.0",
+		"@vue/cli-service": "^4.1.0",
+		"babel-helper-vue-jsx-merge-props": "^2.0.3",
+		"babel-plugin-syntax-jsx": "^6.18.0",
+		"babel-plugin-transform-vue-jsx": "^3.3.0",
+		"babel-preset-env": "^1.7.0",
+		"core-js": "^3.4.4",
+		"cssnano": "^4.1.10",
+		"object-path": "^0.11.4",
+		"postcss-cli": "^7.0.0",
+		"postcss-parent-selector": "^1.0.0",
+		"postcss-safe-important": "^1.2.0",
+		"sass": "^1.24.3",
+		"vue-template-compiler": "^2.6.10",
+		"vue": "^2.6.10"
+	},
+	"browserslist": [
+		"> 1%",
+		"last 2 versions"
+	]
 }

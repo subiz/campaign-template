@@ -1,17 +1,7 @@
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-import _interopRequireDefault from "/home/thanh/src/campaign-template/node_modules/@babel/runtime/helpers/esm/interopRequireDefault";
-
-var _Form = require("./components/Form.vue");
-
-var _Form2 = _interopRequireDefault(_Form);
-
 var common = require('./common.js');
 
-exports.default = {
+import Form from './components/Form.vue';
+export default {
   props: ['page', 'mode'],
   created: function created() {
     if (!this.mode) this.mode = common.mobilecheck() ? 'mobile' : 'desktop';
@@ -22,6 +12,6 @@ exports.default = {
     };
   },
   render: function render(h) {
-    return h("div", ["HELLO ", h(_Form2.default), ' ']);
+    return h("div", ["HELLO ", h(Form), ' ']);
   }
 };

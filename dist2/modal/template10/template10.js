@@ -1,27 +1,14 @@
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-import _interopRequireDefault from "/home/thanh/src/campaign-template/node_modules/@babel/runtime/helpers/esm/interopRequireDefault";
-
-var _Form = require("../../components/Form.vue");
-
-var _Form2 = _interopRequireDefault(_Form);
-
-var _Countdown = require("../../components/Countdown.vue");
-
-var _Countdown2 = _interopRequireDefault(_Countdown);
-
 var common = require('../../common.js');
 
 var op = require('object-path');
 
-exports.default = {
+import Form from '../../components/Form.vue';
+import Countdown from '../../components/Countdown.vue';
+export default {
   props: ['page', 'mode'],
   components: {
-    Form: _Form2.default,
-    Countdown: _Countdown2.default
+    Form: Form,
+    Countdown: Countdown
   },
   created: function created() {
     if (!this.mode) this.mode = common.mobilecheck() ? 'mobile' : 'desktop';
