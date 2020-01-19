@@ -1,5 +1,5 @@
-import index from './templates/index.js'
-import Template from './templates/template.js'
+import index from './dist/templates/index.js'
+import Template from './dist/templates/template.js'
 
 export default {
 	index,

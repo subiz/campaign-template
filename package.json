@@ -4,10 +4,8 @@
 	"main": "./index.js",
 	"scripts": {
 		"serve": "vue-cli-service serve",
-		"build": "vue-cli-service build",
-		"lint": "vue-cli-service lint",
 		"gen": "node ./generate.js",
-		"gen2": "rm -rf dist2 && npx babel src -d dist2"
+		"build": "rm -rf dist && npx babel index.js -d dist && npx babel templates -d dist/templates && npx babel components -d dist/components && npx babel src -d dist/src"
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.8.3",
@@ -17,18 +15,15 @@
 		"babel-plugin-syntax-jsx": "^6.18.0",
 		"babel-plugin-transform-vue-jsx": "^3.3.0",
 		"babel-preset-env": "^1.7.0",
-		"core-js": "^3.4.4",
-		"cssnano": "^4.1.10",
-		"object-path": "^0.11.4",
-		"postcss-cli": "^7.0.0",
-		"postcss-parent-selector": "^1.0.0",
-		"postcss-safe-important": "^1.2.0",
-		"sass": "^1.24.3",
-		"vue-template-compiler": "^2.6.10",
-		"vue": "^2.6.10"
+		"object-assign-deep": "^0.4.0",
+		"vue": "^2.6.10",
+		"vue-template-compiler": "^2.6.10"
 	},
-	"browserslist": [
-		"> 1%",
-		"last 2 versions"
-	]
+	"dependencies": {
+		"core-js": "^3.6.4",
+		"less": "^3.10.3",
+		"less-loader": "^5.0.0",
+		"object-path": "^0.11.4",
+		"raw-loader": "^4.0.0"
+	}
 }
