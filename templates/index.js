@@ -2,23 +2,44 @@ export default {
 	template1: {
 		js: () => import(/*webpackPrefetch: true*/ /*webpackChunkName: "template1" */ './template1/template1.js'),
 		css: () =>
-			import(
-				/*webpackPrefetch: true*/ /*webpackChunkName: "template1_css" */ '!raw-loader!./template1/template1.css'
-			),
+			import(/*webpackPrefetch: true*/ /*webpackChunkName: "template1_css" */ '!raw-loader!./template1/template1.css'),
+
 		type: 'modal',
-		name: {
-			vi: 'Form đăng ký nhận ưu đãi',
-			en: 'Sign up offer',
+		en: {
+			name: 'Sign up offer',
+			title: '10% OFF',
+			description: 'your first order',
+			primary_button: {text: 'Sign up now', background: '', color: ''},
+			secondary_button: {text: "No, thanks. I'll be back later", background: '', color: ''},
+			color: '',
+			background: '',
+			input_color: '',
+			input_background: '',
+			desktop_appearance: {
+				background_image: '',
+				width: '',
+				min_height: '',
+				padding_left: '',
+				padding_right: '',
+				padding_top: '',
+				padding_bottom: '',
+			},
+			mobile_appearance: {
+				background_image: '',
+				width: '',
+				min_height: '',
+				padding_left: '',
+				padding_right: '',
+				padding_top: '',
+				padding_bottom: '',
+			},
 		},
-		title: {
-			vi: 'Giảm 10%',
-			en: '10% OFF',
-		},
-		description: {vi: 'với đơn hàng đầu tiên của bạn', en: 'your first order'},
-		primary_button_text: {vi: 'Đăng ký ngay', en: 'Sign up now'},
-		secondary_button_text: {
-			vi: 'Không, cảm ơn. Tôi sẽ quay lại sau',
-			en: "No, thanks. I'll be back later",
+		vi: {
+			name: 'Form đăng ký nhận ưu đãi',
+			title: 'Giảm 10%',
+			description: 'với đơn hàng đầu tiên của bạn',
+			primary_button: {text: 'Đăng ký ngay'},
+			secondary_button: {text: 'Không, cảm ơn. Tôi sẽ quay lại sau'},
 		},
 	},
 	template2: {

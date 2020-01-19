@@ -1,8 +1,8 @@
 import Vue from 'vue'
 Vue.config.productionTip = false
 
-import INDEX from '../index.js'
-let { Template, index } = INDEX
+import index from '../templates/index.js'
+import Template from '../templates/template.js'
 
 var common = require('./common.js')
 
