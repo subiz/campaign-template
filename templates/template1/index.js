@@ -8,10 +8,12 @@ export default {
 				<div class="main">
 					<div class="image"></div>
 					<div class="div-left"></div>
-					<div class="div-right">
+				<div class="div-right">
 						<p class="title">{this.page.title}</p>
 						<p class="description">{this.page.description}</p>
-						{this.form}
+				<div class="form">
+				{this.form}
+			</div>
 						<div class="buttons">
 							{this.primaryButton}
 							{this.secondaryButton}

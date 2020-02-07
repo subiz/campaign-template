@@ -4,7 +4,7 @@ Vue.config.productionTip = false
 import index from '../templates/index.js'
 import Template from '../templates/template.js'
 
-var common = require('./common.js')
+var common = require('../common.js')
 
 new Vue({
 	name: 'App',
@@ -29,15 +29,16 @@ new Vue({
 		}
 	},
 	mounted () {
-		var metadata = index[this.template]
-		this.page.title = metadata.title.vi
-		this.page.description = metadata.description.vi
-		this.page.primary_button.text = metadata.primary_button_text.vi
-		this.page.secondary_button.text = metadata.secondary_button_text.vi
+		var metadata = index[this.template].en
+		this.page.title = metadata.title
+		this.page.description = metadata.description
+		this.page.primary_button.text = metadata.primary_button_text
+		this.page.secondary_button.text = metadata.secondary_button_text
 
 		// make the environment look like widget environment
 		common.setCssToHead('subiz-template-style-app', '#subiz * {all:unset;}')
 	},
+
 	render (h) {
 		return (
 			<div id="subiz">

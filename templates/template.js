@@ -2,7 +2,7 @@
 
 import TEMPLATES from './index.js'
 import Form from '../components/Form.js'
-import './template.less'
+// import './template.less'
 
 var common = require('../common.js')
 var op = require('object-path')
@@ -15,7 +15,7 @@ export default {
 	props: ['mode', 'template', 'page'],
 	data () {
 		return {
-			Template: {},
+			Template: null,
 			close: false,
 		}
 	},
@@ -55,7 +55,7 @@ export default {
 			CSS = (await temp.css()).default
 			this.Template = template
 			var css = replaceCssVariable(CSS, this.page)
-			common.setCssToHead('subiz-template-style-' + template, css)
+			common.setCssToHead('subiz-template-style-' + t, css)
 		},
 	},
 
@@ -83,16 +83,19 @@ export default {
 			)
 		}
 
+		let $form = <Form form={this.page.form} />
 		var mode = this.mode || MODE
 		return (
-			<div class={'template' + this.template + ' ' + mode}>
-				<Template
-					page={this.page}
-					form={Form}
-					primaryButton={primaryButton}
-					secondaryButton={secondaryButton}
-					closeButton={closeButton}
-				/>
+			<div class={'template' + this.template}>
+				<div class={mode}>
+					<this.Template
+						page={this.page}
+						form={$form}
+						primaryButton={primaryButton}
+						secondaryButton={secondaryButton}
+						closeButton={closeButton}
+					/>
+				</div>
 			</div>
 		)
 	},
