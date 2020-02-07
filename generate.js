@@ -29,9 +29,8 @@ function walk (dir, done) {
 	})
 }
 
-const BASEJS = fs.readFileSync('./src/base.js')
-
 walk('templates', (err, results) => {
+	if (err) throw err
 	results = results.filter(f => f.endsWith('.js'))
 
 	// build less
@@ -42,7 +41,7 @@ walk('templates', (err, results) => {
 		let cssname = name + '.css'
 
 		var ns = name.split('/')
-		var templateid = ns[ns.length - 1]
+		var templateid = ns[ns.length - 2]
 
 		// write tmp file
 		fs.writeFileSync('./.tmp.less', makeTempLess(templateid))
@@ -59,7 +58,7 @@ walk('templates', (err, results) => {
 
 function makeTempLess (templateid) {
 	return `
-@import './src/base.less';
-#template() { @import './templates/${templateid}/${templateid}.less'; }
+@import './templates/base.less';
+#template() { @import './templates/${templateid}/index.less'; }
 #subiz .template.${templateid} { #template() !important; }`
 }
