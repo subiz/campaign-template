@@ -1,12 +1,13 @@
+// entry point
+
 import TEMPLATES from './index.js'
 import Form from '../components/Form.js'
 import './template.less'
 
-var common = require('../src/common.js')
+var common = require('../common.js')
 var op = require('object-path')
 
 const MODE = common.mobilecheck() ? 'mobile' : 'desktop'
-var Template = null
 var CSS = ''
 
 export default {
@@ -14,12 +15,14 @@ export default {
 	props: ['mode', 'template', 'page'],
 	data () {
 		return {
+			Template: {},
 			close: false,
 		}
 	},
+
 	watch: {
-		async template (t) {
-			this.loadTemplate(t)
+		async template (template) {
+			this.loadTemplate(template)
 		},
 		async page (page) {
 			var css = replaceCssVariable(CSS, page)
@@ -44,27 +47,28 @@ export default {
 		onPrimaryClick () {
 			this.$emit('primaryButtonClicked')
 		},
-		async loadTemplate (template) {
+
+		async loadTemplate (t) {
 			let temp = TEMPLATES[t]
 			if (!temp) return
-			Template = (await temp.js()).default
+			let template = (await temp.js()).default
 			CSS = (await temp.css()).default
+			this.Template = template
 			var css = replaceCssVariable(CSS, this.page)
 			common.setCssToHead('subiz-template-style-' + template, css)
-			this.$forceUpdate()
 		},
 	},
-	render (h) {
-		if (!Template) return null
-		if (this.close) return null
-		var mode = this.mode || MODE
 
-		let closeButton = <button class="button-close" vOn:click={this.onClose}></button>
+	render (h) {
+		if (!this.Template) return null
+		if (this.close) return null
+
+		let closeButton = <button class="btn btn--close" vOn:click={this.onClose}></button>
 
 		let primaryButton = null
 		if (op.get(this.page, 'primary_button.enabled')) {
 			primaryButton = (
-				<button vOn:click={this.onPrimaryClick} class="primary-button">
+				<button vOn:click={this.onPrimaryClick} class="btn btn--primary">
 					{op.get(this.page, 'primary_button.text')}
 				</button>
 			)
@@ -73,23 +77,22 @@ export default {
 		let secondaryButton = null
 		if (op.get(this.page, 'secondary_button.enabled')) {
 			secondaryButton = (
-				<button vOn:click={this.onSecondaryClick} class="secondary-button">
+				<button vOn:click={this.onSecondaryClick} class="btn btn--secondary">
 					{op.get(this.page, 'secondary_button.text')}
 				</button>
 			)
 		}
 
+		var mode = this.mode || MODE
 		return (
-			<div class={'template' + this.template}>
-				<div class={mode}>
-					<Template
-						page={this.page}
-						form={Form}
-						primaryButton={primaryButton}
-						secondaryButton={secondaryButton}
-						closeButton={closeButton}
-					/>
-				</div>
+			<div class={'template' + this.template + ' ' + mode}>
+				<Template
+					page={this.page}
+					form={Form}
+					primaryButton={primaryButton}
+					secondaryButton={secondaryButton}
+					closeButton={closeButton}
+				/>
 			</div>
 		)
 	},

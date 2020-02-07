@@ -1,8 +1,8 @@
 export default {
 	template1: {
-		js: () => import(/*webpackPrefetch: true*/ /*webpackChunkName: "template1" */ './template1/template1.js'),
+		js: () => import(/*webpackPrefetch: true*/ /*webpackChunkName: "template1" */ './template1/index.js'),
 		css: () =>
-			import(/*webpackPrefetch: true*/ /*webpackChunkName: "template1_css" */ '!raw-loader!./template1/template1.css'),
+			import(/*webpackPrefetch: true*/ /*webpackChunkName: "template1_css" */ '!raw-loader!./template1/index.css'),
 
 		type: 'modal',
 		en: {

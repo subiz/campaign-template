@@ -5,14 +5,14 @@ export default {
 		return (
 			<div class="container">
 				{this.closeButton}
-				<div class="main-template">
+				<div class="main">
 					<div class="image"></div>
 					<div class="div-left"></div>
 					<div class="div-right">
 						<p class="title">{this.page.title}</p>
 						<p class="description">{this.page.description}</p>
 						{this.form}
-						<div class="buttons-container">
+						<div class="buttons">
 							{this.primaryButton}
 							{this.secondaryButton}
 						</div>
