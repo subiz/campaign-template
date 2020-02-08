@@ -57,8 +57,9 @@ walk('templates', (err, results) => {
 })
 
 function makeTempLess (templateid) {
-	return `
-@import './templates/base.less';
-#template() { @import './templates/${templateid}/index.less'; }
+	return `#template() {
+	@import './templates/base.less';
+	@import './templates/${templateid}/index.less';
+}
 #subiz .template.${templateid} { #template() !important; }`
 }

@@ -10,7 +10,7 @@ new Vue({
 	name: 'App',
 	data () {
 		return {
-			template: 'template1', // CHANGE THIS TO SWITCH TEMPLATE
+			template: 'template2', // CHANGE THIS TO SWITCH TEMPLATE
 			page: {
 				title: '',
 				description: '',
