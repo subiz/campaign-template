@@ -43,25 +43,23 @@ export default {
 		},
 	},
 	template2: {
-		name: {
-			vi: 'Form đăng ký nhận ưu đãi',
-			en: 'Sign up offer',
+		js: () => import(/*webpackPrefetch: true*/ /*webpackChunkName: "template1" */ './template2/index.js'),
+		css: () =>
+			import(/*webpackPrefetch: true*/ /*webpackChunkName: "template1_css" */ '!raw-loader!./template2/index.css'),
+		type: 'modal',
+		en: {
+			name: 'Sign up offer',
+			title: 'Sign up to get special offer',
+			description: 'Get 20% off your first order. Sign up now!',
+			primary_button: {text: 'Sign up now'},
+			secondary_button: {text: 'Cancel'},
 		},
-		title: {
-			vi: 'Đăng ký để nhận ưu đãi đặc biệt',
-			en: 'Sign up to get special offer',
-		},
-		description: {
-			vi: 'Giảm 20% chỉ một ngày duy nhất. Đăng ký ngay để nhận được mã giảm giá!',
-			en: 'Get 20% off your first order. Sign up now!',
-		},
-		primary_button_text: {
-			vi: 'Đăng ký ngay',
-			en: 'Sign up now',
-		},
-		secondary_button_text: {
-			vi: 'Bỏ qua',
-			en: 'Cancel',
+		vi: {
+			name: 'Form đăng ký nhận ưu đãi',
+			title: 'Đăng ký để nhận ưu đãi đặc biệt',
+			description: 'Giảm 20% chỉ một ngày duy nhất. Đăng ký ngay để nhận được mã giảm giá!',
+			primary_button: {text: 'Đăng ký ngay'},
+			secondary_button: {text: 'Bỏ qua'},
 		},
 	},
 	template3: {

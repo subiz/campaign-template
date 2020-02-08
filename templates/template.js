@@ -86,7 +86,7 @@ export default {
 		let $form = <Form form={this.page.form} />
 		var mode = this.mode || MODE
 		return (
-			<div class={'template' + this.template}>
+			<div class={'template ' + this.template}>
 				<div class={mode}>
 					<this.Template
 						page={this.page}
