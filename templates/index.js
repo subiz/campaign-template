@@ -1,8 +1,15 @@
-export default {
+import Form from '../components/Form.js'
+var common = require('../common.js')
+var op = require('object-path')
+
+const MODE = common.mobilecheck() ? 'mobile' : 'desktop'
+var CSS = ''
+
+var meta = {
 	template1: {
 		js: () => import(/*webpackPrefetch: true*/ /*webpackChunkName: "template1" */ './template1/index.js'),
 		css: () =>
-			import(/*webpackPrefetch: true*/ /*webpackChunkName: "template1_css" */ '!raw-loader!./template1/index.css'),
+			import(/*webpackPrefetch: true*/ /*webpackChunkName: "template1_css" */ '!to-string-loader!css-loader!less-loader!./template1/index.less'),
 
 		type: 'modal',
 		en: {
@@ -43,9 +50,8 @@ export default {
 		},
 	},
 	template2: {
-		js: () => import(/*webpackPrefetch: true*/ /*webpackChunkName: "template1" */ './template2/index.js'),
 		css: () =>
-			import(/*webpackPrefetch: true*/ /*webpackChunkName: "template1_css" */ '!raw-loader!./template2/index.css'),
+			import(/*webpackPrefetch: true*/ /*webpackChunkName: "template2_css" */ '!to-string-loader!css-loader!less-loader!./template2.less'),
 		type: 'modal',
 		en: {
 			name: 'Sign up offer',
@@ -147,3 +153,194 @@ export default {
 		secondary_button_text: {vi: 'Bỏ qua', en: 'Cancel'},
 	},
 }
+
+// add default js load function for any template dont has custom template
+Object.keys(meta).map(id => {
+	if (meta[id].js) return
+	meta[id].js = () =>
+		Promise.resolve({
+			default: {
+				name: 'subiz-template',
+				props: ['page', 'form', 'countdown', 'primaryButton', 'secondaryButton', 'closeButton'],
+				render(h) {
+					return (
+						<div class="overlay">
+							<div class="container">
+								{this.closeButton}
+								<div class="container--inner">
+									<div class="background"></div>
+									<div class="content">
+										<p class="title">{this.page.title}</p>
+										<p class="description">{this.page.description}</p>
+										<div class="form">{this.form}</div>
+										<div class="buttons">
+											{this.primaryButton}
+											{this.secondaryButton}
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					)
+				},
+			},
+		})
+})
+
+let Template = {
+	name: 'Template',
+	props: ['mode', 'template', 'page'],
+	data() {
+		return {
+			Template: null,
+			close: false,
+		}
+	},
+
+	watch: {
+		async template(template) {
+			this.loadTemplate(template)
+		},
+		async page(page) {
+			var css = replaceCssVariable(CSS, page)
+			common.setCssToHead('subiz-template-style-' + this.template, css)
+		},
+	},
+
+	created() {
+		this.loadTemplate(this.template)
+	},
+
+	methods: {
+		onClose() {
+			this.$emit('closeButtonClicked')
+			this.close = true
+		},
+
+		onSecondaryClick() {
+			this.$emit('secondaryButtonClicked')
+		},
+
+		onPrimaryClick() {
+			this.$emit('primaryButtonClicked')
+		},
+
+		async loadTemplate(t) {
+			let temp = meta[t]
+			if (!temp) return
+			let template = (await temp.js()).default
+			CSS = (await temp.css()).default
+			this.Template = template
+			var css = replaceCssVariable(CSS, this.page)
+			common.setCssToHead('subiz-template-style-' + t, css)
+		},
+	},
+
+	render(h) {
+		if (!this.Template) return null
+		if (this.close) return null
+
+		let $close = <button class="btn btn--close" vOn:click={this.onClose}></button>
+
+		let $primary = null
+		if (op.get(this.page, 'primary_button.enabled')) {
+			$primary = (
+				<button vOn:click={this.onPrimaryClick} class="btn btn--primary">
+					{op.get(this.page, 'primary_button.text')}
+				</button>
+			)
+		}
+
+		let $secondary = null
+		if (op.get(this.page, 'secondary_button.enabled')) {
+			$secondary = (
+				<button vOn:click={this.onSecondaryClick} class="btn btn--secondary">
+					{op.get(this.page, 'secondary_button.text')}
+				</button>
+			)
+		}
+
+		let $form = <Form form={this.page.form} />
+		var mode = this.mode || MODE
+		return (
+			<div class={'template ' + this.template}>
+				<div class={mode}>
+					<this.Template
+						page={this.page}
+						form={$form}
+						primaryButton={$primary}
+						secondaryButton={$secondary}
+						closeButton={$close}
+					/>
+				</div>
+			</div>
+		)
+	},
+}
+
+// tokenizy(['hello XX andy XX go'], 'XX')
+// => ['hello ', {type: 'XX'},' andy ', {type: 'XX'}, ' go']
+function tokenize(arr, token) {
+	if (!arr || !arr.length) return []
+	var out = []
+
+	for (var i = 0; i < arr.length; i++) {
+		var item = arr[i]
+
+		if (typeof item !== 'string') {
+			out.push(item)
+			continue
+		}
+		var ts = item.split(token)
+		for (var i = 0; i < ts.length; i++) {
+			out.push(ts[i])
+			out.push({type: token})
+		}
+		out.pop()
+	}
+	return out
+}
+
+function replaceCssVariable(css, page) {
+	// tokenize
+	var tokens = [css]
+
+	tokens = tokenize(tokens, "'@desktop_appearance.color'")
+	tokens = tokenize(tokens, "'@desktop_appearance.background'")
+	tokens = tokenize(tokens, "'@desktop_appearance.input_color'")
+	tokens = tokenize(tokens, "'@desktop_appearance.input_background'")
+	tokens = tokenize(tokens, "'@primary_button.background'")
+	tokens = tokenize(tokens, "'@primary_button.color'")
+	tokens = tokenize(tokens, "'@secondary_button.background'")
+	tokens = tokenize(tokens, "'@secondary_button.color'")
+	tokens = tokenize(tokens, "'@desktop_appearance.background_image'")
+	tokens = tokenize(tokens, "'@desktop_appearance.width'")
+	tokens = tokenize(tokens, "'@desktop_appearance.min_height'")
+	tokens = tokenize(tokens, "'@desktop_appearance.padding_left'")
+	tokens = tokenize(tokens, "'@desktop_appearance.padding_right'")
+	tokens = tokenize(tokens, "'@desktop_appearance.padding_top'")
+	tokens = tokenize(tokens, "'@desktop_appearance.padding_bottom'")
+	tokens = tokenize(tokens, "'@mobile_appearance.background_image'")
+	tokens = tokenize(tokens, "'@mobile_appearance.width'")
+	tokens = tokenize(tokens, "'@mobile_appearance.min_height'")
+	tokens = tokenize(tokens, "'@mobile_appearance.padding_left'")
+	tokens = tokenize(tokens, "'@mobile_appearance.padding_right'")
+	tokens = tokenize(tokens, "'@mobile_appearance.padding_top'")
+	tokens = tokenize(tokens, "'@mobile_appearance.padding_bottom'")
+
+	var ret = []
+	for (var i = 0; i < tokens.length; i++) {
+		var item = tokens[i]
+		if (typeof item === 'string') {
+			ret.push(item)
+			continue
+		}
+
+		// remove @''
+		var path = item.type.substr(2, item.type.length - 3)
+		item.push(op.get(page, path))
+	}
+	return ret.join('')
+}
+
+export default {meta, Template}

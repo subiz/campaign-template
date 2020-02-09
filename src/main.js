@@ -1,8 +1,7 @@
 import Vue from 'vue'
 Vue.config.productionTip = false
 
-import index from '../templates/index.js'
-import Template from '../templates/template.js'
+import Template from '../templates/index.js'
 
 var common = require('../common.js')
 
@@ -29,7 +28,7 @@ new Vue({
 		}
 	},
 	mounted () {
-		var metadata = index[this.template].en
+		var metadata = Template.meta[this.template].en
 		this.page.title = metadata.title
 		this.page.description = metadata.description
 		this.page.primary_button.text = metadata.primary_button_text
@@ -42,7 +41,7 @@ new Vue({
 	render (h) {
 		return (
 			<div id="subiz">
-				<Template template={this.template} page={this.page} />
+				<Template.Template template={this.template} page={this.page} />
 			</div>
 		)
 	},

@@ -31,17 +31,18 @@ function walk (dir, done) {
 
 walk('templates', (err, results) => {
 	if (err) throw err
-	results = results.filter(f => f.endsWith('.js'))
+	results = results.filter(f => f.endsWith('.less'))
+	// ignore base.less
+	results = results.filter(f => !f.endsWith('/templates/base.less'))
 
 	// build less
 	results.map(file => {
-		let name = file.substr(0, file.length - 3)
-		console.log(file)
-		if (!fs.existsSync(name + '.less')) return
+		let name = file.substr(0, file.length - 5)
 		let cssname = name + '.css'
-
 		var ns = name.split('/')
 		var templateid = ns[ns.length - 2]
+		console.log(file, templateid)
+
 
 		// write tmp file
 		fs.writeFileSync('./.tmp.less', makeTempLess(templateid))
