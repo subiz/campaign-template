@@ -62,7 +62,7 @@ new Vue({
     this.page.primary_button.text = metadata.primary_button_text.vi;
     this.page.secondary_button.text = metadata.secondary_button_text.vi; // make the environment look like widget environment
 
-    common.setCssToHead('subiz-template-style-app', '#subiz * {all:unset;}');
+    // common.setCssToHead('subiz-template-style-app', '#subiz * {all:unset;}');
   },
   render: function render(h) {
     return h("div", {

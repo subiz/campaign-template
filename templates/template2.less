@@ -1,8 +1,8 @@
+@import (css) url(https://fonts.googleapis.com/css?family=Montserrat|Muli|Roboto|Yeseva+One&display=swap);
+@spacer-mobile:20px;
+@spacer: 30px;
 #template() {
 	@import './base.less';
-
-	@import (css) url("//fonts.googleapis.com/css?family=Montserrat|Muli|Roboto|Yeseva+One&display=swap");
-
 	.overlay {
 		position: fixed;
 		width: 100%;
@@ -15,109 +15,152 @@
 		justify-content: center;
 		z-index: 20000000000100;
 	}
-
+	.mobile {
+		 .title{
+			padding-left: @spacer-mobile;
+			padding-right:@spacer-mobile;
+		}	
+		 .description{
+			font-size: 16px;
+			padding-left: @spacer-mobile;
+			padding-right:@spacer-mobile;
+		}
+		.form{
+			overflow: scroll;
+			padding-left: @spacer-mobile;
+			padding-right: @spacer-mobile;
+		}
+		.buttons{
+			padding-left: @spacer-mobile;
+			padding-right: @spacer-mobile;
+		}
+		
+	} 
 	.container {
 		display: flex;
 		flex-direction: column;
-
 		width: 800px;
-		max-width: 100%;
-
+		max-height: 100vh;
+		max-width: 90%;
 		align-items: center;
-		background-image: url('../assets/bg2.png');
-
+		background-image: url('../assets/background/bg2.png');
 		background-size: auto;
-
 		position: relative;
 		margin: auto auto;
 	}
-
-	.btn--close {
+	.btn-close {
 		position: absolute;
 		right: 10px;
-		top: 10px;
+		top: 	10px;
+		height: 30px;
+		width: 30px;
+		border-radius: 50%;
+		background-color: #9e9381;
+		cursor: pointer;
+	}
+	.btn-close__icon{
+		display: flex;
 		height: 20px;
 		width: 20px;
-		border-radius: 50%;
 		border: 0px;
-		background-image: url('../assets/close.png');
-		background-size:100% 100%;
+		stroke: #fff;
+		margin: 5px auto
 	}
-
+	.btn-close:hover  {
+		background-color: #7d7465;
+	}
 	.container__inner {
 		display: flex;
 		flex-direction: column;
 		padding-top:30px;
+		padding-bottom:30px;
 		width: 430px;
-		max-width: 100%;
-		max-height: 80%;
+		max-width: 90%;
+		max-height: 100vh;
 		align-items: center;
 		background-color: #fff;
 		margin-top: 36px;
 		margin-bottom: 36px;
 		box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.0196802), 0px 2px 4px rgba(0, 0, 0, 0.03), 0px 7px 12px rgba(0, 0, 0, 0.0503198), 0px 18px 28px rgba(0, 0, 0, 0.07);
 	}
-
-	.title {
-		font-size: 30px;
-		font-weight: bold;
-		font-style: normal;
-		text-align: center;
-		font-family: "Montserrat";
-		padding-left: 50px;
-		padding-right: 50px;
-		width:100%;
+	.content{
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+		background-color: #fff;
+		max-height: ~"calc(100vh - 70px - 90px)";
 	}
-
+	.title {
+		font-size: 35px;
+		font-weight: bold;
+		text-align: center;
+		font-family: 'Montserrat';
+		padding-left: @spacer;
+		padding-right: @spacer;
+		margin: unset;
+	}
 	.description {
 		margin-top: 10px;
 		font-weight: normal;
 		text-align: center;
 		font-size: 18px;
 		font-family: 'Muli';
-		padding-left: 27px;
-		padding-right: 27px;
-		width:100%;
+		padding-left: @spacer;
+		padding-right: @spacer;
 	}
-
+	.form{
+		overflow: scroll;
+		padding-left: @spacer;
+		padding-right: @spacer ;
+	}
 	.buttons {
 		display: flex;
+		padding-left: @spacer;
+		padding-right:@spacer;
 		margin-top: 30px;
-		margin-bottom:  35px;
 		align-items: center;
 		justify-content: center;
-		width: 100%;
+		margin: unset;
+		margin-top: 30px;
 	}
-
 	.btn--primary {
+		// flex:1;
 		border:0px;
 		background-color: #FDAD15 ;
-		@include color(#fff);
+		color:#fff;
 		font-size: 16px;
-		font-weight: bole;
+		font-family: "Roboto";
+		font-weight: bold;
 		text-align: center;
 		text-transform: uppercase;
-		padding-left: 30px;
-		border-radius: 5px;
-		padding-right: 30px;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+		max-height: 50px;
+		padding-left: 22px;
+		padding-right: 22px;
 		padding-top: 12px;
 		padding-bottom: 12px;
-		font-family: "Roboto";
+		border-radius: 5px;
+
 		cursor: pointer;
 		outline: 0;
 	}
-
 	.btn--secondary {
+		// flex:1;
 		border:0px ;
 		border-radius: 5px;
 		background-color: #d1d1d1;
-		@include color(#fff);
+		color:#fff;
 		font-size: 16px;
 		font-weight: 500;
 		text-align: center;
 		text-transform: uppercase;
-		padding-left: 30px;
-		padding-right: 30px;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+		padding-left: 22px;
+		padding-right: 22px;
 		padding-top: 12px;
 		padding-bottom: 12px;
 		margin-left: 10px;
@@ -125,9 +168,8 @@
 		font-family: 'Roboto';
 		outline: 0;
 	}
-
 	.btn--secondary:hover {
-		color: #bbbbbb;
+		background-color: #bbb9b9;
 	}
 	.btn--primary:hover{
 		background-color: #de9813;
@@ -135,15 +177,14 @@
 	.form-template {
 		display: flex;
 		flex-direction: column;
-		width: 100%;
 		align-items: center;
 		overflow: scroll;
 	}
 	.form-item{
 		display: flex;
-		width: 80%;
+		width: 100%;
 		flex-direction: column;
-		margin-top: 20px;
+		margin-top: 15px;
 	}
 	.label{
 		font-family: 'Muli';
@@ -164,6 +205,8 @@
 		color: #8d8d8d80;
 		font-family: "Muli";
 	}
+	
 }
+
 
 #subiz .template.template2 { #template() !important; }

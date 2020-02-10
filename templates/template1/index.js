@@ -4,17 +4,18 @@ export default {
 	render (h) {
 		return (
 			<div class="container">
-				{this.closeButton}
-				<div class="main">
-					<div class="image"></div>
-					<div class="div-left"></div>
-					<div class="div-right">
+				<div class="container__inner">
+					{this.closeButton}
+					<div class="background"/>
+					<div class="content">
 						<p class="title">{this.page.title}</p>
 						<p class="description">{this.page.description}</p>
-						<div class="form">{this.form}</div>
+						<div class="form">
+						{this.form}
+						</div>
 						<div class="buttons">
-							{this.primaryButton}
-							{this.secondaryButton}
+						{this.primaryButton}
+						{this.secondaryButton}
 						</div>
 					</div>
 				</div>
