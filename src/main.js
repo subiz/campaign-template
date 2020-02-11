@@ -3,14 +3,13 @@ Vue.config.productionTip = false
 
 import Template from '../templates/index.js'
 import op from 'object-path'
-import objectPath from 'object-path'
 var common = require('../common.js')
 
 new Vue({
 	name: 'App',
 	data () {
 		return {
-			template: 'template2', // CHANGE THIS TO SWITCH TEMPLATE
+			template: 'template3', // CHANGE THIS TO SWITCH TEMPLATE
 			page: {
 				title: '',
 				description: '',
@@ -21,21 +20,24 @@ new Vue({
 						{ key: 2, label: 'Email', is_required: true, type: 'text', placeholder: 'johndoe@example.com' },
 						{ key: 3, label: 'Họ Tên', is_required: true, type: 'text', placeholder: 'John Doe' },
 						{ key: 4, label: 'Emails', is_required: true, type: 'text', placeholder: 'johndoe@example.com' },
-						{ key: 1, label: 'Họ Tên', is_required: true, type: 'text', placeholder: 'John Doe' },
-						{ key: 2, label: 'Email', is_required: true, type: 'text', placeholder: 'johndoe@example.com' },
+						{ key: 4, label: 'Emails', is_required: true, type: 'text', placeholder: 'johndoe@example.com' },
 						{ key: 3, label: 'Họ Tên', is_required: true, type: 'text', placeholder: 'John Doe' },
-		
+						{ key: 4, label: 'Emails', is_required: true, type: 'text', placeholder: 'johndoe@example.com' },
+						{ key: 4, label: 'Emails', is_required: true, type: 'text', placeholder: 'johndoe@example.com' },
+						{ key: 4, label: 'Emails', is_required: true, type: 'text', placeholder: 'johndoe@example.com' },
+						{ key: 3, label: 'Họ Tên', is_required: true, type: 'text', placeholder: 'John Doe' },
+						{ key: 4, label: 'Emails', is_required: true, type: 'text', placeholder: 'johndoe@example.com' },
 					],
 				},
 				primary_button: { enabled: true, text: 'DANG KY NGAY ' },
-				secondary_button: { enabled: true, text: 'DANG KY NGAY' },
+				secondary_button: { enabled: true, text: 'HUYR DANG KY NGAY DANG KY NGAY DANG KY NGAY ' },
 			},
 		}
 	},
 	mounted () {
 		var metadata = Template.meta[this.template].en
-		op.set(this.page, 'title', op.get(metadata, 'title'))
-		op.set(this.page, 'description', op.get(metadata, 'description'))
+		if(!op.get(this.page,'title')) op.set(this.page, 'title', op.get(metadata, 'title'))
+		if(!op.get(this.page,'description')) op.set(this.page, 'description', op.get(metadata, 'description'))
 		if(!op.get(this.page,'primary_button.text')){
 			op.set(this.page,'primary_button.text' , op.get(metadata, 'primary_button.text'))
 		}
