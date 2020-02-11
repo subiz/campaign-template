@@ -21,10 +21,14 @@ new Vue({
 						{ key: 2, label: 'Email', is_required: true, type: 'text', placeholder: 'johndoe@example.com' },
 						{ key: 3, label: 'Họ Tên', is_required: true, type: 'text', placeholder: 'John Doe' },
 						{ key: 4, label: 'Emails', is_required: true, type: 'text', placeholder: 'johndoe@example.com' },
+						{ key: 1, label: 'Họ Tên', is_required: true, type: 'text', placeholder: 'John Doe' },
+						{ key: 2, label: 'Email', is_required: true, type: 'text', placeholder: 'johndoe@example.com' },
+						{ key: 3, label: 'Họ Tên', is_required: true, type: 'text', placeholder: 'John Doe' },
+		
 					],
 				},
-				primary_button: { enabled: true, text: 'DANG KY NGAY' },
-				secondary_button: { enabled: true, text: '' },
+				primary_button: { enabled: true, text: 'DANG KY NGAY ' },
+				secondary_button: { enabled: true, text: 'DANG KY NGAY' },
 			},
 		}
 	},

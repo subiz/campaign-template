@@ -1,4 +1,5 @@
 import Form from '../components/Form.js'
+import CloseButton from '../components/CloseButton.js'
 var common = require('../common.js')
 var op = require('object-path')
 
@@ -167,7 +168,7 @@ Object.keys(meta).map(id => {
 						<div class="overlay">
 							<div class="container">
 								{this.closeButton}
-								<div class="container--inner">
+								<div class="container__inner">
 									<div class="background"></div>
 									<div class="content">
 										<p class="title">{this.page.title}</p>
@@ -240,8 +241,7 @@ let Template = {
 		if (!this.Template) return null
 		if (this.close) return null
 
-		let $close = <button class="btn btn--close" vOn:click={this.onClose}></button>
-
+		let $close = <CloseButton class="btn btn--close" vOn:click={this.onClose}/>
 		let $primary = null
 		if (op.get(this.page, 'primary_button.enabled')) {
 			$primary = (
