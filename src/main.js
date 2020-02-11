@@ -33,13 +33,12 @@ new Vue({
 	},
 	mounted () {
 		var metadata = Template.meta[this.template].en
-		if(!op.get(this.page,'title')) op.set(this.page, 'title', op.get(metadata, 'title'))
-		if(!op.get(this.page,'description')) op.set(this.page, 'description', op.get(metadata, 'description'))
-		if(!op.get(this.page,'primary_button.text')){
-			op.set(this.page,'primary_button.text' , op.get(metadata, 'primary_button.text'))
+		if (!op.get(this.page, 'title')) op.set(this.page, 'title', op.get(metadata, 'title'))
+		if (!op.get(this.page, 'description')) op.set(this.page, 'description', op.get(metadata, 'description'))
+		if (!op.get(this.page, 'primary_button.text')) {
+			op.set(this.page, 'primary_button.text', op.get(metadata, 'primary_button.text'))
 		}
-		if(!op.get(this.page,'secondary_button.text'))
-		op.set(this.page, 'secondary_button.text' , op.get(metadata, 'secondary_button.text'))
+		if (!op.get(this.page, 'secondary_button.text')) { op.set(this.page, 'secondary_button.text', op.get(metadata, 'secondary_button.text')) }
 		// make the environment look like widget environment
 		// common.setCssToHead('subiz-template-style-app', '#subiz * {all:unset;}')
 	},

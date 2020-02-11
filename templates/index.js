@@ -10,7 +10,9 @@ var meta = {
 	template1: {
 		// js: () => import(/*webpackPrefetch: true*/ /*webpackChunkName: "template1" */ './template1/index.js'),
 		css: () =>
-			import(/*webpackPrefetch: true*/ /*webpackChunkName: "template1_css" */ '!to-string-loader!css-loader!less-loader!./template1.less'),
+			import(
+				/*webpackPrefetch: true*/ /*webpackChunkName: "template1_css" */ '!to-string-loader!css-loader!less-loader!./template1.less'
+			),
 
 		type: 'modal',
 		en: {
@@ -27,7 +29,7 @@ var meta = {
 				background_image: '',
 				width: '',
 				min_height: '',
-				padding_left: '',
+				padding_left: '5px',
 				padding_right: '',
 				padding_top: '',
 				padding_bottom: '',
@@ -52,7 +54,9 @@ var meta = {
 	},
 	template2: {
 		css: () =>
-			import(/*webpackPrefetch: true*/ /*webpackChunkName: "template2_css" */ '!to-string-loader!css-loader!less-loader!./template2.less'),
+			import(
+				/*webpackPrefetch: true*/ /*webpackChunkName: "template2_css" */ '!to-string-loader!css-loader!less-loader!./template2.less'
+			),
 		type: 'modal',
 		en: {
 			name: 'Sign up offer',
@@ -71,7 +75,9 @@ var meta = {
 	},
 	template3: {
 		css: () =>
-			import(/*webpackPrefetch: true*/ /*webpackChunkName: "template3_css" */ '!to-string-loader!css-loader!less-loader!./template3.less'),
+			import(
+				/*webpackPrefetch: true*/ /*webpackChunkName: "template3_css" */ '!to-string-loader!css-loader!less-loader!./template3.less'
+			),
 		type: 'modal',
 		en: {
 			name: 'Sign up offer',
@@ -90,7 +96,9 @@ var meta = {
 	},
 	template4: {
 		css: () =>
-		import(/*webpackPrefetch: true*/ /*webpackChunkName: "template4_css" */ '!to-string-loader!css-loader!less-loader!./template4.less'),
+			import(
+				/*webpackPrefetch: true*/ /*webpackChunkName: "template4_css" */ '!to-string-loader!css-loader!less-loader!./template4.less'
+			),
 		type: 'modal',
 		en: {
 			name: 'Sign up offer',
@@ -258,7 +266,7 @@ let Template = {
 		if (!this.Template) return null
 		if (this.close) return null
 
-		let $close = <CloseButton class="btn btn--close" vOn:click={this.onClose}/>
+		let $close = <CloseButton class="btn btn--close" vOn:click={this.onClose} />
 		let $primary = null
 		if (op.get(this.page, 'primary_button.enabled')) {
 			$primary = (
@@ -321,29 +329,22 @@ function tokenize(arr, token) {
 function replaceCssVariable(css, page) {
 	// tokenize
 	var tokens = [css]
-
-	tokens = tokenize(tokens, "'@desktop_appearance.color'")
+	tokens = tokenize(tokens, "'@desktop_appearance.title_color'")
+	tokens = tokenize(tokens, "'@desktop_appearance.description_color'")
 	tokens = tokenize(tokens, "'@desktop_appearance.background'")
-	tokens = tokenize(tokens, "'@desktop_appearance.input_color'")
-	tokens = tokenize(tokens, "'@desktop_appearance.input_background'")
-	tokens = tokenize(tokens, "'@primary_button.background'")
-	tokens = tokenize(tokens, "'@primary_button.color'")
-	tokens = tokenize(tokens, "'@secondary_button.background'")
-	tokens = tokenize(tokens, "'@secondary_button.color'")
 	tokens = tokenize(tokens, "'@desktop_appearance.background_image'")
-	tokens = tokenize(tokens, "'@desktop_appearance.width'")
-	tokens = tokenize(tokens, "'@desktop_appearance.min_height'")
-	tokens = tokenize(tokens, "'@desktop_appearance.padding_left'")
-	tokens = tokenize(tokens, "'@desktop_appearance.padding_right'")
-	tokens = tokenize(tokens, "'@desktop_appearance.padding_top'")
-	tokens = tokenize(tokens, "'@desktop_appearance.padding_bottom'")
+	tokens = tokenize(tokens, "'@desktop_appearance.primary_button_background'")
+	tokens = tokenize(tokens, "'@desktop_appearance.primary_button_color'")
+	tokens = tokenize(tokens, "'@desktop_appearance.secondary_button.background'")
+	tokens = tokenize(tokens, "'@desktop_appearance.secondary_button.color'")
+	tokens = tokenize(tokens, "'@mobile_appearance.title_color'")
+	tokens = tokenize(tokens, "'@mobile_appearance.description_color'")
+	tokens = tokenize(tokens, "'@mobile_appearance.background'")
 	tokens = tokenize(tokens, "'@mobile_appearance.background_image'")
-	tokens = tokenize(tokens, "'@mobile_appearance.width'")
-	tokens = tokenize(tokens, "'@mobile_appearance.min_height'")
-	tokens = tokenize(tokens, "'@mobile_appearance.padding_left'")
-	tokens = tokenize(tokens, "'@mobile_appearance.padding_right'")
-	tokens = tokenize(tokens, "'@mobile_appearance.padding_top'")
-	tokens = tokenize(tokens, "'@mobile_appearance.padding_bottom'")
+	tokens = tokenize(tokens, "'@mobile_appearance.primary_button_background'")
+	tokens = tokenize(tokens, "'@mobile_appearance.primary_button_color'")
+	tokens = tokenize(tokens, "'@mobile_appearance.secondary_button.background'")
+	tokens = tokenize(tokens, "'@mobile_appearance.secondary_button.color'")
 
 	var ret = []
 	for (var i = 0; i < tokens.length; i++) {
