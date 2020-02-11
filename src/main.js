@@ -2,7 +2,8 @@ import Vue from 'vue'
 Vue.config.productionTip = false
 
 import Template from '../templates/index.js'
-
+import op from 'object-path'
+import objectPath from 'object-path'
 var common = require('../common.js')
 
 new Vue({
@@ -22,18 +23,20 @@ new Vue({
 						{ key: 4, label: 'Emails', is_required: true, type: 'text', placeholder: 'johndoe@example.com' },
 					],
 				},
-				primary_button: { enabled: true, text: '' },
+				primary_button: { enabled: true, text: 'DANG KY NGAY' },
 				secondary_button: { enabled: true, text: '' },
 			},
 		}
 	},
 	mounted () {
 		var metadata = Template.meta[this.template].en
-		this.page.title = metadata.title
-		this.page.description = metadata.description
-		this.page.primary_button.text = metadata.primary_button_text
-		this.page.secondary_button.text = metadata.secondary_button_text
-
+		op.set(this.page, 'title', op.get(metadata, 'title'))
+		op.set(this.page, 'description', op.get(metadata, 'description'))
+		if(!op.get(this.page,'primary_button.text')){
+			op.set(this.page,'primary_button.text' , op.get(metadata, 'primary_button.text'))
+		}
+		if(!op.get(this.page,'secondary_button.text'))
+		op.set(this.page, 'secondary_button.text' , op.get(metadata, 'secondary_button.text'))
 		// make the environment look like widget environment
 		// common.setCssToHead('subiz-template-style-app', '#subiz * {all:unset;}')
 	},
