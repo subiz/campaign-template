@@ -61,29 +61,31 @@
 }
 
 .background{
-	background-image: url('../assets/background/bg3.png');
-	max-height: 100vh;
-	width: 400px;
+	background-image: url('../assets/background/bg4.png');
+	height: 250px;
+	width: 100%;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 .container { 
-	width: 800px;
+	width: 350px;
 	max-height: 100vh;
 	background-color: #fff;
 	position: relative;
 }
 .container__inner{
 	display: flex;
+	flex-direction: column;
 	max-height: 100vh;
+	width: 100%;
 }
 .content{
 	display: flex;
 	flex-direction: column;
-	margin-top: 45px;
-	margin-bottom:45px;
-	width: 400px;
-	max-height:  ~"calc(100vh - 90px)";
+	margin-top: 15px;
+	margin-bottom:15px;
+	width: 100%;
+	max-height:  ~"calc(100vh - 90px - 245px)";
 }
 .btn-close {
 	position: absolute;
@@ -92,7 +94,7 @@
 	height: 30px;
 	width: 30px;
 	border-radius: 50%;
-	background-color: #fff;
+	background-color: #9e9381;
 	cursor: pointer;
 }
 .btn-close__icon{
@@ -100,13 +102,11 @@
 	height: 20px;
 	width: 20px;
 	border: 0px;
-	stroke: #9e9381;
+	stroke: #fff;
 	margin: 5px auto
 }
-.btn-close:hover .btn-close__icon {
-	background-color: #d8d1c6;
-	padding : 3px;
-	stroke: #fff;
+.btn-close:hover  {
+	background-color: #7d7465;
 }
 .title {
 	margin-top: 10px;
@@ -171,7 +171,7 @@
 }
 .btn--primary {
 	border:0px;
-	background-color: #B91526 ;
+	background-color: #FDAD15 ;
 	color:#fff;
 	font-size: 16px;
 	font-family: "Roboto";
@@ -216,5 +216,5 @@
 	background-color: #bbb9b9;
 }
 .btn--primary:hover{
-	background-color: #a91222;
+	background-color: #de9813;
 }

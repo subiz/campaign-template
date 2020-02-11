@@ -9,7 +9,7 @@ new Vue({
 	name: 'App',
 	data () {
 		return {
-			template: 'template3', // CHANGE THIS TO SWITCH TEMPLATE
+			template: 'template1', // CHANGE THIS TO SWITCH TEMPLATE
 			page: {
 				title: '',
 				description: '',
@@ -20,13 +20,10 @@ new Vue({
 						{ key: 2, label: 'Email', is_required: true, type: 'text', placeholder: 'johndoe@example.com' },
 						{ key: 3, label: 'Họ Tên', is_required: true, type: 'text', placeholder: 'John Doe' },
 						{ key: 4, label: 'Emails', is_required: true, type: 'text', placeholder: 'johndoe@example.com' },
-						{ key: 4, label: 'Emails', is_required: true, type: 'text', placeholder: 'johndoe@example.com' },
+						{ key: 2, label: 'Email', is_required: true, type: 'text', placeholder: 'johndoe@example.com' },
 						{ key: 3, label: 'Họ Tên', is_required: true, type: 'text', placeholder: 'John Doe' },
 						{ key: 4, label: 'Emails', is_required: true, type: 'text', placeholder: 'johndoe@example.com' },
-						{ key: 4, label: 'Emails', is_required: true, type: 'text', placeholder: 'johndoe@example.com' },
-						{ key: 4, label: 'Emails', is_required: true, type: 'text', placeholder: 'johndoe@example.com' },
-						{ key: 3, label: 'Họ Tên', is_required: true, type: 'text', placeholder: 'John Doe' },
-						{ key: 4, label: 'Emails', is_required: true, type: 'text', placeholder: 'johndoe@example.com' },
+						{ key: 2, label: 'Email', is_required: true, type: 'text', placeholder: 'johndoe@example.com' },
 					],
 				},
 				primary_button: { enabled: true, text: 'DANG KY NGAY ' },

@@ -8,9 +8,9 @@ var CSS = ''
 
 var meta = {
 	template1: {
-		js: () => import(/*webpackPrefetch: true*/ /*webpackChunkName: "template1" */ './template1/index.js'),
+		// js: () => import(/*webpackPrefetch: true*/ /*webpackChunkName: "template1" */ './template1/index.js'),
 		css: () =>
-			import(/*webpackPrefetch: true*/ /*webpackChunkName: "template1_css" */ '!to-string-loader!css-loader!less-loader!./template1/index.less'),
+			import(/*webpackPrefetch: true*/ /*webpackChunkName: "template1_css" */ '!to-string-loader!css-loader!less-loader!./template1.less'),
 
 		type: 'modal',
 		en: {
@@ -89,17 +89,34 @@ var meta = {
 		},
 	},
 	template4: {
-		name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
-		title: {
-			vi: 'Đăng ký nhận ưu đãi khủng',
-			en: 'Sign up to get special offer',
+		css: () =>
+		import(/*webpackPrefetch: true*/ /*webpackChunkName: "template4_css" */ '!to-string-loader!css-loader!less-loader!./template4.less'),
+		type: 'modal',
+		en: {
+			name: 'Sign up offer',
+			title: 'Sign up to get special offer',
+			description: 'Get 20% off your first order. Sign up now!',
+			primary_button: {text: 'Sign up now'},
+			secondary_button: {text: 'Cancel'},
 		},
-		description: {
-			vi: 'Giảm giá tới 95%. Miễn phí vận chuyển nội thành',
-			en: 'Get 95% of your first purchase. Free shipping',
+		vi: {
+			name: 'Form đăng ký nhận ưu đãi',
+			title: 'Đăng ký để nhận ưu đãi đặc biệt',
+			description: 'Giảm 20% chỉ một ngày duy nhất. Đăng ký ngay để nhận được mã giảm giá!',
+			primary_button: {text: 'Đăng ký ngay'},
+			secondary_button: {text: 'Bỏ qua'},
 		},
-		primary_button_text: {vi: 'Đăng ký ngay', en: 'Sign up now'},
-		secondary_button_text: {vi: 'Bỏ qua', en: 'Cancel'},
+		// name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
+		// title: {
+		// 	vi: 'Đăng ký nhận ưu đãi khủng',
+		// 	en: 'Sign up to get special offer',
+		// },
+		// description: {
+		// 	vi: 'Giảm giá tới 95%. Miễn phí vận chuyển nội thành',
+		// 	en: 'Get 95% of your first purchase. Free shipping',
+		// },
+		// primary_button_text: {vi: 'Đăng ký ngay', en: 'Sign up now'},
+		// secondary_button_text: {vi: 'Bỏ qua', en: 'Cancel'},
 	},
 	template9: {
 		name: {vi: 'Form hỏi ý kiến (feedback)', en: 'Feedback form'},
