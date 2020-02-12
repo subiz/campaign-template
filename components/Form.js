@@ -173,7 +173,7 @@ export default {
 		if (!showForm) return null
 
 		let $fields = this.form.fields.map(field => (
-			<div class="form-item">
+			<div class="form-field">
 				<label class="label">{field.label + ':'}</label>
 				{this.renderMultipleChoiceList(h, field)}
 				{this.renderSingleChoiceList(h, field)}
@@ -184,6 +184,6 @@ export default {
 				{this.renderBoolean(h, field)}
 			</div>
 		))
-		return <div class="form-template">{$fields}</div>
+		return <div class="form">{$fields}</div>
 	},
 }

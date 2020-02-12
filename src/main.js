@@ -11,8 +11,8 @@ new Vue({
 		return {
 			template: 'template1', // CHANGE THIS TO SWITCH TEMPLATE
 			page: {
-				title: '',
-				description: '',
+				title: 'Giam 10%',//'Đăng ký để nhận ưu đãi đặc biệt',
+				description: 'với đơn hàng đầu tiên của bạn',// 'Giảm 20% chỉ một ngày duy nhất. Đăng ký ngay để nhận được mã giảm giá!',
 				form: {
 					enabled: true,
 					fields: [
@@ -21,13 +21,10 @@ new Vue({
 						{ key: 3, label: 'Họ Tên', is_required: true, type: 'text', placeholder: 'John Doe' },
 						{ key: 4, label: 'Emails', is_required: true, type: 'text', placeholder: 'johndoe@example.com' },
 						{ key: 2, label: 'Email', is_required: true, type: 'text', placeholder: 'johndoe@example.com' },
-						{ key: 3, label: 'Họ Tên', is_required: true, type: 'text', placeholder: 'John Doe' },
-						{ key: 4, label: 'Emails', is_required: true, type: 'text', placeholder: 'johndoe@example.com' },
-						{ key: 2, label: 'Email', is_required: true, type: 'text', placeholder: 'johndoe@example.com' },
 					],
 				},
 				primary_button: { enabled: true, text: 'DANG KY NGAY ' },
-				secondary_button: { enabled: true, text: 'HUYR DANG KY NGAY DANG KY NGAY DANG KY NGAY ' },
+				secondary_button: { enabled: true, text: 'Khong, cam on toi se quay lai sau' },
 			},
 		}
 	},
@@ -38,7 +35,9 @@ new Vue({
 		if (!op.get(this.page, 'primary_button.text')) {
 			op.set(this.page, 'primary_button.text', op.get(metadata, 'primary_button.text'))
 		}
-		if (!op.get(this.page, 'secondary_button.text')) { op.set(this.page, 'secondary_button.text', op.get(metadata, 'secondary_button.text')) }
+		if (!op.get(this.page, 'secondary_button.text')) {
+			op.set(this.page, 'secondary_button.text', op.get(metadata, 'secondary_button.text'))
+		}
 		// make the environment look like widget environment
 		// common.setCssToHead('subiz-template-style-app', '#subiz * {all:unset;}')
 	},

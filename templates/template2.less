@@ -1,41 +1,11 @@
 @import (css) url(https://fonts.googleapis.com/css?family=Montserrat|Muli|Roboto|Yeseva+One&display=swap);
-@spacer-mobile:20px;
-@spacer: 30px;
+
+@spacer-mobile : 20px;
+@spacer        : 30px;
+
 #template() {
 	@import './base.less';
-	.overlay {
-		position: fixed;
-		width: 100%;
-		top: 0;
-		left: 0;
-		height: 100vh;
-		background: rgba(0, 0, 0, 0.8);
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		z-index: 20000000000100;
-	}
-	.mobile {
-		 .title{
-			padding-left: @spacer-mobile;
-			padding-right:@spacer-mobile;
-		}	
-		 .description{
-			font-size: 16px;
-			padding-left: @spacer-mobile;
-			padding-right:@spacer-mobile;
-		}
-		.form{
-			overflow: scroll;
-			padding-left: @spacer-mobile;
-			padding-right: @spacer-mobile;
-		}
-		.buttons{
-			padding-left: @spacer-mobile;
-			padding-right: @spacer-mobile;
-		}
-		
-	} 
+
 	.container {
 		display: flex;
 		flex-direction: column;
@@ -43,53 +13,46 @@
 		max-height: 100vh;
 		max-width: 100%;
 		align-items: center;
-		background-image: url('../assets/background/bg2.png');
 		background-size: auto;
 		position: relative;
 		margin: auto auto;
 	}
-	.btn-close {
-		position: absolute;
-		right: 10px;
-		top: 	10px;
-		height: 30px;
-		width: 30px;
-		border-radius: 50%;
-		background-color: #9e9381;
-		cursor: pointer;
-	}
-	.btn-close__icon{
-		display: flex;
-		height: 20px;
-		width: 20px;
-		border: 0px;
-		stroke: #fff;
-		margin: 5px auto
-	}
-	.btn-close:hover  {
-		background-color: #7d7465;
-	}
+
 	.container__inner {
+		width: 100%;
+		height: 100%;
+		position: relative;
+	}
+
+	.background {
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+	}
+
+	.content {
+		position: relative; // so the background stay behine it
+		overflow: hidden;
+
 		display: flex;
 		flex-direction: column;
+
+		background-color: #fff;
+		max-height: ~"calc(100vh - 60px - 75px)";
+
+		margin: auto auto;
+
 		padding-top:30px;
 		padding-bottom:30px;
 		width: 430px;
 		max-width: 100%;
-		max-height: 100vh;
-		align-items: center;
-		background-color: #fff;
 		margin-top: 36px;
 		margin-bottom: 36px;
 		box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.0196802), 0px 2px 4px rgba(0, 0, 0, 0.03), 0px 7px 12px rgba(0, 0, 0, 0.0503198), 0px 18px 28px rgba(0, 0, 0, 0.07);
 	}
-	.content{
-		display: flex;
-		width: 100%;
-		flex-direction: column;
-		background-color: #fff;
-		max-height: ~"calc(100vh - 60px - 75px)";
-	}
+
 	.title {
 		font-size: 35px;
 		font-weight: bold;
@@ -99,6 +62,7 @@
 		padding-right: @spacer;
 		margin: unset;
 	}
+
 	.description {
 		margin-top: 10px;
 		font-weight: normal;
@@ -108,89 +72,7 @@
 		padding-left: @spacer;
 		padding-right: @spacer;
 	}
-	.form{
-		overflow: scroll;
-		padding-left: @spacer;
-		padding-right: @spacer ;
-	}
-	.buttons {
-		display: flex;
-		padding-left: @spacer;
-		padding-right:@spacer;
-		margin-top: 30px;
-		align-items: center;
-		justify-content: center;
-		margin: unset;
-	}
-	.btn--primary {
-		// flex:1;
-		border:0px;
-		background-color: #FDAD15 ;
-		color:#fff;
-		font-size: 16px;
-		font-family: "Roboto";
-		font-weight: bold;
-		text-align: center;
-		text-transform: uppercase;
-		text-overflow: ellipsis;
-		overflow: hidden;
-		white-space: nowrap;
-		max-height: 50px;
-		padding-left: 22px;
-		padding-right: 22px;
-		padding-top: 12px;
-		padding-bottom: 12px;
-		border-radius: 5px;
 
-		cursor: pointer;
-		outline: 0;
-	}
-	.btn--secondary {
-		// flex:1;
-		border:0px ;
-		border-radius: 5px;
-		background-color: #d1d1d1;
-		color:#fff;
-		font-size: 16px;
-		font-weight: 500;
-		text-align: center;
-		text-transform: uppercase;
-		text-overflow: ellipsis;
-		overflow: hidden;
-		white-space: nowrap;
-		padding-left: 22px;
-		padding-right: 22px;
-		padding-top: 12px;
-		padding-bottom: 12px;
-		margin-left: 10px;
-		cursor: pointer;
-		font-family: 'Roboto';
-		outline: 0;
-	}
-	.btn--secondary:hover {
-		background-color: #bbb9b9;
-	}
-	.btn--primary:hover{
-		background-color: #de9813;
-	}
-	.form-template {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		overflow: scroll;
-	}
-	.form-item{
-		display: flex;
-		width: 100%;
-		flex-direction: column;
-		margin-top: 15px;
-	}
-	.label{
-		font-family: 'Muli';
-		font-size: 12px;
-		color: #000;
-		margin-top:unset;
-	}
 	.text-input {
 		border: none;
 		border-bottom: 1px solid #d9d9d9;
@@ -200,9 +82,18 @@
 		outline: 0;
 		font-family: "Muli";
 	}
-	.text-input::placeholder{
-		color: #8d8d8d80;
-		font-family: "Muli";
+
+	.btn.btn--primary {
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 16px;
+	}
+
+	.btn.btn--secondary {
+		text-transform: uppercase;
+		font-size: 16px;
+		font-weight: 500;
 	}
 }
+
 #subiz .template.template2 { #template() !important; }

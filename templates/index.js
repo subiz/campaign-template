@@ -5,7 +5,6 @@ var op = require('object-path')
 
 const MODE = common.mobilecheck() ? 'mobile' : 'desktop'
 var CSS = ''
-
 var meta = {
 	template1: {
 		// js: () => import(/*webpackPrefetch: true*/ /*webpackChunkName: "template1" */ './template1/index.js'),
@@ -15,41 +14,31 @@ var meta = {
 			),
 
 		type: 'modal',
-		en: {
-			name: 'Sign up offer',
-			title: '10% OFF',
-			description: 'your first order',
-			primary_button: {text: 'Sign up now', background: '', color: ''},
-			secondary_button: {text: "No, thanks. I'll be back later", background: '', color: ''},
-			color: '',
-			background: '',
-			input_color: '',
-			input_background: '',
-			desktop_appearance: {
-				background_image: '',
-				width: '',
-				min_height: '',
-				padding_left: '5px',
-				padding_right: '',
-				padding_top: '',
-				padding_bottom: '',
+
+		text: {
+			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
+			title: {vi: 'Giảm 10%', en: '10% OFF'},
+			description: {
+				vi: 'với đơn hàng đầu tiên của bạn',
+				en: 'your first order',
 			},
-			mobile_appearance: {
-				background_image: '',
-				width: '',
-				min_height: '',
-				padding_left: '',
-				padding_right: '',
-				padding_top: '',
-				padding_bottom: '',
+			primary_button_text: {vi: 'Đăng ký ngay', en: 'Sign up now'},
+			secondary_button_text: {
+				vi: 'Không, cảm ơn. Tôi sẽ quay lại sau',
+				en: "No, thanks. I'll be back later",
 			},
 		},
-		vi: {
-			name: 'Form đăng ký nhận ưu đãi',
-			title: 'Giảm 10%',
-			description: 'với đơn hàng đầu tiên của bạn',
-			primary_button: {text: 'Đăng ký ngay'},
-			secondary_button: {text: 'Không, cảm ơn. Tôi sẽ quay lại sau'},
+		desktop_appearance: {
+			title_color: 'black',
+			description_color: 'black',
+			background: 'white',
+			background_image: 'url(' + require('../assets/background/bg1.png') + ')',
+			primary_button_background: '#424E58',
+			primary_button_color: 'white',
+			secondary_button_background: 'transparent',
+			secondary_button_color: '#777',
+			input_color: 'black',
+			input_background: 'transparent',
 		},
 	},
 	template2: {
@@ -58,19 +47,30 @@ var meta = {
 				/*webpackPrefetch: true*/ /*webpackChunkName: "template2_css" */ '!to-string-loader!css-loader!less-loader!./template2.less'
 			),
 		type: 'modal',
-		en: {
-			name: 'Sign up offer',
-			title: 'Sign up to get special offer',
-			description: 'Get 20% off your first order. Sign up now!',
-			primary_button: {text: 'Sign up now'},
-			secondary_button: {text: 'Cancel'},
+		text: {
+			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
+			title: {
+				vi: 'Đăng ký để nhận ưu đãi đặc biệt',
+				en: 'Sign up to get special offer',
+			},
+			description: {
+				vi: 'Giảm 20% chỉ một ngày duy nhất. Đăng ký ngay để nhận được mã giảm giá!',
+				en: 'Get 20% off your first order. Sign up now!',
+			},
+			primary_button_text: {vi: 'Đăng ký ngay', en: 'Sign up now'},
+			secondary_button_text: {vi: 'Bỏ qua', en: 'Cancel'},
 		},
-		vi: {
-			name: 'Form đăng ký nhận ưu đãi',
-			title: 'Đăng ký để nhận ưu đãi đặc biệt',
-			description: 'Giảm 20% chỉ một ngày duy nhất. Đăng ký ngay để nhận được mã giảm giá!',
-			primary_button: {text: 'Đăng ký ngay'},
-			secondary_button: {text: 'Bỏ qua'},
+		desktop_appearance: {
+			title_color: 'black',
+			description_color: 'black',
+			background: 'white',
+			background_image: 'url(' + require('../assets/background/bg2.png') + ')',
+			primary_button_background: '#FDAD15',
+			primary_button_color: 'white;',
+			secondary_button_background: '',
+			secondary_button_color: '',
+			input_color: '',
+			input_background: '',
 		},
 	},
 	template3: {
@@ -198,7 +198,7 @@ Object.keys(meta).map(id => {
 									<div class="content">
 										<p class="title">{this.page.title}</p>
 										<p class="description">{this.page.description}</p>
-										<div class="form">{this.form}</div>
+										{this.form}
 										<div class="buttons">
 											{this.primaryButton}
 											{this.secondaryButton}
@@ -220,6 +220,7 @@ let Template = {
 		return {
 			Template: null,
 			close: false,
+			templateid: '',
 		}
 	},
 
@@ -228,8 +229,7 @@ let Template = {
 			this.loadTemplate(template)
 		},
 		async page(page) {
-			var css = replaceCssVariable(CSS, page)
-			common.setCssToHead('subiz-template-style-' + this.template, css)
+			this.populatePage(this.templateid, page)
 		},
 	},
 
@@ -238,6 +238,26 @@ let Template = {
 	},
 
 	methods: {
+		merge(a, b) {
+			a = a || {}
+			b = b || {}
+			var c = {}
+			var keys = Object.keys(a)
+			for (let i = 0; i < keys.length; i++) c[keys[i]] = a[keys[i]]
+			keys = Object.keys(b)
+			for (let i = 0; i < keys.length; i++) {
+				if (b[keys[i]])  c[keys[i]] = b[keys[i]]
+			}
+			return c
+		},
+
+		populatePage(templateid, page) {
+			let temp = meta[templateid]
+			var desktop_appearance = this.merge(temp.desktop_appearance, page.desktop_appearance)
+			var mobile_appearance = this.merge(temp.mobile_appearance, page.mobile_appearance)
+			var css = replaceCssVariable(CSS, {desktop_appearance, mobile_appearance})
+			common.setCssToHead('subiz-template-style-' + this.template, css)
+		},
 		onClose() {
 			this.$emit('closeButtonClicked')
 			this.close = true
@@ -257,8 +277,7 @@ let Template = {
 			let template = (await temp.js()).default
 			CSS = (await temp.css()).default
 			this.Template = template
-			var css = replaceCssVariable(CSS, this.page)
-			common.setCssToHead('subiz-template-style-' + t, css)
+			this.populatePage(t, this.page)
 		},
 	},
 
@@ -309,15 +328,16 @@ function tokenize(arr, token) {
 	if (!arr || !arr.length) return []
 	var out = []
 
-	for (var i = 0; i < arr.length; i++) {
+	if (arr.length > 100) return []
+	for (let i = 0; i < arr.length; i++) {
 		var item = arr[i]
-
 		if (typeof item !== 'string') {
 			out.push(item)
 			continue
 		}
 		var ts = item.split(token)
-		for (var i = 0; i < ts.length; i++) {
+		if (ts.length > 100) return []
+		for (let i = 0; i < ts.length; i++) {
 			out.push(ts[i])
 			out.push({type: token})
 		}
@@ -335,16 +355,20 @@ function replaceCssVariable(css, page) {
 	tokens = tokenize(tokens, "'@desktop_appearance.background_image'")
 	tokens = tokenize(tokens, "'@desktop_appearance.primary_button_background'")
 	tokens = tokenize(tokens, "'@desktop_appearance.primary_button_color'")
-	tokens = tokenize(tokens, "'@desktop_appearance.secondary_button.background'")
-	tokens = tokenize(tokens, "'@desktop_appearance.secondary_button.color'")
+	tokens = tokenize(tokens, "'@desktop_appearance.secondary_button_background'")
+	tokens = tokenize(tokens, "'@desktop_appearance.secondary_button_color'")
+	tokens = tokenize(tokens, "'@desktop_appearance.input_color'")
+	tokens = tokenize(tokens, "'@desktop_appearance.input_background'")
 	tokens = tokenize(tokens, "'@mobile_appearance.title_color'")
 	tokens = tokenize(tokens, "'@mobile_appearance.description_color'")
 	tokens = tokenize(tokens, "'@mobile_appearance.background'")
 	tokens = tokenize(tokens, "'@mobile_appearance.background_image'")
 	tokens = tokenize(tokens, "'@mobile_appearance.primary_button_background'")
 	tokens = tokenize(tokens, "'@mobile_appearance.primary_button_color'")
-	tokens = tokenize(tokens, "'@mobile_appearance.secondary_button.background'")
-	tokens = tokenize(tokens, "'@mobile_appearance.secondary_button.color'")
+	tokens = tokenize(tokens, "'@mobile_appearance.secondary_button_background'")
+	tokens = tokenize(tokens, "'@mobile_appearance.secondary_button_color'")
+	tokens = tokenize(tokens, "'@mobile_appearance.input_color'")
+	tokens = tokenize(tokens, "'@mobile_appearance.input_background'")
 
 	var ret = []
 	for (var i = 0; i < tokens.length; i++) {
@@ -356,7 +380,7 @@ function replaceCssVariable(css, page) {
 
 		// remove @''
 		var path = item.type.substr(2, item.type.length - 3)
-		item.push(op.get(page, path))
+		ret.push(op.get(page, path))
 	}
 	return ret.join('')
 }
