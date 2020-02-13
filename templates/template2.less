@@ -41,7 +41,6 @@
 
 		background-color: #fff;
 		max-height: ~"calc(100vh - 60px - 75px)";
-
 		margin: auto auto;
 
 		padding-top:30px;
@@ -93,6 +92,40 @@
 		text-transform: uppercase;
 		font-size: 16px;
 		font-weight: 500;
+	}
+	.mobile {
+		.content{
+			max-width: 90%;
+		}
+
+		.container{
+			max-width: 90%;
+		}
+
+		.title{
+			font-size: 28px;
+			padding-left: @spacer-mobile;
+			padding-right: @spacer-mobile;
+		}
+
+		.description{
+			font-size: 16px;
+			padding-left: @spacer-mobile;
+			padding-right: @spacer-mobile;
+		}
+		.form{
+			padding-left: @spacer-mobile;
+			padding-right: @spacer-mobile;
+		}
+		.buttons{
+			padding-left: @spacer-mobile;
+			padding-right: @spacer-mobile;
+		}
+
+		.btn--close{
+			top: 5px;
+			right: 5px;
+		}
 	}
 }
 
