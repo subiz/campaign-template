@@ -29,6 +29,7 @@ new Vue({
 		}
 	},
 	mounted () {
+		this.template = window.location.pathname.substr(1)
 		var metadata = Template.meta[this.template].en
 		if (!op.get(this.page, 'title')) op.set(this.page, 'title', op.get(metadata, 'title'))
 		if (!op.get(this.page, 'description')) op.set(this.page, 'description', op.get(metadata, 'description'))
