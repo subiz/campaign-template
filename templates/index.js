@@ -159,7 +159,6 @@ var meta = {
 			title_color: 'black',
 			description_color: 'black',
 			background: 'white',
-			// background_image: 'url(' + require('../assets/background/bg5.png') + ')',
 			primary_button_background: '#001984',
 			primary_button_color: 'white;',
 			secondary_button_background: '#777',
@@ -168,31 +167,89 @@ var meta = {
 			input_background: '',
 		},
 	},
-	// template9: {
-	// 	name: {vi: 'Form hỏi ý kiến (feedback)', en: 'Feedback form'},
-	// 	title: {
-	// 		vi: 'Bạn có tìm được thứ mình cần?',
-	// 		en: 'Did you find what you need?',
-	// 	},
-	// 	description: {
-	// 		vi: 'Chia sẻ cảm nhận của bạn cho chúng tôi bạn sẽ nhận được 10% GIẢM GIÁ.',
-	// 		en: 'Share your recent experience and get 10% off your next purchase',
-	// 	},
-	// 	primary_button_text: {vi: 'Gửi cảm nhận', en: 'Send feedback'},
-	// 	secondary_button_text: {vi: 'Bỏ qua', en: 'Cancel'},
-	// },
+	template6: {
+		css: () =>
+			import(
+				/*webpackPrefetch: true*/ /*webpackChunkName: "template6_css" */ '!to-string-loader!css-loader!less-loader!./template6.less'
+			),
+		type: 'modal',
+		text: {
+			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
+			title: {
+				vi: 'Đăng ký để nhận ưu đãi đặc biệt',
+				en: 'Sign up to get special offer',
+			},
+			description: {
+				vi: 'Giảm 20% chỉ một ngày duy nhất. Đăng ký ngay để nhận được mã giảm giá!',
+				en: 'Get 20% off your first order. Sign up now!',
+			},
+			primary_button_text: {vi: 'Đăng ký ngay', en: 'Sign up now'},
+			secondary_button_text: {vi: 'Bỏ qua', en: 'Cancel'},
+		},
+		desktop_appearance: {
+			title_color: '#fff',
+			description_color: '#fff',
+			background: 'white',
+			primary_button_background: '#001984',
+			primary_button_color: 'white;',
+			secondary_button_background: '#777',
+			secondary_button_color: 'white',
+			input_color: '',
+			input_background: '',
+		},
+		mobile_appearance: {
+			title_color: '#fff',
+			description_color: '#fff',
+			background: 'white',
+			background_image:  'url(' + require('../assets/background/template6_mobile.png') + ')',
+			primary_button_background: '#dab86a',
+			primary_button_color: 'white;',
+			secondary_button_background: '#777',
+			secondary_button_color: 'white',
+			input_color: '',
+			input_background: '',
+		},
+	},
+	template9: {
+
+		css: () =>
+			import(
+				/*webpackPrefetch: true*/ /*webpackChunkName: "template9_css" */ '!to-string-loader!css-loader!less-loader!./template9.less'
+			),
+		type: 'modal',
+		text: {
+			name: {vi: 'Form hỏi ý kiến (feedback)', en: 'Feedback form'},
+			title: {
+				vi: 'Bạn có tìm được thứ mình cần?',
+				en: 'Did you find what you need?',
+			},
+			description: {
+				vi: 'Chia sẻ cảm nhận của bạn cho chúng tôi bạn sẽ nhận được 10% GIẢM GIÁ.',
+				en: 'Share your recent experience and get 10% off your next purchase',
+			},
+			primary_button_text: {vi: 'Gửi cảm nhận', en: 'Send feedback'},
+			secondary_button_text: {vi: 'Bỏ qua', en: 'Cancel'},
+		},
+		desktop_appearance: {
+			title_color: 'black',
+			description_color: 'black',
+			background: 'white',
+			primary_button_background: '#fdad15',
+			primary_button_color: 'white;',
+			secondary_button_background: '#777',
+			secondary_button_color: 'white',
+			input_color: '',
+			input_background: '',
+		},
+		
+	},
 	// template10: {
 	// 	name: {vi: 'Form hỏi ý kiến (feedback)', en: 'Feedback form'},
 	// 	title: {
 	// 		vi: 'Bạn có tìm được thứ mình cần?',
 	// 		en: 'Did you find what you need?',
 	// 	},
-	// 	description: {
-	// 		vi: 'Chia sẻ cảm nhận của bạn cho chúng tôi bạn sẽ nhận được 10% GIẢM GIÁ.',
-	// 		en: 'Share your recent experience and get 10% off your next purchase',
-	// 	},
-	// 	primary_button_text: {vi: 'Gửi cảm nhận', en: 'Send feedback'},
-	// 	secondary_button_text: {vi: 'Bỏ qua', en: 'Cancel'},
+		
 	// },
 	// template17: {
 	// 	name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
@@ -225,7 +282,6 @@ var meta = {
 // add default js load function for any template dont has custom template
 Object.keys(meta).map(id => {
 	if (meta[id].js) return
-	console.log("	meta.desktop_appearance.background_image", id)
 	meta[id].desktop_appearance.background_image='url(' + require('../assets/background/'+ id +'.png') + ')'
 	meta[id].js = () =>
 		Promise.resolve({

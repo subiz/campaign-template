@@ -305,11 +305,26 @@ input {
 
 .text-input::placeholder{
 	.color(@input_color);
-	opacity: 0.3;
+	opacity: 0.5;
 }
 
 .mobile .text-input::placeholder{
 	.color(@mobile_input_color);
+	opacity: 0.3;
+}
+
+.textarea{
+	margin-top: 5px;
+	height: 70px;
+}
+
+.textarea::placeholder {
+	.color(@input_color);
+	opacity: 0.5;
+}
+
+.mobile .textarea::placeholder {
+	.color(@input_color);
 	opacity: 0.3;
 }
 
