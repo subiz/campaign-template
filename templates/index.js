@@ -156,10 +156,11 @@ var meta = {
 			secondary_button_text: {vi: 'Bỏ qua', en: 'Cancel'},
 		},
 		desktop_appearance: {
-			title_color: 'black',
-			description_color: 'black',
+			title_color: 'white',
+			description_color: 'white',
 			background: 'white',
-			primary_button_background: '#001984',
+			// background_image: 'url(' + require('../assets/background/bg5.png') + ')',
+			primary_button_background: '#FDAD15',
 			primary_button_color: 'white;',
 			secondary_button_background: '#777',
 			secondary_button_color: 'white',
@@ -216,25 +217,52 @@ var meta = {
 			import(
 				/*webpackPrefetch: true*/ /*webpackChunkName: "template9_css" */ '!to-string-loader!css-loader!less-loader!./template9.less'
 			),
+			type: 'modal',
+			text: {
+				name: {vi: 'Form hỏi ý kiến (feedback)', en: 'Feedback form'},
+				title: {
+					vi: 'Bạn có tìm được thứ mình cần?',
+					en: 'Did you find what you need?',
+				},
+				description: {
+					vi: 'Chia sẻ cảm nhận của bạn cho chúng tôi bạn sẽ nhận được 10% GIẢM GIÁ.',
+					en: 'Share your recent experience and get 10% off your next purchase',
+				},
+				primary_button_text: {vi: 'Gửi cảm nhận', en: 'Send feedback'},
+				secondary_button_text: {vi: 'Bỏ qua', en: 'Cancel'},
+			},
+			desktop_appearance: {
+				title_color: 'black',
+				description_color: 'black',
+				background: 'white',
+				primary_button_background: '#fdad15',
+			}
+	},
+	template10: {
+		css: () =>
+			import(
+				/*webpackPrefetch: true*/ /*webpackChunkName: "template10_css" */ '!to-string-loader!css-loader!less-loader!./template10.less'
+			),
 		type: 'modal',
 		text: {
 			name: {vi: 'Form hỏi ý kiến (feedback)', en: 'Feedback form'},
 			title: {
-				vi: 'Bạn có tìm được thứ mình cần?',
-				en: 'Did you find what you need?',
+				vi: 'Feedback của bạn rất quan trọng với chúng tôi!',
+				en: 'Your feedback is valuable to us!',
 			},
 			description: {
-				vi: 'Chia sẻ cảm nhận của bạn cho chúng tôi bạn sẽ nhận được 10% GIẢM GIÁ.',
-				en: 'Share your recent experience and get 10% off your next purchase',
+				vi: 'Oh không! Tại sao bạn lại rời khỏi đây quá sớm như thế?',
+				en: 'Oh no! Why do you leave so soon?',
 			},
-			primary_button_text: {vi: 'Gửi cảm nhận', en: 'Send feedback'},
+			primary_button_text: {vi: 'Gửi ngay', en: 'Send feedback'},
 			secondary_button_text: {vi: 'Bỏ qua', en: 'Cancel'},
 		},
 		desktop_appearance: {
-			title_color: 'black',
+			title_color: 'back',
 			description_color: 'black',
 			background: 'white',
-			primary_button_background: '#fdad15',
+			// background_image: 'url(' + require('../assets/background/bg5.png') + ')',
+			primary_button_background: '#000',
 			primary_button_color: 'white;',
 			secondary_button_background: '#777',
 			secondary_button_color: 'white',
@@ -243,40 +271,6 @@ var meta = {
 		},
 		
 	},
-	// template10: {
-	// 	name: {vi: 'Form hỏi ý kiến (feedback)', en: 'Feedback form'},
-	// 	title: {
-	// 		vi: 'Bạn có tìm được thứ mình cần?',
-	// 		en: 'Did you find what you need?',
-	// 	},
-		
-	// },
-	// template17: {
-	// 	name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
-	// 	title: {
-	// 		vi: 'ĐĂNG KÝ ĐỂ NHẬN ƯU ĐÃI ĐẶC BIỆT',
-	// 		en: 'SIGN UP TO GET SPECIAL OFFER',
-	// 	},
-	// 	description: {
-	// 		vi: 'Giảm 20% chỉ một ngày duy nhất. Đăng ký ngay để nhận được mã giảm giá!',
-	// 		en: 'Get 20% off your first order. Sign up now!',
-	// 	},
-	// 	primary_button_text: {vi: 'Đăng ký ngay', en: 'Sign up now'},
-	// 	secondary_button_text: {vi: 'Bỏ qua', en: 'Cancel'},
-	// },
-	// templateu23: {
-	// 	name: {vi: 'Pop-up sự kiện', en: 'Event pop-up'},
-	// 	title: {
-	// 		vi: 'CHẶNG ĐƯỜNG MỚI \n THÀNH CÔNG MỚI',
-	// 		en: 'NEW JOURNEY \n NEW SUCCESS',
-	// 	},
-	// 	description: {
-	// 		vi: 'Giảm 20% chỉ một ngày duy nhất. Đăng ký ngay để nhận được mã giảm giá!',
-	// 		en: 'Get 20% off your first order. Sign up now!',
-	// 	},
-	// 	primary_button_text: {vi: 'Đăng ký ngay', en: 'Sign up now'},
-	// 	secondary_button_text: {vi: 'Bỏ qua', en: 'Cancel'},
-	// },
 }
 
 // add default js load function for any template dont has custom template

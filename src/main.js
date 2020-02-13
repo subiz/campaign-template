@@ -18,7 +18,9 @@ new Vue({
 					fields: [
 						{ key: 1, label: 'Họ Tên', is_required: true, type: 'text', placeholder: 'John Doe' },
 						{ key: 2, label: 'Email', is_required: true, type: 'text', placeholder: 'johndoe@example.com' },
-						{ key: 3, label: 'Họ Tên', is_required: true, type: 'text', placeholder: 'John Doe' },
+						{ key: 2, is_required: true, type: 'list', label: 'Feedback',
+						list: ['Ở đây không có điều tôi tìm kiếm', 'Đừng lo, tôi sẽ quay lại', 'Giá của bạn chưa hợp lý', 'Thông tin của bạn chưa rõ ràng']},
+						//{ key: 3, label: 'Họ Tên', is_required: true, type: 'text', placeholder: 'John Doe' },
 						// { key: 1, label: 'Họ Tên', is_required: true, type: 'text', placeholder: 'John Doe' },
 							// { key: 2, label: 'Email', is_required: true, type: 'text', placeholder: 'johndoe@example.com' },
 							
