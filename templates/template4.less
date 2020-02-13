@@ -1,152 +1,56 @@
 @import (css) url('https://fonts.googleapis.com/css?family=Montserrat|Muli|Roboto|Yeseva+One&display=swap');
 @spacer-mobile:20px;
-@spacer: 35px;
+@spacer: 25px;
 #template() {
-	.overlay {
-		position: fixed;
-		width: 100%;
-		top: 0;
-		left: 0;
-		height: 100vh;
-		background: rgba(0, 0, 0, 0.8);
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		z-index: 20000000000100;
-	}
-	.mobile {
-		.background{
-			display: flex;
-			width: 335px;
-			height: 235px;
-		}
-		.container { 
-			max-width: 335px;
-			max-height: 100vh;
-			background-color: #fff;
-			position: relative;
-		}
-		.container__inner{
-			display: flex;
-			flex-direction: column;
-			max-height: 100vh;
-			max-width: 100%;
-		}
-		.content{
-			margin-top: 20px;
-			margin-bottom: 20px;
-			max-height:  ~"calc(100vh - 90px - 235px)";
-			max-width: 100%;
-		}
-		.title{
-		padding-left: @spacer-mobile;
-		padding-right:@spacer-mobile;
-	}	
-		.description{
-		margin-top:10px;
-		margin-bottom:10px;
-		font-size: 16px;
-		padding-left: @spacer-mobile;
-		padding-right:@spacer-mobile;
-	}
-	.form{
-		overflow: scroll;
-		padding-left: @spacer-mobile;
-		padding-right: @spacer-mobile;
-	}
-	.buttons{
-		margin-top:20px;
-		padding-left: @spacer-mobile;
-		padding-right: @spacer-mobile;
-	}
-	}
+	@import './base.less';
 	.background{
-		background-image: url('../assets/background/bg4.png');
 		height: 250px;
-		width: 100%;
-		background-repeat: no-repeat;
-		background-size: cover;
+		max-width: 100%;
 	}
 	.container { 
-		width: 350px;
+		max-width: 360px;
 		max-height: 100vh;
-		background-color: #fff;
 		position: relative;
 	}
 	.container__inner{
-		display: flex;
 		flex-direction: column;
-		max-height: 100vh;
+		max-height: 100%;
 		width: 100%;
 	}
 	.content{
 		display: flex;
 		flex-direction: column;
-		margin-top: 15px;
-		margin-bottom:15px;
+		padding-top: 20px;
+		padding-bottom:20px;
 		width: 100%;
-		max-height:  ~"calc(100vh - 90px - 245px)";
-	}
-	.btn-close {
-		position: absolute;
-		right: 10px;
-		top: 	10px;
-		height: 30px;
-		width: 30px;
-		border-radius: 50%;
-		background-color: #9e9381;
-		cursor: pointer;
-	}
-	.btn-close__icon{
-		display: flex;
-		height: 20px;
-		width: 20px;
-		border: 0px;
-		stroke: #fff;
-		margin: 5px auto
-	}
-	.btn-close:hover  {
-		background-color: #7d7465;
+		max-height:  ~"calc(100vh - 40px - 250px)";
+		box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.0196802), 0px 2px 4px rgba(0, 0, 0, 0.03), 0px 7px 12px rgba(0, 0, 0, 0.0503198), 0px 18px 28px rgba(0, 0, 0, 0.07);
+
 	}
 	.title {
 		margin-top: 10px;
 		font-size: 28px;
-		font-weight: bold;
-		font-family: 'Montserrat';
+		font-family: 'Yeseva One';
 		padding-left: @spacer;
 		padding-right: @spacer;
-		margin: unset;
+		margin:0px
 	}
+
 	.description {
 		font-weight: normal;
 		font-size: 16px;
 		font-family: 'Muli';
 		padding-left: @spacer;
 		padding-right: @spacer;
+		margin-top: 10px;
+		margin-bottom:10px;
 	}
+
 	.form{
-		overflow: scroll;
 		padding-left: @spacer;
 		padding-right: @spacer;
 	}
-	.form-template {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		overflow: scroll;
-	}
-	.form-item{
-		display: flex;
-		width: 100%;
-		flex-direction: column;
-		margin-top: 15px;
-	}
-	.label{
-		font-family: 'Muli';
-		font-size: 12px;
-		color: #000;
-		margin-top:unset;
-	}
+
 	.text-input {
 		border: none;
 		border-bottom: 1px solid #d9d9d9;
@@ -156,67 +60,60 @@
 		outline: 0;
 		font-family: "Muli";
 	}
+
 	.text-input::placeholder{
 		color: #8d8d8d80;
 		font-family: "Muli";
 	}
 
-	.buttons{
-		display: flex;
-		padding-left: @spacer;
-		padding-right: @spacer;
-		margin-top:35px;
-		align-items: center;
-		justify-content: center;
-	}
 	.btn--primary {
-		border:0px;
-		background-color: #001984 ;
-		color:#fff;
 		font-size: 16px;
-		font-family: "Roboto";
 		font-weight: bold;
-		text-align: center;
 		text-transform: uppercase;
-		text-overflow: ellipsis;
-		overflow: hidden;
-		white-space: nowrap;
-		max-height: 50px;
-		padding-left: 22px;
-		padding-right: 22px;
-		padding-top: 12px;
-		padding-bottom: 12px;
-		border-radius: 5px;
 
 		cursor: pointer;
 		outline: 0;
 	}
+
 	.btn--secondary {
-		border:0px ;
-		border-radius: 5px;
-		background-color: #d1d1d1;
-		color:#fff;
 		font-size: 16px;
 		font-weight: 500;
-		text-align: center;
 		text-transform: uppercase;
-		text-overflow: ellipsis;
-		overflow: hidden;
-		white-space: nowrap;
-		padding-left: 22px;
-		padding-right: 22px;
-		padding-top: 12px;
-		padding-bottom: 12px;
-		margin-left: 10px;
+
 		cursor: pointer;
-		font-family: 'Roboto';
 		outline: 0;
 	}
-	.btn--secondary:hover {
-		background-color: #bbb9b9;
+
+	.mobile {
+		.background{
+			max-width: 100%;
+			height: 235px;
+		}
+		.container { 
+			max-width: 90%;
+		}
+		.content{
+			max-height:  ~"calc(100vh - 20px - 250px)";
+		}
+		.title{
+			padding-left: @spacer-mobile;
+			padding-right:@spacer-mobile;
+		}	
+		.description{
+			font-size: 16px;
+			padding-left: @spacer-mobile;
+			padding-right:@spacer-mobile;
+		}
+		.form{
+			padding-left: @spacer-mobile;
+			padding-right: @spacer-mobile;
+		}
+		.buttons{
+			margin-top:20px;
+			padding-left: @spacer-mobile;
+			padding-right: @spacer-mobile;
+		}
 	}
-	.btn--primary:hover{
-		background-color: #011467;
-	}
+	
 }
 #subiz .template.template4 { #template() !important; }
