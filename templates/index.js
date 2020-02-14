@@ -746,14 +746,14 @@ var meta = {
 			},
 		},
 		desktop_appearance: {
-			title_color: 'black',
-			description_color: 'black',
+			title_color: '#122121',
+			description_color: '#244242',
 			background: 'white',
 			primary_button_background: '#ffba01',
 			primary_button_color: 'white',
 			secondary_button_background: 'transparent',
 			secondary_button_color: '#5f6369',
-			input_color: 'black',
+			input_color: '#326767',
 			input_background: 'transparent',
 		},
 	},
@@ -791,6 +791,131 @@ thành công mới`,
 		},
 		mobile_appearance: {
 			background_image: 'url(' + require('../assets/background/templateu23_mobile.png') + ')',
+		},
+	},
+
+	template16: {
+		css: () =>
+			import(
+				/*webpackPrefetch: true*/ /*webpackChunkName: "template16_css" */ '!to-string-loader!css-loader!less-loader!./template16.less'
+			),
+		type: 'modal',
+		text: {
+			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
+			title: {vi: 'Giảm 10%', en: '10% OFF'},
+			description: {
+				vi: 'với đơn hàng đầu tiền của bạn',
+				en: 'your first order',
+			},
+			primary_button_text: {vi: 'ĐĂNG KÝ NGAY', en: 'SIGN UP NOW'},
+			secondary_button_text: {
+				vi: 'Không, cảm ơn. Tôi sẽ quay lại sau',
+				en: "No, thanks. I'll be back later",
+			},
+		},
+		desktop_appearance: {
+			title_color: 'black',
+			description_color: 'black',
+			background: 'white',
+			primary_button_background: 'linear-gradient(103.5deg, #EE2849 0%, #D65C70 100%)',
+			primary_button_color: 'white',
+			secondary_button_background: 'transparent',
+			secondary_button_color: '#5f6369',
+			input_color: '#5f6369',
+			input_background: 'transparent',
+		},
+  },
+  template17: {
+		css: () =>
+			import(
+				/*webpackPrefetch: true*/ /*webpackChunkName: "template17_css" */ '!to-string-loader!css-loader!less-loader!./template17.less'
+			),
+		type: 'modal',
+		text: {
+			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
+			title: {vi: 'Giảm 10%', en: '10% OFF'},
+			description: {
+				vi: 'với đơn hàng đầu tiền của bạn',
+				en: 'your first order',
+			},
+			primary_button_text: {vi: 'ĐĂNG KÝ NGAY', en: 'SIGN UP NOW'},
+			secondary_button_text: {
+				vi: 'Không, cảm ơn. Tôi sẽ quay lại sau',
+				en: "No, thanks. I'll be back later",
+			},
+		},
+		desktop_appearance: {
+			title_color: 'black',
+			description_color: 'black',
+			background: 'white',
+			primary_button_background: 'linear-gradient(103.5deg, #593EF4 0%, #525EE0 100%) ',
+			primary_button_color: 'white',
+			secondary_button_background: 'transparent',
+			secondary_button_color: '#5f6369',
+			input_color: '#5f6369',
+			input_background: 'transparent',
+		},
+  },
+  template18: {
+		css: () =>
+			import(
+				/*webpackPrefetch: true*/ /*webpackChunkName: "template18_css" */ '!to-string-loader!css-loader!less-loader!./template18.less'
+			),
+		type: 'modal',
+		text: {
+			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
+			title: {vi: 'ĐĂNG KÝ ĐỂ NHẬN ƯU ĐÃI ĐẶC BIỆT', en: '10% OFF'},
+			description: {
+				vi: 'nhận ngay mã giảm giá tới 500K cho đơn hàng đầu tiên',
+				en: 'Get up to 100$ off your first order',
+			},
+			primary_button_text: {vi: 'ĐĂNG KÝ NGAY', en: 'SIGN UP NOW'},
+			secondary_button_text: {
+				vi: 'Không, cảm ơn. Tôi sẽ quay lại sau',
+				en: "No, thanks. I'll be back later",
+			},
+		},
+		desktop_appearance: {
+			title_color: 'black',
+			description_color: 'black',
+			background: 'white',
+			primary_button_background: 'linear-gradient(74.1deg, #5E8D81 0.21%, #3FA684 100%)',
+			primary_button_color: 'white',
+			secondary_button_background: 'transparent',
+			secondary_button_color: 'black',
+			input_color: 'black',
+			input_background: 'transparent',
+		},
+  },
+  template19: {
+		css: () =>
+			import(
+				/*webpackPrefetch: true*/ /*webpackChunkName: "template19_css" */ '!to-string-loader!css-loader!less-loader!./template19.less'
+			),
+		type: 'modal',
+		text: {
+			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
+			title: {vi: 'ƯU ĐÃI 10%', en: '10% OFF'},
+			description: {
+				vi: 'Đăng ký ngay và nhận mã giảm giá 10% cho đơn hàng đầu tiên',
+				en: 'Regiter now and get 10% OFF your first order',
+			},
+			primary_button_text: {vi: 'ĐĂNG KÝ NGAY', en: 'SIGN UP NOW'},
+			secondary_button_text: {
+				vi: 'Không, cảm ơn. Tôi sẽ quay lại sau',
+				en: "No, thanks. I'll be back later",
+			},
+		},
+		desktop_appearance: {
+			title_color: 'black',
+			description_color: 'black',
+			background: 'white',
+			primary_button_background: 'linear-gradient(103.29deg, #D53938 0%, #FEBD3C 100%)',
+			primary_button_color: 'white',
+			secondary_button_background: 'transparent',
+			secondary_button_color: '#777',
+			input_color: 'black',
+			input_background: 'transparent',
 		},
 	},
 }
