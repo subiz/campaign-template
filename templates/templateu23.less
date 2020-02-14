@@ -1,0 +1,133 @@
+@import (css) url(https://fonts.googleapis.com/css?family=Montserrat|Muli|Roboto|Yeseva+One|Roboto+Condensed&display=swap);
+@spacer: 30px;
+
+#template() {
+  @import './base.less';
+
+	.container {
+		display: flex;
+		width: 750px  ;
+		max-width: 100%;
+		max-height: 600px;
+		margin: auto;
+		position: relative;
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%)  ;
+	}
+
+	.container__inner {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		align-items: flex-end;
+	}
+
+	.background {
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+	}
+
+	.mobile .background {
+		width: 100%;
+    height: 250px;
+		position: relative;
+	}
+
+	.content {
+		margin-left: 30px;
+		flex: 1;
+		position: relative; // so the background stay behine it
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+
+		max-height: ~"calc(100vh - 60px - 75px)";
+		max-width: 50%;
+		width: 460px;
+		margin-top: 36px;
+		margin-bottom: 36px;
+	}
+
+	.form {
+		display: none;
+	}
+
+	.mobile .content {
+		max-width: 100%;
+	}
+
+	.title {
+		font-weight: bold;
+		text-align: center;
+		font-family: 'Roboto Condensed';
+		padding-left: @spacer;
+		padding-right: @spacer;
+		margin: unset;
+
+		font-size: 33px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	.description {
+		margin-top: 20px;
+		font-weight: 600;
+		text-align: center;
+		font-size: 18px;
+		font-family: 'Muli';
+		padding-left: @spacer;
+		padding-right: @spacer;
+	}
+
+	.text-input {
+		border: none;
+		border-bottom: 1px solid #d9d9d9;
+		width: 100%;
+		height: 43px;
+		font-size: 14px;
+		outline: 0;
+		font-family: "Muli";
+	}
+
+	.btn.btn--primary {
+		border-radius: 80px;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 16px;
+		margin-top: 15px;
+		width: 100%;
+	}
+
+	.btn.btn--secondary {
+		border-radius: 80px;
+		text-transform: uppercase;
+		font-size: 16px;
+		font-weight: 500;
+		margin-top: 15px;
+		width: 100%;
+	}
+
+	.label {
+		display: none;
+	}
+
+	.text-input {
+		border-radius: 80px;
+    text-align: center;
+	}
+
+	.buttons {
+		flex-direction: column;
+		margin-top: 0px;
+	}
+}
+
+#subiz .template.templateu23 { #template() !important; }
