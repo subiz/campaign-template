@@ -24,7 +24,11 @@
 	color: @color;
 	-webkit-text-fill-color: @color;
 }
-
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
 .overlay {
 	position: fixed;
 	width: 100%;
@@ -139,7 +143,7 @@
 }
 
 .btn.btn--primary {
-	background-color: @primary_button_background;
+	background: @primary_button_background;
 	.color(@primary_button_color);
 
 	padding-left: 22px;

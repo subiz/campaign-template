@@ -269,7 +269,245 @@ var meta = {
 			input_color: '',
 			input_background: '',
 		},
-		
+	},
+	template20: {
+		css: () =>
+			import(
+				/*webpackPrefetch: true*/ /*webpackChunkName: "template20_css" */ '!to-string-loader!css-loader!less-loader!./template20.less'
+			),
+		type: 'modal',
+		text: {
+			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
+			title: {
+				vi: 'Đăng ký ngay để nhận mã giảm gía 15%',
+				en: 'Register and get 15% off your next order',
+			},
+			description: {
+				vi: 'Và nhận thông báo về các chương trình khuyến mãi mới nhất của chúng tôi',
+				en: 'And never miss out any new promotion',
+			},
+			primary_button_text: {vi: 'Đăng ký ngay', en: 'Shop now'},
+			secondary_button_text: {vi: 'Không, cảm ơn.Tôi sẽ quay lại sau', en: "No, thanks.I'll be back later"},
+		},
+		desktop_appearance: {
+			title_color: 'white',
+			description_color: 'black',
+			background: 'white',
+			// background_image: 'url(' + require('../assets/background/bg5.png') + ')',
+			primary_button_background: 'linear-gradient(107.32deg, #EE4A9B 0%, #F9A219 100%)',
+			primary_button_color: 'white;',
+			secondary_button_background: '#777',
+			secondary_button_color: 'white',
+			input_color: '',
+			input_background: '',
+		},
+		mobile_appearance: {
+			background_image: 'url(' + require('../assets/background/template20_mobile.png') + ')'
+		}
+	},
+	template21: {
+		css: () =>
+			import(
+				/*webpackPrefetch: true*/ /*webpackChunkName: "template20_css" */ '!to-string-loader!css-loader!less-loader!./template21.less'
+			),
+		type: 'modal',
+		text: {
+			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
+			title: {
+				vi: 'Đăng ký ngay để nhận mã giảm gía 15%',
+				en: 'Register and get 15% off your next order',
+			},
+			description: {
+				vi: 'Và nhận thông báo về các chương trình khuyến mãi mới nhất của chúng tôi',
+				en: 'And never miss out any new promotion',
+			},
+			primary_button_text: {vi: 'Nhận mã giảm giá', en: 'Get the coupon code'},
+			secondary_button_text: {vi: 'Không, cảm ơn.Tôi sẽ quay lại sau', en: "No, thanks.I'll be back later"},
+		},
+		desktop_appearance: {
+			title_color: 'white',
+			description_color: 'white',
+			background: 'white',
+			// background_image: 'url(' + require('../assets/background/bg5.png') + ')',
+			primary_button_background: 'linear-gradient(109.98deg, #D53938 0%, #FEBD3C 100%);',
+			primary_button_color: 'white;',
+			secondary_button_background: 'unset',
+			secondary_button_color: '#B3C4CC',
+			input_color: '',
+			input_background: '',
+		},
+		mobile_appearance: {
+			background_image: 'url(' + require('../assets/background/template21_mobile.png') + ')'
+		}
+	},
+	template22: {
+		css: () =>
+			import(
+				/*webpackPrefetch: true*/ /*webpackChunkName: "template20_css" */ '!to-string-loader!css-loader!less-loader!./template22.less'
+			),
+		type: 'modal',
+		text: {
+			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
+			title: {
+				vi: 'Săn coupon hot với ưu đãi đến 49%',
+				en: 'Get up to 49% off now',
+			},
+			description: {
+				vi: 'Đừng bỏ lỡ cơ hội này',
+				en: "Don't miss this change",
+			},
+			primary_button_text: {vi: 'Săn coupon ngay', en: 'Get the coupon'},
+			secondary_button_text: {vi: 'Không, cảm ơn.Tôi sẽ quay lại sau', en: "No, thanks.I'll be back later"},
+		},
+		desktop_appearance: {
+			title_color: 'white',
+			description_color: 'white',
+			background: 'white',
+			// background_image: 'url(' + require('../assets/background/bg5.png') + ')',
+			primary_button_background: 'linear-gradient(109.98deg, #D53938 0%, #FEBD3C 100%);',
+			primary_button_color: 'white;',
+			secondary_button_background: 'unset',
+			secondary_button_color: '#B3C4CC',
+			input_color: '',
+			input_background: '',
+		},
+		mobile_appearance: {
+			background_image: 'url(' + require('../assets/background/template22_mobile.png') + ')'
+		}
+	},
+	template23: {
+		css: () =>
+			import(
+				/*webpackPrefetch: true*/ /*webpackChunkName: "template20_css" */ '!to-string-loader!css-loader!less-loader!./template23.less'
+			),
+		type: 'modal',
+		text: {
+			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
+			title: {
+				vi: 'Săn coupon hot với ưu đãi đến 49%',
+				en: 'Get up to 49% off now',
+			},
+			description: {
+				vi: 'Đừng bỏ lỡ cơ hội này',
+				en: "Don't miss this change",
+			},
+			primary_button_text: {vi: 'Săn coupon ngay', en: 'Get the coupon'},
+			secondary_button_text: {vi: 'Không, cảm ơn.Tôi sẽ quay lại sau', en: "No, thanks.I'll be back later"},
+		},
+		desktop_appearance: {
+			title_color: 'white',
+			description_color: 'white',
+			background: 'white',
+			// background_image: 'url(' + require('../assets/background/bg5.png') + ')',
+			primary_button_background: 'linear-gradient(109.98deg, #D53938 0%, #FEBD3C 100%)',
+			primary_button_color: 'white;',
+			secondary_button_background: 'unset',
+			secondary_button_color: '#B3C4CC',
+			input_color: '',
+			input_background: '',
+		},
+		mobile_appearance: {
+			background_image: 'url(' + require('../assets/background/template23_mobile.png') + ')'
+		}
+	},
+	template24: {
+		css: () =>
+			import(
+				/*webpackPrefetch: true*/ /*webpackChunkName: "template24_css" */ '!to-string-loader!css-loader!less-loader!./template24.less'
+			),
+		type: 'modal',
+		text: {
+			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
+			title: {
+				vi: 'Ưu đãi 15% và miễn phí vận chuyển',
+				en: 'Get 15% off and Free shipping',
+			},
+			description: {
+				vi: 'Đăng ký ngay để nhận ưu đãi và thông báo cho các chương trình khuyến mãi tiếp',
+				en: "Register to get the discount and receive notification for next promotions",
+			},
+			primary_button_text: {vi: 'Đăng ký ngay', en: 'Shop now'},
+			secondary_button_text: {vi: 'Không, cảm ơn.Tôi sẽ quay lại sau', en: "No, thanks.I'll be back later"},
+		},
+		desktop_appearance: {
+			title_color: '#2E052E',
+			description_color: '#2E052E',
+			background: 'white',
+			// background_image: 'url(' + require('../assets/background/bg5.png') + ')',
+			primary_button_background: 'linear-gradient(109.98deg, #593EF4 0%, #525EE0 100%)',
+			primary_button_color: 'white;',
+			secondary_button_background: 'unset',
+			secondary_button_color: '#5F6369;',
+			input_color: '',
+			input_background: '',
+		},
+		mobile_appearance: {
+			background_image: 'url(' + require('../assets/background/template24_mobile.png') + ')'
+		}
+	},
+	tet20203: {
+		css: () =>
+			import(
+				/*webpackPrefetch: true*/ /*webpackChunkName: "template24_css" */ '!to-string-loader!css-loader!less-loader!./tet20203.less'
+			),
+		type: 'modal',
+		text: {
+			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
+			title: {
+				vi: 'Chúc mừng năm mới',
+				en: 'Happy new year',
+			},
+			description: {
+				vi: 'Tết tới tấn tài\nXuân sang đắc lộc\nGia đình hạnh phúc\nVạn sự cát tường',
+				en: "Tết tới tấn tài\nXuân sang đắc lộc\nGia đình hạnh phúc\nVạn sự cát tường",
+			},
+			primary_button_text: {vi: 'Đăng ký ngay', en: 'Shop now'},
+			secondary_button_text: {vi: 'Không, cảm ơn.Tôi sẽ quay lại sau', en: "No, thanks.I'll be back later"},
+		},
+		desktop_appearance: {
+			title_color: '#FAC571',
+			description_color: '#fff',
+			background: '#9F0102',
+			// background_image: 'url(' + require('../assets/background/bg5.png') + ')',
+			primary_button_background: 'linear-gradient(109.98deg, #593EF4 0%, #525EE0 100%)',
+			primary_button_color: 'white;',
+			secondary_button_background: 'unset',
+			secondary_button_color: '#5F6369;',
+			input_color: '',
+			input_background: '',
+		},
+	},
+	tet20204: {
+		css: () =>
+			import(
+				/*webpackPrefetch: true*/ /*webpackChunkName: "template24_css" */ '!to-string-loader!css-loader!less-loader!./tet20204.less'
+			),
+		type: 'modal',
+		text: {
+			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
+			title: {
+				vi: 'Happy new year 2020',
+				en: 'Happy new year',
+			},
+			description: {
+				vi: 'Kính chúc khách hàng một năm mới\nAn Khang Thịnh Vượng',
+				en: "Kính chúc khách hàng một năm mới\nAn Khang Thịnh Vượng",
+			},
+			primary_button_text: {vi: 'Đăng ký ngay', en: 'Shop now'},
+			secondary_button_text: {vi: 'Không, cảm ơn.Tôi sẽ quay lại sau', en: "No, thanks.I'll be back later"},
+		},
+		desktop_appearance: {
+			title_color: '#FDE5AF',
+			description_color: '#FCC626',
+			background: '#9F0102',
+			// background_image: 'url(' + require('../assets/background/bg5.png') + ')',
+			primary_button_background: 'linear-gradient(109.98deg, #593EF4 0%, #525EE0 100%)',
+			primary_button_color: 'white;',
+			secondary_button_background: 'unset',
+			secondary_button_color: '#5F6369;',
+			input_color: '',
+			input_background: '',
+		},
 	},
 }
 

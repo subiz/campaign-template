@@ -1,0 +1,48 @@
+@import (css) url(https://fonts.googleapis.com/css?family=Montserrat|Muli|Roboto|Yeseva+One|Roboto+Condensed&display=swap);
+@spacer-mobile:20px;
+@spacer: 30px;
+#template() {
+  @import './base.less';
+  .container {
+    width: 375px;
+    position: relative;
+  }
+  .desktop .container {
+    width: 720px;
+  }
+  .background {
+    height: 667px;
+  }
+  .title {
+    font-size: 26px;
+    line-height: 100%;
+    font-weight: bold;
+    position: absolute;
+    top: 500px;
+    left: 43px;
+  }
+  .desktop .title {
+    font-size: 48px;
+    line-height: 100%;
+    width: 205px;
+    left: 498px;
+    top: 461px;
+  }
+  .description {
+    font-size: 18px;
+    line-height: 130%;
+    position: absolute;
+    top: 560px;
+    left: 0;
+    width: 285px;
+    text-align: center;
+  }
+  .desktop .description {
+    top: 578px;
+  }
+  .buttons, .form {
+    display: none;
+  }
+}
+
+#subiz .template.tet20204 { #template() !important; }
