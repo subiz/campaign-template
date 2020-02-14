@@ -9,10 +9,10 @@ new Vue({
 	name: 'App',
 	data () {
 		return {
-			template: '', 
+			template: '',
 			page: {
-				title: '',//'Đăng ký để nhận ưu đãi đặc biệt',
-				description: '',// 'Giảm 20% chỉ một ngày duy nhất. Đăng ký ngay để nhận được mã giảm giá!',
+				title: '', //'Đăng ký để nhận ưu đãi đặc biệt',
+				description: '', // 'Giảm 20% chỉ một ngày duy nhất. Đăng ký ngay để nhận được mã giảm giá!',
 				form: {
 					enabled: true,
 					fields: [
@@ -29,8 +29,6 @@ new Vue({
 						// { key: 2, label: 'Email', is_required: true, type: 'text', placeholder: ' johndoe@example.com' },
 						// { key: 1, label: 'Họ Tên', is_required: true, type: 'text', placeholder: ' John Doe' },
 						// { key: 2, label: 'Email', is_required: true, type: 'text', placeholder: 'johndoe@example.com' },
-
-
 					],
 				},
 				primary_button: { enabled: true, text: '' },

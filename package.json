@@ -5,7 +5,8 @@
 	"scripts": {
 		"serve": "vue-cli-service serve",
 		"gen": "node ./generate.js",
-		"build": "rm -rf dist && npx babel index.js -d dist && npx babel templates -d dist/templates && npx babel components -d dist/components && npx babel src -d dist/src"
+		"build": "rm -rf dist && npx babel index.js -d dist && npx babel templates -d dist/templates && npx babel components -d dist/components && npx babel src -d dist/src",
+		"format": "prettier-eslint --write *.js && prettier-eslint --write \"{templates,components,src}/**/*.js\""
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.8.3",

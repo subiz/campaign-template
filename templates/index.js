@@ -486,7 +486,7 @@ var meta = {
 			},
 			description: {
 				vi: '2020',
-				en: "2020",
+				en: '2020',
 			},
 			primary_button_text: {vi: 'Đăng ký ngay', en: 'Shop now'},
 			secondary_button_text: {vi: 'Không, cảm ơn.Tôi sẽ quay lại sau', en: "No, thanks.I'll be back later"},
@@ -504,7 +504,7 @@ var meta = {
 		},
 		mobile_appearance: {
 			background_image: 'url(' + require('../assets/background/tet20201_mobile.png') + ')',
-		}
+		},
 	},
 	tet20202: {
 		css: () =>
@@ -520,7 +520,7 @@ var meta = {
 			},
 			description: {
 				vi: '2020',
-				en: "2020",
+				en: '2020',
 			},
 		},
 		desktop_appearance: {
@@ -536,7 +536,7 @@ var meta = {
 		},
 		mobile_appearance: {
 			background_image: 'url(' + require('../assets/background/tet20202_mobile.png') + ')',
-		}
+		},
 	},
 	tet20203: {
 		css: () =>
@@ -792,8 +792,7 @@ thành công mới`,
 		mobile_appearance: {
 			background_image: 'url(' + require('../assets/background/templateu23_mobile.png') + ')',
 		},
-	}
-
+	},
 }
 // add default js load function for any template dont has custom template
 Object.keys(meta).map(id => {

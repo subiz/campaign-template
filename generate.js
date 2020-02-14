@@ -43,7 +43,6 @@ walk('templates', (err, results) => {
 		var templateid = ns[ns.length - 2]
 		console.log(file, templateid)
 
-
 		// write tmp file
 		fs.writeFileSync('./.tmp.less', makeTempLess(templateid))
 		var less = spawnSync('node', ['./node_modules/less/bin/lessc', './.tmp.less', cssname])

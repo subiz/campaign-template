@@ -1,9 +1,9 @@
 export default {
-  render(h) {
-    return (
+	render (h) {
+		return (
 			<div class="btn-close">
-					<svg 
-					vOn:click={(e)=>this.$emit('click',e)} 
+				<svg
+					vOn:click={e => this.$emit('click', e)}
 					class="btn-close__icon"
 					xmlns="http://www.w3.org/2000/svg"
 					width="24"
@@ -18,6 +18,6 @@ export default {
 					<line x1="6" y1="6" x2="18" y2="18"></line>
 				</svg>
 			</div>
-    );
-  },
-};
+		)
+	},
+}
