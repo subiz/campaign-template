@@ -472,6 +472,72 @@ var meta = {
 			background_image: 'url(' + require('../assets/background/template24_mobile.png') + ')',
 		},
 	},
+	tet20201: {
+		css: () =>
+			import(
+				/*webpackPrefetch: true*/ /*webpackChunkName: "tet20201_css" */ '!to-string-loader!css-loader!less-loader!./tet20201.less'
+			),
+		type: 'modal',
+		text: {
+			name: {vi: 'Happy new year 2020 1', en: 'Happy new year 2020 1'},
+			title: {
+				vi: 'Happy new year',
+				en: 'Happy new year',
+			},
+			description: {
+				vi: '2020',
+				en: "2020",
+			},
+			primary_button_text: {vi: 'Đăng ký ngay', en: 'Shop now'},
+			secondary_button_text: {vi: 'Không, cảm ơn.Tôi sẽ quay lại sau', en: "No, thanks.I'll be back later"},
+		},
+		desktop_appearance: {
+			title_color: '#FAC571',
+			description_color: '#FAC571',
+			// background_image: 'url(' + require('../assets/background/bg5.png') + ')',
+			primary_button_background: 'linear-gradient(109.98deg, #593EF4 0%, #525EE0 100%)',
+			primary_button_color: 'white;',
+			secondary_button_background: 'unset',
+			secondary_button_color: '#5F6369;',
+			input_color: '',
+			input_background: '',
+		},
+		mobile_appearance: {
+			background_image: 'url(' + require('../assets/background/tet20201_mobile.png') + ')',
+		}
+	},
+	tet20202: {
+		css: () =>
+			import(
+				/*webpackPrefetch: true*/ /*webpackChunkName: "tet20202_css" */ '!to-string-loader!css-loader!less-loader!./tet20202.less'
+			),
+		type: 'modal',
+		text: {
+			name: {vi: 'Happy new year 2020 2', en: 'Happy new year 2020 2'},
+			title: {
+				vi: 'Mừng xuân canh tý',
+				en: 'Mừng xuân canh tý',
+			},
+			description: {
+				vi: '2020',
+				en: "2020",
+			},
+		},
+		desktop_appearance: {
+			title_color: '#FAC571',
+			description_color: '#FAC571',
+			// background_image: 'url(' + require('../assets/background/bg5.png') + ')',
+			primary_button_background: 'linear-gradient(109.98deg, #593EF4 0%, #525EE0 100%)',
+			primary_button_color: 'white;',
+			secondary_button_background: 'unset',
+			secondary_button_color: '#5F6369;',
+			input_color: '',
+			input_background: '',
+		},
+		mobile_appearance: {
+			background_image: 'url(' + require('../assets/background/tet20202_mobile.png') + ')',
+		}
+	},
 	tet20203: {
 		css: () =>
 			import(
@@ -727,6 +793,7 @@ thành công mới`,
 			background_image: 'url(' + require('../assets/background/templateu23_mobile.png') + ')',
 		},
 	}
+
 }
 // add default js load function for any template dont has custom template
 Object.keys(meta).map(id => {
