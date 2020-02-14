@@ -95,7 +95,6 @@ var meta = {
 			title_color: 'black',
 			description_color: 'black',
 			background: 'white',
-			// background_image: 'url(' + require('../assets/background/template3.png') + ')',
 			primary_button_background: '#d12',
 			primary_button_color: 'white;',
 			secondary_button_background: '#777',
@@ -260,7 +259,6 @@ var meta = {
 			title_color: 'black',
 			description_color: 'black',
 			background: 'white',
-			// background_image: 'url(' + require('../assets/background/bg5.png') + ')',
 			primary_button_background: '#000',
 			primary_button_color: 'white;',
 			secondary_button_background: '#777',
@@ -292,7 +290,6 @@ var meta = {
 			title_color: 'white',
 			description_color: 'black',
 			background: 'white',
-			// background_image: 'url(' + require('../assets/background/bg5.png') + ')',
 			primary_button_background: 'linear-gradient(107.32deg, #EE4A9B 0%, #F9A219 100%)',
 			primary_button_color: 'white;',
 			secondary_button_background: '#777',
@@ -325,9 +322,8 @@ var meta = {
 			title_color: '#FDAD15',
 			description_color: 'white',
 			background: 'white',
-			// background_image: 'url(' + require('../assets/background/bg5.png') + ')',
 			primary_button_background: '#FDAD15',
-			primary_button_color: 'white;',
+			primary_button_color: 'white',
 			secondary_button_background: '#777',
 			secondary_button_color: 'white',
 			input_color: '',
@@ -340,7 +336,7 @@ var meta = {
 	template21: {
 		css: () =>
 			import(
-				/*webpackPrefetch: true*/ /*webpackChunkName: "template20_css" */ '!to-string-loader!css-loader!less-loader!./template21.less'
+				/*webpackPrefetch: true*/ /*webpackChunkName: "template21_css" */ '!to-string-loader!css-loader!less-loader!./template21.less'
 			),
 		type: 'modal',
 		text: {
@@ -360,7 +356,6 @@ var meta = {
 			title_color: 'white',
 			description_color: 'white',
 			background: 'white',
-			// background_image: 'url(' + require('../assets/background/bg5.png') + ')',
 			primary_button_background: 'linear-gradient(109.98deg, #D53938 0%, #FEBD3C 100%);',
 			primary_button_color: 'white;',
 			secondary_button_background: 'unset',
@@ -375,7 +370,7 @@ var meta = {
 	template22: {
 		css: () =>
 			import(
-				/*webpackPrefetch: true*/ /*webpackChunkName: "template20_css" */ '!to-string-loader!css-loader!less-loader!./template22.less'
+				/*webpackPrefetch: true*/ /*webpackChunkName: "template22_css" */ '!to-string-loader!css-loader!less-loader!./template22.less'
 			),
 		type: 'modal',
 		text: {
@@ -410,7 +405,7 @@ var meta = {
 	template23: {
 		css: () =>
 			import(
-				/*webpackPrefetch: true*/ /*webpackChunkName: "template20_css" */ '!to-string-loader!css-loader!less-loader!./template23.less'
+				/*webpackPrefetch: true*/ /*webpackChunkName: "template23_css" */ '!to-string-loader!css-loader!less-loader!./template23.less'
 			),
 		type: 'modal',
 		text: {
@@ -480,7 +475,7 @@ var meta = {
 	tet20203: {
 		css: () =>
 			import(
-				/*webpackPrefetch: true*/ /*webpackChunkName: "template24_css" */ '!to-string-loader!css-loader!less-loader!./tet20203.less'
+				/*webpackPrefetch: true*/ /*webpackChunkName: "template20203_css" */ '!to-string-loader!css-loader!less-loader!./tet20203.less'
 			),
 		type: 'modal',
 		text: {
@@ -512,7 +507,7 @@ var meta = {
 	tet20204: {
 		css: () =>
 			import(
-				/*webpackPrefetch: true*/ /*webpackChunkName: "template24_css" */ '!to-string-loader!css-loader!less-loader!./tet20204.less'
+				/*webpackPrefetch: true*/ /*webpackChunkName: "template20204_css" */ '!to-string-loader!css-loader!less-loader!./tet20204.less'
 			),
 		type: 'modal',
 		text: {
@@ -696,6 +691,42 @@ var meta = {
 			input_background: 'transparent',
 		},
 	},
+	templateu23: {
+		css: () =>
+			import(
+				/*webpackPrefetch: true*/ /*webpackChunkName: "templateu23_css" */ '!to-string-loader!css-loader!less-loader!./templateu23.less'
+			),
+		type: 'modal',
+		text: {
+			name: {vi: 'U23 2019', en: 'U23 2019'},
+			title: {
+				vi: `Chặng đường mới
+thành công mới`,
+				en: `Chặng đường mới
+thành công mới`,
+			},
+			description: {
+				vi: 'Đón thêm khách hàng mới cùng subiz new widget',
+				en: 'Đón thêm khách hàng mới cùng subiz new widget',
+			},
+			primary_button_text: {vi: 'Xem ngay', en: 'See now'},
+			secondary_button_text: {vi: 'Bỏ qua', en: 'Cancel'},
+		},
+		desktop_appearance: {
+			title_color: '#FFC48B',
+			description_color: 'white',
+			background: '#B41A12',
+			primary_button_background: '#FFC48B',
+			primary_button_color: '#B41A12',
+			secondary_button_background: '#777',
+			secondary_button_color: 'white',
+			input_color: '',
+			input_background: '',
+		},
+		mobile_appearance: {
+			background_image: 'url(' + require('../assets/background/templateu23_mobile.png') + ')',
+		},
+	}
 }
 // add default js load function for any template dont has custom template
 Object.keys(meta).map(id => {
