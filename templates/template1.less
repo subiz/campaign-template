@@ -31,11 +31,12 @@
 	}
 	.mobile .container {
 		padding: 0;
-		max-height: 100vh;
+		max-height: 100%;
 	}
 	.mobile .container__inner {
-		max-height: 100vh;
-		height: 700px;
+		max-height: 100%;
+		padding-bottom: 40px;
+		padding-top: 40px;
 		position: relative;
 		padding-left: 20px;
 		padding-right: 20px;
@@ -49,7 +50,7 @@
     margin-left: 50%;
     width: 50%;
 		padding-top: @spacer;
-    max-height: calc(100vh - 135px);
+    max-height: calc(100% - 135px);
     justify-content: center;
 		overflow: hidden;
 	}
@@ -156,15 +157,12 @@
 		font-size: 13px;
 	}
 
-	.form {
-		width: calc(100% - @spacer - @spacer);
-	}
 	.mobile .btn.btn--close {
 		background-color: rgba(0,0,0,0.5);
 		top: 10px;
 		right: 10px;
 	}
-	
+
 	.mobile .btn-close__icon {
 		stroke: #fff;
 	}

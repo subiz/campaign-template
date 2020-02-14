@@ -3,7 +3,7 @@
 #template() {
 	@import './base.less';
 	.background{
-		max-height: 100vh;
+		max-height: 100%;
 		width: 50%;
 	}
 	.mobile .background{
@@ -12,12 +12,12 @@
 		margin-left:50%;
 	}
 
-	.container { 
+	.container {
 		width: 850px;
-		max-height: 100vh;
+		max-height: 100%;
 		position: relative;
 	}
-	.mobile .container { 
+	.mobile .container {
 		max-width: 90%;
 		position: relative;
 	}
@@ -25,7 +25,7 @@
 	.container__inner{
 		display: flex;
 		flex-direction: row-reverse;
-		max-height: 100vh;
+		max-height: 100%;
 	}
 	.mobile .container__inner{
 		flex-direction: column;
@@ -39,12 +39,12 @@
 		margin-top: 45px;
 		margin-bottom:45px;
 		width: 400px;
-		max-height:  ~"calc(100vh - 90px)";
+		max-height:  ~"calc(100% - 90px)";
 	}
 	.mobile .content{
 		margin-top: 20px;
 		margin-bottom: 20px;
-		max-height:  ~"calc(100vh - 40px - 245px)";
+		max-height:  ~"calc(100% - 40px - 245px)";
 		max-width: 100%;
 	}
 
@@ -80,7 +80,7 @@
 	}
 	.mobile .title{
 		position:absolute;
-		top: 50px; 
+		top: 50px;
 		left: 0px;
 		max-width: 50%;
 		padding-left: @spacer;
@@ -134,13 +134,13 @@
 	.mobile .btn.btn--secondary {
 		font-size: 13px;
 	}
-	
+
 	.mobile .btn.btn--close {
 		background-color: rgba(0,0,0,0.5);
 		top: 10px;
 		right: 10px;
 	}
-	
+
 	.mobile .btn-close__icon {
 		stroke: #fff;
 	}

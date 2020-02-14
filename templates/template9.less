@@ -2,21 +2,21 @@
 @spacer: 30px;
 #template() {
 	@import './base.less';
-	.container { 
+	.container {
 		width: 800px;
-		max-height: 100vh;
+		max-height: 100%;
 		position: relative;
 	}
-	.mobile .container { 
+	.mobile .container {
 		max-width: 90%;
-		max-height: 100vh;
+		max-height: 100%;
 		background-color: #fff;
 		position: relative;
 	}
 
 	.container__inner{
 		display: flex;
-		max-height: 100vh;
+		max-height: 100%;
 	}
 	.mobile .container__inner{
 		display: flex;
@@ -25,7 +25,7 @@
 	}
 
 	.background{
-		max-height: 100vh;
+		max-height: 100%;
 		width: 50%;
 	}
 	.mobile .background{
@@ -40,12 +40,12 @@
 		margin-top: 45px;
 		margin-bottom:45px;
 		max-width: 50%;
-		max-height:  ~"calc(100vh - 90px)";
+		max-height:  ~"calc(100% - 90px)";
 	}
 	.mobile .content{
 		margin-top: 20px;
 		margin-bottom: 20px;
-		max-height:  ~"calc(100vh - 90px - 235px)";
+		max-height:  ~"calc(100% - 90px - 235px)";
 		max-width: 100%;
 	}
 	.title {
@@ -83,7 +83,7 @@
 		display: none;
 	}
 	.textarea{
-		border: 1px solid #d9d9d9; 
+		border: 1px solid #d9d9d9;
 		border-radius: 3px;
 		width: 98%;
 		outline: 0;
@@ -109,7 +109,7 @@
 		cursor: pointer;
 		outline: 0;
 	}
-	
+
 	.btn--secondary {
 		font-size: 16px;
 		text-transform: uppercase;
