@@ -1,77 +1,56 @@
 @import (css) url('https://fonts.googleapis.com/css?family=Montserrat|Muli|Roboto|Yeseva+One&display=swap');
 @spacer         : 35px;
-
 #template() {
 	@import './base.less';
-	.background {
-		position: absolute;
-		bottom: 30px ;
-		left: -30px;
-		height: 100%;
+	.background{
+		max-height: 100vh;
 		width: 50%;
 	}
-	.mobile .background {
-		bottom: 0;
-		left: 0;
+	.mobile .background{
 		width: 100%;
-		height: 100%;
+		height: 245px;
+		background-position: 0% 30%;
 	}
 
-	.container {
-		background: #F6F4F5;
-		padding: 10px;
-
+	.container { 
 		width: 800px;
-		max-height: calc(100% - 100px);
+		max-height: 100vh;
+		position: relative;
+	}
+	.mobile .container { 
 		max-width: 90%;
-		background-size: auto;
 		position: relative;
-		margin: auto auto;
-		box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.1);
 	}
-	.mobile .container {
-		padding: 0;
-		max-height: 100vh;
-	}
-	.mobile .container__inner {
-		max-height: 100vh;
-		height: 700px;
-		position: relative;
-		padding-left: 20px;
-		padding-right: 20px;
+
+	.container__inner{
 		display: flex;
-		align-items: center;
-		justify-content: center;
+		flex-direction: row-reverse;
+		max-height: 100vh;
 	}
+	.mobile .container__inner{
+		flex-direction: column;
+	}
+
 	.content{
 		display: flex;
 		flex-direction: column;
-    margin-left: 50%;
-    width: 50%;
-		padding-top: @spacer;
-    max-height: calc(100vh - 135px);
-    justify-content: center;
-		overflow: hidden;
+		// justify-content: flex-end;
+		margin-top: 45px;
+		margin-bottom:45px;
+		width: 400px;
+		max-height:  ~"calc(100vh - 90px)";
 	}
-	.mobile .content {
-		padding-top: @spacer;
-		padding-bottom: 10px;
-		max-height: calc(100% - 150px);
-		position: relative; // so the background stay behine it
-		overflow: hidden;
-		display: flex;
-		flex-direction: column;
-		background-color: #fff;
-		margin: 0;
-		width: unset;
-		border: 10px solid #F6F4F5;
-		width: 95%;
-		box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.0196802), 0px 2px 4px rgba(0, 0, 0, 0.03), 0px 7px 12px rgba(0, 0, 0, 0.0503198), 0px 18px 28px rgba(0, 0, 0, 0.07);
+	.mobile .content{
+		margin-top: 20px;
+		margin-bottom: 20px;
+		max-height:  ~"calc(100vh - 40px - 245px)";
+		max-width: 100%;
 	}
+
 	.btn.btn--close {
-		background-color: #fff;
-		top: 20px;
-		right: 20px;
+		background-color: #f8aa3c8f;
+		top: 10px;
+		right: 10px;
 	}
 
 	.btn-close__icon {
@@ -79,7 +58,7 @@
 	}
 
 	.btn-close:hover {
-		background-color: #d8d8d8;
+		background-color: #e49b35cc;
 	}
 
 	.btn-close:hover .btn-close__icon {
@@ -90,7 +69,6 @@
 		font-style: normal;
 		font-weight: normal;
 		font-size: 48px;
-
 		text-align: center;
 		text-transform: uppercase;
 		margin-top: 10px;
@@ -110,13 +88,15 @@
 		font-family: Roboto;
 		padding-left: @spacer;
 		padding-right: @spacer;
+		margin-top:10px;
+		margin-bottom:10px;
 	}
 	.mobile .description{
 		font-size: 16px;
 	}
 
 	.label{
-		display: none;
+		font-size: 14px;
 	}
 
 	.text-input {
@@ -138,14 +118,8 @@
 	}
 
 	.btn.btn--primary {
-		font-style: normal;
-		font-weight: normal;
 		font-size: 16px;
-		text-align: center;
 		border-radius: 50px;
-	}
-	.mobile .btn.btn--primary {
-		font-size: 16px;
 	}
 
 	.btn.btn--secondary {
@@ -159,6 +133,7 @@
 	.form {
 		width: calc(100% - @spacer - @spacer);
 	}
+	
 	.mobile .btn.btn--close {
 		background-color: rgba(0,0,0,0.5);
 		top: 10px;
@@ -168,13 +143,5 @@
 	.mobile .btn-close__icon {
 		stroke: #fff;
 	}
-	// @media screen {
-	// 	@media(max-width: 640px) {
-	// 		#mobile() !important;
-	// 	}
-	// }
-	.mobile .btn-close:hover {
-		background-color: rgba(0,0,0,0.9);
-	}
 }
-#subiz .template.template1 { #template() !important; }
+#subiz .template.template12 { #template() !important; }

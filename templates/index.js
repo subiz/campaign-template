@@ -509,8 +509,162 @@ var meta = {
 			input_background: '',
 		},
 	},
+	template11: {
+		css: () =>
+			import(
+				/*webpackPrefetch: true*/ /*webpackChunkName: "template11_css" */ '!to-string-loader!css-loader!less-loader!./template11.less'
+			),
+		type: 'modal',
+		text: {
+			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
+			title: {vi: 'Giảm 10%', en: '10% OFF'},
+			description: {
+				vi: 'với đơn hàng đầu tiên của bạn',
+				en: 'your first order',
+			},
+			primary_button_text: {vi: 'Đăng ký ngay', en: 'Sign up now'},
+			secondary_button_text: {
+				vi: 'Không, cảm ơn. Tôi sẽ quay lại sau',
+				en: "No, thanks. I'll be back later",
+			},
+		},
+		desktop_appearance: {
+			title_color: 'black',
+			description_color: 'black',
+			background: 'white',
+			primary_button_background: 'linear-gradient(103.5deg, #D53938 0%, #FEBD3C 100%)',
+			primary_button_color: 'white',
+			secondary_button_background: 'transparent',
+			secondary_button_color: '#777',
+			input_color: 'black',
+			input_background: 'transparent',
+		},
+	},
+	template12: {
+		css: () =>
+			import(
+				/*webpackPrefetch: true*/ /*webpackChunkName: "template12_css" */ '!to-string-loader!css-loader!less-loader!./template12.less'
+			),
+		type: 'modal',
+		text: {
+			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
+			title: {vi: 'ƯU ĐÃI 10%', en: '10% OFF'},
+			description: {
+				vi: 'dành riêng với bộ sưu tập mới',
+				en: 'our new collection',
+			},
+			primary_button_text: {vi: 'ĐĂNG KÝ NGAY', en: 'SIGN UP NOW'},
+			secondary_button_text: {
+				vi: 'Không, cảm ơn. Tôi sẽ quay lại sau',
+				en: "No, thanks. I'll be back later",
+			},
+		},
+		desktop_appearance: {
+			title_color: 'black',
+			description_color: 'black',
+			background: 'white',
+			primary_button_background: 'linear-gradient(103.5deg, #D53938 0%, #FEBD3C 100%)',
+			primary_button_color: 'white',
+			secondary_button_background: 'transparent',
+			secondary_button_color: '#777',
+			input_color: 'black',
+			input_background: 'transparent',
+		},
+	},
+	template13: {
+		css: () =>
+			import(
+				/*webpackPrefetch: true*/ /*webpackChunkName: "template13_css" */ '!to-string-loader!css-loader!less-loader!./template13.less'
+			),
+		type: 'modal',
+		text: {
+			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
+			title: {vi: 'Giảm 10%', en: '10% OFF'},
+			description: {
+				vi: 'và miễn phí vận chuyển với tất cả những đơn hàng trị giá trên 500K',
+				en: 'and get free worldwide shipping',
+			},
+			primary_button_text: {vi: 'ĐĂNG KÝ NGAY', en: 'SIGN UP NOW'},
+			secondary_button_text: {
+				vi: 'Không, cảm ơn. Tôi sẽ quay lại sau',
+				en: "No, thanks. I'll be back later",
+			},
+		},
+		desktop_appearance: {
+			title_color: 'black',
+			description_color: 'black',
+			background: 'white',
+			primary_button_background: '#f13a86',
+			primary_button_color: 'white',
+			secondary_button_background: 'transparent',
+			secondary_button_color: '#777',
+			input_color: 'black',
+			input_background: 'transparent',
+		},
+	},
+	template14: {
+		css: () =>
+			import(
+				/*webpackPrefetch: true*/ /*webpackChunkName: "template14_css" */ '!to-string-loader!css-loader!less-loader!./template14.less'
+			),
+		type: 'modal',
+		text: {
+			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
+			title: {vi: 'ĐĂNG KÝ ĐỂ NHẬN ƯU ĐÃI ĐẶC BIỆT', en: '10% OFF'},
+			description: {
+				vi: 'nhận ngay mã giảm giá 50%',
+				en: 'and get free worldwide shipping',
+			},
+			primary_button_text: {vi: 'ĐĂNG KÝ NGAY', en: 'SIGN UP NOW'},
+			secondary_button_text: {
+				vi: 'Không, cảm ơn. Tôi sẽ quay lại sau',
+				en: "No, thanks. I'll be back later",
+			},
+		},
+		desktop_appearance: {
+			title_color: 'white',
+			description_color: 'white',
+			background: 'white',
+			primary_button_background: 'linear-gradient(103.5deg, #D53938 0%, #FEBD3C 100%)',
+			primary_button_color: 'white',
+			secondary_button_background: 'transparent',
+			secondary_button_color: '#ffffff6f',
+			input_color: 'white',
+			input_background: 'transparent',
+		},
+	},
+	template15: {
+		css: () =>
+			import(
+				/*webpackPrefetch: true*/ /*webpackChunkName: "template15_css" */ '!to-string-loader!css-loader!less-loader!./template15.less'
+			),
+		type: 'modal',
+		text: {
+			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
+			title: {vi: 'Giảm 10%', en: '10% OFF'},
+			description: {
+				vi: 'và miễn phí vận chuyển với tất cả những đơn hàng trị giá trên 500K',
+				en: 'and get free worldwide shipping',
+			},
+			primary_button_text: {vi: 'ĐĂNG KÝ NGAY', en: 'SIGN UP NOW'},
+			secondary_button_text: {
+				vi: 'Không, cảm ơn. Tôi sẽ quay lại sau',
+				en: "No, thanks. I'll be back later",
+			},
+		},
+		desktop_appearance: {
+			title_color: 'black',
+			description_color: 'black',
+			background: 'white',
+			primary_button_background: '#ffba01',
+			primary_button_color: 'white',
+			secondary_button_background: 'transparent',
+			secondary_button_color: '#5f6369',
+			input_color: 'black',
+			input_background: 'transparent',
+		},
+	},
 }
-
 // add default js load function for any template dont has custom template
 Object.keys(meta).map(id => {
 	if (meta[id].js) return
