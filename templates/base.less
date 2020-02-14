@@ -1,3 +1,4 @@
+@overlay                             : '@desktop_appearance.overlay';
 @title_color                         : '@desktop_appearance.title_color';
 @description_color                   : '@desktop_appearance.description_color';
 @background                          : '@desktop_appearance.background';
@@ -9,6 +10,7 @@
 @input_color                         : '@desktop_appearance.input_color';
 @input_background                    : '@desktop_appearance.input_background';
 // mobile
+@mobile_overlay                      : '@mobile_appearance.overlay';
 @mobile_title_color                  : '@mobile_appearance.title_color';
 @mobile_description_color            : '@mobile_appearance.description_color';
 @mobile_background                   : '@mobile_appearance.background';
@@ -37,11 +39,15 @@
 	top: 0;
 	left: 0;
 	height: 100%;
-	background: rgba(0, 0, 0, 0.8);
+	background: @overlay;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	z-index: 20000000000100;
+}
+
+.mobile .overlay {
+	background: @mobile_overlay;
 }
 
 .title {
