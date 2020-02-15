@@ -885,9 +885,6 @@ thành công mới`,
 			input_color: '',
 			input_background: '',
 		},
-		mobile_appearance: {
-			background_image: 'url(' + require('../assets/background/template25_mobile.png') + ')',
-		},
 	},
 	template26: {
 		css: () =>
@@ -1021,6 +1018,7 @@ thành công mới`,
 					en: '10% off',
 				},
 	},
+},
 	template28: {
 		css: () =>
 			import(
