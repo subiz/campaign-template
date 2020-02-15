@@ -26,6 +26,16 @@
 	color: @color;
 	-webkit-text-fill-color: @color;
 }
+.content(@heightImg) {
+	display: flex;
+	flex-direction: column;
+	max-height:calc(100% - @heightImg) ;
+}
+
+.heightContainer(@height){
+	max-height: @height;
+	display: flex;
+}
 
 * {
 	padding: 0;

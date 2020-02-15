@@ -4,7 +4,7 @@
 @import './base.less';
 	.background{
 		max-height: 100%;
-		width: 50%;
+		flex:1;
 	}
 	.mobile .background{
 		width: 100%;
@@ -12,8 +12,8 @@
 	}
 
 	.container {
+		.heightContainer(90%);
 		width: 800px;
-		max-height: 100%;
 		position: relative;
 	}
 	.mobile .container {
@@ -34,7 +34,7 @@
 		flex-direction: column;
 		margin-top: 45px;
 		margin-bottom:45px;
-		width: 400px;
+		flex: 1;
 		max-height:  ~"calc(100% - 90px)";
 	}
 	.mobile .content{

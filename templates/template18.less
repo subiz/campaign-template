@@ -3,10 +3,9 @@
 #template() {
 	@import './base.less';
 	.container {
-		display: flex;
+		.heightContainer(100%);
 		flex-direction: column;
 		width: 800px;
-		max-height: 100%;
 		max-width: 90%;
 		align-items: center;
 		margin: auto auto;
@@ -17,6 +16,8 @@
 		width: 100%;
 		max-height: 100%;
 		position: relative;
+		// overflow: hidden;
+		display: flex;
 	}
 
 	.background {
@@ -25,11 +26,12 @@
 		right: 0;
 		left: 0;
 		bottom: 0;
-		max-height: 100%;
+		z-index: 1;
 	}
 
 	.content {
-		position: relative; // so the background stay behine it
+		// position: relative;
+		z-index: 2	;
 		overflow: hidden;
 		display: flex;
 		flex-direction: column;
