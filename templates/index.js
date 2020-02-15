@@ -6,6 +6,37 @@ var op = require('object-path')
 const MODE = common.mobilecheck() ? 'mobile' : 'desktop'
 var CSS = ''
 var meta = {
+	templateThanks: {
+		css: () =>
+			import(
+				/*webpackPrefetch: true*/ /*webpackChunkName: "templateThanks_css" */ '!to-string-loader!css-loader!less-loader!./templateThanks.less'
+			),
+		type: '2',
+		text: {
+			name: {vi: 'Form cảm ơn ', en: 'Form thank you'},
+			title: {vi: 'Cảm ơn bạn!', en: 'Thank you!'},
+			description: {
+				vi: 'Chúng tôi đã nhận được yêu cầu liên hệ của bạn và chúng tôi sẽ gọi lại cho bạn vào thời gian bạn đã chọn.',
+				en: 'Thanks for contacting us! We’ll get back to you as soon as possible',
+			},
+			primary_button_text: {vi: 'Hoàn tất', en: 'Done'},
+			secondary_button_text: {
+				vi: 'Đóng',
+				en: "Close",
+			},
+		},
+		desktop_appearance: {
+			title_color: 'black',
+			description_color: 'black',
+			background: 'white',
+			primary_button_background: '#0265ff',
+			primary_button_color: 'white',
+			secondary_button_background: '#e5e5e5',
+			secondary_button_color: '#777',
+			input_color: 'black',
+			input_background: 'transparent',
+		},
+	},
 	template1: {
 		// js: () => import(/*webpackPrefetch: true*/ /*webpackChunkName: "template1" */ './template1/index.js'),
 		css: () =>
