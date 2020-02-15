@@ -949,7 +949,7 @@ thành công mới`,
 		mobile_appearance: {
 			background_image: 'url(' + require('../assets/background/template26_mobile.png') + ')',
 		},
-			
+
   },
   template18: {
 		css: () =>
@@ -1201,9 +1201,6 @@ let Template = {
 		async template(template) {
 			this.loadTemplate(template)
 		},
-		async page(page) {
-			this.populatePage(this.templateid, page)
-		},
 	},
 
 	created() {
@@ -1225,6 +1222,7 @@ let Template = {
 		},
 
 		populatePage(templateid, page) {
+			if (!templateid || !page) return
 			let temp = meta[templateid]
 			var desktop_appearance = this.merge(temp.desktop_appearance, page.desktop_appearance)
 			var mobile_appearance = this.merge(temp.mobile_appearance, page.mobile_appearance)
