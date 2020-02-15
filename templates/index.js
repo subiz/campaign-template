@@ -1087,6 +1087,41 @@ thành công mới`,
 			background_image: 'url(' + require('../assets/background/template29_mobile.png') + ')',
 		},
 	},
+	template30: {
+		css: () =>
+			import(
+				/*webpackPrefetch: true*/ /*webpackChunkName: "template30_css" */ '!to-string-loader!css-loader!less-loader!./template30.less'
+			),
+		type: 'modal',
+		text: {
+			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
+			title: {
+				vi: 'Giảm 25%',
+				en: '25% off',
+			},
+			description: {
+				vi: 'Đăng ký để nhận ngay ưu đãi',
+				en: 'Sign up to get the promotion code ',
+			},
+			primary_button_text: {vi: 'Đăng ký ngay', en: 'Shop now'},
+			secondary_button_text: {vi: 'Không, cảm ơn.Tôi sẽ quay lại sau', en: "No, thanks.I'll be back later"},
+		},
+		desktop_appearance: {
+			title_color: '#000',
+			description_color: '#000',
+			background: 'white',
+			// background_image: 'url(' + require('../assets/background/bg5.png') + ')',
+			primary_button_background: 'linear-gradient(73.97deg, #E61A6F 0.21%, #F53D8A 100.21%)',
+			primary_button_color: '#fff',
+			secondary_button_background: 'unset',
+			secondary_button_color: '#5F6369;',
+			input_color: '',
+			input_background: '',
+		},
+		mobile_appearance: {
+			background_image: 'url(' + require('../assets/background/template30_mobile.png') + ')',
+		},
+	},
 }
 // add default js load function for any template dont has custom template
 Object.keys(meta).map(id => {
