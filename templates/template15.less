@@ -3,27 +3,20 @@
 #template() {
 	@import './base.less';
 	.container {
-		.heightContainer(90%);
-		display: flex;
-		flex-direction: column;
-		width: 900px;
+		.heightContainer(95%);
+		width: 800px;
 		max-width: 90%;
-		align-items: center;
-		background-size: auto;
-		position: relative;
 		margin: auto auto;
+		position: relative;
 	}
 
 	.container__inner {
+		position: relative;
 		width: 100%;
-		max-height: 100%;
 		display: flex;
-		overflow: hidden;
 	}
 	.mobile .container__inner{
-		display: flex;
 		flex-direction: column;
-		overflow: hidden;
 	}
 	.background {
 		position: absolute;
@@ -31,28 +24,30 @@
 		right: 0;
 		left: 0;
 		bottom: 0;
-		max-height: 100%;
+		z-index: 1;
+		
 	}
 	.mobile .background{
-		position: relative;
-		height: 235px;
+		height: 210px;
 		max-width: 100%;
+		position: unset;
 	}
 
 	.content {
 		display: flex;
 		flex-direction: column;
 		width: 50%;
-		max-width: 100%;
-		padding-top: 70px;
-		padding-bottom: 70px;
-		max-height: calc(100% - 70px - 70px );
+		padding-top: 50px;
+		padding-bottom: 40px;
+		z-index: 2;
+		// max-height: 100%;
+
 	}
 	.mobile .content{
 		padding-top: 20px;
 		padding-bottom: 20px;
 		width: 100%;
-		max-height:  calc(100% - 235px);
+		max-height: calc(100% - 210px);
 	}
 
 	.title {
@@ -69,6 +64,7 @@
 	}
 	.description {
 		margin-top: 10px;
+		margin-bottom: 10px;
 		font-weight: normal;
 		text-align: center;
 		font-size: 16px;
