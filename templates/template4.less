@@ -3,17 +3,8 @@
 @spacer: 25px;
 #template() {
 	@import './base.less';
-	.background{
-		height: 250px;
-		max-width: 100%;
-	}
-	.mobile .background{
-		max-width: 100%;
-		height: 235px;
-	}
-
 	.container {
-		.heightContainer(100%);
+		.heightContainer(90%);
 		max-width: 360px;
 		position: relative;
 	}
@@ -25,14 +16,21 @@
 		flex-direction: column;
 		max-height: 100%;
 		width: 100%;
+		display: flex;
 	}
+	.background{
+		max-width: 100%;
+		height: 30%;
+	}
+
 	.content{
 		display: flex;
 		flex-direction: column;
 		padding-top: 20px;
 		padding-bottom:20px;
 		width: 100%;
-		max-height:  ~"calc(100% - 250px)";
+		max-height:  ~"calc(100% - 235px)";
+		
 	}
 	.mobile .content{
 		max-height:  ~"calc(100% - 20px - 250px)";

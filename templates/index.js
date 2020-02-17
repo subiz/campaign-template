@@ -221,7 +221,7 @@ var meta = {
 			title_color: '#fff',
 			description_color: '#fff',
 			background: 'white',
-			primary_button_background: '#001984',
+			primary_button_background: '#c89c3e',
 			primary_button_color: 'white',
 			secondary_button_background: '#777',
 			secondary_button_color: 'white',
