@@ -856,10 +856,44 @@ thành công mới`,
 			input_background: 'transparent',
 		},
 	},
-	template17: {
+	template17:{
+		css: () =>
+		import(
+			/*webpackPrefetch: true*/ /*webpackChunkName: "template17_css" */ '!to-string-loader!css-loader!less-loader!./template17.less'
+		),
+		type: 'modal',
+		text: {
+			name: {vi: 'Nhận ngay ưu đãi', en: 'Get special offer now'},
+			title: {
+				vi: 'Nhận ngay ưu đãi!',
+				en: 'Get special offer now!',
+			},
+			description: {
+				vi: 'Giảm 20% chỉ một ngày duy nhất. Miễn phí vận chuyển nội thành',
+				en: '20% off for only one day. Free shipping in the city',
+			},
+			primary_button_text: {vi: 'Đăng ký ngay', en: 'Register now'},
+			secondary_button_text: {vi: 'Bỏ qua', en: 'Cancel'},
+		},
+		desktop_appearance: {
+			title_color: '#FDAD15',
+			description_color: 'white',
+			background: 'white',
+			primary_button_background: '#FDAD15',
+			primary_button_color: 'white',
+			secondary_button_background: '#777',
+			secondary_button_color: 'white',
+			input_color: '',
+			input_background: '',
+		},
+		mobile_appearance: {
+			background_image: 'url(' + require('../assets/background/template20_mobile.png') + ')',
+		},
+	},
+	template117: {
 		css: () =>
 			import(
-				/*webpackPrefetch: true*/ /*webpackChunkName: "template17_css" */ '!to-string-loader!css-loader!less-loader!./template17.less'
+				/*webpackPrefetch: true*/ /*webpackChunkName: "template117_css" */ '!to-string-loader!css-loader!less-loader!./template117.less'
 			),
 			type: 'modal',
 		text: {
