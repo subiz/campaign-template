@@ -3,7 +3,7 @@
 #template() {
 	@import './base.less';
 	.container {
-		.heightContainer(100%);
+		.heightContainer(95%);
 		flex-direction: column;
 		width: 800px;
 		max-width: 90%;
@@ -30,7 +30,6 @@
 	}
 
 	.content {
-		// position: relative;
 		z-index: 2	;
 		display: flex;
 		flex-direction: column;
@@ -65,12 +64,15 @@
 		padding-left: @spacer;
 		padding-right: @spacer;
 	}
+
 	.mobile.description{
 		font-size: 16px;
 	}
+
 	.label{
 		display: none;
 	}
+
 	.text-input {
 		border: none;
 		border-bottom: 1px solid #d9d9d9;

@@ -981,6 +981,18 @@ thành công mới`,
 				input_color: 'black',
 				input_background: 'transparent',
 			},
+			mobile_appearance: {
+				title_color: 'black',
+				description_color: 'black',
+				background: 'white',
+				primary_button_background: 'linear-gradient(74.1deg, #5E8D81 0.21%, #3FA684 100%)',
+				primary_button_color: 'white',
+				background_image: 'url(' + require('../assets/background/template18_mobile.png') + ')',
+				secondary_button_background: 'transparent',
+				secondary_button_color: 'black',
+				input_color: 'black',
+				input_background: 'transparent',
+			},
 	},
 	template27: {
 		css: () =>
