@@ -11,6 +11,10 @@
   .desktop .container {
     width: 480px;
   }
+  .desktop .container__inner {
+    display: flex;
+    flex-direction: column;
+  }
   .content {
     padding: 0 15px 35px 15px;
     .content(164px)
@@ -21,9 +25,12 @@
   .background {
     height: 164px;
     position: relative;
+    display: inline-block;
+    min-width: 100%;
   }
   .desktop .background {
     height: 220px;
+    min-height: 220px;
   }
   .title {
     font-size: 40px;
