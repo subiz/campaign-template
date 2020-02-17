@@ -13,7 +13,7 @@
 @mobile_overlay                      : '@mobile_appearance.overlay';
 @mobile_title_color                  : '@mobile_appearance.title_color';
 @mobile_description_color            : '@mobile_appearance.description_color';
-@mobile_background                   : '@mobile_appearance.background';
+@mobile_background                   : '@mobile_appearance.background';		
 @mobile_background_image             : '@mobile_appearance.background_image';
 @mobile_primary_button_background    : '@mobile_appearance.primary_button_background';
 @mobile_primary_button_color         : '@mobile_appearance.primary_button_color';
@@ -36,6 +36,17 @@
 	max-height: @height;
 	display: flex;
 }
+
+.content(@heightImg) {
+	display: flex;
+	flex-direction: column;
+	max-height: calc(100% - @heightImg);
+}
+.heightContainer(@height) {
+	max-height: @height;
+	display: flex;
+}
+
 
 * {
 	padding: 0;
@@ -64,6 +75,7 @@
 	.color(@title_color);
 	whitespace: pre-wrap;
 }
+
 .mobile .title {
 	.color(@mobile_title_color);
 }
@@ -86,6 +98,7 @@
 
 .container__inner {
 	background: @background;
+	width: 100%;
 }
 
 .mobile .container__inner {

@@ -6,12 +6,21 @@
   .container {
     width: 335px;
     position: relative;
+    .heightContainer(80%)
   }
   .desktop .container {
     width: 480px;
   }
+  .desktop .container__inner {
+    display: flex;
+    flex-direction: column;
+  }
   .content {
     padding: 0 15px 35px 15px;
+    .content(164px)
+  }
+  .desktop .content {
+    .content(220px)
   }
   .background {
     height: 164px;
@@ -19,6 +28,7 @@
   }
   .desktop .background {
     height: 220px;
+    min-height: 220px;
   }
   .title {
     font-size: 40px;

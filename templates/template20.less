@@ -6,18 +6,19 @@
   .container {
     min-width: 800px;
     position: relative;
-    padding: 20px 0;
+    .heightContainer(440px)
   }
   .mobile .container {
     width: 335px;
     max-width: 335px;
     min-width: unset;
     padding: 0;
+    .heightContainer(90%)
   }
 
   .mobile .background {
     position: relative;
-    width: 375px;
+    width: 393px;
     height: 358px;
     left: -20px;
     top: -34px;
@@ -54,7 +55,7 @@
     position: relative;
     z-index: 2;
     margin-bottom: 36px;
-    margin-top: 76px;
+    margin-top: 14px;
     font-family: 'Roboto';
     text-align: center;
   }
@@ -66,12 +67,14 @@
   .content {
     margin-left: auto;
     width: 50%;
-    padding: 0 35px 0 35px;
+    padding: 20px 35px 20px 35px;
+    .content(0px);
   }
   .mobile .content {
     width: 100%;
-    padding: 0 15px 15px 15px;
+    padding: 0 15px;
     margin-left: unset;
+    .content(357px)
   }
   .mobile .form .form-field:first-child {
     margin: 0;
@@ -124,6 +127,7 @@
       margin: 0;
       max-width: 100%;
       text-transform: uppercase;
+      display: none;
     }
   }
   ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
