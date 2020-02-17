@@ -171,7 +171,7 @@ var meta = {
 			import(
 				/*webpackPrefetch: true*/ /*webpackChunkName: "template5_css" */ '!to-string-loader!css-loader!less-loader!./template5.less'
 			),
-		type: 'modal',
+		type: 'fullscreen',
 		text: {
 			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
 			title: {
@@ -203,7 +203,7 @@ var meta = {
 			import(
 				/*webpackPrefetch: true*/ /*webpackChunkName: "template6_css" */ '!to-string-loader!css-loader!less-loader!./template6.less'
 			),
-		type: 'modal',
+		type: 'fullscreen',
 		text: {
 			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
 			title: {
