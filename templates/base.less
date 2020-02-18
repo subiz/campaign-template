@@ -31,19 +31,9 @@
 .content(@heightImg) {
 	display: flex;
 	flex-direction: column;
-	max-height: ~"calc(100% - @heightImg)";
+	max-height: ~"calc(100% - @{heightImg})";
 }
 .heightContainer(@height){
-	max-height: @height;
-	display: flex;
-}
-
-.content(@heightImg) {
-	display: flex;
-	flex-direction: column;
-	max-height: calc(100% - @heightImg);
-}
-.heightContainer(@height) {
 	max-height: @height;
 	display: flex;
 }
