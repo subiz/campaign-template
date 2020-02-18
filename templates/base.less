@@ -22,6 +22,7 @@
 @mobile_input_color                  : '@mobile_appearance.input_color';
 @mobile_input_background             : '@mobile_appearance.input_background';
 
+
 .color(@color) {
 	color: @color;
 	-webkit-text-fill-color: @color;
@@ -65,6 +66,38 @@
 	align-items: center;
 	justify-content: center;
 	z-index: 20000000000100;
+	flex-direction: column;
+}
+.overlay--iphone{
+	border: solid 5px #000000;
+	border-radius: 30px;
+}
+.notch{
+	position: absolute;
+	z-index: 10;
+	top: -5px;
+	height: 30px;
+	background-color: #000000;
+	border-bottom-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+	width: 200px;
+	display: flex;
+	align-items: center;
+	justify-content:center;
+}
+.notch__camera{
+	position: absolute;
+	left: 20px;
+	height: 10px;
+	width: 10px;
+	border-radius: 10px;
+	background-color: white;
+}
+.notch__audio{
+	height: 10px;
+	width: 40%;
+	border-radius: 5px;
+	background-color: white;
 }
 
 .mobile .overlay {

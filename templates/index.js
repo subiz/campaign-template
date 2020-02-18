@@ -1208,7 +1208,11 @@ Object.keys(meta).map(id => {
 				props: ['page', 'form', 'countdown', 'primaryButton', 'secondaryButton', 'closeButton'],
 				render(h) {
 					return (
-						<div class="overlay">
+						<div class="overlay overlay--iphone">
+							<div class="notch">
+								<div class="notch__camera"></div>
+								<div class="notch__audio"></div>
+							</div>
 							<div class="container">
 								{this.closeButton}
 								<div class="container__inner">
