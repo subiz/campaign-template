@@ -33,7 +33,6 @@
 	flex-direction: column;
 	max-height: ~"calc(100% - @heightImg)";
 }
-
 .heightContainer(@height){
 	max-height: @height;
 	display: flex;
@@ -49,7 +48,6 @@
 	display: flex;
 }
 
-
 * {
 	padding: 0;
 	margin: 0;
@@ -59,9 +57,9 @@
 .overlay {
 	position: absolute;
 	width: 100%;
-	top:50px;
+	top:0px;
 	left: 0;
-	height: 95%;
+	height: 100%;
 	background: @overlay;
 	display: flex;
 	align-items: center;
@@ -104,9 +102,10 @@
 .browser-bar{
 	display: none;
 }
-.overlay--browser{
-
+.overlay.overlay--browser{
 	// border: solid 1px #000000;
+	top:50px;
+	height: ~"calc(100% - 50px)";
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
 }

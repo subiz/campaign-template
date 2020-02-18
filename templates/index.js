@@ -1210,6 +1210,7 @@ Object.keys(meta).map(id => {
 
 					var animation = 'container ' + this.page.animation
 					return (
+					
 						<div class={cls}>
 							<div class="notch">
 								<div class="notch__camera"></div>
