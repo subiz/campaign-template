@@ -58,7 +58,7 @@ new Vue({
 
 	render (h) {
 		return (
-			<div id="subiz">
+			<div id="sbz-pop">
 				<Template.Template template={this.template} page={this.page} frame="browser" />
 			</div>
 		)
