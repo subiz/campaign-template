@@ -1204,11 +1204,13 @@ Object.keys(meta).map(id => {
 		Promise.resolve({
 			default: {
 				name: 'subiz-template',
-				props: ['page', 'form', 'countdown', 'primaryButton', 'secondaryButton', 'closeButton', 'frame'],
+				props: ['page', 'form', 'countdown', 'primaryButton', 'secondaryButton', 'closeButton', 'frame', 'closeAnimation'],
 				render(h) {
 					var cls = 'overlay overlay--' + this.frame
 
-					var animation = 'container ' + this.page.animation
+					var animation = 'container ' //+ (this.page.animation) + ' ' + this.closeAnimation
+					if(this.closeAnimation) animation += this.closeAnimation
+					else animation += this.page.animation
 					return (
 					
 						<div class={cls}>
@@ -1220,7 +1222,7 @@ Object.keys(meta).map(id => {
 								<div class="button__red"></div>
 								<div class="button__yellow"></div>
 								<div class="button__green"></div>
-								<div class="bar__url"></div>
+								<div class="bar__url"></div>	
 							</div>
 							<div class={animation}>
 								{this.closeButton}
@@ -1253,6 +1255,7 @@ let Template = {
 			Template: null,
 			close: false,
 			templateid: '',
+			closeAnimation: ''
 		}
 	},
 
@@ -1290,7 +1293,10 @@ let Template = {
 		},
 		onClose() {
 			this.$emit('closeButtonClicked')
-			this.close = true
+			setTimeout(() => {
+				this.close = true
+			},400);
+			this.closeAnimation = 'bounceOut'
 		},
 
 		onSecondaryClick() {
@@ -1314,7 +1320,6 @@ let Template = {
 	render(h) {
 		if (!this.Template) return null
 		if (this.close) return null
-
 		let $close = <CloseButton class="btn btn--close" vOn:click={this.onClose} />
 		let $primary = null
 		if (op.get(this.page, 'primary_button.enabled')) {
@@ -1346,6 +1351,7 @@ let Template = {
 						secondaryButton={$secondary}
 						closeButton={$close}
 						frame={this.frame}
+						closeAnimation={this.closeAnimation}
 					/>
 				</div>
 			</div>

@@ -11,6 +11,7 @@ new Vue({
 		return {
 			template: '',
 			page: {
+				animation: 'bounceIn',
 				title: '', //'Đăng ký để nhận ưu đãi đặc biệt',
 				description: '', // 'Giảm 20% chỉ một ngày duy nhất. Đăng ký ngay để nhận được mã giảm giá!',
 				form: {
