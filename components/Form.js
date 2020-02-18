@@ -72,7 +72,7 @@ export default {
 		},
 
 		renderMultiLineText (h, field) {
-			if (field.type !== 'text' || !field.multiline_text) return null
+			if (field.type !== 'text' || !field.multiline_text || field.subtype === 'email' ) return null
 			return (
 				<textarea
 					class="textarea"
@@ -83,7 +83,7 @@ export default {
 		},
 
 		renderSingleLineText (h, field) {
-			if (field.type !== 'text' || field.multiline_text) return null
+			if (field.type !== 'text' || field.multiline_text || field.subtype === 'email') return null
 			return (
 				<input
 					type="text"
