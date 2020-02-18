@@ -19,10 +19,10 @@ var meta = {
 				vi: 'Chúng tôi đã nhận được yêu cầu liên hệ của bạn và chúng tôi sẽ gọi lại cho bạn vào thời gian bạn đã chọn.',
 				en: 'Thanks for contacting us! We’ll get back to you as soon as possible',
 			},
-			primary_button_text: {vi: 'Hoàn tất', en: 'Done'},
-			secondary_button_text: {
+			primary_button: {vi: 'Hoàn tất', en: 'Done'},
+			secondary_button: {
 				vi: 'Đóng',
-				en: "Close",
+				en: 'Close',
 			},
 		},
 		desktop_appearance: {
@@ -53,8 +53,8 @@ var meta = {
 				vi: 'với đơn hàng đầu tiên của bạn',
 				en: 'your first order',
 			},
-			primary_button_text: {vi: 'Đăng ký ngay', en: 'Sign up now'},
-			secondary_button_text: {
+			primary_button: {vi: 'Đăng ký ngay', en: 'Sign up now'},
+			secondary_button: {
 				vi: 'Không, cảm ơn. Tôi sẽ quay lại sau',
 				en: "No, thanks. I'll be back later",
 			},
@@ -87,8 +87,8 @@ var meta = {
 				vi: 'Giảm 20% chỉ một ngày duy nhất. Đăng ký ngay để nhận được mã giảm giá!',
 				en: 'Get 20% off your first order. Sign up now!',
 			},
-			primary_button_text: {vi: 'Đăng ký ngay', en: 'Sign up now'},
-			secondary_button_text: {vi: 'Bỏ qua', en: 'Cancel'},
+			primary_button: {vi: 'Đăng ký ngay', en: 'Sign up now'},
+			secondary_button: {vi: 'Bỏ qua', en: 'Cancel'},
 		},
 		desktop_appearance: {
 			title_color: 'black',
@@ -119,8 +119,8 @@ var meta = {
 				vi: 'Giảm 20% chỉ một ngày duy nhất. Đăng ký ngay để nhận được mã giảm giá!',
 				en: 'Get 20% off your first order. Sign up now!',
 			},
-			primary_button_text: {vi: 'Đăng ký ngay', en: 'Sign up now'},
-			secondary_button_text: {vi: 'Bỏ qua', en: 'Cancel'},
+			primary_button: {vi: 'Đăng ký ngay', en: 'Sign up now'},
+			secondary_button: {vi: 'Bỏ qua', en: 'Cancel'},
 		},
 		desktop_appearance: {
 			title_color: 'black',
@@ -150,8 +150,8 @@ var meta = {
 				vi: 'Giảm 20% chỉ một ngày duy nhất. Đăng ký ngay để nhận được mã giảm giá!',
 				en: 'Get 20% off your first order. Sign up now!',
 			},
-			primary_button_text: {vi: 'Đăng ký ngay', en: 'Sign up now'},
-			secondary_button_text: {vi: 'Bỏ qua', en: 'Cancel'},
+			primary_button: {vi: 'Đăng ký ngay', en: 'Sign up now'},
+			secondary_button: {vi: 'Bỏ qua', en: 'Cancel'},
 		},
 		desktop_appearance: {
 			title_color: 'black',
@@ -182,8 +182,8 @@ var meta = {
 				vi: 'Giảm 20% chỉ một ngày duy nhất. Đăng ký ngay để nhận được mã giảm giá!',
 				en: 'Get 20% off your first order. Sign up now!',
 			},
-			primary_button_text: {vi: 'Đăng ký ngay', en: 'Sign up now'},
-			secondary_button_text: {vi: 'Bỏ qua', en: 'Cancel'},
+			primary_button: {vi: 'Đăng ký ngay', en: 'Sign up now'},
+			secondary_button: {vi: 'Bỏ qua', en: 'Cancel'},
 		},
 		desktop_appearance: {
 			title_color: 'white',
@@ -214,8 +214,8 @@ var meta = {
 				vi: 'Giảm 20% chỉ một ngày duy nhất. Đăng ký ngay để nhận được mã giảm giá!',
 				en: 'Get 20% off your first order. Sign up now!',
 			},
-			primary_button_text: {vi: 'Đăng ký ngay', en: 'Sign up now'},
-			secondary_button_text: {vi: 'Bỏ qua', en: 'Cancel'},
+			primary_button: {vi: 'Đăng ký ngay', en: 'Sign up now'},
+			secondary_button: {vi: 'Bỏ qua', en: 'Cancel'},
 		},
 		desktop_appearance: {
 			title_color: '#fff',
@@ -257,8 +257,8 @@ var meta = {
 				vi: 'Chia sẻ cảm nhận của bạn cho chúng tôi bạn sẽ nhận được 10% GIẢM GIÁ.',
 				en: 'Share your recent experience and get 10% off your next purchase',
 			},
-			primary_button_text: {vi: 'Gửi cảm nhận', en: 'Send feedback'},
-			secondary_button_text: {vi: 'Bỏ qua', en: 'Cancel'},
+			primary_button: {vi: 'Gửi cảm nhận', en: 'Send feedback'},
+			secondary_button: {vi: 'Bỏ qua', en: 'Cancel'},
 		},
 		desktop_appearance: {
 			title_color: 'black',
@@ -283,8 +283,8 @@ var meta = {
 				vi: 'Oh không! Tại sao bạn lại rời khỏi đây quá sớm như thế?',
 				en: 'Oh no! Why do you leave so soon?',
 			},
-			primary_button_text: {vi: 'Gửi ngay', en: 'Send feedback'},
-			secondary_button_text: {vi: 'Bỏ qua', en: 'Cancel'},
+			primary_button: {vi: 'Gửi ngay', en: 'Send feedback'},
+			secondary_button: {vi: 'Bỏ qua', en: 'Cancel'},
 		},
 		desktop_appearance: {
 			title_color: 'black',
@@ -314,8 +314,8 @@ var meta = {
 				vi: 'Và nhận thông báo về các chương trình khuyến mãi mới nhất của chúng tôi',
 				en: 'And never miss out any new promotion',
 			},
-			primary_button_text: {vi: 'Đăng ký ngay', en: 'Shop now'},
-			secondary_button_text: {vi: 'Không, cảm ơn.Tôi sẽ quay lại sau', en: "No, thanks.I'll be back later"},
+			primary_button: {vi: 'Đăng ký ngay', en: 'Shop now'},
+			secondary_button: {vi: 'Không, cảm ơn.Tôi sẽ quay lại sau', en: "No, thanks.I'll be back later"},
 		},
 		desktop_appearance: {
 			title_color: 'white',
@@ -346,8 +346,8 @@ var meta = {
 				vi: 'Giảm 20% chỉ một ngày duy nhất. Miễn phí vận chuyển nội thành',
 				en: '20% off for only one day. Free shipping in the city',
 			},
-			primary_button_text: {vi: 'Đăng ký ngay', en: 'Register now'},
-			secondary_button_text: {vi: 'Bỏ qua', en: 'Cancel'},
+			primary_button: {vi: 'Đăng ký ngay', en: 'Register now'},
+			secondary_button: {vi: 'Bỏ qua', en: 'Cancel'},
 		},
 		desktop_appearance: {
 			title_color: '#FDAD15',
@@ -380,8 +380,8 @@ var meta = {
 				vi: 'Và nhận thông báo về các chương trình khuyến mãi mới nhất của chúng tôi',
 				en: 'And never miss out any new promotion',
 			},
-			primary_button_text: {vi: 'Nhận mã giảm giá', en: 'Get the coupon code'},
-			secondary_button_text: {vi: 'Không, cảm ơn.Tôi sẽ quay lại sau', en: "No, thanks.I'll be back later"},
+			primary_button: {vi: 'Nhận mã giảm giá', en: 'Get the coupon code'},
+			secondary_button: {vi: 'Không, cảm ơn.Tôi sẽ quay lại sau', en: "No, thanks.I'll be back later"},
 		},
 		desktop_appearance: {
 			title_color: 'white',
@@ -414,8 +414,8 @@ var meta = {
 				vi: 'Đừng bỏ lỡ cơ hội này',
 				en: "Don't miss this change",
 			},
-			primary_button_text: {vi: 'Săn coupon ngay', en: 'Get the coupon'},
-			secondary_button_text: {vi: 'Không, cảm ơn.Tôi sẽ quay lại sau', en: "No, thanks.I'll be back later"},
+			primary_button: {vi: 'Săn coupon ngay', en: 'Get the coupon'},
+			secondary_button: {vi: 'Không, cảm ơn.Tôi sẽ quay lại sau', en: "No, thanks.I'll be back later"},
 		},
 		desktop_appearance: {
 			title_color: 'white',
@@ -449,8 +449,8 @@ var meta = {
 				vi: 'Đừng bỏ lỡ cơ hội này',
 				en: "Don't miss this change",
 			},
-			primary_button_text: {vi: 'Săn coupon ngay', en: 'Get the coupon'},
-			secondary_button_text: {vi: 'Không, cảm ơn.Tôi sẽ quay lại sau', en: "No, thanks.I'll be back later"},
+			primary_button: {vi: 'Săn coupon ngay', en: 'Get the coupon'},
+			secondary_button: {vi: 'Không, cảm ơn.Tôi sẽ quay lại sau', en: "No, thanks.I'll be back later"},
 		},
 		desktop_appearance: {
 			title_color: 'white',
@@ -484,8 +484,8 @@ var meta = {
 				vi: 'Đăng ký ngay để nhận ưu đãi và thông báo cho các chương trình khuyến mãi tiếp',
 				en: 'Register to get the discount and receive notification for next promotions',
 			},
-			primary_button_text: {vi: 'Đăng ký ngay', en: 'Shop now'},
-			secondary_button_text: {vi: 'Không, cảm ơn.Tôi sẽ quay lại sau', en: "No, thanks.I'll be back later"},
+			primary_button: {vi: 'Đăng ký ngay', en: 'Shop now'},
+			secondary_button: {vi: 'Không, cảm ơn.Tôi sẽ quay lại sau', en: "No, thanks.I'll be back later"},
 		},
 		desktop_appearance: {
 			title_color: '#2E052E',
@@ -519,8 +519,8 @@ var meta = {
 				vi: '2020',
 				en: '2020',
 			},
-			primary_button_text: {vi: 'Đăng ký ngay', en: 'Shop now'},
-			secondary_button_text: {vi: 'Không, cảm ơn.Tôi sẽ quay lại sau', en: "No, thanks.I'll be back later"},
+			primary_button: {vi: 'Đăng ký ngay', en: 'Shop now'},
+			secondary_button: {vi: 'Không, cảm ơn.Tôi sẽ quay lại sau', en: "No, thanks.I'll be back later"},
 		},
 		desktop_appearance: {
 			title_color: '#FAC571',
@@ -585,8 +585,8 @@ var meta = {
 				vi: 'Tết tới tấn tài\nXuân sang đắc lộc\nGia đình hạnh phúc\nVạn sự cát tường',
 				en: 'Tết tới tấn tài\nXuân sang đắc lộc\nGia đình hạnh phúc\nVạn sự cát tường',
 			},
-			primary_button_text: {vi: 'Đăng ký ngay', en: 'Shop now'},
-			secondary_button_text: {vi: 'Không, cảm ơn.Tôi sẽ quay lại sau', en: "No, thanks.I'll be back later"},
+			primary_button: {vi: 'Đăng ký ngay', en: 'Shop now'},
+			secondary_button: {vi: 'Không, cảm ơn.Tôi sẽ quay lại sau', en: "No, thanks.I'll be back later"},
 		},
 		desktop_appearance: {
 			title_color: '#FAC571',
@@ -617,8 +617,8 @@ var meta = {
 				vi: 'Kính chúc khách hàng một năm mới\nAn Khang Thịnh Vượng',
 				en: 'Kính chúc khách hàng một năm mới\nAn Khang Thịnh Vượng',
 			},
-			primary_button_text: {vi: 'Đăng ký ngay', en: 'Shop now'},
-			secondary_button_text: {vi: 'Không, cảm ơn.Tôi sẽ quay lại sau', en: "No, thanks.I'll be back later"},
+			primary_button: {vi: 'Đăng ký ngay', en: 'Shop now'},
+			secondary_button: {vi: 'Không, cảm ơn.Tôi sẽ quay lại sau', en: "No, thanks.I'll be back later"},
 		},
 		desktop_appearance: {
 			title_color: '#FDE5AF',
@@ -646,8 +646,8 @@ var meta = {
 				vi: 'với đơn hàng đầu tiên của bạn',
 				en: 'your first order',
 			},
-			primary_button_text: {vi: 'Đăng ký ngay', en: 'Sign up now'},
-			secondary_button_text: {
+			primary_button: {vi: 'Đăng ký ngay', en: 'Sign up now'},
+			secondary_button: {
 				vi: 'Không, cảm ơn. Tôi sẽ quay lại sau',
 				en: "No, thanks. I'll be back later",
 			},
@@ -677,8 +677,8 @@ var meta = {
 				vi: 'dành riêng với bộ sưu tập mới',
 				en: 'our new collection',
 			},
-			primary_button_text: {vi: 'ĐĂNG KÝ NGAY', en: 'SIGN UP NOW'},
-			secondary_button_text: {
+			primary_button: {vi: 'ĐĂNG KÝ NGAY', en: 'SIGN UP NOW'},
+			secondary_button: {
 				vi: 'Không, cảm ơn. Tôi sẽ quay lại sau',
 				en: "No, thanks. I'll be back later",
 			},
@@ -708,8 +708,8 @@ var meta = {
 				vi: 'và miễn phí vận chuyển với tất cả những đơn hàng trị giá trên 500K',
 				en: 'and get free worldwide shipping',
 			},
-			primary_button_text: {vi: 'ĐĂNG KÝ NGAY', en: 'SIGN UP NOW'},
-			secondary_button_text: {
+			primary_button: {vi: 'ĐĂNG KÝ NGAY', en: 'SIGN UP NOW'},
+			secondary_button: {
 				vi: 'Không, cảm ơn. Tôi sẽ quay lại sau',
 				en: "No, thanks. I'll be back later",
 			},
@@ -739,8 +739,8 @@ var meta = {
 				vi: 'nhận ngay mã giảm giá 50%',
 				en: 'and get free worldwide shipping',
 			},
-			primary_button_text: {vi: 'ĐĂNG KÝ NGAY', en: 'SIGN UP NOW'},
-			secondary_button_text: {
+			primary_button: {vi: 'ĐĂNG KÝ NGAY', en: 'SIGN UP NOW'},
+			secondary_button: {
 				vi: 'Không, cảm ơn. Tôi sẽ quay lại sau',
 				en: "No, thanks. I'll be back later",
 			},
@@ -770,8 +770,8 @@ var meta = {
 				vi: 'và miễn phí vận chuyển với tất cả những đơn hàng trị giá trên 500K',
 				en: 'and get free worldwide shipping',
 			},
-			primary_button_text: {vi: 'ĐĂNG KÝ NGAY', en: 'SIGN UP NOW'},
-			secondary_button_text: {
+			primary_button: {vi: 'ĐĂNG KÝ NGAY', en: 'SIGN UP NOW'},
+			secondary_button: {
 				vi: 'Không, cảm ơn. Tôi sẽ quay lại sau',
 				en: "No, thanks. I'll be back later",
 			},
@@ -806,8 +806,8 @@ thành công mới`,
 				vi: 'Đón thêm khách hàng mới cùng subiz new widget',
 				en: 'Đón thêm khách hàng mới cùng subiz new widget',
 			},
-			primary_button_text: {vi: 'Xem ngay', en: 'See now'},
-			secondary_button_text: {vi: 'Bỏ qua', en: 'Cancel'},
+			primary_button: {vi: 'Xem ngay', en: 'See now'},
+			secondary_button: {vi: 'Bỏ qua', en: 'Cancel'},
 		},
 		desktop_appearance: {
 			title_color: '#FFC48B',
@@ -838,8 +838,8 @@ thành công mới`,
 				vi: 'với đơn hàng đầu tiền của bạn',
 				en: 'your first order',
 			},
-			primary_button_text: {vi: 'ĐĂNG KÝ NGAY', en: 'SIGN UP NOW'},
-			secondary_button_text: {
+			primary_button: {vi: 'ĐĂNG KÝ NGAY', en: 'SIGN UP NOW'},
+			secondary_button: {
 				vi: 'Không, cảm ơn. Tôi sẽ quay lại sau',
 				en: "No, thanks. I'll be back later",
 			},
@@ -856,11 +856,11 @@ thành công mới`,
 			input_background: 'transparent',
 		},
 	},
-	template17:{
+	template17: {
 		css: () =>
-		import(
-			/*webpackPrefetch: true*/ /*webpackChunkName: "template17_css" */ '!to-string-loader!css-loader!less-loader!./template17.less'
-		),
+			import(
+				/*webpackPrefetch: true*/ /*webpackChunkName: "template17_css" */ '!to-string-loader!css-loader!less-loader!./template17.less'
+			),
 		type: 'modal',
 		text: {
 			name: {vi: 'Nhận ngay ưu đãi', en: 'Get special offer now'},
@@ -872,8 +872,8 @@ thành công mới`,
 				vi: 'Giảm 20% chỉ một ngày duy nhất. Miễn phí vận chuyển nội thành',
 				en: '20% off for only one day. Free shipping in the city',
 			},
-			primary_button_text: {vi: 'Đăng ký ngay', en: 'Register now'},
-			secondary_button_text: {vi: 'Bỏ qua', en: 'Cancel'},
+			primary_button: {vi: 'Đăng ký ngay', en: 'Register now'},
+			secondary_button: {vi: 'Bỏ qua', en: 'Cancel'},
 		},
 		desktop_appearance: {
 			title_color: '#FDAD15',
@@ -895,7 +895,7 @@ thành công mới`,
 			import(
 				/*webpackPrefetch: true*/ /*webpackChunkName: "template117_css" */ '!to-string-loader!css-loader!less-loader!./template117.less'
 			),
-			type: 'modal',
+		type: 'modal',
 		text: {
 			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
 			title: {vi: 'Giảm 10%', en: '10% OFF'},
@@ -903,8 +903,8 @@ thành công mới`,
 				vi: 'với đơn hàng đầu tiền của bạn',
 				en: 'your first order',
 			},
-			primary_button_text: {vi: 'ĐĂNG KÝ NGAY', en: 'SIGN UP NOW'},
-			secondary_button_text: {
+			primary_button: {vi: 'ĐĂNG KÝ NGAY', en: 'SIGN UP NOW'},
+			secondary_button: {
 				vi: 'Không, cảm ơn. Tôi sẽ quay lại sau',
 				en: "No, thanks. I'll be back later",
 			},
@@ -926,7 +926,7 @@ thành công mới`,
 			import(
 				/*webpackPrefetch: true*/ /*webpackChunkName: "template25_css" */ '!to-string-loader!css-loader!less-loader!./template25.less'
 			),
-    text: {
+		text: {
 			title: {
 				vi: 'Nhận giảm giá 20% cho đơn hàng tiếp theo',
 				en: 'Get 20% off your next order',
@@ -935,8 +935,8 @@ thành công mới`,
 				vi: 'Đăng ký ngay để nhận ưu đãi cho đơn hàng tiếp theo',
 				en: 'Register to get the discount and receive notification for next promotions',
 			},
-			primary_button_text: {vi: 'Đăng ký ngay', en: 'Register'},
-			secondary_button_text: {vi: 'Không, cảm ơn.Tôi sẽ quay lại sau', en: "No, thanks.I'll be back later"},
+			primary_button: {vi: 'Đăng ký ngay', en: 'Register'},
+			secondary_button: {vi: 'Không, cảm ơn.Tôi sẽ quay lại sau', en: "No, thanks.I'll be back later"},
 		},
 		desktop_appearance: {
 			title_color: '#062D29',
@@ -956,17 +956,17 @@ thành công mới`,
 			import(
 				/*webpackPrefetch: true*/ /*webpackChunkName: "template26_css" */ '!to-string-loader!css-loader!less-loader!./template26.less'
 			),
-			text: {
-				title: {
-					vi: 'Ưu đãi 10%',
-					en: '10% off',
-				},
-				description: {
-					vi: 'và miễn phí vận chuyển với tất cả các đơn hàng trên giá trị 500k',
-					en: 'and get free worldwide shipping',
-				},
-				primary_button_text: {vi: 'Đăng ký ngay', en: 'Shop now'},
-				secondary_button_text: {vi: 'Không, cảm ơn.Tôi sẽ quay lại sau', en: "No, thanks.I'll be back later"},
+		text: {
+			title: {
+				vi: 'Ưu đãi 10%',
+				en: '10% off',
+			},
+			description: {
+				vi: 'và miễn phí vận chuyển với tất cả các đơn hàng trên giá trị 500k',
+				en: 'and get free worldwide shipping',
+			},
+			primary_button: {vi: 'Đăng ký ngay', en: 'Shop now'},
+			secondary_button: {vi: 'Không, cảm ơn.Tôi sẽ quay lại sau', en: "No, thanks.I'll be back later"},
 		},
 		desktop_appearance: {
 			title_color: '#D01865',
@@ -983,50 +983,49 @@ thành công mới`,
 		mobile_appearance: {
 			background_image: 'url(' + require('../assets/background/template26_mobile.png') + ')',
 		},
-
-  },
-  template18: {
+	},
+	template18: {
 		css: () =>
 			import(
 				/*webpackPrefetch: true*/ /*webpackChunkName: "template18_css" */ '!to-string-loader!css-loader!less-loader!./template18.less'
 			),
-			type: 'modal',
-			text: {
-				name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
-				title: {vi: 'ĐĂNG KÝ ĐỂ NHẬN ƯU ĐÃI ĐẶC BIỆT', en: '10% OFF'},
-				description: {
-					vi: 'nhận ngay mã giảm giá tới 500K cho đơn hàng đầu tiên',
-					en: 'Get up to 100$ off your first order',
-				},
-				primary_button_text: {vi: 'ĐĂNG KÝ NGAY', en: 'SIGN UP NOW'},
-				secondary_button_text: {
-					vi: 'Không, cảm ơn. Tôi sẽ quay lại sau',
-					en: "No, thanks. I'll be back later",
-				},
+		type: 'modal',
+		text: {
+			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
+			title: {vi: 'ĐĂNG KÝ ĐỂ NHẬN ƯU ĐÃI ĐẶC BIỆT', en: '10% OFF'},
+			description: {
+				vi: 'nhận ngay mã giảm giá tới 500K cho đơn hàng đầu tiên',
+				en: 'Get up to 100$ off your first order',
 			},
-			desktop_appearance: {
-				title_color: 'black',
-				description_color: 'black',
-				background: 'white',
-				primary_button_background: 'linear-gradient(74.1deg, #5E8D81 0.21%, #3FA684 100%)',
-				primary_button_color: 'white',
-				secondary_button_background: 'transparent',
-				secondary_button_color: 'black',
-				input_color: 'black',
-				input_background: 'transparent',
+			primary_button: {vi: 'ĐĂNG KÝ NGAY', en: 'SIGN UP NOW'},
+			secondary_button: {
+				vi: 'Không, cảm ơn. Tôi sẽ quay lại sau',
+				en: "No, thanks. I'll be back later",
 			},
-			mobile_appearance: {
-				title_color: 'black',
-				description_color: 'black',
-				background: 'white',
-				primary_button_background: 'linear-gradient(74.1deg, #5E8D81 0.21%, #3FA684 100%)',
-				primary_button_color: 'white',
-				background_image: 'url(' + require('../assets/background/template18_mobile.png') + ')',
-				secondary_button_background: 'transparent',
-				secondary_button_color: 'black',
-				input_color: 'black',
-				input_background: 'transparent',
-			},
+		},
+		desktop_appearance: {
+			title_color: 'black',
+			description_color: 'black',
+			background: 'white',
+			primary_button_background: 'linear-gradient(74.1deg, #5E8D81 0.21%, #3FA684 100%)',
+			primary_button_color: 'white',
+			secondary_button_background: 'transparent',
+			secondary_button_color: 'black',
+			input_color: 'black',
+			input_background: 'transparent',
+		},
+		mobile_appearance: {
+			title_color: 'black',
+			description_color: 'black',
+			background: 'white',
+			primary_button_background: 'linear-gradient(74.1deg, #5E8D81 0.21%, #3FA684 100%)',
+			primary_button_color: 'white',
+			background_image: 'url(' + require('../assets/background/template18_mobile.png') + ')',
+			secondary_button_background: 'transparent',
+			secondary_button_color: 'black',
+			input_color: 'black',
+			input_background: 'transparent',
+		},
 	},
 	template27: {
 		css: () =>
@@ -1042,8 +1041,8 @@ thành công mới`,
 				vi: 'và miễn phí vận chuyển với tất cả các đơn hàng trên giá trị 500k',
 				en: 'and get free worldwide shipping',
 			},
-			primary_button_text: {vi: 'Đăng ký ngay', en: 'Shop now'},
-			secondary_button_text: {vi: 'Không, cảm ơn.Tôi sẽ quay lại sau', en: "No, thanks.I'll be back later"},
+			primary_button: {vi: 'Đăng ký ngay', en: 'Shop now'},
+			secondary_button: {vi: 'Không, cảm ơn.Tôi sẽ quay lại sau', en: "No, thanks.I'll be back later"},
 		},
 		desktop_appearance: {
 			title_color: '#D01965',
@@ -1060,8 +1059,8 @@ thành công mới`,
 		mobile_appearance: {
 			background_image: 'url(' + require('../assets/background/template27_mobile.png') + ')',
 		},
-  },
-  template19: {
+	},
+	template19: {
 		css: () =>
 			import(
 				/*webpackPrefetch: true*/ /*webpackChunkName: "template19_css" */ '!to-string-loader!css-loader!less-loader!./template19.less'
@@ -1074,8 +1073,8 @@ thành công mới`,
 				vi: 'Đăng ký ngay và nhận mã giảm giá 10% cho đơn hàng đầu tiên',
 				en: 'Regiter now and get 10% OFF your first order',
 			},
-			primary_button_text: {vi: 'ĐĂNG KÝ NGAY', en: 'SIGN UP NOW'},
-			secondary_button_text: {
+			primary_button: {vi: 'ĐĂNG KÝ NGAY', en: 'SIGN UP NOW'},
+			secondary_button: {
 				vi: 'Không, cảm ơn. Tôi sẽ quay lại sau',
 				en: "No, thanks. I'll be back later",
 			},
@@ -1104,8 +1103,8 @@ thành công mới`,
 				vi: 'Đăng ký để nhận ngay mã giảm giá 10%',
 				en: 'Sign up to get 10% discount your next order',
 			},
-			primary_button_text: {vi: 'Đăng ký ngay', en: 'Sign up now'},
-			secondary_button_text: {vi: 'Không, cảm ơn.Tôi sẽ quay lại sau', en: "No, thanks.I'll be back later"},
+			primary_button: {vi: 'Đăng ký ngay', en: 'Sign up now'},
+			secondary_button: {vi: 'Không, cảm ơn.Tôi sẽ quay lại sau', en: "No, thanks.I'll be back later"},
 		},
 		desktop_appearance: {
 			title_color: '#fff',
@@ -1139,8 +1138,8 @@ thành công mới`,
 				vi: 'Đăng ký để nhận ngay ưu đãi',
 				en: 'Sign up to get the promotion code ',
 			},
-			primary_button_text: {vi: 'Đăng ký ngay', en: 'Shop now'},
-			secondary_button_text: {vi: 'Không, cảm ơn.Tôi sẽ quay lại sau', en: "No, thanks.I'll be back later"},
+			primary_button: {vi: 'Đăng ký ngay', en: 'Shop now'},
+			secondary_button: {vi: 'Không, cảm ơn.Tôi sẽ quay lại sau', en: "No, thanks.I'll be back later"},
 		},
 		desktop_appearance: {
 			title_color: '#000',
@@ -1174,8 +1173,8 @@ thành công mới`,
 				vi: 'Đăng ký để nhận ngay ưu đãi',
 				en: 'Sign up to get the promotion code ',
 			},
-			primary_button_text: {vi: 'Đăng ký ngay', en: 'Shop now'},
-			secondary_button_text: {vi: 'Không, cảm ơn.Tôi sẽ quay lại sau', en: "No, thanks.I'll be back later"},
+			primary_button: {vi: 'Đăng ký ngay', en: 'Shop now'},
+			secondary_button: {vi: 'Không, cảm ơn.Tôi sẽ quay lại sau', en: "No, thanks.I'll be back later"},
 		},
 		desktop_appearance: {
 			title_color: '#000',

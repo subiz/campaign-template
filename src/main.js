@@ -20,14 +20,25 @@ new Vue({
 						{ key: 2, label: 'Email', is_required: true, type: 'text', placeholder: ' Email' },
 						{ key: 2, label: 'Số điện thoại', is_required: true, type: 'text', placeholder: ' Số điện thoại' },
 						{ key: 1, label: 'Họ Tên', is_required: true, type: 'text', placeholder: ' Họ tên' },
+						{ key: 2, label: 'Email', is_required: true, type: 'text', placeholder: ' Email' },
+						{ key: 2, label: 'Số điện thoại', is_required: true, type: 'text', placeholder: ' Số điện thoại' },
+						{ key: 1, label: 'Họ Tên', is_required: true, type: 'text', placeholder: ' Họ tên' },
+						{ key: 2, label: 'Email', is_required: true, type: 'text', placeholder: ' Email' },
+						{ key: 2, label: 'Số điện thoại', is_required: true, type: 'text', placeholder: ' Số điện thoại' },
+						{ key: 1, label: 'Họ Tên', is_required: true, type: 'text', placeholder: ' Họ tên' },
+						{ key: 2, label: 'Email', is_required: true, type: 'text', placeholder: ' Email' },
+						{ key: 2, label: 'Số điện thoại', is_required: true, type: 'text', placeholder: ' Số điện thoại' },
+						{ key: 1, label: 'Họ Tên', is_required: true, type: 'text', placeholder: ' Họ tên' },
+						{ key: 2, label: 'Email', is_required: true, type: 'text', placeholder: ' Email' },
+						{ key: 2, label: 'Số điện thoại', is_required: true, type: 'text', placeholder: ' Số điện thoại' },
 					],
 				},
 				primary_button: { enabled: true, text: '' },
 				secondary_button: { enabled: true, text: '' },
 			},
 			desktop_appearance: {
-				background: 'red'
-			}
+				background: 'red',
+			},
 		}
 	},
 	mounted () {
@@ -36,10 +47,10 @@ new Vue({
 		if (!op.get(this.page, 'title')) op.set(this.page, 'title', op.get(metadata, 'title.vi'))
 		if (!op.get(this.page, 'description')) op.set(this.page, 'description', op.get(metadata, 'description.vi'))
 		if (!op.get(this.page, 'primary_button.text')) {
-			op.set(this.page, 'primary_button.text', op.get(metadata, 'primary_button_text.vi'))
+			op.set(this.page, 'primary_button.text', op.get(metadata, 'primary_button.vi'))
 		}
 		if (!op.get(this.page, 'secondary_button.text')) {
-			op.set(this.page, 'secondary_button.text', op.get(metadata, 'secondary_button_text.vi'))
+			op.set(this.page, 'secondary_button.text', op.get(metadata, 'secondary_button.vi'))
 		}
 		// make the environment look like widget environment
 		// common.setCssToHead('subiz-template-style-app', '#subiz * {all:unset;}')
