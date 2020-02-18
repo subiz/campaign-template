@@ -1206,14 +1206,19 @@ Object.keys(meta).map(id => {
 				name: 'subiz-template',
 				props: ['page', 'form', 'countdown', 'primaryButton', 'secondaryButton', 'closeButton', 'frame'],
 				render(h) {
+<<<<<<< HEAD
 					var cls = 'overlay overlay--' + this.frame
 
+=======
+					var cls = 'container ' + this.page.animation
+>>>>>>> add class animation
 					return (
 						<div class={cls}>
 							<div class="notch">
 								<div class="notch__camera"></div>
 								<div class="notch__audio"></div>
 							</div>
+<<<<<<< HEAD
 							<div class="browser-bar">
 								<div class="button__red"></div>
 								<div class="button__yellow"></div>
@@ -1221,6 +1226,9 @@ Object.keys(meta).map(id => {
 								<div class="bar__url"></div>
 							</div>
 							<div class="container">
+=======
+							<div class={cls}>
+>>>>>>> add class animation
 								{this.closeButton}
 								<div class="container__inner">
 									<div class="background"></div>
