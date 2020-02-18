@@ -1204,13 +1204,21 @@ Object.keys(meta).map(id => {
 		Promise.resolve({
 			default: {
 				name: 'subiz-template',
-				props: ['page', 'form', 'countdown', 'primaryButton', 'secondaryButton', 'closeButton'],
+				props: ['page', 'form', 'countdown', 'primaryButton', 'secondaryButton', 'closeButton', 'frame'],
 				render(h) {
+					var cls = 'overlay overlay--' + this.frame
+
 					return (
-						<div class="overlay overlay--iphone">
+						<div class={cls}>
 							<div class="notch">
 								<div class="notch__camera"></div>
 								<div class="notch__audio"></div>
+							</div>
+							<div class="browser-bar">
+								<div class="button__red"></div>
+								<div class="button__yellow"></div>
+								<div class="button__green"></div>
+								<div class="bar__url"></div>
 							</div>
 							<div class="container">
 								{this.closeButton}
@@ -1237,7 +1245,7 @@ Object.keys(meta).map(id => {
 
 let Template = {
 	name: 'Template',
-	props: ['mode', 'template', 'page'],
+	props: ['mode', 'template', 'page', 'frame'],
 	data() {
 		return {
 			Template: null,
@@ -1335,6 +1343,7 @@ let Template = {
 						primaryButton={$primary}
 						secondaryButton={$secondary}
 						closeButton={$close}
+						frame={this.frame}
 					/>
 				</div>
 			</div>

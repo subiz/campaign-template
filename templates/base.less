@@ -72,7 +72,8 @@
 	border: solid 5px #000000;
 	border-radius: 30px;
 }
-.notch{
+.notch{display: none;}
+.overlay--iphone .notch{
 	position: absolute;
 	z-index: 10;
 	top: -5px;
@@ -93,11 +94,58 @@
 	border-radius: 10px;
 	background-color: white;
 }
-.notch__audio{
+ .notch__audio{
 	height: 10px;
 	width: 40%;
 	border-radius: 5px;
 	background-color: white;
+}
+.browser-bar{
+	display: none;
+}
+.overlay--browser{
+	// border: solid 1px #000000;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+}
+.overlay--browser .browser-bar{
+	border-radius: 1px;
+	display: flex;
+	width: 100%;
+	background-color: #eef2f8ee;
+	height: 55px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	align-items: center;
+
+}
+.button__red{ 
+	height: 16px;
+	width: 16px;
+	border-radius: 8px;
+	background-color: #fc6352;
+	margin-left: 20px;
+}
+.button__yellow{ 
+	height: 16px;
+	width: 16px;
+	border-radius: 8px;
+	background-color: #ffd04f;
+	margin-left: 10px;
+}
+.button__green{ 
+	height: 16px;
+	width: 16px;
+	border-radius: 8px;
+	background-color: #01be59;
+	margin-left: 10px;
+}
+.bar__url{
+	width: 78%;
+	height: 30px;
+	background-color: #fff;
+	border-radius: 5px ;
+	margin-left: 50px;
 }
 
 .mobile .overlay {

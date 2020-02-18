@@ -59,7 +59,7 @@ new Vue({
 	render (h) {
 		return (
 			<div id="subiz">
-				<Template.Template template={this.template} page={this.page} frame="iphone" />
+				<Template.Template template={this.template} page={this.page} frame="browser" />
 			</div>
 		)
 	},
