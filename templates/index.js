@@ -1288,6 +1288,7 @@ let Template = {
 			var css = replaceCssVariable(CSS, {desktop_appearance, mobile_appearance})
 			common.setCssToHead('subiz-template-style-' + this.template, css)
 		},
+
 		onClose() {
 			this.$emit('closeButtonClicked')
 			this.close = true
@@ -1325,10 +1326,7 @@ let Template = {
 			this.$emit(ev)
 
 			for (let a of actions) {
-				if (a.action === 'close')
-					setTimeout(() => {
-						this.close = true
-					}, 200)
+				if (a.action === 'close') setTimeout(() => this.onClose(), 200)
 			}
 		},
 
