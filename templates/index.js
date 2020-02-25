@@ -1210,8 +1210,7 @@ Object.keys(meta).map(id => {
 
 					var animation = 'container ' + this.page.animation
 					return (
-					
-						<div class={cls}>
+						<div class={cls} vOn:click={() => this.$emit('backgroundClick')}>
 							<div class="notch">
 								<div class="notch__camera"></div>
 								<div class="notch__audio"></div>
@@ -1222,7 +1221,7 @@ Object.keys(meta).map(id => {
 								<div class="button__green"></div>
 								<div class="bar__url"></div>
 							</div>
-							<div class={animation}>
+							<div class={animation} vOn:click_stop={() => true}>
 								{this.closeButton}
 								<div class="container__inner">
 									<div class="background"></div>
@@ -1253,6 +1252,7 @@ let Template = {
 			Template: null,
 			close: false,
 			templateid: '',
+			pressedSubmit: false,
 		}
 	},
 
@@ -1293,12 +1293,51 @@ let Template = {
 			this.close = true
 		},
 
+		checkFormFilled() {
+			let form = op.get(this.page, 'form')
+			let hasForm = form && form.enabled && form.fields && form.fields.length > 0
+			if (!hasForm) return true
+
+			for (let i = 0; i < form.fields.length; i++) {
+				let field = form.fields[i]
+				if (field.is_required && (field.value === undefined || field.value === '')) return false
+			}
+
+			return true
+		},
+
 		onSecondaryClick() {
-			this.$emit('secondaryButtonClicked')
+			this.onButtonClick(op.get(this.page, 'secondary_button'), 'secondaryButtonClicked')
+		},
+
+		onButtonClick(button, ev) {
+			let actions = op.get(button, 'actions') || []
+			let mustfillform = false
+			for (let a of actions) {
+				if (a.action === 'converstion' || a.action === 'submit') {
+					mustfillform = true
+					this.pressedSubmit = true
+				}
+			}
+
+			if (mustfillform && !this.checkFormFilled()) return
+
+			this.$emit(ev)
+
+			for (let a of actions) {
+				if (a.action === 'close')
+					setTimeout(() => {
+						this.close = true
+					}, 200)
+			}
+		},
+
+		onBackgroundClick() {
+			this.onButtonClick(op.get(this.page, 'background_click'), 'backgroundClicked')
 		},
 
 		onPrimaryClick() {
-			this.$emit('primaryButtonClicked')
+			this.onButtonClick(op.get(this.page, 'primary_button'), 'primaryButtonClicked')
 		},
 
 		async loadTemplate(t) {
@@ -1334,7 +1373,7 @@ let Template = {
 			)
 		}
 
-		let $form = <Form form={this.page.form} />
+		let $form = <Form form={this.page.form} pressedSubmit={this.pressedSubmit} />
 		var mode = this.mode || MODE
 		return (
 			<div class={'template ' + this.template}>
@@ -1346,6 +1385,7 @@ let Template = {
 						secondaryButton={$secondary}
 						closeButton={$close}
 						frame={this.frame}
+						vOn:backgroundClick={this.onBackgroundClick}
 					/>
 				</div>
 			</div>

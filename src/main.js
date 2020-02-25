@@ -17,7 +17,7 @@ new Vue({
 				form: {
 					enabled: true,
 					fields: [
-						{ key: 2, label: 'Email', is_required: true, type: 'text', placeholder: ' Email' },
+						{ key: 'email', label: 'Email', is_required: true, type: 'text', placeholder: ' Email' },
 						{ key: 2, label: 'Số điện thoại', is_required: true, type: 'text', placeholder: ' Số điện thoại' },
 						{ key: 1, label: 'Họ Tên', is_required: true, type: 'text', placeholder: ' Họ tên' },
 						{ key: 2, label: 'Số điện thoại', is_required: true, type: 'text', placeholder: ' Số điện thoại' },
@@ -26,8 +26,8 @@ new Vue({
 						{ key: 2, label: 'Số điện thoại', is_required: true, type: 'text', placeholder: ' Số điện thoại' },
 					],
 				},
-				primary_button: { enabled: true, text: '' },
-				secondary_button: { enabled: true, text: '' },
+				primary_button: { enabled: true, text: '', actions: [{ action: 'submit' }] },
+				secondary_button: { enabled: true, text: '', actions: [{ action: 'close' }] },
 			},
 			desktop_appearance: {
 				background: 'red',

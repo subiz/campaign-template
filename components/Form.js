@@ -1,6 +1,6 @@
 export default {
 	name: 'jform',
-	props: ['form'],
+	props: ['form', 'pressedSubmit'],
 	methods: {
 		renderSingleChoiceList (h, field) {
 			if (field.type !== 'list' || field.multiple_choice) return null
@@ -61,10 +61,15 @@ export default {
 
 		renderEmail (h, field) {
 			if (field.type !== 'text' || field.subtype !== 'email') return null
+			var cls = 'text-input f '
+			if (this.pressedSubmit && field.is_required && (field.value === undefined || field.value === '')) {
+				cls += 'text-input--error'
+			}
+
 			return (
 				<input
 					type="email"
-					class="text-input"
+					class={cls}
 					placeholder={field.placeholder}
 					vOn:keyup={ev => this.onTextFieldChange(ev, field)}
 				/>
@@ -72,22 +77,30 @@ export default {
 		},
 
 		renderMultiLineText (h, field) {
-			if (field.type !== 'text' || !field.multiline_text || field.subtype === 'email' ) return null
+			if (field.type !== 'text' || !field.multiline_text || field.subtype === 'email') return null
+
+			var cls = 'textarea'
+			if (this.pressedSubmit && field.is_required && (field.value === undefined || field.value === '')) {
+				cls += ' textarea--error'
+			}
+
 			return (
-				<textarea
-					class="textarea"
-					placeholder={field.placeholder}
-					vOn:keyup={ev => this.onTextFieldChange(ev, field)}
-				/>
+				<textarea class={cls} placeholder={field.placeholder} vOn:keyup={ev => this.onTextFieldChange(ev, field)} />
 			)
 		},
 
 		renderSingleLineText (h, field) {
 			if (field.type !== 'text' || field.multiline_text || field.subtype === 'email') return null
+
+			var cls = 'text-input'
+			if (this.pressedSubmit && field.is_required && (field.value === undefined || field.value === '')) {
+				cls += ' text-input--error'
+			}
+
 			return (
 				<input
 					type="text"
-					class="text-input"
+					class={cls}
 					placeholder={field.placeholder}
 					vOn:keyup={ev => this.onTextFieldChange(ev, field)}
 				/>
@@ -96,10 +109,16 @@ export default {
 
 		renderNumber (h, field) {
 			if (field.type !== 'number') return
+
+			var cls = 'text-input'
+			if (this.pressedSubmit && field.is_required && (field.value === undefined || field.value === '')) {
+				cls += ' text-input--error'
+			}
+
 			return (
 				<input
 					type="number"
-					class="text-input"
+					class={cls}
 					placeholder={field.placeholder}
 					vOn:keyup={ev => this.onTextFieldChange(ev, field)}
 				/>
@@ -126,6 +145,7 @@ export default {
 				</div>
 			)
 		},
+
 		onRadioChange (ev, field, item) {
 			var v = []
 			if (ev.target.checked) v = [item]
@@ -147,6 +167,7 @@ export default {
 			}
 			this.$set(field, 'value', JSON.stringify(v))
 		},
+
 		contains (field, item) {
 			var v = []
 			try {
@@ -156,6 +177,7 @@ export default {
 			if (!Array.isArray(v)) v = []
 			return v.includes(item)
 		},
+
 		onTextFieldChange (ev, field) {
 			field.value = ev.target.value
 		},
@@ -163,6 +185,7 @@ export default {
 		onBooleanFieldChange (ev, field) {
 			field.value = ev.target.checked
 		},
+
 		onDatetimeFieldChange (ev, field) {
 			field.value = new Date(ev.target.value)
 		},
