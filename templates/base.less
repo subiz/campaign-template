@@ -419,11 +419,17 @@ input {
 }
 
 .text-input.text-input--error {
-	border-bottom-color: #f14336 ;
+	border-color: #eb1000 ;
+}
+.text-input.text-input--error::placeholder {
+	.color(#eb1000)
 }
 
 .textarea.textarea--error{
-	border-bottom-color: #f14336 ;
+	border-color: #eb1000 ;
+}
+.textarea.text-input--error::placeholder {
+	.color(#eb1000)
 }
 
 .mobile .text-input::placeholder{
