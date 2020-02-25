@@ -1132,11 +1132,14 @@ Object.keys(meta).map(id => {
 		Promise.resolve({
 			default: {
 				name: 'subiz-template',
-				props: ['page', 'form', 'countdown', 'primaryButton', 'secondaryButton', 'closeButton', 'frame'],
+				props: ['page', 'form', 'countdown', 'primaryButton', 'secondaryButton', 'closeButton', 'frame', 'closeAnimation'],
 				render(h) {
-					var cls = 'overlay overlay--' + this.frame
+				var cls = 'overlay overlay--' + this.frame
+				var animation = 'container ' //+ (this.page.animation) + ' ' + this.closeAnimation
+				if(this.closeAnimation) animation += this.closeAnimation
+				else animation += this.page.animation
 
-					var animation = 'container ' + this.page.animation
+				//var animation = 'container ' + this.page.animation
 					return (
 						<div class={cls} vOn:click={() => this.$emit('backgroundClick')}>
 							<div class="notch">
@@ -1181,6 +1184,7 @@ let Template = {
 			close: false,
 			templateid: '',
 			pressedSubmit: false,
+			closeAnimation: ''
 		}
 	},
 
@@ -1219,7 +1223,10 @@ let Template = {
 
 		onClose() {
 			this.$emit('closeButtonClicked')
-			this.close = true
+			setTimeout(() => {
+				this.close = true
+			},400);
+			this.closeAnimation = 'bounceOut'
 		},
 
 		checkFormFilled() {
@@ -1312,6 +1319,7 @@ let Template = {
 						closeButton={$close}
 						frame={this.frame}
 						vOn:backgroundClick={this.onBackgroundClick}
+						closeAnimation={this.closeAnimation}
 					/>
 				</div>
 			</div>
