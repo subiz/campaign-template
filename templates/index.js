@@ -1132,14 +1132,23 @@ Object.keys(meta).map(id => {
 		Promise.resolve({
 			default: {
 				name: 'subiz-template',
-				props: ['page', 'form', 'countdown', 'primaryButton', 'secondaryButton', 'closeButton', 'frame', 'closeAnimation'],
+				props: [
+					'page',
+					'form',
+					'countdown',
+					'primaryButton',
+					'secondaryButton',
+					'closeButton',
+					'frame',
+					'closeAnimation',
+				],
 				render(h) {
-				var cls = 'overlay overlay--' + this.frame
-				var animation = 'container ' //+ (this.page.animation) + ' ' + this.closeAnimation
-				if(this.closeAnimation) animation += this.closeAnimation
-				else animation += this.page.animation
+					var cls = 'overlay overlay--' + this.frame
+					var animation = 'container ' //+ (this.page.animation) + ' ' + this.closeAnimation
+					if (this.closeAnimation) animation += this.closeAnimation
+					else animation += this.page.animation
 
-				//var animation = 'container ' + this.page.animation
+					//var animation = 'container ' + this.page.animation
 					return (
 						<div class={cls} vOn:click={() => this.$emit('backgroundClick')}>
 							<div class="notch">
@@ -1184,7 +1193,7 @@ let Template = {
 			close: false,
 			templateid: '',
 			pressedSubmit: false,
-			closeAnimation: ''
+			closeAnimation: '',
 		}
 	},
 
@@ -1225,7 +1234,7 @@ let Template = {
 			this.$emit('closeButtonClicked')
 			setTimeout(() => {
 				this.close = true
-			},400);
+			}, 400)
 			this.closeAnimation = 'bounceOut'
 		},
 
@@ -1333,7 +1342,6 @@ function tokenize(arr, token) {
 	if (!arr || !arr.length) return []
 	var out = []
 
-	if (arr.length > 100) return []
 	for (let i = 0; i < arr.length; i++) {
 		var item = arr[i]
 		if (typeof item !== 'string') {
@@ -1341,7 +1349,6 @@ function tokenize(arr, token) {
 			continue
 		}
 		var ts = item.split(token)
-		if (ts.length > 100) return []
 		for (let i = 0; i < ts.length; i++) {
 			out.push(ts[i])
 			out.push({type: token})
