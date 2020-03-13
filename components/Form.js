@@ -33,7 +33,7 @@ export default {
 						type="checkbox"
 						id={field.key + item}
 						vOn:change={ev => this.onCheckboxChange(ev, field, item)}
-						checked={this.contains(field, item)}
+						checked={contains(field, item)}
 					/>
 					<label class="checkbox--label " for={field.key + item}>
 						{item + ':'}
@@ -59,10 +59,14 @@ export default {
 			)
 		},
 
+		toDate (v) {
+			return new Date(JSON.parse(v)).toLocaleDateString('en-CA')
+		},
+
 		renderEmail (h, field) {
 			if (field.type !== 'text' || field.subtype !== 'email') return null
 			var cls = 'text-input f '
-			if (this.pressedSubmit && field.is_required && (field.value === undefined || field.value === '')) {
+			if (this.pressedSubmit && field.is_required && isEmpty(field.value)) {
 				cls += 'text-input--error'
 			}
 
@@ -70,6 +74,7 @@ export default {
 				<input
 					type="email"
 					class={cls}
+					value={parseJSON(field.value) || ''}
 					placeholder={field.placeholder}
 					vOn:keyup={ev => this.onTextFieldChange(ev, field)}
 				/>
@@ -80,12 +85,17 @@ export default {
 			if (field.type !== 'text' || !field.multiline_text || field.subtype === 'email') return null
 
 			var cls = 'textarea'
-			if (this.pressedSubmit && field.is_required && (field.value === undefined || field.value === '')) {
+			if (this.pressedSubmit && field.is_required && isEmpty(field.value)) {
 				cls += ' textarea--error'
 			}
 
 			return (
-				<textarea class={cls} placeholder={field.placeholder} vOn:keyup={ev => this.onTextFieldChange(ev, field)} />
+				<textarea
+					class={cls}
+					placeholder={field.placeholder}
+					vOn:keyup={ev => this.onTextFieldChange(ev, field)}
+					value={parseJSON(field.value) || ''}
+				/>
 			)
 		},
 
@@ -93,7 +103,7 @@ export default {
 			if (field.type !== 'text' || field.multiline_text || field.subtype === 'email') return null
 
 			var cls = 'text-input'
-			if (this.pressedSubmit && field.is_required && (field.value === undefined || field.value === '')) {
+			if (this.pressedSubmit && field.is_required && isEmpty(field.value)) {
 				cls += ' text-input--error'
 			}
 
@@ -101,6 +111,7 @@ export default {
 				<input
 					type="text"
 					class={cls}
+					value={parseJSON(field.value) || ''}
 					placeholder={field.placeholder}
 					vOn:keyup={ev => this.onTextFieldChange(ev, field)}
 				/>
@@ -111,7 +122,7 @@ export default {
 			if (field.type !== 'number') return
 
 			var cls = 'text-input'
-			if (this.pressedSubmit && field.is_required && (field.value === undefined || field.value === '')) {
+			if (this.pressedSubmit && field.is_required && isEmpty(field.value)) {
 				cls += ' text-input--error'
 			}
 
@@ -119,6 +130,7 @@ export default {
 				<input
 					type="number"
 					class={cls}
+					value={parseJSON(field.value) || 0}
 					placeholder={field.placeholder}
 					vOn:keyup={ev => this.onTextFieldChange(ev, field)}
 				/>
@@ -168,26 +180,18 @@ export default {
 			this.$set(field, 'value', JSON.stringify(v))
 		},
 
-		contains (field, item) {
-			var v = []
-			try {
-				v = JSON.parse(field.value)
-			} catch (e) {}
 
-			if (!Array.isArray(v)) v = []
-			return v.includes(item)
-		},
 
 		onTextFieldChange (ev, field) {
-			field.value = ev.target.value
+			field.value = JSON.stringify(ev.target.value)
 		},
 
 		onBooleanFieldChange (ev, field) {
-			field.value = ev.target.checked
+			field.value = JSON.tringify(ev.target.checked)
 		},
 
 		onDatetimeFieldChange (ev, field) {
-			field.value = new Date(ev.target.value)
+			field.value = JSON.stringify(new Date(ev.target.value).toISOString())
 		},
 	},
 
@@ -209,4 +213,27 @@ export default {
 		))
 		return <div class="form">{$fields}</div>
 	},
+}
+
+function isEmpty (value) {
+	return value === undefined || value === null || value === ''
+}
+
+function parseJSON (js) {
+	try {
+		return JSON.parse(js)
+	} catch (e) {
+		return undefined
+	}
+	return undefined
+}
+
+function contains (field, item) {
+	var v = []
+	try {
+		v = JSON.parse(field.value)
+	} catch (e) {}
+
+	if (!Array.isArray(v)) v = []
+	return v.includes(item)
 }
