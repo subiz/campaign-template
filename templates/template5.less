@@ -31,6 +31,8 @@
 	}
 
 	.content {
+		padding-left: 20px;
+		padding-right:20px;
 		position: absolute;
     z-index: 2;
     top: 0;
@@ -42,21 +44,25 @@
     flex-direction: column;
     justify-content: center;
 		align-items: center;
-		padding: 30px 0;
+		// padding: 30px 0;
 	}
 	.mobile .content {
 		width: 100%;
 		justify-content: flex-start;
-		padding-top: 84px;
+		padding-top: 50px;
 	}
-
+	.form { 
+		width: 100%;
+ 	}
+	.mobile	.form{
+		padding: 0px
+	} 
 	.title {
-		font-size: 60px;
-		line-height: 75px;
+		font-size: 55px;
 		font-family: 'Muli';
-		width: 639px;
+		// width: 639px;
 		text-align: center;
-		margin-bottom: 15px;
+		margin-bottom: 10px;
 		text-align: center;
 	}
 	.mobile .title {
@@ -69,10 +75,11 @@
 		font-size: 24px;
 		line-height: 30px;
 		font-family: 'Muli';
-		width: 530px;
 		text-align: center;
 		margin-bottom: 23px;
 		text-align: center;
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 	.mobile .description {
 		font-size: 16px;
@@ -82,7 +89,7 @@
 
 	.form-field {
 		height: 50px;
-		width: 446px;
+		width: 100%;
 		margin-top: 11px;
 
 		label {
@@ -106,7 +113,6 @@
 	.mobile .form-field {
 		height: 45px;
 		width: 335px;
-
 		input {
 			font-size: 16px;
 		}
@@ -116,9 +122,11 @@
 		flex-direction: column;
 		margin-top: 11px;
 		padding: 0;
-
+		padding-left: 30px;
+		padding-right: 30px;
+		width :100%;
 		.btn.btn--primary, .btn.btn--secondary {
-			width: 446px;
+			width: 100%;
 			border-radius: 50px;
 			height: 50px;
 			font-size: 18px;
@@ -126,12 +134,13 @@
 		}
 
 		.btn.btn--secondary {
+			width: 100%;
 			margin-top: 11px;
-			font-size: 18px;
-			line-height: 24px;
+			margin-left: 0px;
 		}
 	}
 	.mobile .buttons {
+		margin-top: 20px;
 
 		.btn.btn--primary, .btn.btn--secondary {
 			width: 335px;
