@@ -45,7 +45,7 @@ var meta = {
 		type: 'modal',
 
 		text: {
-			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
+			name: {vi: 'Mẫu 1: Hỏi thông tin', en: 'Template 1: Ask information'},
 			title: {vi: 'Giảm 10%', en: '10% OFF'},
 			description: {
 				vi: 'với đơn hàng đầu tiên của bạn',
@@ -74,7 +74,7 @@ var meta = {
 			import(/*webpackChunkName: "template2_css" */ '!to-string-loader!css-loader!less-loader!./template2.less'),
 		type: 'modal',
 		text: {
-			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
+			name: {vi: 'Mẫu 2: Hỏi thông tin', en: 'Template 2: Ask information'},
 			title: {
 				vi: 'Đăng ký để nhận ưu đãi đặc biệt',
 				en: 'Sign up to get special offer',
@@ -104,7 +104,7 @@ var meta = {
 			import(/*webpackChunkName: "template3_css" */ '!to-string-loader!css-loader!less-loader!./template3.less'),
 		type: 'modal',
 		text: {
-			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
+			name: {vi: 'Mẫu 3: Hỏi thông tin', en: 'Template 3: Ask information'},
 			title: {
 				vi: 'Đăng ký để nhận ưu đãi đặc biệt',
 				en: 'Sign up to get special offer',
@@ -133,7 +133,7 @@ var meta = {
 			import(/*webpackChunkName: "template4_css" */ '!to-string-loader!css-loader!less-loader!./template4.less'),
 		type: 'modal',
 		text: {
-			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
+			name: {vi: 'Mẫu 4: Hỏi thông tin', en: 'Template 4: Ask information'},
 			title: {
 				vi: 'Đăng ký để nhận ưu đãi đặc biệt',
 				en: 'Sign up to get special offer',
@@ -234,7 +234,7 @@ var meta = {
 			import(/*webpackChunkName: "template9_css" */ '!to-string-loader!css-loader!less-loader!./template9.less'),
 		type: 'modal',
 		text: {
-			name: {vi: 'Form hỏi ý kiến (feedback)', en: 'Feedback form'},
+			name: {vi: 'Mẫu 5: Xin ý kiến đánh giá', en: 'Template 5: Feedback'},
 			title: {
 				vi: 'Bạn có tìm được thứ mình cần?',
 				en: 'Did you find what you need?',
@@ -258,7 +258,7 @@ var meta = {
 			import(/*webpackChunkName: "template10_css" */ '!to-string-loader!css-loader!less-loader!./template10.less'),
 		type: 'modal',
 		text: {
-			name: {vi: 'Form hỏi ý kiến (feedback)', en: 'Feedback form'},
+			name: {vi: 'Mẫu 6: Xin ý kiến đánh giá', en: 'Template 6: Feedback'},
 			title: {
 				vi: 'Feedback của bạn rất quan trọng với chúng tôi!',
 				en: 'Your feedback is valuable to us!',
@@ -287,7 +287,7 @@ var meta = {
 			import(/*webpackChunkName: "template20_css" */ '!to-string-loader!css-loader!less-loader!./template20.less'),
 		type: 'modal',
 		text: {
-			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
+			name: {vi: 'Mẫu 7: Hỏi thông tin', en: 'Template 7: Ask information'},
 			title: {
 				vi: 'Đăng ký ngay để nhận mã giảm gía 15%',
 				en: 'Register and get 15% off your next order',
@@ -311,13 +311,12 @@ var meta = {
 			input_background: '',
 		},
 	},
-
 	template39: {
 		css: () =>
 			import(/*webpackChunkName: "template39_css" */ '!to-string-loader!css-loader!less-loader!./template39.less'),
 		type: 'modal',
 		text: {
-			name: {vi: 'Nhận ngay ưu đãi', en: 'Get special offer now'},
+			name: {vi: 'Mẫu 8: Hỏi thông tin', en: 'Template 8: Ask information'},
 			title: {
 				vi: 'Nhận ngay ưu đãi!',
 				en: 'Get special offer now!',
@@ -349,7 +348,7 @@ var meta = {
 			import(/*webpackChunkName: "template21_css" */ '!to-string-loader!css-loader!less-loader!./template21.less'),
 		type: 'modal',
 		text: {
-			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
+			name: {vi: 'Mẫu 9: Hỏi thông tin', en: 'Template 9: Ask information'},
 			title: {
 				vi: 'Đăng ký ngay để nhận mã giảm gía 15%',
 				en: 'Register and get 15% off your next order',
@@ -381,7 +380,7 @@ var meta = {
 			import(/*webpackChunkName: "template22_css" */ '!to-string-loader!css-loader!less-loader!./template22.less'),
 		type: 'modal',
 		text: {
-			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
+			name: {vi: 'Mẫu 10: Hỏi thông tin', en: 'Template 10: Ask information'},
 			title: {
 				vi: 'Săn coupon hot với ưu đãi đến 49%',
 				en: 'Get up to 49% off now',
@@ -414,7 +413,7 @@ var meta = {
 			import(/*webpackChunkName: "template23_css" */ '!to-string-loader!css-loader!less-loader!./template23.less'),
 		type: 'modal',
 		text: {
-			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
+			name: {vi: 'Mẫu 11: Hỏi thông tin', en: 'Template 12: Ask information'},
 			title: {
 				vi: 'Săn coupon hot với ưu đãi đến 49%',
 				en: 'Get up to 49% off now',
@@ -447,7 +446,7 @@ var meta = {
 			import(/*webpackChunkName: "template24_css" */ '!to-string-loader!css-loader!less-loader!./template24.less'),
 		type: 'modal',
 		text: {
-			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
+			name: {vi: 'Mẫu 12: Hỏi thông tin', en: 'Template 12: Ask information'},
 			title: {
 				vi: 'Ưu đãi 15% và miễn phí vận chuyển',
 				en: 'Get 15% off and Free shipping',
@@ -479,7 +478,7 @@ var meta = {
 		css: () => import(/*webpackChunkName: "tet20201_css" */ '!to-string-loader!css-loader!less-loader!./tet20201.less'),
 		type: 'modal',
 		text: {
-			name: {vi: 'Happy new year 2020 1', en: 'Happy new year 2020 1'},
+			name: {vi: 'Mẫu 13: Chúc mừng năm mới 2020', en: 'Template 13: New Year 2020'},
 			title: {
 				vi: 'Happy new year',
 				en: 'Happy new year',
@@ -510,7 +509,7 @@ var meta = {
 		css: () => import(/*webpackChunkName: "tet20202_css" */ '!to-string-loader!css-loader!less-loader!./tet20202.less'),
 		type: 'modal',
 		text: {
-			name: {vi: 'Happy new year 2020 2', en: 'Happy new year 2020 2'},
+			name: {vi: 'Mẫu 14: Chúc mừng năm mới 2020', en: 'Template 14: New Year 2020'},
 			title: {
 				vi: 'Mừng xuân canh tý',
 				en: 'Mừng xuân canh tý',
@@ -540,7 +539,7 @@ var meta = {
 			import(/*webpackChunkName: "template20203_css" */ '!to-string-loader!css-loader!less-loader!./tet20203.less'),
 		type: 'modal',
 		text: {
-			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
+			name: {vi: 'Mẫu 15: Chúc mừng năm mới 2020', en: 'Template 15: New Year 2020'},
 			title: {
 				vi: 'Chúc mừng năm mới',
 				en: 'Happy new year',
@@ -570,7 +569,7 @@ var meta = {
 			import(/*webpackChunkName: "template20204_css" */ '!to-string-loader!css-loader!less-loader!./tet20204.less'),
 		type: 'modal',
 		text: {
-			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
+			name: {vi: 'Mẫu 16: Chúc mừng năm mới 2020', en: 'Template 16: New Year 2020'},
 			title: {
 				vi: 'Happy new year 2020',
 				en: 'Happy new year',
@@ -600,7 +599,7 @@ var meta = {
 			import(/*webpackChunkName: "template11_css" */ '!to-string-loader!css-loader!less-loader!./template11.less'),
 		type: 'modal',
 		text: {
-			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
+			name: {vi: 'Mẫu 17: Hỏi thông tin', en: 'Template 17: Ask information'},
 			title: {vi: 'Giảm 10%', en: '10% OFF'},
 			description: {
 				vi: 'với đơn hàng đầu tiên của bạn',
@@ -629,7 +628,7 @@ var meta = {
 			import(/*webpackChunkName: "template12_css" */ '!to-string-loader!css-loader!less-loader!./template12.less'),
 		type: 'modal',
 		text: {
-			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
+			name: {vi: 'Mẫu 18: Hỏi thông tin', en: 'Template 18: Ask information'},
 			title: {vi: 'ƯU ĐÃI 10%', en: '10% OFF'},
 			description: {
 				vi: 'dành riêng với bộ sưu tập mới',
@@ -658,7 +657,7 @@ var meta = {
 			import(/*webpackChunkName: "template13_css" */ '!to-string-loader!css-loader!less-loader!./template13.less'),
 		type: 'modal',
 		text: {
-			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
+			name: {vi: 'Mẫu 19: Hỏi thông tin', en: 'Template 19: Ask information'},
 			title: {vi: 'Giảm 10%', en: '10% OFF'},
 			description: {
 				vi: 'và miễn phí vận chuyển với tất cả những đơn hàng trị giá trên 500K',
@@ -687,7 +686,7 @@ var meta = {
 			import(/*webpackChunkName: "template14_css" */ '!to-string-loader!css-loader!less-loader!./template14.less'),
 		type: 'modal',
 		text: {
-			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
+			name: {vi: 'Mẫu 20: Hỏi thông tin', en: 'Template 20: Ask information'},
 			title: {vi: 'ĐĂNG KÝ ĐỂ NHẬN ƯU ĐÃI ĐẶC BIỆT', en: '10% OFF'},
 			description: {
 				vi: 'nhận ngay mã giảm giá 50%',
@@ -716,7 +715,7 @@ var meta = {
 			import(/*webpackChunkName: "template15_css" */ '!to-string-loader!css-loader!less-loader!./template15.less'),
 		type: 'modal',
 		text: {
-			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
+			name: {vi: 'Mẫu 21: Hỏi thông tin', en: 'Template 21: Ask information'},
 			title: {vi: 'Giảm 10%', en: '10% OFF'},
 			description: {
 				vi: 'và miễn phí vận chuyển với tất cả những đơn hàng trị giá trên 500K',
@@ -745,7 +744,7 @@ var meta = {
 			import(/*webpackChunkName: "templateu23_css" */ '!to-string-loader!css-loader!less-loader!./templateu23.less'),
 		type: 'modal',
 		text: {
-			name: {vi: 'U23 2019', en: 'U23 2019'},
+			name: {vi: 'Mẫu 21: U23 2019', en: 'Template 22: U23 2019'},
 			title: {
 				vi: `Chặng đường mới
 thành công mới`,
@@ -774,13 +773,12 @@ thành công mới`,
 			background_image: 'url(' + require('../assets/background/templateu23_mobile.png') + ')',
 		},
 	},
-
 	template16: {
 		css: () =>
 			import(/*webpackChunkName: "template16_css" */ '!to-string-loader!css-loader!less-loader!./template16.less'),
 		type: 'modal',
 		text: {
-			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
+			name: {vi: 'Mẫu 23: Hỏi thông tin', en: 'Template 23: Ask information'},
 			title: {vi: 'Giảm 10%', en: '10% OFF'},
 			description: {
 				vi: 'với đơn hàng đầu tiền của bạn',
@@ -809,7 +807,7 @@ thành công mới`,
 			import(/*webpackChunkName: "template17_css" */ '!to-string-loader!css-loader!less-loader!./template17.less'),
 		type: 'modal',
 		text: {
-			name: {vi: 'Nhận ngay ưu đãi', en: 'Get special offer now'},
+			name: {vi: 'Mẫu 24: Hỏi thông tin', en: 'Template 24: Ask information'},
 			title: {
 				vi: 'Nhận ngay ưu đãi!',
 				en: 'Get special offer now!',
@@ -833,7 +831,7 @@ thành công mới`,
 			input_background: '',
 		},
 		mobile_appearance: {
-			background_image: 'url(' + require('../assets/background/template20_mobile.png') + ')',
+			background_image: 'url(' + require('../assets/background/template39_mobile.png') + ')',
 		},
 	},
 	template117: {
@@ -841,7 +839,7 @@ thành công mới`,
 			import(/*webpackChunkName: "template117_css" */ '!to-string-loader!css-loader!less-loader!./template117.less'),
 		type: 'modal',
 		text: {
-			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
+			name: {vi: 'Mẫu 25: Hỏi thông tin', en: 'Template 25: Ask information'},
 			title: {vi: 'Giảm 10%', en: '10% OFF'},
 			description: {
 				vi: 'với đơn hàng đầu tiền của bạn',
@@ -869,6 +867,7 @@ thành công mới`,
 		css: () =>
 			import(/*webpackChunkName: "template25_css" */ '!to-string-loader!css-loader!less-loader!./template25.less'),
 		text: {
+			name: {vi: 'Mẫu 26: Hỏi thông tin', en: 'Template 26: Ask information'},
 			title: {
 				vi: 'Nhận giảm giá 20% cho đơn hàng tiếp theo',
 				en: 'Get 20% off your next order',
@@ -897,6 +896,7 @@ thành công mới`,
 		css: () =>
 			import(/*webpackChunkName: "template26_css" */ '!to-string-loader!css-loader!less-loader!./template26.less'),
 		text: {
+			name: {vi: 'Mẫu 27: Hỏi thông tin', en: 'Template 27: Ask information'},
 			title: {
 				vi: 'Ưu đãi 10%',
 				en: '10% off',
@@ -929,7 +929,7 @@ thành công mới`,
 			import(/*webpackChunkName: "template18_css" */ '!to-string-loader!css-loader!less-loader!./template18.less'),
 		type: 'modal',
 		text: {
-			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
+			name: {vi: 'Mẫu 28: Hỏi thông tin', en: 'Template 28: Ask information'},
 			title: {vi: 'ĐĂNG KÝ ĐỂ NHẬN ƯU ĐÃI ĐẶC BIỆT', en: '10% OFF'},
 			description: {
 				vi: 'nhận ngay mã giảm giá tới 500K cho đơn hàng đầu tiên',
@@ -969,6 +969,7 @@ thành công mới`,
 		css: () =>
 			import(/*webpackChunkName: "template27_css" */ '!to-string-loader!css-loader!less-loader!./template27.less'),
 		text: {
+			name: {vi: 'Mẫu 29: Hỏi thông tin', en: 'Template 29: Ask information'},
 			title: {
 				vi: 'Giảm 10%',
 				en: '10% off',
@@ -1001,7 +1002,7 @@ thành công mới`,
 			import(/*webpackChunkName: "template19_css" */ '!to-string-loader!css-loader!less-loader!./template19.less'),
 		type: 'modal',
 		text: {
-			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
+			name: {vi: 'Mẫu 30: Hỏi thông tin', en: 'Template 30: Ask information'},
 			title: {vi: 'ƯU ĐÃI 10%', en: '10% OFF'},
 			description: {
 				vi: 'Đăng ký ngay và nhận mã giảm giá 10% cho đơn hàng đầu tiên',
@@ -1024,12 +1025,15 @@ thành công mới`,
 			input_color: 'black',
 			input_background: 'transparent',
 		},
+		mobile_appearance: {
+			background_image: 'url(' + require('../assets/background/template18_mobile.png') + ')',
+		},
 	},
 	template28: {
 		css: () =>
 			import(/*webpackChunkName: "template28_css" */ '!to-string-loader!css-loader!less-loader!./template28.less'),
 		text: {
-			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
+			name: {vi: 'Mẫu 31: Hỏi thông tin', en: 'Template 31: Ask information'},
 			title: {vi: 'ƯU ĐÃI 10%', en: '10% OFF'},
 			description: {
 				vi: 'Đăng ký để nhận ngay mã giảm giá 10%',
@@ -1059,7 +1063,7 @@ thành công mới`,
 			import(/*webpackChunkName: "template29_css" */ '!to-string-loader!css-loader!less-loader!./template29.less'),
 		type: 'modal',
 		text: {
-			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
+			name: {vi: 'Mẫu 32: Hỏi thông tin', en: 'Template 32: Ask information'},
 			title: {
 				vi: 'Giảm 25%',
 				en: '25% off',
@@ -1092,7 +1096,7 @@ thành công mới`,
 			import(/*webpackChunkName: "template30_css" */ '!to-string-loader!css-loader!less-loader!./template30.less'),
 		type: 'modal',
 		text: {
-			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
+			name: {vi: 'Mẫu 33: Hỏi thông tin', en: 'Template 33: Ask information'},
 			title: {
 				vi: 'Giảm 25%',
 				en: '25% off',
