@@ -187,6 +187,9 @@ var meta = {
 			input_color: '#000',
 			input_background: '#fff',
 		},
+		mobile_appearance: {
+			background_image: 'url(' + require('../assets/background/bg5_mobile.png') + ')',
+		},
 	},
 	template6: {
 		css: () =>
@@ -311,38 +314,7 @@ var meta = {
 			input_background: '',
 		},
 	},
-	template39: {
-		css: () =>
-			import(/*webpackChunkName: "template39_css" */ '!to-string-loader!css-loader!less-loader!./template39.less'),
-		type: 'modal',
-		text: {
-			name: {vi: 'Mẫu 8: Hỏi thông tin', en: 'Template 8: Ask information'},
-			title: {
-				vi: 'Nhận ngay ưu đãi!',
-				en: 'Get special offer now!',
-			},
-			description: {
-				vi: 'Giảm 20% chỉ một ngày duy nhất. Miễn phí vận chuyển nội thành',
-				en: '20% off for only one day. Free shipping in the city',
-			},
-			primary_button: {vi: 'Đăng ký ngay', en: 'Register now'},
-			secondary_button: {vi: 'Bỏ qua', en: 'Cancel'},
-		},
-		desktop_appearance: {
-			title_color: '#FDAD15',
-			description_color: 'white',
-			background: 'white',
-			primary_button_background: '#FDAD15',
-			primary_button_color: 'white',
-			secondary_button_background: '#777',
-			secondary_button_color: 'white',
-			input_color: '',
-			input_background: '',
-		},
-		mobile_appearance: {
-			background_image: 'url(' + require('../assets/background/template20_mobile.png') + ')',
-		},
-	},
+
 	template21: {
 		css: () =>
 			import(/*webpackChunkName: "template21_css" */ '!to-string-loader!css-loader!less-loader!./template21.less'),
@@ -1026,7 +998,7 @@ thành công mới`,
 			input_background: 'transparent',
 		},
 		mobile_appearance: {
-			background_image: 'url(' + require('../assets/background/template18_mobile.png') + ')',
+			background_image: 'url(' + require('../assets/background/template19_mobile.png') + ')',
 		},
 	},
 	template28: {

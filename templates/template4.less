@@ -3,13 +3,39 @@
 @spacer: 25px;
 #template() {
 	@import './base.less';
+
+	.overlay{
+		min-height: 100%;
+		height: unset	;
+		overflow: scroll;
+	}
+	.overlay.overlay--browser{
+		border: unset;
+		top:0px;
+		height: unset;
+	}
+	.overlay--browser .browser-bar{
+		z-index: 1000000;
+		top:0px;
+	}
+	.form{
+		overflow: unset;
+	}
+
 	.container {
 		.heightContainer(95%);
 		width: 400px;
 		position: relative;
+		max-height: unset;
+		margin-top: 70px ;
+		margin-bottom: 30px;
 	}
+
 	.mobile .container {
 		max-width: 90%;
+		margin-top: 70px ;
+		margin-bottom: 30px;
+		max-height: unset;
 	}
 
 	.container__inner{
