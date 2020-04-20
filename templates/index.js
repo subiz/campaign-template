@@ -806,6 +806,38 @@ thành công mới`,
 			background_image: 'url(' + require('../assets/background/template39_mobile.png') + ')',
 		},
 	},
+	template39:{
+		css: () =>
+			import(/*webpackChunkName: "template39_css" */ '!to-string-loader!css-loader!less-loader!./template39.less'),
+		type: 'modal',
+		text: {
+			name: {vi: 'Mẫu 24: Hỏi thông tin', en: 'Template 24: Ask information'},
+			title: {
+				vi: 'Nhận ngay ưu đãi!',
+				en: 'Get special offer now!',
+			},
+			description: {
+				vi: 'Giảm 20% chỉ một ngày duy nhất. Miễn phí vận chuyển nội thành',
+				en: '20% off for only one day. Free shipping in the city',
+			},
+			primary_button: {vi: 'Đăng ký ngay', en: 'Register now'},
+			secondary_button: {vi: 'Bỏ qua', en: 'Cancel'},
+		},
+		desktop_appearance: {
+			title_color: '#FDAD15',
+			description_color: 'white',
+			background: 'white',
+			primary_button_background: '#FDAD15',
+			primary_button_color: 'white',
+			secondary_button_background: '#777',
+			secondary_button_color: 'white',
+			input_color: '',
+			input_background: '',
+		},
+		mobile_appearance: {
+			background_image: 'url(' + require('../assets/background/template39_mobile.png') + ')',
+		},
+	},
 	template117: {
 		css: () =>
 			import(/*webpackChunkName: "template117_css" */ '!to-string-loader!css-loader!less-loader!./template117.less'),
