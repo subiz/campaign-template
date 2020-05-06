@@ -254,6 +254,11 @@ var meta = {
 			description_color: 'black',
 			background: 'white',
 			primary_button_background: '#fdad15',
+			primary_button_color: 'white',
+			secondary_button_background: '#777',
+			secondary_button_color: 'white',
+			input_color: '',
+			input_background: '',
 		},
 	},
 	template10: {
