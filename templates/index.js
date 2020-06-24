@@ -811,7 +811,7 @@ thành công mới`,
 			background_image: 'url(' + require('../assets/background/template39_mobile.png') + ')',
 		},
 	},
-	template39:{
+	template39: {
 		css: () =>
 			import(/*webpackChunkName: "template39_css" */ '!to-string-loader!css-loader!less-loader!./template39.less'),
 		type: 'modal',
@@ -1135,7 +1135,7 @@ thành công mới`,
 	},
 }
 // add default js load function for any template dont has custom template
-Object.keys(meta).map(id => {
+Object.keys(meta).map((id) => {
 	if (meta[id].js) return
 	meta[id].desktop_appearance.background_image = 'url(' + require('../assets/background/' + id + '.png') + ')'
 
@@ -1239,6 +1239,24 @@ let Template = {
 			let temp = meta[templateid]
 			var desktop_appearance = this.merge(temp.desktop_appearance, page.desktop_appearance)
 			var mobile_appearance = this.merge(temp.mobile_appearance, page.mobile_appearance)
+
+			// replace file
+			let src = op.get(desktop_appearance, 'background_image', '')
+			src = replaceFileUrl(src)
+			op.set(desktop_appearance, 'background_image', src)
+
+			src = op.get(desktop_appearance, 'background', '')
+			src = replaceFileUrl(src)
+			op.set(desktop_appearance, 'background', src)
+
+			src = op.get(mobile_appearance, 'background', '')
+			src = replaceFileUrl(src)
+			op.set(mobile_appearance, 'background', src)
+
+			src = op.get(mobile_appearance, 'background_image', '')
+			src = replaceFileUrl(src)
+			op.set(mobile_appearance, 'background_image', src)
+
 			var css = replaceCssVariable(CSS, {desktop_appearance, mobile_appearance})
 			common.setCssToHead('subiz-template-style-' + this.template, css)
 		},
@@ -1409,6 +1427,13 @@ function replaceCssVariable(css, page) {
 		ret.push(op.get(page, path))
 	}
 	return ret.join('')
+}
+
+function replaceFileUrl(src) {
+	if (!src) return ''
+	src = src.replace('filev4.subiz.com', 'file.mysubiz.com')
+	src = src.replace('file.subiz.com', 'file.mysubiz.com')
+	return src
 }
 
 export default {meta, Template}
