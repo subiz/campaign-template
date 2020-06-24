@@ -9,9 +9,9 @@
 		"format": "prettier-eslint --write *.js && prettier-eslint --write \"{templates,components,src}/**/*.js\""
 	},
 	"devDependencies": {
-		"@babel/cli": "^7.8.4",
-		"@vue/cli-plugin-babel": "^4.3.1",
-		"@vue/cli-service": "^4.3.1",
+		"@babel/cli": "^7.10.3",
+		"@vue/cli-plugin-babel": "^4.4.5",
+		"@vue/cli-service": "^4.4.5",
 		"babel-helper-vue-jsx-merge-props": "^2.0.3",
 		"babel-plugin-syntax-jsx": "^6.18.0",
 		"babel-plugin-transform-vue-jsx": "^3.3.0",
@@ -21,11 +21,11 @@
 		"core-js": "^3.6.5"
 	},
 	"dependencies": {
-		"css-loader": "^3.5.3",
-		"less": "^3.11.1",
-		"less-loader": "^6.0.0",
+		"css-loader": "^3.6.0",
+		"less": "^3.11.3",
+		"less-loader": "^6.1.2",
 		"object-path": "^0.11.4",
-		"prettier-eslint": "^9.0.1",
+		"prettier-eslint": "^11.0.0",
 		"prettier-eslint-cli": "^5.0.0",
 		"style-loader": "^1.2.1",
 		"to-string-loader": "^1.1.6"
