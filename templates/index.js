@@ -1273,7 +1273,7 @@ let Template = {
 		},
 
 		onClose() {
-			this.$emit('closeButtonClicked')
+			this.$emit('closed')
 			setTimeout(() => {
 				this.close = true
 			}, 400)
@@ -1337,6 +1337,9 @@ let Template = {
 		onClicked(e) {
 			this.$emit('clicked', e)
 		},
+		onClosed(e) {
+			this.$emit('closed', e)
+		},
 	},
 
 	render(h) {
@@ -1373,6 +1376,7 @@ let Template = {
 				<div class={mode}>
 					<this.Template
 						vOn:clicked={this.onClicked}
+						vOn:closed={this.onClosed}
 						page={this.page}
 						select={this.select}
 						form={$form}

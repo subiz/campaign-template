@@ -10,6 +10,7 @@ new Vue({
 	data () {
 		return {
 			template: '',
+			i: 0,
 			page: {
 				animation: 'bounceIn',
 				title: 'Đăng ký để nhận ưu đãi đặc biệt',
@@ -51,15 +52,30 @@ new Vue({
 	},
 
 	methods: {
-		onClicked(e) {
+		onClicked (e) {
 			console.log('click', e)
+		},
+		onClosed () {
+			console.log('closed')
+			setTimeout(() => {
+				this.i++
+			}, 2000)
+			// how to reset?
 		},
 	},
 
 	render (h) {
 		return (
 			<div id="sbz-pop">
-				<Template.Template template={this.template} page={this.page} frame="browser" select="secondary_button" vOn:clicked={this.onClicked}/>
+				<Template.Template
+					key={this.i}
+					template={this.template}
+					page={this.page}
+					frame="browser"
+					select="secondary_button"
+					vOn:clicked={this.onClicked}
+					vOn:closed={this.onClosed}
+				/>
 			</div>
 		)
 	},
