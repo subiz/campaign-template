@@ -12,8 +12,8 @@ new Vue({
 			template: '',
 			page: {
 				animation: 'bounceIn',
-				title: '', //'Đăng ký để nhận ưu đãi đặc biệt',
-				description: '', // 'Giảm 20% chỉ một ngày duy nhất. Đăng ký ngay để nhận được mã giảm giá!',
+				title: 'Đăng ký để nhận ưu đãi đặc biệt',
+				description: 'Giảm 20% chỉ một ngày duy nhất. Đăng ký ngay để nhận được mã giảm giá!',
 				form: {
 					enabled: true,
 					fields: [
@@ -36,6 +36,7 @@ new Vue({
 	},
 	mounted () {
 		this.template = window.location.pathname.substr(1)
+
 		var metadata = Template.meta[this.template].text
 		if (!op.get(this.page, 'title')) op.set(this.page, 'title', op.get(metadata, 'title.vi'))
 		if (!op.get(this.page, 'description')) op.set(this.page, 'description', op.get(metadata, 'description.vi'))
@@ -52,7 +53,7 @@ new Vue({
 	render (h) {
 		return (
 			<div id="sbz-pop">
-				<Template.Template template={this.template} page={this.page} frame="browser" />
+				<Template.Template template={this.template} page={this.page} frame="browser" select="secondary_button" />
 			</div>
 		)
 	},

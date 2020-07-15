@@ -1154,12 +1154,19 @@ Object.keys(meta).map((id) => {
 					'closeButton',
 					'frame',
 					'closeAnimation',
+					'select',
 				],
 				render(h) {
 					var cls = 'overlay overlay--' + this.frame
 					var animation = 'container ' //+ (this.page.animation) + ' ' + this.closeAnimation
 					if (this.closeAnimation) animation += this.closeAnimation
 					else animation += this.page.animation
+
+					let titlecls = 'title'
+					if (this.select === 'title') titlecls += ' text__shake'
+
+					let desccls = 'description'
+					if (this.select === 'description') desccls += ' text__shake'
 
 					//var animation = 'container ' + this.page.animation
 					return (
@@ -1179,9 +1186,9 @@ Object.keys(meta).map((id) => {
 								<div class="container__inner">
 									<div class="background"></div>
 									<div class="content">
-										<p class="title">{this.page.title}</p>
+										<p class={titlecls}>{this.page.title}</p>
 										<div class="title-separator"></div>
-										<p class="description">{this.page.description}</p>
+										<p class={desccls}>{this.page.description}</p>
 										{this.form}
 										<div class="buttons">
 											{this.primaryButton}
@@ -1199,7 +1206,7 @@ Object.keys(meta).map((id) => {
 
 let Template = {
 	name: 'Template',
-	props: ['mode', 'template', 'page', 'frame'],
+	props: ['mode', 'template', 'page', 'frame', 'select'],
 	data() {
 		return {
 			Template: null,
@@ -1329,18 +1336,22 @@ let Template = {
 
 		let $close = <CloseButton class="btn btn--close" vOn:click={this.onClose} />
 		let $primary = null
+		let primaryBtnCls = 'btn btn--primary'
+		if (this.select === 'primary_button') primaryBtnCls += ' text__shake'
 		if (op.get(this.page, 'primary_button.enabled')) {
 			$primary = (
-				<button vOn:click={this.onPrimaryClick} class="btn btn--primary">
+				<button vOn:click={this.onPrimaryClick} class={primaryBtnCls}>
 					{op.get(this.page, 'primary_button.text')}
 				</button>
 			)
 		}
 
 		let $secondary = null
+		let secondaryBtnCls = 'btn btn--secondary'
+		if (this.select === 'secondary_button') secondaryBtnCls += ' text__shake'
 		if (op.get(this.page, 'secondary_button.enabled')) {
 			$secondary = (
-				<button vOn:click={this.onSecondaryClick} class="btn btn--secondary">
+				<button vOn:click={this.onSecondaryClick} class={secondaryBtnCls}>
 					{op.get(this.page, 'secondary_button.text')}
 				</button>
 			)
@@ -1353,6 +1364,7 @@ let Template = {
 				<div class={mode}>
 					<this.Template
 						page={this.page}
+						select={this.select}
 						form={$form}
 						primaryButton={$primary}
 						secondaryButton={$secondary}

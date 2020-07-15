@@ -13,7 +13,7 @@
 @mobile_overlay                      : '@mobile_appearance.overlay';
 @mobile_title_color                  : '@mobile_appearance.title_color';
 @mobile_description_color            : '@mobile_appearance.description_color';
-@mobile_background                   : '@mobile_appearance.background';		
+@mobile_background                   : '@mobile_appearance.background';
 @mobile_background_image             : '@mobile_appearance.background_image';
 @mobile_primary_button_background    : '@mobile_appearance.primary_button_background';
 @mobile_primary_button_color         : '@mobile_appearance.primary_button_color';
@@ -28,16 +28,19 @@
 	color: @color;
 	-webkit-text-fill-color: @color;
 }
+
 .content(@heightImg) {
 	display: flex;
 	flex-direction: column;
 	max-height: ~"calc(100% - @{heightImg})";
 }
+
 .heightContainer(@height){
 	max-height: @height;
 	display: flex;
 }
 
+// reset
 * {
 	padding: 0;
 	margin: 0;
@@ -57,6 +60,7 @@
 	z-index: 20000000000100;
 	flex-direction: column;
 }
+
 .mobile .overlay {
 	min-height: 100%;
 	height: unset	;
@@ -125,21 +129,21 @@
 	z-index: 1000000;
 	top:0px;
 }
-.button__red{ 
+.button__red{
 	height: 16px;
 	width: 16px;
 	border-radius: 8px;
 	background-color: #fc6352;
 	margin-left: 20px;
 }
-.button__yellow{ 
+.button__yellow{
 	height: 16px;
 	width: 16px;
 	border-radius: 8px;
 	background-color: #ffd04f;
 	margin-left: 10px;
 }
-.button__green{ 
+.button__green{
 	height: 16px;
 	width: 16px;
 	border-radius: 8px;
@@ -478,4 +482,17 @@ input {
 	font-size: 12px;
 	.color(#000);
 	margin-top:unset;
+}
+
+.text__shake {
+  animation: 1.5s shake normal forwards;
+}
+
+@keyframes shake {
+  0% { transform: skewX(-15deg); }
+  5% { transform: skewX(15deg); }
+  10% { transform: skewX(-15deg); }
+  15% { transform: skewX(15deg); }
+  20% { transform: skewX(0deg); }
+  100% { transform: skewX(0deg); }
 }
