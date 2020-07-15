@@ -11,7 +11,7 @@ export default {
 					viewBox="0 0 24 24"
 					fill="#fff"
 					stroke="#fff"
-					stroke-width="2"
+					stroke-width="2.5"
 					stroke-linecap="round"
 					stroke-linejoin="round">
 					<line x1="18" y1="6" x2="6" y2="18"></line>
