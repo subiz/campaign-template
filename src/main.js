@@ -50,10 +50,16 @@ new Vue({
 		// common.setCssToHead('subiz-template-style-app', '#sbz-pop * {all:unset;}')
 	},
 
+	methods: {
+		onClicked(e) {
+			console.log('click', e)
+		},
+	},
+
 	render (h) {
 		return (
 			<div id="sbz-pop">
-				<Template.Template template={this.template} page={this.page} frame="browser" select="secondary_button" />
+				<Template.Template template={this.template} page={this.page} frame="browser" select="secondary_button" vOn:clicked={this.onClicked}/>
 			</div>
 		)
 	},

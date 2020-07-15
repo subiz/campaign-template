@@ -5,14 +5,14 @@ export default {
 		renderSingleChoiceList (h, field) {
 			if (field.type !== 'list' || field.multiple_choice) return null
 
-			let $items = field.list.map(item => (
+			let $items = field.list.map((item) => (
 				<div class="radio">
 					<input
 						type="radio"
 						id={field.key + item}
 						name={field.key}
 						value={item}
-						vOn:change={ev => this.onRadioChange(ev, field, item)}
+						vOn:change={(ev) => this.onRadioChange(ev, field, item)}
 					/>
 					<label class="radio--label" for={field.key + item}>
 						{item}
@@ -27,12 +27,12 @@ export default {
 
 		renderMultipleChoiceList (h, field) {
 			if (field.type !== 'list' || !field.multiple_choice) return null
-			let $items = field.list.map(item => (
+			let $items = field.list.map((item) => (
 				<div class="checkbox">
 					<input
 						type="checkbox"
 						id={field.key + item}
-						vOn:change={ev => this.onCheckboxChange(ev, field, item)}
+						vOn:change={(ev) => this.onCheckboxChange(ev, field, item)}
 						checked={contains(field, item)}
 					/>
 					<label class="checkbox--label " for={field.key + item}>
@@ -53,7 +53,7 @@ export default {
 				<input
 					type="date"
 					class="form-control"
-					vOn:change={ev => this.onDatetimeFieldChange(ev, field)}
+					vOn:change={(ev) => this.onDatetimeFieldChange(ev, field)}
 					value={this.toDate(field.value)}
 				/>
 			)
@@ -76,7 +76,7 @@ export default {
 					class={cls}
 					value={parseJSON(field.value) || ''}
 					placeholder={field.placeholder}
-					vOn:keyup={ev => this.onTextFieldChange(ev, field)}
+					vOn:keyup={(ev) => this.onTextFieldChange(ev, field)}
 				/>
 			)
 		},
@@ -93,7 +93,7 @@ export default {
 				<textarea
 					class={cls}
 					placeholder={field.placeholder}
-					vOn:keyup={ev => this.onTextFieldChange(ev, field)}
+					vOn:keyup={(ev) => this.onTextFieldChange(ev, field)}
 					value={parseJSON(field.value) || ''}
 				/>
 			)
@@ -113,7 +113,7 @@ export default {
 					class={cls}
 					value={parseJSON(field.value) || ''}
 					placeholder={field.placeholder}
-					vOn:keyup={ev => this.onTextFieldChange(ev, field)}
+					vOn:keyup={(ev) => this.onTextFieldChange(ev, field)}
 				/>
 			)
 		},
@@ -132,7 +132,7 @@ export default {
 					class={cls}
 					value={parseJSON(field.value) || 0}
 					placeholder={field.placeholder}
-					vOn:keyup={ev => this.onTextFieldChange(ev, field)}
+					vOn:keyup={(ev) => this.onTextFieldChange(ev, field)}
 				/>
 			)
 		},
@@ -143,7 +143,7 @@ export default {
 				<div>
 					<label class="checkbox--label">
 						{field.label + ':'}
-						<input type="checkbox" vOn:change={ev => this.onBooleanFieldChange(ev, field)} checked={field.value} />
+						<input type="checkbox" vOn:change={(ev) => this.onBooleanFieldChange(ev, field)} checked={field.value} />
 						<span class="checkmark">
 							<svg width="14" height="10" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path
@@ -175,12 +175,10 @@ export default {
 			if (ev.target.checked) {
 				if (!v.includes(item)) v.push(item)
 			} else {
-				v = v.filter(i => i !== item)
+				v = v.filter((i) => i !== item)
 			}
 			this.$set(field, 'value', JSON.stringify(v))
 		},
-
-
 
 		onTextFieldChange (ev, field) {
 			field.value = JSON.stringify(ev.target.value)
@@ -199,7 +197,7 @@ export default {
 		var showForm = this.form && this.form.enabled && this.form.fields && this.form.fields.length > 0
 		if (!showForm) return null
 
-		let $fields = this.form.fields.map(field => (
+		let $fields = this.form.fields.map((field) => (
 			<div class="form-field">
 				<label class="label">{field.label + ':'}</label>
 				{this.renderMultipleChoiceList(h, field)}
@@ -211,7 +209,11 @@ export default {
 				{this.renderBoolean(h, field)}
 			</div>
 		))
-		return <div class="form">{$fields}</div>
+		return (
+			<div class="form" vOn:click={(_) => this.$emit('clicked', 'form')}>
+				{$fields}
+			</div>
+		)
 	},
 }
 
@@ -222,10 +224,7 @@ function isEmpty (value) {
 function parseJSON (js) {
 	try {
 		return JSON.parse(js)
-	} catch (e) {
-		return undefined
-	}
-	return undefined
+	} catch (e) {}
 }
 
 function contains (field, item) {

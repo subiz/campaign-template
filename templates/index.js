@@ -1186,9 +1186,13 @@ Object.keys(meta).map((id) => {
 								<div class="container__inner">
 									<div class="background"></div>
 									<div class="content">
-										<p class={titlecls}>{this.page.title}</p>
+										<p class={titlecls} vOn:click={(_) => this.$emit('clicked', 'title')}>
+											{this.page.title}
+										</p>
 										<div class="title-separator"></div>
-										<p class={desccls}>{this.page.description}</p>
+										<p class={desccls} vOn:click={(_) => this.$emit('clicked', 'description')}>
+											{this.page.description}
+										</p>
 										{this.form}
 										<div class="buttons">
 											{this.primaryButton}
@@ -1290,6 +1294,7 @@ let Template = {
 		},
 
 		onSecondaryClick() {
+			this.$emit('clicked', 'secondary_button')
 			this.onButtonClick(op.get(this.page, 'secondary_button'), 'secondaryButtonClicked')
 		},
 
@@ -1317,6 +1322,7 @@ let Template = {
 		},
 
 		onPrimaryClick() {
+			this.$emit('clicked', 'primary_button')
 			this.onButtonClick(op.get(this.page, 'primary_button'), 'primaryButtonClicked')
 		},
 
@@ -1327,6 +1333,9 @@ let Template = {
 			CSS = (await temp.css()).default
 			this.Template = template
 			this.populatePage(t, this.page)
+		},
+		onClicked(e) {
+			this.$emit('clicked', e)
 		},
 	},
 
@@ -1357,12 +1366,13 @@ let Template = {
 			)
 		}
 
-		let $form = <Form form={this.page.form} pressedSubmit={this.pressedSubmit} />
+		let $form = <Form vOn:clicked={this.onClicked} form={this.page.form} pressedSubmit={this.pressedSubmit} />
 		var mode = this.mode || MODE
 		return (
 			<div class={'template ' + this.template}>
 				<div class={mode}>
 					<this.Template
+						vOn:clicked={this.onClicked}
 						page={this.page}
 						select={this.select}
 						form={$form}
