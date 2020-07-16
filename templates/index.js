@@ -1157,7 +1157,8 @@ Object.keys(meta).map((id) => {
 					'select',
 				],
 				render(h) {
-					var cls = 'overlay overlay--' + this.frame
+					var cls = 'overlay '
+					if (this.frame) cls += ' overlay--' + this.frame
 					var animation = 'container ' //+ (this.page.animation) + ' ' + this.closeAnimation
 					if (this.closeAnimation) animation += this.closeAnimation
 					else animation += this.page.animation
@@ -1428,7 +1429,7 @@ function replaceCssVariable(css, page) {
 	tokens = tokenize(tokens, "'@desktop_appearance.secondary_button_color'")
 	tokens = tokenize(tokens, "'@desktop_appearance.input_color'")
 	tokens = tokenize(tokens, "'@desktop_appearance.input_background'")
-	tokens = tokenize(tokens, "'@desktop_appearance.overlay'")
+	// tokens = tokenize(tokens, "'@desktop_appearance.overlay'")
 	tokens = tokenize(tokens, "'@mobile_appearance.title_color'")
 	tokens = tokenize(tokens, "'@mobile_appearance.description_color'")
 	tokens = tokenize(tokens, "'@mobile_appearance.background'")
@@ -1439,7 +1440,7 @@ function replaceCssVariable(css, page) {
 	tokens = tokenize(tokens, "'@mobile_appearance.secondary_button_color'")
 	tokens = tokenize(tokens, "'@mobile_appearance.input_color'")
 	tokens = tokenize(tokens, "'@mobile_appearance.input_background'")
-	tokens = tokenize(tokens, "'@mobile_appearance.overlay'")
+	// tokens = tokenize(tokens, "'@mobile_appearance.overlay'")
 	var ret = []
 	for (var i = 0; i < tokens.length; i++) {
 		var item = tokens[i]

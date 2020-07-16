@@ -71,7 +71,6 @@ new Vue({
 					key={this.i}
 					template={this.template}
 					page={this.page}
-					frame="browser"
 					select="secondary_button"
 					vOn:clicked={this.onClicked}
 					vOn:closed={this.onClosed}
