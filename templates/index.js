@@ -1139,7 +1139,8 @@ Object.keys(meta).map((id) => {
 	if (meta[id].js) return
 	meta[id].desktop_appearance.background_image = 'url(' + require('../assets/background/' + id + '.png') + ')'
 
-	if (!meta[id].desktop_appearance.overlay) meta[id].desktop_appearance.overlay = 'rgba(0,0,0,0.8)'
+	// if (!meta[id].desktop_appearance.overlay)
+	meta[id].desktop_appearance.overlay = 'rgba(0,0,0,0.8)'
 
 	meta[id].js = () =>
 		Promise.resolve({
@@ -1429,7 +1430,7 @@ function replaceCssVariable(css, page) {
 	tokens = tokenize(tokens, "'@desktop_appearance.secondary_button_color'")
 	tokens = tokenize(tokens, "'@desktop_appearance.input_color'")
 	tokens = tokenize(tokens, "'@desktop_appearance.input_background'")
-	// tokens = tokenize(tokens, "'@desktop_appearance.overlay'")
+	tokens = tokenize(tokens, "'@desktop_appearance.overlay'")
 	tokens = tokenize(tokens, "'@mobile_appearance.title_color'")
 	tokens = tokenize(tokens, "'@mobile_appearance.description_color'")
 	tokens = tokenize(tokens, "'@mobile_appearance.background'")
@@ -1440,7 +1441,7 @@ function replaceCssVariable(css, page) {
 	tokens = tokenize(tokens, "'@mobile_appearance.secondary_button_color'")
 	tokens = tokenize(tokens, "'@mobile_appearance.input_color'")
 	tokens = tokenize(tokens, "'@mobile_appearance.input_background'")
-	// tokens = tokenize(tokens, "'@mobile_appearance.overlay'")
+	tokens = tokenize(tokens, "'@mobile_appearance.overlay'")
 	var ret = []
 	for (var i = 0; i < tokens.length; i++) {
 		var item = tokens[i]

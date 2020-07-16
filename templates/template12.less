@@ -1,4 +1,4 @@
-@import (css) url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Muli:wght@500;600;700;800;900&family=Roboto:wght@400;500;700;900&family=Yeseva+One&display=swap');
+@import (css) url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&family=Yeseva+One&display=swap');
 @spacer         : 35px;
 #template() {
 	@import './base.less';
@@ -18,12 +18,12 @@
 		position: relative;
 		.heightContainer(90%)
 	}
-	
+
 	.mobile .container {
 		max-width: 90%;
 		position: relative;
 		max-height: unset;
-		margin-top: 70px ;
+		margin-top: 30px ;
     margin-bottom: 30px;
 	}
 
@@ -50,24 +50,6 @@
 		margin-bottom: 20px;
 		max-height:  ~"calc(100% - 40px - 245px)";
 		max-width: 100%;
-	}
-
-	.btn.btn--close {
-		background-color: #f8aa3c8f;
-		top: 10px;
-		right: 10px;
-	}
-
-	.btn-close__icon {
-		stroke: #777;
-	}
-
-	.btn-close:hover {
-		background-color: #e49b35cc;
-	}
-
-	.btn-close:hover .btn-close__icon {
-		stroke: #fff;
 	}
 
 	.title {
@@ -138,15 +120,6 @@
 	.form {
 		width: 100%;
 	}
-
-	.mobile .btn.btn--close {
-		background-color: rgba(0,0,0,0.5);
-		top: 10px;
-		right: 10px;
-	}
-
-	.mobile .btn-close__icon {
-		stroke: #fff;
-	}
 }
+
 #sbz-pop .template.template12 { #template() !important; }
