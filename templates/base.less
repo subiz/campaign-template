@@ -25,6 +25,7 @@
 @import "../node_modules/normalize.css/normalize.css";
 @import './animate.less';
 @import './_checkbox.less';
+@import './_scrollbar.less';
 
 .color(@color) {
 	color: @color;
@@ -192,6 +193,7 @@ input {
 	overflow: auto;
 	padding-left: @spacer;
 	padding-right: @spacer;
+	min-height: 80px;
 }
 
 .mobile .form {
