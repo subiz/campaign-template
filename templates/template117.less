@@ -1,5 +1,6 @@
-@import (css) url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Muli:wght@500;600;700;800;900&family=Roboto:wght@400;500;700;900&family=Yeseva+One&display=swap');
+@import './font.less';
 @spacer: 20px;
+
 #template() {
 	@import './base.less';
 	.container {
@@ -61,37 +62,28 @@
 	}
 
 	.title {
-		font-size: 56px;
-		font-weight: bold;
 		text-align: center;
-		font-family: 'Yesana One';
 		padding-left: @spacer;
 		padding-right: @spacer;
 		margin: unset;
-		text-transform: uppercase;
-	}
-	.mobile .title{
-		font-size: 56px;
 	}
 
 	.description {
 		margin-top: 10px;
-		font-weight: normal;
-		text-align: center;
-		font-size: 18px;
-		font-family: 'Muli';
 		padding-left: @spacer;
 		padding-right: @spacer;
 	}
+
 	.text-input {
 		border: none;
-		border-bottom: 1px solid #d9d9d9;
+		border-bottom: 1px solid @input_border_color;
 		width: 100%;
 		height: 30px;
 		font-size: 14px;
 		outline: 0;
 		font-family: "Muli";
 	}
+
 	.buttons{
 		display: flex;
 		flex-direction: column;

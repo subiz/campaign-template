@@ -1,4 +1,4 @@
-@import (css) url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Muli:wght@500;600;700;800;900&family=Roboto:wght@400;500;700;900&family=Yeseva+One&display=swap');
+@import './font.less';
 @spacer-mobile:20px;
 @spacer: 30px;
 #template() {
@@ -23,32 +23,29 @@
     height: 100%;
   }
   .title {
+		top: 144px;
+    left: 435px;
+
     position: absolute;
     z-index: 2;
-    top: 410px;
-    left: 73px;
-    font-size: 28px;
-    line-height: 120%;
-    font-weight: bold;
+    text-align: center;
   }
-  .desktop .title {
-    top: 134px;
-    left: 411px;
-    font-size: 32px;
+  .mobile .title {
+		top: 400px;
+		left: 0;
+		padding: @spacer;
   }
   .description {
-    font-size: 102px;
-    line-height: 100%;
     position: absolute;
-    top: 452px;
-    left: 85px;
     z-index: 2;
-    font-weight: bold;
+		top: 230px;
+    left: 450px;
+		padding: @spacer;
+		text-align: center;
   }
-  .desktop .description {
-    top: 169px;
-    left: 423px;
-    font-size: 114px;
+  .mobile .description {
+		top: 500px;
+    left: 0px;
   }
 }
 

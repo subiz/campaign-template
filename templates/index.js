@@ -35,6 +35,14 @@ var meta = {
 			secondary_button_color: '#777',
 			input_color: 'black',
 			input_background: 'transparent',
+
+			title_font_family: 'Montserrat',
+			title_font_weight: '700',
+			title_font_size: '36px',
+
+			description_font_family: 'Muli',
+			description_font_size: '16px',
+
 		},
 	},
 	template1: {
@@ -111,6 +119,18 @@ var meta = {
 			secondary_button_color: 'white',
 			input_color: '',
 			input_background: '',
+
+			title_font_size: '35px',
+			title_font_weight: '700',
+			title_font_family: 'Montserrat',
+
+			description_font_size: '18px',
+			description_font_family: 'Muli',
+
+			input_border_color: '#d9d9d9',
+		},
+		mobile_appearance: {
+			title_font_size: '28px',
 		},
 	},
 	template3: {
@@ -140,7 +160,20 @@ var meta = {
 			secondary_button_color: 'white',
 			input_color: '',
 			input_background: '',
+
+			title_font_size: '16px',
+			title_font_family: 'Muli',
+
+			title_font_size: '28px',
+			title_font_family: 'Montserrat',
+			title_font_weight: '700',
+
+			input_border_color: '#d9d9d9',
 		},
+		mobile_appearance: {
+			title_font_size: '16px',
+			description_font_size: '28px',
+		}
 	},
 	template4: {
 		css: () =>
@@ -170,6 +203,14 @@ var meta = {
 			secondary_button_color: 'white',
 			input_color: '',
 			input_background: '',
+
+			title_font_size: '25px',
+			title_font_family: 'Yeseva One',
+
+			description_font_size: '15px',
+			description_font_family: 'Muli',
+
+			input_border_color: '#d9d9d9',
 		},
 	},
 	template5: {
@@ -200,9 +241,17 @@ var meta = {
 			secondary_button_color: 'white',
 			input_color: '#000',
 			input_background: '#fff',
+
+			title_font_size: '55px',
+			title_font_family: 'Muli',
+
+			description_font_size: '24px',
+			description_font_family: 'Muli',
 		},
 		mobile_appearance: {
 			background_image: 'url(' + require('../assets/background/bg5_mobile.png') + ')',
+			title_font_size: '28px',
+			description_font_size: '16px',
 		},
 	},
 	template6: {
@@ -232,6 +281,14 @@ var meta = {
 			secondary_button_color: 'white',
 			input_color: '',
 			input_background: '',
+
+			title_font_family: 'Montserrat',
+			title_font_size: '48px',
+			title_font_weight: 'bold',
+
+
+			description_font_size: '18px',
+			description_font_family: 'Muli',
 		},
 		mobile_appearance: {
 			title_color: '#fff',
@@ -242,8 +299,11 @@ var meta = {
 			primary_button_color: 'white',
 			secondary_button_background: '#777',
 			secondary_button_color: 'white',
-			input_color: '',
+			input_color: '#fff',
 			input_background: '',
+
+			description_font_size: '14px',
+			title_font_size: '28px',
 		},
 	},
 	template9: {
@@ -273,6 +333,18 @@ var meta = {
 			secondary_button_color: 'white',
 			input_color: '',
 			input_background: '',
+
+			title_line_height: '44px',
+			title_font_family: 'Montserrat',
+			title_font_size: '36px',
+			title_font_weight: '700',
+
+			description_font_weight: 'normal',
+			description_font_size: '16px',
+			description_font_family: 'Muli',
+
+			input_border_color: '#d9d9d9',
+
 		},
 	},
 	template10: {
@@ -302,6 +374,10 @@ var meta = {
 			secondary_button_color: 'white',
 			input_color: '#000',
 			input_background: '#fff',
+
+			title_font_size: '16px',
+			description_font_size: '28px',
+			description_font_weight: 'bold',
 		},
 	},
 	template20: {
@@ -331,7 +407,20 @@ var meta = {
 			secondary_button_color: 'white',
 			input_color: '#000',
 			input_background: '',
+
+			title_font_size: '52px',
+			title_font_weight: '700',
+			title_font_family: 'Roboto',
+
+			description_font_size: '16px',
+			description_font_family: 'Roboto',
+
+			input_border_color: '#5F6369',
 		},
+		mobile_appearance: {
+			title_font_size: '32px',
+
+		}
 	},
 
 	template21: {
@@ -361,9 +450,18 @@ var meta = {
 			secondary_button_color: '#B3C4CC',
 			input_color: '#fff',
 			input_background: 'none',
+
+      title_font_size: '48px',
+      title_line_height: '24px',
+      title_color: '#5F6369',
+
+			description_font_family: 'Roboto',
+			description_font_size: '24px',
+			input_border_color: '#ddd',
 		},
 		mobile_appearance: {
 			background_image: 'url(' + require('../assets/background/template21_mobile.png') + ')',
+			description_font_size: '16px',
 		},
 	},
 	template22: {
@@ -394,9 +492,18 @@ var meta = {
 			secondary_button_color: '#B3C4CC',
 			input_color: '#fff',
 			input_background: 'none',
+
+			title_font_size: '56px',
+			title_font_weight: '700',
+			title_font_family: 'Roboto',
+
+			description_font_size: '24px',
+			description_font_family: 'Roboto',
+      input_border_color: '#ddd',
 		},
 		mobile_appearance: {
 			background_image: 'url(' + require('../assets/background/template22_mobile.png') + ')',
+			title_font_size: '37px',
 		},
 	},
 	template23: {
@@ -427,9 +534,19 @@ var meta = {
 			secondary_button_color: '#B3C4CC',
 			input_color: '#fff',
 			input_background: 'none',
+			input_border_color: '#ddd',
+
+			title_font_size: '48px',
+			title_font_weight: '700',
+			title_font_family: 'Roboto',
+
+			description_font_family: 'Roboto',
+			description_font_size: '24px',
 		},
 		mobile_appearance: {
 			background_image: 'url(' + require('../assets/background/template23_mobile.png') + ')',
+			title_font_size: '37px',
+			description_font_size: '24px',
 		},
 	},
 	template24: {
@@ -460,9 +577,17 @@ var meta = {
 			secondary_button_color: '#5F6369;',
 			input_color: '#996699',
 			input_background: 'none',
+			title_font_family: 'Yeseva One',
+			title_font_size: '48px',
+
+			description_font_size: '16px',
+			description_font_family: 'Roboto',
+
+			input_border_color: '#996699',
 		},
 		mobile_appearance: {
 			background_image: 'url(' + require('../assets/background/template24_mobile.png') + ')',
+			description_font_size: '14px',
 		},
 	},
 	tet20201: {
@@ -491,6 +616,13 @@ var meta = {
 			secondary_button_color: '#5F6369;',
 			input_color: '',
 			input_background: '',
+
+			title_font_size: '30px',
+			title_font_weight: 'bold',
+			title_text_transform: 'uppercase',
+
+			description_font_size: '20px',
+
 		},
 		mobile_appearance: {
 			background_image: 'url(' + require('../assets/background/tet20201_mobile.png') + ')',
@@ -520,6 +652,12 @@ var meta = {
 			secondary_button_color: '#5F6369;',
 			input_color: '',
 			input_background: '',
+
+			title_font_size: '30px',
+			title_font_weight: 'bold',
+			title_text_transform: 'uppercase',
+
+			description_font_size: '20px',
 		},
 		mobile_appearance: {
 			background_image: 'url(' + require('../assets/background/tet20202_mobile.png') + ')',
@@ -553,6 +691,13 @@ var meta = {
 			secondary_button_color: '#5F6369',
 			input_color: '',
 			input_background: '',
+
+			title_font_size: '36px',
+			title_font_family: 'Roboto',
+			title_font_weight: 'bold',
+
+			description_font_size: '20px',
+			description_font_family: 'Roboto',
 		},
 	},
 	tet20204: {
@@ -583,6 +728,13 @@ var meta = {
 			secondary_button_color: '#5F6369',
 			input_color: '',
 			input_background: '',
+			title_font_weight: 'bold',
+			title_font_size: '48px',
+			description_font_size: '18px',
+		},
+		mobile_appearance: {
+			title_font_size: '26px',
+
 		},
 	},
 	template11: {
@@ -612,6 +764,20 @@ var meta = {
 			secondary_button_color: '#777',
 			input_color: 'black',
 			input_background: 'transparent',
+
+			title_font_size: '48px',
+			title_font_style: 'normal',
+			title_font_weight: 'normal',
+			title_text_transform: 'uppercase',
+			title_font_family: 'Yeseva One',
+
+			description_font_weight: 'normal',
+			description_font_size: '24px',
+			description_font_family: 'Roboto',
+		},
+		mobile_appearance: {
+			title_font_size: '36px',
+			description_font_size: '16px',
 		},
 	},
 	template12: {
@@ -641,6 +807,17 @@ var meta = {
 			secondary_button_color: '#777',
 			input_color: 'black',
 			input_background: 'transparent',
+
+			title_font_size: '48px',
+			title_text_transform: 'uppercase',
+			title_font_family: 'Yeseva One',
+
+			description_font_size: '24px',
+			description_font_family: 'Roboto',
+		},
+		mobile_appearance: {
+			title_font_size: '36px',
+			description_font_size: '16px',
 		},
 	},
 	template13: {
@@ -670,6 +847,17 @@ var meta = {
 			secondary_button_color: '#777',
 			input_color: 'black',
 			input_background: 'transparent',
+
+
+			title_font_family: 'Yeseva One',
+			title_text_transform: 'uppercase',
+			title_font_size: '56px',
+
+			description_font_size: '24px',
+			description_font_family: 'Roboto',
+		},
+		mobile_appearance: {
+			description_font_size: '16px',
 		},
 	},
 	template14: {
@@ -699,6 +887,20 @@ var meta = {
 			secondary_button_color: '#ffffff6f',
 			input_color: 'white',
 			input_background: 'transparent',
+
+			title_font_size: '45px',
+			title_font_weight: '700',
+			title_font_family: 'Montserrat',
+
+			description_font_size: '30px',
+			description_font_family: 'Montserrat',
+
+			input_border_color: '#326767',
+		},
+
+		mobile_appearance: {
+			title_font_size: '28px',
+			description_font_size: '16px',
 		},
 	},
 	template15: {
@@ -728,6 +930,19 @@ var meta = {
 			secondary_button_color: '#5f6369',
 			input_color: '#326767',
 			input_background: 'transparent',
+
+			title_font_size: '56px',
+			title_font_weight: 'bold',
+			title_font_family: 'Yesava One',
+
+			description_font_weight: 'normal',
+			description_font_size: '16px',
+			description_font_family: 'Roboto',
+
+			input_border_color: '#3267673f',
+		},
+		mobile_appearance: {
+			title_font_size: '52px',
 		},
 	},
 	templateu23: {
@@ -759,9 +974,19 @@ thành công mới`,
 			secondary_button_color: 'white',
 			input_color: '',
 			input_background: '',
+
+			title_text_transform: 'uppercase',
+			title_font_weight: 'bold',
+			title_font_family: 'Roboto Condensed',
+			title_font_size: '33px',
+
+			description_font_weight: '600',
+			description_font_size: '18px',
+			description_font_family: 'Muli',
 		},
 		mobile_appearance: {
 			background_image: 'url(' + require('../assets/background/templateu23_mobile.png') + ')',
+
 		},
 	},
 	template16: {
@@ -791,6 +1016,15 @@ thành công mới`,
 			secondary_button_color: '#5f6369',
 			input_color: '#5f6369',
 			input_background: 'transparent',
+
+			title_font_size: '40px',
+			title_font_weight: 'bold',
+			title_font_family: 'Yesana One',
+			title_text_transform: 'uppercase',
+
+			description_font_size: '18px',
+			description_font_family: 'Muli',
+			input_border_color: '#d9d9d9',
 		},
 	},
 	template17: {
@@ -818,8 +1052,16 @@ thành công mới`,
 			primary_button_color: 'white',
 			secondary_button_background: '#777',
 			secondary_button_color: 'white',
-			input_color: '',
+			input_color: '#fff',
 			input_background: '',
+
+
+			title_font_weight: 'bold',
+			title_font_family: 'Roboto Condensed',
+			title_text_transform: 'uppercase',
+			title_font_size: '42px',
+
+			input_border_color: '#fff',
 		},
 		mobile_appearance: {
 			background_image: 'url(' + require('../assets/background/template39_mobile.png') + ')',
@@ -850,11 +1092,24 @@ thành công mới`,
 			primary_button_color: 'white',
 			secondary_button_background: '#777',
 			secondary_button_color: 'white',
-			input_color: '',
+			input_color: '#fff',
 			input_background: '',
+
+			title_font_weight: 'bold',
+			title_font_family: 'Roboto Condensed',
+			title_font_size: '42px',
+			title_text_transform: 'uppercase',
+
+			input_border_color: '#d9d9d9',
+			description_font_size: '18px',
+			description_font_weight: 'normal',
+			description_font_family: 'Muli',
 		},
 		mobile_appearance: {
 			background_image: 'url(' + require('../assets/background/template39_mobile.png') + ')',
+			description_font_size: '16px',
+			title_font_size: '28px',
+
 		},
 	},
 	template117: {
@@ -884,6 +1139,20 @@ thành công mới`,
 			secondary_button_color: '#5f6369',
 			input_color: '#5f6369',
 			input_background: 'transparent',
+
+			title_text_transform: 'uppercase',
+			title_font_family: 'Yesana One',
+
+			title_font_size: '56px',
+			title_font_weight: 'bold',
+
+			description_font_weight: 'normal',
+			description_font_size: '18px',
+			description_font_family: 'Muli',
+		},
+
+		mobile_appearance: {
+			title_font_size: '56px',
 		},
 	},
 	template25: {
@@ -913,6 +1182,18 @@ thành công mới`,
 			secondary_button_color: '#5F6369',
 			input_color: '#fff',
 			input_background: 'none',
+
+			title_font_family: 'Yeseva One',
+			title_font_size: '48px',
+
+			description_font_family: 'Roboto',
+			description_font_size: '20px',
+			input_border_color: '#FFBF00',
+
+		},
+		mobile_appearance: {
+			title_font_size: '40px',
+			description_font_size: '20px',
 		},
 	},
 	template26: {
@@ -942,9 +1223,20 @@ thành công mới`,
 			secondary_button_color: '#5F6369',
 			input_color: '#000',
 			input_background: 'none',
+
+			title_font_family: 'Yeseva One',
+			title_font_weight: 'bold',
+			title_font_size: '48px',
+			description_font_size: '16px',
+			description_font_family: 'Roboto',
+
+			input_border_color: '#5F6369',
+
 		},
 		mobile_appearance: {
 			background_image: 'url(' + require('../assets/background/template26_mobile.png') + ')',
+			title_font_size: '48px',
+			description_font_size: '16px'
 		},
 	},
 	template18: {
@@ -974,6 +1266,15 @@ thành công mới`,
 			secondary_button_color: 'black',
 			input_color: 'black',
 			input_background: 'transparent',
+
+			title_font_size: '55px',
+			title_font_weight: 'bold',
+			title_font_family: 'Yeseva One',
+
+			description_font_weight: 'normal',
+			description_font_size: '24px',
+			description_font_family: 'Montserrat',
+			input_border_color: '#d9d9d9',
 		},
 		mobile_appearance: {
 			title_color: 'black',
@@ -986,6 +1287,8 @@ thành công mới`,
 			secondary_button_color: 'black',
 			input_color: 'black',
 			input_background: 'transparent',
+			title_font_size: '28px',
+			description_font_size: '16px',
 		},
 	},
 	template27: {
@@ -1015,9 +1318,19 @@ thành công mới`,
 			secondary_button_color: '#5F6369',
 			input_color: '#000',
 			input_background: 'none',
+
+			title_font_weight: 'bold',
+			title_font_family: 'Yeseva One',
+			title_font_size: '56px',
+
+			description_font_family: 'Roboto',
+			description_font_size: '16px',
+
+			input_border_color: '#5F6369',
 		},
 		mobile_appearance: {
 			background_image: 'url(' + require('../assets/background/template27_mobile.png') + ')',
+			title_font_size: '48px',
 		},
 	},
 	template19: {
@@ -1047,9 +1360,22 @@ thành công mới`,
 			secondary_button_color: '#777',
 			input_color: 'black',
 			input_background: 'transparent',
+
+			title_font_family: 'Roboto',
+			title_font_weight: '700',
+			title_font_size: '38px',
+			title_text_transform: 'uppercase',
+
+			description_font_weight: 'normal',
+			description_font_size: '20px',
+			description_font_family: 'Roboto',
+
+			input_border_color: '#8d8d8d80',
 		},
 		mobile_appearance: {
 			background_image: 'url(' + require('../assets/background/template19_mobile.png') + ')',
+			title_font_size: '30px',
+			description_font_size: '16px',
 		},
 	},
 	template28: {
@@ -1076,8 +1402,17 @@ thành công mới`,
 			secondary_button_color: '#5F6369',
 			input_color: '#DADDEF',
 			input_background: 'none',
+
+			title_font_family: 'Yeseva One',
+			title_text_transform: 'uppercase',
+			title_font_size: '48px',
+
+			description_font_size: '16px',
+			description_font_family: 'Roboto',
+			input_border_color: '#fff',
 		},
 		mobile_appearance: {
+			title_font_size: '48px',
 			background_image: 'url(' + require('../assets/background/template28_mobile.png') + ')',
 		},
 	},
@@ -1109,6 +1444,14 @@ thành công mới`,
 			secondary_button_color: '#5F6369',
 			input_color: '#000',
 			input_background: 'none',
+
+			title_font_size: '40px',
+			title_font_family: 'Yeseva One',
+			title_text_transform: 'uppercase',
+
+			description_font_size: '16px',
+			description_font_family: 'Roboto',
+			input_border_color: '#5f6369',
 		},
 		mobile_appearance: {
 			background_image: 'url(' + require('../assets/background/template29_mobile.png') + ')',
@@ -1142,6 +1485,13 @@ thành công mới`,
 			secondary_button_color: '#5F6369',
 			input_color: '#000',
 			input_background: 'none',
+
+			title_font_size: '40px',
+			title_font_family: 'Yeseva One',
+			title_text_transform: 'uppercase',
+			input_border_color: '#5f6369',
+			description_font_size: '16px',
+			description_font_family: 'Roboto',
 		},
 		mobile_appearance: {
 			background_image: 'url(' + require('../assets/background/template30_mobile.png') + ')',
@@ -1170,9 +1520,7 @@ Object.keys(meta).map((id) => {
 		meta[id].desktop_appearance.description_font_weight = 'normal'
 	if (!meta[id].desktop_appearance.description_font_style) meta[id].desktop_appearance.description_font_style = 'normal'
 
-
 	if (!meta[id].desktop_appearance.input_border_color) meta[id].desktop_appearance.input_border_color = '#000'
-
 
 	meta[id].js = () =>
 		Promise.resolve({

@@ -1,5 +1,4 @@
-@import (css) url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Muli:wght@500;600;700;800;900&family=Roboto:wght@400;500;700;900&family=Yeseva+One&display=swap');
-@spacer         : 35px;
+@import './font.less';
 #template() {
 	@import './base.less';
 	.background{
@@ -34,7 +33,7 @@
 		flex-direction: column;
 	}
 
-	.content{
+	.content {
 		display: flex;
 		flex-direction: column;
 		margin-top: 45px;
@@ -42,42 +41,29 @@
 		width: 400px;
 		max-height:  ~"calc(100% - 90px)";
 	}
+
 	.mobile .content{
 		margin-top: 20px;
 		margin-bottom: 20px;
 		max-height:  ~"calc(100% - 40px - 245px)";
 		max-width: 100%;
-
 	}
 
 	.title {
-		font-style: normal;
-		font-weight: normal;
-		font-size: 48px;
 		text-align: center;
-		text-transform: uppercase;
+
 		margin-top: 10px;
-		font-family: 'Yeseva One';
 		padding-left: @spacer;
 		padding-right: @spacer;
 		margin: unset;
 	}
-	.mobile .title{
-		font-size: 36px;
-	}
 
 	.description {
-		font-weight: normal;
-		font-size: 24px;
 		text-align: center;
-		font-family: Roboto;
 		padding-left: @spacer;
 		padding-right: @spacer;
 		margin-top:10px;
 		margin-bottom:10px;
-	}
-	.mobile .description{
-		font-size: 16px;
 	}
 
 	.label{
@@ -86,7 +72,7 @@
 
 	.text-input {
 		border: none;
-		border-bottom: 1px solid #8d8d8d80;
+		border-bottom: 1px solid @input_border_color;
 		width: 100%;
 		height: 30px;
 		font-size: 16px;

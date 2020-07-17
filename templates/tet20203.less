@@ -1,4 +1,4 @@
-@import (css) url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Muli:wght@500;600;700;800;900&family=Roboto:wght@400;500;700;900&family=Yeseva+One&display=swap');
+@import './font.less';
 @spacer-mobile:20px;
 @spacer: 30px;
 #template() {
@@ -21,10 +21,7 @@
   .container__inner {
     background: unset;
   }
-  .title {  
-    font-size: 36px;
-    font-family: 'Roboto';
-    font-weight: bold;
+  .title {
     text-align: center;
     margin-bottom: 20px;
     line-height: 120%;
@@ -34,8 +31,6 @@
   .description {
     text-align: center;
     white-space: pre-wrap;
-    font-size: 28px;
-    font-family: 'Roboto';
     line-height: 160%;
     display: block;
     width: 100%;

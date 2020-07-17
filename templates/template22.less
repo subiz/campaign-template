@@ -1,13 +1,16 @@
-@import (css) url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Muli:wght@500;600;700;800;900&family=Roboto:wght@400;500;700;900&family=Yeseva+One&display=swap');
-@spacer-mobile:20px;
+@import './font.less';
+
 @spacer: 30px;
+
 #template() {
   @import './base.less';
+
   .container {
     width: 335px;
     position: relative;
     .heightContainer(80%);
   }
+
   .desktop .container {
     min-width: 800px;
   }
@@ -30,40 +33,33 @@
     padding: 15px 45px;
   }
   .title {
-    font-size: 37px;
-    line-height: 46px;
-    font-weight: 700;
-    font-family: 'Roboto';
+    line-height: 68px;
     margin-bottom: 36px;
     text-align: center;
     margin-top: 30px;
   }
-  .desktop .title {
-    font-size: 56px;
-    line-height: 68px;
+  .mobile .title {
+		line-height: 46px;
   }
   .description {
-    font-size: 24px;
     text-align: center;
-    line-height: 20px;
-    font-family: 'Roboto';
+		line-height: 36px;
   }
-  .desktop .description {
-    font-size: 24px;
-    line-height: 36px;
+  .mobile .description {
+		line-height: 20px;
   }
   .form {
     padding: 0;
     // display: none;
   }
-  label {
+  .label {
     display: none;
   }
   input[type='text'] {
     border: 0;
     outline: 0;
     height: 40px;
-    border-bottom: 1px solid #fff;
+    border-bottom: 1px solid @input_border_color;
     padding: 0;
     font-size: 16px;
     font-family: 'Roboto';

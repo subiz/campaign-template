@@ -1,4 +1,4 @@
-@import (css) url(https://fonts.googleapis.com/css?family=Montserrat|Muli|Roboto|Yeseva+One|Roboto+Condensed&display=swap);
+@import './font.less';
 @spacer: 50px;
 
 #template() {
@@ -47,16 +47,11 @@
 	}
 
 	.title {
-		font-weight: bold;
 		text-align: center;
-		font-family: 'Roboto Condensed';
 		padding-left: @spacer;
 		padding-right: @spacer;
 		margin: unset;
-
-		font-size: 42px;
 		text-align: center;
-		text-transform: uppercase;
 	}
 
 	.mobile .title {
@@ -77,12 +72,12 @@
 	}
 
 	.text-input {
-		border: 1px solid #fff;
+		border: 1px solid @input_border_color;
 		width: 100%;
 		height: 43px;
 		font-size: 14px;
-		outline: 0;  
-		font-family: "Muli";           
+		outline: 0;
+		font-family: "Muli";
 	}
 
 	.btn.btn--primary {

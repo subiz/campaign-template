@@ -1,4 +1,4 @@
-@import (css) url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Muli:wght@500;600;700;800;900&family=Roboto:wght@400;500;700;900&family=Yeseva+One&display=swap');@spacer: 20px;
+@import './font.less';
 #template() {
 	@import './base.less';
 	.container {
@@ -25,7 +25,7 @@
 		background-size: cover;
 		background-position: center;
 	}
-	.mobile .background{
+	.mobile .background {
 		background-size: cover;
 	}
 
@@ -37,48 +37,35 @@
 
 		height: 100%;
 		margin: auto auto;
-		max-height: ~"calc(100% - 235px)";
-		padding-top:135px;
-		padding-bottom:100px;
+		max-height: ~'calc(100% - 235px)';
+		padding-top: 135px;
+		padding-bottom: 100px;
 		max-width: 45%;
 	}
 
-	.mobile .content{
-		padding-top:250px;
+	.mobile .content {
+		padding-top: 250px;
 		padding-bottom: 130px;
-		max-height: ~"calc(100% - 380px)";
+		max-height: ~'calc(100% - 380px)';
 		max-width: 75%;
 	}
 
 	.title {
-		font-size: 48px;
-		font-weight: bold;
 		text-align: center;
-		font-family: 'Montserrat';
 		padding-left: @spacer;
 		padding-right: @spacer;
 		margin: unset;
-	}
-
-	.mobile .title{
-		font-size: 28px;
 	}
 
 	.description {
 		margin-top: 10px;
 		font-weight: normal;
 		text-align: center;
-		font-size: 18px;
-		font-family: 'Muli';
 		padding-left: @spacer;
 		padding-right: @spacer;
 	}
 
-	.mobile .description{
-		font-size: 14px;
-	}
-
-	.label{
+	.label {
 		display: none;
 	}
 
@@ -89,8 +76,7 @@
 		height: 30px;
 		font-size: 14px;
 		outline: 0;
-		font-family: "Muli";
-
+		font-family: 'Muli';
 	}
 
 	.btn.btn--primary {
@@ -103,8 +89,9 @@
 		text-transform: uppercase;
 		font-size: 16px;
 		font-weight: 500;
-
 	}
 }
 
-#sbz-pop .template.template6 { #template() !important; }
+#sbz-pop .template.template6 {
+	#template() !important;
+}

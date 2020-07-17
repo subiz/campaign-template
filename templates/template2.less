@@ -1,7 +1,7 @@
-@import (css) url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Muli:wght@500;600;700;800;900&family=Roboto:wght@400;500;700;900&family=Yeseva+One&display=swap');
-@spacer: 20px;
+@import './font.less';
 #template() {
 	@import './base.less';
+	@spacer: 20px;
 
 	.container {
 		display: flex;
@@ -14,6 +14,7 @@
 		position: relative;
 		margin: auto auto;
 	}
+
 	.mobile .container{
 		max-height: unset;
 		margin-top: 70px ;
@@ -51,41 +52,29 @@
 	}
 
 	.title {
-		font-size: 35px;
-		font-weight: 700;
 		text-align: center;
-		font-family: 'Montserrat';
 		padding-left: @spacer;
 		padding-right: @spacer;
 		margin: unset;
 	}
-	.mobile .title{
-		font-size: 28px;
-	}
+
 	.form{
 		flex:4;
-	}
-	.label{
-		display: none;
 	}
 	.description {
 		margin-top: 10px;
 		text-align: center;
-		font-size: 18px;
-		font-family: 'Muli';
 		padding-left: @spacer;
 		padding-right: @spacer;
 	}
-	.mobile .description{
-		font-size: 16px;
-	}
+
 	buttons {
 		flex : 1;
 	}
 
 	.text-input {
 		border: none;
-		border-bottom: 1px solid #d9d9d9;
+		border-bottom: 1px solid @input_border_color;
 		width: 100%;
 		height: 30px;
 		font-size: 14px;

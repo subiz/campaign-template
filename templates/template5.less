@@ -1,23 +1,17 @@
-@import (css) url(https://fonts.googleapis.com/css?family=Montserrat|Muli|Roboto|Yeseva+One|Roboto+Condensed&display=swap);
-@spacer-mobile:20px;
-@spacer: 30px;
+@import './font.less';
 #template() {
-  @import './base.less';
-	* {
-		margin: 0;
-		padding: 0;
-		box-sizing: border-box;
-	}
-	.overlay.overlay--browser{
-		height:100%
+	@import './base.less';
+	@spacer: 30px;
+
+	.overlay.overlay--browser {
+		height: 100%;
 	}
 	.container {
 		width: 100%;
 		height: 100vh;
 	}
-	.mobile .container{
+	.mobile .container {
 		max-height: unset;
-	
 	}
 
 	.container__inner {
@@ -32,7 +26,7 @@
 		position: relative;
 		z-index: 1;
 	}
-	.mobile .background{
+	.mobile .background {
 		position: absolute;
 		// top: 0;
 		right: 0;
@@ -43,17 +37,17 @@
 	.content {
 		max-height: 100%;
 		padding-left: 20px;
-		padding-right:20px;
+		padding-right: 20px;
 		position: absolute;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    height: 100%;
-    display: flex;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+		z-index: 2;
+		top: 0;
+		left: 0;
+		height: 100%;
+		display: flex;
+		width: 50%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 		align-items: center;
 		padding: 30px 0;
 	}
@@ -62,18 +56,16 @@
 		justify-content: flex-start;
 		padding-top: 10px;
 	}
-	.form { 
+	.form {
 		width: 100%;
- 	}
-	.mobile	.form{
+	}
+	.mobile .form {
 		width: 90%;
 		padding: unset;
-	} 
+	}
 	.title {
-		margin-top: 70px ;
-    margin-bottom: 30px;
-		font-size: 55px;
-		font-family: 'Muli';
+		margin-top: 70px;
+		margin-bottom: 30px;
 		// width: 639px;
 		text-align: center;
 		margin-bottom: 10px;
@@ -82,16 +74,12 @@
 		padding-right: 15px;
 	}
 	.mobile .title {
-		font-size: 28px;
 		width: 307px;
 		line-height: 35px;
 	}
 
 	.description {
-		font-size: 24px;
 		line-height: 30px;
-		font-family: 'Muli';
-		text-align: center;
 		margin-bottom: 23px;
 		text-align: center;
 		padding-left: 25px;
@@ -104,11 +92,10 @@
 	}
 
 	.form-field {
-		height: 50px;
 		width: 100%;
 		margin-top: 11px;
 
-		label {
+		.label {
 			display: none;
 		}
 
@@ -119,7 +106,7 @@
 			outline: 0;
 			font-size: 18px;
 			display: block;
-			height: 100%;
+			height: 50px;
 		}
 		.form--list-container label {
 			display: initial;
@@ -127,7 +114,6 @@
 	}
 
 	.mobile .form-field {
-		height: 45px;
 		width: 335px;
 		input {
 			font-size: 16px;
@@ -140,8 +126,9 @@
 		padding: 0;
 		padding-left: 30px;
 		padding-right: 30px;
-		width :100%;
-		.btn.btn--primary, .btn.btn--secondary {
+		width: 100%;
+		.btn.btn--primary,
+		.btn.btn--secondary {
 			width: 100%;
 			border-radius: 50px;
 			height: 50px;
@@ -158,7 +145,8 @@
 	.mobile .buttons {
 		margin-top: 20px;
 
-		.btn.btn--primary, .btn.btn--secondary {
+		.btn.btn--primary,
+		.btn.btn--secondary {
 			width: 335px;
 			height: 45px;
 		}
@@ -167,8 +155,10 @@
 		}
 	}
 	.mobile .btn.btn-close {
-		top:65px
+		top: 65px;
 	}
 }
 
-#sbz-pop .template.template5 { #template() !important; }
+#sbz-pop .template.template5 {
+	#template() !important;
+}
