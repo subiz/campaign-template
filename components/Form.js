@@ -191,8 +191,8 @@ export default {
 	render (h) {
 		var showForm = this.form && this.form.enabled && this.form.fields && this.form.fields.length > 0
 		if (!showForm) return null
-
-		let $fields = this.form.fields.map((field) => (
+		let fields = this.form.fields || []
+		let $fields = fields.map((field) => (
 			<div class="form-field">
 				<label class="label">{field.label + ':'}</label>
 				{this.renderMultipleChoiceList(h, field)}
