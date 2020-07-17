@@ -55,7 +55,7 @@ new Vue({
 			op.set(this.page, 'secondary_button.text', op.get(metadata, 'secondary_button.vi'))
 		}
 		// make the environment look like widget environment
-		// common.setCssToHead('subiz-template-style-app', '#sbz-pop * {all:unset;}')
+		common.setCssToHead('subiz-template-style-app', '#sbz-pop * {all:unset;}')
 	},
 
 	methods: {

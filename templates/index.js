@@ -1348,7 +1348,7 @@ let Template = {
 		if (!this.Template) return null
 		if (this.close) return null
 
-		let $close = <CloseButton class="btn btn--close" vOn:click={this.onClose} />
+		let $close = <CloseButton vOn:click={this.onClose} />
 		let $primary = null
 		let primaryBtnCls = 'btn btn--primary'
 		if (this.select === 'primary_button') primaryBtnCls += ' text__shake'
