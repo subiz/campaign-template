@@ -28,19 +28,17 @@ export default {
 		renderMultipleChoiceList (h, field) {
 			if (field.type !== 'list' || !field.multiple_choice) return null
 			let $items = field.list.map((item) => (
-				<div class="checkbox">
+				<div class="form-check">
 					<input
+						class="form-check-input"
 						type="checkbox"
 						id={field.key + item}
 						vOn:change={(ev) => this.onCheckboxChange(ev, field, item)}
 						checked={contains(field, item)}
 					/>
-					<label class="checkbox--label " for={field.key + item}>
-						{item + ':'}
+					<label class="form-check-label" for={field.key + item}>
+						{item}
 					</label>
-					<div class="checkbox--check">
-						<div></div>
-					</div>
 				</div>
 			))
 
@@ -140,19 +138,16 @@ export default {
 		renderBoolean (h, field) {
 			if (field.type !== 'boolean') return null
 			return (
-				<div>
-					<label class="checkbox--label">
-						{field.label + ':'}
-						<input type="checkbox" vOn:change={(ev) => this.onBooleanFieldChange(ev, field)} checked={field.value} />
-						<span class="checkmark">
-							<svg width="14" height="10" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<path
-									d="M7.33317 0.5L2.74984 5.08333L0.666504 3"
-									stroke="white"
-									stroke-linecap="round"
-									stroke-linejoin="round"></path>
-							</svg>
-						</span>
+				<div class="form-check">
+					<input
+						class="form-check-input"
+						type="checkbox"
+						id={'f_bool_' + field.key}
+						vOn:change={(ev) => this.onBooleanFieldChange(ev, field)}
+						checked={field.value}
+					/>
+					<label class="form-check-label" for={'f_bool_' + field.key}>
+						{field.label}
 					</label>
 				</div>
 			)
@@ -185,7 +180,7 @@ export default {
 		},
 
 		onBooleanFieldChange (ev, field) {
-			field.value = JSON.tringify(ev.target.checked)
+			field.value = JSON.stringify(ev.target.checked)
 		},
 
 		onDatetimeFieldChange (ev, field) {
