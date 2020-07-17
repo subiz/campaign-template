@@ -26,6 +26,11 @@
 	margin-bottom: 0;
 	cursor: pointer;
 	padding-left: 7px;
+	.color(@input_color);
+}
+
+.mobile .form-check-label {
+	.color(@mobile_input_color);
 }
 
 .form-check-input:checked[type='checkbox'] {
@@ -33,9 +38,14 @@
 }
 
 .form-check-input:checked {
-	background: #0265ff;
+	background: @input_border_color;
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-size: 1em;
-	border-color: #0265ff;
+	border-color: @input_border_color;
+}
+
+.mobile .form-check-input:checked {
+	background: @mobile_input_border_color;
+	border-color: @mobile_input_border_color;
 }

@@ -67,6 +67,20 @@ var meta = {
 			secondary_button_color: '#777',
 			input_color: 'black',
 			input_background: 'transparent',
+
+			title_text_transform: 'uppercase',
+			title_font_family: 'Yeseva One',
+			title_font_size: '48px',
+			title_font_weight: 'normal',
+			title_font_style: 'normal',
+
+			description_font_weight: 'normal',
+			description_font_size: '24px',
+			description_font_family: 'Roboto',
+		},
+		mobile_appearance: {
+			title_font_size: '36px',
+			description_front_size: '16px',
 		},
 	},
 	template2: {
@@ -1139,8 +1153,26 @@ Object.keys(meta).map((id) => {
 	if (meta[id].js) return
 	meta[id].desktop_appearance.background_image = 'url(' + require('../assets/background/' + id + '.png') + ')'
 
-	// if (!meta[id].desktop_appearance.overlay)
-	meta[id].desktop_appearance.overlay = 'rgba(0,0,0,0.8)'
+	if (!meta[id].desktop_appearance.overlay) meta[id].desktop_appearance.overlay = 'rgba(0,0,0,0.8)'
+
+	if (!meta[id].desktop_appearance.title_text_transform) meta[id].desktop_appearance.title_text_transform = 'none'
+	if (!meta[id].desktop_appearance.title_font_family) meta[id].desktop_appearance.title_font_family = 'Roboto'
+	if (!meta[id].desktop_appearance.title_font_size) meta[id].desktop_appearance.title_font_size = '30px'
+	if (!meta[id].desktop_appearance.title_font_weight) meta[id].desktop_appearance.title_font_weight = 'normal'
+	if (!meta[id].desktop_appearance.title_font_style) meta[id].desktop_appearance.title_font_style = 'normal'
+
+	if (!meta[id].desktop_appearance.description_text_transform)
+		meta[id].desktop_appearance.description_text_transform = 'none'
+	if (!meta[id].desktop_appearance.description_font_family)
+		meta[id].desktop_appearance.description_font_family = 'Roboto'
+	if (!meta[id].desktop_appearance.description_font_size) meta[id].desktop_appearance.description_font_size = '30px'
+	if (!meta[id].desktop_appearance.description_font_weight)
+		meta[id].desktop_appearance.description_font_weight = 'normal'
+	if (!meta[id].desktop_appearance.description_font_style) meta[id].desktop_appearance.description_font_style = 'normal'
+
+
+	if (!meta[id].desktop_appearance.input_border_color) meta[id].desktop_appearance.input_border_color = '#000'
+
 
 	meta[id].js = () =>
 		Promise.resolve({
@@ -1431,6 +1463,20 @@ function replaceCssVariable(css, page) {
 	tokens = tokenize(tokens, "'@desktop_appearance.input_color'")
 	tokens = tokenize(tokens, "'@desktop_appearance.input_background'")
 	tokens = tokenize(tokens, "'@desktop_appearance.overlay'")
+
+	tokens = tokenize(tokens, "'@desktop_appearance.title_font_family'")
+	tokens = tokenize(tokens, "'@desktop_appearance.title_font_size'")
+	tokens = tokenize(tokens, "'@desktop_appearance.title_font_style'")
+	tokens = tokenize(tokens, "'@desktop_appearance.title_font_weight'")
+	tokens = tokenize(tokens, "'@desktop_appearance.title_text_transform'")
+	tokens = tokenize(tokens, "'@desktop_appearance.description_font_family'")
+	tokens = tokenize(tokens, "'@desktop_appearance.description_font_size'")
+	tokens = tokenize(tokens, "'@desktop_appearance.description_font_style'")
+	tokens = tokenize(tokens, "'@desktop_appearance.description_font_weight'")
+	tokens = tokenize(tokens, "'@desktop_appearance.description_text_transform'")
+	tokens = tokenize(tokens, "'@desktop_appearance.input_label_color'")
+	tokens = tokenize(tokens, "'@desktop_appearance.input_border_color'")
+
 	tokens = tokenize(tokens, "'@mobile_appearance.title_color'")
 	tokens = tokenize(tokens, "'@mobile_appearance.description_color'")
 	tokens = tokenize(tokens, "'@mobile_appearance.background'")
@@ -1442,6 +1488,19 @@ function replaceCssVariable(css, page) {
 	tokens = tokenize(tokens, "'@mobile_appearance.input_color'")
 	tokens = tokenize(tokens, "'@mobile_appearance.input_background'")
 	tokens = tokenize(tokens, "'@mobile_appearance.overlay'")
+
+	tokens = tokenize(tokens, "'@mobile_appearance.title_font_family'")
+	tokens = tokenize(tokens, "'@mobile_appearance.title_font_size'")
+	tokens = tokenize(tokens, "'@mobile_appearance.title_font_style'")
+	tokens = tokenize(tokens, "'@mobile_appearance.title_font_weight'")
+	tokens = tokenize(tokens, "'@mobile_appearance.title_text_transform'")
+	tokens = tokenize(tokens, "'@mobile_appearance.description_font_family'")
+	tokens = tokenize(tokens, "'@mobile_appearance.description_font_size'")
+	tokens = tokenize(tokens, "'@mobile_appearance.description_font_style'")
+	tokens = tokenize(tokens, "'@mobile_appearance.description_font_weight'")
+	tokens = tokenize(tokens, "'@mobile_appearance.description_text_transform'")
+	tokens = tokenize(tokens, "'@mobile_appearance.input_label_color'")
+	tokens = tokenize(tokens, "'@mobile_appearance.input_border_color'")
 	var ret = []
 	for (var i = 0; i < tokens.length; i++) {
 		var item = tokens[i]

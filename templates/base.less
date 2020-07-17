@@ -9,6 +9,18 @@
 @secondary_button_color              : '@desktop_appearance.secondary_button_color';
 @input_color                         : '@desktop_appearance.input_color';
 @input_background                    : '@desktop_appearance.input_background';
+@title_font_family                   : '@desktop_appearance.title_font_family';
+@title_font_size                     : '@desktop_appearance.title_font_size';
+@title_font_style                    : '@desktop_appearance.title_font_style';
+@title_font_weight                   : '@desktop_appearance.title_font_weight';
+@title_text_transform                : '@desktop_appearance.title_text_transform';
+@description_font_family             : '@desktop_appearance.description_font_family';
+@description_font_size               : '@desktop_appearance.description_font_size';
+@description_font_style              : '@desktop_appearance.description_font_style';
+@description_font_weight             : '@desktop_appearance.description_font_weight';
+@description_text_transform          : '@desktop_appearance.description_text_transform';
+@input_label_color                   : '@desktop_appearance.input_label_color';
+@input_border_color                  : '@desktop_appearance.input_border_color';
 // mobile
 @mobile_overlay                      : '@mobile_appearance.overlay';
 @mobile_title_color                  : '@mobile_appearance.title_color';
@@ -21,6 +33,20 @@
 @mobile_secondary_button_color       : '@mobile_appearance.secondary_button_color';
 @mobile_input_color                  : '@mobile_appearance.input_color';
 @mobile_input_background             : '@mobile_appearance.input_background';
+@mobile_title_font_family            : '@mobile_appearance.title_font_family';
+@mobile_title_font_size              : '@mobile_appearance.title_font_size';
+@mobile_title_font_style             : '@mobile_appearance.title_font_style';
+@mobile_title_font_weight            : '@mobile_appearance.title_font_weight';
+@mobile_title_text_transform         : '@mobile_appearance.title_text_transform';
+@mobile_description_font_family      : '@mobile_appearance.description_font_family';
+@mobile_description_font_size        : '@mobile_appearance.description_font_size';
+@mobile_description_font_style       : '@mobile_appearance.description_font_style';
+@mobile_description_font_weight      : '@mobile_appearance.description_font_weight';
+@mobile_description_text_transform   : '@mobile_appearance.description_text_transform';
+@mobile_input_label_color            : '@mobile_appearance.input_label_color';
+@mobile_input_border_color            : '@mobile_appearance.input_border_color';
+
+
 
 @import "../node_modules/normalize.css/normalize.css";
 @import './animate.less';
@@ -78,12 +104,15 @@ input {
 	height: unset	;
 	overflow: scroll;
 }
+
 .overlay--iphone{
 	border: solid 5px #000000;
 	border-radius: 30px;
 }
+
 .notch{display: none;}
-.overlay--iphone .notch{
+
+.overlay--iphone .notch {
 	position: absolute;
 	z-index: 10;
 	top: -5px;
@@ -96,6 +125,7 @@ input {
 	align-items: center;
 	justify-content:center;
 }
+
 .notch__camera{
 	position: absolute;
 	left: 20px;
@@ -104,7 +134,8 @@ input {
 	border-radius: 10px;
 	background-color: white;
 }
- .notch__audio{
+
+.notch__audio {
 	height: 10px;
 	width: 40%;
 	border-radius: 5px;
@@ -117,19 +148,40 @@ input {
 
 .title {
 	.color(@title_color);
-	whitespace: pre-wrap;
+	white-space: pre-wrap;
+	text-transform: @title_text_transform;
+	font-family: @title_font_family;
+	font-size: @title_font_size;
+	font-style: @title_font_style;
+	font-weight: @title_font_weight;
 }
 
 .mobile .title {
 	.color(@mobile_title_color);
+	text-transform: @mobile_title_text_transform;
+	font-family: @mobile_title_font_family;
+	font-size: @mobile_title_font_size;
+	font-style: @mobile_title_font_style;
+	font-weight: @mobile_title_font_weight;
 }
 
 .description {
 	.color(@description_color);
-	whitespace: pre-wrap;
+	white-space: pre-wrap;
+	text-transform: @description_text_transform;
+	font-family: @description_font_family;
+	font-size: @description_font_size;
+	font-style: @description_font_style;
+	font-weight: @description_font_weight;
 }
+
 .mobile .description {
 	.color(@mobile_description_color);
+	text-transform: @mobile_description_text_transform;
+	font-family: @mobile_description_font_family;
+	font-size: @mobile_description_font_size;
+	font-style: @mobile_description_font_style;
+	font-weight: @mobile_description_font_weight;
 }
 
 .container {
@@ -253,7 +305,7 @@ input {
 	.color(@mobile_secondary_button_color);
 }
 
-.form-field{
+.form-field {
 	display: flex;
 	width: 100%;
 	flex-direction: column;
@@ -279,9 +331,14 @@ input[type=radio]{
 	position: relative;
 	z-index: 9;
 	cursor: pointer;
+	.color(@input_color);
 }
 
-.radio--check{
+.mobile .radio--label {
+	.color(@mobile_input_color);
+}
+
+.radio--check {
 	display: block;
 	position: absolute;
 	border: 1px solid #aaa;
@@ -291,8 +348,6 @@ input[type=radio]{
 	top: 0px;
 	left: 0px;
 	z-index: 5;
-	transition: border .15s linear;
-	-webkit-transition: border .15s linear;
 }
 
 .radio--check:hover {
@@ -309,16 +364,22 @@ input[type=radio]{
 	top: 2px;
 	left: 2px;
 	margin: auto;
-	transition: background 0.15s linear;
-	-webkit-transition: background 0.15s linear;
 }
 
 input[type=radio]:checked ~ .radio--check {
-	border: 2px solid @primary_button_background; // #0265ff;
+	border: 2px solid @input_border_color; // #0265ff;
+}
+
+.mobile input[type=radio]:checked ~ .radio--check {
+	border: 2px solid @mobile_input_border_color; // #0265ff;
 }
 
 input[type=radio]:checked ~ .radio--check::before {
-	background: @primary_button_background; //  #0265ff;
+	background-color: @input_border_color; //  #0265ff;
+}
+
+.mobile input[type=radio]:checked ~ .radio--check::before {
+	background-color: @mobile_input_border_color; //  #0265ff;
 }
 
 input {
@@ -355,7 +416,7 @@ input {
 	opacity: 0.3;
 }
 
-.textarea{
+.textarea {
 	margin-top: 5px;
 	height: 70px;
 	font-size: 14px;
@@ -378,7 +439,7 @@ input {
 	margin-top: 15px;
 }
 
-.label{
+.label {
 	font-family: 'Muli';
 	font-size: 12px;
 	.color(#000);
@@ -386,7 +447,7 @@ input {
 }
 
 .text__shake {
-  animation: 1.5s shake normal forwards;
+  animation: 2s shake normal forwards;
 }
 
 @keyframes shake {
