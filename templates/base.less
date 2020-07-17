@@ -273,8 +273,8 @@ input[type=radio]{
 	visibility: hidden;
 }
 
-.radio--label{
-	padding-left: 22px;
+.radio--label {
+	padding-left: 27px;
 	display: block;
 	position: relative;
 	z-index: 9;
@@ -286,8 +286,8 @@ input[type=radio]{
 	position: absolute;
 	border: 1px solid #aaa;
 	border-radius: 100%;
-	height: 16px;
-	width: 16px;
+	height: 20px;
+	width: 20px;
 	top: 0px;
 	left: 0px;
 	z-index: 5;
@@ -296,7 +296,7 @@ input[type=radio]{
 }
 
 .radio--check:hover {
-	border: 1px solid #888;
+	border: 2px solid #888;
 }
 
 .radio--check::before {
@@ -304,8 +304,8 @@ input[type=radio]{
 	position: absolute;
 	content: '';
 	border-radius: 100%;
-	height: 10px;
-	width: 10px;
+	height: 12px;
+	width: 12px;
 	top: 2px;
 	left: 2px;
 	margin: auto;
@@ -314,11 +314,11 @@ input[type=radio]{
 }
 
 input[type=radio]:checked ~ .radio--check {
-	border: 1px solid #0265ff;
+	border: 2px solid @primary_button_background; // #0265ff;
 }
 
 input[type=radio]:checked ~ .radio--check::before {
-	background: #0265ff;
+	background: @primary_button_background; //  #0265ff;
 }
 
 input {
