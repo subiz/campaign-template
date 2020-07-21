@@ -1866,8 +1866,9 @@ function replaceCssVariable(css, page) {
 
 function replaceFileUrl(src) {
 	if (!src) return ''
-	src = src.replace('filev4.subiz.com', 'file.mysubiz.com')
-	src = src.replace('file.subiz.com', 'file.mysubiz.com')
+	src = src.replace('filev4.subiz.com', 'file-subiz.com')
+	src = src.replace('file.subiz.com', 'file-subiz.com')
+	src = src.replace('file.mysubiz.com', 'file-subiz.com')
 	return src
 }
 

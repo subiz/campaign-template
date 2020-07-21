@@ -44,6 +44,7 @@ new Vue({
 	},
 	mounted () {
 		this.template = window.location.pathname.substr(1)
+		if (!this.template) this.template = 'template1'
 
 		var metadata = Template.meta[this.template].text
 		if (!op.get(this.page, 'title')) op.set(this.page, 'title', op.get(metadata, 'title.vi'))
@@ -54,6 +55,7 @@ new Vue({
 		if (!op.get(this.page, 'secondary_button.text')) {
 			op.set(this.page, 'secondary_button.text', op.get(metadata, 'secondary_button.vi'))
 		}
+
 		// make the environment look like widget environment
 		common.setCssToHead('subiz-template-style-app', '#sbz-pop * {all:unset;}')
 	},
