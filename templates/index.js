@@ -1426,20 +1426,55 @@ thành công mới`,
 			description_color: '#000',
 			background: 'white',
 			background_image: 'url(' + require('../assets/background/template29_mobile.png') + ')',
+
 			primary_button_background: '#226C92',
 			primary_button_color: '#fff',
-			secondary_button_background: 'unset',
-			secondary_button_color: '#5F6369',
+
 			input_color: '#000',
 			input_background: 'none',
 
-			title_font_size: '40px',
+			title_font_size: '30px',
+			title_font_weight: 'bold',
 			title_font_family: 'Roboto',
 			title_text_transform: 'none',
 
 			description_font_size: '16px',
 			description_font_family: 'Roboto',
 			input_border_color: 'rgba(0, 0, 0, 0.5)',
+		},
+	},
+	template202009022: {
+		css: () => import(/*webpackChunkName: "template202009022_css" */ '!to-string-loader!css-loader!less-loader!./template202009022.less'),
+		type: 'modal',
+		text: {
+			name: {vi: 'Bão sale mừng Quốc khánh 2/9', en: 'National Day September 2 Sale Storm'},
+			title: {
+				vi: 'Bão sale mừng Quốc khánh 2/9',
+				en: 'National Day September 2 Sale Storm',
+			},
+			description: {
+				vi: 'Ưu đãi lớn, quà ngập tràn. Săn ngay các deal giảm giá cực hot của chúng tôi',
+				en: 'Big deals, overwhelming gifts. Hunt now for our extremely hot discount deals',
+			},
+			primary_button: {vi: 'Mua Ngay', en: 'Shop now'},
+			secondary_button: {vi: 'Không, cảm ơn.Tôi sẽ quay lại sau', en: "No, thanks.I'll be back later"},
+		},
+		desktop_appearance: {
+			title_color: '#FAC571',
+			description_color: '#fff',
+			// background_image: 'url(' + require('../assets/background/bg5.png') + ')',
+			primary_button_background: '#FAC571',
+			primary_button_color: '##4B2C02',
+
+			secondary_button_background: 'unset',
+			secondary_button_color: '#5F6369;',
+			input_color: '',
+			input_background: '',
+
+			title_font_size: '38px',
+			title_font_weight: 'bold',
+
+			description_font_size: '16px',
 		},
 	},
 	template29: {
