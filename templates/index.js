@@ -42,7 +42,6 @@ var meta = {
 
 			description_font_family: 'Muli',
 			description_font_size: '16px',
-
 		},
 	},
 	template1: {
@@ -173,7 +172,7 @@ var meta = {
 		mobile_appearance: {
 			title_font_size: '16px',
 			description_font_size: '28px',
-		}
+		},
 	},
 	template4: {
 		css: () =>
@@ -286,7 +285,6 @@ var meta = {
 			title_font_size: '48px',
 			title_font_weight: 'bold',
 
-
 			description_font_size: '18px',
 			description_font_family: 'Muli',
 		},
@@ -344,7 +342,6 @@ var meta = {
 			description_font_family: 'Muli',
 
 			input_border_color: '#d9d9d9',
-
 		},
 	},
 	template10: {
@@ -419,8 +416,7 @@ var meta = {
 		},
 		mobile_appearance: {
 			title_font_size: '32px',
-
-		}
+		},
 	},
 
 	template21: {
@@ -451,9 +447,9 @@ var meta = {
 			input_color: '#fff',
 			input_background: 'none',
 
-      title_font_size: '48px',
-      title_line_height: '24px',
-      title_color: '#5F6369',
+			title_font_size: '48px',
+			title_line_height: '24px',
+			title_color: '#5F6369',
 
 			description_font_family: 'Roboto',
 			description_font_size: '24px',
@@ -499,7 +495,7 @@ var meta = {
 
 			description_font_size: '24px',
 			description_font_family: 'Roboto',
-      input_border_color: '#ddd',
+			input_border_color: '#ddd',
 		},
 		mobile_appearance: {
 			background_image: 'url(' + require('../assets/background/template22_mobile.png') + ')',
@@ -622,7 +618,6 @@ var meta = {
 			title_text_transform: 'uppercase',
 
 			description_font_size: '20px',
-
 		},
 		mobile_appearance: {
 			background_image: 'url(' + require('../assets/background/tet20201_mobile.png') + ')',
@@ -734,7 +729,6 @@ var meta = {
 		},
 		mobile_appearance: {
 			title_font_size: '26px',
-
 		},
 	},
 	template11: {
@@ -847,7 +841,6 @@ var meta = {
 			secondary_button_color: '#777',
 			input_color: 'black',
 			input_background: 'transparent',
-
 
 			title_font_family: 'Yeseva One',
 			title_text_transform: 'uppercase',
@@ -986,7 +979,6 @@ thành công mới`,
 		},
 		mobile_appearance: {
 			background_image: 'url(' + require('../assets/background/templateu23_mobile.png') + ')',
-
 		},
 	},
 	template16: {
@@ -1055,7 +1047,6 @@ thành công mới`,
 			input_color: '#fff',
 			input_background: '',
 
-
 			title_font_weight: 'bold',
 			title_font_family: 'Roboto Condensed',
 			title_text_transform: 'uppercase',
@@ -1109,7 +1100,6 @@ thành công mới`,
 			background_image: 'url(' + require('../assets/background/template39_mobile.png') + ')',
 			description_font_size: '16px',
 			title_font_size: '28px',
-
 		},
 	},
 	template117: {
@@ -1189,7 +1179,6 @@ thành công mới`,
 			description_font_family: 'Roboto',
 			description_font_size: '20px',
 			input_border_color: '#FFBF00',
-
 		},
 		mobile_appearance: {
 			title_font_size: '40px',
@@ -1231,12 +1220,11 @@ thành công mới`,
 			description_font_family: 'Roboto',
 
 			input_border_color: '#5F6369',
-
 		},
 		mobile_appearance: {
 			background_image: 'url(' + require('../assets/background/template26_mobile.png') + ')',
 			title_font_size: '48px',
-			description_font_size: '16px'
+			description_font_size: '16px',
 		},
 	},
 	template18: {
@@ -1414,6 +1402,44 @@ thành công mới`,
 		mobile_appearance: {
 			title_font_size: '48px',
 			background_image: 'url(' + require('../assets/background/template28_mobile.png') + ')',
+		},
+	},
+	template202009021: {
+		css: () =>
+			import(/*webpackChunkName: "template202009021_css" */ '!to-string-loader!css-loader!less-loader!./template202009021.less'),
+		type: 'modal',
+		text: {
+			name: {vi: 'Mẫu 32: Hỏi thông tin', en: 'Template 32: Ask information'},
+			title: {
+				vi: 'Ưu đãi đặc biệt mừng Quốc khánh 2/9',
+				en: 'Special offer to celebrate National Day 2/9',
+			},
+			description: {
+				vi: 'Giảm 20% chỉ một ngày duy nhất. Đăng ký ngay để nhận được mã giảm giá!',
+				en: '20% off for a single day. Sign up now to receive a discount code!',
+			},
+			primary_button: {vi: 'Đăng ký ngay', en: 'Shop now'},
+			secondary_button: {vi: 'Không, cảm ơn.Tôi sẽ quay lại sau', en: "No, thanks.I'll be back later"},
+		},
+		desktop_appearance: {
+			title_color: '#226C92',
+			description_color: '#000',
+			background: 'white',
+			background_image: 'url(' + require('../assets/background/template29_mobile.png') + ')',
+			primary_button_background: '#226C92',
+			primary_button_color: '#fff',
+			secondary_button_background: 'unset',
+			secondary_button_color: '#5F6369',
+			input_color: '#000',
+			input_background: 'none',
+
+			title_font_size: '40px',
+			title_font_family: 'Roboto',
+			title_text_transform: 'none',
+
+			description_font_size: '16px',
+			description_font_family: 'Roboto',
+			input_border_color: 'rgba(0, 0, 0, 0.5)',
 		},
 	},
 	template29: {
