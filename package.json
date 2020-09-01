@@ -1,6 +1,6 @@
 {
 	"name": "@subiz/campaign-template",
-	"version": "1.0.39",
+	"version": "1.0.40",
 	"main": "./index.js",
 	"scripts": {
 		"serve": "vue-cli-service serve",
