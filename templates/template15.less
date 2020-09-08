@@ -2,17 +2,12 @@
 @spacer: 20px;
 #template() {
 	@import './base.less';
+
 	.container {
-		.heightContainer(95%);
+		display: flex;
+		max-height: 95%;
 		width: 800px;
 		max-width: 90%;
-		margin: auto auto;
-		position: relative;
-	}
-	.mobile .container{
-		max-height: unset;
-		margin-top: 70px ;
-    margin-bottom: 30px;
 	}
 
 	.container__inner {
@@ -20,9 +15,11 @@
 		width: 100%;
 		display: flex;
 	}
-	.mobile .container__inner{
+
+	.mobile .container__inner {
 		flex-direction: column;
 	}
+
 	.background {
 		position: absolute;
 		top: 0;
@@ -30,9 +27,8 @@
 		left: 0;
 		bottom: 0;
 		z-index: 1;
-
 	}
-	.mobile .background{
+	.mobile .background {
 		height: 210px;
 		max-width: 100%;
 		position: unset;
@@ -47,11 +43,11 @@
 		z-index: 2;
 		// max-height: 100%;
 	}
-	.mobile .content{
+	.mobile .content {
 		padding-top: 20px;
 		padding-bottom: 20px;
 		width: 100%;
-		max-height: ~"calc(100% - 210px)";
+		max-height: ~'calc(100% - 210px)';
 	}
 
 	.title {
@@ -69,7 +65,7 @@
 		padding-right: @spacer;
 	}
 
-	.label{
+	.label {
 		display: none;
 	}
 
@@ -80,15 +76,15 @@
 		height: 30px;
 		font-size: 14px;
 		outline: 0;
-		font-family: "Muli";
+		font-family: 'Muli';
 	}
 
-	.buttons{
+	.buttons {
 		display: flex;
 		flex-direction: column;
 		padding-left: @spacer;
 		padding-right: @spacer;
-		margin-top:25px;
+		margin-top: 25px;
 	}
 
 	.btn.btn--primary {
@@ -108,4 +104,6 @@
 	}
 }
 
-#sbz-pop .template.template15 { #template() !important; }
+#sbz-pop .template.template15 {
+	#template() !important;
+}
