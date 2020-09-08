@@ -2,54 +2,52 @@
 
 #template() {
 	@import './base.less';
-	.background{
+	.background {
 		max-height: 100%;
 		width: 450px;
 	}
-	.mobile .background{
+
+	.mobile .background {
 		width: 50%;
 		height: 245px;
-		margin-left:50%;
+		margin-left: 50%;
 	}
 
 	.container {
-		.heightContainer(95%);
+		display: flex;
+		max-height: 95%;
 		width: 850px;
-		position: relative;
 	}
 
 	.mobile .container {
 		max-width: 90%;
-		position: relative;
-		max-height: unset;
-		margin-top: 70px ;
-    margin-bottom: 30px;
 	}
 
-	.container__inner{
+	.container__inner {
 		display: flex;
 		flex-direction: row-reverse;
 		max-height: 100%;
-		width: 100% ;
+		width: 100%;
 	}
-	.mobile .container__inner{
+
+	.mobile .container__inner {
 		flex-direction: column;
 		position: relative;
 	}
 
-	.content{
+	.content {
 		display: flex;
 		flex-direction: column;
 		float: right;
 		margin-top: 45px;
-		margin-bottom:45px;
+		margin-bottom: 45px;
 		width: 400px;
-		max-height:  ~"calc(100% - 90px)";
+		max-height: ~'calc(100% - 90px)';
 	}
-	.mobile .content{
+	.mobile .content {
 		margin-top: 20px;
 		margin-bottom: 20px;
-		max-height:  ~"calc(100% - 40px - 245px)";
+		max-height: ~'calc(100% - 40px - 245px)';
 		max-width: 100%;
 	}
 
@@ -61,24 +59,24 @@
 		margin: unset;
 	}
 
-	.mobile .title{
+	.mobile .title {
 		position: absolute;
 		top: 50px;
 		left: 0px;
 		max-width: 50%;
 		padding-left: @spacer;
-		padding:unset;
+		padding: unset;
 	}
 
 	.description {
 		padding-left: @spacer;
 		padding-right: @spacer;
-		margin-top:10px;
-		margin-bottom:10px;
+		margin-top: 10px;
+		margin-bottom: 10px;
 		text-align: center;
 	}
 
-	.label{
+	.label {
 		display: none;
 		font-size: 14px;
 	}
@@ -93,7 +91,7 @@
 		font-family: Roboto;
 	}
 
-	.buttons{
+	.buttons {
 		display: flex;
 		flex-direction: column;
 		padding-left: @spacer;
@@ -112,4 +110,6 @@
 		font-size: 13px;
 	}
 }
-#sbz-pop .template.template13 { #template() !important; }
+#sbz-pop .template.template13 {
+	#template() !important;
+}
