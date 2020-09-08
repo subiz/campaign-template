@@ -1,52 +1,55 @@
 @import './font.less';
-@spacer-mobile:20px;
+@spacer-mobile: 20px;
 @spacer: 30px;
 #template() {
-  @import './base.less';
-  .form, .buttons {
-    display: none;
-  }
-  .container {
-    width: 375px;
-    height: 667px;
-    position: relative;
-  }
-  .desktop .container {
-    width: 800px;
-    height: 400px;
-  }
-  .background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-  .title {
+	@import './base.less';
+	.form,
+	.buttons {
+		display: none;
+	}
+	.container {
+		width: 375px;
+		height: 667px;
+		position: relative;
+	}
+	.desktop .container {
+		width: 800px;
+		height: 400px;
+	}
+	.background {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	.title {
 		top: 144px;
-    left: 435px;
+		left: 435px;
 
-    position: absolute;
-    z-index: 2;
-    text-align: center;
-  }
-  .mobile .title {
+		position: absolute;
+		z-index: 2;
+		text-align: center;
+	}
+	.mobile .title {
 		top: 400px;
 		left: 0;
 		padding: @spacer;
-  }
-  .description {
-    position: absolute;
-    z-index: 2;
+	}
+	.description {
+		position: absolute;
+		z-index: 2;
 		top: 230px;
-    left: 450px;
+		left: 450px;
 		padding: @spacer;
 		text-align: center;
-  }
-  .mobile .description {
+	}
+	.mobile .description {
 		top: 500px;
-    left: 0px;
-  }
+		left: 0px;
+	}
 }
 
-#sbz-pop .template.tet20202 { #template() !important; }
+#sbz-pop .template.tet20202 {
+	#template() !important;
+}
