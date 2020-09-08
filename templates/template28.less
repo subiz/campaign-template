@@ -4,18 +4,17 @@
 	@spacer: 30px;
 
 	.container {
-		width: 335px;
 		position: relative;
-		.heightContainer(95%);
+		display: flex;
+		max-height: 95%;
+		width: 450px;
+		max-width: 90%;
 	}
-	.desktop .container {
-		min-width: 440px;
-	}
+
 	.mobile .container {
 		max-height: unset;
-		margin-top: 70px;
-		margin-bottom: 30px;
 	}
+
 	.title {
 		text-align: center;
 		margin-bottom: 8px;
