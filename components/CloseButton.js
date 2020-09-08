@@ -1,9 +1,8 @@
 export default {
 	render (h) {
 		return (
-			<div class="btn_close btn">
+			<div class="btn_close btn" vOn:click={(e) => this.$emit('click', e)}>
 				<svg
-					vOn:click={(e) => this.$emit('click', e)}
 					class="btn_close__icon"
 					xmlns="http://www.w3.org/2000/svg"
 					width="24"
