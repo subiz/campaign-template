@@ -4,17 +4,15 @@
 	@spacer: 30px;
 
 	.container {
-		width: 335px;
 		position: relative;
-		.heightContainer(95%);
-	}
-	.desktop .container {
+		display: flex;
+		max-height: 95%;
 		width: 480px;
 	}
+
 	.mobile .container {
 		max-height: unset;
-		margin-top: 70px;
-		margin-bottom: 30px;
+		width: 335px;
 	}
 
 	.desktop .container__inner {
@@ -23,11 +21,17 @@
 	}
 	.content {
 		padding: 0 15px 0 15px;
-		.content(164px);
+		display: flex;
+		flex-direction: column;
+		max-height: ~"calc(100% - 164px)";
 	}
+
 	.desktop .content {
-		.content(220px);
+		display: flex;
+		flex-direction: column;
+		max-height: ~"calc(100% - 220px)";
 	}
+
 	.background {
 		height: 164px;
 		position: relative;
