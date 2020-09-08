@@ -2,19 +2,16 @@
 @spacer: 50px;
 
 #template() {
-  @import './base.less';
+	@import './base.less';
 
 	.container {
 		display: flex;
 		flex-direction: column;
 		width: 800px;
-		height: 600px;
 		max-height: 100%;
 		max-width: 90%;
 		align-items: center;
 		background-size: auto;
-		position: relative;
-		margin: auto auto;
 	}
 
 	.container__inner {
@@ -38,7 +35,7 @@
 		overflow: hidden;
 		display: flex;
 		flex-direction: column;
-		max-height: ~"calc(100% - 60px - 75px)";
+		max-height: ~'calc(100% - 60px - 75px)';
 		max-width: 80%;
 		width: 460px;
 	}
@@ -50,25 +47,16 @@
 		text-align: center;
 		padding-left: @spacer;
 		padding-right: @spacer;
+		padding-top: @spacer;
 		margin: unset;
 		text-align: center;
 	}
 
-	.mobile .title {
-		font-size: 28px;
-	}
-
 	.description {
 		margin-top: 20px;
-		font-weight: normal;
 		text-align: center;
-		font-size: 18px;
-		font-family: 'Muli';
 		padding-left: @spacer;
 		padding-right: @spacer;
-	}
-	.description{
-		font-size: 16px;
 	}
 
 	.text-input {
@@ -77,7 +65,7 @@
 		height: 43px;
 		font-size: 14px;
 		outline: 0;
-		font-family: "Muli";
+		font-family: 'Muli';
 	}
 
 	.btn.btn--primary {
@@ -104,13 +92,16 @@
 
 	.text-input {
 		border-radius: 80px;
-    text-align: center;
+		text-align: center;
 	}
 
 	.buttons {
 		flex-direction: column;
 		margin-top: 0px;
+		margin-bottom: @spacer;
 	}
 }
 
-#sbz-pop .template.template17 { #template() !important; }
+#sbz-pop .template.template17 {
+	#template() !important;
+}
