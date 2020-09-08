@@ -6,16 +6,15 @@
 	.container {
 		width: 335px;
 		position: relative;
-		.heightContainer(95%);
-	}
-	.desktop .container {
 		width: 480px;
+		display: flex;
+		max-height: 95%;
 	}
+
 	.mobile .container {
 		max-height: unset;
-		margin-top: 70px;
-		margin-bottom: 30px;
 	}
+
 	.desktop .container__inner {
 		display: flex;
 		flex-direction: column;
