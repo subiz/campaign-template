@@ -4,18 +4,12 @@
 #template() {
   @import './base.less';
   .container {
-    width: 335px;
+    width: 800px;
     position: relative;
-    .heightContainer(80%);
+		display: flex;
+		max-height: 80%;
+		max-width: 90%;
   }
-  .desktop .container {
-    min-width: 800px;
-  }
-  .mobile .container{
-		max-height: unset;
-		margin-top: 70px ;
-    margin-bottom: 30px;
-	}
 
   .background {
     position: absolute;
