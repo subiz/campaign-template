@@ -179,7 +179,7 @@ input {
 
 .container {
 	background: @background;
-	margin: auto;
+	margin: auto; // CAUTION: do not override container margin or it won't centering anymore
 	position: relative;
 	max-height: 100%;
 }
@@ -251,6 +251,7 @@ input {
 
 .buttons {
 	display: flex;
+	flex-shrink: 0;
 	padding-left: @spacer;
 	padding-right:@spacer;
 	margin-top: 30px;
