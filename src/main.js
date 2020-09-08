@@ -75,15 +75,19 @@ new Vue({
 
 	render (h) {
 		return (
-			<div id="sbz-pop">
-				<Template.Template
-					key={this.i}
-					template={this.template}
-					page={this.page}
-					select="secondary_button"
-					vOn:clicked={this.onClicked}
-					vOn:closed={this.onClosed}
-				/>
+			<div style="background: yellow; overflow: auto; margin-top: 200px;">
+				<div style="background: red; margin-top:20px; width: 500px; height: 500px;"></div>
+				<div style="background: blue; margin-left: 500px; margin-top:20px; width: 500px; height: 500px;"></div>
+				<div id="sbz-pop">
+					<Template.Template
+						key={this.i}
+						template={this.template}
+						page={this.page}
+						select="secondary_button"
+						vOn:clicked={this.onClicked}
+						vOn:closed={this.onClosed}
+					/>
+				</div>
 			</div>
 		)
 	},

@@ -1406,7 +1406,9 @@ thành công mới`,
 	},
 	template202009021: {
 		css: () =>
-			import(/*webpackChunkName: "template202009021_css" */ '!to-string-loader!css-loader!less-loader!./template202009021.less'),
+			import(
+				/*webpackChunkName: "template202009021_css" */ '!to-string-loader!css-loader!less-loader!./template202009021.less'
+			),
 		type: 'modal',
 		text: {
 			name: {vi: 'Mẫu 32: Hỏi thông tin', en: 'Template 32: Ask information'},
@@ -1444,7 +1446,10 @@ thành công mới`,
 		},
 	},
 	template202009022: {
-		css: () => import(/*webpackChunkName: "template202009022_css" */ '!to-string-loader!css-loader!less-loader!./template202009022.less'),
+		css: () =>
+			import(
+				/*webpackChunkName: "template202009022_css" */ '!to-string-loader!css-loader!less-loader!./template202009022.less'
+			),
 		type: 'modal',
 		text: {
 			name: {vi: 'Bão sale mừng Quốc khánh 2/9', en: 'National Day September 2 Sale Storm'},
@@ -1614,38 +1619,36 @@ Object.keys(meta).map((id) => {
 					//var animation = 'container ' + this.page.animation
 					return (
 						<div class={cls} vOn:click={() => this.$emit('backgroundClick')}>
-              <div class="overlay__inner">
-                <div class="notch">
-                  <div class="notch__camera"></div>
-                  <div class="notch__audio"></div>
-                </div>
-                <div class="browser-bar">
-                  <div class="button__red"></div>
-                  <div class="button__yellow"></div>
-                  <div class="button__green"></div>
-                  <div class="bar__url"></div>
-                </div>
-                <div class={animation} vOn:click_stop={() => true}>
-                  {this.closeButton}
-                  <div class="container__inner">
-                    <div class="background"></div>
-                    <div class="content">
-                      <p class={titlecls} vOn:click={(_) => this.$emit('clicked', 'title')}>
-                        {this.page.title}
-                      </p>
-                      <div class="title-separator"></div>
-                      <p class={desccls} vOn:click={(_) => this.$emit('clicked', 'description')}>
-                        {this.page.description}
-                      </p>
-                      {this.form}
-                      <div class="buttons">
-                        {this.primaryButton}
-                        {this.secondaryButton}
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+							<div class="notch">
+								<div class="notch__camera"></div>
+								<div class="notch__audio"></div>
+							</div>
+							<div class="browser-bar">
+								<div class="button__red"></div>
+								<div class="button__yellow"></div>
+								<div class="button__green"></div>
+								<div class="bar__url"></div>
+							</div>
+							<div class={animation} vOn:click_stop={() => true}>
+								{this.closeButton}
+								<div class="container__inner">
+									<div class="background"></div>
+									<div class="content">
+										<p class={titlecls} vOn:click={(_) => this.$emit('clicked', 'title')}>
+											{this.page.title}
+										</p>
+										<div class="title-separator"></div>
+										<p class={desccls} vOn:click={(_) => this.$emit('clicked', 'description')}>
+											{this.page.description}
+										</p>
+										{this.form}
+										<div class="buttons">
+											{this.primaryButton}
+											{this.secondaryButton}
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					)
 				},
@@ -1670,10 +1673,19 @@ let Template = {
 		async template(template) {
 			this.loadTemplate(template)
 		},
+		close() {
+			// so only us can scroll
+			if (this.close) document.body.classList.remove('sbz_noscroll')
+			else document.body.classList.add('sbz_noscroll')
+		},
 	},
 
 	created() {
 		this.loadTemplate(this.template)
+
+		// so only us can scroll
+		if (this.close) document.body.classList.remove('sbz_noscroll')
+		else document.body.classList.add('sbz_noscroll')
 	},
 
 	methods: {
@@ -1723,6 +1735,8 @@ let Template = {
 				this.close = true
 			}, 400)
 			this.closeAnimation = 'bounceOut'
+
+			// reset overflow
 		},
 
 		checkFormFilled() {
