@@ -1614,36 +1614,38 @@ Object.keys(meta).map((id) => {
 					//var animation = 'container ' + this.page.animation
 					return (
 						<div class={cls} vOn:click={() => this.$emit('backgroundClick')}>
-							<div class="notch">
-								<div class="notch__camera"></div>
-								<div class="notch__audio"></div>
-							</div>
-							<div class="browser-bar">
-								<div class="button__red"></div>
-								<div class="button__yellow"></div>
-								<div class="button__green"></div>
-								<div class="bar__url"></div>
-							</div>
-							<div class={animation} vOn:click_stop={() => true}>
-								{this.closeButton}
-								<div class="container__inner">
-									<div class="background"></div>
-									<div class="content">
-										<p class={titlecls} vOn:click={(_) => this.$emit('clicked', 'title')}>
-											{this.page.title}
-										</p>
-										<div class="title-separator"></div>
-										<p class={desccls} vOn:click={(_) => this.$emit('clicked', 'description')}>
-											{this.page.description}
-										</p>
-										{this.form}
-										<div class="buttons">
-											{this.primaryButton}
-											{this.secondaryButton}
-										</div>
-									</div>
-								</div>
-							</div>
+              <div class="overlay__inner">
+                <div class="notch">
+                  <div class="notch__camera"></div>
+                  <div class="notch__audio"></div>
+                </div>
+                <div class="browser-bar">
+                  <div class="button__red"></div>
+                  <div class="button__yellow"></div>
+                  <div class="button__green"></div>
+                  <div class="bar__url"></div>
+                </div>
+                <div class={animation} vOn:click_stop={() => true}>
+                  {this.closeButton}
+                  <div class="container__inner">
+                    <div class="background"></div>
+                    <div class="content">
+                      <p class={titlecls} vOn:click={(_) => this.$emit('clicked', 'title')}>
+                        {this.page.title}
+                      </p>
+                      <div class="title-separator"></div>
+                      <p class={desccls} vOn:click={(_) => this.$emit('clicked', 'description')}>
+                        {this.page.description}
+                      </p>
+                      {this.form}
+                      <div class="buttons">
+                        {this.primaryButton}
+                        {this.secondaryButton}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
 						</div>
 					)
 				},
