@@ -1,22 +1,14 @@
 @import './font.less';
 @spacer: 20px;
 #template() {
+
 	@import './base.less';
 	.container {
-		.heightContainer(80%);
+		display: flex;
+		max-height: 80%;
 		display: flex;
 		width: 800px;
 		max-width: 90%;
-		// align-items: center;
-		position: relative;
-		margin: auto auto;
-		// flex-direction: column;
-	}
-
-	.mobile .container{
-		max-height: unset;
-		margin-top: 70px ;
-    margin-bottom: 30px;
 	}
 
 	.container__inner {
@@ -25,7 +17,7 @@
 		display: flex;
 	}
 
-	.mobile	.container__inner {
+	.mobile .container__inner {
 		justify-content: center;
 		align-items: center;
 	}
@@ -35,9 +27,8 @@
 		right: 0;
 		left: 0;
 		bottom: 0;
-		z-index:1;
+		z-index: 1;
 		// max-height: 100%;
-
 	}
 	.content {
 		z-index: 2;
@@ -50,16 +41,16 @@
 		flex-direction: column;
 		background-color: #fff;
 		max-width: 90%;
-		padding-top:50px;
-		padding-bottom:40px;
+		padding-top: 50px;
+		padding-bottom: 40px;
 		// width: 400px;
 	}
-	.mobile  .content{
+	.mobile .content {
 		position: unset;
 		width: 100%;
-		margin-top:65px;
-		margin-bottom:65px;
-		max-height: ~"calc(100% - 120px)";
+		margin-top: 65px;
+		margin-bottom: 65px;
+		max-height: ~'calc(100% - 120px)';
 	}
 
 	.title {
@@ -68,7 +59,7 @@
 		padding-right: @spacer;
 		margin: unset;
 	}
-	.mobile .title{
+	.mobile .title {
 		font-size: 56px;
 	}
 
@@ -78,7 +69,7 @@
 		padding-left: @spacer;
 		padding-right: @spacer;
 	}
-	.label{
+	.label {
 		display: none;
 	}
 	.text-input {
@@ -88,14 +79,14 @@
 		height: 30px;
 		font-size: 14px;
 		outline: 0;
-		font-family: "Muli";
+		font-family: 'Muli';
 	}
-	.buttons{
+	.buttons {
 		display: flex;
 		flex-direction: column;
 		padding-left: @spacer;
 		padding-right: @spacer;
-		margin-top:25px;
+		margin-top: 25px;
 	}
 	.btn.btn--primary {
 		text-transform: uppercase;
@@ -114,4 +105,6 @@
 	}
 }
 
-#sbz-pop .template.template16 { #template() !important; }
+#sbz-pop .template.template16 {
+	#template() !important;
+}
