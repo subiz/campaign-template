@@ -1,11 +1,4 @@
-import Form from '../components/Form.js'
-import CloseButton from '../components/CloseButton.js'
-var common = require('../common.js')
-var op = require('object-path')
-
-const MODE = common.mobilecheck() ? 'mobile' : 'desktop'
-var CSS = ''
-var meta = {
+let meta = {
 	templateThanks: {
 		css: () =>
 			import(
@@ -111,7 +104,7 @@ var meta = {
 			title_color: 'black',
 			description_color: 'black',
 			background: 'white',
-			// background_image: 'url(' + require('../assets/background/bg2.png') + ')',
+			// background_image: 'url(' + require('!!file-loader!../assets/background/bg2.png') + ')',
 			primary_button_background: '#FDAD15',
 			primary_button_color: 'white',
 			secondary_button_background: '#777',
@@ -195,7 +188,7 @@ var meta = {
 			title_color: 'black',
 			description_color: 'black',
 			background: 'white',
-			// background_image: 'url(' + require('../assets/background/bg4.png') + ')',
+			// background_image: 'url(' + require('!!file-loader!../assets/background/bg4.png') + ')',
 			primary_button_background: '#001984',
 			primary_button_color: 'white',
 			secondary_button_background: '#777',
@@ -233,7 +226,7 @@ var meta = {
 			title_color: 'white',
 			description_color: 'white',
 			background: 'white',
-			// background_image: 'url(' + require('../assets/background/bg5.png') + ')',
+			// background_image: 'url(' + require('!!file-loader!../assets/background/bg5.png') + ')',
 			primary_button_background: '#FDAD15',
 			primary_button_color: 'white',
 			secondary_button_background: '#777',
@@ -248,7 +241,7 @@ var meta = {
 			description_font_family: 'Muli',
 		},
 		mobile_appearance: {
-			background_image: 'url(' + require('../assets/background/bg5_mobile.png') + ')',
+			background_image: 'url(' + require('!!file-loader!../assets/background/bg5_mobile.png') + ')',
 			title_font_size: '28px',
 			description_font_size: '16px',
 		},
@@ -292,7 +285,7 @@ var meta = {
 			title_color: '#fff',
 			description_color: '#fff',
 			background: 'white',
-			background_image: 'url(' + require('../assets/background/template6_mobile.png') + ')',
+			background_image: 'url(' + require('!!file-loader!!!file-loader!../assets/background/template6_mobile.png') + ')',
 			primary_button_background: '#dab86a',
 			primary_button_color: 'white',
 			secondary_button_background: '#777',
@@ -456,7 +449,7 @@ var meta = {
 			input_border_color: '#ddd',
 		},
 		mobile_appearance: {
-			background_image: 'url(' + require('../assets/background/template21_mobile.png') + ')',
+			background_image: 'url(' + require('!!file-loader!../assets/background/template21_mobile.png') + ')',
 			description_font_size: '16px',
 		},
 	},
@@ -481,7 +474,7 @@ var meta = {
 			title_color: 'white',
 			description_color: 'white',
 			background: 'white',
-			// background_image: 'url(' + require('../assets/background/bg5.png') + ')',
+			// background_image: 'url(' + require('!!file-loader!../assets/background/bg5.png') + ')',
 			primary_button_background: 'linear-gradient(109.98deg, #D53938 0%, #FEBD3C 100%)',
 			primary_button_color: 'white',
 			secondary_button_background: 'unset',
@@ -498,7 +491,7 @@ var meta = {
 			input_border_color: '#ddd',
 		},
 		mobile_appearance: {
-			background_image: 'url(' + require('../assets/background/template22_mobile.png') + ')',
+			background_image: 'url(' + require('!!file-loader!../assets/background/template22_mobile.png') + ')',
 			title_font_size: '37px',
 		},
 	},
@@ -523,7 +516,7 @@ var meta = {
 			title_color: 'white',
 			description_color: 'white',
 			background: 'white',
-			// background_image: 'url(' + require('../assets/background/bg5.png') + ')',
+			// background_image: 'url(' + require('!!file-loader!../assets/background/bg5.png') + ')',
 			primary_button_background: 'linear-gradient(109.98deg, #D53938 0%, #FEBD3C 100%)',
 			primary_button_color: 'white',
 			secondary_button_background: 'unset',
@@ -540,7 +533,7 @@ var meta = {
 			description_font_size: '24px',
 		},
 		mobile_appearance: {
-			background_image: 'url(' + require('../assets/background/template23_mobile.png') + ')',
+			background_image: 'url(' + require('!!file-loader!../assets/background/template23_mobile.png') + ')',
 			title_font_size: '37px',
 			description_font_size: '24px',
 		},
@@ -566,7 +559,7 @@ var meta = {
 			title_color: '#2E052E',
 			description_color: '#2E052E',
 			background: 'white',
-			// background_image: 'url(' + require('../assets/background/bg5.png') + ')',
+			// background_image: 'url(' + require('!!file-loader!../assets/background/bg5.png') + ')',
 			primary_button_background: 'linear-gradient(109.98deg, #593EF4 0%, #525EE0 100%)',
 			primary_button_color: 'white',
 			secondary_button_background: 'unset',
@@ -582,7 +575,7 @@ var meta = {
 			input_border_color: '#996699',
 		},
 		mobile_appearance: {
-			background_image: 'url(' + require('../assets/background/template24_mobile.png') + ')',
+			background_image: 'url(' + require('!!file-loader!../assets/background/template24_mobile.png') + ')',
 			description_font_size: '14px',
 		},
 	},
@@ -605,7 +598,7 @@ var meta = {
 		desktop_appearance: {
 			title_color: '#FAC571',
 			description_color: '#FAC571',
-			// background_image: 'url(' + require('../assets/background/bg5.png') + ')',
+			// background_image: 'url(' + require('!!file-loader!../assets/background/bg5.png') + ')',
 			primary_button_background: 'linear-gradient(109.98deg, #593EF4 0%, #525EE0 100%)',
 			primary_button_color: 'white',
 			secondary_button_background: 'unset',
@@ -620,7 +613,7 @@ var meta = {
 			description_font_size: '20px',
 		},
 		mobile_appearance: {
-			background_image: 'url(' + require('../assets/background/tet20201_mobile.png') + ')',
+			background_image: 'url(' + require('!!file-loader!../assets/background/tet20201_mobile.png') + ')',
 		},
 	},
 	tet20202: {
@@ -640,7 +633,7 @@ var meta = {
 		desktop_appearance: {
 			title_color: '#FAC571',
 			description_color: '#FAC571',
-			// background_image: 'url(' + require('../assets/background/bg5.png') + ')',
+			// background_image: 'url(' + require('!!file-loader!../assets/background/bg5.png') + ')',
 			primary_button_background: 'linear-gradient(109.98deg, #593EF4 0%, #525EE0 100%)',
 			primary_button_color: 'white',
 			secondary_button_background: 'unset',
@@ -655,7 +648,7 @@ var meta = {
 			description_font_size: '20px',
 		},
 		mobile_appearance: {
-			background_image: 'url(' + require('../assets/background/tet20202_mobile.png') + ')',
+			background_image: 'url(' + require('!!file-loader!../assets/background/tet20202_mobile.png') + ')',
 		},
 	},
 	tet20203: {
@@ -679,7 +672,7 @@ var meta = {
 			title_color: '#FAC571',
 			description_color: '#fff',
 			background: '#9F0102',
-			// background_image: 'url(' + require('../assets/background/bg5.png') + ')',
+			// background_image: 'url(' + require('!!file-loader!../assets/background/bg5.png') + ')',
 			primary_button_background: 'linear-gradient(109.98deg, #593EF4 0%, #525EE0 100%)',
 			primary_button_color: 'white',
 			secondary_button_background: 'unset',
@@ -716,7 +709,7 @@ var meta = {
 			title_color: '#FDE5AF',
 			description_color: '#FCC626',
 			background: '#9F0102',
-			// background_image: 'url(' + require('../assets/background/bg5.png') + ')',
+			// background_image: 'url(' + require('!!file-loader!../assets/background/bg5.png') + ')',
 			primary_button_background: 'linear-gradient(109.98deg, #593EF4 0%, #525EE0 100%)',
 			primary_button_color: 'white',
 			secondary_button_background: 'unset',
@@ -978,7 +971,7 @@ thành công mới`,
 			description_font_family: 'Muli',
 		},
 		mobile_appearance: {
-			background_image: 'url(' + require('../assets/background/templateu23_mobile.png') + ')',
+			background_image: 'url(' + require('!!file-loader!../assets/background/templateu23_mobile.png') + ')',
 		},
 	},
 	template16: {
@@ -1055,7 +1048,7 @@ thành công mới`,
 			input_border_color: '#fff',
 		},
 		mobile_appearance: {
-			background_image: 'url(' + require('../assets/background/template39_mobile.png') + ')',
+			background_image: 'url(' + require('!!file-loader!../assets/background/template39_mobile.png') + ')',
 		},
 	},
 	template39: {
@@ -1097,7 +1090,7 @@ thành công mới`,
 			description_font_family: 'Muli',
 		},
 		mobile_appearance: {
-			background_image: 'url(' + require('../assets/background/template39_mobile.png') + ')',
+			background_image: 'url(' + require('!!file-loader!../assets/background/template39_mobile.png') + ')',
 			description_font_size: '16px',
 			title_font_size: '28px',
 		},
@@ -1165,7 +1158,7 @@ thành công mới`,
 			title_color: '#062D29',
 			description_color: '#062D29',
 			background: 'white',
-			// background_image: 'url(' + require('../assets/background/bg5.png') + ')',
+			// background_image: 'url(' + require('!!file-loader!../assets/background/bg5.png') + ')',
 			primary_button_background: 'linear-gradient(73.97deg, #FF9500 0.21%, #FFBF00 100.21%)',
 			primary_button_color: 'white',
 			secondary_button_background: 'unset',
@@ -1205,7 +1198,7 @@ thành công mới`,
 			title_color: '#D01865',
 			description_color: '#000000',
 			background: 'white',
-			// background_image: 'url(' + require('../assets/background/bg5.png') + ')',
+			// background_image: 'url(' + require('!!file-loader!../assets/background/bg5.png') + ')',
 			primary_button_background: 'linear-gradient(79.26deg, #E61A6F 0.21%, #F53D8A 100.21%)',
 			primary_button_color: 'white',
 			secondary_button_background: 'unset',
@@ -1222,7 +1215,7 @@ thành công mới`,
 			input_border_color: '#5F6369',
 		},
 		mobile_appearance: {
-			background_image: 'url(' + require('../assets/background/template26_mobile.png') + ')',
+			background_image: 'url(' + require('!!file-loader!../assets/background/template26_mobile.png') + ')',
 			title_font_size: '48px',
 			description_font_size: '16px',
 		},
@@ -1270,7 +1263,7 @@ thành công mới`,
 			background: 'white',
 			primary_button_background: 'linear-gradient(74.1deg, #5E8D81 0.21%, #3FA684 100%)',
 			primary_button_color: 'white',
-			background_image: 'url(' + require('../assets/background/template18_mobile.png') + ')',
+			background_image: 'url(' + require('!!file-loader!../assets/background/template18_mobile.png') + ')',
 			secondary_button_background: 'transparent',
 			secondary_button_color: 'black',
 			input_color: 'black',
@@ -1299,7 +1292,7 @@ thành công mới`,
 			title_color: '#D01965',
 			description_color: '#000000',
 			background: 'white',
-			// background_image: 'url(' + require('../assets/background/bg5.png') + ')',
+			// background_image: 'url(' + require('!!file-loader!../assets/background/bg5.png') + ')',
 			primary_button_background: 'linear-gradient(79.26deg, #E61A6F 0.21%, #F53D8A 100.21%)',
 			primary_button_color: 'white',
 			secondary_button_background: 'unset',
@@ -1317,7 +1310,7 @@ thành công mới`,
 			input_border_color: '#5F6369',
 		},
 		mobile_appearance: {
-			background_image: 'url(' + require('../assets/background/template27_mobile.png') + ')',
+			background_image: 'url(' + require('!!file-loader!../assets/background/template27_mobile.png') + ')',
 			title_font_size: '48px',
 		},
 	},
@@ -1361,7 +1354,7 @@ thành công mới`,
 			input_border_color: '#8d8d8d80',
 		},
 		mobile_appearance: {
-			background_image: 'url(' + require('../assets/background/template19_mobile.png') + ')',
+			background_image: 'url(' + require('!!file-loader!../assets/background/template19_mobile.png') + ')',
 			title_font_size: '30px',
 			description_font_size: '16px',
 		},
@@ -1383,7 +1376,7 @@ thành công mới`,
 			title_color: '#fff',
 			description_color: '#fff',
 			background: 'white',
-			// background_image: 'url(' + require('../assets/background/bg5.png') + ')',
+			// background_image: 'url(' + require('!!file-loader!../assets/background/bg5.png') + ')',
 			primary_button_background: '#fff',
 			primary_button_color: '#111231',
 			secondary_button_background: 'unset',
@@ -1401,7 +1394,7 @@ thành công mới`,
 		},
 		mobile_appearance: {
 			title_font_size: '48px',
-			background_image: 'url(' + require('../assets/background/template28_mobile.png') + ')',
+			background_image: 'url(' + require('!!file-loader!../assets/background/template28_mobile.png') + ')',
 		},
 	},
 	template202009021: {
@@ -1427,7 +1420,7 @@ thành công mới`,
 			title_color: '#226C92',
 			description_color: '#000',
 			background: 'white',
-			background_image: 'url(' + require('../assets/background/template29_mobile.png') + ')',
+			background_image: 'url(' + require('!!file-loader!../assets/background/template29_mobile.png') + ')',
 
 			primary_button_background: '#226C92',
 			primary_button_color: '#fff',
@@ -1467,7 +1460,7 @@ thành công mới`,
 		desktop_appearance: {
 			title_color: '#FAC571',
 			description_color: '#fff',
-			// background_image: 'url(' + require('../assets/background/bg5.png') + ')',
+			// background_image: 'url(' + require('!!file-loader!../assets/background/bg5.png') + ')',
 			primary_button_background: '#FAC571',
 			primary_button_color: '##4B2C02',
 
@@ -1503,7 +1496,7 @@ thành công mới`,
 			title_color: '#000',
 			description_color: '#000',
 			background: 'white',
-			// background_image: 'url(' + require('../assets/background/bg5.png') + ')',
+			// background_image: 'url(' + require('!!file-loader!../assets/background/bg5.png') + ')',
 			primary_button_background: 'linear-gradient(73.97deg, #CC8066 0.21%, #D99F8C 99.94%)',
 			primary_button_color: '#fff',
 			secondary_button_background: 'unset',
@@ -1520,7 +1513,7 @@ thành công mới`,
 			input_border_color: '#5f6369',
 		},
 		mobile_appearance: {
-			background_image: 'url(' + require('../assets/background/template29_mobile.png') + ')',
+			background_image: 'url(' + require('!!file-loader!../assets/background/template29_mobile.png') + ')',
 		},
 	},
 	template30: {
@@ -1544,7 +1537,7 @@ thành công mới`,
 			title_color: '#000',
 			description_color: '#000',
 			background: 'white',
-			// background_image: 'url(' + require('../assets/background/bg5.png') + ')',
+			// background_image: 'url(' + require('!!file-loader!../assets/background/bg5.png') + ')',
 			primary_button_background: 'linear-gradient(73.97deg, #E61A6F 0.21%, #F53D8A 100.21%)',
 			primary_button_color: '#fff',
 			secondary_button_background: 'unset',
@@ -1560,14 +1553,15 @@ thành công mới`,
 			description_font_family: 'Roboto',
 		},
 		mobile_appearance: {
-			background_image: 'url(' + require('../assets/background/template30_mobile.png') + ')',
+			background_image: 'url(' + require('!!file-loader!../assets/background/template30_mobile.png') + ')',
 		},
 	},
 }
+
 // add default js load function for any template dont has custom template
 Object.keys(meta).map((id) => {
 	if (meta[id].js) return
-	meta[id].desktop_appearance.background_image = 'url(' + require('../assets/background/' + id + '.png') + ')'
+	meta[id].desktop_appearance.background_image = 'url(' + require('!!file-loader!../assets/background/' + id + '.png') + ')'
 
 	if (!meta[id].desktop_appearance.overlay) meta[id].desktop_appearance.overlay = 'rgba(0,0,0,0.8)'
 
@@ -1587,366 +1581,6 @@ Object.keys(meta).map((id) => {
 	if (!meta[id].desktop_appearance.description_font_style) meta[id].desktop_appearance.description_font_style = 'normal'
 
 	if (!meta[id].desktop_appearance.input_border_color) meta[id].desktop_appearance.input_border_color = '#000'
-
-	meta[id].js = () =>
-		Promise.resolve({
-			default: {
-				name: 'subiz-template',
-				props: [
-					'page',
-					'form',
-					'countdown',
-					'primaryButton',
-					'secondaryButton',
-					'closeButton',
-					'frame',
-					'closeAnimation',
-					'select',
-				],
-				render(h) {
-					var cls = 'overlay '
-					if (this.frame) cls += ' overlay--' + this.frame
-					var animation = 'container ' //+ (this.page.animation) + ' ' + this.closeAnimation
-					if (this.closeAnimation) animation += this.closeAnimation
-					else animation += this.page.animation
-
-					let titlecls = 'title'
-					if (this.select === 'title') titlecls += ' text__shake'
-
-					let desccls = 'description'
-					if (this.select === 'description') desccls += ' text__shake'
-
-					//var animation = 'container ' + this.page.animation
-					return (
-						<div class={cls} vOn:click={() => this.$emit('backgroundClick')}>
-							<div class="notch">
-								<div class="notch__camera"></div>
-								<div class="notch__audio"></div>
-							</div>
-							<div class="browser-bar">
-								<div class="button__red"></div>
-								<div class="button__yellow"></div>
-								<div class="button__green"></div>
-								<div class="bar__url"></div>
-							</div>
-							<div class={animation} vOn:click_stop={() => true}>
-								{this.closeButton}
-								<div class="container__inner">
-									<div class="background"></div>
-									<div class="content">
-										<p class={titlecls} vOn:click={(_) => this.$emit('clicked', 'title')}>
-											{this.page.title}
-										</p>
-										<div class="title-separator"></div>
-										<p class={desccls} vOn:click={(_) => this.$emit('clicked', 'description')}>
-											{this.page.description}
-										</p>
-										{this.form}
-										<div class="buttons">
-											{this.primaryButton}
-											{this.secondaryButton}
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					)
-				},
-			},
-		})
 })
 
-let Template = {
-	name: 'Template',
-	props: ['mode', 'template', 'page', 'frame', 'select'],
-	data() {
-		return {
-			Template: null,
-			close: false,
-			templateid: '',
-			pressedSubmit: false,
-			closeAnimation: '',
-		}
-	},
-
-	watch: {
-		async template(template) {
-			this.loadTemplate(template)
-		},
-		close() {
-			// so only us can scroll
-			if (this.close) document.body.classList.remove('sbz_noscroll')
-			else document.body.classList.add('sbz_noscroll')
-		},
-	},
-
-	created() {
-		this.loadTemplate(this.template)
-
-		// so only us can scroll
-		if (this.close) document.body.classList.remove('sbz_noscroll')
-		else document.body.classList.add('sbz_noscroll')
-	},
-
-	methods: {
-		merge(a, b) {
-			a = a || {}
-			b = b || {}
-			var c = {}
-			var keys = Object.keys(a)
-			for (let i = 0; i < keys.length; i++) c[keys[i]] = a[keys[i]]
-			keys = Object.keys(b)
-			for (let i = 0; i < keys.length; i++) {
-				if (b[keys[i]]) c[keys[i]] = b[keys[i]]
-			}
-			return c
-		},
-
-		populatePage(templateid, page) {
-			if (!templateid || !page) return
-			let temp = meta[templateid]
-			var desktop_appearance = this.merge(temp.desktop_appearance, page.desktop_appearance)
-			var mobile_appearance = this.merge(temp.mobile_appearance, page.mobile_appearance)
-
-			// replace file
-			let src = op.get(desktop_appearance, 'background_image', '')
-			src = replaceFileUrl(src)
-			op.set(desktop_appearance, 'background_image', src)
-
-			src = op.get(desktop_appearance, 'background', '')
-			src = replaceFileUrl(src)
-			op.set(desktop_appearance, 'background', src)
-
-			src = op.get(mobile_appearance, 'background', '')
-			src = replaceFileUrl(src)
-			op.set(mobile_appearance, 'background', src)
-
-			src = op.get(mobile_appearance, 'background_image', '')
-			src = replaceFileUrl(src)
-			op.set(mobile_appearance, 'background_image', src)
-
-			var css = replaceCssVariable(CSS, {desktop_appearance, mobile_appearance})
-			common.setCssToHead('subiz-template-style-' + this.template, css)
-		},
-
-		onClose() {
-			this.$emit('closed')
-			setTimeout(() => {
-				this.close = true
-			}, 400)
-			this.closeAnimation = 'bounceOut'
-
-			// reset overflow
-		},
-
-		checkFormFilled() {
-			let form = op.get(this.page, 'form')
-			let hasForm = form && form.enabled && form.fields && form.fields.length > 0
-			if (!hasForm) return true
-
-			for (let i = 0; i < form.fields.length; i++) {
-				let field = form.fields[i]
-				if (field.is_required && (field.value === undefined || field.value === '')) return false
-			}
-
-			return true
-		},
-
-		onSecondaryClick() {
-			this.$emit('clicked', 'secondary_button')
-			this.onButtonClick(op.get(this.page, 'secondary_button'), 'secondaryButtonClicked')
-		},
-
-		onButtonClick(button, ev) {
-			let actions = op.get(button, 'actions') || []
-			let mustfillform = false
-			for (let a of actions) {
-				if (a.action === 'converstion' || a.action === 'submit') {
-					mustfillform = true
-					this.pressedSubmit = true
-				}
-			}
-
-			if (mustfillform && !this.checkFormFilled()) return
-
-			this.$emit(ev)
-
-			for (let a of actions) {
-				if (a.action === 'close') setTimeout(() => this.onClose(), 200)
-			}
-		},
-
-		onBackgroundClick() {
-			this.onButtonClick(op.get(this.page, 'background_click'), 'backgroundClicked')
-		},
-
-		onPrimaryClick() {
-			this.$emit('clicked', 'primary_button')
-			this.onButtonClick(op.get(this.page, 'primary_button'), 'primaryButtonClicked')
-		},
-
-		async loadTemplate(t) {
-			let temp = meta[t]
-			if (!temp) return
-			let template = (await temp.js()).default
-			CSS = (await temp.css()).default
-			this.Template = template
-			this.populatePage(t, this.page)
-		},
-		onClicked(e) {
-			this.$emit('clicked', e)
-		},
-		onClosed(e) {
-			this.$emit('closed', e)
-		},
-	},
-
-	render(h) {
-		if (!this.Template) return null
-		if (this.close) return null
-
-		let $close = <CloseButton vOn:click={this.onClose} />
-		let $primary = null
-		let primaryBtnCls = 'btn btn--primary'
-		if (this.select === 'primary_button') primaryBtnCls += ' text__shake'
-		if (op.get(this.page, 'primary_button.enabled')) {
-			$primary = (
-				<button vOn:click={this.onPrimaryClick} class={primaryBtnCls}>
-					{op.get(this.page, 'primary_button.text')}
-				</button>
-			)
-		}
-
-		let $secondary = null
-		let secondaryBtnCls = 'btn btn--secondary'
-		if (this.select === 'secondary_button') secondaryBtnCls += ' text__shake'
-		if (op.get(this.page, 'secondary_button.enabled')) {
-			$secondary = (
-				<button vOn:click={this.onSecondaryClick} class={secondaryBtnCls}>
-					{op.get(this.page, 'secondary_button.text')}
-				</button>
-			)
-		}
-
-		let $form = <Form vOn:clicked={this.onClicked} form={this.page.form} pressedSubmit={this.pressedSubmit} />
-		var mode = this.mode || MODE
-		return (
-			<div class={'template ' + this.template}>
-				<div class={mode}>
-					<this.Template
-						vOn:clicked={this.onClicked}
-						vOn:closed={this.onClosed}
-						page={this.page}
-						select={this.select}
-						form={$form}
-						primaryButton={$primary}
-						secondaryButton={$secondary}
-						closeButton={$close}
-						frame={this.frame}
-						vOn:backgroundClick={this.onBackgroundClick}
-						closeAnimation={this.closeAnimation}
-					/>
-				</div>
-			</div>
-		)
-	},
-}
-
-// tokenizy(['hello XX andy XX go'], 'XX')
-// => ['hello ', {type: 'XX'},' andy ', {type: 'XX'}, ' go']
-function tokenize(arr, token) {
-	if (!arr || !arr.length) return []
-	var out = []
-
-	for (let i = 0; i < arr.length; i++) {
-		var item = arr[i]
-		if (typeof item !== 'string') {
-			out.push(item)
-			continue
-		}
-		var ts = item.split(token)
-		for (let i = 0; i < ts.length; i++) {
-			out.push(ts[i])
-			out.push({type: token})
-		}
-		out.pop()
-	}
-	return out
-}
-
-function replaceCssVariable(css, page) {
-	// tokenize
-	var tokens = [css]
-	tokens = tokenize(tokens, "'@desktop_appearance.title_color'")
-	tokens = tokenize(tokens, "'@desktop_appearance.description_color'")
-	tokens = tokenize(tokens, "'@desktop_appearance.background'")
-	tokens = tokenize(tokens, "'@desktop_appearance.background_image'")
-	tokens = tokenize(tokens, "'@desktop_appearance.primary_button_background'")
-	tokens = tokenize(tokens, "'@desktop_appearance.primary_button_color'")
-	tokens = tokenize(tokens, "'@desktop_appearance.secondary_button_background'")
-	tokens = tokenize(tokens, "'@desktop_appearance.secondary_button_color'")
-	tokens = tokenize(tokens, "'@desktop_appearance.input_color'")
-	tokens = tokenize(tokens, "'@desktop_appearance.input_background'")
-	tokens = tokenize(tokens, "'@desktop_appearance.overlay'")
-
-	tokens = tokenize(tokens, "'@desktop_appearance.title_font_family'")
-	tokens = tokenize(tokens, "'@desktop_appearance.title_font_size'")
-	tokens = tokenize(tokens, "'@desktop_appearance.title_font_style'")
-	tokens = tokenize(tokens, "'@desktop_appearance.title_font_weight'")
-	tokens = tokenize(tokens, "'@desktop_appearance.title_text_transform'")
-	tokens = tokenize(tokens, "'@desktop_appearance.description_font_family'")
-	tokens = tokenize(tokens, "'@desktop_appearance.description_font_size'")
-	tokens = tokenize(tokens, "'@desktop_appearance.description_font_style'")
-	tokens = tokenize(tokens, "'@desktop_appearance.description_font_weight'")
-	tokens = tokenize(tokens, "'@desktop_appearance.description_text_transform'")
-	tokens = tokenize(tokens, "'@desktop_appearance.input_label_color'")
-	tokens = tokenize(tokens, "'@desktop_appearance.input_border_color'")
-
-	tokens = tokenize(tokens, "'@mobile_appearance.title_color'")
-	tokens = tokenize(tokens, "'@mobile_appearance.description_color'")
-	tokens = tokenize(tokens, "'@mobile_appearance.background'")
-	tokens = tokenize(tokens, "'@mobile_appearance.background_image'")
-	tokens = tokenize(tokens, "'@mobile_appearance.primary_button_background'")
-	tokens = tokenize(tokens, "'@mobile_appearance.primary_button_color'")
-	tokens = tokenize(tokens, "'@mobile_appearance.secondary_button_background'")
-	tokens = tokenize(tokens, "'@mobile_appearance.secondary_button_color'")
-	tokens = tokenize(tokens, "'@mobile_appearance.input_color'")
-	tokens = tokenize(tokens, "'@mobile_appearance.input_background'")
-	tokens = tokenize(tokens, "'@mobile_appearance.overlay'")
-
-	tokens = tokenize(tokens, "'@mobile_appearance.title_font_family'")
-	tokens = tokenize(tokens, "'@mobile_appearance.title_font_size'")
-	tokens = tokenize(tokens, "'@mobile_appearance.title_font_style'")
-	tokens = tokenize(tokens, "'@mobile_appearance.title_font_weight'")
-	tokens = tokenize(tokens, "'@mobile_appearance.title_text_transform'")
-	tokens = tokenize(tokens, "'@mobile_appearance.description_font_family'")
-	tokens = tokenize(tokens, "'@mobile_appearance.description_font_size'")
-	tokens = tokenize(tokens, "'@mobile_appearance.description_font_style'")
-	tokens = tokenize(tokens, "'@mobile_appearance.description_font_weight'")
-	tokens = tokenize(tokens, "'@mobile_appearance.description_text_transform'")
-	tokens = tokenize(tokens, "'@mobile_appearance.input_label_color'")
-	tokens = tokenize(tokens, "'@mobile_appearance.input_border_color'")
-	var ret = []
-	for (var i = 0; i < tokens.length; i++) {
-		var item = tokens[i]
-		if (typeof item === 'string') {
-			ret.push(item)
-			continue
-		}
-
-		// remove @''
-		var path = item.type.substr(2, item.type.length - 3)
-		ret.push(op.get(page, path))
-	}
-	return ret.join('')
-}
-
-function replaceFileUrl(src) {
-	if (!src) return ''
-	src = src.replace('filev4.subiz.com', 'file-subiz.com')
-	src = src.replace('file.subiz.com', 'file-subiz.com')
-	src = src.replace('file.mysubiz.com', 'file-subiz.com')
-	return src
-}
-
-export default {meta, Template}
+export default meta

@@ -1,7 +1,9 @@
-export default {
-	render (h) {
+import { h, Component } from 'preact'
+
+export default class CloseButton extends Component {
+	render () {
 		return (
-			<div class="btn_close btn" vOn:click={(e) => this.$emit('click', e)}>
+			<div class="btn_close btn" onClick={(e) => this.props.onClick(e)}>
 				<svg
 					class="btn_close__icon"
 					xmlns="http://www.w3.org/2000/svg"
@@ -17,5 +19,5 @@ export default {
 				</svg>
 			</div>
 		)
-	},
+	}
 }
