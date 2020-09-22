@@ -1,0 +1,135 @@
+@import './font.less';
+
+#template() {
+	@import './base.less';
+
+	.background {
+		position: absolute;
+		bottom: 30px;
+		left: -30px;
+		height: 100%;
+		width: 50%;
+	}
+
+	.mobile .background {
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	.container {
+		background: #f6f4f5;
+		padding: 10px;
+		width: 800px;
+		max-width: 90%;
+		background-size: auto;
+		box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.1);
+	}
+
+	.mobile .container {
+		padding: 0;
+	}
+
+	.container__inner {
+		overflow: hidden;
+	}
+
+	.mobile .container__inner {
+		max-height: 100%;
+		padding-bottom: 40px;
+		padding-top: 40px;
+		position: relative;
+		padding-left: 20px;
+		padding-right: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	.content {
+		display: flex;
+		flex-direction: column;
+		margin-left: 50%;
+		width: 50%;
+		padding-top: @spacer;
+		padding-bottom: @spacer;
+		max-height: ~'calc(100vh - 155px)';
+		justify-content: center;
+		overflow: hidden;
+	}
+
+	.mobile .content {
+		padding-top: @spacer;
+		padding-bottom: 10px;
+		max-height: ~'calc(100% - 150px)';
+		position: relative; // so the background stay behine it
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		background-color: #fff;
+		margin: 0;
+		width: unset;
+		border: 10px solid #f6f4f5;
+		width: 95%;
+		box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.0196802), 0px 2px 4px rgba(0, 0, 0, 0.03),
+			0px 7px 12px rgba(0, 0, 0, 0.0503198), 0px 18px 28px rgba(0, 0, 0, 0.07);
+	}
+
+	.title {
+		text-align: center;
+		margin-top: 30px;
+		padding-left: @spacer;
+		padding-right: @spacer;
+	}
+
+	.description {
+		text-align: center;
+		padding-left: @spacer;
+		padding-right: @spacer;
+	}
+
+	.label {
+		display: none;
+	}
+
+	.text-input {
+		border: none;
+		border-bottom: 1px solid #8d8d8d80;
+		width: 100%;
+		height: 30px;
+		font-size: 16px;
+		outline: 0;
+		font-family: Roboto;
+	}
+
+	.buttons {
+		display: flex;
+		flex-direction: column;
+		padding-left: @spacer;
+		padding-right: @spacer;
+		margin-top: 35px;
+	}
+
+	.btn.btn--primary {
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		text-align: center;
+		border-radius: 50px;
+	}
+	.mobile .btn.btn--primary {
+		font-size: 16px;
+	}
+
+	.btn.btn--secondary {
+		font-size: 16px;
+		font-weight: 500;
+	}
+	.mobile .btn.btn--secondary {
+		font-size: 13px;
+	}
+}
+
+#sbz-pop .template.template1 {
+	#template() !important;
+}

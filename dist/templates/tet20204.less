@@ -1,0 +1,51 @@
+@import './font.less';
+#template() {
+	@import './base.less';
+	@spacer: 30px;
+
+	.container {
+		width: 375px;
+		position: relative;
+	}
+
+	.desktop .container {
+		width: 720px;
+	}
+
+	.background {
+		height: 667px;
+		display: inline-block;
+		min-width: 100%;
+	}
+
+	.title {
+		position: absolute;
+		width: 240px;
+		left: 400px;
+		top: 461px;
+		text-align: center;
+	}
+	.mobile .title {
+		top: 500px;
+		left: 43px;
+	}
+	.description {
+		line-height: 130%;
+		position: absolute;
+		left: 0;
+		width: 285px;
+		text-align: center;
+		top: 578px;
+	}
+	.mobile .description {
+		top: 560px;
+	}
+	.buttons,
+	.form {
+		display: none;
+	}
+}
+
+#sbz-pop .template.tet20204 {
+	#template() !important;
+}

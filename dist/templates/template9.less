@@ -1,0 +1,124 @@
+@import './font.less';
+#template() {
+	@import './base.less';
+	@spacer: 30px;
+
+	.container {
+		display: flex;
+		max-height: 90%;
+		width: 800px;
+	}
+
+	.mobile .container {
+		max-width: 90%;
+		max-height: 95%;
+		background-color: #fff;
+		max-height: unset;
+	}
+
+	.container__inner {
+		display: flex;
+		max-height: 100%;
+	}
+	.mobile .container__inner {
+		display: flex;
+		flex-direction: column;
+		max-width: 100%;
+	}
+
+	.background {
+		max-height: 100%;
+		width: 400px;
+	}
+	.mobile .background {
+		display: flex;
+		width: 100%;
+		height: 235px;
+	}
+
+	.content {
+		display: flex;
+		flex-direction: column;
+		margin-top: 45px;
+		margin-bottom: 45px;
+		max-width: 50%;
+		max-height: ~'calc(100% - 90px)';
+	}
+	.mobile .content {
+		margin-top: 20px;
+		margin-bottom: 20px;
+		max-width: 100%;
+	}
+	.title {
+		margin-top: 25px;
+		padding-left: @spacer;
+		padding-right: @spacer;
+		margin: unset;
+	}
+	.description {
+		line-height: 25px;
+		padding-left: @spacer;
+		padding-right: @spacer;
+	}
+	.form {
+		padding-left: @spacer;
+		padding-right: @spacer;
+	}
+	.form-template {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.form-item {
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+		margin-top: 15px;
+	}
+	.label {
+		display: none;
+	}
+	.textarea {
+		border: 1px solid @input_border_color;
+		border-radius: 3px;
+		width: 98%;
+		outline: 0;
+	}
+	.text-input {
+		border: 1px solid @input_border_color;
+		width: 98%;
+		height: 30px;
+		font-size: 13px;
+		outline: 0;
+		padding-left: 10px;
+		font-family: 'Muli';
+	}
+	.buttons {
+		display: flex;
+		padding-left: @spacer;
+		padding-right: @spacer;
+		margin-top: 35px;
+		flex-direction: column;
+	}
+
+	.btn--primary {
+		font-size: 16px;
+		text-transform: uppercase;
+		cursor: pointer;
+		outline: 0;
+		width: 100%;
+	}
+
+	.btn--secondary {
+		font-size: 16px;
+		margin-top: 10px;
+		margin-left: 0px;
+		text-transform: uppercase;
+		cursor: pointer;
+		outline: 0;
+		width: 100%;
+	}
+}
+#sbz-pop .template.template9 {
+	#template() !important;
+}

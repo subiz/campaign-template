@@ -1,0 +1,71 @@
+@import './font.less';
+@spacer: 20px;
+#template() {
+	@import './base.less';
+
+	.container {
+		width: 470px;
+		max-width: 100%;
+		max-height: 100%;
+		display: flex;
+		flex-direction: column;
+		padding-top: 10px;
+		align-items: center;
+	}
+
+	.form {
+		display: none;
+	}
+
+	.title {
+		margin-top: 46px;
+		line-height: 44px;
+		text-align: center;
+		padding-left: @spacer;
+		padding-right: @spacer;
+		min-width: 100%;
+		display: block;
+	}
+	.description {
+		margin-top: 6px;
+		line-height: 30px;
+		text-align: center;
+		padding-left: @spacer;
+		padding-right: @spacer;
+		min-width: 100%;
+		display: block;
+	}
+	.buttons {
+		margin-top: 36px;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 30px;
+	}
+	.btn.btn--primary {
+		font-style: normal;
+		font-weight: normal;
+		font-size: 16px;
+		text-align: center;
+		margin-right: @spacer;
+	}
+	.mobile .btn.btn--primary {
+		font-size: 16px;
+	}
+
+	.btn.btn--secondary {
+		font-size: 16px;
+		font-weight: 500;
+	}
+	.mobile .btn.btn--secondary {
+		font-size: 13px;
+	}
+	.mobile .container {
+		width: 90%;
+	}
+}
+
+#sbz-pop .template.templateThanks {
+	#template() !important;
+}

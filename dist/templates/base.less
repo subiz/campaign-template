@@ -1,0 +1,460 @@
+@overlay                             : '@desktop_appearance.overlay';
+@title_color                         : '@desktop_appearance.title_color';
+@description_color                   : '@desktop_appearance.description_color';
+@background                          : '@desktop_appearance.background';
+@background_image                    : '@desktop_appearance.background_image';
+@primary_button_background           : '@desktop_appearance.primary_button_background';
+@primary_button_color                : '@desktop_appearance.primary_button_color';
+@secondary_button_background         : '@desktop_appearance.secondary_button_background';
+@secondary_button_color              : '@desktop_appearance.secondary_button_color';
+@input_color                         : '@desktop_appearance.input_color';
+@input_background                    : '@desktop_appearance.input_background';
+@title_font_family                   : '@desktop_appearance.title_font_family';
+@title_font_size                     : '@desktop_appearance.title_font_size';
+@title_font_style                    : '@desktop_appearance.title_font_style';
+@title_font_weight                   : '@desktop_appearance.title_font_weight';
+@title_text_transform                : '@desktop_appearance.title_text_transform';
+@description_font_family             : '@desktop_appearance.description_font_family';
+@description_font_size               : '@desktop_appearance.description_font_size';
+@description_font_style              : '@desktop_appearance.description_font_style';
+@description_font_weight             : '@desktop_appearance.description_font_weight';
+@description_text_transform          : '@desktop_appearance.description_text_transform';
+@input_label_color                   : '@desktop_appearance.input_label_color';
+@input_border_color                  : '@desktop_appearance.input_border_color';
+// mobile
+@mobile_overlay                      : '@mobile_appearance.overlay';
+@mobile_title_color                  : '@mobile_appearance.title_color';
+@mobile_description_color            : '@mobile_appearance.description_color';
+@mobile_background                   : '@mobile_appearance.background';
+@mobile_background_image             : '@mobile_appearance.background_image';
+@mobile_primary_button_background    : '@mobile_appearance.primary_button_background';
+@mobile_primary_button_color         : '@mobile_appearance.primary_button_color';
+@mobile_secondary_button_background  : '@mobile_appearance.secondary_button_background';
+@mobile_secondary_button_color       : '@mobile_appearance.secondary_button_color';
+@mobile_input_color                  : '@mobile_appearance.input_color';
+@mobile_input_background             : '@mobile_appearance.input_background';
+@mobile_title_font_family            : '@mobile_appearance.title_font_family';
+@mobile_title_font_size              : '@mobile_appearance.title_font_size';
+@mobile_title_font_style             : '@mobile_appearance.title_font_style';
+@mobile_title_font_weight            : '@mobile_appearance.title_font_weight';
+@mobile_title_text_transform         : '@mobile_appearance.title_text_transform';
+@mobile_description_font_family      : '@mobile_appearance.description_font_family';
+@mobile_description_font_size        : '@mobile_appearance.description_font_size';
+@mobile_description_font_style       : '@mobile_appearance.description_font_style';
+@mobile_description_font_weight      : '@mobile_appearance.description_font_weight';
+@mobile_description_text_transform   : '@mobile_appearance.description_text_transform';
+@mobile_input_label_color            : '@mobile_appearance.input_label_color';
+@mobile_input_border_color           : '@mobile_appearance.input_border_color';
+
+@spacer                              : 35px;
+
+@import "../node_modules/normalize.css/normalize.css";
+@import './animate.less';
+@import './_checkbox.less';
+@import './_scrollbar.less';
+
+.color (@color) {
+	color: @color;
+	-webkit-text-fill-color: @color;
+}
+
+.content (@heightImg) {
+	display: flex;
+	flex-direction: column;
+	max-height: ~"calc(100% - @{heightImg})";
+}
+
+.heightContainer(@height){
+	max-height: @height;
+	display: flex;
+}
+
+// reset
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+div {
+	display: block;
+}
+
+input {
+	display: inline-block;
+}
+
+.overlay {
+	// must change to absolute so we can display in a box inside dashboard editor
+	// widget will override this to be 'fixex'
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background: #000c; //@overlay;
+	z-index: 20000000000100;
+  overflow: auto;
+	display: flex; // so .container's margin auto can work
+}
+
+.overlay--iphone {
+	border: solid 5px #000000;
+	border-radius: 30px;
+}
+
+.notch{display: none;}
+
+.overlay--iphone .notch {
+	position: absolute;
+	z-index: 10;
+	top: -5px;
+	height: 30px;
+	background-color: #000000;
+	border-bottom-left-radius: 30px;
+	border-bottom-right-radius: 30px;
+	width: 200px;
+	display: flex;
+	align-items: center;
+	justify-content:center;
+}
+
+.notch__camera{
+	position: absolute;
+	left: 20px;
+	height: 10px;
+	width: 10px;
+	border-radius: 10px;
+	background-color: white;
+}
+
+.notch__audio {
+	height: 10px;
+	width: 40%;
+	border-radius: 5px;
+	background-color: white;
+}
+
+.mobile .overlay {
+	background: @mobile_overlay;
+}
+
+.title {
+	.color(@title_color);
+	white-space: pre-wrap;
+	text-transform: @title_text_transform;
+	font-family: @title_font_family;
+	font-size: @title_font_size;
+	font-style: @title_font_style;
+	font-weight: @title_font_weight;
+}
+
+.mobile .title {
+	.color(@mobile_title_color);
+	text-transform: @mobile_title_text_transform;
+	font-family: @mobile_title_font_family;
+	font-size: @mobile_title_font_size;
+	font-style: @mobile_title_font_style;
+	font-weight: @mobile_title_font_weight;
+}
+
+.description {
+	.color(@description_color);
+	white-space: pre-wrap;
+	text-transform: @description_text_transform;
+	font-family: @description_font_family;
+	font-size: @description_font_size;
+	font-style: @description_font_style;
+	font-weight: @description_font_weight;
+}
+
+.mobile .description {
+	.color(@mobile_description_color);
+	text-transform: @mobile_description_text_transform;
+	font-family: @mobile_description_font_family;
+	font-size: @mobile_description_font_size;
+	font-style: @mobile_description_font_style;
+	font-weight: @mobile_description_font_weight;
+}
+
+.container {
+	background: @background;
+	margin: auto; // CAUTION: do not override container margin or it won't centering anymore
+	position: relative;
+	max-height: 100%;
+}
+
+.mobile .container {
+	background: @mobile_background;
+	max-height: unset;
+}
+
+.container__inner {
+	background: @background;
+	width: 100%;
+}
+
+.mobile .container__inner {
+	background: @mobile_background;
+}
+
+.background {
+	background: @background;
+	background-image: @background_image;
+
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.mobile .background {
+	background: @mobile_background;
+	background-image: @mobile_background_image;
+}
+
+.btn.btn_close {
+	z-index: 10;
+	position: absolute;
+	right: 10px;
+	top: 10px;
+	height: 30px;
+	width: 30px;
+	border-radius: 50%;
+	background-color: rgba(0, 0, 0, 0.3);
+	cursor: pointer;
+	transition: background-color 0.2s;
+
+	&:hover	{
+		transition: background-color 0.2s;
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+}
+
+.btn_close__icon{
+	height: 20px;
+	width: 20px;
+	border: 0px;
+	stroke: #fff;
+	margin: 5px auto
+}
+
+.form {
+	overflow: auto;
+	padding-left: @spacer;
+	padding-right: @spacer;
+	min-height: 100px;
+}
+
+.mobile .form {
+	flex-shrink: 0;
+}
+
+.buttons {
+	display: flex;
+	flex-shrink: 0;
+	padding-left: @spacer;
+	padding-right:@spacer;
+	margin-top: 30px;
+	align-items: center;
+	justify-content: center;
+	margin: unset;
+	margin-top: @spacer;
+	overflow: hidden;
+}
+
+.btn {
+	cursor: pointer;
+	outline: 0;
+	font-family: 'Roboto';
+	border: 0px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	border-radius: 5px;
+	overflow: hidden;
+	text-align: center;
+}
+
+.btn.btn--primary {
+	background: @primary_button_background;
+	.color(@primary_button_color);
+
+	padding-left: 22px;
+	padding-right: 22px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+}
+
+.mobile .btn.btn--primary {
+	background: @mobile_primary_button_background;
+	.color(@mobile_primary_button_color);
+}
+
+.btn.btn--secondary {
+	background: @secondary_button_background;
+	.color(@secondary_button_color);
+
+	padding-left: 22px;
+	padding-right: 22px;
+	padding-top: 12px;
+	padding-bottom: 12px;
+}
+
+.mobile .btn.btn--secondary {
+	background: @mobile_secondary_button_background;
+	.color(@mobile_secondary_button_color);
+}
+
+.form-field {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	margin-top: 15px;
+}
+
+.radio {
+	display: block;
+	position: relative;
+	width: 100%;
+	height: 25px;
+	margin-top: 5px;
+}
+
+input[type=radio]{
+	position: absolute;
+	visibility: hidden;
+}
+
+.radio--label {
+	padding-left: 27px;
+	display: block;
+	position: relative;
+	z-index: 9;
+	cursor: pointer;
+	.color(@input_color);
+}
+
+.mobile .radio--label {
+	.color(@mobile_input_color);
+}
+
+.radio--check {
+	display: block;
+	position: absolute;
+	border: 1px solid #aaa;
+	border-radius: 100%;
+	height: 20px;
+	width: 20px;
+	top: 0px;
+	left: 0px;
+	z-index: 5;
+}
+
+.radio--check:hover {
+	border: 2px solid #888;
+}
+
+.radio--check::before {
+	display: block;
+	position: absolute;
+	content: '';
+	border-radius: 100%;
+	height: 12px;
+	width: 12px;
+	top: 2px;
+	left: 2px;
+	margin: auto;
+}
+
+input[type=radio]:checked ~ .radio--check {
+	border: 2px solid @input_border_color; // #0265ff;
+}
+
+.mobile input[type=radio]:checked ~ .radio--check {
+	border: 2px solid @mobile_input_border_color; // #0265ff;
+}
+
+input[type=radio]:checked ~ .radio--check::before {
+	background-color: @input_border_color; //  #0265ff;
+}
+
+.mobile input[type=radio]:checked ~ .radio--check::before {
+	background-color: @mobile_input_border_color; //  #0265ff;
+}
+
+input {
+	background: @input_background;
+	.color(@input_color);
+}
+
+.mobile input {
+	background: @mobile_input_background;
+	.color(@mobile_input_color);
+}
+
+.text-input::placeholder{
+	.color(@input_color);
+	opacity: 0.5;
+}
+
+.text-input.text-input--error {
+	border-color: #eb1000 ;
+}
+.text-input.text-input--error::placeholder {
+	.color(#eb1000)
+}
+
+.textarea.textarea--error{
+	border-color: #eb1000 ;
+}
+.textarea.text-input--error::placeholder {
+	.color(#eb1000)
+}
+
+.mobile .text-input::placeholder{
+	.color(@mobile_input_color);
+	opacity: 0.3;
+}
+
+.textarea {
+	margin-top: 5px;
+	height: 70px;
+	font-size: 14px;
+	font-family: 'Roboto';
+	padding-top: 5px;
+	padding-left: 8px;
+}
+
+.textarea::placeholder {
+	.color(@input_color);
+	opacity: 0.5;
+}
+
+.mobile .textarea::placeholder {
+	.color(@input_color);
+	opacity: 0.3;
+}
+
+.form--list-container {
+	margin-top: 15px;
+}
+
+.label {
+	font-family: 'Muli';
+	font-size: 12px;
+	.color(#000);
+	margin-top:unset;
+}
+
+.text__shake {
+  animation: 2s shake normal forwards;
+}
+
+@keyframes shake {
+  0% { transform: skewX(-15deg); }
+  5% { transform: skewX(15deg); }
+  10% { transform: skewX(-15deg); }
+  15% { transform: skewX(15deg); }
+  20% { transform: skewX(0deg); }
+  100% { transform: skewX(0deg); }
+}

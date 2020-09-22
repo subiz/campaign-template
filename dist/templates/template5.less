@@ -1,0 +1,164 @@
+@import './font.less';
+#template() {
+	@import './base.less';
+	@spacer: 30px;
+
+	.overlay.overlay--browser {
+		height: 100%;
+	}
+	.container {
+		width: 100%;
+		height: 100vh;
+	}
+	.mobile .container {
+		max-height: unset;
+	}
+
+	.container__inner {
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		align-items: center;
+	}
+	.background {
+		width: 100%;
+		height: 100vh;
+		position: relative;
+		z-index: 1;
+	}
+	.mobile .background {
+		position: absolute;
+		// top: 0;
+		right: 0;
+		left: 0;
+		// bottom: 0;
+		// height: ;
+	}
+	.content {
+		max-height: 100%;
+		padding-left: 20px;
+		padding-right: 20px;
+		position: absolute;
+		z-index: 2;
+		top: 0;
+		left: 0;
+		height: 100%;
+		display: flex;
+		width: 50%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 30px 0;
+	}
+	.mobile .content {
+		width: 100%;
+		justify-content: flex-start;
+		padding-top: 10px;
+	}
+	.form {
+		width: 100%;
+	}
+	.mobile .form {
+		width: 90%;
+		padding: unset;
+	}
+	.title {
+		margin-top: 70px;
+		margin-bottom: 30px;
+		// width: 639px;
+		text-align: center;
+		margin-bottom: 10px;
+		text-align: center;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.mobile .title {
+		width: 307px;
+		line-height: 35px;
+	}
+
+	.description {
+		line-height: 30px;
+		margin-bottom: 23px;
+		text-align: center;
+		padding-left: 25px;
+		padding-right: 25px;
+	}
+	.mobile .description {
+		font-size: 16px;
+		line-height: 30px;
+		width: 284px;
+	}
+
+	.form-field {
+		width: 100%;
+		margin-top: 11px;
+
+		.label {
+			display: none;
+		}
+
+		input[type='text'] {
+			border-radius: 50px;
+			padding: 0 30px;
+			border: none;
+			outline: 0;
+			font-size: 18px;
+			display: block;
+			height: 50px;
+		}
+		.form--list-container label {
+			display: initial;
+		}
+	}
+
+	.mobile .form-field {
+		width: 335px;
+		input {
+			font-size: 16px;
+		}
+	}
+
+	.buttons {
+		flex-direction: column;
+		margin-top: 11px;
+		padding: 0;
+		padding-left: 30px;
+		padding-right: 30px;
+		width: 100%;
+		.btn.btn--primary,
+		.btn.btn--secondary {
+			width: 100%;
+			border-radius: 50px;
+			height: 50px;
+			font-size: 18px;
+			line-height: 24px;
+		}
+
+		.btn.btn--secondary {
+			width: 100%;
+			margin-top: 11px;
+			margin-left: 0px;
+		}
+	}
+	.mobile .buttons {
+		margin-top: 20px;
+
+		.btn.btn--primary,
+		.btn.btn--secondary {
+			width: 335px;
+			height: 45px;
+		}
+		.btn.btn--secondary {
+			margin-top: 10px;
+		}
+	}
+	.mobile .btn.btn-close {
+		top: 65px;
+	}
+}
+
+#sbz-pop .template.template5 {
+	#template() !important;
+}
