@@ -1,13 +1,6 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
-	entry: ['./index.js'],
-	output: {
-		path: __dirname + '/dist',
-		library: 'camtem',
-		libraryTarget: 'umd',
-		filename: 'lib.js',
-	},
 	plugins: [
 		// uncomment the following line to run bundle analysis
 		// new (require('webpack-bundle-analyzer').BundleAnalyzerPlugin)(),
