@@ -1,31 +1,29 @@
 import Form from './components/Form.js'
 import CloseButton from './components/CloseButton.js'
 import { render, h, Component } from 'preact'
-
 var op = require('object-path')
-
 import meta from './templates/meta.js'
-
 const MODE = mobilecheck() ? 'mobile' : 'desktop'
-var CSS = ''
 
-// subiz-template
-// props: ['page','form','primaryButton','secondaryButton','closeButton','frame','closeAnimation','select'],
-
-// props: ['mode', 'template', 'page', 'frame', 'select'],
+// props: ['mode', 'template', 'page', 'frame', 'select', 'reset'],
 class Template extends Component {
 	setClose (close) {
-		this.setState({ close: close })
 		// so only us can scroll
-		if (close) document.body.classList.remove('sbz_noscroll')
-		else document.body.classList.add('sbz_noscroll')
+		if (close) {
+			this.setState({ closeAnimation: 'bounceOut' })
+			setTimeout(() => {
+				this.setState({ close: true, closeAnimation: '' })
+				document.body.classList.remove('sbz_noscroll')
+			}, 400)
+		} else {
+			this.setState({ closeAnimation: '' })
+			document.body.classList.add('sbz_noscroll')
+		}
 	}
 
 	onClose () {
 		this.props.onClose()
-		setTimeout(() => this.setClose(true), 400)
-		this.setState({ closeAnimation: 'bounceOut' })
-		// reset overflow
+		this.setClose(true)
 	}
 
 	onSecondaryClick () {
@@ -44,9 +42,6 @@ class Template extends Component {
 		}
 
 		if (mustfillform && !formFilled(op.get(this.props.page, 'form'))) return
-
-		// this.$emit(ev)
-
 		for (let a of actions) {
 			if (a.action === 'close') setTimeout(() => this.onClose(), 200)
 		}
@@ -67,24 +62,22 @@ class Template extends Component {
 		let temp = meta[this.props.template]
 		if (!temp) return
 		setTimeout(() => {
-			temp.css().then(mod => {
-				CSS = mod.default
-				populatePage(this.props.template, this.props.page)
+			temp.css().then((mod) => {
+				populatePage(this.props.template, this.props.page, mod.default)
 				this.forceUpdate()
 			})
 		})
 	}
 
 	componentDidMount () {
-		this.setClose(false)
+		this.setClose(false) // auto open when created
 	}
 
 	render () {
 		this.loadTemplate()
-
 		if (this.state.close) return null
 
-		let $close = <CloseButton onClick={this.onClose} />
+		let $close = <CloseButton onClick={(e) => this.onClose(e)} />
 		let $primary = null
 		let primaryBtnCls = 'btn btn--primary'
 		if (this.props.select === 'primary_button') primaryBtnCls += ' text__shake'
@@ -113,7 +106,7 @@ class Template extends Component {
 		var cls = 'overlay '
 		if (this.props.frame) cls += ' overlay--' + this.props.frame
 		var animation = 'container ' //+ (this.props.page.animation) + ' ' + this.closeAnimation
-		if (this.props.closeAnimation) animation += this.props.closeAnimation
+		if (this.state.closeAnimation) animation += this.state.closeAnimation
 		else animation += this.props.page.animation
 
 		let titlecls = 'title'
@@ -286,7 +279,7 @@ function formFilled (form) {
 	return true
 }
 
-function populatePage (templateid, page) {
+function populatePage (templateid, page, CSS) {
 	if (!templateid || !page) return
 	let temp = meta[templateid]
 	var desktop_appearance = merge(temp.desktop_appearance, page.desktop_appearance)
@@ -344,20 +337,40 @@ function setCssToHead (id, css) {
 	}
 }
 
-window.CamTemp = {
+let CampTemp = {
 	meta: meta,
 	New: () => {
+		// cache
+		let my_ele = null // last element to render
+		let my_option = null
+
 		return {
+			reset () {
+				render(<div></div>, my_ele)
+				this.forceUpdate()
+			},
+			forceUpdate () {
+				return this.render(my_ele, my_option)
+			},
+
+			// ele: element to render to
 			render (ele, option) {
 				if (typeof ele === 'string') ele = document.querySelector(ele)
-				// 					key={this.i}
+				if (!ele) return
+
+				my_ele = ele
+				my_option = option
+				let onclick = option.onClick || (() => true)
+				let onclose = option.onClose || (() => true)
 				return render(
 					<Template
 						template={option.template}
 						page={option.page}
-						select="secondary_button"
-						onClick={() => true}
-						onClose={() => true}
+						select={option.select}
+						onClick={onclick}
+						onClose={onclose}
+						mode={option.mode}
+						frame={option.frame}
 					/>,
 					ele,
 				)
@@ -366,4 +379,7 @@ window.CamTemp = {
 	},
 }
 
-export default CamTemp
+// for debugging only
+window.__CamTemp = CampTemp
+
+export default CampTemp

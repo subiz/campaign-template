@@ -47,7 +47,7 @@
 
 				let template = document.location.hash.substr(1)
 				if (!template) template = 'template1'
-				var metadata = CamTemp.meta[template].text
+				var metadata = window.__CamTemp.meta[template].text
 				if (!_.get(page, 'title')) _.set(page, 'title', _.get(metadata, 'title.vi'))
 				if (!_.get(page, 'description')) _.set(page, 'description', _.get(metadata, 'description.vi'))
 				if (!_.get(page, 'primary_button.text')) {
@@ -57,27 +57,29 @@
 					_.set(page, 'secondary_button.text', _.get(metadata, 'secondary_button.vi'))
 				}
 
-				let onClicked = (e) => {
-					console.log('click', e)
-				}
+				let onClicked = (e) => console.log('click', e)
 
-				let onClosed = () => {
-					console.log('closed')
-					setTimeout(() => {
-						i++
-					}, 2000)
-					// how to reset?
-					camtemp.update()
-				}
+				let onClosed = () => setTimeout(() => camtemp.reset(), 2000)
 
-				let camtemp = CamTemp.New()
+				let camtemp = window.__CamTemp.New()
 				camtemp.render('#sbz-pop', {
 					template: template,
 					page: page,
 					select: 'secondary_button',
-					onClicke: onClicked,
+					onClick: onClicked,
 					onClose: onClosed,
 				})
+
+				setTimeout( () => {
+					camtemp.render('#sbz-pop', {
+						template: template,
+						page: page,
+						select: 'primary_button',
+						onClick: onClicked,
+						onClose: onClosed,
+					})
+
+				}, 2000)
 			}
 			window.onhashchange = load
 			load()
