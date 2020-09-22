@@ -1747,7 +1747,11 @@ thành công mới`
 };
 Object.keys(meta).map(id => {
   if (meta[id].js) return;
-  meta[id].desktop_appearance.background_image = 'url(' + require('../../assets/background/' + id + '.png') + ')';
+
+  let img = require('../../assets/background/' + id + '.png');
+
+  if (img.default) img = img.default;
+  meta[id].desktop_appearance.background_image = 'url(' + img + ')';
   if (!meta[id].desktop_appearance.overlay) meta[id].desktop_appearance.overlay = 'rgba(0,0,0,0.8)';
   if (!meta[id].desktop_appearance.title_text_transform) meta[id].desktop_appearance.title_text_transform = 'none';
   if (!meta[id].desktop_appearance.title_font_family) meta[id].desktop_appearance.title_font_family = 'Roboto';

@@ -112,7 +112,7 @@ class Template extends Component {
     }
 
     let $form = h(Form, {
-      onClick: this.onClick,
+      onClick: this.props.onClick,
       form: this.props.page.form,
       pressedSubmit: this.state.pressedSubmit
     });
@@ -408,5 +408,4 @@ function copy(a) {
   return JSON.parse(JSON.stringify(a));
 }
 
-window.__CamTemp = CampTemp;
 export default CampTemp;
