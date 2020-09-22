@@ -82,7 +82,47 @@ let meta = {
 			description_front_size: '16px',
 		},
 	},
+	template2: {
+		css: () =>
+			import(/*webpackChunkName: "template2_css" */ '!to-string-loader!css-loader!less-loader!./template2.less'),
+		type: 'modal',
+		text: {
+			name: {vi: 'Mẫu 2: Hỏi thông tin', en: 'Template 2: Ask information'},
+			title: {
+				vi: 'Đăng ký để nhận ưu đãi đặc biệt',
+				en: 'Sign up to get special offer',
+			},
+			description: {
+				vi: 'Giảm 20% chỉ một ngày duy nhất. Đăng ký ngay để nhận được mã giảm giá!',
+				en: 'Get 20% off your first order. Sign up now!',
+			},
+			primary_button: {vi: 'Đăng ký ngay', en: 'Sign up now'},
+			secondary_button: {vi: 'Bỏ qua', en: 'Cancel'},
+		},
+		desktop_appearance: {
+			title_color: 'black',
+			description_color: 'black',
+			background: 'white',
+			primary_button_background: '#FDAD15',
+			primary_button_color: 'white',
+			secondary_button_background: '#777',
+			secondary_button_color: 'white',
+			input_color: '',
+			input_background: '',
 
+			title_font_size: '35px',
+			title_font_weight: '700',
+			title_font_family: 'Montserrat',
+
+			description_font_size: '18px',
+			description_font_family: 'Muli',
+
+			input_border_color: '#d9d9d9',
+		},
+		mobile_appearance: {
+			title_font_size: '28px',
+		},
+	},
 	template3: {
 		css: () =>
 			import(/*webpackChunkName: "template3_css" */ '!to-string-loader!css-loader!less-loader!./template3.less'),
@@ -197,7 +237,7 @@ let meta = {
 			description_font_family: 'Muli',
 		},
 		mobile_appearance: {
-			background_image: 'url(' + require('../assets/background/bg5_mobile.png').default + ')',
+			background_image: 'url(' + require('../../assets/background/bg5_mobile.png').default + ')',
 			title_font_size: '28px',
 			description_font_size: '16px',
 		},
@@ -241,7 +281,7 @@ let meta = {
 			title_color: '#fff',
 			description_color: '#fff',
 			background: 'white',
-			background_image: 'url(' + require('../assets/background/template6_mobile.png').default + ')',
+			background_image: 'url(' + require('../../assets/background/template6_mobile.png').default + ')',
 			primary_button_background: '#dab86a',
 			primary_button_color: 'white',
 			secondary_button_background: '#777',
@@ -405,7 +445,7 @@ let meta = {
 			input_border_color: '#ddd',
 		},
 		mobile_appearance: {
-			background_image: 'url(' + require('../assets/background/template21_mobile.png').default + ')',
+			background_image: 'url(' + require('../../assets/background/template21_mobile.png').default + ')',
 			description_font_size: '16px',
 		},
 	},
@@ -446,7 +486,7 @@ let meta = {
 			input_border_color: '#ddd',
 		},
 		mobile_appearance: {
-			background_image: 'url(' + require('../assets/background/template22_mobile.png').default + ')',
+			background_image: 'url(' + require('../../assets/background/template22_mobile.png').default + ')',
 			title_font_size: '37px',
 		},
 	},
@@ -487,7 +527,7 @@ let meta = {
 			description_font_size: '24px',
 		},
 		mobile_appearance: {
-			background_image: 'url(' + require('../assets/background/template23_mobile.png').default + ')',
+			background_image: 'url(' + require('../../assets/background/template23_mobile.png').default + ')',
 			title_font_size: '37px',
 			description_font_size: '24px',
 		},
@@ -528,7 +568,7 @@ let meta = {
 			input_border_color: '#996699',
 		},
 		mobile_appearance: {
-			background_image: 'url(' + require('../assets/background/template24_mobile.png').default + ')',
+			background_image: 'url(' + require('../../assets/background/template24_mobile.png').default + ')',
 			description_font_size: '14px',
 		},
 	},
@@ -565,7 +605,7 @@ let meta = {
 			description_font_size: '20px',
 		},
 		mobile_appearance: {
-			background_image: 'url(' + require('../assets/background/tet20201_mobile.png').default + ')',
+			background_image: 'url(' + require('../../assets/background/tet20201_mobile.png').default + ')',
 		},
 	},
 	tet20202: {
@@ -599,7 +639,7 @@ let meta = {
 			description_font_size: '20px',
 		},
 		mobile_appearance: {
-			background_image: 'url(' + require('../assets/background/tet20202_mobile.png').default + ')',
+			background_image: 'url(' + require('../../assets/background/tet20202_mobile.png').default + ')',
 		},
 	},
 	tet20203: {
@@ -920,7 +960,7 @@ thành công mới`,
 			description_font_family: 'Muli',
 		},
 		mobile_appearance: {
-			background_image: 'url(' + require('../assets/background/templateu23_mobile.png').default + ')',
+			background_image: 'url(' + require('../../assets/background/templateu23_mobile.png').default + ')',
 		},
 	},
 	template16: {
@@ -997,7 +1037,7 @@ thành công mới`,
 			input_border_color: '#fff',
 		},
 		mobile_appearance: {
-			background_image: 'url(' + require('../assets/background/template39_mobile.png').default + ')',
+			background_image: 'url(' + require('../../assets/background/template39_mobile.png').default + ')',
 		},
 	},
 	template39: {
@@ -1039,7 +1079,7 @@ thành công mới`,
 			description_font_family: 'Muli',
 		},
 		mobile_appearance: {
-			background_image: 'url(' + require('../assets/background/template39_mobile.png').default + ')',
+			background_image: 'url(' + require('../../assets/background/template39_mobile.png').default + ')',
 			description_font_size: '16px',
 			title_font_size: '28px',
 		},
@@ -1162,7 +1202,7 @@ thành công mới`,
 			input_border_color: '#5F6369',
 		},
 		mobile_appearance: {
-			background_image: 'url(' + require('../assets/background/template26_mobile.png').default + ')',
+			background_image: 'url(' + require('../../assets/background/template26_mobile.png').default + ')',
 			title_font_size: '48px',
 			description_font_size: '16px',
 		},
@@ -1210,7 +1250,7 @@ thành công mới`,
 			background: 'white',
 			primary_button_background: 'linear-gradient(74.1deg, #5E8D81 0.21%, #3FA684 100%)',
 			primary_button_color: 'white',
-			background_image: 'url(' + require('../assets/background/template18_mobile.png').default + ')',
+			background_image: 'url(' + require('../../assets/background/template18_mobile.png').default + ')',
 			secondary_button_background: 'transparent',
 			secondary_button_color: 'black',
 			input_color: 'black',
@@ -1256,7 +1296,7 @@ thành công mới`,
 			input_border_color: '#5F6369',
 		},
 		mobile_appearance: {
-			background_image: 'url(' + require('../assets/background/template27_mobile.png').default + ')',
+			background_image: 'url(' + require('../../assets/background/template27_mobile.png').default + ')',
 			title_font_size: '48px',
 		},
 	},
@@ -1300,7 +1340,7 @@ thành công mới`,
 			input_border_color: '#8d8d8d80',
 		},
 		mobile_appearance: {
-			background_image: 'url(' + require('../assets/background/template19_mobile.png').default + ')',
+			background_image: 'url(' + require('../../assets/background/template19_mobile.png').default + ')',
 			title_font_size: '30px',
 			description_font_size: '16px',
 		},
@@ -1339,7 +1379,7 @@ thành công mới`,
 		},
 		mobile_appearance: {
 			title_font_size: '48px',
-			background_image: 'url(' + require('../assets/background/template28_mobile.png').default + ')',
+			background_image: 'url(' + require('../../assets/background/template28_mobile.png').default + ')',
 		},
 	},
 	template202009021: {
@@ -1365,7 +1405,7 @@ thành công mới`,
 			title_color: '#226C92',
 			description_color: '#000',
 			background: 'white',
-			background_image: 'url(' + require('../assets/background/template29_mobile.png').default + ')',
+			background_image: 'url(' + require('../../assets/background/template29_mobile.png').default + ')',
 
 			primary_button_background: '#226C92',
 			primary_button_color: '#fff',
@@ -1456,7 +1496,7 @@ thành công mới`,
 			input_border_color: '#5f6369',
 		},
 		mobile_appearance: {
-			background_image: 'url(' + require('../assets/background/template29_mobile.png').default + ')',
+			background_image: 'url(' + require('../../assets/background/template29_mobile.png').default + ')',
 		},
 	},
 	template30: {
@@ -1495,7 +1535,7 @@ thành công mới`,
 			description_font_family: 'Roboto',
 		},
 		mobile_appearance: {
-			background_image: 'url(' + require('../assets/background/template30_mobile.png').default + ')',
+			background_image: 'url(' + require('../../assets/background/template30_mobile.png').default + ')',
 		},
 	},
 }
@@ -1504,7 +1544,8 @@ thành công mới`,
 Object.keys(meta).map((id) => {
 	if (meta[id].js) return
 
-	meta[id].desktop_appearance.background_image = 'url(' + require('../assets/background/' + id + '.png').default + ')'
+	meta[id].desktop_appearance.background_image =
+		'url(' + require('../../assets/background/' + id + '.png').default + ')'
 
 	if (!meta[id].desktop_appearance.overlay) meta[id].desktop_appearance.overlay = 'rgba(0,0,0,0.8)'
 
