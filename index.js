@@ -66,10 +66,12 @@ class Template extends Component {
 		this.state.lastTemplate = this.props.template
 		let temp = meta[this.props.template]
 		if (!temp) return
-		setTimeout(async () => {
-			CSS = (await temp.css()).default
-			populatePage(this.props.template, this.props.page)
-			this.forceUpdate()
+		setTimeout(() => {
+			temp.css().then(mod => {
+				CSS = mod.default
+				populatePage(this.props.template, this.props.page)
+				this.forceUpdate()
+			})
 		})
 	}
 
