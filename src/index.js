@@ -4,7 +4,7 @@ import { render, h, Component } from 'preact'
 var op = require('object-path')
 import meta from './templates/meta.js'
 const MODE = mobilecheck() ? 'mobile' : 'desktop'
-
+let CSS
 // props: ['mode', 'template', 'page', 'frame', 'select', 'reset'],
 class Template extends Component {
 	setClose (close) {
@@ -66,7 +66,8 @@ class Template extends Component {
 		setTimeout(() => {
 			temp.css().then((mod) => {
 				console.log('LOAD 22', mod.default)
-				populatePage(this.props.template, this.props.page, mod.default)
+				CSS = mod.default
+				populatePage(this.props.template, this.props.page)
 				this.forceUpdate()
 			})
 		})
@@ -281,7 +282,7 @@ function formFilled (form) {
 	return true
 }
 
-function populatePage (templateid, page, CSS) {
+function populatePage (templateid, page) {
 	if (!templateid || !page) return
 	let temp = meta[templateid]
 	var desktop_appearance = merge(temp.desktop_appearance, page.desktop_appearance)
@@ -345,6 +346,8 @@ export let CampTemp = {
 		// cache
 		let my_ele = null // last element to render
 		let my_option = null
+		let last_desktop_appear = null
+		let last_mobile_appear = null
 
 		return {
 			reset () {
@@ -359,6 +362,15 @@ export let CampTemp = {
 			render (ele, option) {
 				if (typeof ele === 'string') ele = document.querySelector(ele)
 				if (!ele) return
+
+				if (
+					!eq(last_desktop_appear, op.get(option, 'page.desktop_appearance')) ||
+					!eq(last_mobile_appear, op.get(option, 'page.mobile_appearance'))
+				) {
+					last_desktop_appear = copy(op.get(option, 'page.desktop_appearance'))
+					last_mobile_appear = copy(op.get(option, 'page.mobile_appearance'))
+					populatePage(meta, option.page)
+				}
 
 				my_ele = ele
 				my_option = option
@@ -379,6 +391,14 @@ export let CampTemp = {
 			},
 		}
 	},
+}
+
+function eq (a, b) {
+	return JSON.stringify(a) === JSON.stringify(b)
+}
+
+function copy (a) {
+	return JSON.parse(JSON.stringify(a))
 }
 
 // for debugging only
