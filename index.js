@@ -1,20 +1,19 @@
 import Form from './components/Form.js'
 import CloseButton from './components/CloseButton.js'
-import { h, Component } from 'preact'
+import { render, h, Component } from 'preact'
+
 var op = require('object-path')
 
-import META from './templates/meta.js'
+import meta from './templates/meta.js'
 
 const MODE = mobilecheck() ? 'mobile' : 'desktop'
 var CSS = ''
-
-export let meta = META
 
 // subiz-template
 // props: ['page','form','primaryButton','secondaryButton','closeButton','frame','closeAnimation','select'],
 
 // props: ['mode', 'template', 'page', 'frame', 'select'],
-export class Template extends Component {
+class Template extends Component {
 	setClose (close) {
 		this.setState({ close: close })
 		// so only us can scroll
@@ -23,23 +22,10 @@ export class Template extends Component {
 	}
 
 	onClose () {
-		this.$emit('closed')
+		this.props.onClose()
 		setTimeout(() => this.setClose(true), 400)
 		this.setState({ closeAnimation: 'bounceOut' })
 		// reset overflow
-	}
-
-	checkFormFilled () {
-		let form = op.get(this.props.page, 'form')
-		let hasForm = form && form.enabled && form.fields && form.fields.length > 0
-		if (!hasForm) return true
-
-		for (let i = 0; i < form.fields.length; i++) {
-			let field = form.fields[i]
-			if (field.is_required && (field.value === undefined || field.value === '')) return false
-		}
-
-		return true
 	}
 
 	onSecondaryClick () {
@@ -57,7 +43,7 @@ export class Template extends Component {
 			}
 		}
 
-		if (mustfillform && !this.checkFormFilled()) return
+		if (mustfillform && !formFilled(op.get(this.props.page, 'form'))) return
 
 		// this.$emit(ev)
 
@@ -76,7 +62,6 @@ export class Template extends Component {
 	}
 
 	loadTemplate () {
-		console.log('DDDDDD', this.state.lastTemplate, this.props.template)
 		if (this.state.lastTemplate === this.props.template) return
 		this.state.lastTemplate = this.props.template
 		let temp = meta[this.props.template]
@@ -88,19 +73,16 @@ export class Template extends Component {
 		})
 	}
 
-	onClicked (e) {
-		this.$emit('clicked', e)
-	}
-
 	componentDidMount () {
 		this.setClose(false)
 	}
 
 	render () {
 		this.loadTemplate()
+
 		if (this.state.close) return null
 
-		let $close = <CloseButton onClick={this.props.onClose} />
+		let $close = <CloseButton onClick={this.onClose} />
 		let $primary = null
 		let primaryBtnCls = 'btn btn--primary'
 		if (this.props.select === 'primary_button') primaryBtnCls += ' text__shake'
@@ -290,6 +272,18 @@ function replaceFileUrl (src) {
 	return src
 }
 
+function formFilled (form) {
+	let hasForm = form && form.enabled && form.fields && form.fields.length > 0
+	if (!hasForm) return true
+
+	for (let i = 0; i < form.fields.length; i++) {
+		let field = form.fields[i]
+		if (field.is_required && (field.value === undefined || field.value === '')) return false
+	}
+
+	return true
+}
+
 function populatePage (templateid, page) {
 	if (!templateid || !page) return
 	let temp = meta[templateid]
@@ -347,3 +341,27 @@ function setCssToHead (id, css) {
 		cssStyleDiv.appendChild(document.createTextNode(css))
 	}
 }
+
+window.CamTemp = {
+	meta: meta,
+	New: () => {
+		return {
+			render (ele, option) {
+				if (typeof ele === 'string') ele = document.querySelector(ele)
+				// 					key={this.i}
+				return render(
+					<Template
+						template={option.template}
+						page={option.page}
+						select="secondary_button"
+						onClick={() => true}
+						onClose={() => true}
+					/>,
+					ele,
+				)
+			},
+		}
+	},
+}
+
+export default CamTemp

@@ -1,4 +1,12 @@
 <html>
+	<head>
+		<style>
+			/* make the environment look like widget environment */
+			#sbz-pop * {
+				all: unset;
+			}
+		</style>
+	</head>
 	<body>
 		<script src="https://cdn.jsdelivr.net/npm/lodash@4.17.20/lodash.min.js"></script>
 		<div style="background: yellow; overflow: auto; margin-top: 200px;">
@@ -7,89 +15,72 @@
 			<div id="sbz-pop"></div>
 		</div>
 
-		<script defer>
-			function setCssToHead(id, css) {
-				let cssStyleDiv = document.querySelector('#' + id)
-				if (!cssStyleDiv) {
-					cssStyleDiv = document.createElement('style')
-					cssStyleDiv.type = 'text/css'
-					cssStyleDiv.id = id
-					document.head.appendChild(cssStyleDiv)
+		<script>
+			function load() {
+				let i = 0
+				let page = {
+					animation: 'bounceIn',
+					title: 'Đăng ký để nhận ưu đãi đặc biệt',
+					description: 'Giảm 20% chỉ một ngày duy nhất. Đăng ký ngay để nhận được mã giảm giá!',
+					form: {
+						enabled: true,
+						fields: [
+							{key: 'email', label: 'Email', is_required: true, type: 'text', placeholder: ' Email'},
+							{key: 2, label: 'Số điện thoại', is_required: true, type: 'text', placeholder: ' Số điện thoại'},
+							{key: 1, label: 'Họ Tên', is_required: true, type: 'text', placeholder: ' Họ tên'},
+							{key: 'ltqhch', label: 'Option', is_required: true, type: 'list', list: ['one', 'two']},
+							{
+								key: 'ltqhch',
+								label: 'Choose',
+								is_required: true,
+								multiple_choice: true,
+								type: 'list',
+								list: ['mot', 'hai', 'ba'],
+							},
+							{key: 2, label: 'Like', is_required: true, type: 'boolean', placeholder: ' Email'},
+							{key: 2, label: 'Số điện thoại', is_required: true, type: 'text', placeholder: ' Số điện thoại'},
+						],
+					},
+					primary_button: {enabled: true, text: '', actions: [{action: 'submit'}]},
+					secondary_button: {enabled: true, text: '', actions: [{action: 'close'}]},
 				}
 
-				if (cssStyleDiv.styleSheet) {
-					// This is required for IE8 and below.
-					cssStyleDiv.styleSheet.cssText = css
-				} else {
-					cssStyleDiv.innerHTML = ''
-					cssStyleDiv.appendChild(document.createTextNode(css))
+				let template = document.location.hash.substr(1)
+				if (!template) template = 'template1'
+				var metadata = CamTemp.meta[template].text
+				if (!_.get(page, 'title')) _.set(page, 'title', _.get(metadata, 'title.vi'))
+				if (!_.get(page, 'description')) _.set(page, 'description', _.get(metadata, 'description.vi'))
+				if (!_.get(page, 'primary_button.text')) {
+					_.set(page, 'primary_button.text', _.get(metadata, 'primary_button.vi'))
 				}
-			}
+				if (!_.get(page, 'secondary_button.text')) {
+					_.set(page, 'secondary_button.text', _.get(metadata, 'secondary_button.vi'))
+				}
 
-			let i = 0
-			let page = {
-				animation: 'bounceIn',
-				title: 'Đăng ký để nhận ưu đãi đặc biệt',
-				description: 'Giảm 20% chỉ một ngày duy nhất. Đăng ký ngay để nhận được mã giảm giá!',
-				form: {
-					enabled: true,
-					fields: [
-						{key: 'email', label: 'Email', is_required: true, type: 'text', placeholder: ' Email'},
-						{key: 2, label: 'Số điện thoại', is_required: true, type: 'text', placeholder: ' Số điện thoại'},
-						{key: 1, label: 'Họ Tên', is_required: true, type: 'text', placeholder: ' Họ tên'},
-						{key: 'ltqhch', label: 'Option', is_required: true, type: 'list', list: ['one', 'two']},
-						{
-							key: 'ltqhch',
-							label: 'Choose',
-							is_required: true,
-							multiple_choice: true,
-							type: 'list',
-							list: ['mot', 'hai', 'ba'],
-						},
-						{key: 2, label: 'Like', is_required: true, type: 'boolean', placeholder: ' Email'},
-						{key: 2, label: 'Số điện thoại', is_required: true, type: 'text', placeholder: ' Số điện thoại'},
-					],
-				},
-				primary_button: {enabled: true, text: '', actions: [{action: 'submit'}]},
-				secondary_button: {enabled: true, text: '', actions: [{action: 'close'}]},
-			}
+				let onClicked = (e) => {
+					console.log('click', e)
+				}
 
-			let template = 'template1'
-			var metadata = CamTemp.meta[template].text
-			if (!_.get(page, 'title')) _.set(page, 'title', _.get(metadata, 'title.vi'))
-			if (!_.get(page, 'description')) _.set(page, 'description', _.get(metadata, 'description.vi'))
-			if (!_.get(page, 'primary_button.text')) {
-				_.set(page, 'primary_button.text', _.get(metadata, 'primary_button.vi'))
-			}
-			if (!_.get(page, 'secondary_button.text')) {
-				_.set(page, 'secondary_button.text', _.get(metadata, 'secondary_button.vi'))
-			}
+				let onClosed = () => {
+					console.log('closed')
+					setTimeout(() => {
+						i++
+					}, 2000)
+					// how to reset?
+					camtemp.update()
+				}
 
-			// make the environment look like widget environment
-			setCssToHead('subiz-template-style-app', '#sbz-pop * {all:unset;}')
-
-			let onClicked = (e) => {
-				console.log('click', e)
+				let camtemp = CamTemp.New()
+				camtemp.render('#sbz-pop', {
+					template: template,
+					page: page,
+					select: 'secondary_button',
+					onClicked: onClicked,
+					onClosed: onClosed,
+				})
 			}
-
-			let onClosed = () => {
-				console.log('closed')
-				setTimeout(() => {
-					i++
-				}, 2000)
-				// how to reset?
-				camtemp.update()
-			}
-			console.log('XX')
-
-			let camtemp = CamTemp.New()
-			camtemp.render('#sbz-pop', {
-				template: template,
-				page: page,
-				select: 'secondary_button',
-				onClicked: onClicked,
-				onClosed: onClosed,
-			})
+			window.onhashchange = load
+			load()
 		</script>
 	</body>
 </html>
