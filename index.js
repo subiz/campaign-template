@@ -57,12 +57,15 @@ class Template extends Component {
 	}
 
 	loadTemplate () {
+		console.log('LOAD 00', this.state.lastTemplate, this.props.template)
 		if (this.state.lastTemplate === this.props.template) return
 		this.state.lastTemplate = this.props.template
 		let temp = meta[this.props.template]
+		console.log('LOAD 11', temp)
 		if (!temp) return
 		setTimeout(() => {
 			temp.css().then((mod) => {
+				console.log('LOAD 22', mod.default)
 				populatePage(this.props.template, this.props.page, mod.default)
 				this.forceUpdate()
 			})
@@ -105,7 +108,7 @@ class Template extends Component {
 
 		var cls = 'overlay '
 		if (this.props.frame) cls += ' overlay--' + this.props.frame
-		var animation = 'container ' //+ (this.props.page.animation) + ' ' + this.closeAnimation
+		var animation = 'container '
 		if (this.state.closeAnimation) animation += this.state.closeAnimation
 		else animation += this.props.page.animation
 
@@ -118,7 +121,6 @@ class Template extends Component {
 		return (
 			<div class={'template ' + this.props.template}>
 				<div class={mode}>
-					//var animation = 'container ' + this.props.page.animation
 					<div class={cls} onClick={(e) => this.onBackgroundClick(e)}>
 						<div class="notch">
 							<div class="notch__camera"></div>
