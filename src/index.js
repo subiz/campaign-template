@@ -100,7 +100,7 @@ class Template extends Component {
 			)
 		}
 
-		let $form = <Form onClick={this.onClick} form={this.props.page.form} pressedSubmit={this.state.pressedSubmit} />
+		let $form = <Form onClick={this.props.onClick} form={this.props.page.form} pressedSubmit={this.state.pressedSubmit} />
 		var mode = this.props.mode || MODE
 
 		var cls = 'overlay '
@@ -398,8 +398,5 @@ function copy (a) {
 	if (!a) return
 	return JSON.parse(JSON.stringify(a))
 }
-
-// for debugging only
-window.__CamTemp = CampTemp
 
 export default CampTemp

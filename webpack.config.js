@@ -1,13 +1,13 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
+	entry: ['./dev.js'],
 	plugins: [
 		// uncomment the following line to run bundle analysis
 		// new (require('webpack-bundle-analyzer').BundleAnalyzerPlugin)(),
 		new HtmlWebpackPlugin({
 			filename: 'index.html',
 			template: 'index.html',
-			inject: 'head',
 		}),
 	],
 	optimization: {
