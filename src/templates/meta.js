@@ -2,7 +2,7 @@ let meta = {
 	templateThanks: {
 		css: () =>
 			import(
-				/*webpackChunkName: "templateThanks_css" */ '!to-string-loader!css-loader!less-loader!./templateThanks.less'
+				/*webpackChunkName: "templateThanks_css" */ '!css-loader!less-loader!./templateThanks.less'
 			),
 		type: '2',
 		text: {
@@ -39,7 +39,7 @@ let meta = {
 	},
 	template1: {
 		css: () =>
-			import(/*webpackChunkName: "template1_css" */ '!to-string-loader!css-loader!less-loader!./template1.less'),
+			import(/*webpackChunkName: "template1_css" */ '!css-loader!less-loader!./template1.less'),
 
 		type: 'modal',
 
@@ -84,7 +84,7 @@ let meta = {
 	},
 	template2: {
 		css: () =>
-			import(/*webpackChunkName: "template2_css" */ '!to-string-loader!css-loader!less-loader!./template2.less'),
+			import(/*webpackChunkName: "template2_css" */ '!css-loader!less-loader!./template2.less'),
 		type: 'modal',
 		text: {
 			name: {vi: 'Mẫu 2: Hỏi thông tin', en: 'Template 2: Ask information'},
@@ -125,7 +125,7 @@ let meta = {
 	},
 	template3: {
 		css: () =>
-			import(/*webpackChunkName: "template3_css" */ '!to-string-loader!css-loader!less-loader!./template3.less'),
+			import(/*webpackChunkName: "template3_css" */ '!css-loader!less-loader!./template3.less'),
 		type: 'modal',
 		text: {
 			name: {vi: 'Mẫu 3: Hỏi thông tin', en: 'Template 3: Ask information'},
@@ -167,7 +167,7 @@ let meta = {
 	},
 	template4: {
 		css: () =>
-			import(/*webpackChunkName: "template4_css" */ '!to-string-loader!css-loader!less-loader!./template4.less'),
+			import(/*webpackChunkName: "template4_css" */ '!css-loader!less-loader!./template4.less'),
 		type: 'modal',
 		text: {
 			name: {vi: 'Mẫu 4: Hỏi thông tin', en: 'Template 4: Ask information'},
@@ -204,7 +204,7 @@ let meta = {
 	},
 	template5: {
 		css: () =>
-			import(/*webpackChunkName: "template5_css" */ '!to-string-loader!css-loader!less-loader!./template5.less'),
+			import(/*webpackChunkName: "template5_css" */ '!css-loader!less-loader!./template5.less'),
 		type: 'fullscreen',
 		text: {
 			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
@@ -244,7 +244,7 @@ let meta = {
 	},
 	template6: {
 		css: () =>
-			import(/*webpackChunkName: "template6_css" */ '!to-string-loader!css-loader!less-loader!./template6.less'),
+			import(/*webpackChunkName: "template6_css" */ '!css-loader!less-loader!./template6.less'),
 		type: 'fullscreen',
 		text: {
 			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
@@ -295,7 +295,7 @@ let meta = {
 	},
 	template9: {
 		css: () =>
-			import(/*webpackChunkName: "template9_css" */ '!to-string-loader!css-loader!less-loader!./template9.less'),
+			import(/*webpackChunkName: "template9_css" */ '!css-loader!less-loader!./template9.less'),
 		type: 'modal',
 		text: {
 			name: {vi: 'Mẫu 5: Xin ý kiến đánh giá', en: 'Template 5: Feedback'},
@@ -335,7 +335,7 @@ let meta = {
 	},
 	template10: {
 		css: () =>
-			import(/*webpackChunkName: "template10_css" */ '!to-string-loader!css-loader!less-loader!./template10.less'),
+			import(/*webpackChunkName: "template10_css" */ '!css-loader!less-loader!./template10.less'),
 		type: 'modal',
 		text: {
 			name: {vi: 'Mẫu 6: Xin ý kiến đánh giá', en: 'Template 6: Feedback'},
@@ -368,7 +368,7 @@ let meta = {
 	},
 	template20: {
 		css: () =>
-			import(/*webpackChunkName: "template20_css" */ '!to-string-loader!css-loader!less-loader!./template20.less'),
+			import(/*webpackChunkName: "template20_css" */ '!css-loader!less-loader!./template20.less'),
 		type: 'modal',
 		text: {
 			name: {vi: 'Mẫu 7: Hỏi thông tin', en: 'Template 7: Ask information'},
@@ -410,7 +410,7 @@ let meta = {
 
 	template21: {
 		css: () =>
-			import(/*webpackChunkName: "template21_css" */ '!to-string-loader!css-loader!less-loader!./template21.less'),
+			import(/*webpackChunkName: "template21_css" */ '!css-loader!less-loader!./template21.less'),
 		type: 'modal',
 		text: {
 			name: {vi: 'Mẫu 9: Hỏi thông tin', en: 'Template 9: Ask information'},
@@ -451,7 +451,7 @@ let meta = {
 	},
 	template22: {
 		css: () =>
-			import(/*webpackChunkName: "template22_css" */ '!to-string-loader!css-loader!less-loader!./template22.less'),
+			import(/*webpackChunkName: "template22_css" */ '!css-loader!less-loader!./template22.less'),
 		type: 'modal',
 		text: {
 			name: {vi: 'Mẫu 10: Hỏi thông tin', en: 'Template 10: Ask information'},
@@ -492,7 +492,7 @@ let meta = {
 	},
 	template23: {
 		css: () =>
-			import(/*webpackChunkName: "template23_css" */ '!to-string-loader!css-loader!less-loader!./template23.less'),
+			import(/*webpackChunkName: "template23_css" */ '!css-loader!less-loader!./template23.less'),
 		type: 'modal',
 		text: {
 			name: {vi: 'Mẫu 11: Hỏi thông tin', en: 'Template 12: Ask information'},
@@ -534,7 +534,7 @@ let meta = {
 	},
 	template24: {
 		css: () =>
-			import(/*webpackChunkName: "template24_css" */ '!to-string-loader!css-loader!less-loader!./template24.less'),
+			import(/*webpackChunkName: "template24_css" */ '!css-loader!less-loader!./template24.less'),
 		type: 'modal',
 		text: {
 			name: {vi: 'Mẫu 12: Hỏi thông tin', en: 'Template 12: Ask information'},
@@ -573,7 +573,7 @@ let meta = {
 		},
 	},
 	tet20201: {
-		css: () => import(/*webpackChunkName: "tet20201_css" */ '!to-string-loader!css-loader!less-loader!./tet20201.less'),
+		css: () => import(/*webpackChunkName: "tet20201_css" */ '!css-loader!less-loader!./tet20201.less'),
 		type: 'modal',
 		text: {
 			name: {vi: 'Mẫu 13: Chúc mừng năm mới 2020', en: 'Template 13: New Year 2020'},
@@ -609,7 +609,7 @@ let meta = {
 		},
 	},
 	tet20202: {
-		css: () => import(/*webpackChunkName: "tet20202_css" */ '!to-string-loader!css-loader!less-loader!./tet20202.less'),
+		css: () => import(/*webpackChunkName: "tet20202_css" */ '!css-loader!less-loader!./tet20202.less'),
 		type: 'modal',
 		text: {
 			name: {vi: 'Mẫu 14: Chúc mừng năm mới 2020', en: 'Template 14: New Year 2020'},
@@ -644,7 +644,7 @@ let meta = {
 	},
 	tet20203: {
 		css: () =>
-			import(/*webpackChunkName: "template20203_css" */ '!to-string-loader!css-loader!less-loader!./tet20203.less'),
+			import(/*webpackChunkName: "template20203_css" */ '!css-loader!less-loader!./tet20203.less'),
 		type: 'modal',
 		text: {
 			name: {vi: 'Mẫu 15: Chúc mừng năm mới 2020', en: 'Template 15: New Year 2020'},
@@ -680,7 +680,7 @@ let meta = {
 	},
 	tet20204: {
 		css: () =>
-			import(/*webpackChunkName: "template20204_css" */ '!to-string-loader!css-loader!less-loader!./tet20204.less'),
+			import(/*webpackChunkName: "template20204_css" */ '!css-loader!less-loader!./tet20204.less'),
 		type: 'modal',
 		text: {
 			name: {vi: 'Mẫu 16: Chúc mừng năm mới 2020', en: 'Template 16: New Year 2020'},
@@ -715,7 +715,7 @@ let meta = {
 	},
 	template11: {
 		css: () =>
-			import(/*webpackChunkName: "template11_css" */ '!to-string-loader!css-loader!less-loader!./template11.less'),
+			import(/*webpackChunkName: "template11_css" */ '!css-loader!less-loader!./template11.less'),
 		type: 'modal',
 		text: {
 			name: {vi: 'Mẫu 17: Hỏi thông tin', en: 'Template 17: Ask information'},
@@ -758,7 +758,7 @@ let meta = {
 	},
 	template12: {
 		css: () =>
-			import(/*webpackChunkName: "template12_css" */ '!to-string-loader!css-loader!less-loader!./template12.less'),
+			import(/*webpackChunkName: "template12_css" */ '!css-loader!less-loader!./template12.less'),
 		type: 'modal',
 		text: {
 			name: {vi: 'Mẫu 18: Hỏi thông tin', en: 'Template 18: Ask information'},
@@ -798,7 +798,7 @@ let meta = {
 	},
 	template13: {
 		css: () =>
-			import(/*webpackChunkName: "template13_css" */ '!to-string-loader!css-loader!less-loader!./template13.less'),
+			import(/*webpackChunkName: "template13_css" */ '!css-loader!less-loader!./template13.less'),
 		type: 'modal',
 		text: {
 			name: {vi: 'Mẫu 19: Hỏi thông tin', en: 'Template 19: Ask information'},
@@ -837,7 +837,7 @@ let meta = {
 	},
 	template14: {
 		css: () =>
-			import(/*webpackChunkName: "template14_css" */ '!to-string-loader!css-loader!less-loader!./template14.less'),
+			import(/*webpackChunkName: "template14_css" */ '!css-loader!less-loader!./template14.less'),
 		type: 'modal',
 		text: {
 			name: {vi: 'Mẫu 20: Hỏi thông tin', en: 'Template 20: Ask information'},
@@ -880,7 +880,7 @@ let meta = {
 	},
 	template15: {
 		css: () =>
-			import(/*webpackChunkName: "template15_css" */ '!to-string-loader!css-loader!less-loader!./template15.less'),
+			import(/*webpackChunkName: "template15_css" */ '!css-loader!less-loader!./template15.less'),
 		type: 'modal',
 		text: {
 			name: {vi: 'Mẫu 21: Hỏi thông tin', en: 'Template 21: Ask information'},
@@ -922,7 +922,7 @@ let meta = {
 	},
 	templateu23: {
 		css: () =>
-			import(/*webpackChunkName: "templateu23_css" */ '!to-string-loader!css-loader!less-loader!./templateu23.less'),
+			import(/*webpackChunkName: "templateu23_css" */ '!css-loader!less-loader!./templateu23.less'),
 		type: 'modal',
 		text: {
 			name: {vi: 'Mẫu 21: U23 2019', en: 'Template 22: U23 2019'},
@@ -965,7 +965,7 @@ thành công mới`,
 	},
 	template16: {
 		css: () =>
-			import(/*webpackChunkName: "template16_css" */ '!to-string-loader!css-loader!less-loader!./template16.less'),
+			import(/*webpackChunkName: "template16_css" */ '!css-loader!less-loader!./template16.less'),
 		type: 'modal',
 		text: {
 			name: {vi: 'Mẫu 23: Hỏi thông tin', en: 'Template 23: Ask information'},
@@ -1003,7 +1003,7 @@ thành công mới`,
 	},
 	template17: {
 		css: () =>
-			import(/*webpackChunkName: "template17_css" */ '!to-string-loader!css-loader!less-loader!./template17.less'),
+			import(/*webpackChunkName: "template17_css" */ '!css-loader!less-loader!./template17.less'),
 		type: 'modal',
 		text: {
 			name: {vi: 'Mẫu 24: Hỏi thông tin', en: 'Template 24: Ask information'},
@@ -1042,7 +1042,7 @@ thành công mới`,
 	},
 	template39: {
 		css: () =>
-			import(/*webpackChunkName: "template39_css" */ '!to-string-loader!css-loader!less-loader!./template39.less'),
+			import(/*webpackChunkName: "template39_css" */ '!css-loader!less-loader!./template39.less'),
 		type: 'modal',
 		text: {
 			name: {vi: 'Mẫu 24: Hỏi thông tin', en: 'Template 24: Ask information'},
@@ -1086,7 +1086,7 @@ thành công mới`,
 	},
 	template117: {
 		css: () =>
-			import(/*webpackChunkName: "template117_css" */ '!to-string-loader!css-loader!less-loader!./template117.less'),
+			import(/*webpackChunkName: "template117_css" */ '!css-loader!less-loader!./template117.less'),
 		type: 'modal',
 		text: {
 			name: {vi: 'Mẫu 25: Hỏi thông tin', en: 'Template 25: Ask information'},
@@ -1129,7 +1129,7 @@ thành công mới`,
 	},
 	template25: {
 		css: () =>
-			import(/*webpackChunkName: "template25_css" */ '!to-string-loader!css-loader!less-loader!./template25.less'),
+			import(/*webpackChunkName: "template25_css" */ '!css-loader!less-loader!./template25.less'),
 		text: {
 			name: {vi: 'Mẫu 26: Hỏi thông tin', en: 'Template 26: Ask information'},
 			title: {
@@ -1168,7 +1168,7 @@ thành công mới`,
 	},
 	template26: {
 		css: () =>
-			import(/*webpackChunkName: "template26_css" */ '!to-string-loader!css-loader!less-loader!./template26.less'),
+			import(/*webpackChunkName: "template26_css" */ '!css-loader!less-loader!./template26.less'),
 		text: {
 			name: {vi: 'Mẫu 27: Hỏi thông tin', en: 'Template 27: Ask information'},
 			title: {
@@ -1209,7 +1209,7 @@ thành công mới`,
 	},
 	template18: {
 		css: () =>
-			import(/*webpackChunkName: "template18_css" */ '!to-string-loader!css-loader!less-loader!./template18.less'),
+			import(/*webpackChunkName: "template18_css" */ '!css-loader!less-loader!./template18.less'),
 		type: 'modal',
 		text: {
 			name: {vi: 'Mẫu 28: Hỏi thông tin', en: 'Template 28: Ask information'},
@@ -1261,7 +1261,7 @@ thành công mới`,
 	},
 	template27: {
 		css: () =>
-			import(/*webpackChunkName: "template27_css" */ '!to-string-loader!css-loader!less-loader!./template27.less'),
+			import(/*webpackChunkName: "template27_css" */ '!css-loader!less-loader!./template27.less'),
 		text: {
 			name: {vi: 'Mẫu 29: Hỏi thông tin', en: 'Template 29: Ask information'},
 			title: {
@@ -1302,7 +1302,7 @@ thành công mới`,
 	},
 	template19: {
 		css: () =>
-			import(/*webpackChunkName: "template19_css" */ '!to-string-loader!css-loader!less-loader!./template19.less'),
+			import(/*webpackChunkName: "template19_css" */ '!css-loader!less-loader!./template19.less'),
 		type: 'modal',
 		text: {
 			name: {vi: 'Mẫu 30: Hỏi thông tin', en: 'Template 30: Ask information'},
@@ -1347,7 +1347,7 @@ thành công mới`,
 	},
 	template28: {
 		css: () =>
-			import(/*webpackChunkName: "template28_css" */ '!to-string-loader!css-loader!less-loader!./template28.less'),
+			import(/*webpackChunkName: "template28_css" */ '!css-loader!less-loader!./template28.less'),
 		text: {
 			name: {vi: 'Mẫu 31: Hỏi thông tin', en: 'Template 31: Ask information'},
 			title: {vi: 'ƯU ĐÃI 10%', en: '10% OFF'},
@@ -1385,7 +1385,7 @@ thành công mới`,
 	template202009021: {
 		css: () =>
 			import(
-				/*webpackChunkName: "template202009021_css" */ '!to-string-loader!css-loader!less-loader!./template202009021.less'
+				/*webpackChunkName: "template202009021_css" */ '!css-loader!less-loader!./template202009021.less'
 			),
 		type: 'modal',
 		text: {
@@ -1426,7 +1426,7 @@ thành công mới`,
 	template202009022: {
 		css: () =>
 			import(
-				/*webpackChunkName: "template202009022_css" */ '!to-string-loader!css-loader!less-loader!./template202009022.less'
+				/*webpackChunkName: "template202009022_css" */ '!css-loader!less-loader!./template202009022.less'
 			),
 		type: 'modal',
 		text: {
@@ -1461,7 +1461,7 @@ thành công mới`,
 	},
 	template29: {
 		css: () =>
-			import(/*webpackChunkName: "template29_css" */ '!to-string-loader!css-loader!less-loader!./template29.less'),
+			import(/*webpackChunkName: "template29_css" */ '!css-loader!less-loader!./template29.less'),
 		type: 'modal',
 		text: {
 			name: {vi: 'Mẫu 32: Hỏi thông tin', en: 'Template 32: Ask information'},
@@ -1501,7 +1501,7 @@ thành công mới`,
 	},
 	template30: {
 		css: () =>
-			import(/*webpackChunkName: "template30_css" */ '!to-string-loader!css-loader!less-loader!./template30.less'),
+			import(/*webpackChunkName: "template30_css" */ '!css-loader!less-loader!./template30.less'),
 		type: 'modal',
 		text: {
 			name: {vi: 'Mẫu 33: Hỏi thông tin', en: 'Template 33: Ask information'},
@@ -1545,7 +1545,7 @@ Object.keys(meta).map((id) => {
 	if (meta[id].js) return
 
 	meta[id].desktop_appearance.background_image =
-		'url(' + require('../../assets/background/' + id + '.png').default + ')'
+		'url(' + require('../../assets/background/' + id + '.png') + ')'
 
 	if (!meta[id].desktop_appearance.overlay) meta[id].desktop_appearance.overlay = 'rgba(0,0,0,0.8)'
 

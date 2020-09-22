@@ -1,6 +1,6 @@
 let meta = {
   templateThanks: {
-    css: () => import('!to-string-loader!css-loader!less-loader!./templateThanks.less'),
+    css: () => import('!css-loader!less-loader!./templateThanks.less'),
     type: '2',
     text: {
       name: {
@@ -42,7 +42,7 @@ let meta = {
     }
   },
   template1: {
-    css: () => import('!to-string-loader!css-loader!less-loader!./template1.less'),
+    css: () => import('!css-loader!less-loader!./template1.less'),
     type: 'modal',
     text: {
       name: {
@@ -91,7 +91,7 @@ let meta = {
     }
   },
   template2: {
-    css: () => import('!to-string-loader!css-loader!less-loader!./template2.less'),
+    css: () => import('!css-loader!less-loader!./template2.less'),
     type: 'modal',
     text: {
       name: {
@@ -137,7 +137,7 @@ let meta = {
     }
   },
   template3: {
-    css: () => import('!to-string-loader!css-loader!less-loader!./template3.less'),
+    css: () => import('!css-loader!less-loader!./template3.less'),
     type: 'modal',
     text: {
       name: {
@@ -184,7 +184,7 @@ let meta = {
     }
   },
   template4: {
-    css: () => import('!to-string-loader!css-loader!less-loader!./template4.less'),
+    css: () => import('!css-loader!less-loader!./template4.less'),
     type: 'modal',
     text: {
       name: {
@@ -226,7 +226,7 @@ let meta = {
     }
   },
   template5: {
-    css: () => import('!to-string-loader!css-loader!less-loader!./template5.less'),
+    css: () => import('!css-loader!less-loader!./template5.less'),
     type: 'fullscreen',
     text: {
       name: {
@@ -272,7 +272,7 @@ let meta = {
     }
   },
   template6: {
-    css: () => import('!to-string-loader!css-loader!less-loader!./template6.less'),
+    css: () => import('!css-loader!less-loader!./template6.less'),
     type: 'fullscreen',
     text: {
       name: {
@@ -328,7 +328,7 @@ let meta = {
     }
   },
   template9: {
-    css: () => import('!to-string-loader!css-loader!less-loader!./template9.less'),
+    css: () => import('!css-loader!less-loader!./template9.less'),
     type: 'modal',
     text: {
       name: {
@@ -373,7 +373,7 @@ let meta = {
     }
   },
   template10: {
-    css: () => import('!to-string-loader!css-loader!less-loader!./template10.less'),
+    css: () => import('!css-loader!less-loader!./template10.less'),
     type: 'modal',
     text: {
       name: {
@@ -413,7 +413,7 @@ let meta = {
     }
   },
   template20: {
-    css: () => import('!to-string-loader!css-loader!less-loader!./template20.less'),
+    css: () => import('!css-loader!less-loader!./template20.less'),
     type: 'modal',
     text: {
       name: {
@@ -459,7 +459,7 @@ let meta = {
     }
   },
   template21: {
-    css: () => import('!to-string-loader!css-loader!less-loader!./template21.less'),
+    css: () => import('!css-loader!less-loader!./template21.less'),
     type: 'modal',
     text: {
       name: {
@@ -506,7 +506,7 @@ let meta = {
     }
   },
   template22: {
-    css: () => import('!to-string-loader!css-loader!less-loader!./template22.less'),
+    css: () => import('!css-loader!less-loader!./template22.less'),
     type: 'modal',
     text: {
       name: {
@@ -553,7 +553,7 @@ let meta = {
     }
   },
   template23: {
-    css: () => import('!to-string-loader!css-loader!less-loader!./template23.less'),
+    css: () => import('!css-loader!less-loader!./template23.less'),
     type: 'modal',
     text: {
       name: {
@@ -601,7 +601,7 @@ let meta = {
     }
   },
   template24: {
-    css: () => import('!to-string-loader!css-loader!less-loader!./template24.less'),
+    css: () => import('!css-loader!less-loader!./template24.less'),
     type: 'modal',
     text: {
       name: {
@@ -647,7 +647,7 @@ let meta = {
     }
   },
   tet20201: {
-    css: () => import('!to-string-loader!css-loader!less-loader!./tet20201.less'),
+    css: () => import('!css-loader!less-loader!./tet20201.less'),
     type: 'modal',
     text: {
       name: {
@@ -690,7 +690,7 @@ let meta = {
     }
   },
   tet20202: {
-    css: () => import('!to-string-loader!css-loader!less-loader!./tet20202.less'),
+    css: () => import('!css-loader!less-loader!./tet20202.less'),
     type: 'modal',
     text: {
       name: {
@@ -725,7 +725,7 @@ let meta = {
     }
   },
   tet20203: {
-    css: () => import('!to-string-loader!css-loader!less-loader!./tet20203.less'),
+    css: () => import('!css-loader!less-loader!./tet20203.less'),
     type: 'modal',
     text: {
       name: {
@@ -767,7 +767,7 @@ let meta = {
     }
   },
   tet20204: {
-    css: () => import('!to-string-loader!css-loader!less-loader!./tet20204.less'),
+    css: () => import('!css-loader!less-loader!./tet20204.less'),
     type: 'modal',
     text: {
       name: {
@@ -810,7 +810,7 @@ let meta = {
     }
   },
   template11: {
-    css: () => import('!to-string-loader!css-loader!less-loader!./template11.less'),
+    css: () => import('!css-loader!less-loader!./template11.less'),
     type: 'modal',
     text: {
       name: {
@@ -859,7 +859,7 @@ let meta = {
     }
   },
   template12: {
-    css: () => import('!to-string-loader!css-loader!less-loader!./template12.less'),
+    css: () => import('!css-loader!less-loader!./template12.less'),
     type: 'modal',
     text: {
       name: {
@@ -905,7 +905,7 @@ let meta = {
     }
   },
   template13: {
-    css: () => import('!to-string-loader!css-loader!less-loader!./template13.less'),
+    css: () => import('!css-loader!less-loader!./template13.less'),
     type: 'modal',
     text: {
       name: {
@@ -950,7 +950,7 @@ let meta = {
     }
   },
   template14: {
-    css: () => import('!to-string-loader!css-loader!less-loader!./template14.less'),
+    css: () => import('!css-loader!less-loader!./template14.less'),
     type: 'modal',
     text: {
       name: {
@@ -997,7 +997,7 @@ let meta = {
     }
   },
   template15: {
-    css: () => import('!to-string-loader!css-loader!less-loader!./template15.less'),
+    css: () => import('!css-loader!less-loader!./template15.less'),
     type: 'modal',
     text: {
       name: {
@@ -1044,7 +1044,7 @@ let meta = {
     }
   },
   templateu23: {
-    css: () => import('!to-string-loader!css-loader!less-loader!./templateu23.less'),
+    css: () => import('!css-loader!less-loader!./templateu23.less'),
     type: 'modal',
     text: {
       name: {
@@ -1093,7 +1093,7 @@ thành công mới`
     }
   },
   template16: {
-    css: () => import('!to-string-loader!css-loader!less-loader!./template16.less'),
+    css: () => import('!css-loader!less-loader!./template16.less'),
     type: 'modal',
     text: {
       name: {
@@ -1137,7 +1137,7 @@ thành công mới`
     }
   },
   template17: {
-    css: () => import('!to-string-loader!css-loader!less-loader!./template17.less'),
+    css: () => import('!css-loader!less-loader!./template17.less'),
     type: 'modal',
     text: {
       name: {
@@ -1182,7 +1182,7 @@ thành công mới`
     }
   },
   template39: {
-    css: () => import('!to-string-loader!css-loader!less-loader!./template39.less'),
+    css: () => import('!css-loader!less-loader!./template39.less'),
     type: 'modal',
     text: {
       name: {
@@ -1232,7 +1232,7 @@ thành công mới`
     }
   },
   template117: {
-    css: () => import('!to-string-loader!css-loader!less-loader!./template117.less'),
+    css: () => import('!css-loader!less-loader!./template117.less'),
     type: 'modal',
     text: {
       name: {
@@ -1279,7 +1279,7 @@ thành công mới`
     }
   },
   template25: {
-    css: () => import('!to-string-loader!css-loader!less-loader!./template25.less'),
+    css: () => import('!css-loader!less-loader!./template25.less'),
     text: {
       name: {
         vi: 'Mẫu 26: Hỏi thông tin',
@@ -1324,7 +1324,7 @@ thành công mới`
     }
   },
   template26: {
-    css: () => import('!to-string-loader!css-loader!less-loader!./template26.less'),
+    css: () => import('!css-loader!less-loader!./template26.less'),
     text: {
       name: {
         vi: 'Mẫu 27: Hỏi thông tin',
@@ -1371,7 +1371,7 @@ thành công mới`
     }
   },
   template18: {
-    css: () => import('!to-string-loader!css-loader!less-loader!./template18.less'),
+    css: () => import('!css-loader!less-loader!./template18.less'),
     type: 'modal',
     text: {
       name: {
@@ -1429,7 +1429,7 @@ thành công mới`
     }
   },
   template27: {
-    css: () => import('!to-string-loader!css-loader!less-loader!./template27.less'),
+    css: () => import('!css-loader!less-loader!./template27.less'),
     text: {
       name: {
         vi: 'Mẫu 29: Hỏi thông tin',
@@ -1475,7 +1475,7 @@ thành công mới`
     }
   },
   template19: {
-    css: () => import('!to-string-loader!css-loader!less-loader!./template19.less'),
+    css: () => import('!css-loader!less-loader!./template19.less'),
     type: 'modal',
     text: {
       name: {
@@ -1525,7 +1525,7 @@ thành công mới`
     }
   },
   template28: {
-    css: () => import('!to-string-loader!css-loader!less-loader!./template28.less'),
+    css: () => import('!css-loader!less-loader!./template28.less'),
     text: {
       name: {
         vi: 'Mẫu 31: Hỏi thông tin',
@@ -1571,7 +1571,7 @@ thành công mới`
     }
   },
   template202009021: {
-    css: () => import('!to-string-loader!css-loader!less-loader!./template202009021.less'),
+    css: () => import('!css-loader!less-loader!./template202009021.less'),
     type: 'modal',
     text: {
       name: {
@@ -1614,7 +1614,7 @@ thành công mới`
     }
   },
   template202009022: {
-    css: () => import('!to-string-loader!css-loader!less-loader!./template202009022.less'),
+    css: () => import('!css-loader!less-loader!./template202009022.less'),
     type: 'modal',
     text: {
       name: {
@@ -1653,7 +1653,7 @@ thành công mới`
     }
   },
   template29: {
-    css: () => import('!to-string-loader!css-loader!less-loader!./template29.less'),
+    css: () => import('!css-loader!less-loader!./template29.less'),
     type: 'modal',
     text: {
       name: {
@@ -1699,7 +1699,7 @@ thành công mới`
     }
   },
   template30: {
-    css: () => import('!to-string-loader!css-loader!less-loader!./template30.less'),
+    css: () => import('!css-loader!less-loader!./template30.less'),
     type: 'modal',
     text: {
       name: {
@@ -1747,7 +1747,7 @@ thành công mới`
 };
 Object.keys(meta).map(id => {
   if (meta[id].js) return;
-  meta[id].desktop_appearance.background_image = 'url(' + require('../../assets/background/' + id + '.png').default + ')';
+  meta[id].desktop_appearance.background_image = 'url(' + require('../../assets/background/' + id + '.png') + ')';
   if (!meta[id].desktop_appearance.overlay) meta[id].desktop_appearance.overlay = 'rgba(0,0,0,0.8)';
   if (!meta[id].desktop_appearance.title_text_transform) meta[id].desktop_appearance.title_text_transform = 'none';
   if (!meta[id].desktop_appearance.title_font_family) meta[id].desktop_appearance.title_font_family = 'Roboto';

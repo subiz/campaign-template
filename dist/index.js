@@ -6,7 +6,7 @@ var op = require('object-path');
 
 import meta from './templates/meta.js';
 const MODE = mobilecheck() ? 'mobile' : 'desktop';
-let CSS;
+let CSS = '';
 
 class Template extends Component {
   setClose(close) {
@@ -69,16 +69,13 @@ class Template extends Component {
   }
 
   loadTemplate() {
-    console.log('LOAD 00', this.state.lastTemplate, this.props.template);
     if (this.state.lastTemplate === this.props.template) return;
     this.state.lastTemplate = this.props.template;
     let temp = meta[this.props.template];
-    console.log('LOAD 11', temp);
     if (!temp) return;
     setTimeout(() => {
       temp.css().then(mod => {
-        console.log('LOAD 22', mod.default);
-        CSS = mod.default;
+        CSS = mod.default.toString();
         populatePage(this.props.template, this.props.page);
         this.forceUpdate();
       });
@@ -92,9 +89,6 @@ class Template extends Component {
   render() {
     this.loadTemplate();
     if (this.state.close) return null;
-    let $close = h(CloseButton, {
-      onClick: e => this.onClose(e)
-    });
     let $primary = null;
     let primaryBtnCls = 'btn btn--primary';
     if (this.props.select === 'primary_button') primaryBtnCls += ' text__shake';
@@ -157,7 +151,9 @@ class Template extends Component {
     })), h("div", {
       class: animation,
       onClick: e => e.stopPropagation()
-    }, $close, h("div", {
+    }, h(CloseButton, {
+      onClick: e => this.onClose(e)
+    }), h("div", {
       class: "container__inner"
     }, h("div", {
       class: "background"
@@ -378,7 +374,7 @@ export let CampTemp = {
         if (!eq(last_desktop_appear, op.get(option, 'page.desktop_appearance')) || !eq(last_mobile_appear, op.get(option, 'page.mobile_appearance'))) {
           last_desktop_appear = copy(op.get(option, 'page.desktop_appearance'));
           last_mobile_appear = copy(op.get(option, 'page.mobile_appearance'));
-          populatePage(meta, option.page);
+          populatePage(option.template, option.page);
         }
 
         my_ele = ele;
@@ -408,6 +404,7 @@ function eq(a, b) {
 }
 
 function copy(a) {
+  if (!a) return;
   return JSON.parse(JSON.stringify(a));
 }
 

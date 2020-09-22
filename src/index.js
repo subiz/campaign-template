@@ -4,7 +4,7 @@ import { render, h, Component } from 'preact'
 var op = require('object-path')
 import meta from './templates/meta.js'
 const MODE = mobilecheck() ? 'mobile' : 'desktop'
-let CSS
+let CSS = ''
 // props: ['mode', 'template', 'page', 'frame', 'select', 'reset'],
 class Template extends Component {
 	setClose (close) {
@@ -57,16 +57,13 @@ class Template extends Component {
 	}
 
 	loadTemplate () {
-		console.log('LOAD 00', this.state.lastTemplate, this.props.template)
 		if (this.state.lastTemplate === this.props.template) return
 		this.state.lastTemplate = this.props.template
 		let temp = meta[this.props.template]
-		console.log('LOAD 11', temp)
 		if (!temp) return
 		setTimeout(() => {
 			temp.css().then((mod) => {
-				console.log('LOAD 22', mod.default)
-				CSS = mod.default
+				CSS = mod.default.toString()
 				populatePage(this.props.template, this.props.page)
 				this.forceUpdate()
 			})
@@ -81,7 +78,6 @@ class Template extends Component {
 		this.loadTemplate()
 		if (this.state.close) return null
 
-		let $close = <CloseButton onClick={(e) => this.onClose(e)} />
 		let $primary = null
 		let primaryBtnCls = 'btn btn--primary'
 		if (this.props.select === 'primary_button') primaryBtnCls += ' text__shake'
@@ -134,7 +130,7 @@ class Template extends Component {
 							<div class="bar__url"></div>
 						</div>
 						<div class={animation} onClick={(e) => e.stopPropagation()}>
-							{$close}
+							<CloseButton onClick={(e) => this.onClose(e)} />
 							<div class="container__inner">
 								<div class="background"></div>
 								<div class="content">
@@ -285,6 +281,7 @@ function formFilled (form) {
 function populatePage (templateid, page) {
 	if (!templateid || !page) return
 	let temp = meta[templateid]
+
 	var desktop_appearance = merge(temp.desktop_appearance, page.desktop_appearance)
 	var mobile_appearance = merge(temp.mobile_appearance, page.mobile_appearance)
 
@@ -369,7 +366,7 @@ export let CampTemp = {
 				) {
 					last_desktop_appear = copy(op.get(option, 'page.desktop_appearance'))
 					last_mobile_appear = copy(op.get(option, 'page.mobile_appearance'))
-					populatePage(meta, option.page)
+					populatePage(option.template, option.page)
 				}
 
 				my_ele = ele
@@ -398,6 +395,7 @@ function eq (a, b) {
 }
 
 function copy (a) {
+	if (!a) return
 	return JSON.parse(JSON.stringify(a))
 }
 

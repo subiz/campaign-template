@@ -4,7 +4,7 @@
 	"main": "./dist/index.js",
 	"scripts": {
 		"dev": "webpack-dev-server --mode=development",
-		"build": "rm -rf dist && npx babel --out-dir=dist src"
+		"build": "rm -rf dist && cp src dist -R && npx babel --out-dir=dist src"
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.11.6",
