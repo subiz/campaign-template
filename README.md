@@ -6,7 +6,7 @@ npm i --save @subiz/campaign-template
 ```
 Then, import the package
 ```js
-import {CampTemp} from '@subiz/campaign-template`
+import CampTemp from '@subiz/campaign-template`
 
 let template = CampTemp.New()
 
@@ -18,6 +18,12 @@ template.render('#pop', {
   onClick: () => true,
   onClose: () => true,
 })
+
+// to close the template
+template.close()
+
+// reset the template to the original state
+template.reset()
 ```
 
 # Development

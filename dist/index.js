@@ -1,6 +1,6 @@
 import Form from './components/Form.js';
 import CloseButton from './components/CloseButton.js';
-import { render, h, Component } from 'preact';
+import { render, h, Component, createRef } from 'preact';
 
 var op = require('object-path');
 
@@ -60,11 +60,12 @@ class Template extends Component {
   }
 
   onBackgroundClick() {
+    this.props.onClick('background');
     this.onButtonClick(op.get(this.props.page, 'background_click'), 'backgroundClicked');
   }
 
   onPrimaryClick() {
-    this.$emit('clicked', 'primary_button');
+    this.props.onClick('primary_button');
     this.onButtonClick(op.get(this.props.page, 'primary_button'), 'primaryButtonClicked');
   }
 
@@ -95,7 +96,7 @@ class Template extends Component {
 
     if (op.get(this.props.page, 'primary_button.enabled')) {
       $primary = h("button", {
-        onClick: this.onPrimaryClick,
+        onClick: e => this.onPrimaryClick(e),
         class: primaryBtnCls
       }, op.get(this.props.page, 'primary_button.text'));
     }
@@ -357,7 +358,12 @@ export let CampTemp = {
     let my_option = null;
     let last_desktop_appear = null;
     let last_mobile_appear = null;
+    let ref = createRef();
     return {
+      close() {
+        ref.current && ref.current.setClose(true);
+      },
+
       reset() {
         render(h("div", null), my_ele);
         this.forceUpdate();
@@ -385,6 +391,7 @@ export let CampTemp = {
         let onclose = option.onClose || (() => true);
 
         return render(h(Template, {
+          ref: ref,
           template: option.template,
           page: option.page,
           select: option.select,
