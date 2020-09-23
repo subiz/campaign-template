@@ -1,10 +1,11 @@
 {
 	"name": "@subiz/campaign-template",
-	"version": "2.0.6",
+	"version": "2.0.7",
 	"main": "./dist/index.js",
 	"scripts": {
 		"dev": "webpack-dev-server --mode=development",
-		"build": "rm -rf dist && cp src dist -R && npx babel --out-dir=dist src"
+		"build": "rm -rf dist && cp src dist -R && npx babel --out-dir=dist src",
+		"report": "npx webpack --mode=production"
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.11.6",
@@ -25,10 +26,8 @@
 		"file-loader": "^6.1.0",
 		"less": "^3.12.0",
 		"less-loader": "^7.0.1",
-		"style-loader": "^1.2.1",
-		"to-string-loader": "^1.1.6",
-		"preact": "^10.4.8",
+		"normalize.css": "^8.0.1",
 		"object-path": "^0.11.4",
-		"normalize.css": "^8.0.1"
+		"preact": "^10.4.8"
 	}
 }
