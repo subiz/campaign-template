@@ -1498,7 +1498,38 @@ thành công mới`,
 			background_image: 'url(' + require('../../assets/background/template30_mobile.png').default + ')',
 		},
 	},
-
+	template58: {
+		css: () => import(/*webpackChunkName: "template58_css" */ '!css-loader!less-loader!./template58.less'),
+		text: {
+			name: {vi: 'Mẫu 58: Khuyến mãi', en: 'Template 58: Promotion'},
+			title: {
+				vi: 'Beauty Kits',
+				en: 'Beauty Kits',
+			},
+			description: {
+				vi: 'Trợ thủ đắc lực cho ngày dài bận rộn',
+				en: 'Effective assistant for your long busy days',
+			},
+			primary_button: {vi: 'KHÁM PHÁ NGAY', en: 'SHOP NOW'},
+		},
+		desktop_appearance: {
+			title_color: '#3F3327',
+			description_color: '#3F3327',
+			background: 'transparent',
+			primary_button_background: '#3F3327',
+			primary_button_color: 'white',
+			title_text_transform: 'none',
+			title_font_family: 'Roboto',
+			title_font_weight: '700',
+			title_font_size: '36px',
+			description_font_size: '24px',
+			description_font_family: 'Roboto',
+		},
+		mobile_appearance: {
+			title_font_size: '36px',
+			description_font_size: '24px',
+		},
+	},
 	template59: {
 		css: () => import(/*webpackChunkName: "template59_css" */ '!css-loader!less-loader!./template59.less'),
 		text: {
