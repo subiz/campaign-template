@@ -20,8 +20,8 @@ const MODE = mobilecheck() ? 'mobile' : 'desktop'
 function load () {
 	let page = {
 		animation: 'bounceIn',
-		title: 'Đăng ký để nhận ưu đãi đặc biệt',
-		description: 'Giảm 20% chỉ một ngày duy nhất. Đăng ký ngay để nhận được mã giảm giá!',
+ 		// title: 'Đăng ký để nhận ưu đãi đặc biệt',
+		// description: 'Giảm 20% chỉ một ngày duy nhất. Đăng ký ngay để nhận được mã giảm giá!',
 		form: {
 			enabled: true,
 			fields: [

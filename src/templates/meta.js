@@ -1498,6 +1498,40 @@ thành công mới`,
 			background_image: 'url(' + require('../../assets/background/template30_mobile.png').default + ')',
 		},
 	},
+
+	template59: {
+		css: () => import(/*webpackChunkName: "template59_css" */ '!css-loader!less-loader!./template59.less'),
+		text: {
+			name: {vi: 'Khuyến mãi', en: 'Promotion'},
+			title: {
+				vi: 'Cần làm điệu? Săn ngay deal',
+				en: 'The basic skin care starter pack',
+			},
+			description: {
+				vi: 'Chính thức mở bán set trang điểm, giảm 50%',
+				en: 'Officially open for sale, 50% off every product',
+			},
+			primary_button: {vi: 'MUA NGAY', en: 'SHOP NOW'},
+		},
+		desktop_appearance: {
+			title_color: '#1F2E22',
+			description_color: '#1F2E22',
+			background: 'white',
+			primary_button_background: '#1F2E22',
+			primary_button_color: 'white',
+
+			title_text_transform: 'uppercase',
+			title_font_family: 'Roboto',
+			title_font_weight: '500',
+			title_font_size: '36px',
+			description_font_size: '24px',
+			description_font_family: 'Roboto',
+		},
+		mobile_appearance: {
+			title_font_size: '48px',
+			description_font_size: '16px',
+		},
+	}
 }
 
 // add default js load function for any template dont has custom template
