@@ -1498,6 +1498,39 @@ thành công mới`,
 			background_image: 'url(' + require('../../assets/background/template30_mobile.png').default + ')',
 		},
 	},
+	template41: {
+		css: () =>
+			import(/*webpackChunkName: "template202009021_css" */ '!css-loader!less-loader!./template41.less'),
+		type: 'modal',
+		text: {
+			name: {vi: 'Mẫu 41: Đăng ký lái thử', en: 'Template 41: Schedule a test drive'},
+			title: {
+				vi: 'Đăng ký lái thử xe ngay hôm nay',
+				en: 'Schedule a test drive near you',
+			},
+			description: {
+				vi: 'Vui lòng cung cấp thông tin, chúng tôi sẽ liên hệ ngay với bạn',
+				en: 'Please leave your contacts below and we will get back to you soon',
+			},
+			primary_button: {vi: 'Đăng ký ngay', en: 'Register Now'},
+		},
+		desktop_appearance: {
+			title_color: '#322626',
+			description_color: '#000',
+			background: 'white',
+			primary_button_background: '#302828',
+			primary_button_color: '#fff',
+			input_color: '#000',
+			input_background: 'none',
+			title_font_size: '36px',
+			title_font_weight: '700',
+			title_font_family: 'Roboto',
+			title_text_transform: 'none',
+			description_font_size: '16px',
+			description_font_family: 'Roboto',
+			input_border_color: 'rgba(0, 0, 0, 0.5)',
+		},
+	},
 	template58: {
 		css: () => import(/*webpackChunkName: "template58_css" */ '!css-loader!less-loader!./template58.less'),
 		text: {
@@ -1550,7 +1583,6 @@ thành công mới`,
 			background: 'white',
 			primary_button_background: '#1F2E22',
 			primary_button_color: 'white',
-
 			title_text_transform: 'uppercase',
 			title_font_family: 'Roboto',
 			title_font_weight: '500',
