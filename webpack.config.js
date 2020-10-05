@@ -10,6 +10,10 @@ module.exports = {
 			template: 'index.html',
 		}),
 	],
+	devServer: {
+		port: 8082,
+		host: '0.0.0.0',
+	},
 	optimization: {
 		minimize: false,
 	},
