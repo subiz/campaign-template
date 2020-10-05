@@ -1528,8 +1528,8 @@ thành công mới`,
 			description_font_family: 'Roboto',
 		},
 		mobile_appearance: {
-			title_font_size: '48px',
-			description_font_size: '16px',
+			title_font_size: '36px',
+			description_font_size: '24px',
 		},
 	}
 }
