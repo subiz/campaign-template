@@ -26,8 +26,9 @@
 	}
 
 	.mobile .container {
-		border-radius: 0;
-		overflow: auto;
+		background-color: transparent;
+		margin-top: 16px;
+		margin-bottom: 16px;
 	}
 
 	.container__inner {
@@ -42,16 +43,16 @@
 	}
 
 	.content {
-		overflow: hidden;
+		overflow: auto;
 		display: flex;
 		flex-direction: column;
-		margin-top: 45px;
-		margin-bottom: 40px;
+		padding: 45px 0 40px 0;
 		flex: 1;
 	}
 	.mobile .content {
 		padding: 24px;
 		background-color: @background;
+		position: relative;
 		z-index: 1;
 		margin: 0;
 		border-radius: 0;
@@ -86,6 +87,8 @@
 
 	.form {
 		padding: 0 48px;
+		overflow: visible;
+		min-height: unset;
 	}
 
 	.form-field .label,
@@ -143,7 +146,8 @@
 
 	.btn--primary {
 		font-size: 16px;
-		font-weight: bold;
+		font-weight: 700;
+		width: 100%;
 	}
 
 	.btn--secondary {
@@ -152,6 +156,10 @@
 
 	.buttons {
 		margin-top: 24px;
+	}
+
+	.mobile .buttons {
+		padding: 0;
 	}
 }
 #sbz-pop .template.template41 {
