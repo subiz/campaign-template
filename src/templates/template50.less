@@ -7,8 +7,7 @@
 		// position: fixed;
 	}
 	.background {
-		max-height: 100%;
-		flex: 1;
+		display: none;
 	}
 
 	.mobile .background {
@@ -24,9 +23,7 @@
 		display: flex;
 		max-height: 90%;
 		max-width: 90%;
-		width: 800px;
-		border-radius: 12px;
-		overflow: hidden;
+		width: 400px;
 	}
 
 	.mobile .container {
@@ -40,21 +37,17 @@
 
 	.container__inner {
 		display: flex;
+    	flex-direction: column;
 		max-height: 100%;
 	}
 	.mobile .container__inner {
-		// flex-direction: column;
-		padding: 24px;
 		position: relative;
 		background-color: transparent;
 	}
 
 	.content {
 		overflow: auto;
-		display: flex;
-		flex-direction: column;
-		padding: 45px 0 40px 0;
-		flex: 1;
+		padding: 53px 48px;
 	}
 	.mobile .content {
 		padding: 24px;
@@ -63,6 +56,7 @@
 		z-index: 1;
 		margin: 0;
 		border-radius: 0;
+		overflow: auto;
 	}
 	.mobile .title,
 	.mobile .description,
@@ -71,12 +65,16 @@
 	}
 
 	.title {
-		margin-bottom: 20px;
-		padding: 0 48px;
+		margin-bottom: 6px;
+		line-height: 28px;
 	}
 
 	.mobile .title {
-		margin-bottom: 16px;
+		margin-bottom: 12px;
+	}
+
+	.description {
+		line-height: 24px;
 	}
 
 	.title-separator {
@@ -87,15 +85,17 @@
 		background-color: @mobile_primary_button_background;
 	}
 
-	.description {
-		padding: 0 48px;
-		margin-bottom: 0;
+	.form {
+		padding: 0;
 	}
 
-	.form {
-		padding: 0 48px;
-		overflow: visible;
-		min-height: unset;
+	.form-field {
+		flex: 1;
+		margin-right: 16px;
+	}
+
+	.mobile .form-file {
+		margin-right: 0;
 	}
 
 	.form-field .label,
@@ -160,14 +160,16 @@
 	}
 
 	.buttons {
-		margin-top: 24px;
-		padding: 0 48px;
+		margin-top: 28px;
+		padding: 0;
 	}
 
 	.mobile .buttons {
 		padding: 0;
+		min-width: 100%;
+		max-width: 100%;
 	}
 }
-#sbz-pop .template.template41 {
+#sbz-pop .template.template50 {
 	#template() !important;
 }

@@ -7,8 +7,7 @@
 		// position: fixed;
 	}
 	.background {
-		max-height: 100%;
-		flex: 1;
+		height: 260px;
 	}
 
 	.mobile .background {
@@ -25,8 +24,6 @@
 		max-height: 90%;
 		max-width: 90%;
 		width: 800px;
-		border-radius: 12px;
-		overflow: hidden;
 	}
 
 	.mobile .container {
@@ -40,6 +37,7 @@
 
 	.container__inner {
 		display: flex;
+		flex-direction: column;
 		max-height: 100%;
 	}
 	.mobile .container__inner {
@@ -52,8 +50,9 @@
 	.content {
 		overflow: auto;
 		display: flex;
-		flex-direction: column;
-		padding: 45px 0 40px 0;
+		// flex-direction: column;
+		flex-wrap: wrap;
+		padding: 40px 0 48px 0;
 		flex: 1;
 	}
 	.mobile .content {
@@ -71,12 +70,16 @@
 	}
 
 	.title {
-		margin-bottom: 20px;
+		margin-bottom: 6px;
 		padding: 0 48px;
 	}
 
 	.mobile .title {
 		margin-bottom: 16px;
+	}
+
+	.description {
+		line-height: 36px;
 	}
 
 	.title-separator {
@@ -93,9 +96,30 @@
 	}
 
 	.form {
-		padding: 0 48px;
+		padding-left: 48px;
+		padding-right: 0;
 		overflow: visible;
 		min-height: unset;
+		display: inline-flex;
+		justify-content: space-between;
+		min-width: ~'calc(100% * 2 / 3)';
+		max-width: 75%;
+	}
+
+	.mobile .form {
+		display: flex;
+		min-width: 100%;
+		max-width: 100%;
+		flex-direction: column;
+	}
+
+	.form-field {
+		flex: 1;
+		margin-right: 16px;
+	}
+
+	.mobile .form-file {
+		margin-right: 0;
 	}
 
 	.form-field .label,
@@ -160,14 +184,21 @@
 	}
 
 	.buttons {
-		margin-top: 24px;
-		padding: 0 48px;
+		flex: 1;
+		margin-top: 39px;
+		min-width: 25%;
+		max-width: ~'calc(100% / 3)';
+		padding-left: 0;
+		padding-right: 48px;
 	}
 
 	.mobile .buttons {
 		padding: 0;
+		min-width: 100%;
+		max-width: 100%;
+		margin-top: 24px;
 	}
 }
-#sbz-pop .template.template41 {
+#sbz-pop .template.template47 {
 	#template() !important;
 }

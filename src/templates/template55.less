@@ -1,0 +1,127 @@
+@import './font.less';
+
+#template() {
+    @import './base.less';
+
+    .container {
+		width: 616px;
+		position: relative;
+		display: flex;
+		max-height: 95%;
+		max-width: 90%;
+		min-height: 520px;
+		background: transparent;
+	}
+
+	.container__inner {
+		display: flex;
+		// align-items: center;
+		background: transparent;
+	}
+	.mobile .container__inner {
+		margin-top: 0;
+		align-items: center;
+	}
+
+	.background {
+		border-radius: 12px;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+	}
+	.content {
+		position: relative;
+		z-index: 2;
+		background-color: #fff;
+		padding: 57px 49px;
+	}
+
+	.desktop .content {
+        width: 100%;
+	}
+
+	.mobile .content {
+		padding: 24px;
+	}
+
+	.title {
+		text-align: center;
+		line-height: 42px;
+		margin-bottom: 8px;
+	}
+
+	.description {
+		text-align: center;
+		line-height: 24px;
+		margin-bottom: 17px;
+	}
+	.mobile .description {
+		margin-bottom: 5px;
+	}
+	.form {
+		padding: 0 64px;
+	}
+	.mobile .form {
+		padding: 0;
+	}
+	.label {
+		display: none;
+	}
+	input[type='text'] {
+		height: 42px;
+		border: 1px solid @input_border_color;
+		border-radius: 4px;
+		padding: 0 15px;
+		font-size: 16px;
+		font-family: 'Roboto';
+	}
+
+	.buttons {
+		flex-direction: column;
+		padding: 0 64px;
+		margin-top: 8px;
+	}
+	.mobile .buttons {
+		padding: 0;
+	}
+	.mobile .buttons {
+		padding: 0 49px;
+	}
+	.btn.btn--primary {
+		font-size: 16px;
+		line-height: 38px;
+		font-weight: bold;
+		font-family: 'Roboto';
+		text-transform: uppercase;
+		border-radius: 4px;
+		min-height: 42px;
+		padding-top: 2px;
+		padding-bottom: 2px;
+		width: 100%;
+	}
+
+	.desktop .btn.btn--primary {
+		padding-left: 55px;
+		padding-right: 55px;
+	}
+	.mobile .btn.btn--primary {
+		width: 100%;
+	}
+	.btn.btn--secondary {
+		display: none;
+		font-size: 16px;
+		line-height: 24px;
+		color: #fff;
+		-webkit-text-fill-color: #fff;
+		font-weight: 400;
+		padding: 0;
+	}
+}
+
+#sbz-pop .template.template55 {
+	#template() !important;
+}
