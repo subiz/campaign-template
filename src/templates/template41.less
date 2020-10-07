@@ -2,22 +2,12 @@
 
 #template() {
 	@import './base.less';
-	// .mobile .overlay {
-	// 	bottom: unset;
-	// 	height: 100%;
-	// }
 	.background {
 		max-height: 100%;
+		top: 0;
+		left: 0;
+		width: 50%;
 	}
-
-	// .mobile .background {
-	// 	position: absolute;
-	// 	top: 0;
-	// 	left: 0;
-	// 	width: 100%;
-	// 	height: 100%;
-	// 	object-fit: cover;
-	// }
 
 	.container {
 		max-height: 90%;
@@ -26,27 +16,6 @@
 		border-radius: 12px;
 		overflow: hidden;
 	}
-
-	// .mobile .container {
-	// 	background-color: transparent;
-	// 	margin: 16px;
-	// 	max-width: ~'calc(100% - 32px)';
-	// 	max-height: ~'calc(100% - 32px)';
-	// 	position: absolute;
-	// 	// margin-bottom: 16px;
-	// }
-
-	.container__inner {
-		display: flex;
-		max-height: 100%;
-	}
-	// .mobile .container__inner {
-	// 	// flex-direction: column;
-	// 	padding: 24px;
-	// 	position: relative;
-	// 	background-color: transparent;
-	// }
-
 	.content {
 		overflow: auto;
 		display: flex;
@@ -54,29 +23,13 @@
 		padding: 45px 0 40px 0;
 		flex: 1;
 	}
-	// .mobile .content {
-	// 	padding: 24px;
-	// 	background-color: @background;
-	// 	position: relative;
-	// 	z-index: 1;
-	// 	margin: 0;
-	// 	border-radius: 0;
-	// }
-	// .mobile .title,
-	// .mobile .description,
-	// .mobile .form {
-	// 	padding: 0;
-	// }
-
-	// .title {
-	// 	margin-bottom: 20px;
-	// 	padding: 0 48px;
-	// }
-
-	// .mobile .title {
-	// 	margin-bottom: 16px;
-	// }
-
+	.body {
+		margin-left: auto;
+		padding: 48px 60px;
+	}
+	.title {
+		margin-bottom: 20px;
+	}
 	.title-separator {
 		display: none;
 	}
@@ -86,12 +39,10 @@
 	}
 
 	.description {
-		padding: 0 48px;
 		margin-bottom: 0;
 	}
 
 	.form {
-		padding: 0 48px;
 		overflow: visible;
 		min-height: unset;
 	}
@@ -99,11 +50,11 @@
 	.form-field .label,
 	.form-field .radio--label,
 	.form-field .form-check-label {
-		font-family: @description_font_family;
+		font-family: 'Roboto';
 	}
 
 	.form-field .text-input {
-		font-family: @description_font_family;
+		font-family: 'Roboto';
 		font-size: 16px;
 		height: 42px;
 		padding: 0 15px;
@@ -159,12 +110,7 @@
 
 	.buttons {
 		margin-top: 24px;
-		padding: 0 48px;
 	}
-
-	// .mobile .buttons {
-	// 	padding: 0;
-	// }
 }
 #sbz-pop .template.template41 {
 	#template() !important;

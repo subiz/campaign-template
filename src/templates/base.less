@@ -198,7 +198,7 @@ input {
 
 .body {
 	background: @background;
-	width: 100%;
+	width: 50%;
 }
 
 .mobile .body {
@@ -206,6 +206,7 @@ input {
 	position: relative;
 	z-index: 1;
 	padding: 24px;
+	width: 100%;
 	max-height: ~'calc(100% - 80px)';
 	overflow: auto;
 }
@@ -216,12 +217,13 @@ input {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
+	position: absolute;
+	height: 100%;
 }
 
 .mobile .background {
 	background: @mobile_background;
 	background-image: @mobile_background_image;
-	position: absolute;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -267,8 +269,8 @@ input {
 .buttons {
 	display: flex;
 	flex-shrink: 0;
-	padding-left: @spacer;
-	padding-right: @spacer;
+	// padding-left: @spacer;
+	// padding-right: @spacer;
 	margin-top: 30px;
 	align-items: center;
 	justify-content: center;
