@@ -148,9 +148,9 @@ let meta = {
 			title_font_size: '16px',
 			title_font_family: 'Muli',
 
-			title_font_size: '28px',
-			title_font_family: 'Montserrat',
-			title_font_weight: '700',
+			description_font_size: '28px',
+			description_font_family: 'Montserrat',
+			description_font_weight: '700',
 
 			input_border_color: '#d9d9d9',
 		},

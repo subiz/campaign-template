@@ -21,7 +21,6 @@
 @description_text_transform          : '@desktop_appearance.description_text_transform';
 @input_label_color                   : '@desktop_appearance.input_label_color';
 @input_border_color                  : '@desktop_appearance.input_border_color';
-@popup_border_radius				 : '@desktop_appearance.popup_border_radius';
 // mobile
 @mobile_overlay                      : '@mobile_appearance.overlay';
 @mobile_title_color                  : '@mobile_appearance.title_color';
@@ -48,6 +47,7 @@
 @mobile_input_border_color           : '@mobile_appearance.input_border_color';
 
 @spacer                              : 35px;
+@popup_border_radius				         : 12px;
 
 @import '../node_modules/normalize.css/normalize.css';
 @import './animate.less';
@@ -144,6 +144,7 @@ input {
 
 .title {
 	.color(@title_color);
+	flex-shink: 0;
 	white-space: pre-wrap;
 	text-transform: @title_text_transform;
 	font-family: @title_font_family;
@@ -164,6 +165,7 @@ input {
 .description {
 	.color(@description_color);
 	white-space: pre-wrap;
+	flex-shink: 0;
 	text-transform: @description_text_transform;
 	font-family: @description_font_family;
 	font-size: @description_font_size;
@@ -198,7 +200,11 @@ input {
 
 .body {
 	background: @background;
-	width: 50%;
+	width: 100%;
+	overflow: auto;
+
+	display: flex;
+	flex-direction: column;
 }
 
 .mobile .body {
@@ -208,7 +214,6 @@ input {
 	padding: 24px;
 	width: 100%;
 	max-height: ~'calc(100% - 80px)';
-	overflow: auto;
 }
 
 .background {
@@ -229,6 +234,8 @@ input {
 	right: 0;
 	bottom: 0;
 	width: 100%;
+	border-radius: @popup_border_radius;
+
 }
 
 .btn.btn_close {
@@ -259,6 +266,7 @@ input {
 
 .form {
 	min-height: 100px;
+	flex-shrink: 0;
 }
 
 .mobile .form {
@@ -269,8 +277,6 @@ input {
 .buttons {
 	display: flex;
 	flex-shrink: 0;
-	// padding-left: @spacer;
-	// padding-right: @spacer;
 	margin-top: 30px;
 	align-items: center;
 	justify-content: center;
@@ -280,6 +286,7 @@ input {
 }
 
 .mobile .buttons {
+	flex-direction: column;
 	padding: 0;
 }
 
@@ -309,6 +316,9 @@ input {
 .mobile .btn.btn--primary {
 	background: @mobile_primary_button_background;
 	.color(@mobile_primary_button_color);
+
+	width: 100%;
+	margin: 0;
 }
 
 .btn.btn--secondary {
@@ -324,6 +334,9 @@ input {
 .mobile .btn.btn--secondary {
 	background: @mobile_secondary_button_background;
 	.color(@mobile_secondary_button_color);
+
+	width: 100%;
+	margin: 15px 0 0 0;
 }
 
 .form-field {
@@ -490,4 +503,8 @@ input {
 	100% {
 		transform: skewX(0deg);
 	}
+}
+
+.title-separator {
+	flex-shink: 0;
 }
