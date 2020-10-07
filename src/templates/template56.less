@@ -32,8 +32,7 @@
 	}
 
 	.background {
-		border-radius: 12px;
-
+		border-radius: 0;
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -57,6 +56,7 @@
 	.mobile .content {
 		padding: 24px;
 		max-height: 100%;
+		overflow: auto;
 	}
 
 	.title {
@@ -81,6 +81,8 @@
 	}
 	.mobile .form {
 		padding: 0;
+		flex: unset;
+		width: 100%;
 	}
 	.label {
 		display: none;
@@ -94,6 +96,10 @@
 		font-family: 'Roboto';
 		border-right: none;
 	}
+	.mobile input[type='text'] {
+		border: 1px solid @input_border_color;
+		border-radius: 4px;
+	}
 
 	.buttons {
 		flex-direction: column;
@@ -104,9 +110,9 @@
 	}
 	.mobile .buttons {
 		padding: 0;
-	}
-	.mobile .buttons {
-		padding: 0 49px;
+		flex: unset;
+		margin-top: 8px;
+		width: 100%;
 	}
 	.btn.btn--primary {
 		font-size: 16px;
@@ -120,6 +126,7 @@
 	}
 	.mobile .btn.btn--primary {
 		width: 100%;
+		border-radius: 4px;
 	}
 	.btn.btn--secondary {
 		display: none;

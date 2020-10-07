@@ -1982,6 +1982,39 @@ thành công mới`,
 			input_border_color: 'rgba(0, 0, 0, .5)'
 		}
 	},
+	template57: {
+		css: () =>
+			import(/*webpackChunkName: "template57_css" */ '!css-loader!less-loader!./template57.less'),
+		type: 'modal',
+		text: {
+			name: {vi: 'Mẫu 57: Đặt lịch làm đẹp', en: 'Template 57: Register to book an appoinment'},
+			title: {
+				vi: 'Thay đổi diện mạo, đẹp chuẩn sao',
+				en: 'Book an appointment and get 15% off',
+			},
+			description: {
+				vi: 'Để lại số điện thoại để nhận ngay voucher giảm giá 500k và được tư vấn miến phí',
+				en: 'Please leave your contacts here for a free consultation and receive a 15% discount voucher right away',
+			},
+			primary_button: {vi: 'ĐĂNG KÝ', en: 'REGISTER'},
+		},
+		desktop_appearance: {
+			title_color: '#582C37',
+			description_color: '#361B22',
+			background: 'white',
+			primary_button_background: '#673340',
+			primary_button_color: '#fff',
+			input_color: '#000',
+			input_background: 'none',
+			title_font_size: '36px',
+			title_font_weight: '700',
+			title_font_family: 'Yeseva One',
+			title_text_transform: 'none',
+			description_font_size: '16px',
+			description_font_family: 'Roboto',
+			input_border_color: 'rgba(0, 0, 0, 0.5)',
+		},
+	},
 	template58: {
 		css: () => import(/*webpackChunkName: "template58_css" */ '!css-loader!less-loader!./template58.less'),
 		text: {
@@ -2045,7 +2078,71 @@ thành công mới`,
 			title_font_size: '36px',
 			description_font_size: '24px',
 		},
-	}
+	},
+	template60: {
+		css: () =>
+			import(/*webpackChunkName: "template60_css" */ '!css-loader!less-loader!./template60.less'),
+		type: 'modal',
+		text: {
+			name: {vi: 'Mẫu 60: Đặt lịch làm đẹp', en: 'Template 60: Register to book an appoinment'},
+			title: {
+				vi: 'Nhận ngay voucher ưu đãi 500K tháng 7',
+				en: 'Get 50$ off your next appointment',
+			},
+			description: {
+				vi: 'Để lại thông tin để được tư vấn gói dịch vụ phù hợp',
+				en: 'Please leave your contacts here, we will get back to you soon',
+			},
+			primary_button: {vi: 'Nhận voucher', en: 'Get the voucher'},
+		},
+		desktop_appearance: {
+			title_color: '#462F25',
+			description_color: '#281B15',
+			background: 'white',
+			primary_button_background: '#462F25',
+			primary_button_color: '#fff',
+			input_color: '#000',
+			input_background: 'none',
+			title_font_size: '36px',
+			title_font_weight: '700',
+			title_font_family: 'Roboto',
+			title_text_transform: 'none',
+			description_font_size: '24px',
+			description_font_family: 'Roboto',
+			input_border_color: 'rgba(0, 0, 0, 0.5)',
+		},
+	},
+	template61: {
+		css: () => import(/*webpackChunkName: "template61_css" */ '!css-loader!less-loader!./template61.less'),
+		text: {
+			name: {vi: 'Mẫu 61: Khuyến mãi', en: 'Template 61: Promotion'},
+			title: {
+				vi: 'sản phẩm mới dành riêng cho bạn',
+				en: 'New, Amazing Stuff is Here',
+			},
+			description: {
+				vi: 'Mua ngay hôm nay để được giảm giá 20%',
+				en: 'Shop today and get 20% discount',
+			},
+			primary_button: {vi: 'MUA NGAY', en: 'SHOP NOW'},
+			secondary_button: {vi: 'Tôi không quan tâm thông tin này', en: 'No, thanks! I’m not interested'}
+		},
+		desktop_appearance: {
+			title_color: '#FFFFFF',
+			description_color: '#FFFFFF',
+			background: 'transparent',
+			primary_button_background: '#FFB033',
+			primary_button_color: '#241869',
+			secondary_button_color: '#B4BAFD',
+			title_text_transform: 'uppercase',
+			title_font_family: 'Roboto',
+			title_font_weight: '700',
+			title_font_size: '36px',
+			description_font_size: '24px',
+			description_font_family: 'Roboto',
+			description_font_weight: '500'
+		}
+	},
 }
 
 // add default js load function for any template dont has custom template
