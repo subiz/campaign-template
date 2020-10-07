@@ -2,112 +2,93 @@
 
 #template() {
 	@import './base.less';
-	.background {
-		max-height: 100%;
-		width: 450px;
-	}
 
-	.mobile .background {
+	.background {
+		flex: 1;
+		padding: 42px 36px;
+		max-height: 100%;
+		border-top-right-radius: @popup_border_radius;
+		border-bottom-right-radius: @popup_border_radius;
+		background-position: left;
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 100%;
 		width: 50%;
-		height: 245px;
-		margin-left: 50%;
 	}
 
 	.container {
 		display: flex;
-		max-height: 95%;
-		width: 850px;
+		width: 800px;
+		max-height: 90%;
 	}
 
-	.mobile .container {
-		max-width: 90%;
-	}
+	.body {
+		padding: 42px 36px;
+		flex: 1;
 
-	.container__inner {
-		display: flex;
-		flex-direction: row-reverse;
 		max-height: 100%;
+		width: 50%;
+		max-width: 50%;
+		border-top-left-radius: @popup_border_radius;
+		border-bottom-left-radius: @popup_border_radius;
+	}
+
+	.mobile .body {
+		border-top-left-radius: unset;
+		border-bottom-left-radius: unset;
 		width: 100%;
-	}
-
-	.mobile .container__inner {
-		flex-direction: column;
-		position: relative;
-	}
-
-	.content {
-		display: flex;
-		flex-direction: column;
-		float: right;
-		margin-top: 45px;
-		margin-bottom: 45px;
-		width: 400px;
-		max-height: ~'calc(100% - 90px)';
-	}
-	.mobile .content {
-		margin-top: 20px;
-		margin-bottom: 20px;
-		max-height: ~'calc(100% - 40px - 245px)';
 		max-width: 100%;
 	}
 
 	.title {
 		text-align: center;
 		margin-top: 10px;
-		padding-left: @spacer;
-		padding-right: @spacer;
-		margin: unset;
 	}
 
-	.mobile .title {
-		position: absolute;
-		top: 50px;
-		left: 0px;
-		max-width: 50%;
-		padding-left: @spacer;
-		padding: unset;
+	.title-separator {
+		display:none;
 	}
 
 	.description {
-		padding-left: @spacer;
-		padding-right: @spacer;
 		margin-top: 10px;
-		margin-bottom: 10px;
 		text-align: center;
+		margin-bottom: 10px;
 	}
 
 	.label {
+		font-family: 'Muli';
+		font-size: 12px;
+		color: #000;
+		margin-top: unset;
 		display: none;
-		font-size: 14px;
 	}
-
 	.text-input {
 		border: none;
 		border-bottom: 1px solid @input_border_color;
 		width: 100%;
 		height: 30px;
-		font-size: 16px;
+		font-size: 14px;
 		outline: 0;
-		font-family: Roboto;
+		font-family: 'Muli';
+	}
+
+	.btn--primary {
+		font-size: 16px;
+		font-weight: bold;
+		text-transform: uppercase;
+		border-radius: 30px;
 	}
 
 	.buttons {
 		display: flex;
 		flex-direction: column;
-		padding-left: @spacer;
-		padding-right: @spacer;
 	}
 
-	.btn.btn--primary {
-		font-size: 16px;
-		border-radius: 50px;
-	}
-	.btn.btn--secondary {
-		font-size: 16px;
+	.btn--secondary {
+		font-size: 10px;
 		font-weight: 500;
-	}
-	.mobile .btn.btn--secondary {
-		font-size: 13px;
+		margin-left: 10px;
 	}
 }
 #sbz-pop .template.template13 {
