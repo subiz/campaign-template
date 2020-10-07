@@ -99,7 +99,7 @@ input {
 }
 
 .mobile .overlay {
-	display: block;
+	padding: 12px;
 	background: @mobile_overlay;
 }
 
@@ -144,6 +144,7 @@ input {
 
 .title {
 	.color(@title_color);
+	word-break: break-word;
 	flex-shink: 0;
 	white-space: pre-wrap;
 	text-transform: @title_text_transform;
@@ -165,6 +166,7 @@ input {
 .description {
 	.color(@description_color);
 	white-space: pre-wrap;
+	word-break: break-word;
 	flex-shink: 0;
 	text-transform: @description_text_transform;
 	font-family: @description_font_family;
@@ -192,7 +194,6 @@ input {
 
 .mobile .container {
 	background: @mobile_background;
-	margin: 16px;
 	padding: 24px;
 	max-width: unset;
 	max-height: unset;
@@ -213,7 +214,7 @@ input {
 	z-index: 1;
 	padding: 24px;
 	width: 100%;
-	max-height: ~'calc(100% - 80px)';
+	max-height: 100%;
 }
 
 .background {
@@ -222,8 +223,7 @@ input {
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
-	position: absolute;
-	height: 100%;
+	position: relative;
 }
 
 .mobile .background {
@@ -234,8 +234,10 @@ input {
 	right: 0;
 	bottom: 0;
 	width: 100%;
-	border-radius: @popup_border_radius;
+	height: 100%;
 
+	border-radius: @popup_border_radius;
+	position: absolute;
 }
 
 .btn.btn_close {
