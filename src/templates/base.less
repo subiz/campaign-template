@@ -21,6 +21,7 @@
 @description_text_transform          : '@desktop_appearance.description_text_transform';
 @input_label_color                   : '@desktop_appearance.input_label_color';
 @input_border_color                  : '@desktop_appearance.input_border_color';
+@popup_border_radius				 : '@desktop_appearance.popup_border_radius';
 // mobile
 @mobile_overlay                      : '@mobile_appearance.overlay';
 @mobile_title_color                  : '@mobile_appearance.title_color';
@@ -98,7 +99,7 @@ input {
 	right: 0;
 	background: #000c; //@overlay;
 	z-index: 20000000000100;
-  overflow: auto;
+  	overflow: auto;
 	display: flex; // so .container's margin auto can work
 }
 
@@ -179,6 +180,7 @@ input {
 	font-size: @mobile_description_font_size;
 	font-style: @mobile_description_font_style;
 	font-weight: @mobile_description_font_weight;
+	padding: 0;
 }
 
 .container {
@@ -190,7 +192,10 @@ input {
 
 .mobile .container {
 	background: @mobile_background;
-	max-height: unset;
+	margin: 16px;
+	padding: 24px;
+	max-width: 100%;
+	max-height: 100%;
 }
 
 .body {
@@ -205,7 +210,6 @@ input {
 .background {
 	background: @background;
 	background-image: @background_image;
-
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
@@ -214,6 +218,24 @@ input {
 .mobile .background {
 	background: @mobile_background;
 	background-image: @mobile_background_image;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.body {
+	
+}
+
+.mobile .body {
+	background: @background;
+	position: relative;
+	z-index: 1;
+	padding: 24px;
+	max-height: ~'calc(100% - 80px)';
+	overflow: auto;
 }
 
 .btn.btn_close {
@@ -250,6 +272,7 @@ input {
 
 .mobile .form {
 	flex-shrink: 0;
+	padding: 0;
 }
 
 .buttons {

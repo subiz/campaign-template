@@ -1,0 +1,48 @@
+@import './font.less';
+
+#template() {
+    @import './base.less';
+
+    .container {
+		width: 800px;
+		position: relative;
+		display: flex;
+		max-height: 95%;
+		max-width: 90%;
+		min-height: 520px;
+		background: transparent;
+	}
+
+	.container__inner {
+		display: flex;
+		// align-items: center;
+        background: transparent;
+	}
+	.background {
+		width: 100%;
+	}
+	.content {
+		display: none;
+	}
+
+	.title {
+		display: none;
+	}
+	.description {
+		display: none;
+	}
+	.form {
+		display: none;
+	}
+
+	.buttons {
+		display: none;
+	}
+	.desktop .btn.btn_close {
+		background-color: #000;
+	}
+}
+
+#sbz-pop .template.template62 {
+	#template() !important;
+}

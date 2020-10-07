@@ -2143,6 +2143,24 @@ thành công mới`,
 			description_font_weight: '500'
 		}
 	},
+	template62: {
+		css: () => import(/*webpackChunkName: "template62_css" */ '!css-loader!less-loader!./template62.less'),
+		text: {
+			name: {vi: 'Mẫu 62: Khuyến mãi', en: 'Template 62: Promotion'},
+			title: {
+				vi: '',
+				en: '',
+			},
+			description: {
+				vi: '',
+				en: '',
+			},
+			primary_button: {vi: '', en: ''},
+		},
+		desktop_appearance: {
+			background: 'transparent',
+		}
+	},
 }
 
 // add default js load function for any template dont has custom template
