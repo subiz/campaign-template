@@ -240,7 +240,7 @@ let meta = {
 		text: {
 			name: {vi: 'Form đăng ký nhận ưu đãi', en: 'Sign up offer'},
 			title: {
-				vi: 'Đăng ký để nhận ưu đãi đặc biệt',
+				vi: 'Giảm 30%',
 				en: 'Sign up to get special offer',
 			},
 			description: {
@@ -261,7 +261,7 @@ let meta = {
 			input_color: '',
 			input_background: '',
 
-			title_font_family: 'Montserrat',
+			title_font_family: 'Yeseva One',
 			title_font_size: '48px',
 			title_font_weight: 'bold',
 
