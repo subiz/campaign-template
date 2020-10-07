@@ -199,6 +199,7 @@ input {
 	max-width: calc(100% - 32px);
 	max-height: calc(100% - 32px);
 	padding: 24px;
+	flex-direction: row;
 }
 
 .body {
@@ -227,6 +228,8 @@ input {
 }
 
 .mobile .background {
+	max-height: unset;
+
 	background: @mobile_background;
 	background-image: @mobile_background_image;
 	top: 0;
