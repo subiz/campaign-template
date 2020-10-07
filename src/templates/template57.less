@@ -3,74 +3,26 @@
 
 #template() {
 	@import './base.less';
-	.mobile .overlay {
-		// bottom: unset;
-		// position: fixed;
-	}
 	.background {
 		max-height: 100%;
 		width: 360px;
-	}
-
-	.mobile .background {
 		position: absolute;
 		top: 0;
-		left: 0;
-		width: 100%;
+		right: 0;
 		height: 100%;
-		object-fit: cover;
 	}
 
 	.container {
-		display: flex;
 		max-height: 90%;
 		max-width: 90%;
 		width: 800px;
 		overflow: hidden;
 	}
 
-	.mobile .container {
-		background-color: transparent;
-		margin: 16px;
-		max-width: ~'calc(100% - 32px)';
-		max-height: ~'calc(100% - 32px)';
-		position: absolute;
-		// margin-bottom: 16px;
-	}
-
-	.container__inner {
-		display: flex;
-		max-height: 100%;
-		flex-direction: row-reverse;
-	}
-	.mobile .container__inner {
-		// flex-direction: column;
-		padding: 24px;
-		position: relative;
-		background-color: transparent;
-	}
-
-	.content {
-		overflow: auto;
-		display: flex;
-		flex-direction: column;
+	.body {
+		width: calc(100% - 360px);
 		padding: 63px 60px;
-		flex: 1;
 	}
-	.mobile .content {
-		padding: 24px;
-		background-color: @background;
-		position: relative;
-		z-index: 1;
-		margin: 0;
-		border-radius: 0;
-	}
-	.mobile .title,
-	.mobile .description,
-	.mobile .form {
-		padding: 0;
-	}
-
 	.title {
 		margin-bottom: 24px;
 	}
@@ -101,11 +53,11 @@
 	.form-field .label,
 	.form-field .radio--label,
 	.form-field .form-check-label {
-		font-family: @description_font_family;
+		font-family: 'Roboto';
 	}
 
 	.form-field .text-input {
-		font-family: @description_font_family;
+		font-family: 'Roboto';
 		font-size: 16px;
 		height: 42px;
 		padding: 0;
@@ -161,11 +113,6 @@
 
 	.buttons {
 		margin-top: 36px;
-		padding: 0;
-	}
-
-	.mobile .buttons {
-		padding: 0;
 	}
 }
 #sbz-pop .template.template57 {

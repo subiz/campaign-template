@@ -9,20 +9,22 @@
 		display: flex;
 		max-height: 95%;
 		max-width: 90%;
-		min-height: 520px;
+		min-height: 480px;
 		background: transparent;
 	}
-
-	.container__inner {
-		display: flex;
-		// align-items: center;
-        background: transparent;
+	.mobile .container {
+		min-height: 300px;
 	}
+
 	.background {
 		width: 100%;
 	}
-	.content {
+	.body {
 		display: none;
+	}
+
+	.mobile .background {
+		background-size: contain;
 	}
 
 	.title {
@@ -38,8 +40,14 @@
 	.buttons {
 		display: none;
 	}
-	.desktop .btn.btn_close {
-		background-color: #000;
+	.btn.btn_close {
+		background-color: transparent;
+	}
+	.btn_close__icon {
+		fill: #FF4C3E;
+		stroke: #FF4C3E;
+		width: 30px;
+		height: 30px;
 	}
 }
 

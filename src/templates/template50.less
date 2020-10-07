@@ -27,41 +27,12 @@
 	}
 
 	.mobile .container {
-		background-color: transparent;
-		margin: 16px;
-		max-width: ~'calc(100% - 32px)';
-		max-height: ~'calc(100% - 32px)';
-		position: absolute;
-		// margin-bottom: 16px;
+		padding: 0;
 	}
 
-	.container__inner {
-		display: flex;
-    	flex-direction: column;
-		max-height: 100%;
-	}
-	.mobile .container__inner {
-		position: relative;
-		background-color: transparent;
-	}
-
-	.content {
+	.body {
 		overflow: auto;
 		padding: 53px 48px;
-	}
-	.mobile .content {
-		padding: 24px;
-		background-color: @background;
-		position: relative;
-		z-index: 1;
-		margin: 0;
-		border-radius: 0;
-		overflow: auto;
-	}
-	.mobile .title,
-	.mobile .description,
-	.mobile .form {
-		padding: 0;
 	}
 
 	.title {
@@ -101,11 +72,11 @@
 	.form-field .label,
 	.form-field .radio--label,
 	.form-field .form-check-label {
-		font-family: @description_font_family;
+		font-family: 'Roboto';
 	}
 
 	.form-field .text-input {
-		font-family: @description_font_family;
+		font-family: 'Roboto';
 		font-size: 16px;
 		height: 42px;
 		padding: 0 15px;

@@ -14,15 +14,8 @@
 		background: transparent;
 	}
 
-	.container__inner {
-		display: flex;
-		align-items: center;
-		background: transparent;
-	}
-
 	.background {
 		border-radius: 12px;
-
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -30,20 +23,20 @@
 		height: 100%;
 		z-index: 1;
 	}
-	.content {
+
+	.body {
 		position: relative;
 		text-align: center;
 		z-index: 2;
-	}
-
-	.desktop .content {
-		padding-right: 48px;
 		width: 40%;
 		margin-left: auto;
+		padding-right: 48px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 	}
-
-	.mobile .content {
-		padding: 0 24px;
+	.mobile .body {
+		padding: 0;
 	}
 
 	.title {
@@ -62,8 +55,6 @@
 
 	.mobile .description {
 		line-height: 36px;
-		padding-left: 20px;
-		padding-right: 20px;
 	}
 	.form {
 		display: none;
@@ -86,6 +77,9 @@
 		flex-direction: column;
 		padding: 0;
 	}
+	.mobile .buttons {
+		flex-direction: unset;
+	}
 	.btn.btn--primary {
 		font-size: 16px;
 		line-height: 19px;
@@ -100,9 +94,13 @@
 		padding-left: 30px;
 		padding-right: 30px;
 	}
+	.mobile .btn.btn--primary {
+		width: auto;
+		padding-left: 36px;
+		padding-right: 36px;
+	}
 	.btn.btn--secondary {
-		font-size: 14px;
-		line-height: 20px;
+		display: none
 	}
 }
 

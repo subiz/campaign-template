@@ -11,21 +11,13 @@
 		max-width: 90%;
 		min-height: 520px;
 		background: transparent;
+		overflow: hidden;
+		border-radius: @popup_border_radius;
 	}
-
-	.container__inner {
-		display: flex;
-		// align-items: center;
-        background: transparent;
-        margin-top: 89px;
+	.mobile .container {
+		padding: 20px;
 	}
-	.mobile .container__inner {
-		margin-top: 48px;
-	}
-
 	.background {
-		border-radius: 12px;
-
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -39,39 +31,34 @@
 		z-index: 2;
 	}
 
-	.desktop .content {
-        width: 100%;
+	.mobile .content {
+		padding: 0;
 	}
 
-	.mobile .content {
+	.body {
+		z-index: 1;
+		padding-top: 89px;
+		padding-left: 55px;
+		padding-right: 55px;
+	}
+
+	.mobile .body {
 		padding: 0;
 	}
 
 	.title {
 		text-align: center;
 		line-height: 48px;
-		padding: 0 55px;
 		margin-bottom: 40px;
-	}
-
-	.mobile .title {
-		padding: 24px;
-		margin-bottom: 28px;
 	}
 
 	.description {
 		text-align: center;
 		line-height: 36px;
-		padding: 0 65px;
+		padding: 0 10px;
 		margin-bottom: 44px;
 	}
-
-	.mobile .description {
-		line-height: 36px;
-		padding-left: 24px;
-		padding-right: 24px;
-		margin-bottom: 32px;
-	}
+	
 	.form {
 		display: none;
 		padding: 0;
@@ -115,6 +102,10 @@
 	.btn.btn--secondary {
 		font-size: 16px;
 		line-height: 24px;
+		padding: 0;
+	}
+	.mobile .btn.btn--secondary {
+		margin-top: 0;
 	}
 }
 

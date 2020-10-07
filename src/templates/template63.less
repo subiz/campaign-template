@@ -4,10 +4,10 @@
 	@import './base.less';
 	.background {
 		max-height: 100%;
-		width: 50%;
 		position: absolute;
 		top: 0;
 		left: 0;
+		width: 50%;
 		height: 100%;
 	}
 
@@ -15,14 +15,12 @@
 		max-height: 90%;
 		max-width: 90%;
 		width: 800px;
+		border-radius: 12px;
 		overflow: hidden;
 	}
 
-	.content {
-		overflow: auto;
-	}
-
 	.body {
+		overflow: auto;
 		width: 50%;
 		margin-left: auto;
 		padding: 48px;
@@ -60,12 +58,7 @@
 	}
 
 	.form-field .label {
-		padding: 0 8px;
-		background-color: @background;
-		width: fit-content;
-		margin-left: 8px;
-		margin-bottom: -5px;
-		z-index: 1;
+		display: none;
 	}
 
 	.form-field .text-input {
@@ -73,6 +66,10 @@
 		font-size: 16px;
 		height: 42px;
 		padding: 0 15px;
+		border-width: 0 0 1px 0;
+		border-color: rgba(0, 0, 0, .5);
+		border-radius: 0;
+		padding-left: 4px;
 	}
 
 	.form-field .form-check-input {
@@ -81,19 +78,18 @@
 
 	.form-field .form--list-container {
 		margin-top: 0;
-		border: solid 1px @input_border_color;
-		border-radius: 4px;
-		padding: 12px 15px;
 	}
 
-	.form-field .form--list-container .form-check:last-child {
-		padding-bottom: 0;
+	.form-template {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
-
-	.form-field .label + .form-check {
-		border: solid 1px @input_border_color;
-		border-radius: 4px;
-		padding: 12px 15px;
+	.form-item {
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+		margin-top: 15px;
 	}
 
 	.label {
@@ -131,15 +127,7 @@
 	.mobile .buttons {
 		padding: 0;
 	}
-
-	.btn.btn_close {
-		background-color: #000;
-	}
-
-	.mobile .btn.btn_close {
-		background-color: rgba(0, 0, 0, .3);
-	}
 }
-#sbz-pop .template.template45 {
+#sbz-pop .template.template63 {
 	#template() !important;
 }

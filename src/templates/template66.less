@@ -3,37 +3,32 @@
 #template() {
 	@import './base.less';
 	.background {
-		max-height: 100%;
-		width: 50%;
-		position: absolute;
-		top: 0;
-		left: 0;
-		height: 100%;
+		height: 260px;
+		position: relative;
 	}
 
 	.container {
 		max-height: 90%;
 		max-width: 90%;
 		width: 800px;
-		overflow: hidden;
-	}
-
-	.content {
-		overflow: auto;
 	}
 
 	.body {
-		width: 50%;
-		margin-left: auto;
+		overflow: auto;
+		display: flex;
+		flex-wrap: wrap;
 		padding: 48px;
 	}
-
 	.title {
-		margin-bottom: 20px;
+		margin-bottom: 6px;
 	}
 
 	.mobile .title {
 		margin-bottom: 16px;
+	}
+
+	.description {
+		line-height: 36px;
 	}
 
 	.title-separator {
@@ -51,21 +46,36 @@
 	.form {
 		overflow: visible;
 		min-height: unset;
+		display: inline-flex;
+		justify-content: space-between;
+		min-width: ~'calc(100% * 2 / 3)';
+		max-width: 75%;
+	}
+
+	.mobile .form {
+		display: flex;
+		min-width: 100%;
+		max-width: 100%;
+		flex-direction: column;
+	}
+
+	.form-field {
+		flex: 1;
+		margin-right: 16px;
+	}
+
+	.form-field:nth-child(n + 4) {
+		display: none;
+	}
+
+	.mobile .form-file {
+		margin-right: 0;
 	}
 
 	.form-field .label,
 	.form-field .radio--label,
 	.form-field .form-check-label {
 		font-family: 'Roboto';
-	}
-
-	.form-field .label {
-		padding: 0 8px;
-		background-color: @background;
-		width: fit-content;
-		margin-left: 8px;
-		margin-bottom: -5px;
-		z-index: 1;
 	}
 
 	.form-field .text-input {
@@ -81,19 +91,18 @@
 
 	.form-field .form--list-container {
 		margin-top: 0;
-		border: solid 1px @input_border_color;
-		border-radius: 4px;
-		padding: 12px 15px;
 	}
 
-	.form-field .form--list-container .form-check:last-child {
-		padding-bottom: 0;
+	.form-template {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
 	}
-
-	.form-field .label + .form-check {
-		border: solid 1px @input_border_color;
-		border-radius: 4px;
-		padding: 12px 15px;
+	.form-item {
+		display: flex;
+		width: 100%;
+		flex-direction: column;
+		margin-top: 15px;
 	}
 
 	.label {
@@ -125,21 +134,19 @@
 	}
 
 	.buttons {
-		margin-top: 24px;
+		flex: 1;
+		margin-top: 39px;
+		min-width: 25%;
+		max-width: ~'calc(100% / 3)';
 	}
 
 	.mobile .buttons {
 		padding: 0;
-	}
-
-	.btn.btn_close {
-		background-color: #000;
-	}
-
-	.mobile .btn.btn_close {
-		background-color: rgba(0, 0, 0, .3);
+		min-width: 100%;
+		max-width: 100%;
+		margin-top: 24px;
 	}
 }
-#sbz-pop .template.template45 {
+#sbz-pop .template.template66 {
 	#template() !important;
 }

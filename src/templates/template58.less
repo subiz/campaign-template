@@ -13,16 +13,12 @@
 		background: transparent;
 	}
 
-	.container__inner {
-		display: flex;
-		// align-items: center;
-        background: transparent;
-        margin-top: 56px;
+	.mobile .container {
+		padding: 0;
 	}
 
 	.background {
 		border-radius: 12px;
-
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -30,19 +26,16 @@
 		height: 100%;
 		z-index: 1;
 	}
-	.content {
+
+	.body {
 		position: relative;
 		text-align: center;
 		z-index: 2;
+		padding: 56px 48px;
 	}
 
-	.desktop .content {
-        width: 100%;
-        padding: 0 48px;
-	}
-
-	.mobile .content {
-		padding: 0 24px;
+	.mobile .body {
+		padding-top: 56px;
 	}
 
 	.title {
@@ -61,8 +54,6 @@
 
 	.mobile .description {
 		line-height: 36px;
-		padding-left: 24px;
-		padding-right: 24px;
 	}
 	.form {
 		display: none;
@@ -98,10 +89,6 @@
 	.desktop .btn.btn--primary {
 		padding-left: 24px;
 		padding-right: 24px;
-	}
-	.btn.btn--secondary {
-		font-size: 14px;
-		line-height: 20px;
 	}
 }
 
