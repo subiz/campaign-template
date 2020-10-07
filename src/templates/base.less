@@ -187,17 +187,18 @@ input {
 .container {
 	margin: auto; // CAUTION: do not override container margin or it won't centering anymore
 	position: relative;
-	max-height: 90%;
-	max-width: 90%;
+
+	margin: auto;
+	background: @mobile_background;
+	max-width: calc(100% - 64px);
+	max-height: calc(100% - 64px);
+	width: unset;
 }
 
 .mobile .container {
-	margin: auto 16px;
-	background: @mobile_background;
-	padding: 24px;
-	max-width: unset;
+	max-width: calc(100% - 32px);
 	max-height: calc(100% - 32px);
-	width: unset;
+	padding: 24px;
 }
 
 .body {
