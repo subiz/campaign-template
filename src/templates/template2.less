@@ -23,13 +23,11 @@
 
 	.body {
 		position: relative; // so the background stay behine it
-		display: flex;
-		flex-direction: column;
 		background-color: #fff;
 		max-height: 100%;
 		margin: auto auto;
-		padding-top: 30px;
-		padding-bottom: 30px;
+		overflow: auto;
+		padding: 30px;
 		width: 430px;
 		max-width: 90%;
 		margin-top: 36px;
@@ -38,10 +36,14 @@
 			0px 7px 12px rgba(0, 0, 0, 0.0503198), 0px 18px 28px rgba(0, 0, 0, 0.07);
 	}
 
+	.mobile .body {
+		margin: 0;
+		max-height: unset;
+		padding: 12px;
+	}
+
 	.title {
 		text-align: center;
-		padding-left: @spacer;
-		padding-right: @spacer;
 		margin: unset;
 	}
 
@@ -52,8 +54,6 @@
 	.description {
 		margin-top: 10px;
 		text-align: center;
-		padding-left: @spacer;
-		padding-right: @spacer;
 	}
 
 	.buttons {
