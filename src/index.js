@@ -134,21 +134,19 @@ class Template extends Component {
 						</div>
 						<div class={animation} onClick={(e) => e.stopPropagation()}>
 							<CloseButton onClick={(e) => this.onClose(e)} />
-							<div class="container__inner">
-								<div class="background"></div>
-								<div class="content">
-									<p class={titlecls} onClick={(e) => this.props.onClick('title')}>
-										{this.props.page.title}
-									</p>
-									<div class="title-separator"></div>
-									<p class={desccls} onClick={(e) => this.props.onClick('description')}>
-										{this.props.page.description}
-									</p>
-									{$form}
-									<div class="buttons">
-										{$primary}
-										{$secondary}
-									</div>
+							<div class="background"></div>
+							<div class="body">
+								<p class={titlecls} onClick={(e) => this.props.onClick('title')}>
+									{this.props.page.title}
+								</p>
+								<div class="title-separator"></div>
+								<p class={desccls} onClick={(e) => this.props.onClick('description')}>
+									{this.props.page.description}
+								</p>
+								{$form}
+								<div class="buttons">
+									{$primary}
+									{$secondary}
 								</div>
 							</div>
 						</div>
