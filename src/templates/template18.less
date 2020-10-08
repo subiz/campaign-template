@@ -1,7 +1,8 @@
 @import './font.less';
-@spacer: 20px;
 #template() {
 	@import './base.less';
+	@spacer: 50px;
+
 	.container {
 		flex-direction: column;
 		width: 800px;
@@ -9,24 +10,11 @@
 		margin: auto auto;
 		position: relative;
 		display: flex;
-		max-height: 95%;
-	}
-
-	.mobile .container {
-		max-height: unset;
-	}
-
-	.container__inner {
-		width: 100%;
-		max-height: 100%;
-		display: flex;
-		position: relative;
-		justify-content: center;
-		overflow: hidden;
 	}
 
 	.background {
 		position: absolute;
+		border-radius: @popup_border_radius;
 		top: 0;
 		right: 0;
 		left: 0;
@@ -34,26 +22,18 @@
 		z-index: 1;
 	}
 
-	.mobile .background {
-		background-position: 100% 100%;
-	}
-	.content {
+	.body {
+		background: transparent;
 		z-index: 2;
 		display: flex;
 		flex-direction: column;
-		width: 75%;
-		padding-top: 50px;
-		padding-bottom: 30px;
 		max-height: 100%;
-	}
-	.mobile .content {
-		width: 100%;
+
+		padding: @spacer;
 	}
 
 	.title {
 		text-align: center;
-		padding-left: @spacer;
-		padding-right: @spacer;
 		margin: unset;
 	}
 
@@ -87,13 +67,13 @@
 		height: 55px;
 		border-radius: 30px;
 	}
+
 	.buttons {
 		display: flex;
 		flex-direction: column;
-		padding-left: @spacer;
-		padding-right: @spacer;
 		margin-top: 25px;
 	}
+
 	.btn.btn--secondary {
 		bottom: 0px;
 		font-size: 16px;
