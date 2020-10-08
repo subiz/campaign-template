@@ -1670,6 +1670,7 @@ thành công mới`,
 	},
 	template46: {
 		css: () => import(/*webpackChunkName: "template46_css" */ '!css-loader!less-loader!./template46.less'),
+		type: 'modal',
 		text: {
 			name: {vi: 'Mẫu 46: Giới thiệu thông tin', en: 'Template 46: Education News'},
 			title: {
@@ -1801,6 +1802,7 @@ thành công mới`,
 	},
 	template51: {
 		css: () => import(/*webpackChunkName: "template51_css" */ '!css-loader!less-loader!./template51.less'),
+		type: 'modal',
 		text: {
 			name: {vi: 'Mẫu 51: Giới thiệu thông tin mới', en: 'Template 51: Travel news'},
 			title: {
@@ -1898,6 +1900,7 @@ thành công mới`,
 	},
 	template54: {
 		css: () => import(/*webpackChunkName: "template54_css" */ '!css-loader!less-loader!./template54.less'),
+		type: 'modal',
 		text: {
 			name: {vi: 'Mẫu 54: Đăng ký nhận ưu đãi du lịch', en: 'Template 54: Register for travel promotion'},
 			title: {
@@ -1928,6 +1931,7 @@ thành công mới`,
 	},
 	template55: {
 		css: () => import(/*webpackChunkName: "template55_css" */ '!css-loader!less-loader!./template55.less'),
+		type: 'modal',
 		text: {
 			name: {vi: 'Mẫu 55: Đăng ký nhận ưu đãi du lịch', en: 'Template 55: Register for travel promotion'},
 			title: {
@@ -1958,6 +1962,7 @@ thành công mới`,
 	},
 	template56: {
 		css: () => import(/*webpackChunkName: "template56_css" */ '!css-loader!less-loader!./template56.less'),
+		type: 'modal',
 		text: {
 			name: {vi: 'Mẫu 56: Đặt lịch làm đẹp', en: 'Template 56: Register to book an appoinment'},
 			title: {
@@ -2021,6 +2026,7 @@ thành công mới`,
 	},
 	template58: {
 		css: () => import(/*webpackChunkName: "template58_css" */ '!css-loader!less-loader!./template58.less'),
+		type: 'modal',
 		text: {
 			name: {vi: 'Mẫu 58: Khuyến mãi', en: 'Template 58: Promotion'},
 			title: {
@@ -2053,6 +2059,7 @@ thành công mới`,
 	},
 	template59: {
 		css: () => import(/*webpackChunkName: "template59_css" */ '!css-loader!less-loader!./template59.less'),
+		type: 'modal',
 		text: {
 			name: {vi: 'Khuyến mãi', en: 'Promotion'},
 			title: {
@@ -2118,6 +2125,7 @@ thành công mới`,
 	},
 	template61: {
 		css: () => import(/*webpackChunkName: "template61_css" */ '!css-loader!less-loader!./template61.less'),
+		type: 'modal',
 		text: {
 			name: {vi: 'Mẫu 61: Khuyến mãi', en: 'Template 61: Promotion'},
 			title: {
@@ -2149,6 +2157,7 @@ thành công mới`,
 	},
 	template62: {
 		css: () => import(/*webpackChunkName: "template62_css" */ '!css-loader!less-loader!./template62.less'),
+		type: 'modal',
 		text: {
 			name: {vi: 'Mẫu 62: Khuyến mãi', en: 'Template 62: Promotion'},
 			title: {
