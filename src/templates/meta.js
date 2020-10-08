@@ -555,6 +555,7 @@ let meta = {
 			input_border_color: '#996699',
 		},
 		mobile_appearance: {
+			title_font_size: '32px',
 			background_image: 'url(' + require('../../assets/background/template24_mobile.png').default + ')',
 			description_font_size: '14px',
 		},
