@@ -4,19 +4,20 @@
 	@spacer: 30px;
 
 	.container {
-		width: 375px;
-		position: relative;
-	}
-
-	.desktop .container {
 		width: 720px;
 	}
+
+	.mobile .container {
+		min-height: 400px;
+	}
+
 
 	.background {
 		height: 667px;
 		display: inline-block;
 		min-width: 100%;
 	}
+
 
 	.title {
 		position: absolute;
@@ -25,21 +26,30 @@
 		top: 461px;
 		text-align: center;
 	}
+
 	.mobile .title {
-		top: 500px;
-		left: 43px;
+		top: unset;
+		width: unset;
+		left: unset;
+		position: relative;
 	}
+
 	.description {
-		line-height: 130%;
 		position: absolute;
 		left: 0;
 		width: 285px;
 		text-align: center;
 		top: 578px;
 	}
+
 	.mobile .description {
-		top: 560px;
+		top: unset;
+		width: unset;
+		left: unset;
+		position: relative;
+		margin-top: 20px;
 	}
+
 	.buttons,
 	.form {
 		display: none;
