@@ -8,18 +8,6 @@
 		max-height: 80%;
 		display: flex;
 		width: 800px;
-		max-width: 90%;
-	}
-
-	.container__inner {
-		position: relative;
-		width: 100%;
-		display: flex;
-	}
-
-	.mobile .container__inner {
-		justify-content: center;
-		align-items: center;
 	}
 
 	.background {
@@ -30,9 +18,18 @@
 		bottom: 0;
 		z-index: 1;
 		// max-height: 100%;
+		border-radius: @popup_border_radius;
 	}
 
-	.content {
+	.mobile .body {
+		width: unset;
+		right: unset;
+		top: unset;
+		width: unset;
+		max-width: unset;
+	}
+
+	.body {
 		z-index: 2;
 		display: flex;
 		flex-direction: column;
@@ -44,29 +41,18 @@
 		background-color: #fff;
 		max-width: 90%;
 		padding-top: 50px;
+		padding: @spacer;
 		padding-bottom: 40px;
 		// width: 400px;
 	}
 
-	.mobile .content {
-		position: unset;
-		width: 100%;
-		margin-top: 65px;
-		margin-bottom: 65px;
-		max-height: ~'calc(100% - 120px)';
-	}
-
 	.title {
 		text-align: center;
-		padding-left: @spacer;
-		padding-right: @spacer;
 		margin: unset;
 	}
 
 	.description {
 		margin-top: 10px;
-		padding-left: @spacer;
-		padding-right: @spacer;
 	}
 
 	.text-input {
@@ -82,8 +68,6 @@
 	.buttons {
 		display: flex;
 		flex-direction: column;
-		padding-left: @spacer;
-		padding-right: @spacer;
 		margin-top: 25px;
 	}
 
@@ -93,8 +77,6 @@
 		font-size: 16px;
 		font-family: 'Roboto';
 		border-radius: 20px;
-		padding-left: 50px;
-		padding-right: 50px;
 	}
 
 	.btn.btn--secondary {
