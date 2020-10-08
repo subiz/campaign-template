@@ -14,8 +14,6 @@ fs.readdir(directoryPath, async function (err, files) {
 
 	await flow.map(files, 4, async (file) => {
 		if (!file.endsWith('.less')) return
-		if (!file.startsWith('template')) return
-
 		let templateid = file.split('.')[0]
 
 		const page = await browser.newPage()
