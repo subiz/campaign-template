@@ -3,6 +3,10 @@
 #template() {
 	@import './base.less';
 	@import './layouts/two-column.less';
+
+	.container {
+		border-radius: @popup_border_radius;
+	}
 	.background {
 		left: 0;
 	}
@@ -27,12 +31,6 @@
 		border: solid 1px @input_border_color;
 		border-radius: 4px;
 		padding: 12px 15px;
-	}
-	.btn.btn_close {
-		background-color: #000;
-	}
-	.mobile .btn.btn_close {
-		background-color: rgba(0, 0, 0, .3);
 	}
 }
 #sbz-pop .template.template45 {
