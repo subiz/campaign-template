@@ -1,91 +1,92 @@
 @import './font.less';
 #template() {
 	@import './base.less';
-	@spacer: 30px;
+	@spacer: 25px;
 
 	.container {
-		position: relative;
-		display: flex;
-		max-height: 95%;
-		width: 480px;
-	}
-
-	.mobile .container {
-		max-height: unset;
-		width: 335px;
-	}
-
-	.desktop .container__inner {
 		display: flex;
 		flex-direction: column;
-	}
-	.content {
-		padding: 0 15px 0 15px;
-		display: flex;
-		flex-direction: column;
-		max-height: ~"calc(100% - 164px)";
-	}
-
-	.desktop .content {
-		display: flex;
-		flex-direction: column;
-		max-height: ~"calc(100% - 220px)";
+		width: 400px;
 	}
 
 	.background {
-		height: 164px;
-		position: relative;
-		display: inline-block;
-		min-width: 100%;
+		max-height: 235px;
+		// flex:1;
+		width: 100%;
+		min-height: 200px;
+		border-top-left-radius: @popup_border_radius;
+		border-top-right-radius: @popup_border_radius;
 	}
-	.desktop .background {
-		height: 220px;
-		min-height: 220px;
+
+	.body {
+		padding: @spacer;
+
+		display: flex;
+		flex-direction: column;
+		padding-top: 5px;
+		padding-bottom: 20px;
+		width: 100%;
+		max-height: 100%;
+
+		border-bottom-left-radius: @popup_border_radius;
+		border-bottom-right-radius: @popup_border_radius;
 	}
+
+	.mobile .body {
+		border-bottom-left-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+
 	.title {
-		line-height: 48px;
-		text-align: center;
 		margin-top: 10px;
-	}
-	.description {
-		line-height: 24px;
 		text-align: center;
-		margin-top: 12px;
 	}
+
+	.description {
+		margin-top: 5px;
+		text-align: center;
+		margin-bottom: 5px;
+	}
+
 	.label {
 		display: none;
 	}
-	input[type='text'] {
-		border: 0;
-		outline: 0;
-		height: 40px;
-		border-bottom: 1px solid @input_border_color;
-		padding: 0;
-		font-size: 16px;
-		font-family: 'Roboto';
-	}
 
 	.buttons {
-		padding: 0;
+		display: flex;
 		flex-direction: column;
 	}
-	.btn.btn--primary {
-		font-size: 16px;
-		line-height: 19px;
-		text-transform: uppercase;
-		font-family: 'Roboto';
+
+	.text-input {
+		border: none;
+		border-bottom: 1px solid @input_border_color;
 		width: 100%;
-		min-height: 48px;
-		border-radius: 24px;
+		height: 30px;
+		font-size: 12px;
+		outline: 0;
+		font-family: 'Muli';
 	}
-	.btn.btn--secondary {
-		font-size: 14px;
-		line-height: 20px;
-		font-family: 'Roboto';
-		text-align: center;
+
+	.text-input::placeholder {
+		color: #8d8d8d;
+		font-family: 'Muli';
 	}
-	.form {
-		padding: 0;
+
+	.btn--primary {
+		font-size: 12px;
+		font-weight: bold;
+		text-transform: uppercase;
+		width: 100%;
+		outline: 0;
+	}
+
+	.btn--secondary {
+		font-size: 12px;
+		font-weight: 500;
+		text-transform: uppercase;
+		margin-left: 10px;
+		width: 100%;
+		outline: 0;
 	}
 }
 
