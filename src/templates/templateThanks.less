@@ -1,7 +1,7 @@
 @import './font.less';
-@spacer: 20px;
 #template() {
 	@import './base.less';
+	@spacer: 20px;
 
 	.container {
 		width: 470px;
@@ -9,9 +9,23 @@
 		max-height: 100%;
 		display: flex;
 		flex-direction: column;
-		padding-top: 10px;
 		align-items: center;
 	}
+
+	.mobile .container {
+		width: 90%;
+	}
+
+
+	.background {
+		display: none;
+	}
+
+	.body {
+		padding: @spacer;
+		border-radius: @popup_border_radius;
+	}
+
 
 	.form {
 		display: none;
@@ -21,17 +35,14 @@
 		margin-top: 46px;
 		line-height: 44px;
 		text-align: center;
-		padding-left: @spacer;
-		padding-right: @spacer;
 		min-width: 100%;
 		display: block;
 	}
+
 	.description {
 		margin-top: 6px;
 		line-height: 30px;
 		text-align: center;
-		padding-left: @spacer;
-		padding-right: @spacer;
 		min-width: 100%;
 		display: block;
 	}
@@ -60,9 +71,6 @@
 	}
 	.mobile .btn.btn--secondary {
 		font-size: 13px;
-	}
-	.mobile .container {
-		width: 90%;
 	}
 }
 
