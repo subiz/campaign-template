@@ -1941,6 +1941,7 @@ thành công mới`
   },
   template46: {
     css: () => import('!css-loader!less-loader!./template46.less'),
+    type: 'modal',
     text: {
       name: {
         vi: 'Mẫu 46: Giới thiệu thông tin',
@@ -2096,6 +2097,7 @@ thành công mới`
   },
   template51: {
     css: () => import('!css-loader!less-loader!./template51.less'),
+    type: 'modal',
     text: {
       name: {
         vi: 'Mẫu 51: Giới thiệu thông tin mới',
@@ -2212,6 +2214,7 @@ thành công mới`
   },
   template54: {
     css: () => import('!css-loader!less-loader!./template54.less'),
+    type: 'modal',
     text: {
       name: {
         vi: 'Mẫu 54: Đăng ký nhận ưu đãi du lịch',
@@ -2248,6 +2251,7 @@ thành công mới`
   },
   template55: {
     css: () => import('!css-loader!less-loader!./template55.less'),
+    type: 'modal',
     text: {
       name: {
         vi: 'Mẫu 55: Đăng ký nhận ưu đãi du lịch',
@@ -2284,6 +2288,7 @@ thành công mới`
   },
   template56: {
     css: () => import('!css-loader!less-loader!./template56.less'),
+    type: 'modal',
     text: {
       name: {
         vi: 'Mẫu 56: Đặt lịch làm đẹp',
@@ -2358,6 +2363,7 @@ thành công mới`
   },
   template58: {
     css: () => import('!css-loader!less-loader!./template58.less'),
+    type: 'modal',
     text: {
       name: {
         vi: 'Mẫu 58: Khuyến mãi',
@@ -2396,6 +2402,7 @@ thành công mới`
   },
   template59: {
     css: () => import('!css-loader!less-loader!./template59.less'),
+    type: 'modal',
     text: {
       name: {
         vi: 'Khuyến mãi',
@@ -2472,6 +2479,7 @@ thành công mới`
   },
   template61: {
     css: () => import('!css-loader!less-loader!./template61.less'),
+    type: 'modal',
     text: {
       name: {
         vi: 'Mẫu 61: Khuyến mãi',
@@ -2512,6 +2520,7 @@ thành công mới`
   },
   template62: {
     css: () => import('!css-loader!less-loader!./template62.less'),
+    type: 'modal',
     text: {
       name: {
         vi: 'Mẫu 62: Khuyến mãi',
