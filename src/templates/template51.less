@@ -1,79 +1,35 @@
 @import './font.less';
 
 #template() {
-    @import './base.less';
-
-    .container {
-		width: 800px;
-		position: relative;
-		display: flex;
-		max-height: 95%;
-		max-width: 90%;
-		min-height: 520px;
-		background: transparent;
-	}
+	@import './base.less';
+	@import './layouts/no-form.less';
 
 	.mobile .container {
 		height: 100%;
 		align-items: center;
 	}
-
-	.background {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: 1;
-	}
 	.body {
-		z-index: 1;
 		padding-top: 170px;
 	}
 	.mobile .body {
 		padding: 0;
 	}
-
 	.title {
-		text-align: center;
-		line-height: 42px;
 		padding: 0 124px;
 		margin-bottom: 8px;
 	}
-
 	.description {
-		text-align: center;
-		line-height: 36px;
 		padding: 0 48px;
 		margin-bottom: 36px;
 	}
-
 	.mobile .title,
 	.mobile .description {
 		padding: 0;
 	}
-
 	.mobile .description {
 		line-height: 36px;
 		margin-bottom: 36px;
 	}
-	.form {
-		display: none;
-		padding: 0;
-	}
-	.label {
-		display: none;
-	}
-	input[type='text'] {
-		border: 0;
-		outline: 0;
-		height: 40px;
-		border-bottom: 1px solid @input_border_color;
-		padding: 0;
-		font-size: 16px;
-		font-family: 'Roboto';
-	}
-
 	.buttons {
 		flex-direction: column;
 		padding: 0;
@@ -84,10 +40,6 @@
 	.btn.btn--primary {
 		font-size: 16px;
 		line-height: 38px;
-		font-weight: bold;
-		font-family: 'Roboto';
-		text-transform: uppercase;
-		border-radius: 4px;
 		min-height: 56px;
 		margin-bottom: 16px;
 		padding-top: 9px;
@@ -100,12 +52,9 @@
 	}
 	.mobile .btn.btn--primary {
 		width: 100%;
+		margin-bottom: 16px;
 	}
 	.btn.btn--secondary {
-		font-size: 16px;
-		line-height: 24px;
-		color: #fff;
-		-webkit-text-fill-color: #fff;
 		font-weight: 400;
 		padding: 0;
 	}

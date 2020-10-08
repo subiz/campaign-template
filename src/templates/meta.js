@@ -1695,7 +1695,7 @@ thành công mới`,
 			title_font_size: '40px',
 			description_font_size: '24px',
 			description_font_family: 'Roboto',
-			description_font_weight: '500'
+			description_font_weight: '500',
 		}
 	},
 	template47: {
@@ -1819,7 +1819,7 @@ thành công mới`,
 			background: 'transparent',
 			primary_button_background: '#0D59F2',
 			primary_button_color: '#FFFFFF',
-			secondary_button_color: '#B4BAFD',
+			secondary_button_color: '#E5E5E5',
 			title_text_transform: 'none',
 			title_font_family: 'Roboto',
 			title_font_weight: '700',

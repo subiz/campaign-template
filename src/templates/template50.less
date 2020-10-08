@@ -2,143 +2,35 @@
 
 #template() {
 	@import './base.less';
-	.mobile .overlay {
-		// bottom: unset;
-		// position: fixed;
-	}
-	.background {
-		display: none;
-	}
-
-	.mobile .background {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-	}
-
+	@import './layouts/no-background.less';
+	
 	.container {
-		display: flex;
-		max-height: 90%;
-		max-width: 90%;
-		width: 400px;
+		width: 375px;
 	}
-
-	.mobile .container {
-		padding: 0;
-	}
-
 	.body {
-		overflow: auto;
+		flex-direction: column;
 		padding: 53px 48px;
 	}
-
-	.title {
-		margin-bottom: 6px;
-		line-height: 28px;
+	.mobile .body {
+		flex-direction: unset;
 	}
-
-	.mobile .title {
+	.title {
 		margin-bottom: 12px;
 	}
-
 	.description {
 		line-height: 24px;
 	}
-
-	.title-separator {
-		display: none;
-	}
-
-	.mobile .title-separator {
-		background-color: @mobile_primary_button_background;
-	}
-
 	.form {
-		padding: 0;
-	}
-
-	.form-field {
-		flex: 1;
-		margin-right: 16px;
-	}
-
-	.mobile .form-file {
-		margin-right: 0;
-	}
-
-	.form-field .label,
-	.form-field .radio--label,
-	.form-field .form-check-label {
-		font-family: 'Roboto';
-	}
-
-	.form-field .text-input {
-		font-family: 'Roboto';
-		font-size: 16px;
-		height: 42px;
-		padding: 0 15px;
-	}
-
-	.form-field .form-check-input {
-		margin-top: 0;
-	}
-
-	.form-field .form--list-container {
-		margin-top: 0;
-	}
-
-	.form-template {
-		display: flex;
 		flex-direction: column;
-		align-items: center;
+		max-width: unset;
+		min-width: unset;
 	}
-	.form-item {
-		display: flex;
-		width: 100%;
-		flex-direction: column;
-		margin-top: 15px;
+	.form-field:nth-child(n + 4) {
+		display: block;
 	}
-
-	.label {
-		color: #000;
-		margin-bottom: 5px;
-		margin-top: unset;
-		font-size: 16px;
-	}
-
-	.text-input {
-		border: none;
-		border: 1px solid @input_border_color;
-		border-radius: 4px;
-		padding: 15px 10px;
-		width: 100%;
-		height: 30px;
-		font-size: 14px;
-		outline: 0;
-	}
-
-	.btn--primary {
-		font-size: 16px;
-		font-weight: 700;
-		width: 100%;
-	}
-
-	.btn--secondary {
-		display: none;
-	}
-
 	.buttons {
-		margin-top: 28px;
-		padding: 0;
-	}
-
-	.mobile .buttons {
-		padding: 0;
-		min-width: 100%;
-		max-width: 100%;
+		max-width: unset;
+		min-width: unset;
 	}
 }
 #sbz-pop .template.template50 {

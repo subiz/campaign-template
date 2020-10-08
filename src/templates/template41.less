@@ -2,112 +2,15 @@
 
 #template() {
 	@import './base.less';
+	@import './layouts/two-column.less';
+
 	.background {
-		max-height: 100%;
-		position: absolute;
-		top: 0;
 		left: 0;
-		width: 50%;
-		height: 100%;
 	}
 
-	.container {
-		max-height: 90%;
-		max-width: 90%;
-		width: 800px;
-		overflow: hidden;
-	}
-	.content {
-		overflow: auto;
-	}
 	.body {
 		margin-left: auto;
 		padding: 48px 60px;
-		width: 50%;
-	}
-	.title {
-		margin-bottom: 20px;
-	}
-	.title-separator {
-		display: none;
-	}
-
-	.mobile .title-separator {
-		background-color: @mobile_primary_button_background;
-	}
-
-	.description {
-		margin-bottom: 0;
-	}
-
-	.form {
-		overflow: visible;
-		min-height: unset;
-	}
-
-	.form-field .label,
-	.form-field .radio--label,
-	.form-field .form-check-label {
-		font-family: 'Roboto';
-	}
-
-	.form-field .text-input {
-		font-family: 'Roboto';
-		font-size: 16px;
-		height: 42px;
-		padding: 0 15px;
-	}
-
-	.form-field .form-check-input {
-		margin-top: 0;
-	}
-
-	.form-field .form--list-container {
-		margin-top: 0;
-	}
-
-	.form-template {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
-	.form-item {
-		display: flex;
-		width: 100%;
-		flex-direction: column;
-		margin-top: 15px;
-	}
-
-	.label {
-		color: #000;
-		margin-bottom: 5px;
-		margin-top: unset;
-		font-size: 16px;
-	}
-
-	.text-input {
-		border: none;
-		border: 1px solid @input_border_color;
-		border-radius: 4px;
-		padding: 15px 10px;
-		width: 100%;
-		height: 30px;
-		font-size: 14px;
-		outline: 0;
-	}
-
-	.btn--primary {
-		font-size: 16px;
-		font-weight: 700;
-		width: 100%;
-	}
-
-	.btn--secondary {
-		display: none;
-	}
-
-	.buttons {
-		margin-top: 24px;
 	}
 }
 #sbz-pop .template.template41 {
