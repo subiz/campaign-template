@@ -1,27 +1,19 @@
 @import './font.less';
-@spacer: 30px;
 
 #template() {
 	@import './base.less';
+	@spacer: 30px;
+
 	.container {
-		min-width: 800px;
+		min-width: 600px;
+		width: 1000px;
 		position: relative;
 		display: flex;
-		max-height: 640px;
+		max-height: 360px;
 	}
 
 	.mobile .container {
-		width: 335px;
-		max-width: 335px;
 		min-width: unset;
-	}
-
-	.mobile .background {
-		position: relative;
-		width: 393px;
-		height: 358px;
-		left: -20px;
-		top: -34px;
 	}
 
 	.background {
@@ -30,12 +22,12 @@
 		height: 564px;
 		top: -77px;
 		left: -160px;
+
 		background-color: unset;
 		display: block;
 	}
 
 	.title {
-		line-height: 62px;
 		position: absolute;
 		top: 102px;
 		left: 15px;
@@ -43,10 +35,12 @@
 	}
 
 	.mobile .title {
-		line-height: 42px;
-		top: 87px;
-		left: 84px;
-		width: 227px;
+		margin-top: 20px;
+		margin-bottom: 20px;
+		width: unset;
+		position: relative;
+		left: 0;
+		top: 0;
 	}
 
 	.description {
@@ -62,17 +56,21 @@
 		margin-top: 0;
 		text-align: center;
 	}
-	.content {
+	.body {
 		margin-left: auto;
-		width: 50%;
 		padding: 20px 35px 20px 35px;
-		.content(0px);
+		padding-left: 45%;
+		display: flex;
+		flex-direction: column;
 	}
-	.mobile .content {
+
+	.mobile .body {
 		width: 100%;
 		padding: 0 15px;
 		margin-left: unset;
-		.content(357px);
+		display: flex;
+		flex-direction: column;
+		border-radius: @popup_border_radius;
 	}
 	.mobile .form .form-field:first-child {
 		margin: 0;

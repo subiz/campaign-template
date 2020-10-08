@@ -392,6 +392,9 @@ let meta = {
 			input_border_color: '#5F6369',
 		},
 		mobile_appearance: {
+			title_font_size: '23px',
+			title_color: 'black',
+			title_font_weight: '500',
 			title_font_size: '32px',
 		},
 	},
