@@ -1,0 +1,66 @@
+@import './font.less';
+
+#template() {
+	@import './base.less';
+	@import './layouts/no-form.less';
+	
+	.container {
+		border-radius: 0;
+	}
+	.mobile .background {
+		border-radius: 0;
+	}
+	.body {
+		padding-top: 165px;
+		padding-left: 72px;
+		padding-right: 72px;
+	}
+	.mobile .body {
+		padding-top: 100px;
+	}
+	.title {
+		line-height: 48px;
+		margin-bottom: 16px;
+	}
+	.mobile .title {
+		margin-bottom: 28px;
+	}
+	.description {
+		line-height: 36px;
+		margin-bottom: 32px;
+	}
+	.mobile .description {
+		line-height: 36px;
+		margin-bottom: 32px;
+	}
+	.buttons {
+		flex-direction: column;
+		padding: 0;
+	}
+	.btn.btn--primary {
+		font-size: 24px;
+		min-height: 56px;
+		margin-bottom: 117px;
+		padding-top: 9px;
+		padding-bottom: 9px;
+	}
+	.desktop .btn.btn--primary {
+		padding-left: 48px;
+		padding-right: 48px;
+	}
+	.mobile .btn.btn--primary {
+		margin-bottom: 100px;
+	}
+	.btn.btn--secondary {
+		font-size: 16px;
+		line-height: 24px;
+		padding: 0;
+	}
+	.desktop .btn.btn_close {
+		background-color: #000;
+	}
+}
+
+#sbz-pop .template.template61 {
+	#template() !important;
+}

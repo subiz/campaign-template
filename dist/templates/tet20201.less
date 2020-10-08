@@ -8,10 +8,17 @@
 		position: relative;
 		height: 667px;
 	}
+
+	.mobile .container {
+		min-height: 400px;
+		height: unset;
+	}
+
 	.desktop .container {
 		width: 800px;
 		height: 400px;
 	}
+
 	.background {
 		position: absolute;
 		width: 100%;
@@ -19,6 +26,7 @@
 		top: 0;
 		left: 0;
 	}
+
 	.title {
 		top: 144px;
 		left: 435px;
@@ -27,11 +35,14 @@
 		z-index: 2;
 		text-align: center;
 	}
+
 	.mobile .title {
-		top: 400px;
-		left: 0;
-		padding: @spacer;
+		position: relative;
+		top: unset;
+		left: unset;
+		margin-top: 270px;
 	}
+
 	.description {
 		position: absolute;
 		z-index: 2;
@@ -41,8 +52,9 @@
 		text-align: center;
 	}
 	.mobile .description {
-		top: 500px;
-		left: 0px;
+		position: relative;
+		top: unset;
+		left: unset;
 	}
 	.form,
 	.buttons {

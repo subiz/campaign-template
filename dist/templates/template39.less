@@ -3,108 +3,106 @@
 
 #template() {
 	@import './base.less';
+	@spacer: 30px;
 
 	.container {
-		display: flex;
-		flex-direction: column;
-		width: 800px;
-		height: 600px;
-		max-height: 100%;
-		max-width: 90%;
-		align-items: center;
-		background-size: auto;
+		width: 100%;
+		height: 100%;
 	}
 
-	.container__inner {
+
+	.background {
 		width: 100%;
 		height: 100%;
 		position: relative;
-		display: flex;
-		align-items: center;
+		z-index: 1;
 	}
 
-	.background {
+	.body {
+		padding: @spacer;
+		background: transparent;
 		position: absolute;
+		z-index: 2;
 		top: 0;
-		right: 0;
 		left: 0;
-		bottom: 0;
-	}
+		width: 100%;
+		padding-right: 50%;
 
-	.content {
-		position: relative; // so the background stay behine it
-		overflow: hidden;
-		display: flex;
 		flex-direction: column;
-
-		max-height: ~'calc(100% - 60px - 75px)';
-
-		padding-top: 30px;
-		padding-bottom: 30px;
-		max-width: 80%;
-		width: 460px;
-		margin-top: 36px;
-		margin-bottom: 36px;
+		justify-content: center;
+		align-items: center;
+		height: 100%;
+		justify-content: center;
 	}
-	.mobile .content {
-		max-width: 100%;
+
+	.mobile .body {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		padding: 0;
+		max-height: 100%;
 	}
 
 	.title {
-		padding-left: @spacer;
-		padding-right: @spacer;
-		margin: unset;
+		margin-top: 10px;
+		margin-bottom: 30px;
+		// width: 639px;
+		text-align: center;
+		margin-bottom: 10px;
 		text-align: center;
 	}
 
 	.description {
-		margin-top: 20px;
+		margin-bottom: 23px;
 		text-align: center;
-		padding-left: @spacer;
-		padding-right: @spacer;
-	}
-
-	.text-input {
-		border: none;
-		border-bottom: 1px solid @input_border_color;
-		width: 100%;
-		height: 43px;
-		font-size: 14px;
-		outline: 0;
-		font-family: 'Muli';
-	}
-
-	.btn.btn--primary {
-		border-radius: 80px;
-		text-transform: uppercase;
-		font-weight: bold;
-		font-size: 16px;
-		margin-top: 15px;
-		width: 100%;
-	}
-
-	.btn.btn--secondary {
-		border-radius: 80px;
-		text-transform: uppercase;
-		font-size: 16px;
-		font-weight: 500;
-		margin-top: 15px;
-		width: 100%;
-		margin-left: 0;
 	}
 
 	.label {
 		display: none;
 	}
 
-	.text-input {
-		border-radius: 80px;
-		text-align: center;
+	.form-field {
+		width: 100%;
+		margin-top: 11px;
+
+		input[type='text'] {
+			border-radius: 50px;
+			padding: 0 30px;
+			border: none;
+			outline: 0;
+			font-size: 18px;
+			display: block;
+			height: 50px;
+		}
+
+		.form--list-container label {
+			display: initial;
+		}
+	}
+
+	.mobile .form-field {
+		input {
+			font-size: 16px;
+		}
 	}
 
 	.buttons {
 		flex-direction: column;
-		margin-top: 0px;
+		margin-top: 11px;
+		width: 100%;
+	}
+	.btn.btn--primary, .btn.btn--secondary {
+			width: 100%;
+			border-radius: 50px;
+			height: 50px;
+			font-size: 18px;
+			line-height: 24px;
+		}
+
+	.btn.btn--secondary {
+			width: 100%;
+			margin-top: 11px;
+			margin-left: 0px;
 	}
 }
 

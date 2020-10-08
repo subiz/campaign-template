@@ -155,11 +155,9 @@ class Template extends Component {
     }, h(CloseButton, {
       onClick: e => this.onClose(e)
     }), h("div", {
-      class: "container__inner"
-    }, h("div", {
       class: "background"
     }), h("div", {
-      class: "content"
+      class: "body"
     }, h("p", {
       class: titlecls,
       onClick: e => this.props.onClick('title')
@@ -170,7 +168,7 @@ class Template extends Component {
       onClick: e => this.props.onClick('description')
     }, this.props.page.description), $form, h("div", {
       class: "buttons"
-    }, $primary, $secondary)))))));
+    }, $primary, $secondary))))));
   }
 
 }

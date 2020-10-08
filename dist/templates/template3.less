@@ -5,54 +5,35 @@
 
 	.background {
 		flex: 1;
+		padding: 42px 36px;
 		max-height: 100%;
-	}
-
-	.mobile .background {
-		width: 100%;
-		flex: 0;
-		min-height: 200px;
+		border-top-left-radius: @popup_border_radius;
+		border-bottom-left-radius: @popup_border_radius;
 	}
 
 	.container {
 		display: flex;
 		max-width: 90%;
 		width: 800px;
-		max-height: unset;
+		max-height: 90%;
 	}
 
-	.mobile .container {
-		max-height: unset;
-	}
-
-	.container__inner {
-		display: flex;
-		max-height: 100%;
-	}
-
-	.mobile .container__inner {
-		flex-direction: column;
-	}
-
-	.content {
-		display: flex;
-		flex-direction: column;
-		margin-top: 45px;
-		margin-bottom: 45px;
+	.body {
+		padding: 42px 36px;
 		flex: 1;
 		max-height: 100%;
+
+		border-top-right-radius: @popup_border_radius;
+		border-bottom-right-radius: @popup_border_radius;
 	}
 
-	.mobile .content {
-		margin-top: 20px;
-		margin-bottom: 20px;
-		max-width: 100%;
+	.mobile .body {
+		border-top-right-radius: unset;
+		border-bottom-right-radius: unset;
 	}
 
 	.title {
 		margin-top: 10px;
-		padding-left: @spacer;
-		padding-right: @spacer;
 		margin: unset;
 	}
 
@@ -61,15 +42,13 @@
 		width: 134px;
 		background-color: @primary_button_background;
 		margin-top: 10px;
-		margin-left: @spacer;
 	}
+
 	.mobile .title-separator {
 		background-color: @mobile_primary_button_background;
 	}
 
 	.description {
-		padding-left: @spacer;
-		padding-right: @spacer;
 		margin-top: 10px;
 		margin-bottom: 10px;
 	}

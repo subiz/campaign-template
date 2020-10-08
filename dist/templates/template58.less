@@ -1,0 +1,46 @@
+@import './font.less';
+
+#template() {
+	@import './base.less';
+	@import './layouts/no-form.less';
+
+    .container {
+		width: 440px;
+	}
+	.mobile .container {
+		padding: 24px;
+	}
+	.body {
+		padding: 56px 48px;
+	}
+	.mobile .body {
+		padding-top: 56px;
+	}
+	.title {
+		line-height: 42px;
+	}
+	.description {
+		line-height: 36px;
+	}
+	.buttons {
+		flex-direction: column;
+		padding: 0;
+	}
+	.btn.btn--primary {
+		font-size: 16px;
+		line-height: 19px;
+		min-height: 48px;
+	}
+	.mobile .btn.btn--primary {
+		width: auto;
+	}
+
+	.desktop .btn.btn--primary {
+		padding-left: 24px;
+		padding-right: 24px;
+	}
+}
+
+#sbz-pop .template.template58 {
+	#template() !important;
+}

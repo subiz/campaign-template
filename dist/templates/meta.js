@@ -173,9 +173,9 @@ let meta = {
       input_background: '',
       title_font_size: '16px',
       title_font_family: 'Muli',
-      title_font_size: '28px',
-      title_font_family: 'Montserrat',
-      title_font_weight: '700',
+      description_font_size: '28px',
+      description_font_family: 'Montserrat',
+      description_font_weight: '700',
       input_border_color: '#d9d9d9'
     },
     mobile_appearance: {
@@ -280,7 +280,7 @@ let meta = {
         en: 'Sign up offer'
       },
       title: {
-        vi: 'Đăng ký để nhận ưu đãi đặc biệt',
+        vi: 'Giảm 30%',
         en: 'Sign up to get special offer'
       },
       description: {
@@ -306,7 +306,7 @@ let meta = {
       secondary_button_color: 'white',
       input_color: '',
       input_background: '',
-      title_font_family: 'Montserrat',
+      title_font_family: 'Yeseva One',
       title_font_size: '48px',
       title_font_weight: 'bold',
       description_font_size: '18px',
@@ -455,6 +455,9 @@ let meta = {
       input_border_color: '#5F6369'
     },
     mobile_appearance: {
+      title_font_size: '23px',
+      title_color: 'black',
+      title_font_weight: '500',
       title_font_size: '32px'
     }
   },
@@ -642,6 +645,7 @@ let meta = {
       input_border_color: '#996699'
     },
     mobile_appearance: {
+      title_font_size: '32px',
       background_image: 'url(' + require('../../assets/background/template24_mobile.png').default + ')',
       description_font_size: '14px'
     }
@@ -1743,15 +1747,956 @@ thành công mới`
     mobile_appearance: {
       background_image: 'url(' + require('../../assets/background/template30_mobile.png').default + ')'
     }
+  },
+  template41: {
+    css: () => import('!css-loader!less-loader!./template41.less'),
+    type: 'modal',
+    text: {
+      name: {
+        vi: 'Mẫu 41: Đăng ký lái thử',
+        en: 'Template 41: Schedule a test drive'
+      },
+      title: {
+        vi: 'Đăng ký lái thử xe ngay hôm nay',
+        en: 'Schedule a test drive near you'
+      },
+      description: {
+        vi: 'Vui lòng cung cấp thông tin, chúng tôi sẽ liên hệ ngay với bạn',
+        en: 'Please leave your contacts below and we will get back to you soon'
+      },
+      primary_button: {
+        vi: 'Đăng ký ngay',
+        en: 'Register Now'
+      }
+    },
+    desktop_appearance: {
+      title_color: '#322626',
+      description_color: '#000',
+      background: 'white',
+      primary_button_background: '#302828',
+      primary_button_color: '#fff',
+      input_color: '#000',
+      input_background: 'none',
+      title_font_size: '36px',
+      title_font_weight: '700',
+      title_font_family: 'Roboto',
+      title_text_transform: 'none',
+      description_font_size: '16px',
+      description_font_family: 'Roboto',
+      input_border_color: 'rgba(0, 0, 0, 0.5)'
+    }
+  },
+  template42: {
+    css: () => import('!css-loader!less-loader!./template42.less'),
+    type: 'modal',
+    text: {
+      name: {
+        vi: 'Mẫu 42: Đăng ký nhận báo giá xe',
+        en: 'Template 42: Get car pricing'
+      },
+      title: {
+        vi: 'Cơ hội sở hữu xe với giá chỉ từ 459 triệu đồng',
+        en: 'Save up to 500$ discount this month only'
+      },
+      description: {
+        vi: 'Nhanh tay nhập thông tin để báo giá xe và ưu đãi tốt nhất!',
+        en: 'Please leave your contacts here and we will get back to you soon'
+      },
+      primary_button: {
+        vi: 'Nhận ưu đãi',
+        en: 'Get the discount'
+      }
+    },
+    desktop_appearance: {
+      title_color: '#000',
+      description_color: '#000',
+      background: 'white',
+      primary_button_background: '#0D59F2',
+      primary_button_color: '#fff',
+      input_color: '#000',
+      input_background: 'none',
+      title_font_size: '36px',
+      title_font_weight: '700',
+      title_font_family: 'Roboto',
+      title_text_transform: 'none',
+      description_font_size: '16px',
+      description_font_family: 'Roboto',
+      input_border_color: 'rgba(0, 0, 0, 0.5)'
+    }
+  },
+  template43: {
+    css: () => import('!css-loader!less-loader!./template43.less'),
+    type: 'modal',
+    text: {
+      name: {
+        vi: 'Mẫu 43: Đăng ký nhận voucher',
+        en: 'Template 43: Register for car promotion'
+      },
+      title: {
+        vi: 'Giảm 50% lệ phí trước bạ khi mua xe',
+        en: 'Save up to 500$ discount this month only'
+      },
+      description: {
+        vi: 'Vui lòng để lại số điện thoại để nhận ưu đãi',
+        en: 'Please leave your contacts here and we will get back to you soon'
+      },
+      primary_button: {
+        vi: 'Nhận ưu đãi',
+        en: 'Get the discount'
+      }
+    },
+    desktop_appearance: {
+      title_color: '#000',
+      description_color: '#000',
+      background: 'white',
+      primary_button_background: '#0D59F2',
+      primary_button_color: '#fff',
+      input_color: '#000',
+      input_background: 'none',
+      title_font_size: '36px',
+      title_font_weight: '700',
+      title_font_family: 'Roboto',
+      title_text_transform: 'none',
+      description_font_size: '24px',
+      description_font_family: 'Roboto',
+      input_border_color: 'rgba(0, 0, 0, 0.5)'
+    }
+  },
+  template44: {
+    css: () => import('!css-loader!less-loader!./template44.less'),
+    type: 'modal',
+    text: {
+      name: {
+        vi: 'Mẫu 44: Đăng ký nhận voucher',
+        en: 'Template 44: Register for car promotion'
+      },
+      title: {
+        vi: 'Giảm 50% lệ phí trước bạ khi mua xe',
+        en: 'Save up to 500$ discount this month only'
+      },
+      description: {
+        vi: 'Vui lòng để lại số điện thoại để nhận ưu đãi',
+        en: 'Please leave your contacts here and we will get back to you soon'
+      },
+      primary_button: {
+        vi: 'Nhận ưu đãi',
+        en: 'Get the discount'
+      }
+    },
+    desktop_appearance: {
+      title_color: '#000',
+      description_color: '#000',
+      background: 'white',
+      background_image: 'none',
+      primary_button_background: '#0D59F2',
+      primary_button_color: '#fff',
+      input_color: '#000',
+      input_background: 'none',
+      title_font_size: '36px',
+      title_font_weight: '700',
+      title_font_family: 'Roboto',
+      title_text_transform: 'none',
+      description_font_size: '24px',
+      description_font_family: 'Roboto',
+      input_border_color: 'rgba(0, 0, 0, 0.5)'
+    }
+  },
+  template45: {
+    css: () => import('!css-loader!less-loader!./template45.less'),
+    type: 'modal',
+    text: {
+      name: {
+        vi: 'Mẫu 45: Đăng ký xét tuyển',
+        en: 'Template 45: Register for admission'
+      },
+      title: {
+        vi: 'Đăng ký xét tuyển trực tuyến',
+        en: 'Register online for admission'
+      },
+      description: {
+        vi: 'Vui lòng điền đầy đủ thông tin để được liên hệ và giải đáp thắc mắc.',
+        en: 'Please leave your contacts here and we will get back to you soon'
+      },
+      primary_button: {
+        vi: 'Đăng ký',
+        en: 'Register'
+      }
+    },
+    desktop_appearance: {
+      title_color: '#0D50A5',
+      description_color: '#000',
+      background: 'white',
+      primary_button_background: '#0D50A5',
+      primary_button_color: '#fff',
+      input_color: '#000',
+      input_background: 'none',
+      title_font_size: '36px',
+      title_font_weight: '700',
+      title_font_family: 'Roboto',
+      title_text_transform: 'none',
+      description_font_size: '16px',
+      description_font_family: 'Roboto',
+      input_border_color: 'rgba(0, 0, 0, 0.5)'
+    }
+  },
+  template46: {
+    css: () => import('!css-loader!less-loader!./template46.less'),
+    text: {
+      name: {
+        vi: 'Mẫu 46: Giới thiệu thông tin',
+        en: 'Template 46: Education News'
+      },
+      title: {
+        vi: '“Săn” học bổng: Tuyệt chiêu vào Đại học “xịn” vừa oai vừa đỡ lo học phí',
+        en: 'How to boost your chance of getting a full scholarship'
+      },
+      description: {
+        vi: 'Khám phá ngay bí kíp để giành được những suất học bổng giá trị, lên tới 100% học phí.',
+        en: 'Explore tips on how to find, apply and get a full scholarship'
+      },
+      primary_button: {
+        vi: 'KHÁM PHÁ NGAY',
+        en: 'EXPLORE NOW'
+      },
+      secondary_button: {
+        vi: 'Tôi không quan tâm thông tin này',
+        en: 'No, thanks! I’m not interested'
+      }
+    },
+    desktop_appearance: {
+      title_color: '#FFFFFF',
+      description_color: '#CDE6FE',
+      background: 'transparent',
+      primary_button_background: '#FFFFFF',
+      primary_button_color: '#131C86',
+      secondary_button_color: '#B4BAFD',
+      title_text_transform: 'none',
+      title_font_family: 'Roboto',
+      title_font_weight: '700',
+      title_font_size: '40px',
+      description_font_size: '24px',
+      description_font_family: 'Roboto',
+      description_font_weight: '500'
+    }
+  },
+  template47: {
+    css: () => import('!css-loader!less-loader!./template47.less'),
+    type: 'modal',
+    text: {
+      name: {
+        vi: 'Mẫu 47: Đăng ký khóa học',
+        en: 'Template 47: Register for a course'
+      },
+      title: {
+        vi: 'Đăng ký học và nhận giảm giá 20%',
+        en: 'Register now and get 20% off any course'
+      },
+      description: {
+        vi: 'Nhanh tay lên! Ưu đãi sẽ kết thúc trong hôm nay',
+        en: 'Hurry up! Promotion ends at midnight'
+      },
+      primary_button: {
+        vi: 'Đăng ký ngay',
+        en: 'Register Now'
+      }
+    },
+    desktop_appearance: {
+      title_color: '#000',
+      description_color: '#000',
+      background: 'white',
+      primary_button_background: '#0D59F2',
+      primary_button_color: '#fff',
+      input_color: '#000',
+      input_background: 'none',
+      title_font_size: '36px',
+      title_font_weight: '700',
+      title_font_family: 'Roboto',
+      title_text_transform: 'none',
+      description_font_size: '24px',
+      description_font_family: 'Roboto',
+      input_border_color: 'rgba(0, 0, 0, 0.5)'
+    }
+  },
+  template49: {
+    css: () => import('!css-loader!less-loader!./template49.less'),
+    type: 'modal',
+    text: {
+      name: {
+        vi: 'Mẫu 49: Đăng ký khóa học',
+        en: 'Template 49: Register for a course'
+      },
+      title: {
+        vi: 'Giảm giá 50% các khóa học',
+        en: 'Our flagship courses is on sale up to 50%'
+      },
+      description: {
+        vi: 'Đăng ký ngay! Ưu đãi sẽ hết hạn trong hôm nay',
+        en: 'Register now to claim your spot'
+      },
+      primary_button: {
+        vi: 'Đăng ký ngay',
+        en: 'Register Now'
+      }
+    },
+    desktop_appearance: {
+      title_color: '#fff',
+      description_color: '#fff',
+      background: 'transparent',
+      primary_button_background: '#0D59F2',
+      primary_button_color: '#fff',
+      input_color: 'rgba(255, 255, 255, .8)',
+      input_background: 'rgba(255, 255, 255, .2)',
+      title_font_size: '24px',
+      title_font_weight: '700',
+      title_font_family: 'Roboto',
+      title_text_transform: 'none',
+      description_font_size: '16px',
+      description_font_family: 'Roboto',
+      input_border_color: '#fff'
+    }
+  },
+  template50: {
+    css: () => import('!css-loader!less-loader!./template50.less'),
+    type: 'modal',
+    text: {
+      name: {
+        vi: 'Mẫu 50: Đăng ký khóa học',
+        en: 'Template 50: Register for a course'
+      },
+      title: {
+        vi: 'Giảm giá 50% các khóa học',
+        en: 'Our flagship courses is on sale up to 50%'
+      },
+      description: {
+        vi: 'Đăng ký ngay! Ưu đãi sẽ hết hạn trong hôm nay',
+        en: 'Register now to claim your spot'
+      },
+      primary_button: {
+        vi: 'Đăng ký',
+        en: 'Register'
+      }
+    },
+    desktop_appearance: {
+      title_color: '#000',
+      description_color: '#000',
+      background: 'white',
+      background_image: 'none',
+      primary_button_background: '#0D59F2',
+      primary_button_color: '#fff',
+      input_color: '#000',
+      input_background: 'none',
+      title_font_size: '24px',
+      title_font_weight: '700',
+      title_font_family: 'Roboto',
+      title_text_transform: 'none',
+      description_font_size: '16px',
+      description_font_family: 'Roboto',
+      input_border_color: 'rgba(0, 0, 0, 0.5)'
+    }
+  },
+  template51: {
+    css: () => import('!css-loader!less-loader!./template51.less'),
+    text: {
+      name: {
+        vi: 'Mẫu 51: Giới thiệu thông tin mới',
+        en: 'Template 51: Travel news'
+      },
+      title: {
+        vi: '5 địa điểm đẹp nhất Việt Nam',
+        en: '5 Must-visit Places in Vietnam'
+      },
+      description: {
+        vi: 'CHO NGƯỜI THÍCH KHÁM PHÁ',
+        en: 'FOR FIRST TIME TRAVELERS'
+      },
+      primary_button: {
+        vi: 'KHÁM PHÁ NGAY',
+        en: 'UNLOCK THE LIST'
+      },
+      secondary_button: {
+        vi: 'Tôi không quan tâm thông tin này',
+        en: 'No, thanks! I’m not interested'
+      }
+    },
+    desktop_appearance: {
+      title_color: '#FFFFFF',
+      description_color: '#FFFFFF',
+      background: 'transparent',
+      primary_button_background: '#0D59F2',
+      primary_button_color: '#FFFFFF',
+      secondary_button_color: '#E5E5E5',
+      title_text_transform: 'none',
+      title_font_family: 'Roboto',
+      title_font_weight: '700',
+      title_font_size: '40px',
+      description_font_size: '24px',
+      description_font_family: 'Roboto',
+      description_font_weight: '500'
+    }
+  },
+  template52: {
+    css: () => import('!css-loader!less-loader!./template52.less'),
+    type: 'modal',
+    text: {
+      name: {
+        vi: 'Mẫu 52: Đăng ký nhận ưu đãi du lịch',
+        en: 'Template 52: Register and get a travel voucher'
+      },
+      title: {
+        vi: 'Nhận ngay báo giá các tour hot nhất Việt Nam 2020',
+        en: 'Explore the top destinations in Vietnam 2020'
+      },
+      description: {
+        vi: 'Khám phá những địa điểm phải đến trong năm nay trên Việt Nam và nhận ngay voucher trị giá 500k',
+        en: 'Eplore must-go destitnations, plus you’ll get a 500K voucher'
+      },
+      primary_button: {
+        vi: 'Đăng ký',
+        en: 'Register'
+      }
+    },
+    desktop_appearance: {
+      title_color: '#000',
+      description_color: '#000',
+      background: 'white',
+      primary_button_background: '#0D59F2',
+      primary_button_color: '#fff',
+      input_color: '#000',
+      input_background: 'none',
+      title_font_size: '36px',
+      title_font_weight: '700',
+      title_font_family: 'Roboto',
+      title_text_transform: 'none',
+      description_font_size: '16px',
+      description_font_family: 'Roboto',
+      input_border_color: 'rgba(0, 0, 0, 0.5)'
+    }
+  },
+  template53: {
+    css: () => import('!css-loader!less-loader!./template53.less'),
+    type: 'modal',
+    text: {
+      name: {
+        vi: 'Mẫu 53: Đăng ký nhận ưu đãi du lịch',
+        en: 'Template 53: Register for travel promotion'
+      },
+      title: {
+        vi: 'Phá băng du lịch, giá rẻ vô địch',
+        en: 'Plan your perfect trips'
+      },
+      description: {
+        vi: 'Vui lòng để lại số điện thoại để được tư vấn gói tour ưu đãi nhất',
+        en: 'Please leave your contacts here, we will get back to you soon'
+      },
+      primary_button: {
+        vi: 'Đăng ký',
+        en: 'Register'
+      }
+    },
+    desktop_appearance: {
+      title_color: '#000',
+      description_color: '#000',
+      background: 'white',
+      primary_button_background: '#0D59F2',
+      primary_button_color: '#fff',
+      input_color: '#000',
+      input_background: 'none',
+      title_font_size: '36px',
+      title_font_weight: '700',
+      title_font_family: 'Roboto',
+      title_text_transform: 'none',
+      description_font_size: '24px',
+      description_font_family: 'Roboto',
+      input_border_color: 'rgba(0, 0, 0, 0.5)'
+    }
+  },
+  template54: {
+    css: () => import('!css-loader!less-loader!./template54.less'),
+    text: {
+      name: {
+        vi: 'Mẫu 54: Đăng ký nhận ưu đãi du lịch',
+        en: 'Template 54: Register for travel promotion'
+      },
+      title: {
+        vi: 'Tự thiết kế tour cho chính bạn',
+        en: 'Want to plan your perfect trips?'
+      },
+      description: {
+        vi: 'Hãy để lại số điện thoại, tư vấn viên của chúng tôi sẽ liên hệ tư vấn và giúp bạn thiết kế chuyến đi phù hợp nhất',
+        en: 'Please leave your contacts here, we will get back to you soon'
+      },
+      primary_button: {
+        vi: 'ĐĂNG KÝ',
+        en: 'REGISTER'
+      }
+    },
+    desktop_appearance: {
+      title_color: '#AA0927',
+      description_color: '#000',
+      background: '#FFFFFF',
+      primary_button_background: '#D62A3A',
+      primary_button_color: '#FFFFFF',
+      secondary_button_color: '#B4BAFD',
+      title_text_transform: 'none',
+      title_font_family: 'Roboto',
+      title_font_weight: '700',
+      title_font_size: '36px',
+      description_font_size: '16px',
+      description_font_family: 'Roboto',
+      input_border_color: 'rgba(0, 0, 0, .5)'
+    }
+  },
+  template55: {
+    css: () => import('!css-loader!less-loader!./template55.less'),
+    text: {
+      name: {
+        vi: 'Mẫu 55: Đăng ký nhận ưu đãi du lịch',
+        en: 'Template 55: Register for travel promotion'
+      },
+      title: {
+        vi: 'Tự thiết kế tour cho chính bạn',
+        en: 'Want to plan your perfect trips?'
+      },
+      description: {
+        vi: 'Hãy để lại số điện thoại, tư vấn viên của chúng tôi sẽ liên hệ tư vấn và giúp bạn thiết kế chuyến đi phù hợp nhất',
+        en: 'Please leave your contacts here, we will get back to you soon'
+      },
+      primary_button: {
+        vi: 'ĐĂNG KÝ',
+        en: 'REGISTER'
+      }
+    },
+    desktop_appearance: {
+      title_color: '#AA0927',
+      description_color: '#000',
+      background: '#FFFFFF',
+      background_image: 'none',
+      primary_button_background: '#D62A3A',
+      primary_button_color: '#FFFFFF',
+      title_text_transform: 'none',
+      title_font_family: 'Roboto',
+      title_font_weight: '700',
+      title_font_size: '36px',
+      description_font_size: '16px',
+      description_font_family: 'Roboto',
+      input_border_color: 'rgba(0, 0, 0, .5)'
+    }
+  },
+  template56: {
+    css: () => import('!css-loader!less-loader!./template56.less'),
+    text: {
+      name: {
+        vi: 'Mẫu 56: Đặt lịch làm đẹp',
+        en: 'Template 56: Register to book an appoinment'
+      },
+      title: {
+        vi: 'Nhận ngay tư vấn liệu trình chăm sóc da hiệu quả',
+        en: 'Get instant advice about effective skin care routine'
+      },
+      description: {
+        vi: 'Vui lòng để lại số điện thoại để được tư vấn miễn phí và nhận ngay voucher giảm giá 15%',
+        en: 'Please leave your phone number for a free consultation and receive a 15% discount voucher right away'
+      },
+      primary_button: {
+        vi: 'Đăng ký',
+        en: 'Register'
+      }
+    },
+    desktop_appearance: {
+      title_color: '#F43D2A',
+      description_color: '#000',
+      background: '#FFFFFF',
+      primary_button_background: '#F43D2A',
+      primary_button_color: '#FFFFFF',
+      title_text_transform: 'none',
+      title_font_family: 'Roboto',
+      title_font_weight: '700',
+      title_font_size: '36px',
+      title_font_family: 'Yeseva One',
+      description_font_size: '16px',
+      description_font_family: 'Roboto',
+      input_border_color: 'rgba(0, 0, 0, .5)'
+    }
+  },
+  template57: {
+    css: () => import('!css-loader!less-loader!./template57.less'),
+    type: 'modal',
+    text: {
+      name: {
+        vi: 'Mẫu 57: Đặt lịch làm đẹp',
+        en: 'Template 57: Register to book an appoinment'
+      },
+      title: {
+        vi: 'Thay đổi diện mạo, đẹp chuẩn sao',
+        en: 'Book an appointment and get 15% off'
+      },
+      description: {
+        vi: 'Để lại số điện thoại để nhận ngay voucher giảm giá 500k và được tư vấn miến phí',
+        en: 'Please leave your contacts here for a free consultation and receive a 15% discount voucher right away'
+      },
+      primary_button: {
+        vi: 'ĐĂNG KÝ',
+        en: 'REGISTER'
+      }
+    },
+    desktop_appearance: {
+      title_color: '#582C37',
+      description_color: '#361B22',
+      background: 'white',
+      primary_button_background: '#673340',
+      primary_button_color: '#fff',
+      input_color: '#000',
+      input_background: 'none',
+      title_font_size: '36px',
+      title_font_weight: '700',
+      title_font_family: 'Yeseva One',
+      title_text_transform: 'none',
+      description_font_size: '16px',
+      description_font_family: 'Roboto',
+      input_border_color: 'rgba(0, 0, 0, 0.5)'
+    }
+  },
+  template58: {
+    css: () => import('!css-loader!less-loader!./template58.less'),
+    text: {
+      name: {
+        vi: 'Mẫu 58: Khuyến mãi',
+        en: 'Template 58: Promotion'
+      },
+      title: {
+        vi: 'Beauty Kits',
+        en: 'Beauty Kits'
+      },
+      description: {
+        vi: 'Trợ thủ đắc lực cho ngày dài bận rộn',
+        en: 'Effective assistant for your long busy days'
+      },
+      primary_button: {
+        vi: 'KHÁM PHÁ NGAY',
+        en: 'SHOP NOW'
+      }
+    },
+    desktop_appearance: {
+      title_color: '#3F3327',
+      description_color: '#3F3327',
+      background: 'transparent',
+      primary_button_background: '#3F3327',
+      primary_button_color: 'white',
+      title_text_transform: 'none',
+      title_font_family: 'Roboto',
+      title_font_weight: '700',
+      title_font_size: '36px',
+      description_font_size: '24px',
+      description_font_family: 'Roboto'
+    },
+    mobile_appearance: {
+      title_font_size: '36px',
+      description_font_size: '24px'
+    }
+  },
+  template59: {
+    css: () => import('!css-loader!less-loader!./template59.less'),
+    text: {
+      name: {
+        vi: 'Khuyến mãi',
+        en: 'Promotion'
+      },
+      title: {
+        vi: 'Cần làm điệu? Săn ngay deal',
+        en: 'The basic skin care starter pack'
+      },
+      description: {
+        vi: 'Chính thức mở bán set trang điểm, giảm 50%',
+        en: 'Officially open for sale, 50% off every product'
+      },
+      primary_button: {
+        vi: 'MUA NGAY',
+        en: 'SHOP NOW'
+      }
+    },
+    desktop_appearance: {
+      title_color: '#1F2E22',
+      description_color: '#1F2E22',
+      background: 'transparent',
+      primary_button_background: '#1F2E22',
+      primary_button_color: 'white',
+      title_text_transform: 'uppercase',
+      title_font_family: 'Roboto',
+      title_font_weight: '500',
+      title_font_size: '36px',
+      description_font_size: '24px',
+      description_font_family: 'Roboto'
+    },
+    mobile_appearance: {
+      title_font_size: '36px',
+      description_font_size: '24px'
+    }
+  },
+  template60: {
+    css: () => import('!css-loader!less-loader!./template60.less'),
+    type: 'modal',
+    text: {
+      name: {
+        vi: 'Mẫu 60: Đặt lịch làm đẹp',
+        en: 'Template 60: Register to book an appoinment'
+      },
+      title: {
+        vi: 'Nhận ngay voucher ưu đãi 500K tháng 7',
+        en: 'Get 50$ off your next appointment'
+      },
+      description: {
+        vi: 'Để lại thông tin để được tư vấn gói dịch vụ phù hợp',
+        en: 'Please leave your contacts here, we will get back to you soon'
+      },
+      primary_button: {
+        vi: 'Nhận voucher',
+        en: 'Get the voucher'
+      }
+    },
+    desktop_appearance: {
+      title_color: '#462F25',
+      description_color: '#281B15',
+      background: 'white',
+      primary_button_background: '#462F25',
+      primary_button_color: '#fff',
+      input_color: '#000',
+      input_background: 'none',
+      title_font_size: '36px',
+      title_font_weight: '700',
+      title_font_family: 'Roboto',
+      title_text_transform: 'none',
+      description_font_size: '24px',
+      description_font_family: 'Roboto',
+      input_border_color: 'rgba(0, 0, 0, 0.5)'
+    }
+  },
+  template61: {
+    css: () => import('!css-loader!less-loader!./template61.less'),
+    text: {
+      name: {
+        vi: 'Mẫu 61: Khuyến mãi',
+        en: 'Template 61: Promotion'
+      },
+      title: {
+        vi: 'sản phẩm mới dành riêng cho bạn',
+        en: 'New, Amazing Stuff is Here'
+      },
+      description: {
+        vi: 'Mua ngay hôm nay để được giảm giá 20%',
+        en: 'Shop today and get 20% discount'
+      },
+      primary_button: {
+        vi: 'MUA NGAY',
+        en: 'SHOP NOW'
+      },
+      secondary_button: {
+        vi: 'Tôi không quan tâm thông tin này',
+        en: 'No, thanks! I’m not interested'
+      }
+    },
+    desktop_appearance: {
+      title_color: '#FFFFFF',
+      description_color: '#FFFFFF',
+      background: 'transparent',
+      primary_button_background: '#FFB033',
+      primary_button_color: '#241869',
+      secondary_button_color: '#B4BAFD',
+      title_text_transform: 'uppercase',
+      title_font_family: 'Roboto',
+      title_font_weight: '700',
+      title_font_size: '36px',
+      description_font_size: '24px',
+      description_font_family: 'Roboto',
+      description_font_weight: '500'
+    }
+  },
+  template62: {
+    css: () => import('!css-loader!less-loader!./template62.less'),
+    text: {
+      name: {
+        vi: 'Mẫu 62: Khuyến mãi',
+        en: 'Template 62: Promotion'
+      },
+      title: {
+        vi: '',
+        en: ''
+      },
+      description: {
+        vi: '',
+        en: ''
+      },
+      primary_button: {
+        vi: '',
+        en: ''
+      }
+    },
+    desktop_appearance: {
+      background: 'transparent'
+    }
+  },
+  template63: {
+    css: () => import('!css-loader!less-loader!./template63.less'),
+    type: 'modal',
+    text: {
+      name: {
+        vi: 'Mẫu 63: Đăng ký tư vấn mua nhà',
+        en: 'Template 63: Register for free consultant'
+      },
+      title: {
+        vi: 'Lương 10 triệu Sở hữu căn nhà mơ ước',
+        en: 'Now it’s easy to find your future home'
+      },
+      description: {
+        vi: 'Vui lòng để lại số điện thoại để được liên hệ tư vấn các chính sách mua nhà trả góp phù hợp nhất',
+        en: 'Please leave your contacts here, we will get back to you soon about the most suitable payment plan for you'
+      },
+      primary_button: {
+        vi: 'Đăng ký',
+        en: 'Register'
+      }
+    },
+    desktop_appearance: {
+      title_color: '#000',
+      description_color: '#000',
+      background: 'white',
+      primary_button_background: '#0D59F2',
+      primary_button_color: '#fff',
+      input_color: '#000',
+      input_background: 'none',
+      title_font_size: '36px',
+      title_font_weight: '700',
+      title_font_family: 'Roboto',
+      title_text_transform: 'none',
+      description_font_size: '16px',
+      description_font_family: 'Roboto',
+      input_border_color: 'rgba(0, 0, 0, 0.5)'
+    }
+  },
+  template64: {
+    css: () => import('!css-loader!less-loader!./template64.less'),
+    type: 'modal',
+    text: {
+      name: {
+        vi: 'Mẫu 64: Đăng ký tư vấn mua nhà',
+        en: 'Template 64: Register for free consultant'
+      },
+      title: {
+        vi: 'Sở hữu ngay căn hộ mơ ước',
+        en: 'Find your perfect home'
+      },
+      description: {
+        vi: 'Sở hữu căn hộ cao cấp chưa bao giờ dễ dàng đến thế với các gói hỗ trợ tài chính linh hoạt, lãi suất chỉ từ 7%/năm',
+        en: 'Become a hown owner has never been so easy like this. Leave your contacts here and we will get back to you soon'
+      },
+      primary_button: {
+        vi: 'Đăng ký',
+        en: 'Register'
+      }
+    },
+    desktop_appearance: {
+      title_color: '#3C4936',
+      description_color: '#000',
+      background: 'transparent',
+      primary_button_background: '#526B47',
+      primary_button_color: '#fff',
+      input_color: '#000',
+      input_background: 'none',
+      title_font_size: '36px',
+      title_font_weight: '700',
+      title_font_family: 'Roboto',
+      title_text_transform: 'none',
+      description_font_size: '16px',
+      description_font_family: 'Roboto',
+      input_border_color: 'rgba(0, 0, 0, 0.5)'
+    }
+  },
+  template65: {
+    css: () => import('!css-loader!less-loader!./template65.less'),
+    type: 'modal',
+    text: {
+      name: {
+        vi: 'Mẫu 65: Đăng ký mua bảo hiểm',
+        en: 'Template 65: Sign up to buy insurance'
+      },
+      title: {
+        vi: 'Nhận ngay ưu đãi 40% khi đăng ký mua bảo hiểm',
+        en: 'Get 40% off this month on any insurance plan'
+      },
+      description: {
+        vi: 'Hãy để lại số điện thoại để được tư vấn các gói bảo hiểm phù hợp',
+        en: 'Please leave your contacts below, we will get back to you soon'
+      },
+      primary_button: {
+        vi: 'Nhận ưu đãi',
+        en: 'Sign up'
+      }
+    },
+    desktop_appearance: {
+      title_color: '#A36F29',
+      description_color: '#000',
+      background: 'white',
+      primary_button_background: '#CC8B33',
+      primary_button_color: '#fff',
+      input_color: '#000',
+      input_background: 'none',
+      title_font_size: '36px',
+      title_font_weight: '700',
+      title_font_family: 'Roboto',
+      title_text_transform: 'none',
+      description_font_size: '16px',
+      description_font_family: 'Roboto',
+      input_border_color: 'rgba(0, 0, 0, 0.5)'
+    }
+  },
+  template66: {
+    css: () => import('!css-loader!less-loader!./template66.less'),
+    type: 'modal',
+    text: {
+      name: {
+        vi: 'Mẫu 66: Đăng ký mua bảo hiểm',
+        en: 'Template 66: Sign up to buy insurance'
+      },
+      title: {
+        vi: 'Gắn bó lâu dài, an tâm vui sống',
+        en: 'Get 40% off this month on any insurance plan'
+      },
+      description: {
+        vi: 'Để lại thông tin để được tư vấn những sản phẩm phù hợp',
+        en: 'Please leave your contacts below, we will get back to you soon'
+      },
+      primary_button: {
+        vi: 'Nhận ưu đãi',
+        en: 'Sign up'
+      }
+    },
+    desktop_appearance: {
+      title_color: '#523814',
+      description_color: '#281B15',
+      background: 'white',
+      primary_button_background: '#7B541E',
+      primary_button_color: '#fff',
+      input_color: '#000',
+      input_background: 'none',
+      title_font_size: '36px',
+      title_font_weight: '700',
+      title_font_family: 'Roboto',
+      title_text_transform: 'none',
+      description_font_size: '24px',
+      description_font_family: 'Roboto',
+      input_border_color: 'rgba(0, 0, 0, 0.5)'
+    }
   }
 };
 Object.keys(meta).map(id => {
   if (meta[id].js) return;
 
-  let img = require('../../assets/background/' + id + '.png');
+  if (meta[id].desktop_appearance.background_image !== 'none') {
+    let img = require('../../assets/background/' + id + '.png');
 
-  if (img.default) img = img.default;
-  meta[id].desktop_appearance.background_image = 'url(' + img + ')';
+    if (img.default) img = img.default;
+    meta[id].desktop_appearance.background_image = 'url(' + img + ')';
+  }
+
   if (!meta[id].desktop_appearance.overlay) meta[id].desktop_appearance.overlay = 'rgba(0,0,0,0.8)';
   if (!meta[id].desktop_appearance.title_text_transform) meta[id].desktop_appearance.title_text_transform = 'none';
   if (!meta[id].desktop_appearance.title_font_family) meta[id].desktop_appearance.title_font_family = 'Roboto';
