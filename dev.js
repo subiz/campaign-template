@@ -1,5 +1,6 @@
 import { render, h } from 'preact'
 var op = require('object-path')
+var lo = require('lodash')
 import CamTemp from './src/index.js'
 
 // tell whether the current device is mobile
@@ -15,12 +16,22 @@ function mobilecheck () {
 	)
 }
 
-const MODE = mobilecheck() ? 'mobile' : 'desktop'
+function renderDev () {
+	var $div = document.createElement('div')
+	document.body.appendChild($div)
+	render(
+		<div style="background: yellow; overflow: auto; padding-top: 200px;">
+			<div style="background: red; margin-top: 20px; width: 500px; height: 500px;"></div>
+			<div style="background: blue; margin-left: 500px; margin-top: 20px; width: 500px; height: 500px;"></div>
+			<div id="sbz-pop"></div>
+		</div>,
+		$div,
+	)
 
-function load () {
-	let page = {
+	// a page
+	return {
 		animation: 'bounceIn',
- 		// title: 'Đăng ký để nhận ưu đãi đặc biệt',
+		// title: 'Đăng ký để nhận ưu đãi đặc biệt',
 		// description: 'Giảm 20% chỉ một ngày duy nhất. Đăng ký ngay để nhận được mã giảm giá!',
 		form: {
 			enabled: true,
@@ -44,6 +55,28 @@ function load () {
 		primary_button: { enabled: true, text: '', actions: [{ action: 'submit' }] },
 		secondary_button: { enabled: true, text: '', actions: [{ action: 'close' }] },
 	}
+}
+
+function renderScreenShoot () {
+	var $div = document.createElement('div')
+	document.body.appendChild($div)
+	render(<div id="sbz-pop"></div>, $div)
+
+	return {
+		form: {
+			enabled: true,
+			fields: [
+				{ key: 'email', label: 'Email', is_required: true, type: 'text', placeholder: ' Email' },
+				{ key: 2, label: 'Số điện thoại', is_required: true, type: 'text', placeholder: ' Số điện thoại' },
+			],
+		},
+		primary_button: { enabled: true, text: '', actions: [{ action: 'submit' }] },
+		secondary_button: { enabled: true, text: '', actions: [{ action: 'close' }] },
+	}
+}
+
+function load () {
+	let page = document.location.search === '?screenshoot' ? renderScreenShoot() : renderDev()
 
 	let template = document.location.hash.substr(1)
 	if (!template) template = 'template1'
@@ -68,7 +101,7 @@ function load () {
 		select: 'secondary_button',
 		onClick: onClicked,
 		onClose: onClosed,
-		mode: MODE,
+		mode: mobilecheck() ? 'mobile' : 'desktop',
 	})
 }
 
