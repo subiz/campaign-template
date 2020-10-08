@@ -8,16 +8,12 @@
 		position: relative;
 		height: 667px;
 		overflow: hidden;
+		width: 800px;
+		height: 400px;
 	}
 
 	.mobile .container {
-		height: 100vh;
-		width: 100%;
-	}
-
-	.desktop .container {
-		width: 800px;
-		height: 400px;
+		height: unset;
 	}
 
 	.background {
@@ -28,14 +24,14 @@
 		left: 0;
 		z-index: -1;
 	}
-	.mobile .background {
+
+	.mobile .body {
+		margin: 0;
+		padding: 0;
+		height: unset;
 	}
 
-	.container__inner {
-		height: 100%;
-	}
-
-	.content {
+	.body {
 		background: transparent;
 		width: 50%;
 		height: 100%;
@@ -44,11 +40,6 @@
 		align-items: center;
 		flex-direction: column;
 		padding: @spacer;
-	}
-
-	.mobile .content {
-		width: 100%;
-		padding: 20px;
 	}
 
 	.title {
