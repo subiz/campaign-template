@@ -36,9 +36,9 @@ function renderDev () {
 		form: {
 			enabled: true,
 			fields: [
-				{ key: 'email', label: 'Email', is_required: true, type: 'text', placeholder: ' Email' },
-				{ key: 2, label: 'Số điện thoại', is_required: true, type: 'text', placeholder: ' Số điện thoại' },
 				{ key: 1, label: 'Họ Tên', is_required: true, type: 'text', placeholder: ' Họ tên' },
+				{ key: 2, label: 'Số điện thoại', is_required: true, type: 'text', placeholder: ' Số điện thoại' },
+				{ key: 'email', label: 'Email', is_required: true, type: 'text', placeholder: ' Email' },
 				{ key: 'ltqhch', label: 'Option', is_required: true, type: 'list', list: ['one', 'two'] },
 				{
 					key: 'ltqhch',
