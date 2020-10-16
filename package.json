@@ -1,6 +1,6 @@
 {
 	"name": "@subiz/campaign-template",
-	"version": "2.1.5",
+	"version": "2.1.6",
 	"main": "./dist/index.js",
 	"scripts": {
 		"dev": "webpack-dev-server --mode=development",

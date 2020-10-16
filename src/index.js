@@ -121,7 +121,7 @@ class Template extends Component {
 		return (
 			<div class={'template ' + this.props.template}>
 				<div class={mode}>
-					<div class={cls} onClick={(e) => this.onBackgroundClick(e)}>
+					<div class={cls}>
 						<div class="notch">
 							<div class="notch__camera"></div>
 							<div class="notch__audio"></div>
@@ -134,7 +134,7 @@ class Template extends Component {
 						</div>
 						<div class={animation} onClick={(e) => e.stopPropagation()}>
 							<CloseButton onClick={(e) => this.onClose(e)} />
-							<div class="background"></div>
+							<div class="background" onClick={(e) => this.onBackgroundClick(e)}></div>
 							<div class="body">
 								<p class={titlecls} onClick={(e) => this.props.onClick('title')}>
 									{this.props.page.title}
