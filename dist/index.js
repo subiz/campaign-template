@@ -131,8 +131,7 @@ class Template extends Component {
     }, h("div", {
       class: mode
     }, h("div", {
-      class: cls,
-      onClick: e => this.onBackgroundClick(e)
+      class: cls
     }, h("div", {
       class: "notch"
     }, h("div", {
@@ -155,7 +154,8 @@ class Template extends Component {
     }, h(CloseButton, {
       onClick: e => this.onClose(e)
     }), h("div", {
-      class: "background"
+      class: "background",
+      onClick: e => this.onBackgroundClick(e)
     }), h("div", {
       class: "body"
     }, h("p", {
