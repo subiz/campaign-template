@@ -57,17 +57,13 @@ class Template extends Component {
 		this.onButtonClick(op.get(this.props.page, 'primary_button'), 'primaryButtonClicked')
 	}
 
-	loadTemplate () {
-		if (this.state.lastTemplate === this.props.template) return
-		this.state.lastTemplate = this.props.template
-		let temp = meta[this.props.template]
+	loadTemplate (templateid) {
+		let temp = meta[templateid]
 		if (!temp) return
-		setTimeout(() => {
-			temp.css().then((mod) => {
-				CSS = mod.default.toString()
-				populatePage(this.props.template, this.props.page)
-				this.forceUpdate()
-			})
+		temp.css().then((mod) => {
+			CSS = mod.default.toString()
+			populatePage(templateid, this.props.page)
+			this.setState({ lastTemplate: templateid })
 		})
 	}
 
@@ -76,7 +72,11 @@ class Template extends Component {
 	}
 
 	render () {
-		this.loadTemplate()
+		if (this.state.lastTemplate !== this.props.template) {
+			this.loadTemplate(this.props.template)
+			return null
+		}
+
 		if (this.state.close) return null
 
 		let $primary = null
