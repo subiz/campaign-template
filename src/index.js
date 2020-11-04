@@ -26,8 +26,13 @@ class Template extends Component {
 		this.setClose(true)
 	}
 
-	onSecondaryClick () {
-		this.props.onClick('secondary_button')
+	onClick (e, ele) {
+		e.stopPropagation()
+		this.props.onClick(ele)
+	}
+
+	onSecondaryClick (e) {
+		this.onClick(e, 'secondary_button')
 		this.onButtonClick(op.get(this.props.page, 'secondary_button'), 'secondaryButtonClicked')
 	}
 
@@ -47,13 +52,13 @@ class Template extends Component {
 		}
 	}
 
-	onBackgroundClick () {
-		this.props.onClick('background')
+	onBackgroundClick (e) {
+		this.onClick(e, 'background')
 		this.onButtonClick(op.get(this.props.page, 'background_click'), 'backgroundClicked')
 	}
 
-	onPrimaryClick () {
-		this.props.onClick('primary_button')
+	onPrimaryClick (e) {
+		this.onClick(e, 'primary_button')
 		this.onButtonClick(op.get(this.props.page, 'primary_button'), 'primaryButtonClicked')
 	}
 
@@ -102,7 +107,11 @@ class Template extends Component {
 		}
 
 		let $form = (
-			<Form onClick={this.props.onClick} form={this.props.page.form} pressedSubmit={this.state.pressedSubmit} />
+			<Form
+				onClick={(e) => this.onClick(e, 'form')}
+				form={this.props.page.form}
+				pressedSubmit={this.state.pressedSubmit}
+			/>
 		)
 		var mode = this.props.mode || MODE
 
@@ -136,11 +145,11 @@ class Template extends Component {
 							<CloseButton onClick={(e) => this.onClose(e)} />
 							<div class="background" onClick={(e) => this.onBackgroundClick(e)}></div>
 							<div class="body" onClick={(e) => this.onBackgroundClick(e)}>
-								<p class={titlecls} onClick={(e) => this.props.onClick('title')}>
+								<p class={titlecls} onClick={(e) => this.onClick(e, 'title')}>
 									{this.props.page.title}
 								</p>
 								<div class="title-separator"></div>
-								<p class={desccls} onClick={(e) => this.props.onClick('description')}>
+								<p class={desccls} onClick={(e) => this.onClick(e, 'description')}>
 									{this.props.page.description}
 								</p>
 								{$form}

@@ -204,7 +204,7 @@ export default class JForm extends Component {
 			</div>
 		))
 		return (
-			<div class="form" onClick={(_) => this.props.onClick('form')}>
+			<div class="form" onClick={(e) => this.props.onClick(e)}>
 				{$fields}
 			</div>
 		)
