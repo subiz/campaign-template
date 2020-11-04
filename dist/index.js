@@ -34,8 +34,13 @@ class Template extends Component {
     this.setClose(true);
   }
 
-  onSecondaryClick() {
-    this.props.onClick('secondary_button');
+  onClick(e, ele) {
+    e.stopPropagation();
+    this.props.onClick(ele);
+  }
+
+  onSecondaryClick(e) {
+    this.onClick(e, 'secondary_button');
     this.onButtonClick(op.get(this.props.page, 'secondary_button'), 'secondaryButtonClicked');
   }
 
@@ -59,13 +64,13 @@ class Template extends Component {
     }
   }
 
-  onBackgroundClick() {
-    this.props.onClick('background');
+  onBackgroundClick(e) {
+    this.onClick(e, 'background');
     this.onButtonClick(op.get(this.props.page, 'background_click'), 'backgroundClicked');
   }
 
-  onPrimaryClick() {
-    this.props.onClick('primary_button');
+  onPrimaryClick(e) {
+    this.onClick(e, 'primary_button');
     this.onButtonClick(op.get(this.props.page, 'primary_button'), 'primaryButtonClicked');
   }
 
@@ -115,7 +120,7 @@ class Template extends Component {
     }
 
     let $form = h(Form, {
-      onClick: this.props.onClick,
+      onClick: e => this.onClick(e, 'form'),
       form: this.props.page.form,
       pressedSubmit: this.state.pressedSubmit
     });
@@ -163,12 +168,12 @@ class Template extends Component {
       onClick: e => this.onBackgroundClick(e)
     }, h("p", {
       class: titlecls,
-      onClick: e => this.props.onClick('title')
+      onClick: e => this.onClick(e, 'title')
     }, this.props.page.title), h("div", {
       class: "title-separator"
     }), h("p", {
       class: desccls,
-      onClick: e => this.props.onClick('description')
+      onClick: e => this.onClick(e, 'description')
     }, this.props.page.description), $form, h("div", {
       class: "buttons",
       onClick: e => e.stopPropagation()

@@ -186,7 +186,7 @@ export default class JForm extends Component {
     }, field.label + ':'), this.renderMultipleChoiceList(h, field), this.renderSingleChoiceList(h, field), this.renderEmail(h, field), this.renderMultiLineText(h, field), this.renderSingleLineText(h, field), this.renderNumber(h, field), this.renderBoolean(h, field)));
     return h("div", {
       class: "form",
-      onClick: _ => this.props.onClick('form')
+      onClick: e => this.props.onClick(e)
     }, $fields);
   }
 
