@@ -1,0 +1,82 @@
+.background {
+    max-height: 100%;
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+}
+
+.container {
+    max-height: 90%;
+    max-width: 90%;
+    width: 800px;
+    overflow: hidden;
+}
+.body {
+    width: 50%;
+    padding: 48px;
+    overflow: auto;
+    max-height: 90%;
+}
+.title {
+    margin-bottom: 20px;
+}
+.title-separator {
+    display: none;
+}
+
+.mobile .title-separator {
+    background-color: @mobile_primary_button_background;
+}
+
+.description {
+    margin-bottom: 0;
+}
+
+.form {
+    overflow: visible;
+    min-height: unset;
+}
+
+.label,
+.radio--label,
+.form-check-label {
+    font-family: 'Roboto';
+}
+
+.label {
+    color: #000;
+    margin-bottom: 5px;
+    margin-top: unset;
+    font-size: 16px;
+}
+
+.text-input {
+    font-family: 'Roboto';
+    font-size: 16px;
+    height: 42px;
+    padding: 0 15px;
+    border: 1px solid @input_border_color;
+    border-radius: 4px;
+    width: 100%;
+    outline: 0;
+}
+
+.form-check-input,
+.form--list-container {
+    margin-top: 0;
+}
+
+.btn--primary {
+    font-size: 16px;
+    font-weight: 700;
+    width: 100%;
+}
+
+.btn--secondary {
+    display: none;
+}
+
+.buttons {
+    margin-top: 24px;
+}

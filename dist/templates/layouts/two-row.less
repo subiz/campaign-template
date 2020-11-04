@@ -1,0 +1,113 @@
+.background {
+    height: 260px;
+    position: relative;
+}
+.mobile .background {
+    height: 100%;
+    position: absolute;
+    border-radius: 0;
+}
+.container {
+    max-height: 90%;
+    max-width: 90%;
+    width: 800px;
+}
+.body {
+    padding: 40px 48px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: unset;
+}
+.title {
+    margin-bottom: 6px;
+}
+.mobile .title {
+    margin-bottom: 16px;
+}
+.description {
+    line-height: 36px;
+}
+.title-separator {
+    display: none;
+}
+.mobile .title-separator {
+    background-color: @mobile_primary_button_background;
+}
+.description {
+    margin-bottom: 0;
+}
+.form {
+    padding-right: 0;
+    overflow: visible;
+    min-height: unset;
+    display: inline-flex;
+    justify-content: space-between;
+    min-width: ~'calc(100% * 2 / 3)';
+    max-width: 75%;
+}
+.mobile .form {
+    display: flex;
+    min-width: 100%;
+    max-width: 100%;
+    flex-direction: column;
+}
+
+.form-field {
+    flex: 1;
+    margin-right: 16px;
+}
+.form-field:nth-child(n + 4) {
+    display: none;
+}
+.mobile .form-file {
+    margin-right: 0;
+}
+.label,
+.radio--label,
+.form-check-label {
+    font-family: 'Roboto';
+}
+.label {
+    color: #000;
+    margin-bottom: 5px;
+    margin-top: unset;
+    font-size: 16px;
+}
+.text-input {
+    font-family: 'Roboto';
+    font-size: 16px;
+    height: 42px;
+    padding: 0 15px;
+    border: 1px solid @input_border_color;
+    border-radius: 4px;
+    width: 100%;
+    outline: 0;
+}
+.form-check-input {
+    margin-top: 0;
+}
+.form--list-container {
+    margin-top: 0;
+}
+.btn--primary {
+    font-size: 16px;
+    font-weight: 700;
+    width: 100%;
+}
+.btn--secondary {
+    display: none;
+}
+.buttons {
+    flex: 1;
+    margin-top: 39px;
+    min-width: 25%;
+    max-width: ~'calc(100% / 3)';
+    padding-left: 0;
+}
+.mobile .buttons {
+    padding: 0;
+    min-width: 100%;
+    max-width: 100%;
+    margin-top: 24px;
+}

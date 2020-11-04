@@ -1,0 +1,90 @@
+@import './font.less';
+@spacer: 20px;
+#template() {
+	@import './base.less';
+
+	.container {
+		display: flex;
+		flex-direction: column;
+		width: 800px;
+		max-height: 100%;
+		max-width: 90%;
+		align-items: center;
+		background-size: auto;
+	}
+
+	.background {
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		border-radius: @popup_border_radius;
+	}
+
+	.body {
+		position: relative; // so the background stay behine it
+		background: transparent;
+		overflow: hidden;
+		display: flex;
+		flex-direction: column;
+		margin: auto;
+		width: 500px;
+		padding-top: 120px;
+		padding-bottom: 120px;
+	}
+
+	.mobile .body {
+		padding: 0;
+		margin: 0;
+	}
+
+	.title {
+		text-align: center;
+		margin: unset;
+	}
+
+	.form {
+		display: none;
+	}
+
+	.description {
+		margin-top: 10px;
+		text-align: center;
+	}
+
+	.btn.btn--primary {
+		text-transform: uppercase;
+		font-weight: bold;
+		font-size: 20px;
+		font-family: 'Montserrat';
+		width: 242px;
+		height: 62px;
+		border-radius: 30px;
+	}
+	.buttons {
+		display: flex;
+		flex-direction: column;
+		padding-left: @spacer;
+		padding-right: @spacer;
+		margin-top: 25px;
+	}
+
+	.btn.btn--secondary {
+		position: absolute;
+		bottom: 0px;
+		font-size: 16px;
+		font-weight: 500;
+		margin: unset;
+	}
+
+	.mobile .btn.btn--secondary {
+		position: relative;
+		font-size: 14px;
+		padding: 0;
+	}
+}
+
+#sbz-pop .template.template14 {
+	#template() !important;
+}

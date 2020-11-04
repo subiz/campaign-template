@@ -15,7 +15,7 @@ module.exports = {
 		host: '0.0.0.0',
 	},
 	optimization: {
-		minimize: false,
+		minimize: true,
 	},
 	module: {
 		rules: [
@@ -24,6 +24,10 @@ module.exports = {
 				use: [
 					{
 						loader: 'file-loader',
+						options: {
+							esModule: false, // so we dont have to use .default
+							name: '[path][name].[hash:7].[ext]', // full path structure
+						},
 					},
 				],
 			},

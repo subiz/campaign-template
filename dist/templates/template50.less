@@ -1,0 +1,38 @@
+@import './font.less';
+
+#template() {
+	@import './base.less';
+	@import './layouts/no-background.less';
+	
+	.container {
+		width: 375px;
+	}
+	.body {
+		flex-direction: column;
+		padding: 53px 48px;
+	}
+	.mobile .body {
+		flex-direction: unset;
+	}
+	.title {
+		margin-bottom: 12px;
+	}
+	.description {
+		line-height: 24px;
+	}
+	.form {
+		flex-direction: column;
+		max-width: unset;
+		min-width: unset;
+	}
+	.form-field:nth-child(n + 4) {
+		display: block;
+	}
+	.buttons {
+		max-width: unset;
+		min-width: unset;
+	}
+}
+#sbz-pop .template.template50 {
+	#template() !important;
+}

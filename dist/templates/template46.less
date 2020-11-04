@@ -1,0 +1,49 @@
+@import './font.less';
+
+#template() {
+    @import './base.less';
+	@import './layouts/no-form.less';
+
+	.container {
+		border-radius: 0;
+	}
+	.mobile .background {
+		border-radius: 0;
+	}
+	.body {
+		padding-top: 89px;
+		padding-left: 55px;
+		padding-right: 55px;
+	}
+	.mobile .body {
+		padding-top: 48px;
+	}
+	.title {
+		margin-bottom: 40px;
+	}
+	.description {
+		padding: 0 10px;
+		margin-bottom: 44px;
+	}
+	.btn.btn--primary {
+		font-size: 24px;
+		line-height: 19px;
+		text-transform: uppercase;
+		min-height: 64px;
+		margin-bottom: 56px;
+	}
+	.desktop .btn.btn--primary {
+		padding-left: 55px;
+		padding-right: 55px;
+	}
+	.mobile .btn.btn--primary {
+		margin-bottom: 39px;
+		padding-left: 0;
+		padding-right: 0;
+		max-width: 100%;
+	}
+}
+
+#sbz-pop .template.template46 {
+	#template() !important;
+}

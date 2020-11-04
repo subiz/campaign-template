@@ -1,0 +1,61 @@
+@import './font.less';
+
+#template() {
+	@import './base.less';
+	@import './layouts/no-background.less';
+
+    .container {
+		width: 616px;
+	}
+
+	.body {
+		padding: 57px 49px;
+		flex-direction: column;
+	}
+	.title {
+		margin-bottom: 8px;
+		text-align: center;
+	}
+	.description {
+		margin-bottom: 17px;
+		line-height: 24px;
+		text-align: center;
+	}
+	.mobile .description {
+		margin-bottom: 5px;
+	}
+	.form {
+		padding: 0 64px;
+		flex-direction: column;
+		max-width: unset;
+		min-width: unset;
+	}
+	.mobile .body {
+		flex-direction: unset;
+		padding: 36px 24px;
+	}
+	.form-field:nth-child(n + 4) {
+		display: block;
+	}
+	.label {
+		display: none;
+	}
+	.buttons {
+		padding: 0 64px;
+		margin-top: 8px;
+		max-width: unset;
+		min-width: unset;
+	}
+	.btn.btn--primary {
+		font-size: 16px;
+		line-height: 38px;
+		min-height: 42px;
+		padding-top: 2px;
+		padding-bottom: 2px;
+		width: 100%;
+	}
+}
+
+#sbz-pop .template.template55 {
+	#template() !important;
+}

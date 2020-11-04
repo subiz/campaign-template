@@ -1,0 +1,29 @@
+@import './font.less';
+
+#template() {
+	@import './base.less';
+	@import './layouts/two-column.less';
+
+	.background {
+		left: 0;
+	}
+	.container {
+		border-radius: 12px;
+	}
+	.body {
+		margin-left: auto;
+		padding: 57px 48px;
+	}
+	.label {
+		display: none;
+	}
+	.text-input {
+		border-width: 0 0 1px 0;
+		border-color: @input_border_color;
+		border-radius: 0;
+		padding-left: 4px;
+	}
+}
+#sbz-pop .template.template52 {
+	#template() !important;
+}
