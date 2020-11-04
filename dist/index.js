@@ -69,16 +69,14 @@ class Template extends Component {
     this.onButtonClick(op.get(this.props.page, 'primary_button'), 'primaryButtonClicked');
   }
 
-  loadTemplate() {
-    if (this.state.lastTemplate === this.props.template) return;
-    this.state.lastTemplate = this.props.template;
-    let temp = meta[this.props.template];
+  loadTemplate(templateid) {
+    let temp = meta[templateid];
     if (!temp) return;
-    setTimeout(() => {
-      temp.css().then(mod => {
-        CSS = mod.default.toString();
-        populatePage(this.props.template, this.props.page);
-        this.forceUpdate();
+    temp.css().then(mod => {
+      CSS = mod.default.toString();
+      populatePage(templateid, this.props.page);
+      this.setState({
+        lastTemplate: templateid
       });
     });
   }
@@ -88,7 +86,11 @@ class Template extends Component {
   }
 
   render() {
-    this.loadTemplate();
+    if (this.state.lastTemplate !== this.props.template) {
+      this.loadTemplate(this.props.template);
+      return null;
+    }
+
     if (this.state.close) return null;
     let $primary = null;
     let primaryBtnCls = 'btn btn--primary';
@@ -157,7 +159,8 @@ class Template extends Component {
       class: "background",
       onClick: e => this.onBackgroundClick(e)
     }), h("div", {
-      class: "body"
+      class: "body",
+      onClick: e => this.onBackgroundClick(e)
     }, h("p", {
       class: titlecls,
       onClick: e => this.props.onClick('title')
@@ -167,7 +170,8 @@ class Template extends Component {
       class: desccls,
       onClick: e => this.props.onClick('description')
     }, this.props.page.description), $form, h("div", {
-      class: "buttons"
+      class: "buttons",
+      onClick: e => e.stopPropagation()
     }, $primary, $secondary))))));
   }
 
