@@ -105,14 +105,6 @@ class Template extends Component {
 				</button>
 			)
 		}
-
-		let $form = (
-			<Form
-				onClick={(e) => this.onClick(e, 'form')}
-				form={this.props.page.form}
-				pressedSubmit={this.state.pressedSubmit}
-			/>
-		)
 		var mode = this.props.mode || MODE
 
 		var cls = 'overlay '
@@ -152,7 +144,11 @@ class Template extends Component {
 								<p class={desccls} onClick={(e) => this.onClick(e, 'description')}>
 									{this.props.page.description}
 								</p>
-								{$form}
+								<Form
+									onClick={(e) => this.onClick(e, 'form')}
+									form={this.props.page.form}
+									pressedSubmit={this.state.pressedSubmit}
+								/>
 								<div class="buttons" onClick={(e) => e.stopPropagation()}>
 									{$primary}
 									{$secondary}
