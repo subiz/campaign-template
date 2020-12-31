@@ -8,28 +8,26 @@
 		"report": "npx webpack --mode=production"
 	},
 	"devDependencies": {
-		"@babel/cli": "^7.12.7",
-		"@babel/core": "^7.12.7",
-		"@babel/plugin-transform-react-jsx": "^7.12.7",
+		"@babel/cli": "^7.12.10",
+		"@babel/core": "^7.12.10",
+		"@babel/plugin-transform-react-jsx": "^7.12.12",
 		"@subiz/flow": "^1.0.7",
-		"babel-loader": "^8.2.1",
+		"babel-loader": "^8.2.2",
 		"babel-plugin-syntax-jsx": "^6.18.0",
 		"html-webpack-plugin": "^4.5.0",
-		"prettier-eslint": "^11.0.0",
-		"prettier-eslint-cli": "^5.0.0",
 		"puppeteer": "^5.5.0",
 		"webpack": "^4.44.2",
 		"webpack-bundle-analyzer": "^3.9.0",
 		"webpack-cli": "^3.3.12",
-		"webpack-dev-server": "^3.11.0"
+		"webpack-dev-server": "^3.11.1"
 	},
 	"dependencies": {
 		"css-loader": "^4.3.0",
 		"file-loader": "^6.2.0",
-		"less": "^3.12.0",
-		"less-loader": "^7.1.0",
+		"less": "^4.0.0",
+		"less-loader": "^7.2.1",
 		"normalize.css": "^8.0.1",
 		"object-path": "^0.11.5",
-		"preact": "^10.5.7"
+		"preact": "^10.5.8"
 	}
 }
