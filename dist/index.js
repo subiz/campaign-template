@@ -119,11 +119,6 @@ class Template extends Component {
       }, op.get(this.props.page, 'secondary_button.text'));
     }
 
-    let $form = h(Form, {
-      onClick: e => this.onClick(e, 'form'),
-      form: this.props.page.form,
-      pressedSubmit: this.state.pressedSubmit
-    });
     var mode = this.props.mode || MODE;
     var cls = 'overlay ';
     if (this.props.frame) cls += ' overlay--' + this.props.frame;
@@ -174,7 +169,11 @@ class Template extends Component {
     }), h("p", {
       class: desccls,
       onClick: e => this.onClick(e, 'description')
-    }, this.props.page.description), $form, h("div", {
+    }, this.props.page.description), h(Form, {
+      onClick: e => this.onClick(e, 'form'),
+      form: this.props.page.form,
+      pressedSubmit: this.state.pressedSubmit
+    }), h("div", {
       class: "buttons",
       onClick: e => e.stopPropagation()
     }, $primary, $secondary))))));

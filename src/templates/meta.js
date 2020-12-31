@@ -229,7 +229,7 @@ let meta = {
 			description_font_family: 'Muli',
 		},
 		mobile_appearance: {
-			background_image: 'url(' + require('../../assets/background/bg5_mobile.png').default + ')',
+			background_image: 'url(' + require('../../assets/background/bg5_mobile.png') + ')',
 			title_font_size: '28px',
 			description_font_size: '16px',
 		},
@@ -272,7 +272,7 @@ let meta = {
 			title_color: '#fff',
 			description_color: '#fff',
 			background: 'white',
-			background_image: 'url(' + require('../../assets/background/template6_mobile.png').default + ')',
+			background_image: 'url(' + require('../../assets/background/template6_mobile.png') + ')',
 			primary_button_background: '#dab86a',
 			primary_button_color: 'white',
 			secondary_button_background: '#777',
@@ -435,7 +435,7 @@ let meta = {
 			input_border_color: '#ddd',
 		},
 		mobile_appearance: {
-			background_image: 'url(' + require('../../assets/background/template21_mobile.png').default + ')',
+			background_image: 'url(' + require('../../assets/background/template21_mobile.png') + ')',
 			description_font_size: '16px',
 		},
 	},
@@ -475,7 +475,7 @@ let meta = {
 			input_border_color: '#ddd',
 		},
 		mobile_appearance: {
-			background_image: 'url(' + require('../../assets/background/template22_mobile.png').default + ')',
+			background_image: 'url(' + require('../../assets/background/template22_mobile.png') + ')',
 			title_font_size: '37px',
 		},
 	},
@@ -515,7 +515,7 @@ let meta = {
 			description_font_size: '24px',
 		},
 		mobile_appearance: {
-			background_image: 'url(' + require('../../assets/background/template23_mobile.png').default + ')',
+			background_image: 'url(' + require('../../assets/background/template23_mobile.png') + ')',
 			title_font_size: '37px',
 			description_font_size: '24px',
 		},
@@ -556,7 +556,7 @@ let meta = {
 		},
 		mobile_appearance: {
 			title_font_size: '32px',
-			background_image: 'url(' + require('../../assets/background/template24_mobile.png').default + ')',
+			background_image: 'url(' + require('../../assets/background/template24_mobile.png') + ')',
 			description_font_size: '14px',
 		},
 	},
@@ -593,7 +593,7 @@ let meta = {
 			description_font_size: '20px',
 		},
 		mobile_appearance: {
-			background_image: 'url(' + require('../../assets/background/tet20201_mobile.png').default + ')',
+			background_image: 'url(' + require('../../assets/background/tet20201_mobile.png') + ')',
 		},
 	},
 	tet20202: {
@@ -627,7 +627,7 @@ let meta = {
 			description_font_size: '20px',
 		},
 		mobile_appearance: {
-			background_image: 'url(' + require('../../assets/background/tet20202_mobile.png').default + ')',
+			background_image: 'url(' + require('../../assets/background/tet20202_mobile.png') + ')',
 		},
 	},
 	tet20203: {
@@ -697,6 +697,44 @@ let meta = {
 		},
 		mobile_appearance: {
 			title_font_size: '26px',
+		},
+	},
+	tet20211: {
+		css: () => import(/*webpackChunkName: "tet20211_css" */ '!css-loader!less-loader!./tet20211.less'),
+		type: 'modal',
+		text: {
+			name: {vi: 'Mẫu 67: Chúc mừng năm mới 2021', en: 'Template 67: New Year 2021'},
+			title: {
+				vi: 'Cung chúc tân xuân\nVạn sự như ý',
+				en: 'Cung chúc tân xuân\nVạn sự như ý',
+			},
+			description: {
+				vi: 'Đón thêm khách hàng mới cùng Subiz New Widget',
+				en: 'Đón thêm khách hàng mới cùng Subiz New Widget',
+			},
+			primary_button: {vi: 'Xem ngay', en: 'View now'},
+			secondary_button: {vi: 'Không, cảm ơn.Tôi sẽ quay lại sau', en: "No, thanks.I'll be back later"},
+		},
+		desktop_appearance: {
+			title_color: '#FECE41',
+			description_color: '#FFF',
+			primary_button_background: '#FECE41',
+			primary_button_color: '#941313',
+			secondary_button_background: 'unset',
+			secondary_button_color: '#5F6369;',
+			input_color: '',
+			input_background: '',
+
+			title_font_size: '21px',
+			title_font_weight: 'bold',
+			title_text_transform: 'uppercase',
+
+			description_font_size: '16px',
+		},
+		mobile_appearance: {
+			title_font_size: '25px',
+			description_font_size: '18px',
+			background_image: 'url(' + require('../../assets/background/tet20211_mobile.png') + ')',
 		},
 	},
 	template11: {
@@ -940,7 +978,7 @@ thành công mới`,
 			description_font_family: 'Muli',
 		},
 		mobile_appearance: {
-			background_image: 'url(' + require('../../assets/background/templateu23_mobile.png').default + ')',
+			background_image: 'url(' + require('../../assets/background/templateu23_mobile.png') + ')',
 		},
 	},
 	template16: {
@@ -1015,7 +1053,7 @@ thành công mới`,
 			input_border_color: '#fff',
 		},
 		mobile_appearance: {
-			background_image: 'url(' + require('../../assets/background/template39_mobile.png').default + ')',
+			background_image: 'url(' + require('../../assets/background/template39_mobile.png') + ')',
 		},
 	},
 	template39: {
@@ -1056,7 +1094,7 @@ thành công mới`,
 			description_font_family: 'Muli',
 		},
 		mobile_appearance: {
-			background_image: 'url(' + require('../../assets/background/template39_mobile.png').default + ')',
+			background_image: 'url(' + require('../../assets/background/template39_mobile.png') + ')',
 			description_font_size: '16px',
 			title_font_size: '28px',
 		},
@@ -1176,7 +1214,7 @@ thành công mới`,
 			input_border_color: '#5F6369',
 		},
 		mobile_appearance: {
-			background_image: 'url(' + require('../../assets/background/template26_mobile.png').default + ')',
+			background_image: 'url(' + require('../../assets/background/template26_mobile.png') + ')',
 			title_font_size: '48px',
 			description_font_size: '16px',
 		},
@@ -1223,7 +1261,7 @@ thành công mới`,
 			background: 'white',
 			primary_button_background: 'linear-gradient(74.1deg, #5E8D81 0.21%, #3FA684 100%)',
 			primary_button_color: 'white',
-			background_image: 'url(' + require('../../assets/background/template18_mobile.png').default + ')',
+			background_image: 'url(' + require('../../assets/background/template18_mobile.png') + ')',
 			secondary_button_background: 'transparent',
 			secondary_button_color: 'black',
 			input_color: 'black',
@@ -1268,7 +1306,7 @@ thành công mới`,
 			input_border_color: '#5F6369',
 		},
 		mobile_appearance: {
-			background_image: 'url(' + require('../../assets/background/template27_mobile.png').default + ')',
+			background_image: 'url(' + require('../../assets/background/template27_mobile.png') + ')',
 			title_font_size: '48px',
 		},
 	},
@@ -1311,7 +1349,7 @@ thành công mới`,
 			input_border_color: '#8d8d8d80',
 		},
 		mobile_appearance: {
-			background_image: 'url(' + require('../../assets/background/template19_mobile.png').default + ')',
+			background_image: 'url(' + require('../../assets/background/template19_mobile.png') + ')',
 			title_font_size: '30px',
 			description_font_size: '16px',
 		},
@@ -1349,7 +1387,7 @@ thành công mới`,
 		},
 		mobile_appearance: {
 			title_font_size: '48px',
-			background_image: 'url(' + require('../../assets/background/template28_mobile.png').default + ')',
+			background_image: 'url(' + require('../../assets/background/template28_mobile.png') + ')',
 		},
 	},
 	template202009021: {
@@ -1373,7 +1411,7 @@ thành công mới`,
 			title_color: '#226C92',
 			description_color: '#000',
 			background: 'white',
-			background_image: 'url(' + require('../../assets/background/template29_mobile.png').default + ')',
+			background_image: 'url(' + require('../../assets/background/template29_mobile.png') + ')',
 
 			primary_button_background: '#226C92',
 			primary_button_color: '#fff',
@@ -1461,7 +1499,7 @@ thành công mới`,
 			input_border_color: '#5f6369',
 		},
 		mobile_appearance: {
-			background_image: 'url(' + require('../../assets/background/template29_mobile.png').default + ')',
+			background_image: 'url(' + require('../../assets/background/template29_mobile.png') + ')',
 		},
 	},
 	template30: {
@@ -1499,7 +1537,7 @@ thành công mới`,
 			description_font_family: 'Roboto',
 		},
 		mobile_appearance: {
-			background_image: 'url(' + require('../../assets/background/template30_mobile.png').default + ')',
+			background_image: 'url(' + require('../../assets/background/template30_mobile.png') + ')',
 		},
 	},
 	template41: {
