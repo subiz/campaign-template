@@ -111,12 +111,13 @@ class Template extends Component {
     let $secondary = null;
     let secondaryBtnCls = 'btn btn--secondary';
     if (this.props.select === 'secondary_button') secondaryBtnCls += ' text__shake';
+    let secondaryBtnText = op.get(this.props.page, 'secondary_button.text');
 
-    if (op.get(this.props.page, 'secondary_button.enabled')) {
+    if (op.get(this.props.page, 'secondary_button.enabled') && secondaryBtnText) {
       $secondary = h("button", {
         onClick: e => this.onSecondaryClick(e),
         class: secondaryBtnCls
-      }, op.get(this.props.page, 'secondary_button.text'));
+      }, secondaryBtnText);
     }
 
     var mode = this.props.mode || MODE;

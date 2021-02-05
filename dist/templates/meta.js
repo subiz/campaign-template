@@ -858,6 +858,137 @@ let meta = {
       background_image: 'url(' + require('../../assets/background/tet20211_mobile.png') + ')'
     }
   },
+  tet20212: {
+    css: () => import('!css-loader!less-loader!./tet20212.less'),
+    type: 'modal',
+    text: {
+      name: {
+        vi: 'Mẫu 67: Chúc mừng năm mới 2021',
+        en: 'Template 67: New Year 2021'
+      },
+      title: {
+        vi: 'Chúc mừng năm mới',
+        en: 'Chúc mừng năm mới'
+      },
+      description: {
+        vi: 'Tân Sửu 2021',
+        en: 'Tân Sửu 2021'
+      },
+      primary_button: {
+        vi: 'Xem ngay',
+        en: 'View now'
+      },
+      secondary_button: {
+        vi: 'Không, cảm ơn.Tôi sẽ quay lại sau',
+        en: "No, thanks.I'll be back later"
+      }
+    },
+    desktop_appearance: {
+      title_color: '#FECE41',
+      description_color: '#FFF',
+      primary_button_background: '#FECE41',
+      primary_button_color: '#941313',
+      secondary_button_background: 'unset',
+      secondary_button_color: '#5F6369;',
+      input_color: '',
+      input_background: '',
+      title_font_size: '42px',
+      title_font_weight: 'bold',
+      title_text_transform: 'uppercase',
+      description_font_size: '36px',
+      description_font_weight: 'bold'
+    },
+    mobile_appearance: {
+      title_font_size: '42px',
+      description_font_size: '32px',
+      background_image: 'url(' + require('../../assets/background/tet20212_mobile.png') + ')'
+    }
+  },
+  tet20213: {
+    css: () => import('!css-loader!less-loader!./tet20213.less'),
+    type: 'modal',
+    text: {
+      name: {
+        vi: 'Mẫu 68: Chúc mừng năm mới 2021',
+        en: 'Template 68: New Year 2021'
+      },
+      title: {
+        vi: 'Vui xuân mới\nĐón lộc phơi phới',
+        en: 'Vui xuân mới\nĐón lộc phơi phới'
+      },
+      description: {
+        vi: 'Giảm 50% toàn bộ sản phẩm chỉ trong 3 ngày\nĐăng ký để nhận ưu đãi ngay hôm nay.  ',
+        en: 'Giảm 50% toàn bộ sản phẩm chỉ trong 3 ngày\nĐăng ký để nhận ưu đãi ngay hôm nay.  '
+      },
+      primary_button: {
+        vi: 'Xem ngay',
+        en: 'View now'
+      },
+      secondary_button: {
+        vi: '',
+        en: ""
+      }
+    },
+    desktop_appearance: {
+      title_color: '#CE1704',
+      description_color: '#333',
+      primary_button_background: '#CE1704',
+      primary_button_color: '#FFF',
+      secondary_button_background: 'unset',
+      secondary_button_color: '#5F6369;',
+      input_color: '',
+      input_background: '',
+      title_font_size: '32px',
+      title_font_family: 'Yeseva One',
+      description_font_size: '14px'
+    },
+    mobile_appearance: {
+      title_font_size: '28px',
+      description_font_size: '14px',
+      background_image: 'url(' + require('../../assets/background/tet20213_mobile.png') + ')'
+    }
+  },
+  tet20214: {
+    css: () => import('!css-loader!less-loader!./tet20214.less'),
+    type: 'modal',
+    text: {
+      name: {
+        vi: 'Mẫu 69: Chúc mừng năm mới 2021',
+        en: 'Template 69: New Year 2021'
+      },
+      title: {
+        vi: 'CHÚC MỪNG NĂM MỚI\n2021',
+        en: 'CHÚC MỪNG NĂM MỚI\n2021'
+      },
+      description: {
+        vi: '"Lộc biếc mai vàng xuân hạnh phúc\nĐời vui sức khỏe Tết an khang"',
+        en: '"Lộc biếc mai vàng xuân hạnh phúc\nĐời vui sức khỏe Tết an khang"'
+      },
+      primary_button: {
+        vi: 'Xem ngay',
+        en: 'View now'
+      },
+      secondary_button: {
+        vi: '',
+        en: ""
+      }
+    },
+    desktop_appearance: {
+      title_color: '#547629',
+      description_color: '#C0B337',
+      input_color: '',
+      input_background: '',
+      title_font_weight: '700',
+      title_font_size: '32px',
+      title_font_family: 'Signika',
+      description_font_size: '18px'
+    },
+    mobile_appearance: {
+      title_font_size: '32px',
+      description_font_size: '12px',
+      background_image: 'url(' + require('../../assets/background/tet20214_mobile.png') + ')'
+    }
+  },
   template11: {
     css: () => import('!css-loader!less-loader!./template11.less'),
     type: 'modal',
