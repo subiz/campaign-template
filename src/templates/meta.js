@@ -738,7 +738,7 @@ let meta = {
 		},
 	},
 	tet20212: {
-		css: () => import(/*webpackChunkName: "tet20211_css" */ '!css-loader!less-loader!./tet20212.less'),
+		css: () => import(/*webpackChunkName: "tet20212_css" */ '!css-loader!less-loader!./tet20212.less'),
 		type: 'modal',
 		text: {
 			name: {vi: 'Mẫu 67: Chúc mừng năm mới 2021', en: 'Template 67: New Year 2021'},
@@ -774,6 +774,42 @@ let meta = {
 			title_font_size: '42px',
 			description_font_size: '32px',
 			background_image: 'url(' + require('../../assets/background/tet20212_mobile.png') + ')',
+		},
+	},
+	tet20213: {
+		css: () => import(/*webpackChunkName: "tet20213_css" */ '!css-loader!less-loader!./tet20213.less'),
+		type: 'modal',
+		text: {
+			name: {vi: 'Mẫu 68: Chúc mừng năm mới 2021', en: 'Template 68: New Year 2021'},
+			title: {
+				vi: 'Vui xuân mới\nĐón lộc phơi phới',
+				en: 'Vui xuân mới\nĐón lộc phơi phới',
+			},
+			description: {
+				vi: 'Giảm 50% toàn bộ sản phẩm chỉ trong 3 ngày\nĐăng ký để nhận ưu đãi ngay hôm nay.  ',
+				en: 'Giảm 50% toàn bộ sản phẩm chỉ trong 3 ngày\nĐăng ký để nhận ưu đãi ngay hôm nay.  ',
+			},
+			primary_button: {vi: 'Xem ngay', en: 'View now'},
+			secondary_button: {vi: '', en: ""},
+		},
+		desktop_appearance: {
+			title_color: '#CE1704',
+			description_color: '#333',
+			primary_button_background: '#CE1704',
+			primary_button_color: '#FFF',
+			secondary_button_background: 'unset',
+			secondary_button_color: '#5F6369;',
+			input_color: '',
+			input_background: '',
+
+			title_font_size: '32px',
+			title_font_family: 'Yeseva One',
+			description_font_size: '14px',
+		},
+		mobile_appearance: {
+			title_font_size: '28px',
+			description_font_size: '14px',
+			background_image: 'url(' + require('../../assets/background/tet20213_mobile.png') + ')',
 		},
 	},
 	template11: {

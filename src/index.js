@@ -65,7 +65,7 @@ class Template extends Component {
 	loadTemplate (templateid) {
 		let temp = meta[templateid]
 		if (!temp) return
-		temp.css().then((mod) => {
+		temp.css().then(mod => {
 			CSS = mod.default.toString()
 			populatePage(templateid, this.props.page)
 			this.setState({ lastTemplate: templateid })
@@ -89,7 +89,7 @@ class Template extends Component {
 		if (this.props.select === 'primary_button') primaryBtnCls += ' text__shake'
 		if (op.get(this.props.page, 'primary_button.enabled')) {
 			$primary = (
-				<button onClick={(e) => this.onPrimaryClick(e)} class={primaryBtnCls}>
+				<button onClick={e => this.onPrimaryClick(e)} class={primaryBtnCls}>
 					{op.get(this.props.page, 'primary_button.text')}
 				</button>
 			)
@@ -98,10 +98,11 @@ class Template extends Component {
 		let $secondary = null
 		let secondaryBtnCls = 'btn btn--secondary'
 		if (this.props.select === 'secondary_button') secondaryBtnCls += ' text__shake'
-		if (op.get(this.props.page, 'secondary_button.enabled')) {
+		let secondaryBtnText = op.get(this.props.page, 'secondary_button.text')
+		if (op.get(this.props.page, 'secondary_button.enabled') && secondaryBtnText) {
 			$secondary = (
-				<button onClick={(e) => this.onSecondaryClick(e)} class={secondaryBtnCls}>
-					{op.get(this.props.page, 'secondary_button.text')}
+				<button onClick={e => this.onSecondaryClick(e)} class={secondaryBtnCls}>
+					{secondaryBtnText}
 				</button>
 			)
 		}
@@ -133,23 +134,23 @@ class Template extends Component {
 							<div class="button__green"></div>
 							<div class="bar__url"></div>
 						</div>
-						<div class={animation} onClick={(e) => e.stopPropagation()}>
-							<CloseButton onClick={(e) => this.onClose(e)} />
-							<div class="background" onClick={(e) => this.onBackgroundClick(e)}></div>
-							<div class="body" onClick={(e) => this.onBackgroundClick(e)}>
-								<p class={titlecls} onClick={(e) => this.onClick(e, 'title')}>
+						<div class={animation} onClick={e => e.stopPropagation()}>
+							<CloseButton onClick={e => this.onClose(e)} />
+							<div class="background" onClick={e => this.onBackgroundClick(e)}></div>
+							<div class="body" onClick={e => this.onBackgroundClick(e)}>
+								<p class={titlecls} onClick={e => this.onClick(e, 'title')}>
 									{this.props.page.title}
 								</p>
 								<div class="title-separator"></div>
-								<p class={desccls} onClick={(e) => this.onClick(e, 'description')}>
+								<p class={desccls} onClick={e => this.onClick(e, 'description')}>
 									{this.props.page.description}
 								</p>
 								<Form
-									onClick={(e) => this.onClick(e, 'form')}
+									onClick={e => this.onClick(e, 'form')}
 									form={this.props.page.form}
 									pressedSubmit={this.state.pressedSubmit}
 								/>
-								<div class="buttons" onClick={(e) => e.stopPropagation()}>
+								<div class="buttons" onClick={e => e.stopPropagation()}>
 									{$primary}
 									{$secondary}
 								</div>
