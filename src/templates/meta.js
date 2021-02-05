@@ -812,6 +812,39 @@ let meta = {
 			background_image: 'url(' + require('../../assets/background/tet20213_mobile.png') + ')',
 		},
 	},
+	tet20214: {
+		css: () => import(/*webpackChunkName: "tet20214_css" */ '!css-loader!less-loader!./tet20214.less'),
+		type: 'modal',
+		text: {
+			name: {vi: 'Mẫu 69: Chúc mừng năm mới 2021', en: 'Template 69: New Year 2021'},
+			title: {
+				vi: 'CHÚC MỪNG NĂM MỚI\n2021',
+				en: 'CHÚC MỪNG NĂM MỚI\n2021',
+			},
+			description: {
+				vi: '"Lộc biếc mai vàng xuân hạnh phúc\nĐời vui sức khỏe Tết an khang"',
+				en: '"Lộc biếc mai vàng xuân hạnh phúc\nĐời vui sức khỏe Tết an khang"',
+			},
+			primary_button: {vi: 'Xem ngay', en: 'View now'},
+			secondary_button: {vi: '', en: ""},
+		},
+		desktop_appearance: {
+			title_color: '#547629',
+			description_color: '#C0B337',
+			input_color: '',
+			input_background: '',
+
+			title_font_weight: '700',
+			title_font_size: '32px',
+			title_font_family: 'Signika',
+			description_font_size: '18px',
+		},
+		mobile_appearance: {
+			title_font_size: '32px',
+			description_font_size: '12px',
+			background_image: 'url(' + require('../../assets/background/tet20214_mobile.png') + ')',
+		},
+	},
 	template11: {
 		css: () => import(/*webpackChunkName: "template11_css" */ '!css-loader!less-loader!./template11.less'),
 		type: 'modal',
