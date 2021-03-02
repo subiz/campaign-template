@@ -4,7 +4,7 @@ export default class JForm extends Component {
 	renderSingleChoiceList (h, field) {
 		if (field.type !== 'list' || field.multiple_choice) return null
 
-		let $items = field.list.map((item) => (
+		let $items = (field.list || []).map((item) => (
 			<div class="radio">
 				<input
 					type="radio"
@@ -26,7 +26,7 @@ export default class JForm extends Component {
 
 	renderMultipleChoiceList (h, field) {
 		if (field.type !== 'list' || !field.multiple_choice) return null
-		let $items = field.list.map((item) => (
+		let $items = (field.list || []).map((item) => (
 			<div class="form-check">
 				<input
 					class="form-check-input"
