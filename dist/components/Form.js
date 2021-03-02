@@ -2,7 +2,7 @@ import { h, Component } from 'preact';
 export default class JForm extends Component {
   renderSingleChoiceList(h, field) {
     if (field.type !== 'list' || field.multiple_choice) return null;
-    let $items = field.list.map(item => h("div", {
+    let $items = (field.list || []).map(item => h("div", {
       class: "radio"
     }, h("input", {
       type: "radio",
@@ -25,7 +25,7 @@ export default class JForm extends Component {
 
   renderMultipleChoiceList(h, field) {
     if (field.type !== 'list' || !field.multiple_choice) return null;
-    let $items = field.list.map(item => h("div", {
+    let $items = (field.list || []).map(item => h("div", {
       class: "form-check"
     }, h("input", {
       class: "form-check-input",
